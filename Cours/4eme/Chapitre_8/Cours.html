@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="../../../CSS/Cours.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="../../../JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Chapitre 8 - Puissances positives</title>
+
+  <style>
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Chapitre 8
+      </td>
+      <td id="ChapitreNom">
+        - Puissances positives
+      </td>
+    </tr>
+  </table>
+
+  <p class="exemple">
+    Activité Introduction
+  </p>
+
+  <p>L'objectif de l'activité est de trouver, en théorie, combien de fois il faut plier une feuille de papier en deux pour obtenir une épaisseur définit.</p>
+  <ol>
+    <li>
+      On commence par chercher l'épaisseur d'une feuille de papier.
+      <ol type="a">
+        <li>Quelle est l'épaisseur d'une ramette de papier neuve (500 feuilles) ?   <b><i>Environ 2,5cm</i></b></li> 
+        <li>En déduire l'épaisseur d'une seul feuille.</li>
+      </ol>
+    </li>
+    <li>On étudie l'effet des pliages sur l'épaisseur.
+      <ol type="a">
+        <li>De combien de couche de papier a-t-on si on plie une feuille en 2 ? si on la replie à nouveau ? et encore une fois ?</li>
+        <li>Completer : "Le nombre de couche de papier ............. à chaque pliage".</li>
+        <li>Combien de couche de papier aurait-on au bout de 9 pliages ? Quelle est alors l'épaisseur obtenue ?</li>
+      </ol>
+    </li>
+    <li>
+      Combien de fois minimum faut-il plier la feuille en deux pour obtenir une épaisseur supérieur à :
+      <ol type="a">
+        <li>1 m ?</li>
+        <li>10 m ?</li>
+        <li>La hauteur de la tour Eiffel (environ 330 m) ?</li>
+        <li>La distance terre-lune (environ 384 467 km) ?</li>
+      </ol>
+    </li>
+  </ol>
+  <br>
+  <p class="center"><i><b>Note :</b> Dans tout le chapitre, <span class="DRed">a</span> représente un nombre quelconque et 
+    <span class="DBlue">n</span> un nombre entier positif.</i></p>
+
+  <h1>Carré et Cube :</h1>
+      <h2>Carré :</h2>
+          <div class="definition">
+            Le carré d'un nombre <span class="DRed">a</span> est le produit de ce nombre par lui-même. On le note 
+            $\textcolor{#e53935}{a}^2=\textcolor{#e53935}{a}\times \textcolor{#e53935}{a}$ &nbsp;&nbsp; lu "<span class="DRed">a</span> au carré"
+          </div>
+          <p class="exemple">Exemple :</p>
+          <ul>
+            <li>$5^2=5\times5=25$</li>
+            <li>$8^2=8\times8=64$</li>
+          </ul>
+          <p class="remarque">Remarque :</p>
+          <p>Le carré d'un nombre est toujours <b>positif</b></p>
+      <h2>Cube :</h2>
+          <div class="definition">
+            Le cube d'un nombre <span class="DRed">a</span> est le produit de ce nombre par lui-même, par lui-même. On le note 
+            $\textcolor{#e53935}{a}^3=\textcolor{#e53935}{a}\times \textcolor{#e53935}{a}\times \textcolor{#e53935}{a}$ &nbsp;&nbsp; lu "<span class="DRed">a</span> au cube"
+          </div>
+          <p class="exemple">Exemple :</p>
+          <ul>
+            <li>$5^3=5\times5\times5=125$</li>
+            <li>$3^3=3\times3\times3=27$</li>
+          </ul>
+    <h1>Puissance positive :</h1>
+        <h2>Puissance d'un nombre :</h2>
+            <div class="definition">
+              <span class="DRed">a</span> puissance <span class="DBlue">n</span> noté $\textcolor{#e53935}{a}^\textcolor{#039be5}{n}$
+              désigne le produit de <span class="DBlue">n</span> facteurs tous égaux à <span class="DRed">a</span> : <br>
+              <div class="center">
+                <table style="margin: auto;">
+                  <tr>
+                    <td>$\textcolor{#e53935}{a}^\textcolor{#039be5}{n}=$</td>
+                    <td>$\textcolor{#e53935}{a}\times\textcolor{#e53935}{a}\times ... \times
+                      \textcolor{#e53935}{a}\times \textcolor{#e53935}{a}$</td>
+                  </tr>
+                  <tr style="line-height: 4px;">
+                    <td></td>
+                    <td>
+                      <image src="Images/Accolade1.svg"></image>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><span class="DBlue">n</span> facteurs</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p class="exemple">Exemple :</p>
+            <ul>
+              <li>$5^5=5\times5\times5\times5\times5=3125$</li>
+              <li>$(-3)^4=(-3)\times(-3)\times(-3)\times(-3)=81$</li>
+            </ul>
+            <p class="remarque">Remarque :</p>
+            <p><ul>
+              <li>$\textcolor{#e53935}{a}^1 = \textcolor{#e53935}{a}$</li>
+              <li>Si $\textcolor{#e53935}{a} \ne 0$, $\textcolor{#e53935}{a}^0 = 1$</li>
+            </ul></p>
+        <h2>Puissance de 10 :</h2>
+            <div class="definition">
+              <div class="center">
+                <table style="margin: auto;">
+                  <tr>
+                    <td>$10^\textcolor{#039be5}{n}=$</td>
+                    <td>$10\times10\times ... \times10\times10$</td>
+                    <td>$=1$</td>
+                    <td>$00 ... 00$</td>
+                  </tr>
+                  <tr style="line-height: 9px;">
+                    <td></td>
+                    <td> <image src="Images/Accolade1.svg"></image> </td>
+                    <td></td>
+                    <td> <image src="Images/Accolade2.svg"></image> </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><span class="DBlue">n</span> facteurs</td>
+                    <td></td>
+                    <td><span class="DBlue">n</span> zéros</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p class="exemple">Exemple :</p>
+            <ul>
+              <li>$10^5=10\times10\times10\times10\times10=100\thinspace000$</li>
+              <li>$10^12=1\thinspace000\thinspace000\thinspace000\thinspace000$</li>
+            </ul>
+
+</body>
+
+</html>

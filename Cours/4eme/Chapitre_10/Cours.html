@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Chapitre 10 - Coordonnées sphériques</title>
+
+  <style>
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Chapitre 10
+      </td>
+      <td id="ChapitreNom">
+        - Coordonnées sphériques
+      </td>
+    </tr>
+  </table>
+
+  <p class="exemple">
+    Activité Introduction
+  </p>
+
+  <div class="flexobject">
+    <div style="max-width: 13cm;">
+      <p>
+        Sur le globe terrestre ci-contre :<br>
+        • Les <span class="DBlue">méridiens</span> sont les demi-cercles bleus de diamètre [NS]; 
+        il sont repérés par l'angle qu'ils forment avec le <b>méridien de Greenwich</b>.<br>
+        • Les <span class="DRed">parallèles</span> sont des cercles rouges, situés dans les plans parallèles au plan de l'équateur : 
+        il sont repérés par l'angle qu'ils forment avec l'équateur. Ces lignes imaginaires permettent 
+        de se repérer sur la Terre. Le point M a pour coordonnées géographiques 70° Est et 35° Nord. 
+        Lire les coordonnées géographiques d'Oran en Algérie (point O), de Kerguelen dans l'océan 
+        Indien (point K) et des Iles Galapagos dans l'océan Pacifique (Point G).
+      </p>
+    </div>
+    <img src="Images/Act_Intro.svg" style="max-width: calc(100% - 18cm); min-width: 12cm; max-width: 17cm;">
+  </div>
+
+  <h1>Vocabulaire :</h1>
+      <p>
+        Pour se repérer sur une sphèe comme sur la terre, on utilise les <b>grands cercles</b>.<br>
+        Sur terre ils sont appelées <b>méridiens</b>, le premier est le <b>méridien de Greenwich</b>.
+      </p>
+      <div class="definition">
+        La <span class="DRed">latitude</span> exprime la position Nord-Sud par rapport à <b>l'équateur</b>.<br>
+        La <span class="DRed">longitude</span> exprime la position Est-Ouest par rapport au <b>méridien de Greenwich</b>.
+      </div>
+      <img src="Images/Sphere.png" style="max-width: 6cm;">
+  <h1>Terre et planisphère :</h1>
+      <p>
+        Pour se repérer à la surface de la terre, il est plus commode d'utiliser un planisphère (une représentation plane de la sphère).<br>
+        Voici un exemple de planisphère qui était présent dans un exercice du brevet 2018 :
+      </p>    
+      <img src="Images/Planisphere.jpg" style="max-width: 23cm;">
+      <p>
+        Sur ce planisphère sont placé quatre point correspondant à Las Vegas, Paris, Tokio et au centre de Madagascar.<br>
+        Les coordonnées sont les suivantes :<br>
+        <ul>
+          <li><b>Las Vegas</b> : 120° O 35° N</li>
+          <li><b>Paris</b> : 2° E 48° N</li>
+          <li><b>Tokio</b> : 140° E 35° N</li>
+          <li><b>Madagascar</b> : 46° E 22° S</li>
+        </ul>
+      </p>
+
+      <p>
+        Pour prendre un point diamétralement opposé à un autre sur une sphère, il faut retirer 180° à la position Est-Ouest et inverser la position Nord-Sud.<br>
+        Par exemple, pour Las Vegas, le point diamétralement opposé à pour coordonnées :<br>
+        120°-180° = -60° Ouest donc 60° Est.
+        On obtient 60° E 35° S
+      </p>
+      
+
+</body>
+
+</html>

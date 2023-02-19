@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Chapitre 4 - Translations et pavages</title>
+
+  <style>
+    .tableau tr td { border: 1px solid black; }
+    .one { background-color: palevioletred; }
+    .prime { background-color: yellow; }
+    .notprime { background-color: black; }
+    .cribletable tr td { background-color: white!important; }
+    .division tr {border: none;}
+    .division {border: none;}
+    .division td { width: 40px; border: none; font-size: 16pt; padding: 0px 5px;}
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Chapitre 4
+      </td>
+      <td id="ChapitreNom">
+        - Translations et pavages
+      </td>
+    </tr>
+  </table>
+
+  <p class="exemple">
+    Activité Introduction
+  </p>
+
+  <div class="flexobject">
+    <div>
+      <ol>
+        <li> Observe bien les quatre bateaux A, B, C, D.<br>
+          <ol type="a">
+            <li>Quel bateau a été obtenu en faisant glisser le bateau A ?</li>
+            On dit que le bateau C est l’image de A par une <span class="DRed"></span>translation. 
+            <li>Trouve un synonyme de translation.</li>
+          </ol>
+        </li>
+        
+        <li> Trace l’image de la figure 2 par la translation qui transforme F en G.<br>
+           
+          <ol type="a">
+            Place le point M’ image de M par la translation qui transforme F en G.
+            <li>Que peux-tu dire de FGM’M ?</li>
+            Place le point N’ image de N par la translation qui transforme F en G.
+            <li>Que peux-tu dire de FGN’N ?</li>
+          </ol>
+        </li>
+
+        <li> Trace l’image de la figure 2 par la translation qui transforme F en K.<br>
+           
+          <ol type="a">
+            Place le point R image de M par la translation qui transforme F en K. 
+            <li>Que peux-tu dire de FKRM ? 	</li>
+            Place le point P image de N par la translation qui transforme F en K.  
+            <li>Que peux-tu dire de FKPN ? </li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+    <img src="Images/Dessin.png" style="max-height: 12cm;">
+  </div> 
+  <div class="flexobject">
+    <img src="Images/Dessin2.png" style="max-height: 8cm;">
+    <p>
+      L’image ci-contre te montre deux étoiles.<br>
+      L’étoile 2 est l’image de l’étoile 1 par la translation qui transforme E en K.<br>
+      Recopie et complète les phrases suivantes :<br>
+      L’image de A est .... et ........ est un parallélogramme.<br>
+      L’image de B est .... et ........ est un parallélogramme.<br>
+      L’image de C est .... et ........ est un parallélogramme.
+    </p>
+  </div>
+
+  <h1>Translation :</h1>
+  
+      <h2>Définition :</h2>
+
+            <div class="definition">
+              Transformer un point ou une figure par <span style="color: var(--Dred);">translation</span> c’est faire glisser ce point ou cette 
+              figure selon une <b><u>direction</u></b>, un <b><u>sens</u></b> et une <b><u>distance</u></b> donnés.
+            </div>
+
+            <div class="flexobject">
+              <img src="Images/Cours1.png" style="max-width: 10cm;">
+              <div>
+                <p class="exemple">Exemple :</p>
+                <p style="max-width: 8cm;">
+                  Le polygone A’B’C’D’E’F’ est l’image du polygone ABCDEF par la translation qui transforme A en A’
+                </p>
+              </div>
+            </div>
+
+            <p class="remarque">Remarque :</p>
+
+            <ul>
+              <li>[AA’], [BB’], [CC’], [DD’], [EE’] et [FF’] sont parallèles.</li>
+              <li>Le quadrilatère EE’F’F est un parallélogramme.</li>
+              <li>Une translation conserve l’alignement, les longueurs, les angles et les aires. (Les figures sont superposables)</li>
+            </ul>
+
+            <div class="flexobject">
+              <img src="Images/Cours2.png" style="max-width: 10cm;">
+              <div>
+                <p style="max-width: 8cm;">
+                  La figure 2 est l’image de la figure 1 par la translation qui transforme A en B, mais aussi M en N.
+                </p>
+              </div>
+            </div>
+
+      <h2>Construction :</h2>
+
+
+  <h1>Pavages :</h1>
+
+      <div class="flexobject">
+        <canvas id="pavagesCanvas" width="480" height="360" style="border: 2px solid var(--Texte);"></canvas>
+        <div>
+          <label for="pavage_img">Image :</label>
+          <input id="pavage_img" type="file" accept="image/png, image/jpeg" onchange="RefreshImg(this.files[0])"><br>
+          <table>
+            <tr>
+              <th></th>
+              <th>Déplacement 1</th>
+              <th>Déplacement 2</th>
+            </tr>
+            <tr>
+              <th>Horizontal</th>
+              <td><input id="x1" value="20" type="number" oninput="Refresh()"></td>
+              <td><input id="x2" value="35" type="number" oninput="Refresh()"></td>
+            </tr>
+            <tr>
+              <th>Vertical</th>
+              <td><input id="y1" value="46" type="number" oninput="Refresh()"></td>
+              <td><input id="y2" value="0" type="number" oninput="Refresh()"></td>
+            </tr>
+          </table>
+          <input id="pavage_vector" type="checkbox" onchange="Refresh()" value="yes">
+          <label for="pavage_vector">Montrer les déplacement</label>
+          <input id="pavage_zoom" value="0" min="-10" max="10" type="range" oninput="Refresh()">
+        </div>
+      </div>
+
+      <script src="JS/pavage.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script id="Animation" src="/JS/Animation/animation_holder.js"></script>
+
+  <title>Chapitre 6 - Egalité des produits en croix</title>
+
+  <style>
+    .tableau1{
+      border: solid 1px black;
+      border-collapse: collapse;
+    }
+    .tableau1 td{
+      border: solid 1px black;
+      border-collapse: collapse;
+      width: 40px;
+      align-items: center;
+      text-align: center;
+    }
+    .tableau1 th{
+      border: solid 1px black;
+      border-collapse: collapse;
+      align-items: center;
+      text-align: center;
+    }
+
+    .tableaud{
+      display: grid;
+      width: calc(6 * 80px);
+      grid-template-columns: repeat(6, 80px);
+      grid-auto-rows: minmax(30px, auto);
+      border: 1px solid black;
+    }
+    .tableaud div{
+      border: 1px solid black;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body onload="CreateAnimationObject()">
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Chapitre 6
+      </td>
+      <td id="ChapitreNom">
+        - Egalité des produits en croix
+      </td>
+    </tr>
+  </table>
+
+  <p class="exemple">
+    Activité Introduction
+  </p>
+  <ol>
+    <li>
+      <ol style="list-style-type: lower-alpha;">
+        <li>A l'aide de simplifications, vérifier que les nombres 86 et 129 sont égaux.</li>
+        <li>Comparer les "produits en croix" $8\times9$ et $6\times12$.</li>
+      </ol>
+    </li>
+    <li>
+      <ol style="list-style-type: lower-alpha;">
+        <li>Trouver deux nombres <i>a</i> et <i>b</i> différents de 3 et 4 tels que $\frac{a}{b}=\frac{3}{4}$.</li>
+        <li>Comparer les "produits en croix" $a\times4$ et $b\times3$.</li>
+      </ol>
+    </li>
+    <li>
+      <ol style="list-style-type: lower-alpha;">
+        <li>Vérifier sans calcul que les nombres $\frac{5}{11}$ et $\frac{9}{7}$ sont différents.</li>
+        <li>Comparer les "produits en croix" $5\times7$ et $11\times9$.</li>
+      </ol>
+    </li>
+    <li><b>Conjecturer</b> un procédé pour vérifier que deux nombres fractionnaires sont égaux.</li>
+  </ol>
+
+  <h1>Produit en croix :</h1>
+      <h2>Dans les fractions :</h2>
+        
+        <div class="definition">
+          <span class="DRed">Propriété :</span><br>
+          <p>
+            Egalité des produits en croix : <i>a</i>, <i>b</i>, <i>c</i> et <i>d</i> désignent des nombres relatifs ($b\ne0, d\ne0$).<br>
+            <span class="DRed">
+              Si $\frac{a}{b} = \frac{c}{d}$, alors $a\times d=b\times c$ <br>et<br> Si $a\times d=b\times c$, alors $\frac{a}{b} = \frac{c}{d}$
+            </span>
+          </p>
+        </div>
+        <p class="exemple">Exemple :</p>
+        <p>
+          $\frac{1}{3}=\frac{2}{6}$ car $1\times6=6$ et $2\times3=6$<br>
+          $\frac{15}{20}=\frac{21}{28}$ car $15\times28=420$ et $20\times21=420$
+        </p>
+        
+      <h2>Dans la proportionnalité :</h2>
+
+        <div class="definition">
+          <span class="DRed">Propriété :</span><br>
+          <ul>
+            <li>Dans un tableau de proportionnalité il y à égalité des produits en croix.</li>
+            <li>Si dans un tableau il y a égalité des produits en croix, alors c'est un tableau de proportionnalité</li>
+          </ul>
+        </div>
+
+        <div class="flexobject">
+          <table class="tableau1">
+            <tr>
+              <td><span class="DBlue">a</span></td>
+              <td><span class="DGreen">c</span></td>
+            </tr>
+            <tr>
+              <td><span class="DGreen">b</span></td>
+              <td><span class="DBlue">d</span></td>
+            </tr>
+          </table>
+          <div>
+            <p>
+              Dans le tableau de proportionnalité ci-contre on a :<br>
+              $\textcolor{#0070C0}{a}\times \textcolor{#0070C0}{d}=\textcolor{#009900}{b}\times \textcolor{#009900}{c}$
+            </p>
+          </div>
+        </div>
+        <p class="exemple">Exemple :</p>
+        <div class="tableaud">
+          <div style="grid-column: 1 / 4; grid-row: 1"><b>Distance parcourue (km)</b></div>
+          <div style="grid-column: 1 / 4; grid-row: 2"><b>Prix du péage (€)</b></div>
+          <div id="Animation1" class="animation"
+            style="grid-column: 4 / 6; grid-row: 1 / 3;"
+          width="160" height="60" showmenu="false" loop="true"></div>
+          <div style="grid-column: 4; grid-row: 1">55</div>
+          <div style="grid-column: 5; grid-row: 1">70</div>
+          <div style="grid-column: 6; grid-row: 1">120</div>
+          <div style="grid-column: 4; grid-row: 2">4,40</div>
+          <div style="grid-column: 5; grid-row: 2">5,60</div>
+          <div style="grid-column: 6; grid-row: 2">9,60</div>
+        </div>
+
+</body>
+
+</html>

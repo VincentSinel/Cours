@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Chapitre 3 - Opérations sur les relatifs</title>
+
+  <style>
+    .rfleche {
+      transform: rotate(180deg); 
+      height: 33px;
+      vertical-align:middle;
+    }
+    .fleche {
+      height: 33px;
+      vertical-align:middle;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Chapitre 3
+      </td>
+      <td id="ChapitreNom">
+        - Opérations sur les relatifs
+      </td>
+    </tr>
+  </table>
+
+  <p class="exemple">
+    Activité Introduction
+  </p>
+
+  <p> 
+    Jean  a confectionné des truffes au chocolat. Il souhaite les disposer de telle sorte qu’elles puissent former un rectangle une fois rangées, sans espace vide.
+  </p>
+  <div class="flexobject">
+    <img src="Images/Immeuble.png" style="max-width: 8cm;">
+    <div style="max-width: 15cm;">
+        <p>
+        Dans un immeuble les nombres relatifs sont souvent utilisés pour désigner les étages. 
+        On utilise alors les nombres négatifs pour indiqués les étages en sous-sol.<br> 
+      </p>
+      <ol>
+        <li> Depuis le rez-de-chaussée (étage 0) de combien d’étage doit-je monter pour arriver au :<br>
+          <ol type="a">
+            <li>1er étage ?</li>
+            <li>4éme étage ?</li>
+            <li>2éme parking ?</li>
+          </ol>
+        </li>
+        
+        <li> Depuis le 2éme étage de combien d’étage doit-je descendre pour arriver au :<br>
+          <ol type="a">
+            <li>sous sol des caves ?</li>
+            <li>3ème étage ?</li>
+          </ol>
+        </li>
+        <li> A l'aide des questions précédentes, compléter les calculs suivants :<br>
+          <ol type="a">
+            <li>$0+\qquad=1$</li>
+            <li>$0+\qquad=4$</li>
+            <li>$0+\qquad=-2$</li>
+            <li>$2-\qquad=-1$</li>
+            <li>$2-\qquad=3$</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+
+  
+
+  <h1>Rappels sur les sommes de deux nombres relatifs :</h1>
+
+      <div class="definition">
+        La <span style="color: red">valeurs absolues</span> d'un nombre relatif correspond à sa distance à zéro.
+        Autrement dit la valeur sans son signe.
+      </div>
+      <div class="definition">
+        L'<span style="color: red">opposé</span> d'un nombre relatif est obtenue en prenant son signe inverse
+      </div>
+      <h2>Somme de deux nombres relatifs :</h2>
+
+            <div class="definition">
+              La somme de deux nombres relatifs de <span style="text-decoration: underline">même signe</span>
+               a le <span style="text-decoration: underline">même signe</span> que 
+              ses deux nombres. On ajoute alors les <span style="color: red">valeurs absolues</span>.
+            </div>
+
+            <p class="exemple">Exemples :</p>
+
+            <div class="flexobject">
+              <p>➤ $(+4)+(+7) = +(4+7)=+11$</p>
+              <p>➤ $(-3)+(-4) = -(3+4)=-7$</p>
+            </div>
+
+            <div class="definition">
+              La somme de deux nombres relatifs de <span style="text-decoration: underline">signe contraire</span> 
+              a le <span style="text-decoration: underline">signe du nombre relatif qui a la plus grande valeur absolue</span>. 
+              On effectue la différence des <span style="color: red">valeurs absolues</span>.
+            </div>
+            
+            <p class="exemple">Exemples :</p>
+
+            <div class="flexobject">
+              <p>➤ $(+4)+(-7) = -(7-4)=-3$</p>
+              <p>➤ $(-9)+(+15) = +(15-9)=+6$</p>
+            </div>
+
+      <h2>Différence de deux nombres relatifs :</h2>
+
+            <div class="definition">
+              Pour soustraire un nombre relatif, on ajoute son <span style="color: red">opposé</span>.
+            </div>
+
+            <p class="exemple">Exemples :</p>
+            
+            <div class="flexobject">
+              <p>➤ $(+15)-(+9) = (+15)+(-9)=+(15-9)=6$</p>
+              <p>➤ $(+20)-(-11)=(+20)+(+11)=+(20+11)=31$</p>
+              <p>➤ $(-6)-(+7)=(-6)+(-7)=-(6+7)=-13$</p>
+              <p>➤ $(-12)-(-3)=(-12)+(+3)=-(12-3)=-9$</p>
+            </div>
+
+      <h2>Simplification d'une suite de somme :</h2>
+            <div class="definition">
+              <span class="DRed">Propriété :</span><br><br>
+              Dans une somme ou une différence, on peut supprimer un couple de parenthèses 
+              et le signe qui le précède à condition :<br>
+              <ul>
+                <li>
+                  de ne <span style="font-weight: bold;">rien changer</span> lorsque le signe qui 
+                  précède les parenthèses est <span style="font-weight: bold;">« $+$ »</span>.
+                </li>
+                <li>
+                  de <span style="font-weight: bold;">prendre l'opposé de tous les nombres</span> situés 
+                  à l’intérieur de ces parenthèses lorsque le signe qui les précède est 
+                  <span style="font-weight: bold;">« $-$ »</span>.
+                </li>
+              </ul>
+            </div>
+
+            <p class="exemple">Exemples :</p>
+
+            <div class="flexobject">
+              <div>
+                $+(+3)+(-5)-(+6)-(-7)$<br>
+                On supprime les parenthèse précéder d'un signe $+$<br>
+                $\textcolor{red}{+(}+3\textcolor{red}{)+(}-5\textcolor{red}{)}-(+6)-(-7)$<br>
+                $+3-5-(+6)-(-7)$<br>
+                On supprime les parenthèse précéder d'un signe $-$ en prenant l'opposé des nombres dans la parenthèse<br>
+                $+3-5\textcolor{red}{-(}+6\textcolor{red}{)-(}-7\textcolor{red}{)}$<br>
+                $+3-5\textcolor{green}{-}6\textcolor{green}{+}7$<br>
+              </div>
+              <div>
+                Autre exemple avec plusieurs termes<br>
+                $-5\textcolor{red}{+(}-2+3-4\textcolor{red}{)}=-5-2+3-4$<br>
+                $12\textcolor{red}{-(}3-5+2\textcolor{red}{)}=12
+                \textcolor{green}{-}3\textcolor{green}{+}5\textcolor{green}{-}2$<br>
+              </div>
+            </div>
+
+  <h1>Produit de nombres relatifs :</h1>
+
+      <div class="flexobject">
+        <table>
+          <tr>
+            <td><table>
+                <tr><td>
+                  +4 <img class="rfleche" src="Images/fleche.png">
+                </td></tr>
+                <tr><td>
+                  +4 <img class="rfleche" src="Images/fleche.png">
+                </td></tr>
+                <tr><td>
+                  +4 <img class="rfleche" src="Images/fleche.png">
+                </td></tr>
+                <tr><td>
+                  +4 <img class="rfleche" src="Images/fleche.png">
+                </td></tr>
+            </table></td>
+            <td><table style="text-align: center;">
+                <tr><td style="height: 35px;">
+                  $2 \times 4 = 8$
+                </td></tr>
+                <tr><td style="height: 35px;">
+                  $1 \times 4 = 4$
+                </td></tr>
+                <tr><td style="height: 35px;">
+                  $0 \times 4 = 0$
+                </td></tr>
+                <tr><td style="height: 35px;">
+                  $-1 \times 4 = -4$
+                </td></tr>
+                <tr><td style="height: 35px;">
+                  $-2 \times 4 = -8$
+                </td></tr>
+            </table></td>
+            <td><table>
+              <tr><td>
+                <img class="fleche" src="Images/fleche.png"> -4
+              </td></tr>
+              <tr><td>
+                <img class="fleche" src="Images/fleche.png"> -4
+              </td></tr>
+              <tr><td>
+                <img class="fleche" src="Images/fleche.png"> -4
+              </td></tr>
+              <tr><td>
+                <img class="fleche" src="Images/fleche.png"> -4
+              </td></tr>
+          </table></td>
+          </tr>
+        </table>
+
+        
+        <table>
+          <tr>
+            <td><table>
+                <tr><td>
+                  -4 <img class="rfleche" src="Images/fleche.png">
+                </td></tr>
+                <tr><td>
+                  -4 <img class="rfleche" src="Images/fleche.png">
+                </td></tr>
+                <tr><td>
+                  -4 <img class="rfleche" src="Images/fleche.png">
+                </td></tr>
+                <tr><td>
+                  -4 <img class="rfleche" src="Images/fleche.png">
+                </td></tr>
+            </table></td>
+            <td><table style="text-align: center;">
+                <tr><td style="height: 35px;">
+                  $2 \times (-4) = -8$
+                </td></tr>
+                <tr><td style="height: 35px;">
+                  $1 \times (-4) = -4$
+                </td></tr>
+                <tr><td style="height: 35px;">
+                  $0 \times (-4) = 0$
+                </td></tr>
+                <tr><td style="height: 35px;">
+                  $-1 \times (-4) = 4$
+                </td></tr>
+                <tr><td style="height: 35px;">
+                  $-2 \times (-4) = 8$
+                </td></tr>
+            </table></td>
+            <td><table>
+              <tr><td>
+                <img class="fleche" src="Images/fleche.png"> +4
+              </td></tr>
+              <tr><td>
+                <img class="fleche" src="Images/fleche.png"> +4
+              </td></tr>
+              <tr><td>
+                <img class="fleche" src="Images/fleche.png"> +4
+              </td></tr>
+              <tr><td>
+                <img class="fleche" src="Images/fleche.png"> +4
+              </td></tr>
+          </table></td>
+          </tr>
+        </table>
+        
+      </div>
+
+      <h2>Produit de deux nombres relatifs :</h2>
+            <div class="definition">
+              Pour calculer le produit de deux nombres relatifs, on multiplie les valeurs absolues et :<br>
+              <ul>
+                <li>
+                  Si les deux nombres sont de <span style="font-weight: bold;">même signe</span>
+                  , le produit est <span style="font-weight: bold;">positif</span>.
+                </li>
+                <li>
+                  Si les deux nombres sont de <span style="font-weight: bold;">signes contraires</span>, 
+                  le produit est <span style="font-weight: bold;">négatif</span>.
+                </li>
+              </ul>
+            </div>
+
+            <p class="exemple">Exemples :</p>
+
+            <div class="flexobject">
+              <p>➤ $(+9)\times(+7) = +(9\times7)=63$</p>
+              <p>➤ $(-6)\times(-4) = +(6\times4)=24$</p>
+              <p>➤ $(-8)\times(+5) = -(8\times5)=-40$</p>
+              <p>➤ $(+3)\times(-6) = -(3\times6)=-18$</p>
+            </div>
+      <h2>Signe d’un produit de plusieurs facteurs :</h2>
+            <div class="definition">
+              Lorsqu’on multiplie plusieurs nombres relatifs, on multiplie les valeurs absolues des facteurs.<br>
+              <ul>
+                <li>Le produit est 
+                  <span style="font-weight: bold;">positif</span> 
+                  si le nombre de facteurs négatifs est 
+                  <span style="font-weight: bold;">pair</span>
+                  .</li>
+                <li>Le produit est 
+                  <span style="font-weight: bold;">négatif</span> 
+                  si le nombre de facteurs négatifs est 
+                  <span style="font-weight: bold;">impair</span>
+                  .</li>
+              </ul>
+            </div>
+
+            <p class="exemple">Exemples :</p>
+
+            <div class="flexobject">
+              <p>➤ $-6\times(-2)\times5 = 6\times2\times5=60$</p>
+              <p>➤ $-3\times4\times(-25)\times(-2)=-(3\times4\times25\times2)=-600$</p>
+              <p>➤ $-7\times(-2)\times(-5)\times(-8)=7\times2\times5\times8=560$</p>
+            </div>
+
+      <h2>Quotient de nombres relatifs :</h2>
+
+            <p class="exemple">Exemples :</p>
+
+            <div class="flexobject">
+              <p>➤ $5\times7 = 35$ <span style="margin-left: 20px"></span>donc $35\div7=5$
+                <span style="margin-left: 20px"></span>ou $35\div5=7$</p>
+              <p>➤ $-6\times7=-42$ <span style="margin-left: 20px"></span>donc $(-42)\div7=-6$
+                <span style="margin-left: 20px"></span>ou $(-42)\div(-6)=7$</p>
+              <p>➤ $-5\times(-8)=40$ <span style="margin-left: 20px"></span>donc $40\div(-5)=-8$
+                <span style="margin-left: 20px"></span>ou $40\div(-8)=-5</p>
+            </div>
+
+            <div class="definition">
+              Le quotient de deux nombres relatifs a le <span style="font-weight: bold;">même signe que leur produit</span>.<br>
+              La valeur absolue du quotient est égale au quotient des valeurs absolues.
+            </div>
+
+            
+</body>
+
+</html>

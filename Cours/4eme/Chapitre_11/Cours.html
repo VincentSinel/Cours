@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Chapitre 11 - Réciproque du théorème de Pythagore</title>
+
+  <style>
+    .actTitle::marker{
+      font-size: 16pt;
+    }
+    .actTitle > p{
+      font-size: 16pt;
+    }
+    .tactTableau{
+      line-height: 1.5cm;
+      text-align: center;
+      border-collapse: collapse;
+    }
+    .tactTableau td{
+      width: 3cm;
+      border: solid black 1px;
+    }
+    .tactTableau tr:nth-child(4)
+    {
+      border-bottom: double black;
+    }
+    #theoremeschema{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 18pt;
+      font-weight: bold;
+    }
+    #theoremeschema label{ padding: 20px;}
+    #redaction1 td:nth-child(3)
+    {
+      width: 2cm;
+      border-right: solid 2px black;
+    }
+    #redaction1 td:nth-child(4)
+    {
+      width: 3cm;
+      text-align: right;
+      border-left: solid 2px black;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Chapitre 11
+      </td>
+      <td id="ChapitreNom">
+        - Réciproque du théorème de Pythagore
+      </td>
+    </tr>
+  </table>
+
+  <p class="exemple">
+    Activité Introduction
+  </p>
+  Cette activité est une séance à faire grâce au logiciel <a href="https://www.geogebra.org/classic" target="_blank">Géogebra</a><br>
+  <div class="flexobject">
+    <p style="max-width: 12cm;">
+      Pour commencer, on va mettre en place la surface de dessin (1). 
+      Pour cela, il faut désactiver les axe (2) et le quadrillage (3 et 4).
+    </p>
+    <img src="Images/Geogebra1.jpg">
+  </div>
+  <div class="flexobject">
+    <img src="Images/Geogebra2.jpg">
+    <div>
+      <p>
+        On défini ensuite la gestion des arrondis depuis le menu en haut à droite (1 et 2).
+      </p>
+      <img src="Images/Geogebra3.jpg">
+      <p>Changer pour ne mettre qu'une décimale</p>
+    </div>
+  </div>
+  <ol type="I">
+    <li class="actTitle">
+      <p><b><i><u>Construction</u></i></b></p>
+      <div class="flexobject">
+        <table>
+          <tr>
+            <td style="max-width: 10cm;">
+              <ol>
+                <li> Construis un triangle ABC à l'aide de l'outil polygone.</li>
+              </ol>
+            </td>
+            <td>
+              <img style="vertical-align: middle;" src="Images/Geogebra4.png">
+            </td>
+          </tr>
+          <tr>
+            <td style="max-width: 10cm;">
+              <ol start="2">
+                <li> 
+                  <p style="max-width: 10cm;">
+                    Construis un carré sur chaque coté de ton triangle à l'aide de l'outil polygone régulier.<br>
+                    Pour que les carré soit bien vers l'extérieur, il faut parcourir les points du 
+                    triangle dans le sens des aiguille d'une montre
+                  </p>
+                </li>
+              </ol>
+            </td>
+            <td>
+              <img style="vertical-align: middle;" src="Images/Geogebra5.png">
+            </td>
+          </tr>
+          <tr>
+            <td style="max-width: 10cm;">
+              <ol start="3">
+                <li> 
+                  <p style="max-width: 10cm;">
+                    Fais ensuite afficher l'angle $\widehat{BAC}$ à l'aide de l'outil angle.
+                  </p>
+                </li>
+              </ol>
+            </td>
+            <td>
+              <img style="vertical-align: middle;" src="Images/Geogebra6.png">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">Vous devriez obtenir la figure ci-contre.<br>
+            <i><b>
+              Si le nom de vos point différe, il faudrat adapter les formules par la suite.</b></i></td>
+          </tr>
+        </table>
+        <img src="Images/Geogebra7.png" style="max-height: 12cm;">
+      </div>
+      <div class="flexobject">
+        <img src="Images/Geogebra8.png" style="max-width: 5cm;">
+        <p> On peut maintenant ouvrir le tableur (1, 2 et 3) pour commencer les calculs.</p>
+      </div>
+      <div class="flexobject">
+        <p style="max-width: 10cm;">
+          Completer le tableur comme ci-contre en prenant soin de mettre le nom de vos carrés.<br>Remarque : lorsque vous tapez le nom de votre carré, celui-ci est remplacé automatiquement par une valeur.
+          Pour completer les case B1 à D1, il faut mettre les noms des carrés entre guillemet.
+        </p>
+        <img src="Images/Geogebra9.jpg" style="max-height: 4cm;">
+      </div>
+      <div>
+        <p >
+          Dans la cellule B2, entrer la formule <mark>=Aire(B,A,F,G)</mark><br>
+          Dans la cellule D2, entrer la formule <mark>=Aire(A,C,H,I)</mark><br>
+          Dans la cellule C2, entrer la formule <mark>=Aire(B,C,E,D)</mark><br>
+          Pour terminer, dans la cellule B4, entrer la formule <mark>=D2</mark>. Dans la cellule B5, entrer la formule <mark>=B2+C2</mark>
+        </p>
+      </div>
+    </li>
+    <li class="actTitle">
+      <p><b><i><u>Analyse</u></i></b></p>
+      <div>
+        <p>
+          En déplaçant le point A tu peut voir les valeurs du tableau changer. 
+        </p>
+        <ol>
+          <li>
+            Essayer de créer un angle en A de 90°. Que remarque-tu dans le tableur ?</li>
+          <li>
+            Remplis le tableau donné ci-dessous en trouvant 4 positions du point A différentes tels que l'angle $\widehat{BAC}$ soit égal à 90°.
+            <table class="tactTableau">
+              <tr>
+                <td style="background-color: gray;"></td>
+                <td>Triangle 1</td>
+                <td>Triangle 2</td>
+                <td>Triangle 3</td>
+                <td>Triangle 4</td>
+              </tr>
+              <tr>
+                <td>$\widehat{BAC}$</td>
+                <td>90°</td>
+                <td>90°</td>
+                <td>90°</td>
+                <td>90°</td>
+              </tr>
+              <tr>
+                <td>$A_{BAFG}$</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>$A_{ACHI}$</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>$A_{BCED}$</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>$A_{BAFG}+A_{ACHI}$</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </li>
+          <li>Que peut-on dire ?</li>
+        </ol>
+      </div>
+    </li>
+  </ol>
+
+  <h1>Egalité de Pythagore (Rappels):</h1>
+      <div class="definition">
+        <span class="DRed">Théorème :</span><br><br>
+        <span style="font-weight: bold;">Si</span> un triangle est rectangle, 
+        <span style="font-weight: bold;">alors</span> le carré de la longueur de l’
+        <span style="text-decoration: underline;">hypoténuse</span>
+        est égal à la somme des carrés des longueurs des 
+        <span style="text-decoration: underline;">deux autres côtés</span>.
+      </div>
+
+      <div id="theoremeschema">
+        <label>SI</label>
+        <img src="Images/Triangle.svg" style="max-width: 8cm; margin: 0 30px;">
+        <label>ALORS</label>
+        <div>$\textcolor{#C00000}{a}^2=\textcolor{#0070C0}{b}^2+\textcolor{#0070C0}{c}^2$</div>
+      </div>
+  <h1>Réciproque et contraposé :</h1>
+      <h2>Prouver qu'un triangle est rectangle :</h2>
+          <div class="definition">
+            <span class="DRed">Propriété :</span> <span style="font-size: 8pt; color: gray;">(Réciproque du théorème de Pythagore)</span><br>
+            <b>Si</b> le carré de la longueur du plus grand côté d'un triangle <u>est égal</u> à la somme des carrés des longueurs des deux autres côtés, <b>alors</b> ce triangle <u>est rectangle</u>.
+          </div>
+          <div id="theoremeschema">
+            <label>SI</label>
+            <div>
+              <img src="Images/Accolade_200.svg" style="max-height: 5cm; margin: 0 30px;">
+              <div style="text-align: center; display: inline-block;">
+                <img src="Images/Triangle2.svg" style="max-width: 8cm; margin: 0 30px;">
+                <div>ET &nbsp;$\textcolor{#C00000}{a}^2=\textcolor{#0070C0}{b}^2+\textcolor{#0070C0}{c}^2$</div>
+              </div>
+            </div>
+            <label>ALORS</label>
+            <img src="Images/Triangle.svg" style="max-width: 8cm; margin: 0 30px;">
+          </div>
+          <p class="exemple">Exemple :</p>
+          <div class="flexobject">
+            <p>
+              Soit le triangle ABC suivant :<br>
+              On veut vérifier si ce triangle est rectangle.
+            </p>
+            <img src="Images/Triangle3.svg" style="max-width: 7cm;">
+          </div>
+          <div class="definition">
+            <label style="font-style: italic; color:darkcyan;">Rédaction type :</label>
+            <p>Son plus grand côté est BC. On calcul donc :</p>
+            <table id="redaction1">
+              <tr>
+                <td>$BC^2$</td>
+                <td>$=$</td>
+                <td>$17^2$</td>
+                <td>$AB^2+AC^2$</td>
+                <td>$=$</td>
+                <td>$15^2+8^2$</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>$=$</td>
+                <td>$289$</td>
+                <td></td>
+                <td>$=$</td>
+                <td>$225+64$</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>$=$</td>
+                <td>$289$</td>
+              </tr>
+            </table>
+            <p>Donc $BC^2=AB^2+AC^2$. l'égalité de Pythagore est vérifiée, donc le triangle ABC est rectangle en A.</p>
+          </div>
+      <h2>Prouver qu'un triangle n'est pas rectangle :</h2>
+          <div class="definition">
+            <span class="DRed">Propriété :</span> <span style="font-size: 8pt; color: gray;">(Contraposée de la réciproque du théorème de Pythagore)</span><br>
+            <b>Si</b> le carré de la longueur du plus grand côté d'un triangle <u>n'est pas égal</u> à la somme des carrés des 
+            longueurs des deux autres côtés, <b>alors</b> ce triangle <u>n'est pas rectangle</u>.
+          </div>
+          <div id="theoremeschema">
+            <label>SI</label>
+            <div>
+              <img src="Images/Accolade_200.svg" style="max-height: 5cm; margin: 0 30px;">
+              <div style="text-align: center; display: inline-block;">
+                <img src="Images/Triangle2.svg" style="max-width: 8cm; margin: 0 30px;">
+                <div>ET &nbsp;$\textcolor{#C00000}{a}^2\ne\textcolor{#0070C0}{b}^2+\textcolor{#0070C0}{c}^2$</div>
+              </div>
+            </div>
+            <label>ALORS</label>
+            <img src="Images/Triangle4.svg" style="max-width: 8cm; margin: 0 30px;">
+          </div>
+          <p class="exemple">Exemple :</p>
+          <div class="flexobject">
+            <p>
+              Soit le triangle ABC suivant :<br>
+              On veut vérifier si ce triangle est rectangle.
+            </p>
+            <img src="Images/Triangle5.svg" style="max-width: 7cm;">
+          </div>
+          <div class="definition">
+            <label style="font-style: italic; color:darkcyan;">Rédaction type :</label>
+            <p>Son plus grand côté est BC. On calcul donc :</p>
+          <table id="redaction1">
+            <tr>
+              <td>$BC^2$</td>
+              <td>$=$</td>
+              <td>$6^2$</td>
+              <td>$AB^2+AC^2$</td>
+              <td>$=$</td>
+              <td>$5^2+3^2$</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>$=$</td>
+              <td>$36$</td>
+              <td></td>
+              <td>$=$</td>
+              <td>$25+9$</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>$=$</td>
+              <td>$34$</td>
+            </tr>
+          </table>
+          <p>Donc $BC^2\ne AB^2+AC^2$. l'égalité de Pythagore n'est pas vérifiée, donc le triangle ABC n'est pas rectangle en A.</p>
+          </div>
+          
+
+</body>
+
+</html>

@@ -1,0 +1,352 @@
+:root {
+    --Cred: #e53935;
+    --Cblue: #039be5;
+    --Cgreen: #43a047;
+    --Cyellow: #EEBB00;
+    --Cviolet: #7C4DA5;
+
+    --Dred: #C00000;
+    --Dblue: #0070C0;
+    --Dgreen: #009900;
+    --Dyellow: #ffb300;
+    --Dviolet: #7B29C1;
+
+	--SectionPrincipale: #C00000;
+	--SectionSecondaire: #111111;
+	--Texte: #101010;
+	--BorderCase: #10101055;
+  
+}
+
+.CRed { color: var(--Cred);}
+.CBlue { color: var(--Cblue);}
+.CGreen { color: var(--Cgreen);}
+.CYellow { color: var(--Cyellow);}
+.CViolet { color: var(--Cviolet);}
+
+.DRed { color: var(--Dred);}
+.DBlue { color: var(--Dblue);}
+.DGreen { color: var(--Dgreen);}
+.DYellow { color: var(--Dyellow);}
+.DViolet { color: var(--Dviolet);}
+
+.CRRound{ border-radius: 20px; padding: 1px; width: fit-content; height: fit-content; display: inline-block; border: 2px solid var(--Cred);}
+.CBRound{ border-radius: 20px; padding: 1px; width: fit-content; height: fit-content; display: inline-block; border: 2px solid var(--Cblue);}
+.CGRound{ border-radius: 20px; padding: 1px; width: fit-content; height: fit-content; display: inline-block; border: 2px solid var(--Cgreen);}
+.CYRound{ border-radius: 20px; padding: 1px; width: fit-content; height: fit-content; display: inline-block; border: 2px solid var(--Cyellow);}
+.CVRound{ border-radius: 20px; padding: 1px; width: fit-content; height: fit-content; display: inline-block; border: 2px solid var(--Cviolet);}
+
+.DRRound{ border-radius: 20px; padding: 1px; width: fit-content; height: fit-content; display: inline-block; border: 2px solid var(--Dred);}
+.DBRound{ border-radius: 20px; padding: 1px; width: fit-content; height: fit-content; display: inline-block; border: 2px solid var(--Dblue);}
+.DGRound{ border-radius: 20px; padding: 1px; width: fit-content; height: fit-content; display: inline-block; border: 2px solid var(--Dgreen);}
+.DYRound{ border-radius: 20px; padding: 1px; width: fit-content; height: fit-content; display: inline-block; border: 2px solid var(--Dyellow);}
+.DVRound{ border-radius: 20px; padding: 1px; width: fit-content; height: fit-content; display: inline-block; border: 2px solid var(--Dviolet);}
+
+.NumR{ border-radius: 50%; width: 15px; height: 15px; vertical-align:middle; margin-bottom: 0.25em; display: inline-block; border: 2px solid var(--Texte); background: var(--Texte);
+    color: white; text-align: center; vertical-align: middle; font: 12px Arial, sans-serif;}
+
+@media print {
+    .pagebreak { 
+        clear: both;
+        page-break-after: always; 
+    } /* page-break-before works, as well */
+}
+
+@page { size: auto;  margin: 10mm 0; }
+
+table#TitleTable{
+    margin: 0 auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+img{
+    max-width: 100%;
+}
+
+#ChapitreNumero{
+    background-color: #A6A6A6;
+    font-family: Verdana, Helvetica, Geneva, Tahoma, sans-serif;
+    font-size: 18pt;
+    padding: 10px;;
+    text-align: center;
+}
+
+#ChapitreNom{
+    font-family: Verdana, Helvetica, Geneva, Tahoma, sans-serif;
+    font-size: 18pt;
+    padding: 10px;
+    text-align: center;
+}
+
+body {
+    counter-reset: h1count;
+    line-height: 1.4;
+    font-family: system-ui;
+    margin: 3rem;
+}
+
+@media only screen and (max-width:1024px) {
+    body {
+        margin: 15px;
+    }
+}
+
+h1 {
+    color: var(--SectionPrincipale);
+    counter-increment: h1count;
+    counter-reset: h2count;
+    display: list-item;
+    font-family: Verdana, Helvetica, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 50px;
+    margin-left: 2.5rem;
+}
+h1::marker {
+    display: list-item;
+    content: counter(h1count, upper-roman) ") ";
+    text-decoration: underline;
+    color: var(--SectionPrincipale);
+    font-weight: bold;
+}
+
+h2 {
+    color: var(--SectionSecondaire);
+    counter-increment: h2count;
+    counter-reset: h3count;
+    display: list-item;
+    font-family: Arial;
+    font-size: 13pt;
+    font-style: italic;
+    text-decoration: underline;
+    margin-left: 3rem;
+}
+h2::marker {
+    display: list-item;
+    content: counter(h2count) ") ";
+    text-decoration: underline;
+    color: var(--SectionSecondaire);
+    font-weight: bold;
+}
+
+p, div, ul, ol, li {color: var(--Texte);}
+table {border-color: black}
+
+.exemple {
+    font-size: 12pt;
+    font-family: Verdana, Helvetica, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.remarque {
+    font-size: 14pt;
+    font-family: Verdana, Helvetica, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+table, th, td, tr {
+    border: none;
+    border-collapse: collapse;
+}
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+table.centertext {
+    text-align: center;
+}
+
+.definition {
+    border: 1px solid var(--SectionSecondaire);
+    box-shadow: -5px -5px lightgray;
+    padding: 10px;
+    font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial;
+    margin-bottom: 20px;
+}
+
+.rotate30 {
+    -webkit-transform: rotate(30deg) translateZ(0);
+        -ms-transform: rotate(30deg) translateZ(0);
+            transform: rotate(30deg) translateZ(0);
+}
+.rotate45 {
+    -webkit-transform: rotate(45deg) translateZ(0);
+        -ms-transform: rotate(45deg) translateZ(0);
+            transform: rotate(45deg) translateZ(0);
+}
+.rotate60 {
+    -webkit-transform: rotate(60deg) translateZ(0);
+        -ms-transform: rotate(60deg) translateZ(0);
+            transform: rotate(60deg) translateZ(0);
+}
+
+#image0 {
+    width: 30%;
+    padding-left: 15px;
+    margin-left: 15px;
+    margin-top: -60px;
+    float: right;
+    font-style: italic;
+}
+#image1 {
+    width: 30%;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: right;
+    font-style: italic;
+}
+
+.flexobject{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 60px;
+    row-gap: 10px;
+}
+
+.differentcase{
+    border: thick double var(--BorderCase);
+    border-radius: 10px;
+}
+.differentcase p{
+    margin: 0;
+}
+
+.frac{
+    font-size: 18pt;
+    margin: 2px;
+}
+
+ol > li::marker {
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+.centertable{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.grid {
+    display: grid;
+}
+.C1 { grid-column: 1; }
+.C2 { grid-column: 2; }
+.C3 { grid-column: 3; }
+.C4 { grid-column: 4; }
+.C5 { grid-column: 5; }
+.C6 { grid-column: 6; }
+.C7 { grid-column: 7; }
+.C8 { grid-column: 8; }
+.C9 { grid-column: 9; }
+.R1 { grid-row: 1; }
+.R2 { grid-row: 2; }
+.R3 { grid-row: 3; }
+.R4 { grid-row: 4; }
+.R5 { grid-row: 5; }
+.R6 { grid-row: 6; }
+.R7 { grid-row: 7; }
+.R8 { grid-row: 8; }
+.R9 { grid-row: 9; }
+
+
+.RWave{ 
+    -moz-text-decoration: var(--Dred) wavy underline;
+    -webkit-text-decoration: var(--Dred) wavy underline;
+    text-decoration: var(--Dred) wavy underline;
+}
+.BWave{ 
+    -moz-text-decoration: var(--Dblue) wavy underline;
+    -webkit-text-decoration: var(--Dblue) wavy underline;
+    text-decoration: var(--Dblue) wavy underline;}
+.GWave{ 
+    -moz-text-decoration: var(--Dgreen) wavy underline;
+    -webkit-text-decoration: var(--DbDgreenlue) wavy underline;
+    text-decoration: var(--Dgreen) wavy underline;}
+.YWave{ 
+    -moz-text-decoration: var(--Dyellow) wavy underline;
+    -webkit-text-decoration: var(--Dyellow) wavy underline;
+    text-decoration: var(--Dyellow) wavy underline;}
+.VWave{ 
+    -moz-text-decoration: var(--Dviolet) wavy underline;
+    -webkit-text-decoration: var(--Dviolet) wavy underline;
+    text-decoration: var(--Dviolet) wavy underline;}
+
+.RDot{  
+    -moz-text-decoration: var(--Dred) dotted underline;
+    -webkit-text-decoration: var(--Dred) dotted underline;
+    text-decoration: var(--Dred) dotted underline;}
+.BDot{  
+    -moz-text-decoration: var(--Dblue) dotted underline;
+    -webkit-text-decoration: var(--Dblue) dotted underline;
+    text-decoration: var(--Dblue) dotted underline;}
+.GDot{  
+    -moz-text-decoration: var(--Dgreen) dotted underline;
+    -webkit-text-decoration: var(--Dgreen) dotted underline;
+    text-decoration: var(--Dgreen) dotted underline;}
+.YDot{  
+    -moz-text-decoration: var(--Dyellow) dotted underline;
+    -webkit-text-decoration: var(--Dyellow) dotted underline;
+    text-decoration: var(--Dyellow) dotted underline;}
+.VDot{  
+    -moz-text-decoration: var(--Dviolet) dotted underline;
+    -webkit-text-decoration: var(--Dviolet) dotted underline;
+    text-decoration: var(--Dviolet) dotted underline;}
+.TDot{  
+    -moz-text-decoration: var(--Texte) dotted underline;
+    -webkit-text-decoration: var(--Texte) dotted underline;
+    text-decoration: var(--Texte) dotted underline;}
+
+.RDbl{   
+    -moz-text-decoration: var(--Dred) double underline;
+    -webkit-text-decoration: var(--Dred) double underline;
+    text-decoration: var(--Dred) double underline;}
+.BDbl{   
+    -moz-text-decoration: var(--Dblue) double underline;
+    -webkit-text-decoration: var(--Dblue) double underline;
+    text-decoration: var(--Dblue) double underline;}
+.GDbl{   
+    -moz-text-decoration: var(--Dgreen) double underline;
+    -webkit-text-decoration: var(--Dgreen) double underline;
+    text-decoration: var(--Dgreen) double underline;}
+.YDbl{   
+    -moz-text-decoration: var(--Dyellow) double underline;
+    -webkit-text-decoration: var(--Dyellow) double underline;
+    text-decoration: var(--Dyellow) double underline;}
+.VDbl{   
+    -moz-text-decoration: var(--Dviolet) double underline;
+    -webkit-text-decoration: var(--Dviolet) double underline;
+    text-decoration: var(--Dviolet) double underline;}
+
+.formule{
+    font-size: 20pt;
+    margin: 5px;
+}
+
+.floating div{
+    position: absolute;
+}
+
+.Blank1{
+    display: inline-block; 
+    border-bottom: 1px var(--Texte) dotted;
+    width: 50px;
+}
+.Blank2{
+    display: inline-block; 
+    border-bottom: 1px var(--Texte) dotted;
+    width: 100px;
+}
+.Blank3{
+    display: inline-block; 
+    border-bottom: 1px var(--Texte) dotted;
+    width: 150px;
+}

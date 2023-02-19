@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script id="Animation" src="/JS/Animation/animation_holder.js"></script>
+
+  <title>Chapitre 7 - Rotations</title>
+
+  <style>
+    select{
+      font-size: 20px;
+    }
+  </style>
+
+</head>
+
+<body onload="CreateAnimationObject()">
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Chapitre 7
+      </td>
+      <td id="ChapitreNom">
+        - Rotations
+      </td>
+    </tr>
+  </table>
+
+  <p class="exemple">
+    Activité Introduction
+  </p>
+
+  <p>
+    Une grande roue est installée sur les rives d'un fleuve. Elle tourne à une vitesse
+    constante dans le sens indiqué par les flèches et effectue un tour complet en 40 minutes
+    exactement.
+  </p>
+
+  <div class="flexobject">
+    <img src="Images/Schema Grand Roue.svg" style="max-height: 300px;">
+    <img src="Images/Grand Roue.jpg" style="max-height: 300px;">
+  </div>
+  
+  <ol>
+    <li>
+      Patrick commence son tour sur la grande roue au point d'embarquement P.
+      <ol type="a">
+        <li>Où se trouve Patrick au bout de 20 minutes ? De combien de degrés aura-t-il tourné ?</li>
+        <li>Recopier et compléter la phrase : "La rotation de centre M et d'angle 
+          ..... transforme le point P en ...... ."</li>
+        <li>Quelle autre transformation permet de passer du point P au point R ?</li>
+      </ol>
+    </li>
+    <li>
+      Patrick a commencé son tour depuis une demi-heure.
+      <ol type="a">
+        <li>Où se trouve-t-il maintenant ? De combien de degrés a-t-il tourné ?</li>
+        <li>Recopier et compléter la phrase : "La rotation de centre M et d'angle 
+          ..... transforme le point P en ...... ."</li>
+      </ol>
+    </li>
+    <li>Quelle rotation transforme le point P en point Q ?</li>
+  </ol>
+  
+  <h1>Définition et propriétés :</h1>
+      <h2>Définition</h2>
+          <div class="definition">
+            Transformer un point (ou une figure) par <span class="DRed">rotation</span>, 
+            c'est faire tourner ce point (ou cette figure) par rapport à un <b>centre de rotation</b>,
+            d'un certain <b>angle</b> et dans une <b>direction</b> donnée.
+          </div>
+          <p class="exemple">Exemples :</p>
+          <div class="flexobject">
+            <div style="text-align: center;">
+              Rotation d'un point<br>
+              <img src="Images/Rotation point.svg" style="max-height: 200px;">
+            </div>
+            <div style="text-align: center;">
+              Rotation d'une figure<br>
+              <img src="Images/Rotation figure.svg" style="max-height: 200px;">
+            </div>
+            <div style="width: 210px; padding: 5px; text-align: center; border: solid black 1px;">
+              <canvas id="rotationvisualisation" height="200" width="200"></canvas><br>
+              <div>
+                  <select id="rotationvisualisation_s" style="width: 100%;" onchange="Redraw()">
+                    <option value="0">⟲ anti-horaire</option>
+                    <option value="1">⟳ horaire</option>
+                  </select>
+                  <input id="rotationvisualisation_i" style="width: 100%;" type="range" 
+                  value="60" min="0" max="360" step="1" oninput="Redraw()">
+              </div>
+            </div>
+          </div>
+
+          <ul>
+            <li>Le point M' est l'image du point M par la rotation de centre O de 45° dans le sens anti-horaire.</li>
+            <li>La figure A'B'C' est l'image de la figure ABC par la rotation de centre O de 60° dans le sens anti-horaire.</li>
+          </ul>
+
+      <h2>Propriétés</h2>
+          <div class="definition">
+            <span class="DRed">Propriété :</span><br>
+            La rotation conserve les longueurs et les angles.
+          </div>
+          <div class="definition">
+            <span class="DRed">Propriété :</span><br>
+            L'image du centre de rotation est lui même quelque soit l'angle et le sens de rotation.
+          </div>  
+          <p class="remarque">Remarque :</p>
+          <p>Le centre de rotation (souvent noté O) est dit <span class="DRed">invariant</span>.</p>
+          
+          <div class="definition">
+            <span class="DRed">Propriété :</span><br>
+            Une rotation de 180° correspond à une symétrie centrale.
+          </div>  
+
+    <h1>Géométrie :</h1>
+        <h2>Construction :</h2>
+          <p>Construction de l'image du point M par la rotation de centre O de 50° dans le sens anti-horaire :</p>
+          <div class="flexobject">
+            <div id="Animation1" class="animation" width="480" height="360"></div>
+            <p>
+              On place le rapporteur centré sur O et on oriente le 0 vers M.<br>
+              L'angle est lu sur la couronne intérieur du rapporteur.<br>
+              On reporte l'angle voulu et on reporte la distance OM grâce au compas.
+            </p>
+          </div>
+        <h2>Pavage :</h2>
+          <p>Il est possible de repérer une rotation dans une figure tracé et particulièrement dans un pavage.</p>
+          <img src="Images/Pavage.svg" style="max-height: 400px;">
+          <p>Ici le pavage est obtenu en effectuant la rotation du motif suivant de 120° ou 60° selon le centre choisie.</p>
+          <p>
+            Le motif orange est l'image du motif vert par :<br>
+            <ul>
+              <li>La rotation de centre A de 60° dans le sens horaire</li>
+              <li>La rotation de centre B de 120° dans le sens anti-horaire</li>
+            </ul>
+          </p>
+          <img src="Images/Motif.svg" style="max-height: 200px;">
+
+  
+</body>
+<script src="JS/Rotation.js"></script>
+</html>

@@ -1,0 +1,309 @@
+:root {
+	--NavBarWidth: 350px;
+  --HeaderBarHeight: 60px;
+  --HeaderBarHeight: 60px;
+  --PanelBack: #1f1f23;
+  --PanelBackActive: #232327;
+  --PanelBackHover: #26262C;
+  --PanelBackHoverMenu: #36363C;
+  --PanelBackText: #DEDEE3;
+  --HeaderBack: #18181b;
+  --HeadMenuButton: #F9F9FF10;
+  --HeadMenuButtonHover: #F9F9FF1D;
+  --HeadMenuButtonActive: #F9F9FF05;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+header {
+  height: var(--HeaderBarHeight);
+  left: var(--NavBarWidth);
+  right: 0;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+.aside {
+  background: var(--PanelBack);
+  bottom: 0px;
+  left: 0;
+  z-index: 2;
+  position: fixed;
+  top: var(--HeaderBarHeight);
+  width: var(--NavBarWidth);
+  box-shadow: 2px 0px 1px black;
+  overflow-x: visible;
+  transition: .25s all ease;
+}
+
+/* Header */
+.nav-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: var(--HeaderBarHeight);
+  z-index: 20;
+  background: var(--HeaderBack);
+  box-shadow: 0px 2px 1px black;
+}
+.nav-headertext{
+  height: var(--HeaderBarHeight);
+  width: var(--NavBarWidth);
+}
+.titrepageback{
+  width: auto;
+  padding: 0px 10px;
+  margin: calc((var(--HeaderBarHeight) - 16px * 3) / 2);
+  border-radius: 5px;
+  background-color: var(--PanelBack);
+}
+.titrepageback p{
+  font-family: "Inter", "Roobert", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--PanelBackText);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  margin: auto;   
+  text-align: center;
+}
+
+
+.menuprincipale{
+  display: flex;
+  height: calc(var(--HeaderBarHeight) - 12px);
+  justify-content: left;
+  margin: 6px;
+  gap: 6px;
+}
+.blockmenu{
+  align-items: center;
+  background-color: var(--HeadMenuButton);
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  font-family: "Inter", "Roobert", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  justify-content: center;
+  padding: 0px 10px;
+  text-align: center;
+  transition: .25s all ease;
+  width: 200px;
+}
+.blockmenu:hover{
+  background-color: var(--PanelBackHover);
+}
+.blockmenu:active{
+  background-color: var(--HeadMenuButtonActive);
+}
+.blockmenuprincipal span:before{
+  content: "Menu principal";
+}
+.blockmenucours span:before{
+  content: "Cours";
+}
+.blockmenuannales span:before{
+  content: "Annales du brevet";
+}
+.blockmenu span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  width: 190px;
+}
+.blockmenu span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0px;
+  transition: 0.5s;
+}
+.blockmenu:hover span {
+  padding-right: 10px;
+}
+.blockmenu:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/* FIN Header*/
+
+/* Contenue cours*/
+.container {
+  top: var(--HeaderBarHeight);
+  left: 0;
+  margin-left: var(--NavBarWidth);
+  bottom: 0;
+  min-height: 100%;
+  position: relative;
+  text-align: center;
+  background-color: white;
+}
+.container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+/* FIN Contenue cours*/
+
+/* Navigation chapitres */
+.openmenu{
+  position: absolute;
+  right: -40px;
+  top: 0px;
+  width: 40px;
+  height: 40px;
+  z-index: 99;
+  background: var(--PanelBack);
+  box-shadow: 2px 0px 1px black;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+  transition: .25s all ease;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  visibility: hidden;
+}
+.openmenu:hover{
+  background-color: var(--PanelBackHoverMenu);
+}
+.openmenu:active{
+  background-color: var(--PanelBackHover);
+}
+
+nav{
+  overflow-y: auto;
+  bottom: 0px;
+  left: 0;
+  position: relative;
+  height: calc(100% - 36.8px);
+  scrollbar-width: thin;          /* "auto" or "thin" */
+  scrollbar-color: var(--PanelBackText) transparent;   /* scroll thumb and track */
+}
+nav::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+nav::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+nav::-webkit-scrollbar-thumb {
+  background-color: var(--PanelBackText);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: none;  /* creates padding around scroll thumb */
+}
+
+.chapitrebuttton{
+  background-color: var(--PanelBack);
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.chapitrebutton:hover{
+  background-color: var(--PanelBackHover);
+}
+.chapitrebutton:active{
+  background-color: var(--PanelBackActive);
+}
+.chapitrebutttonflex{
+  padding: 5px 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 0px;
+}
+.chapitrebutttonimg{
+  width: 30px; 
+  height: 30px;
+}
+.chapitrebutttonnumber{
+  font-family: "Inter", "Roobert", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--PanelBackText);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16.8px;
+  margin: 0px;
+}
+.chapitrebutttonname{
+  font-family: "Inter", "Roobert", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--PanelBackText);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.6px;
+  margin: 0px;
+  overflow-x: hidden;
+}
+.choixniveau{
+  display: flex;
+  font-size: 20px !important;
+}
+.chapitrebutttonclass{
+  font-family: "Inter", "Roobert", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--PanelBackText);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 16.8px;
+  margin: 0px;
+  align-items: center;
+  text-align: center;
+  padding: 10px 0px;
+}
+.selected{
+  background-color: var(--PanelBackHover);
+}
+/* FIN Navigation chapitres */
+
+
+@media only screen and (max-width:1024px) {
+  .nav-header {
+    height: calc(2 * var(--HeaderBarHeight));
+  }
+  .nav-headertext{
+    width: 100%;
+    height: min-content;
+  }
+  header {
+    top: var(--HeaderBarHeight);
+    left: 0;
+  }
+  .aside {
+    width: calc(100% - 40px);
+    left: calc(40px - 100%);
+    top: calc(2 * var(--HeaderBarHeight));
+  }
+  .asideshow{
+    left: 0px;
+  }
+  .container {
+    margin-left: 0;
+    top: calc(2 * var(--HeaderBarHeight));
+  }
+  .menuprincipale{
+  }
+  .blockmenuprincipal span:before{
+    content: "🏠";
+  }
+  .blockmenucours span:before{
+    content: "📚️";
+  }
+  .blockmenuannales span:before{
+    content: "🗄️";
+  }
+  .blockmenu span {
+    width: 30px;
+  }
+  .blockmenu{
+    width: 40px;
+  }
+  .openmenu{
+    visibility: visible;
+  }
+}

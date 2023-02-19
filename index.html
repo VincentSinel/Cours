@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="CSS/MainPage.css"> 
+  <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+  <link rel="manifest" href="Images/site.webmanifest">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Cours M.SINEL</title>
+
+  <style>
+    
+  </style>
+
+</head>
+
+<body onload="CreateNavBar()">
+
+  <div class="nav-header">
+    <div class="nav-headertext">
+      <div class="titrepageback">
+        <p class="titrepage"> SINEL Vincent</p>
+        <p class="titrepage"> Collège Mme De Lafayette</p>
+        <p class="titrepage"> 2018-2023</p>
+      </div>
+    </div>
+    <header>
+      <div class="menuprincipale">
+        <div class="blockmenu blockmenuprincipal"><span></span></div>
+        <div class="blockmenu blockmenucours"><span></span></div>
+        <div class="blockmenu blockmenuannales"><span></span></div>
+      </div>
+    </header>
+  </div>
+  <div id="menu" class="aside">
+    <div class="openmenu" onclick="toggleMenu()">
+      ☰
+    </div>
+    <div class="choixniveau">
+      <div id="niveau6" class="chapitrebutton" style="flex: auto;" onclick="SelectClasse(3)">
+        <p class="chapitrebutttonclass">6ème</p>
+      </div>
+      <div id="niveau5" class="chapitrebutton" style="flex: auto;" onclick="SelectClasse(2)">
+        <p class="chapitrebutttonclass">5ème</p>
+      </div>
+      <div id="niveau4" class="chapitrebutton selected" style="flex: auto;" onclick="SelectClasse(1)">
+        <p class="chapitrebutttonclass">4ème</p>
+      </div>
+      <div id="niveau3" class="chapitrebutton" style="flex: auto;" onclick="SelectClasse(0)">
+        <p class="chapitrebutttonclass">3ème</p>
+      </div>
+    </div>
+    <nav>
+      <div id="Cours3eme"></div>
+      <div id="Cours4eme"></div>
+      <div id="Cours5eme"></div>
+      <div id="Cours6eme"></div>
+    </nav>
+  </div>
+  <div class="container">
+    <div>
+      <iframe id="Iframe"></iframe>
+    </div>
+  </div>
+
+  <script>
+
+    function toggleMenu()
+    {
+      console.log("clic")
+      let menu = document.getElementById("menu");
+      menu.classList.toggle("asideshow");
+    }
+
+    // Selecting the iframe element
+    var frame = document.getElementById("Iframe");
+    var lastselected = null;
+      
+    // Adjusting the iframe height onload event
+    frame.onload = function()
+    // function execute while load the iframe
+    {
+      // set the height of the iframe as 
+      // the height of the iframe content
+      frame.style.height = 
+      frame.contentWindow.document.body.scrollHeight + 120 + 'px';
+      
+
+    // set the width of the iframe as the 
+    // width of the iframe content
+    //frame.style.width  = 
+    //  frame.contentWindow.document.body.scrollWidth+'px';
+          
+    }
+    window.onresize = function()
+    // function execute while load the iframe
+    {
+      // set the height of the iframe as 
+      // the height of the iframe content
+      frame.style.height = 
+      frame.contentWindow.document.body.scrollHeight + 120 + 'px';
+      
+
+    // set the width of the iframe as the 
+    // width of the iframe content
+    //frame.style.width  = 
+    //  frame.contentWindow.document.body.scrollWidth+'px';
+          
+    }
+
+    function clic(path, a)
+    {
+      frame.src = path
+      if (lastselected != null)
+        lastselected.classList.remove("selected")
+      lastselected = a
+      lastselected.classList.add("selected")
+      window.scrollTo(0, 0);
+    }
+  </script>
+  <script id="MathJax-script" async src="JS/Cours/Liste.js"></script>
+</body>
+
+
+
+  

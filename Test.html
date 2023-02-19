@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="en">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Cours M.SINEL</title>
+
+  <style>
+    #balance{
+      align-items: center;
+      text-align: center;
+      padding: 2px;
+      row-gap: 5px;
+      border: 1px solid black;
+      font-family: Bahnschrift;
+      font-size: 16px;
+      font-weight: bold;
+      max-width: 360px;
+    }
+    #balance table{
+      width: calc(100% - 1px);
+      border-collapse: collapse;
+    }
+    #balance td{
+      min-width: 25px;
+    }
+    #balance th{
+      border-bottom: solid black;
+    }
+    #balance input{
+      width: calc(100% - 7px);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="balance">
+    <div style="border-bottom: solid lightgray 1px; padding: 5px 0px;">
+      <table>
+        <tr>
+          <th>
+            <input id="x1num" type="number" value="0" max="99" min="-99">
+          </th>
+          <td rowspan="2" style="padding: 5px;">
+            <label style="text-align: center;">x +</label>
+          </td>
+          <th>
+            <input id="c1num" type="number" value="0" max="99" min="-99">
+          </th>
+          <td rowspan="2">
+            <button id="balance_generate" onclick="Balance.instance.CreateEquation()"
+            style="width: 30px; margin: auto 5px;">=</button>
+          </td>
+          <th>
+            <input id="x2num" type="number" value="0" max="99" min="-99">
+          </th>
+          <td rowspan="2" style="padding: 5px;">
+            x + 
+          </td>
+          <th>
+            <input id="c2num" type="number" value="0" max="99" min="-99">
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <input id="x1den" type="number" value="1" max="99" min="1">
+          </td>
+          <td>
+            <input id="c1den" type="number" value="1" max="99" min="1">
+          </td>
+          <td>
+            <input id="x2den" type="number" value="1" max="99" min="1">
+          </td>
+          <td>
+            <input id="c2den" type="number" value="1" max="99" min="1">
+          </td>
+        </tr>
+      </table>
+    </div>
+    
+    <div style="border-bottom: solid lightgray 1px;">
+      <canvas id="balance_canvas" width="480"></canvas>
+    </div>
+
+    <div style="border-bottom: solid lightgray 1px; padding: 5px 0px;">
+      <table>
+        <tr>
+          <td style="width: 35%;">
+            <button onclick="Balance.instance.AddToEquation(0)">⬉</button>
+          </td>
+          <td>
+            <button onclick="Balance.instance.AddToEquation(1)">⬉|⬈</button>
+          </td>
+          <td style="width: 35%;">
+            <button onclick="Balance.instance.AddToEquation(2)">⬈</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <table>
+        <tr>
+          <td style="width: 35%;">
+            <table>
+              <tr>
+                <td style="user-select: none;">
+                  <div>
+                    <input style="width: auto;" id="Balance_add_unknow" type="checkbox" value="false">
+                    <label for="Balance_add_unknow">x ?</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <input id="anum" type="number" value="0" max="99" min="-99">
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <input id="aden" type="number" value="1" max="99" min="1">
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td style="width: 30%;vertical-align: center; padding-top: 22px;">
+            <div>
+              <button onclick="Balance.instance.Regroupe()">Regrouper</button>
+            </div>
+          </td>
+          <td style="width: 35%; vertical-align: bottom;">
+            <table>
+              <tr>
+                <td>
+                  <button style="width: 30px" onclick="Balance.instance.MultiplyEquation()">x</button>
+                </td>
+                <th>
+                  <input id="coefnum" type="number" value="0" max="99" min="-99">
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <button style="width: 30px" onclick="Balance.instance.DivideEquation()">÷</button>
+                </td>
+                <td>
+                  <input id="coefden" type="number" value="1" max="99" min="1">
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+<script src="JS/Test.js"></script>
+</html>

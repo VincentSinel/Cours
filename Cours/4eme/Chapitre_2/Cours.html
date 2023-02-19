@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Chapitre 2 - Théorème de Pythagore</title>
+
+  <style>
+    #carreparfait th {font-family: Calibri; width: 80px;}
+    #carreparfait td {text-align: center;}
+    #carreparfait tr:nth-of-type(even) { background-color: lightgray;}
+    #theoremeschema{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 18pt;
+      font-weight: bold;
+    }
+    #theoremeschema label{ padding: 20px;}
+    #schemaexemple{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      color: gray;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Chapitre 2
+      </td>
+      <td id="ChapitreNom">
+        - Théorème de Pythagore
+      </td>
+    </tr>
+  </table>
+
+  <p class="exemple">
+    Activité Introduction
+  </p>
+
+  
+  <aside id="image0"> </aside>
+  <div style="display: flex;flex-wrap: wrap;">
+    <p> 
+      Charlie le charpentier explique à son apprenti comment calculer la longueur des poutres d’une charpente. <br>
+      Il effectue le dessin qui suit et explique :
+    </p>
+    <img src="Images/Image Toiture0.png">
+  </div>
+  <div style="display: flex;flex-wrap: wrap;">
+    <div style="border: 1px solid black; width: max-content;">
+      « C’est facile ! Considère un triangle rectangle dont tu connais deux longueurs :
+      <ul>
+        <li>Calcule le carré de la longueur d’un côté de l’angle droit;</li>
+        <li>Additionne les deux résultats précédents;</li>
+        <li>La troisième longueur est le nombre positif dont le carré est égal au résultat précédent.»</li>
+      </ul>
+    </div>
+    <img src="Images/Image Toiture1.png" style="width: 8cm;">
+  </div>
+  
+  <ol>
+    <li> Applique la méthode de Charlie dans le triangle ABH :<br>
+      <ol type="a">
+        <li>Reproduire le triangle à main levé en indiquant les longueurs connus.</li>
+        <li>Ecrire chaque étape de la méthode de Charlie.</li>
+        <li>Que vaut AB² ?</li>
+        <li>En déduire que la longueur AB est égal à 10m.</li>
+      </ol>
+    </li>
+    
+    <li> Utiliser la méthode de Charlie pour calculer AC². Trouver le nombre positif 
+      dont le carré est égal à cette valeur et en déduire la longueur AC.
+    </li>
+  </ol>
+  <div style="display: flex;flex-wrap: wrap;align-items: center;">
+  <p>Le jeune apprenti se trouve confronté à un autre problème avec le toit d’un cabanon.<br></p>
+  <img src="Images/Image Toiture2.png" style="width: 8cm; margin: 0 30px;">
+  </div>
+  <ol>
+    <li> Appliquer la méthode de Charlie pour calculer la longueur exacte de la poutre. 
+      Quel est le problème ?</li>
+      <li> Les mathématiciens ont défini un nouvel outil de calcul pour obtenir le résultat. 
+        Quel est-il ?</li>
+        <li> Donnée une valeur approchée au cm près de la poutre.</li>
+  </ol>
+
+  
+
+  <h1>Racine Carré et Carré Parfait :</h1>
+      <h2>Carré Parfait :</h2>
+
+            <div class="definition">
+              On appelle <span class="DRed">carré parfait</span>, le carré d’un entier $a^2$.
+            </div>
+
+            <table>
+              <tr>
+                <td style="border: 1px solid black;">
+                  <table id="carreparfait">
+                    <tr style="border-bottom: 1px solid black;">
+                      <th>Entier</th>
+                      <th>Carré</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>9</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>16</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>25</td>
+                    </tr>
+                  </table>
+                </td>
+                <td style="border: 1px solid black;">
+                  <table id="carreparfait">
+                    <tr style="border-bottom: 1px solid black;">
+                      <th>Entier</th>
+                      <th>Carré</th>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>36</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>49</td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>64</td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>81</td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>100</td>
+                    </tr>
+                  </table>
+                </td>
+                <td style="border: 1px solid black;">
+                  <table id="carreparfait">
+                    <tr style="border-bottom: 1px solid black;">
+                      <th>Entier</th>
+                      <th>Carré</th>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td>121</td>
+                    </tr>
+                    <tr>
+                      <td>12</td>
+                      <td>144</td>
+                    </tr>
+                    <tr>
+                      <td>13</td>
+                      <td>169</td>
+                    </tr>
+                    <tr>
+                      <td>14</td>
+                      <td>196</td>
+                    </tr>
+                    <tr>
+                      <td>15</td>
+                      <td>225</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+      <h2>Racine Carré :</h2>
+
+            <div class="definition">
+              Soit a un nombre positif. On appelle « <span class="DRed">racine carrée de a</span> 
+              » le nombre positif dont le carré est égal à <span class="DRed">a</span>. 
+              On le note $\textcolor{red}{\sqrt{a}}$.
+            </div>
+
+            <p class="exemple">Exemple :</p>
+            <p>La racine carrée de 36 est 6 : $\sqrt{36}=6$ <span style="margin-left: 60px;"></span> $\sqrt{0,25}=0,5$</p>
+
+  <h1>Théorème de Pythagore :</h1>
+      <h2>Théorème :</h2>
+
+              <p class="remarque">
+                Rappel :
+              </p>
+              <p>Dans un triangle rectangle le côté le plus long (en face de l'angle droit) est appelé 
+                <span class="DRed">hypoténuse</span></p>
+
+              <div class="definition">
+                <span class="DRed">Théorème :</span><br><br>
+                <span style="font-weight: bold;">Si</span> un triangle est rectangle, 
+                <span style="font-weight: bold;">alors</span> le carré de la longueur de l’
+                <span style="text-decoration: underline;">hypoténuse</span>
+                 est égal à la somme des carrés des longueurs des 
+                <span style="text-decoration: underline;">deux autres côtés</span>.
+              </div>
+
+              <div id="theoremeschema">
+                <label>SI</label>
+                <img src="Images/Triangle.svg" style="max-width: 8cm; margin: 0 30px;">
+                <label>ALORS</label>
+                <div>$\textcolor{#C00000}{a}^2=\textcolor{#0070C0}{b}^2+\textcolor{#0070C0}{c}^2$</div>
+              </div>
+
+      <h2>Calcul de l'hypoténuse :</h2>
+              <p>Sur un exemple :</p>
+              <P>Soit le triangle ABC rectangle en A tel que AB = 4cm et AC = 3cm. On cherche 
+                à calculer la longueur du troisième côté [BC].</P>
+              <div class="definition">
+                <label style="font-style: italic; color:darkcyan;">Rédaction type :</label>
+                <div id="schemaexemple">
+                  <img src="Images/Cours2.png" style="max-width: 4cm; margin: 0 30px;">
+                  <label>(On fait un schema avec la position de l'angle droit)</label>
+                </div>
+                <p>
+                  Dans le triangle ABC rectangle en A. D'après le théorème de Pythagore on a :<br>
+                  $BC^2=BA^2+CA^2$<br>
+                  donc<br>
+                  $BC^2=4^2+3^2$<br>
+                  $BC^2=16+9$<br>
+                  $BC^2=25$<br>
+                  $BC=\sqrt{25}=5cm$
+                </p>
+              </div>
+        
+
+      <h2>Calcul d'un côté de l'angle droit :</h2>
+              <p>Sur un exemple :</p>
+              <P>Soit le triangle EDF rectangle en D tel que ED = 12cm et EF = 15cm. On cherche 
+                à calculer la longueur du troisième côté [DF].</P>
+              <div class="definition">
+                <label style="font-style: italic; color:darkcyan;">Rédaction type :</label>
+                <div id="schemaexemple">
+                  <img src="Images/Cours3.png" style="max-width: 4cm; margin: 0 30px;">
+                  <label>(On fait un schema avec la position de l'angle droit)</label>
+                </div>
+                <p>
+                  Dans le triangle EDF rectangle en D. D'après le théorème de Pythagore on a :<br>
+                  $EF^2=ED^2+DF^2$<br>
+                  donc<br>
+                  $15^2=12^2+DF^2$<br>
+                  $225=144+DF^2$<br>
+                  $DF^2=225-144=81$<br>
+                  $DF=\sqrt{81}=9cm$
+                </p>
+              </div>
+
+
+</body>
+
+</html>
