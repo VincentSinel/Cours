@@ -27,7 +27,7 @@ var ListeCours = {
         },
         {
             id: 6,
-            nom: "Factorisation développement",
+            nom: "Factorisations développements",
             icone: 1,
         },
         {
@@ -124,7 +124,7 @@ var ListeCours = {
         },
         {
             id: 5,
-            nom: "Additions et soustraction de fraction",
+            nom: "Additions et soustractions de fractions",
             icone: 1,
         },
         {
@@ -159,7 +159,7 @@ var ListeCours = {
         },
         {
             id: 12,
-            nom: "Multiplication et division de fraction",
+            nom: "Multiplications et divisions de fractions",
             icone: 1,
         },
         {
@@ -169,7 +169,7 @@ var ListeCours = {
         },
         {
             id: 14,
-            nom: "Puissances négatifs",
+            nom: "Puissances négatives",
             icone: 1,
         },
         {
@@ -251,7 +251,7 @@ var ListeCours = {
         },
         {
             id: 9,
-            nom: "Fraction et Proportion",
+            nom: "Fractions et Proportions",
             icone: 3,
         },
         {
@@ -261,7 +261,7 @@ var ListeCours = {
         },
         {
             id: 11,
-            nom: "Addition et Soustraction de Nombres Relatifs",
+            nom: "Additions et Soustractions de Nombres Relatifs",
             icone: 2,
         },
         {
@@ -333,7 +333,7 @@ var ListeCours = {
         },
         {
             id: 5,
-            nom: "Additions et soustraction de fraction",
+            nom: "Additions et soustractions de fractions",
             icone: 1,
         },
         {
