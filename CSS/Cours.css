@@ -98,7 +98,7 @@ h1 {
     counter-reset: h2count;
     display: list-item;
     font-family: Verdana, Helvetica, Geneva, Tahoma, sans-serif;
-    font-size: 14pt;
+    font-size: 18pt;
     font-weight: bold;
     text-decoration: underline;
     margin-top: 50px;
@@ -118,7 +118,7 @@ h2 {
     counter-reset: h3count;
     display: list-item;
     font-family: Arial;
-    font-size: 13pt;
+    font-size: 16pt;
     font-style: italic;
     text-decoration: underline;
     margin-left: 3rem;
@@ -129,6 +129,26 @@ h2::marker {
     text-decoration: underline;
     color: var(--SectionSecondaire);
     font-weight: bold;
+}
+
+h3 {
+    color: var(--SectionSecondaire);
+    counter-increment: h3count;
+    counter-reset: h4count;
+    display: list-item;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14pt;
+    font-style: italic;
+    text-decoration: underline;
+    margin-left: 3.5rem;
+    font-weight: normal;
+}
+h3::marker {
+    display: list-item;
+    content: counter(h3count, lower-alpha) ") ";
+    text-decoration: underline;
+    color: var(--SectionSecondaire);
+    font-weight: normal;
 }
 
 p, div, ul, ol, li {color: var(--Texte);}

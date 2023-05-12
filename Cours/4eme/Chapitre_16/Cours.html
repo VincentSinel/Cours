@@ -17,6 +17,15 @@
   <title>Chapitre 16 - Pyramides et cônes</title>
 
   <style>
+    .formulevol{
+      min-width: 300px;
+      text-align: center;
+    }
+    .formulevol div{
+      min-width: 400px;
+      text-align: center;
+      font-size: 16pt;
+    }
   </style>
 
 </head>
@@ -37,9 +46,237 @@
   <p class="exemple">
     Activité Introduction
   </p>
+  <p>Donner le nom de chacun des solides suivants :</p>
+  <div class="flexobject">
+    <img src="Images/Solides-01.svg"/>
+    <img src="Images/Solides-02.svg"/>
+    <img src="Images/Solides-03.svg"/>
+    <img src="Images/Solides-04.svg"/>
+    <img src="Images/Solides-05.svg"/>
+    <img src="Images/Solides-06.svg"/>
+    <img src="Images/Solides-07.svg"/>
+  </div>
+  <h1>Représentation de solide dans l'espace :</h1>
+      <h2>Patrons :</h2>
+          <div class="definition">
+            Le <span class="CRed">patron</span> d'un solide est une figure du plan qui, par découpage et pliage, permet de fabriquer le solide.
+          </div>
+      <h2>Solides usuelles :</h2>
+          <h3>Pavés droits et cubes :</h3>
+            <div class="definition">
+              Un <span class="CRed">pavé droit</span> est un solide dont toutes les faces sont des rectangles.<br>
+              Si les face sont des carrés, on l'appel alors un <span class="CRed">cube</span>.
+            </div>
+            <div class="flexobject">
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Solides-07.svg"/>
+              </div>
+              <div>
+                <label><b>Patron :</b></label><br>
+                <img src="Images/Patrons-07.svg"/>
+              </div>
 
-  
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Solides-05.svg"/>
+              </div>
+              <div>
+                <label><b>Patron :</b></label><br>
+                <img src="Images/Patrons-05.svg"/>
+              </div>
+            </div>
+          <h3>Cylindres :</h3>
+            <div class="definition">
+              Un <span class="CRed">cylindre de révolution</span> est composé de 2 disques formants les bases, parallèles entre eux. 
+              La surface latérale lorsqu'elle est dépliée est un rectangle ayant la même largeur que le périmètre des disques.
+            </div>
+            <div class="flexobject">
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Solides-03.svg"/>
+              </div>
+              <div>
+                <label><b>Patron :</b></label><br>
+                <img src="Images/Patrons-03.svg"/>
+              </div>
+              <img src="Images/Gif Cylindre de revolution.agif" style="max-width: 4cm;"/>
+            </div>
+          <h3>Prismes :</h3>
+            <div class="definition">
+              Un <span class="CRed">prisme</span> est composé de deux bases polygonales, parallèles entre elles. 
+              Les faces latérales sont des rectangles.
+            </div>
+            <div class="flexobject">
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Solides-04.svg"/>
+              </div>
+              <div>
+                <label><b>Patron :</b></label><br>
+                <img src="Images/Patrons-04.svg"/>
+              </div>
+            </div>
+          <h3>Pyramides :</h3>
+            <div class="definition">
+              Une <span class="CRed">pyramide</span> est un solide possédant une base polygonale et des 
+              faces latérales triangulaires qui se rejoignent en un même sommet.
+            </div>
+            <div class="flexobject">
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Solides-01.svg"/>
+              </div>
+              <div>
+                <label><b>Patron :</b></label><br>
+                <img src="Images/Patrons-01.svg"/>
+              </div>
+              <img src="Images/Pyramide1.svg"/>
+            </div>
+            <p class="remarque">Remarque :</p>
+            <ul>
+              <li>La base hachurée dans le patron peut-être un polygone quelconque</li>
+              <li>Un polygone qui a tous ses côtés de même longueur et tous ses angles de même mesure et dit régulier.</li>
+            </ul>
+            <div class="definition">
+              Une pyramide est <span class="CRed">régulière</span> si sa base est un polygone régulier et 
+              l'ensemble de toutes ces faces latérales sont des triangles isocèles identiques.
+            </div>
+          <h3>Cônes de révolution :</h3>
+            <div class="definition">
+              Un <span class="CRed">cône de révolution</span> est composé d'un disque formants la base. 
+              La surface latérale lorsqu'elle est dépliée est un arc de disque dont l'arc de cercle à 
+              la même longueur que le périmètre du disque.
+            </div>
+            <div class="flexobject">
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Solides-02.svg"/>
+              </div>
+              <div>
+                <label><b>Patron :</b></label><br>
+                <img src="Images/Patrons-02.svg"/>
+              </div>
+              <img src="Images/Cone1.svg"/>
+              <img src="Images/Gif Cone de revolution.agif" style="max-width: 4cm;"/>
+            </div>
 
+            <iframe src="Images/Pyramide 3D.html" style="border: solid 1px;" allowtransparency="true" width="485" height="365.75" frameborder="0" scrolling="no" allowfullscreen></iframe>
+  <h1>Volume :</h1>
+      <h2>Pavé droit :</h2>
+            <div class="flexobject">
+              <div class="formulevol">
+                <p><b>Formule :</b></p>
+                <div class="definition">
+                  $V = Longueur \times Largeur \times Hauteur$
+                </div>
+              </div>
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Volumes-07.svg"/>
+              </div>
+              <div style="max-width: 6cm;">
+                <label><b>Exemple :</b></label><br>
+                <p>
+                  Un pavé droit de dimension 5cm par 3cm par 7cm a pour volume : $V = 5\times3\times7=105\thinspace cm^3$
+                </p>
+              </div>
+            </div>
+        <h2>Cube :</h2>
+            <div class="flexobject">
+              <div class="formulevol">
+                <p><b>Formule :</b></p>
+                <div class="definition">
+                  $V = côté \thinspace^3$
+                </div>
+              </div>
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Volumes-05.svg"/>
+              </div>
+              <div style="max-width: 6cm;">
+                <label><b>Exemple :</b></label><br>
+                <p>
+                  Un cube de côté 4cm a pour volume : $V = 4^3 = 64\thinspace cm^3$
+                </p>
+              </div>
+            </div>
+        <h2>Cylindre :</h2>
+            <div class="flexobject">
+              <div class="formulevol">
+                <p><b>Formule :</b></p>
+                <div class="definition">
+                  $V = \pi \times rayon^2 \times hauteur $
+                </div>
+              </div>
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Volumes-03.svg"/>
+              </div>
+              <div style="max-width: 6cm;">
+                <label><b>Exemple :</b></label><br>
+                <p>
+                  Un cylindre de rayon 3cm et de hauteur 6cm a pour volume : $V = \pi \times 3^2 \times 6 \approx  169,4\thinspace cm^3$
+                </p>
+              </div>
+            </div>
+        <h2>Prisme :</h2>
+            <div class="flexobject">
+              <div class="formulevol">
+                <p><b>Formule :</b></p>
+                <div class="definition">
+                  $V = Aire_{Base} \times hauteur $
+                </div>
+              </div>
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Volumes-04.svg"/>
+              </div>
+              <div style="max-width: 6cm;">
+                <label><b>Exemple :</b></label><br>
+                <p>
+                  Un prise dont la base a une aire de 12cm² et de hauteur 6cm a pour volume : $V = 12 \times 6 = 82\thinspace cm^3$
+                </p>
+              </div>
+            </div>
+        <h2>Pyramide :</h2>
+            <div class="flexobject">
+              <div class="formulevol">
+                <p><b>Formule :</b></p>
+                <div class="definition">
+                  $V = \frac{Aire_{Base} \times hauteur}{3} $
+                </div>
+              </div>
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Volumes-01.svg"/>
+              </div>
+              <div style="max-width: 6cm;">
+                <label><b>Exemple :</b></label><br>
+                <p>
+                  Une pyramide de base carré de 5cm de côté et de hauteur 6cm a pour volume : $V = \frac{5\times5 \times 6}{3} = \frac{150}{3} = 50\thinspace cm^3$
+                </p>
+              </div>
+            </div>
+        <h2>Cône :</h2>
+            <div class="flexobject">
+              <div class="formulevol">
+                <p><b>Formule :</b></p>
+                <div class="definition">
+                  $V = \frac{\pi \times rayon^2 \times hauteur}{3} $
+                </div>
+              </div>
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Volumes-02.svg"/>
+              </div>
+              <div style="max-width: 6cm;">
+                <label><b>Exemple :</b></label><br>
+                <p>
+                  Un cone de rayon 3cm de côté et de hauteur 2cm a pour volume : $V = \frac{\pi \times 3^2 \times 2}{3} = \frac{18\pi}{3} \approx 18,8\thinspace cm^3$
+                </p>
+              </div>
+            </div>
 </body>
 
 </html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4cm" height="4cm" viewBox="0 0 113.38 113.38">
+  <title>Solides</title>
+  <g>
+    <ellipse cx="56.69" cy="83.67" rx="48.73" ry="24.37" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2" stroke-dasharray="4.85 2.77"/>
+    <path d="M103.06,76.16a13.72,13.72,0,0,1,2.36,7.51C105.42,97.12,83.6,108,56.69,108S8,97.12,8,83.67a13.84,13.84,0,0,1,2.56-7.82h0L56.69,5.34l46.37,70.82Z" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+</svg>
