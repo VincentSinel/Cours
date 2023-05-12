@@ -17,6 +17,27 @@
   <title>Chapitre 14 - Puissances négatives</title>
 
   <style>
+    .tablestyle {
+      text-align: center;
+    }
+    .tablestyle tr:nth-child(even) {
+      background-color: lightsteelblue;
+    }
+    .tablestyle td{
+      width: 100px;
+    }
+    .tablestyle th{
+      border-top: solid black 2px;
+      border-bottom: solid black 2px;
+    }
+    .tablestyle td:nth-child(even) {
+      border-left: solid black 2px;
+      border-right: solid black 2px;
+    }
+    .tablestyle th:nth-child(even) {
+      border-left: solid black 2px;
+      border-right: solid black 2px;
+    }
   </style>
 
 </head>
@@ -52,7 +73,7 @@
         </ul>
       </li>
       <li>
-        <p style="font-style: italic;">En mathématiques, <span class="DRed">$\frac{1}{10^{n}}$</span> est l'<span class="DRed">inverse de $10^n$</span> et on le note <span class="DRed">$10^{-n}$</span></p>
+        <p style="font-style: italic;">En mathématiques, <span class="CRed">$\frac{1}{10^{n}}$</span> est l'<span class="CRed">inverse de $10^n$</span> et on le note <span class="CRed">$10^{-n}$</span></p>
         Par exemple : $0,01=\frac{1}{10^2}=10^{-2}$<br>
         Ecris les nombres décimaux de la question précédente avec cette nouvelle notation.
       </li>
@@ -67,10 +88,253 @@
   </p>
 
   <h1>Puissances négatives :</h1>
-    <h2>Puissances négatives :</h2>
+    <h2>Inverse :</h2>
         <div class="definition">
-          L'inverse d'un nombre est 
+          Dire que deux nombre sont <span class="CRed">inverses</span> l’un de l’autre signifie que leur produit est égal à 1.
         </div>
+        <p class="exemple">Exemples :</p>
+        <table>
+          <tr>
+            <td>
+              <ul>
+                <li>$5\times0,2=1$</li>
+                <li>$7\times \frac{1}{7}=1$</li>
+                <li>$\frac{3}{4} \times \frac{4}{3}=1$</li>
+              </ul>
+            </td>
+            <td style="min-width: 20px;"></td>
+            <td>
+              $5$ et $0,2$ sont inverse l'un de l'autre.<br>
+              $7$ et $\frac{1}{7}$ sont inverse l'un de l'autre.<br>
+              $\frac{3}{4}$ et $\frac{4}{3}$ sont inverse l'un de l'autre.<br>
+            </td>
+          </tr>
+        </table>
+    <h2>Puissances :</h2>
+        <p><span class="CRed">$a$</span> désigne un nombre relatif et <span class="DBlue">$n$</span> un entier positif ou nul</p>
+        <div class="definition">
+          <span class="CRed">$a$</span> puissance <span class="DBlue">$-n$</span> noté $\textcolor{#e53935}{a}^{\textcolor{#039be5}{-n}}$ désigne le produit de 
+          <span class="DBlue">$n$</span> facteurs tous égaux à $\frac{1}{\textcolor{#e53935}{a}}$ (inverse de <span class="CRed">$a$</span>) :
+          <div class="center">
+            <table style="margin: auto;">
+              <tr>
+                <td>$\textcolor{#e53935}{a}^\textcolor{#039be5}{-n}=$</td>
+                <td>$(\frac{1}{\textcolor{#e53935}{a}})^\textcolor{#039be5}{n}=$</td>
+                <td>$\frac{1}{\textcolor{#e53935}{a}}\times\frac{1}{\textcolor{#e53935}{a}}\times ... \times
+                  \frac{1}{\textcolor{#e53935}{a}}\times\frac{1}{\textcolor{#e53935}{a}}$</td>
+              </tr>
+              <tr style="line-height: 4px;">
+                <td></td>
+                <td></td>
+                <td>
+                  <image src="Images/Accolade1.svg"></image>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td><span class="DBlue">$n$</span> facteurs</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <p class="exemple">Exemples :</p>
+        <ul>
+          <li>
+            $5^{-6}=(\frac{1}{5})^6=\frac{1}{5}\times\frac{1}{5}\times\frac{1}{5}\times\frac{1}{5}\times\frac{1}{5}\times\frac{1}{5}=\frac{1}{15\thinspace625}$
+          </li>
+          <li>
+            $(\frac{2}{7})^{-2}=(\frac{7}{2})^2=\frac{7}{2}\times\frac{7}{2}=\frac{49}{4}$
+          </li>
+        </ul>
+  <h1>Puissances de 10 :</h1>
+    <h2>Puissances de 10 négatives :</h2>
+        <div class="definition">
+          <div class="center">
+            <table style="margin: auto;">
+              <tr>
+                <td>$10^\textcolor{#039be5}{-n}=$</td>
+                <td>$(\frac{1}{10})^\textcolor{#039be5}{n}=$</td>
+                <td>$\frac{1}{10}\times\frac{1}{10}\times ... \times\frac{1}{10}\times\frac{1}{10}$</td>
+                <td>$=$</td>
+                <td>$0,0 ... 00$</td>
+                <td>$1$</td>
+              </tr>
+              <tr style="line-height: 9px;">
+                <td></td>
+                <td></td>
+                <td> <image src="Images/Accolade1.svg"></image> </td>
+                <td></td>
+                <td> <image src="Images/Accolade2.svg"></image> </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td><span class="DBlue">$n$</span> facteurs</td>
+                <td></td>
+                <td><span class="DBlue">$n$</span> zéros</td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <p class="exemple">Exemples :</p>
+        <ul>
+          <li>$10^{-5}=\frac{1}{10}\times\frac{1}{10}\times\frac{1}{10}\times\frac{1}{10}\times\frac{1}{10}=0,00\thinspace001$</li>
+          <li>$10^{-12}=0,00\thinspace000\thinspace000\thinspace000\thinspace1$</li>
+        </ul>
+
+    <h2>Ecriture scientifique :</h2>
+        <div class="definition">
+          La <span class="CRed">notation scientifique</span> d'un nombre décimal positif est la seul écriture de ce nombre de la forme 
+          $\textcolor{#e53935}{a}\times 10^\textcolor{#039be5}{n}$ avec :
+          <ul>
+            <li><span class="CRed">$a$</span> un nombre décimal tel que $1 \leq \textcolor{#e53935}{a} < 10$</li>
+            <li><span class="DBlue">$n$</span> un entier relatif.</li>
+          </ul>
+        </div>
+        <p class="exemple">Exemples :</p>
+        <ul>
+          <li>$5\thinspace600$ s'écrit $5,6 \times 10^4$</li>
+          <li>$0,00\thinspace242$ s'écrit $2,42\times 10^{-3}$</li>
+        </ul>
+        <p>Pour convertir un nombre en écriture décimal :</p>
+        
+        <div class="flexobject">
+          <div>
+            <ol>
+              <li>On part du chiffre le plus à gauche.</li>
+              <li>On avance de chiffre en chiffre jusqu'au premier chiffre différent de 0.</li>
+              <li>On compte combien de chiffre le sépare du chiffre <br>des unités (en prenant en compte le chiffre de départ).</li>
+              <li>On obtient ainsi l'écriture scientifique.</li>
+            </ol>
+          </div>
+          <div>
+            <ol>
+              <li>$\textcolor{#039be5}{3}84\thinspace000\thinspace000$</li>
+              <li>$\textcolor{#ffb300}{3}84\thinspace000\thinspace000$</li>
+              <li>
+                <table style="margin: auto; text-align: center;">
+                  <tr>
+                    <td>$\textcolor{#ffb300}{3}84\thinspace000\thinspace00$</td>
+                    <td>$\textcolor{#7B29C1}{0}$</td>
+                  </tr>
+                  <tr style="line-height: 9px;">
+                    <td> <image src="Images/Accolade1.svg"></image> </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="CRed">$8$</span> chiffres</td>
+                    <td></td>
+                  </tr>
+                </table>
+              </li>
+              <li>$\textcolor{#ffb300}{3},84\times 10^{\textcolor{#e53935}{8}}$</li>
+            </ol>
+          </div>
+          <div>
+            <ol>
+              <li>$\textcolor{#039be5}{0},00\thinspace000\thinspace054$</li>
+              <li>$0,00\thinspace000\thinspace0\textcolor{#ffb300}{5}4$</li>
+              <li>
+                <table style="margin: auto; text-align: center;">
+                  <tr>
+                    <td>$\textcolor{#7B29C1}{0},$</td>
+                    <td>$00\thinspace000\thinspace00\textcolor{#ffb300}{5}$</td>
+                    <td>$4$</td>
+                  </tr>
+                  <tr style="line-height: 9px;">
+                    <td></td>
+                    <td> <image src="Images/Accolade1.svg"></image> </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><span class="CRed">$8$</span> chiffres</td>
+                    <td></td>
+                  </tr>
+                </table>
+              </li>
+              <li>$\textcolor{#ffb300}{5},4\times 10^{\textcolor{#e53935}{-8}}$</li>
+            </ol>
+          </div>
+        </div>
+
+        <p class="remarque">Remarque :</p>
+        <p>La calculatrice donne les résultats en écriture scientifique lorsque ceux-ci sont trop grands ou trop petits.</p>
+
+    <h2>Préfixe :</h2>
+        <p>Les préfixes permettent de sous-entendre un facteur de taille vis-à-vis d'une unité.</p>
+        <table class="tablestyle">
+          <tr>
+            <th>Puissance de 10 associés</th>
+            <th>Préfixe</th>
+            <th>Symbole</th>
+          </tr>
+          <tr>
+            <td>$10^9$</td>
+            <td>Giga</td>
+            <td>G</td>
+          </tr>
+          <tr>
+            <td>$10^6$</td>
+            <td>Méga</td>
+            <td>M</td>
+          </tr>
+          <tr>
+            <td>$10^3$</td>
+            <td>Kilo</td>
+            <td>k</td>
+          </tr>
+          <tr>
+            <td>$10^2$</td>
+            <td>Hecto</td>
+            <td>h</td>
+          </tr>
+          <tr>
+            <td>$10^1$</td>
+            <td>Déca</td>
+            <td>da</td>
+          </tr>
+          <tr>
+            <td>$10^0$</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>$10^{-1}$</td>
+            <td>Déci</td>
+            <td>d</td>
+          </tr>
+          <tr>
+            <td>$10^{-2}$</td>
+            <td>Centi</td>
+            <td>c</td>
+          </tr>
+          <tr>
+            <td>$10^{-3}$</td>
+            <td>Milli</td>
+            <td>m</td>
+          </tr>
+          <tr>
+            <td>$10^{-6}$</td>
+            <td>Micro</td>
+            <td>µ</td>
+          </tr>
+          <tr>
+            <td>$10^{-9}$</td>
+            <td>Nano</td>
+            <td>n</td>
+          </tr>
+        </table>
+        <p class="exemple">Exemple :</p>
+        <p>
+          <ul>
+            <li>1km correspond à $1\times10^3$ soit 1 000 m</li>
+            <li>$36$<span class="CYellow"><b>h</b></span>L = $36\times \textcolor{#ffb300}{10^2} \div \textcolor{#7B29C1}{10^{-6}}$  = $3\thinspace600\thinspace000\thinspace000$ <span class="CViolet"><b>µ</b></span>L</li>
+          </ul>
+        </p>
 
 </body>
 

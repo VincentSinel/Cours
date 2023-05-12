@@ -17,6 +17,14 @@
   <title>Chapitre 15 - Triangle semblable</title>
 
   <style>
+    .tableprop td{
+      border: solid black 2px;
+      border-collapse: collapse;
+      padding: 3px 10px;
+    }
+    .tableprop{
+      display: inline-block;
+    }
   </style>
 
 </head>
@@ -37,9 +45,214 @@
   <p class="exemple">
     Activité Introduction
   </p>
+  <p>Dans un guide de survie en milieu hostile, voici ce que l'on peut lire pour estimer la largeur d'une rivière.</p>
+  <div class="flexobject">
+    <div style="max-width: 14cm;">
+      <ul>
+        <li>On se place en un point A en face d'un repère R situé sur l'autre rive 
+          (Arbre, Rocher, ...).</li>
+        <li>On marche de $n$ pas le long du cours d'eau et parallèlement à celui-ci 
+          (donc perpendiculairement à la ligne de visée (AR) ).</li>
+        <li>Au $n$-ième pas, on laisse un repère au sol B (Bâton, Sac, ...), puis on 
+          continue de marcher le long de la rivière pour un nombre égal $n$ de pas 
+          jusqu'a atteindre C.</li>
+        <li>De C, on s’éloigne de la rivière en restant
+          perpendiculaire à celle-ci, jusqu’à se placer en
+          un point D aligné avec les repères B et R.</li>
+      </ul>
+    </div>
+    <div style="max-width: 500px">
+      <p style="text-align: center;"><b>Schéma :</b></p>
+      <image src="Images/Activité intro.png"></image>
+    </div>
+  </div>
+  <ol type="a">
+    <li>Expliquer pourquoi les triangles ABR et BCD sont égaux.</li>
+    <li>Le guide affirme alors : « La largeur de la rivière est le nombre de pas de C à D ».
+      Expliquer cette affirmation, c’est-à-dire expliquer pourquoi AR = CD.</li>
+  </ol>
 
-  
-
+  <h1>Triangles égaux :</h1>
+      <h2>Définition :</h2>
+          <p>
+            Deux triangles sont dits <b>superposables</b> lorsqu’on peut les faire coïncider par
+            translation, rotation ou symétrie.
+          </p>
+          <div class="definition">
+            Des <span class="CRed">triangles égaux</span> sont des <u>triangles superposables</u>, c’est-à-dire qui ont des côtés deux à
+            deux de même longueur et des angles deux à deux de même mesure.
+          </div>
+          <p class="exemple">Exemples :</p>
+          <div style="display: inline-block;">
+            <p style="text-align: center;"><b>Triangle 1 :</b></p>
+            <image src="Images/Triangle 1.svg"></image>
+          </div>
+          <div style="display: inline-block;">
+            <p style="text-align: center;"><b>Triangle 2 :</b></p>
+            <image src="Images/Triangle 2.svg"></image>
+          </div>
+          <div style="display: inline-block;">
+            <p style="text-align: center;"><b>Triangle 3 (symétrique) :</b></p>
+            <image src="Images/Triangle 1.svg" style="transform: scaleX(-1)"></image>
+          </div>
+          <p class="remarque">Remarque :</p>
+          <p>Lorsque deux triangles sont égaux, deux élèments (sommets, côtés , angles)
+            qui se superposent sont dits <span class="CRed"><b>homologues</b></span>.</p>
+      <h2>Propriétés :</h2>
+          <p>Pour démontrer que deux triangles sont égaux, on utilise trois propriétés
+            correspondant chacune a un cas d’égalité.</p>
+          <div class="definition">
+            <b>Propriété 1 :</b><br>
+            <b>Si</b> deux triangles ont un côté de même longeur et deux angles adjacents à ce côté deux à deux
+            de même mesure, <b>alors</b> ces deux triangles sont égaux.</div>
+          <p class="exemple">Exemple :</p>
+          <table>
+            <tr>
+              <td>
+                <ul>
+                  <li>$BC=EF$</li>
+                  <li>$\widehat{ABC}=\widehat{DEF}$</li>
+                  <li>$\widehat{ACB}=\widehat{DFE}$</li>
+                </ul>
+              </td>
+              <td>
+                <div style="position: relative; width: 210px; height: 100px;">
+                  <image src="Images/Flêche1.svg" style="z-index: -1;position: absolute;left: 0;top: 0;"></image>
+                  <p style="padding: 19px 0px;text-align: center;">D’après le 1<sup>er</sup> cas<br>d’égalité des triangles </p>
+                </div>
+              </td>
+              <td>
+                <p style="text-align: center;">
+                  <b>Conclusion</b><br>
+                  Les triangles<br>ABC et DEF<br>sont égaux
+                </p>
+              </td>
+              <td>
+                <image src="Images/Triangle1.png" style="max-height: 120px"></image>
+                <image src="Images/Triangle2.png" style="max-height: 120px"></image>
+              </td>
+            </tr>
+          </table>
+          <div class="definition">
+            <b>Propriété 2 :</b><br>
+            <b>Si</b> deux triangles ont un angle de même mesure compris entre des côtés deux à deux de
+            mêmes longueurs, <b>alors</b> ces deux triangles sont égaux.</div>
+          <p class="exemple">Exemple :</p>
+          <table>
+            <tr>
+              <td>
+                <ul>
+                  <li>$AB=MN$</li>
+                  <li>$AC=MO$</li>
+                  <li>$\widehat{CAB}=\widehat{OMN}$</li>
+                </ul>
+              </td>
+              <td>
+                <div style="position: relative; width: 210px; height: 100px;">
+                  <image src="Images/Flêche1.svg" style="z-index: -1;position: absolute;left: 0;top: 0;"></image>
+                  <p style="padding: 19px 0px;text-align: center;">D’après le 2<sup>ème</sup> cas<br>d’égalité des triangles </p>
+                </div>
+              </td>
+              <td>
+                <p style="text-align: center;">
+                  <b>Conclusion</b><br>
+                  Les triangles<br>ABC et MNO<br>sont égaux
+                </p>
+              </td>
+              <td>
+                <image src="Images/Triangle3.png" style="max-height: 120px"></image>
+                <image src="Images/Triangle4.png" style="max-height: 120px"></image>
+              </td>
+            </tr>
+          </table>
+          
+          <div class="definition">
+            <b>Propriété 3 :</b><br>
+            <b>Si</b> deux triangles ont leurs côtés deux à deux de même longueur, <b>alors</b> ces deux triangles sont
+            égaux.</div>
+          <p class="exemple">Exemple :</p>
+          <table>
+            <tr>
+              <td>
+                <ul>
+                  <li>$AB=JK$</li>
+                  <li>$AC=KL$</li>
+                  <li>$BC=JL$</li>
+                </ul>
+              </td>
+              <td>
+                <div style="position: relative; width: 210px; height: 100px;">
+                  <image src="Images/Flêche1.svg" style="z-index: -1;position: absolute;left: 0;top: 0;"></image>
+                  <p style="padding: 19px 0px;text-align: center;">D’après le 3<sup>ème</sup> cas<br>d’égalité des triangles </p>
+                </div>
+              </td>
+              <td>
+                <p style="text-align: center;">
+                  <b>Conclusion</b><br>
+                  Les triangles<br>ABC et JKL<br>sont égaux
+                </p>
+              </td>
+              <td>
+                <image src="Images/Triangle5.png" style="max-height: 120px"></image>
+                <image src="Images/Triangle6.png" style="max-height: 120px"></image>
+              </td>
+            </tr>
+          </table>
+  <h1>Triangles semblables :</h1>
+      <h2>Définition et propriété :</h2>
+          <p>Lorsque l’on ne regarde que les angles, ont peut construire des triangles de
+            même taille ou de taille différentes mais de même forme.</p>
+          <div class="definition">
+            On dit que deux triangles sont <span class="CRed">semblables</span> lorsque leurs angles sont égaux deux à deux.
+            On dit aussi que ces deux triangles sont de <b>même forme</b>.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <div>
+            <p>Les triangles ABC et RST sont semblables.</p>
+            <image src="Images/Triangle7.png" style="max-height: 100px"></image>
+            <image src="Images/Triangle8.png" style="max-height: 150px"></image>
+          </div>
+          <div class="definition">
+            <b>Propriété :</b><br>
+            <b>Si</b> deux triangles ont deux angles égaux deux à deux, <b>alors</b> ces deux triangles sont semblables.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <div>
+            <p style="max-width: 350px;display: inline-block;">ABC est semblable à RTS car $\widehat{ABC}=\widehat{STR}=35°$ et $\widehat{ACB}=\widehat{SRT}=15°$<br>
+              C'est normal car :<br>$\widehat{BAC}=180 - (35+15)=130°$<br>$\widehat{RST}=180 - (35+15)=130°$<br>
+              Donc $\widehat{BAC}=\widehat{RST}$ on a donc bien l’égalité de tous les angles de ces deux triangles.
+            </p>
+            <image src="Images/Triangle7.png" style="max-height: 100px"></image>
+            <image src="Images/Triangle8.png" style="max-height: 150px"></image>
+          </div>
+      <h2>Proportionnalité :</h2>
+          <div class="definition">
+            <b>Propriété :</b><br>
+            <b>Si</b> deux triangles sont semblable, <b>alors</b> les côtés opposés aux angles égaux ont leurs longueurs
+            proportionnelles.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <p>Ici le tableau suivant est proportionnel :</p>
+          <div>
+            <table class="tableprop">
+              <tr>
+                <td>AB</td>
+                <td>AC</td>
+                <td>BC</td>
+              </tr>
+              <tr>
+                <td>ST</td>
+                <td>RS</td>
+                <td>RT</td>
+              </tr>
+            </table>
+            <image src="Images/Triangle7.png" style="max-height: 100px"></image>
+            <image src="Images/Triangle8.png" style="max-height: 150px"></image>
+          </div>
+          <p class="remarque">Remarque :</p>
+          <p>
+            Les côtés correspondant dans deux triangles semblables sont aussi appelés côtés <span class="CRed"><b>homologues</b></span>.
+          </p>
 </body>
 
 </html>

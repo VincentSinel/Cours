@@ -1,0 +1,360 @@
+
+:root{
+    --ButtonWidth: 90px
+}
+body{
+    font-family: var(--TexteFont);
+}
+.container{
+    margin-left: 0;
+    background-color: var(--PanelBack);
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    min-height: calc(100% - 20px - var(--HeaderBarHeight));
+    max-height: calc(100% - 20px - var(--HeaderBarHeight));
+    height: calc(100% - 20px - var(--HeaderBarHeight));
+}
+@media only screen and (max-width:1024px) {
+    .container {
+      margin-left: 0;
+      min-height: calc(100% - 20px - 2 * var(--HeaderBarHeight));
+      max-height: calc(100% - 20px - 2 * var(--HeaderBarHeight));
+      height: calc(100% - 20px - 2 * var(--HeaderBarHeight));
+    }
+}
+
+
+.searchbar {
+    width: 100%; 
+    display: flex; 
+}
+
+.searchbutton {
+    background-color: var(--HeadMenuButton); 
+    border: none; 
+    border-radius: 5px;
+    padding: 0px; 
+    cursor: pointer; 
+    vertical-align: middle;
+    width: 36px;
+    margin: 0px 2px;
+    transition-duration: 0.4s;
+}
+.searchbutton svg{
+    fill: var(--PanelBackText);
+}
+.searchbutton:hover{
+    border: none; 
+    border-radius: 5px;
+    background-color: var(--HeadMenuButtonHover); 
+}
+/*
+.searchbutton:hover svg
+{
+    fill: white;
+}*/
+.searchbutton:active{
+    background-color: var(--HeadMenuButtonActive); 
+    transition-duration: 0.1s;
+}
+
+.searchtext{
+    flex: auto;
+    border: none;
+    color: var(--PanelBackText);
+    padding: 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 0px 2px;
+    width: 100%;
+    height: 38px;
+    transition-duration: 0.4s;
+    background-color: var(--HeadMenuButton);
+    vertical-align: middle;
+    text-align: left;
+}
+.searchtext:hover,
+.searchtext:focus,
+.searchtext:active {
+    background-color: white;
+    color: var(--OnWhiteTexte);
+    border: none;
+}
+
+
+.searchmenu{
+    align-self: center;
+    display: flex;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    gap: 10px;
+}
+
+
+.switch {
+    cursor: pointer; 
+    width: var(--ButtonWidth);
+    height: 36px;
+}
+.switch div {
+    margin-top: -21px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+    
+}
+
+.slider {
+    display: inline-block;
+    transition-duration: 0.4s;
+    color: var(--PanelBackTextDisabled);
+    vertical-align: middle;
+    text-align: center;
+    background-color: var(--HeadMenuButtonActive); 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-transition: .4s;
+    transition: .4s;
+    height: 36px;
+    line-height: 36px;
+    width: var(--ButtonWidth); 
+}
+.slider a{
+    vertical-align: middle;
+}
+
+input:checked + .slider {
+    background-color: var(--HeadMenuButton);
+    color: var(--PanelBackText);
+}
+input:hover + .slider { 
+    background-color: var(--HeadMenuButtonHover);
+    color: var(--PanelBackText);
+}
+input:active + .slider { 
+    background-color: var(--HeadMenuButtonActive);
+    color: var(--PanelBackText);
+    transition: .2s;
+    -webkit-transition: .2;
+    transition-duration: .2s;
+}
+
+.clearbutton {
+    background-color: var(--RedPanel);
+    color: var(--PanelBackText);
+    border: none; 
+    border-radius: 5px;
+    padding: 0px 3px; 
+    cursor: pointer; 
+    vertical-align: middle;
+    height: 36px;
+    min-width: var(--ButtonWidth);
+    margin: 0px 2px 0px 2px;
+    transition-duration: 0.4s;
+    font-size: 16px;
+    font-family: var(--TexteFont);
+}
+.clearbutton:hover
+{
+    border: none; 
+    border-radius: 5px;
+    background-color: var(--RedPanelHover);
+    color: white;
+}
+.clearbutton:active
+{
+    background-color: var(--RedPanelActive); 
+    transition-duration: 0.1s;
+}
+
+.Unselectable,
+.tag,
+.Result label{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.Result{
+    background-color: var(--PanelBackHoverMenu);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: left;
+    width: calc(100% - 20px);
+    display: inline-block;
+    transition-duration: 0.4s;
+    position: relative;
+}
+.Result a{
+    color: black;
+}
+.Result label{
+    color: var(--PanelBackText);
+    font-size: 20px;
+    font-weight: bold;
+    transition-duration: 0.4s;
+    line-height: 20px;
+}
+.exercice_img{
+    object-fit: contain;
+    max-width: 100%;
+}
+
+.Result:hover{
+    background-color: var(--PanelBackTextDisabled);
+}
+
+.Result:active{
+    background-color: var(--PanelBackText);
+}
+.Result:active label{
+    color: var(--OnWhiteTexte);
+}
+
+.selected_result{
+    background-color: var(--BluePanel);
+}
+.selected_result:hover{
+    background-color: var(--BluePanelHover);
+}
+.selected_result:hover label{
+    color: var(--OnWhiteTexte);
+}
+.selected_result:active{
+    background-color: var(--BluePanelActive);
+}
+.selected_result:active label{
+    color: var(--PanelBackText);
+}
+
+
+.titreExo {
+    font-family: Cambria, Geneva, Tahoma, sans-serif;
+    font-size: 24;
+    font-weight: bold;
+    color:#222222;
+}
+
+.tagholder{
+    display: flex;
+    gap: 2px;
+}
+.tag{
+    display: inline-block;
+    background-color: var(--PurplePanel);/*rgba(200, 200, 200, 0.55);*/
+    border-radius: 5px;
+    padding: 2px;
+    text-align: left;
+    transition-duration: 0.4s;
+}
+.tag a{
+    font-family: Calibri, Geneva, Tahoma, sans-serif;
+    color: var(--PanelBackText);
+}
+.tag:hover{
+    background-color: var(--PurplePanelHover);/*rgba(200, 128, 200, 0.65);*/
+}
+
+#Resultats,
+#Selection {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 10px;
+    border: solid var(--PanelBackTextDisabled);
+    gap: 5px;
+    border-radius: 0px;
+    display: flex;
+    flex-flow: column;
+    color: white;
+    transition-duration: 0.2s;
+}
+#Resultats::-webkit-scrollbar,
+#Selection::-webkit-scrollbar {
+    width: 11px;
+}
+#Resultats::-webkit-scrollbar-track,
+#Selection::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+#Resultats::-webkit-scrollbar-thumb,
+#Selection::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+}
+
+.HideListe
+{
+    flex: 1;
+    visibility: collapse;
+    margin: 0px -26px 0px 0px;
+    opacity: 0;
+}
+
+.VisibleListe
+{
+    flex: 100;
+    margin: 0px;
+}
+
+.ResultPart 
+{
+    display: flex; 
+    flex-direction: row; 
+    flex: 1; 
+    align-items: stretch;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition-duration: 0.8s;
+    overflow: hidden;
+}
+
+
+
+.CheckMark
+{
+    position: absolute;
+    top: 0px;
+    right: 20px;
+}
+.CheckMark svg
+{
+    fill: var(--PurplePanelHover);
+    width: 60px;
+    height: 60px;
+}
+
+.PDFButton
+{
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    padding: 2px;
+    transition-duration: 0.4s;
+}
+.PDFButton:hover
+{
+    background: #2196F388;
+}
+.PDFButton:active
+{
+    background: #2196F3FF;
+    transition-duration: 0.1s;
+}

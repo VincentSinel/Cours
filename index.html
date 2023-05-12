@@ -41,7 +41,7 @@
       <div class="menuprincipale">
         <div class="blockmenu blockmenuprincipal"><span></span></div>
         <div class="blockmenu blockmenucours"><span></span></div>
-        <div class="blockmenu blockmenuannales"><span></span></div>
+        <div class="blockmenu blockmenuannales" onclick="Annales_brevets()"><span><a href=""></a></span></div>
       </div>
     </header>
   </div>
@@ -129,6 +129,13 @@
       lastselected = a
       lastselected.classList.add("selected")
       window.scrollTo(0, 0);
+    }
+
+    function Annales_brevets()
+    {
+      //window.open("Annales Brevet.html");
+      window.location = "annales_brevet.html";
+      window.location.href = "annales_brevet.html";
     }
   </script>
   <script id="MathJax-script" async src="JS/Cours/Liste.js"></script>

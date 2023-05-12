@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Exercices>
+    <DataObject>
+      <DataObject_Infos Name="2020 - Antilles - Guyane" Correction="false" Path="2020\AG - Sep - Ex1.png" Year="2020" Sujet="5" Periode="1" Difficulty="2" Points="20" Index="1" />
+      <DataObject_Tags>
+        <Tag Name="Pythagore" Pertinence="100" />
+        <Tag Name="Thalès" Pertinence="100" />
+        <Tag Name="Trigonométrie" Pertinence="100" />
+      </DataObject_Tags>
+    </DataObject>
+    <DataObject>
+      <DataObject_Infos Name="2020 - Antilles - Guyane" Correction="false" Path="2020\AG - Sep - Ex2.png" Year="2020" Sujet="5" Periode="1" Difficulty="2" Points="15" Index="2" />
+      <DataObject_Tags>
+        <Tag Name="QCM" Pertinence="100" />
+        <Tag Name="Expressions litterales" Pertinence="40" />
+        <Tag Name="Solide" Pertinence="20" />
+      </DataObject_Tags>
+    </DataObject>
+    <DataObject>
+      <DataObject_Infos Name="2020 - Antilles - Guyane" Correction="false" Path="2020\AG - Sep - Ex3.png" Year="2020" Sujet="5" Periode="0" Difficulty="2" Points="18" Index="3" />
+      <DataObject_Tags>
+        <Tag Name="Géométrie" Pertinence="100" />
+        <Tag Name="Arithmétique" Pertinence="30" />
+      </DataObject_Tags>
+    </DataObject>
+    <DataObject>
+      <DataObject_Infos Name="2020 - Antilles - Guyane" Correction="false" Path="2020\AG - Sep - Ex4.png" Year="2020" Sujet="5" Periode="1" Difficulty="2" Points="18" Index="4" />
+      <DataObject_Tags>
+        <Tag Name="Statistique" Pertinence="100" />
+        <Tag Name="Tableur" Pertinence="20" />
+      </DataObject_Tags>
+    </DataObject>
+    <DataObject>
+      <DataObject_Infos Name="2020 - Antilles - Guyane" Correction="false" Path="2020\AG - Sep - Ex5.png" Year="2020" Sujet="5" Periode="0" Difficulty="2" Points="18" Index="5" />
+      <DataObject_Tags>
+        <Tag Name="Probabilités" Pertinence="100" />
+        <Tag Name="Scratch" Pertinence="100" />
+      </DataObject_Tags>
+    </DataObject>
+    <DataObject>
+      <DataObject_Infos Name="2020 - Metropole" Correction="false" Path="2020\M - Sep - Ex1.png" Year="2020" Sujet="6" Periode="0" Difficulty="2" Points="20" Index="1" />
+      <DataObject_Tags>
+        <Tag Name="QCM" Pertinence="100" />
+        <Tag Name="Statistique" Pertinence="20" />
+        <Tag Name="Probabilités" Pertinence="20" />
+        <Tag Name="Arithmétique" Pertinence="20" />
+        <Tag Name="Solide" Pertinence="20" />
+        <Tag Name="Géométrie" Pertinence="20" />
+      </DataObject_Tags>
+    </DataObject>
+    <DataObject>
+      <DataObject_Infos Name="2020 - Antilles - Guyane" Correction="false" Path="2020\M - Sep - Ex2.png" Year="2020" Sujet="6" Periode="1" Difficulty="2" Points="20" Index="2" />
+      <DataObject_Tags>
+        <Tag Name="Expressions litterales" Pertinence="100" />
+      </DataObject_Tags>
+    </DataObject>
+    <DataObject>
+      <DataObject_Infos Name="2020 - Métropole" Correction="false" Path="2020\M - Sep - Ex3.png" Year="2020" Sujet="6" Periode="1" Difficulty="2" Points="23" Index="3" />
+      <DataObject_Tags>
+        <Tag Name="Tâche complexe" Pertinence="100" />
+        <Tag Name="Pythagore" Pertinence="30" />
+        <Tag Name="Thalès" Pertinence="30" />
+        <Tag Name="Trigonométrie" Pertinence="30" />
+      </DataObject_Tags>
+    </DataObject>
+    <DataObject>
+      <DataObject_Infos Name="2020 - Antilles - Guyane" Correction="false" Path="2020\M - Sep - Ex4.png" Year="2020" Sujet="6" Periode="1" Difficulty="2" Points="23" Index="4" />
+      <DataObject_Tags>
+        <Tag Name="Tableur" Pertinence="100" />
+      </DataObject_Tags>
+    </DataObject>
+    <DataObject>
+      <DataObject_Infos Name="2020 - Antilles - Guyane" Correction="false" Path="2020\M - Sep - Ex5.png" Year="2020" Sujet="5" Periode="1" Difficulty="2" Points="18" Index="10" />
+      <DataObject_Tags>
+        <Tag Name="Scratch" Pertinence="100" />
+        <Tag Name="Géométrie" Pertinence="20" />
+      </DataObject_Tags>
+    </DataObject>
+    <DataObject>
+      <DataObject_Infos Name="2020 - Antilles - Guyane" Correction="false" Path="2020\NC - Ex1.png" Year="2020" Sujet="5" Periode="1" Difficulty="2" Points="18" Index="11" />
+      <DataObject_Tags />
+    </DataObject>
+  </Exercices>
+  <Tags>
+    <Tag>
+      <Tag_Infos Name="Pythagore" />
+      <Tag_Alias>
+        <Alias Name="pithagore" />
+        <Alias Name="triangle rectangle" />
+        <Alias Name="egalite" />
+        <Alias Name="pytagore" />
+        <Alias Name="pitagore" />
+      </Tag_Alias>
+    </Tag>
+    <Tag>
+      <Tag_Infos Name="Thalès" />
+      <Tag_Alias>
+        <Alias Name="tales" />
+        <Alias Name="agrandissement" />
+        <Alias Name="reduction" />
+        <Alias Name="egalite" />
+      </Tag_Alias>
+    </Tag>
+    <Tag>
+      <Tag_Infos Name="Trigonométrie" />
+      <Tag_Alias>
+        <Alias Name="cosinus" />
+        <Alias Name="trigo" />
+        <Alias Name="sinus" />
+        <Alias Name="tangente" />
+        <Alias Name="cos" />
+        <Alias Name="sin" />
+        <Alias Name="tan" />
+        <Alias Name="arcsin" />
+        <Alias Name="arccos" />
+        <Alias Name="arctan" />
+        <Alias Name="triangle rectangle" />
+      </Tag_Alias>
+    </Tag>
+    <Tag>
+      <Tag_Infos Name="Fraction" />
+      <Tag_Alias>
+        <Alias Name="division" />
+        <Alias Name="calcul" />
+        <Alias Name="nombres" />
+      </Tag_Alias>
+    </Tag>
+    <Tag>
+      <Tag_Infos Name="Fonction" />
+      <Tag_Alias>
+        <Alias Name="affine" />
+        <Alias Name="linéaire" />
+        <Alias Name="graphique" />
+        <Alias Name="courbe" />
+        <Alias Name="abscisse" />
+        <Alias Name="ordonnée" />
+        <Alias Name="repérage" />
+        <Alias Name="antécédent" />
+        <Alias Name="image" />
+      </Tag_Alias>
+    </Tag>
+    <Tag>
+      <Tag_Infos Name="Probabilités" />
+      <Tag_Alias>
+        <Alias Name="chance" />
+        <Alias Name="fréquence" />
+        <Alias Name="aléatoire" />
+      </Tag_Alias>
+    </Tag>
+    <Tag>
+      <Tag_Infos Name="Puissances" />
+      <Tag_Alias>
+        <Alias Name="exposant" />
+        <Alias Name="carrée" />
+        <Alias Name="cube" />
+      </Tag_Alias>
+    </Tag>
+    <Tag>
+      <Tag_Infos Name="Expressions litterales" />
+      <Tag_Alias>
+        <Alias Name="x" />
+        <Alias Name="developpement" />
+        <Alias Name="factorisation" />
+        <Alias Name="reduction" />
+        <Alias Name="equation" />
+      </Tag_Alias>
+    </Tag>
+    <Tag>
+      <Tag_Infos Name="Vrai faux" />
+      <Tag_Alias>
+        <Alias Name="vrai faux" />
+        <Alias Name="affirmation" />
+      </Tag_Alias>
+    </Tag>
+    <Tag>
+      <Tag_Infos Name="Proportionnalité" />
+      <Tag_Alias>
+        <Alias Name="tableau" />
+        <Alias Name="produit en croix" />
+        <Alias Name="pourcentage" />
+        <Alias Name="echelle" />
+        <Alias Name="ratio" />
+      </Tag_Alias>
+    </Tag>
+    <Tag>
+      <Tag_Infos Name="Statistique" />
+      <Tag_Alias>
+        <Alias Name="graphique" />
+        <Alias Name="diagramme" />
+        <Alias Name="courbe" />
+        <Alias Name="moyenne" />
+        <Alias Name="mediane" />
+        <Alias Name="etendue" />
+        <Alias Name="frequence" />
+        <Alias Name="serie" />
+      </Tag_Alias>
+    </Tag>
+    <Tag>
+      <Tag_Infos Name="Solide" />
+      <Tag_Alias>
+        <Alias Name="volume" />
+        <Alias Name="sphere" />
+        <Alias Name="cube" />
+        <Alias Name="boule" />
+        <Alias Name="pavé droit" />
+        <Alias Name="pyramide" />
+        <Alias Name="prisme" />
+        <Alias Name="cône" />
+        <Alias Name="3D" />
+      </Tag_Alias>
+    </Tag>
+    <Tag>
+      <Tag_Infos Name="Géométrie" />
+      <Tag_Alias>
+        <Alias Name="geometrie" />
+        <Alias Name="pavage" />
+        <Alias Name="transformation du plan" />
+        <Alias Name="homothetie" />
+        <Alias Name="translation" />
+        <Alias Name="rotation" />
+        <Alias Name="symetrie" />
+        <Alias Name="cercle" />
+        <Alias Name="aire" />
+        <Alias Name="perimetre" />
+        <Alias Name="semblable" />
+      </Tag_Alias>
+    </Tag>
+    <Tag>
+      <Tag_Infos Name="Scratch" />
+      <Tag_Alias>
+        <Alias Name="ordinateur" />
+        <Alias Name="algorithme" />
+        <Alias Name="programmation" />
+        <Alias Name="algo" />
+      </Tag_Alias>
+    </Tag>
+    <Tag>
+      <Tag_Infos Name="Tableur" />
+      <Tag_Alias>
+        <Alias Name="ordinateur" />
+        <Alias Name="cellule" />
+        <Alias Name="formule" />
+      </Tag_Alias>
+    </Tag>
+    <Tag>
+      <Tag_Infos Name="Arithmétique" />
+      <Tag_Alias>
+        <Alias Name="nombres premiers" />
+        <Alias Name="premiers" />
+        <Alias Name="diviseur" />
+        <Alias Name="multiple" />
+        <Alias Name="decomposition" />
+        <Alias Name="facteurs" />
+      </Tag_Alias>
+    </Tag>
+    <Tag>
+      <Tag_Infos Name="Tâche complexe" />
+      <Tag_Alias>
+        <Alias Name="ouvert" />
+        <Alias Name="problèmes" />
+      </Tag_Alias>
+    </Tag>
+    <Tag>
+      <Tag_Infos Name="QCM" />
+      <Tag_Alias>
+        <Alias Name="choix multiples" />
+        <Alias Name="tableau" />
+        <Alias Name="Questionnaire" />
+      </Tag_Alias>
+    </Tag>
+  </Tags>
+</Root>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="CSS/MainPage.css"> 
+  <link rel="stylesheet" href="CSS/AnnalesBrevet.css"> 
+  <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+  <link rel="manifest" href="Images/site.webmanifest">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="JS/es5/tex-mml-chtml.js"></script>
+  <script src="JS/Brevet/Recherche.js"></script>
+  <script src="JS/Brevet/BrevetObject.js"></script>
+  <script src="JS/Brevet/HTML.js"></script>
+  <script src="JS/Brevet/XMLData.js"></script>
+
+  <title>Cours M.SINEL</title>
+
+  <style>
+    
+  </style>
+
+    <script>
+        async function FirstLaunch()
+        {
+            LoadDataListe();
+            document.getElementById("recherche").onkeyup = KeyDown;
+        }
+
+
+        function KeyDown(e){
+            Rechercher(document.getElementById('recherche').value)
+        }
+
+    </script>
+
+</head>
+
+<body onload="FirstLaunch();">
+
+  <div class="nav-header">
+    <div class="nav-headertext">
+      <div class="titrepageback">
+        <p class="titrepage"> SINEL Vincent</p>
+        <p class="titrepage"> Collège Mme De Lafayette</p>
+        <p class="titrepage"> 2018-2023</p>
+      </div>
+    </div>
+    <header>
+      <div class="menuprincipale">
+        <div class="blockmenu blockmenuprincipal"><span></span></div>
+        <div class="blockmenu blockmenucours"><span></span></div>
+        <div class="blockmenu blockmenuannales" onclick="Annales_brevets()"><span><a href=""></a></span></div>
+      </div>
+    </header>
+  </div>
+  <div class="container">
+    <div class="searchbar">
+        <button class="searchbutton" onclick="Rechercher(document.getElementById('recherche').value)">
+            <svg width="33" height="33" fill="#2d6172">
+                <path d="M26.71,25.29,18.6,17.18a7,7,0,1,0-1.42,1.42l8.11,8.11a1,1,0,0,0,1.42,0A1,1,0,0,0,26.71,25.29ZM8,13a5,5,0,1,1,5,5A5,5,0,0,1,8,13Z"/>
+            </svg>
+        </button>
+        <input id="recherche" class="searchtext" type="text" placeholder="Recherche ..." onkeydown="KeyDown"/>
+        <button class="searchbutton" onclick="document.getElementById('recherche').value = ''; Rechercher('');">
+            <svg width="33" height="33" fill="#2d6172">
+                <path d="M17.91,16.5,26.7,7.71A1,1,0,0,0,25.29,6.3L16.5,15.09,7.71,6.29A1,1,0,0,0,6.29,7.71l8.8,8.79L6.3,25.29a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l8.79-8.79,8.79,8.79A1,1,0,0,0,26,27a1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41Z"/>
+            </svg>
+        </button>
+    </div>
+    <div class="Unselectable searchmenu">
+        <label class="switch">
+            <input type="radio" name="selection" checked onclick="
+                document.getElementById('Selection').classList.add('HideListe');
+                document.getElementById('Resultats').classList.remove('HideListe');
+                document.getElementById('Selection').classList.remove('VisibleListe');
+                document.getElementById('Resultats').classList.add('VisibleListe');
+                ">
+            <div class="slider">
+                <a>Resultat(s)</a>
+            </div>
+        </label>
+        <label class="switch">
+            <input type="radio" name="selection" onclick="
+                document.getElementById('Selection').classList.remove('HideListe');
+                document.getElementById('Resultats').classList.add('HideListe');
+                document.getElementById('Selection').classList.add('VisibleListe');
+                document.getElementById('Resultats').classList.remove('VisibleListe');
+                ">
+            <div class="slider">
+                <a>Selection</a>
+            </div>
+        </label>
+        <button class="clearbutton" onclick="ClearSelection()">
+            Effacer la selection
+        </button>
+    </div>
+    <div class="ResultPart">
+        <div id="Resultats" class="VisibleListe">
+        </div>
+        <div id="Selection" class="HideListe"> 
+            <div class="Result" id="1">
+                Aucun exercice selectionné
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script>
+  </script>
+  <script id="MathJax-script" async src="JS/Cours/Liste.js"></script>
+</body>
+
+
+
+  

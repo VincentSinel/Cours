@@ -1,0 +1,6 @@
+
+%%~d1
+CD "%%~p1"
+MD small
+FOR %%a in (*.png) DO convert %%a -trim small\%%a
+PAUSE
