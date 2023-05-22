@@ -304,8 +304,8 @@ nav::-webkit-scrollbar-thumb {
     margin-left: 0;
     top: calc(2 * var(--HeaderBarHeight));
   }
-  .menuprincipale{
-  }
+  /* .menuprincipale{
+  } */
   .blockmenuprincipal span:before{
     content: "🏠";
   }

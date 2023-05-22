@@ -17,6 +17,21 @@
   <title>Chapitre 18 - Proportionnalité</title>
 
   <style>
+    .tableprop td, th{
+      border: solid black 2px;
+      border-collapse: collapse;
+      padding: 3px 10px;
+      width: 40px;
+      text-align: center;
+    }
+    .valeur{
+      column-gap: 5px;
+    }
+    .valeur div{
+      max-width: 30px;
+      min-width: 30px;
+      text-align: center;
+    }
   </style>
 
 </head>
@@ -37,9 +52,61 @@
   <p class="exemple">
     Activité Introduction
   </p>
+  <div class="flexobject">
+    <div style="max-width: 13cm;">
+		<div style="border: solid 1px; border-radius: 10px; overflow: hidden; height: 3cm;">
+			<img id="chocolat" src="Images/Chocolat.jpg" style="width: 13cm; height: 3cm;object-fit: cover;">
+		</div>
+      <p>Un chocolatier doit préparer des tablettes de chocolat contenant 60% de cacao pur. 
+        Il souhaite faire le mélange pour préparer plusieurs tablettes de 100g chacunes.
+        <ol>
+          <li>Calculer la masse de cacao pur dans une seul tablette.</li>
+          <li>
+            Completer le tableau de proportionnalité suivant :
+            <table class="tableprop">
+              <tr>
+                <th>Nbr tablette(s)</th>
+                <td>1</td>
+                <td>5</td>
+                <td>10</td>
+                <td>15</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <th>Masse de<br>cacao pur</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Pour ce simplifier la tâche, il voudrais représenter cela graphiquement et l'afficher dans son atelier.<br>
+        <ol start="3">
+          <li>Représenter les données de ce tableau dans le graphique ci-contre.</li>
+          <li>Que peut-on dire de la courbe obtenue ?</li>
+        </ol>
+      </p>
+    </div>
+    <img src="Images/Repere_1.png" style="max-width: 17cm;">
+  </div>
+  <div style="height: 6000px;">
 
-  
+  </div>
 
 </body>
+<script>
+	window.onscroll = function() {myFunction()};
 
+	function myFunction() {
+		var value = 100 + (document.body.scrollTop || document.documentElement.scrollTop) * 0.6
+		var img = document.getElementById("chocolat");
+		img.style.setProperty("object-position", "0px " + (-value).toString() + "px")
+	}
+	
+</script>
 </html>
