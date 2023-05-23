@@ -1,0 +1,168 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta http-equiv="content-language" content="fr">
+		<link rel="stylesheet" href="/CSS/MainPage.css"> 
+		<link rel="stylesheet" href="/CSS/DarkTheme.css">
+		<script src="/JS/Raphael/raphael.min.js"></script>
+		<script src="/JS/Raphael/raphael.export.min.js"></script>
+		<script src="Formes.js"></script>
+		<script src="/JS/Menu.js"></script>
+		<link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+		<link rel="manifest" href="Images/site.webmanifest">
+	</head>
+	<body>
+		<div class="nav-header">
+		  <div class="nav-headertext">
+			<div class="titrepageback">
+				<p class="titrepage"> SINEL Vincent</p>
+				<p class="titrepagecollege"><span></span></p>
+				<p class="titrepagedate"><span></span></p>
+			</div>
+		  </div>
+		  <header>
+			<div class="menuprincipale">
+			  <div class="blockmenu blockmenuprincipal" onclick="Menu()"><span></span></div>
+			  <div class="blockmenu blockmenucours" onclick="Cours()"><span></span></div>
+			  <div class="blockmenu blockmenugenerateurs" onclick="Outils()"><span></span></div>
+			  <div class="blockmenu blockmenuannales" onclick="Annales_brevets()"><span></span></div>
+			</div>
+		  </header>
+		</div>
+		<div class="param">
+			<select id="gen_type" onchange="menu_changed()">
+				<option value="type1">Repère gradué</option>
+				<option value="type2">A VENIR</option>
+			</select>
+			<p style="text-align: center;">Paramètres</p>
+			<div class="leftpanel">
+				<button onclick="Regenerate()">Regénérer</button>
+				<div id="param_repere">
+					<div class="formemenu show">
+						<span>Axe horizontal</span>
+						<div>
+							<label>Nombre de section principale:</label>
+							<input id="hor_pri_nbr" type="number" value="6" step="1" min="1" onchange="Regenerate()">
+							<label>Nombre de section secondaire:</label>
+							<input id="hor_sec_nbr" type="number" value="5" step="1" min="1" onchange="Regenerate()">
+							<label>Première valeur de l'axe:</label>
+							<input id="hor_start" type="number" value="-3" step="1" onchange="Regenerate()">
+							<label>Pas :</label>
+							<input id="hor_pas" type="number" value="1" step="1" onchange="Regenerate()">
+							<input id="hor_text" type="checkbox" style="width: auto;" checked onchange="Regenerate()">
+							<label for="hor_text" style="width: auto;">Générer le texte</label><br>
+							<select id="hor_text_pos" onchange="Regenerate()">
+								<option value="down">En dessous</option>
+								<option value="up">Au dessus</option>
+							</select>
+							<label>Taille texte :</label>
+							<input id="hor_text_size" type="number" value="12" step="2" onchange="Regenerate()">
+							<label>Offset y :</label>
+							<input id="hor_text_offset" type="number" value="0" step="5" onchange="Regenerate()">
+						</div>
+					</div>
+					<div class="formemenu">
+						<span>Axe vertical</span>
+						<div>
+							<label>Nombre de section principale:</label>
+							<input id="ver_pri_nbr" type="number" value="6" step="1" min="1" onchange="Regenerate()">
+							<label>Nombre de section secondaire:</label>
+							<input id="ver_sec_nbr" type="number" value="5" step="1" min="1" onchange="Regenerate()">
+							<label>Première valeur de l'axe:</label>
+							<input id="ver_start" type="number" value="-3" step="1" onchange="Regenerate()">
+							<label>Pas :</label>
+							<input id="ver_pas" type="number" value="1" step="1" onchange="Regenerate()">
+							<input id="ver_text" type="checkbox" style="width: auto;" checked onchange="Regenerate()">
+							<label for="ver_text" style="width: auto;">Générer le texte</label><br>
+							<select id="ver_text_pos" onchange="Regenerate()">
+								<option value="down">A Gauche</option>
+								<option value="up">A Droite</option>
+							</select>
+							<label>Taille texte :</label>
+							<input id="ver_text_size" type="number" value="12" step="2" onchange="Regenerate()">
+							<label>Offset y :</label>
+							<input id="ver_text_offset" type="number" value="0" step="5" onchange="Regenerate()">
+						</div>
+					</div>
+					<div class="formemenu">
+						<span>Traits principaux</span>
+						<div>
+							<label>Epaisseur:</label>
+							<input id="line_pry_stroke" type="number" value="3" step="1" min="1" onchange="Regenerate()">
+							<label>Couleur:</label>
+							<input id="line_pry_color" type="color" value="black" onchange="Regenerate()">
+							<label>Taille des graduations:</label>
+							<input id="line_pry_pin_size" type="number" value="10" step="1" min="0" onchange="Regenerate()">
+							<label>Taille des flêches:</label>
+							<input id="line_pry_arrow" type="number" value="5" step="1" min="0" onchange="Regenerate()">
+							<input id="line_pry_grid" type="checkbox" style="width: auto;" checked onchange="Regenerate()">
+							<label for="line_pry_grid" style="width: auto;">Grille principale</label><br>
+							<label>Epaisseur grille:</label>
+							<input id="line_pry_grid_stroke" type="number" value="2" step="1" min="1" onchange="Regenerate()">
+							<label>Couleur de la grille:</label>
+							<input id="line_pry_grid_color" type="color" value="#505050" onchange="Regenerate()">
+						</div>
+					</div>
+					<div class="formemenu">
+						<span>Traits secondaires</span>
+						<div>
+							<label>Epaisseur:</label>
+							<input id="line_sec_stroke" type="number" value="2" step="1" min="1" onchange="Regenerate()">
+							<label>Couleur:</label>
+							<input id="line_sec_color" type="color" value="black" onchange="Regenerate()">
+							<label>Taille des graduations:</label>
+							<input id="line_sec_pin_size" type="number" value="5" step="1" min="0" onchange="Regenerate()">
+							<input id="line_sec_grid" type="checkbox" style="width: auto;" checked onchange="Regenerate()">
+							<label for="line_sec_grid" style="width: auto;">Grille secondaire</label><br>
+							<label>Epaisseur grille:</label>
+							<input id="line_sec_grid_stroke" type="number" value="1" step="1" min="1" onchange="Regenerate()">
+							<label>Couleur de la grille:</label>
+							<input id="line_sec_grid_color" type="color" value="#505050" onchange="Regenerate()">
+						</div>
+					</div>
+					<div class="formemenu">
+						<span>Rendu final</span>
+						<div>	
+							<label>Largeur :</label>
+							<input id="gen_width" type="number" value="500" step="20" min="0" onchange="Regenerate()">
+							<label>Hauteur :</label>
+							<input id="gen_height" type="number" value="500" step="20" min="0" onchange="Regenerate()">
+							<label>Marge suplémentaire :</label>
+							<input id="gen_margin" type="number" value="5" step="1" min="0" onchange="Regenerate()">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content">
+			<div>
+				<div style="background-color: white;">
+					<div id="preview"></div>
+				</div>
+				<div>
+					<button onclick="Save()">Enregistrer en SVG</button>
+					<button onclick="SavePNG()">Enregistrer en PNG</button>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script>
+		var a = document.getElementsByClassName("formemenu");
+		for(let i = 0 ; i < a.length; i++)
+		{
+			let element = a[i];
+			element.children[0].onclick = function(){menu_click(element)};
+		}
+
+
+		function menu_click(element){
+			element.classList.toggle("show")
+		}
+	</script>
+</html>

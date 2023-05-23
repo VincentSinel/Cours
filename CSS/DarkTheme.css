@@ -1,0 +1,139 @@
+:root {
+	--ParamWidth: 320px;
+}
+
+body{
+	background-color: var(--PanelBack);
+}
+.param{
+	position: fixed;
+	width: calc(var(--ParamWidth) - 10px);
+	height: calc(100% - 10px - var(--HeaderBarHeight));
+	top: var(--HeaderBarHeight);
+	padding: 5px;
+	color: var(--PanelBackText);
+	font-family: var(--TexteFont);
+	border: var(--PanelBackHoverMenu);
+	font-weight: bold;
+}
+.param select{
+	font-weight: bold;
+	text-align: center;
+	width: calc(var(--ParamWidth) - 10px);
+}
+
+.leftpanel{
+	width: calc(var(--ParamWidth) - 20px);
+	height: calc(100% - 50px);
+	border-radius: 5px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	scrollbar-width: thin;          /* "auto" or "thin" */
+	scrollbar-color: var(--PanelBackText) transparent;   /* scroll thumb and track */
+}
+.leftpanel::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+.leftpanel::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+.leftpanel::-webkit-scrollbar-thumb {
+  background-color: var(--PanelBackText);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: none;  /* creates padding around scroll thumb */
+}
+.leftpanel button{
+	width: calc(var(--ParamWidth) - 30px);
+}
+.leftpanel label{
+	width: calc(var(--ParamWidth) - 10px);
+	padding: 5px;
+	color: var(--PanelBackText);
+	font-family: var(--TexteFont);
+	border: var(--PanelBackHoverMenu);
+	font-weight: normal;
+	padding-left: 10px;
+}
+.leftpanel input{
+	width: calc(100% - 15px);
+	margin-left: 10px;
+	text-align: right;
+	font-family: var(--TexteFont);
+	font-weight: bold;
+}
+.leftpanel select{
+	width: calc(100% - 15px);
+	margin-left: 10px;
+	text-align: right;
+	font-family: var(--TexteFont);
+	font-weight: bold;
+}
+
+.formemenu{
+	background-color: var(--PanelBackActive);
+	transition: .4s all ease;
+	height: 28px;
+	overflow-y: hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;	
+}
+.formemenu span{
+	padding: 5px 5px;
+	display: inline-block;
+	height: 28px;
+	width: calc(100% - 10px);
+}
+.formemenu div{
+	padding-left: 15px;
+}
+.formemenu span:hover{
+	background-color: var(--PanelBackHover);
+}
+.formemenu span:before{
+	content: "⯈";
+}
+
+.show{
+	height: auto;
+	transition: .4s all ease;
+}
+.show span:before{
+	content: "⯆";
+}
+
+
+
+.content{
+	position: fixed;
+	width: calc(100% - var(--ParamWidth));
+	height: calc(100% - var(--HeaderBarHeight));
+	top: var(--HeaderBarHeight);
+	left: 320px;
+	vertical-align: middle;
+	text-align: center;	
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.content img{
+	min-height: 200px;
+	min-width: 200px;
+}
+.content button{
+	width: 200px;
+}
+
+.hiddenparam{
+	visibility: collapse;
+}
+
+@media only screen and (max-width:1024px) {
+	.param{
+		height: calc(100% - 10px - 2 * var(--HeaderBarHeight));
+		top: calc(2 * var(--HeaderBarHeight));
+	}
+}

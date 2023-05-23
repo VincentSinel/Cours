@@ -6,6 +6,7 @@
   <meta http-equiv="content-language" content="fr">
   <link rel="stylesheet" href="CSS/MainPage.css"> 
   <link rel="stylesheet" href="CSS/AnnalesBrevet.css"> 
+  <script src="/JS/Menu.js"></script>
   <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
@@ -52,15 +53,16 @@
     <div class="nav-headertext">
       <div class="titrepageback">
         <p class="titrepage"> SINEL Vincent</p>
-        <p class="titrepage"> Collège Mme De Lafayette</p>
-        <p class="titrepage"> 2018-2023</p>
+        <p class="titrepagecollege"><span></span></p>
+        <p class="titrepagedate"><span></span></p>
       </div>
     </div>
     <header>
       <div class="menuprincipale">
-        <div class="blockmenu blockmenuprincipal"><span></span></div>
-        <div class="blockmenu blockmenucours"><span></span></div>
-        <div class="blockmenu blockmenuannales" onclick="Annales_brevets()"><span><a href=""></a></span></div>
+		<div class="blockmenu blockmenuprincipal" onclick="Menu()"><span></span></div>
+		<div class="blockmenu blockmenucours" onclick="Cours()"><span></span></div>
+		<div class="blockmenu blockmenugenerateurs" onclick="Outils()"><span></span></div>
+		<div class="blockmenu blockmenuannales" onclick="Annales_brevets()"><span></span></div>
       </div>
     </header>
   </div>
@@ -115,9 +117,6 @@
         </div>
     </div>
   </div>
-
-  <script>
-  </script>
   <script id="MathJax-script" async src="JS/Cours/Liste.js"></script>
 </body>
 

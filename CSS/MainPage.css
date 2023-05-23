@@ -31,6 +31,13 @@
   --thumbBG: #7C7C7F;
 }
 
+.titrepagecollege span::before{
+	content: "Collège Mme De Lafayette";
+}
+.titrepagedate span::before{
+	content: "2018-2024";
+}
+
 body,
 html {
   height: 100%;
@@ -88,7 +95,6 @@ header {
   text-align: center;
 }
 
-
 .menuprincipale{
   display: flex;
   height: calc(var(--HeaderBarHeight) - 12px);
@@ -122,6 +128,9 @@ header {
 }
 .blockmenucours span:before{
   content: "Cours";
+}
+.blockmenugenerateurs span::before{
+	content: "Outils";
 }
 .blockmenuannales span:before{
   content: "Annales du brevet";
@@ -311,6 +320,9 @@ nav::-webkit-scrollbar-thumb {
   }
   .blockmenucours span:before{
     content: "📚️";
+  }
+  .blockmenugenerateurs span:before{
+    content: "🛠️";
   }
   .blockmenuannales span:before{
     content: "🗄️";
