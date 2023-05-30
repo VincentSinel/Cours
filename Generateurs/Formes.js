@@ -982,7 +982,7 @@ function Save()
 function SavePNG() {
 	var svg = document.getElementById('preview').innerHTML;
 	let img = document.createElement("img");
-	let url = URL.createObjectURL(new Blob([svg], { type: "image/svg+xml" }));
+	let url = (window.URL || webkitURL).createObjectURL(new Blob([svg], { type: "image/svg+xml" }));
 	img.src = url;
 	img.setAttribute("style", "position:fixed;left:-200vw;");
 	img.onload = function onload() {
@@ -996,7 +996,7 @@ function SavePNG() {
 		link.href = canvas.toDataURL("image/png")
 		link.click();
 		img.remove();
-		URL.revokeObjectURL(url);
+		(window.URL || webkitURL).revokeObjectURL(url);
 	};
 	document.body.appendChild(img);
 }
