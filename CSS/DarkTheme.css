@@ -3,9 +3,10 @@
 }
 
 body{
-	background-color: var(--PanelBack);
+	background-color: var(--PanelBackHoverMenu);
 }
 .param{
+	background-color: var(--PanelBack);
 	position: fixed;
 	width: calc(var(--ParamWidth) - 10px);
 	height: calc(100% - 10px - var(--HeaderBarHeight));
@@ -16,57 +17,89 @@ body{
 	border: var(--PanelBackHoverMenu);
 	font-weight: bold;
 }
-.param select{
-	font-weight: bold;
-	text-align: center;
-	width: calc(var(--ParamWidth) - 10px);
-}
 
-.leftpanel{
-	width: calc(var(--ParamWidth) - 20px);
-	height: calc(100% - 50px);
-	border-radius: 5px;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	scrollbar-width: thin;          /* "auto" or "thin" */
-	scrollbar-color: var(--PanelBackText) transparent;   /* scroll thumb and track */
-}
-.leftpanel::-webkit-scrollbar {
-  width: 12px;               /* width of the entire scrollbar */
-}
-.leftpanel::-webkit-scrollbar-track {
-  background: transparent;        /* color of the tracking area */
-}
-.leftpanel::-webkit-scrollbar-thumb {
-  background-color: var(--PanelBackText);    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-  border: none;  /* creates padding around scroll thumb */
-}
-.leftpanel button{
-	width: calc(var(--ParamWidth) - 30px);
-}
-.leftpanel label{
+.objectliste{
+	background-color: var(--PanelBack);
+	position: fixed;
 	width: calc(var(--ParamWidth) - 10px);
+	right: 0px;
+	height: calc(100% - 10px - var(--HeaderBarHeight));
+	top: var(--HeaderBarHeight);
 	padding: 5px;
 	color: var(--PanelBackText);
 	font-family: var(--TexteFont);
 	border: var(--PanelBackHoverMenu);
+	font-weight: bold;
+}
+
+.regenerate{
+	margin-bottom: 5px;
+	height: 20px;
+}
+
+.panel{
+	width: 100%;
+	border-radius: 5px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	scrollbar-width: thin;          /* "auto" or "thin" */
+	scrollbar-color: var(--PanelBackText) transparent; 
+	font-family: var(--TexteFont);
+}
+
+.leftpanel{
+	height: calc(100% - 95px);
+}
+.rightpanel{
+	height: calc(100% - 75px);
+	margin-top: 3px;
+}
+.panel::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+.panel::-webkit-scrollbar-track{
+  background: transparent;        /* color of the tracking area */
+}
+.panel::-webkit-scrollbar-thumb {
+  background-color: var(--PanelBackText);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: none;  /* creates padding around scroll thumb */
+}
+.regenerate,
+.panel button, input, select{
+	width: 100%;
+}
+.panel button, input{
+	font-weight: bold;
+	text-align: right;
+}
+.regenerate,
+.panel select{
+	font-weight: bold;
+	text-align: center;
+}
+.panel label{
+	color: var(--PanelBackText);
 	font-weight: normal;
-	padding-left: 10px;
+	padding-left: 0px;
 }
-.leftpanel input{
-	width: calc(100% - 15px);
-	margin-left: 10px;
-	text-align: right;
-	font-family: var(--TexteFont);
+
+.newobject{
 	font-weight: bold;
+	text-align: center;
+	width: 49%;
+	display: inline-block;
 }
-.leftpanel select{
-	width: calc(100% - 15px);
-	margin-left: 10px;
-	text-align: right;
-	font-family: var(--TexteFont);
-	font-weight: bold;
+
+
+.input_coord{
+	width: calc(50% - 7px * 1.5) !important; 
+	display: inline-block;
+	padding: 0px;
+}
+
+.delete{
+	margin-top: 5px;
 }
 
 .formemenu{
@@ -74,6 +107,7 @@ body{
 	transition: .4s all ease;
 	height: 28px;
 	overflow-y: hidden;
+	overflow-x: hidden;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -85,16 +119,18 @@ body{
 	padding: 5px 5px;
 	display: inline-block;
 	height: 28px;
-	width: calc(100% - 10px);
-}
-.formemenu div{
-	padding-left: 15px;
+	width: 100%;
 }
 .formemenu span:hover{
 	background-color: var(--PanelBackHover);
 }
 .formemenu span:before{
 	content: "⯈";
+}
+.formemenu_div{
+	padding-left: 20px; 
+	padding-right: 5px; 
+	padding-bottom: 10px;
 }
 
 .show{
@@ -109,7 +145,7 @@ body{
 
 .content{
 	position: fixed;
-	width: calc(100% - var(--ParamWidth));
+	width: calc(100% - var(--ParamWidth) * 2);
 	height: calc(100% - var(--HeaderBarHeight));
 	top: var(--HeaderBarHeight);
 	left: 320px;
@@ -131,8 +167,16 @@ body{
 	visibility: collapse;
 }
 
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width:1220px) {
 	.param{
+		height: calc(100% - 10px - 2 * var(--HeaderBarHeight));
+		top: calc(2 * var(--HeaderBarHeight));
+	}
+	.objectliste{
+		height: calc(100% - 10px - 2 * var(--HeaderBarHeight));
+		top: calc(2 * var(--HeaderBarHeight));
+	}
+	.content{
 		height: calc(100% - 10px - 2 * var(--HeaderBarHeight));
 		top: calc(2 * var(--HeaderBarHeight));
 	}

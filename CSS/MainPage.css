@@ -289,7 +289,38 @@ nav::-webkit-scrollbar-thumb {
 /* FIN Navigation chapitres */
 
 
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width:1220px) {
+	.nav-header {
+	  height: calc(2 * var(--HeaderBarHeight));
+	}
+	.nav-headertext{
+	  width: 100%;
+	  height: min-content;
+	}
+	header {
+	  top: var(--HeaderBarHeight);
+	  left: 0;
+	}
+	.aside {
+	  width: calc(100% - 40px);
+	  left: calc(40px - 100%);
+	  top: calc(2 * var(--HeaderBarHeight));
+	}
+	.asideshow{
+	  left: 0px;
+	}
+	.container {
+	  margin-left: 0;
+	  top: calc(2 * var(--HeaderBarHeight));
+	}
+	/* .menuprincipale{
+	} */
+	.openmenu{
+	  visibility: visible;
+	}
+  }
+
+@media only screen and (max-width:860px) {
   .nav-header {
     height: calc(2 * var(--HeaderBarHeight));
   }

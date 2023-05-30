@@ -3,12 +3,342 @@
 var Canvas_width = 500;
 var Canvas_height = 500;
 var Gen_Margin = 5;
-var paper;
+var Gen_font = "Arial";
+var paper = null;
+var objects = [
+];
 window.onload = function(){
 	paper = Raphael("preview", Canvas_width, Canvas_height);
 	Regenerate()
 }
 
+
+function Add_courbe()
+{
+	let ids = []
+	objects.forEach(obj =>{
+		if(obj.type == "courbe")
+			ids.push(obj.id);
+	})
+	let id = 1;
+	while(ids.indexOf(id) >= 0)
+		id += 1;
+	objects.push(
+		{
+			type: "courbe",
+			id: id,
+			hover: false
+		}
+	)
+	var menu = document.createElement("div");
+	menu.id = "for" + id;
+	menu.classList.add("formemenu");
+	var titre = document.createElement("span");
+	titre.innerText = "Courbe " + id;
+	titre.onclick = function(){menu_click(menu)};
+	menu.appendChild(titre);
+	var content = document.createElement("div");
+	content.classList.add("formemenu_div");
+	var label = document.createElement("label");
+	label.innerText = "Formule (en JavaScript) :"
+	content.appendChild(label)
+	var input = document.createElement("input");
+	input.id = "for" + id + "_text";
+	input.type = "text";
+	input.value = "";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+
+	label = document.createElement("label");
+	label.innerText = "Epaisseur :"
+	content.appendChild(label)
+	input = document.createElement("input");
+	input.id = "for" + id + "_stroke";
+	input.type = "number";
+	input.value = "2";
+	input.step = "1";
+	input.min = "1";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+
+	label = document.createElement("label");
+	label.innerText = "Couleur :"
+	content.appendChild(label)
+	input = document.createElement("input");
+	input.id = "for" + id + "_stroke_color";
+	input.type = "color";
+	input.value = "black";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+
+	label = document.createElement("label");
+	label.innerText = "Style de trait :"
+	content.appendChild(label)
+	input = document.createElement("input");
+	input.id = "for" + id + "_style";
+	input.type = "text";
+	input.value = "";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+
+	label = document.createElement("label");
+	label.innerText = "Interval x :"
+	content.appendChild(label)
+	label = document.createElement("br");
+	content.appendChild(label)
+	
+	label = document.createElement("label");
+	label.innerText = "]"
+	content.appendChild(label)
+	input = document.createElement("input");
+	input.classList.add("input_coord");
+	input.id = "for" + id + "_start";
+	input.type = "number";
+	input.value = "-3";
+	input.step = "1";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+	label = document.createElement("label");
+	label.innerText = ";"
+	content.appendChild(label)
+	input = document.createElement("input");
+	input.classList.add("input_coord");
+	input.id = "for" + id + "_end";
+	input.type = "number";
+	input.value = "3";
+	input.step = "1";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+	label = document.createElement("label");
+	label.innerText = "["
+	content.appendChild(label)
+
+	label = document.createElement("button");
+	label.onclick = function(){ RemoveCourbe('for' + id) };
+	label.innerText = "Supprimer"
+	label.classList.add("delete")
+	content.appendChild(label)
+	menu.appendChild(content);
+
+	document.getElementById("object_list").appendChild(menu);
+	Regenerate();
+}
+
+function Add_point()
+{
+	let ids = []
+	objects.forEach(obj =>{
+		if(obj.type == "point")
+			ids.push(obj.id);
+	})
+	let id = 1;
+	while(ids.indexOf(id) >= 0)
+		id += 1;
+	objects.push(
+		{
+			type: "point",
+			id: id,
+			hover: false
+		}
+	)
+	var menu = document.createElement("div");
+	menu.id = "poi" + id;
+	menu.classList.add("formemenu");
+	var titre = document.createElement("span");
+	titre.innerText = "Point " + id;
+	titre.onclick = function(){menu_click(menu)};
+	menu.appendChild(titre);
+	var content = document.createElement("div");
+	content.classList.add("formemenu_div");
+	var label = document.createElement("label");
+	label.innerText = "Position :"
+	content.appendChild(label)
+	label = document.createElement("br");
+	content.appendChild(label)
+	
+	label = document.createElement("label");
+	label.innerText = "("
+	content.appendChild(label)
+	input = document.createElement("input");
+	input.classList.add("input_coord");
+	input.id = "poi" + id + "_px";
+	input.type = "number";
+	input.value = "0";
+	input.step = "0.1";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+	label = document.createElement("label");
+	label.innerText = ";"
+	content.appendChild(label)
+	input = document.createElement("input");
+	input.classList.add("input_coord");
+	input.id = "poi" + id + "_py";
+	input.type = "number";
+	input.value = "0";
+	input.step = "0.1";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+	label = document.createElement("label");
+	label.innerText = ")"
+	content.appendChild(label)
+	label = document.createElement("br");
+	content.appendChild(label)
+
+	label = document.createElement("label");
+	label.innerText = "Nom :"
+	content.appendChild(label)
+	var input = document.createElement("input");
+	input.id = "poi" + id + "_text";
+	input.type = "text";
+	input.value = "A";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+
+	label = document.createElement("label");
+	label.innerText = "Position du texte (pixel relatif) :"
+	content.appendChild(label)
+	label = document.createElement("br");
+	content.appendChild(label)
+	input = document.createElement("input");
+	input.classList.add("input_coord");
+	input.id = "poi" + id + "_tx";
+	input.type = "number";
+	input.value = "0";
+	input.step = "1";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+	label = document.createElement("label");
+	label.innerText = ";"
+	content.appendChild(label)
+	input = document.createElement("input");
+	input.classList.add("input_coord");
+	input.id = "poi" + id + "_ty";
+	input.type = "number";
+	input.value = "-15";
+	input.step = "1";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+	label = document.createElement("label");
+	label.innerText = ")"
+	content.appendChild(label)
+	label = document.createElement("br");
+	content.appendChild(label)
+
+	label = document.createElement("label");
+	label.innerText = "Taille du texte :"
+	content.appendChild(label)
+	input = document.createElement("input");
+	input.id = "poi" + id + "_text_size";
+	input.type = "number";
+	input.value = "12";
+	input.step = "2";
+	input.min = "0";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+
+
+	label = document.createElement("label");
+	label.innerText = "Type de symbole :"
+	content.appendChild(label)
+	input = document.createElement("select");
+	input.id = "poi" + id + "_type";
+	input.onchange = function(){ Regenerate() };
+	let option = document.createElement("option");
+	option.value = "1";
+	option.innerText = "+";
+	input.appendChild(option);
+	option = document.createElement("option");
+	option.value = "2";
+	option.innerText = "×";
+	input.appendChild(option);
+	option = document.createElement("option");
+	option.value = "3";
+	option.innerText = "○";
+	input.appendChild(option);
+	option = document.createElement("option");
+	option.value = "4";
+	option.innerText = "•";
+	input.appendChild(option);
+	option = document.createElement("option");
+	option.value = "5";
+	option.innerText = ".";
+	input.appendChild(option);
+	content.appendChild(input)
+
+	
+	label = document.createElement("label");
+	label.innerText = "Taille du symbole :"
+	content.appendChild(label)
+	input = document.createElement("input");
+	input.id = "poi" + id + "_size";
+	input.type = "number";
+	input.value = "5";
+	input.step = "1";
+	input.min = "0";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+
+	label = document.createElement("label");
+	label.innerText = "Epaisseur :"
+	content.appendChild(label)
+	input = document.createElement("input");
+	input.id = "poi" + id + "_stroke";
+	input.type = "number";
+	input.value = "2";
+	input.step = "1";
+	input.min = "1";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+
+	label = document.createElement("label");
+	label.innerText = "Couleur :"
+	content.appendChild(label)
+	input = document.createElement("input");
+	input.id = "poi" + id + "_stroke_color";
+	input.type = "color";
+	input.value = "red";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+
+	label = document.createElement("label");
+	label.innerText = "Style de trait :"
+	content.appendChild(label)
+	input = document.createElement("input");
+	input.id = "poi" + id + "_style";
+	input.type = "text";
+	input.value = "";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+
+	label = document.createElement("button");
+	label.onclick = function(){ RemoveCourbe('poi' + id) };
+	label.innerText = "Supprimer"
+	label.classList.add("delete")
+	content.appendChild(label)
+	menu.appendChild(content);
+
+	document.getElementById("object_list").appendChild(menu);
+
+	Regenerate();
+}
+
+function RemoveCourbe(name)
+{
+	let element = document.getElementById(name);
+	element.parentNode.removeChild(element);
+	let id = parseInt(name.substring(3));
+	objects.splice(objects.findIndex(element => element.id == id && element.type == "courbe"), 1);
+	Regenerate();
+}
+
+function RemovePoint(name)
+{
+	let element = document.getElementById(name);
+	element.parentNode.removeChild(element);
+	let id = parseInt(name.substring(3));
+	objects.splice(objects.findIndex(element => element.id == id && element.type == "point"), 1);
+	Regenerate();
+}
 
 function menu_changed()
 {
@@ -32,6 +362,228 @@ function Regenerate()
 	let type = document.getElementById("gen_type").selectedIndex;
 	if (type == 0)
 		RepereGradue();
+}
+
+function Draw_Objects(width, height, xs, xe, ys, ye)
+{
+	objects.forEach(obj => {
+		try{
+			if (obj.type == "courbe")
+				Courbe(obj, width, height, xs, xe, ys, ye)
+			if (obj.type == "point")
+				Point(obj, width, height, xs, xe, ys, ye)
+		}
+		catch(e){
+			console.log(e)
+		}
+	});
+}
+
+var x = 0;
+function Courbe(obj, width, height, xs, xe, ys, ye)
+{
+	console.log(obj.id)
+	let formule = document.getElementById("for" + obj.id + "_text").value;
+	let stroke = document.getElementById("for" + obj.id + "_stroke").valueAsNumber
+	let strokecolor = document.getElementById("for" + obj.id + "_stroke_color").value
+	let dashstyle = document.getElementById("for" + obj.id + "_style").value
+	let start = document.getElementById("for" + obj.id + "_start").valueAsNumber
+	let end = document.getElementById("for" + obj.id + "_end").valueAsNumber
+	
+
+	
+	if (formule == "" || formule == " ") return;
+	let dx = (xe - xs) / width;
+	let points = [[]];
+	let index = 0
+	let inside = false
+	x = Math.max(start, xs)
+	let y = Function('"use strict";return (' + formule + ')')()
+	if (y > ys && y < ye)
+	{
+		points[index].push({
+			x: Gen_Margin + 5 + (x - xs)/(xe - xs) * width,
+			y: Canvas_height - Gen_Margin - 5 - (y - ys)/(ye - ys) * height});
+		inside = true;
+	}
+	
+	for(let px = 0; px < width; px++)
+	{
+		x = xs + dx * px;
+		if (x > start && x < end)
+		{
+			y = Function('"use strict";return (' + formule + ')')();
+			if (y > ys && y < ye)
+			{
+				points[index].push({
+					x: Gen_Margin + 5 + (x - xs)/(xe - xs) * width,
+					y: Canvas_height - Gen_Margin - 5 - (y - ys)/(ye - ys) * height});
+				inside = true;
+			}
+			else if (inside)
+			{
+				y = Math.max(ys, Math.min(ye, y))
+				points[index].push({
+					x: Gen_Margin + 5 + (x - xs)/(xe - xs) * width,
+					y: Canvas_height - Gen_Margin - 5 - (y - ys)/(ye - ys) * height});
+				points.push([])
+				index += 1;
+				inside = false;
+			}
+		}
+	}
+	x = Math.min(end, xe)
+	y = Function('"use strict";return (' + formule + ')')()
+	if (y > ys && y < ye)
+	{
+		points[index].push({
+			x: Gen_Margin + 5 + (x - xs)/(xe - xs) * width,
+			y: Canvas_height - Gen_Margin - 5 - (y - ys)/(ye - ys) * height});
+	}
+	points.forEach(poly => {
+		if (poly.length > 1)
+		{
+			element = draw_polygone(poly, false);
+			element.attr(
+				{
+					stroke: strokecolor,
+					"stroke-width": stroke,
+					"stroke-linecap": "round",
+					"stroke-linejoin": "round",
+					"stroke-dasharray": dashstyle
+				}
+			)
+		}
+	})
+}
+
+function Point(obj, width, height, xs, xe, ys, ye)
+{
+	let px= document.getElementById("poi" + obj.id + "_px").valueAsNumber
+	let py = document.getElementById("poi" + obj.id + "_py").valueAsNumber
+	let name = document.getElementById("poi" + obj.id + "_text").value;
+	let tx = document.getElementById("poi" + obj.id + "_tx").valueAsNumber;
+	let ty = document.getElementById("poi" + obj.id + "_ty").valueAsNumber
+	let txt_size = document.getElementById("poi" + obj.id + "_text_size").valueAsNumber
+	let type = document.getElementById("poi" + obj.id + "_type").selectedIndex
+	let size = document.getElementById("poi" + obj.id + "_size").value
+	let stroke = document.getElementById("poi" + obj.id + "_stroke").value
+	let strokecolor = document.getElementById("poi" + obj.id + "_stroke_color").value
+	let dashstyle = document.getElementById("poi" + obj.id + "_style").value
+
+	let p = {
+		x: Gen_Margin + 5 + (px - xs)/(xe - xs) * width,
+		y: Canvas_height - Gen_Margin - 5 - (py - ys)/(ye - ys) * height
+	}
+
+	if(type == 0)
+	{
+		let line = draw_line(p.x, p.y - size / 2.0, p.x, p.y + size / 2.0);
+		line.attr(
+			{
+				stroke: strokecolor,
+				"stroke-width": stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": dashstyle
+			}
+		)
+		line = draw_line(p.x - size / 2.0, p.y, p.x + size / 2.0, p.y);
+		line.attr(
+			{
+				stroke: strokecolor,
+				"stroke-width": stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": dashstyle
+			}
+		)
+	}
+	else if (type == 1)
+	{
+		let line = draw_line(p.x - size / 2.0, p.y - size / 2.0, p.x + size / 2.0, p.y + size / 2.0);
+		line.attr(
+			{
+				stroke: strokecolor,
+				"stroke-width": stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": dashstyle
+			}
+		)
+		line = draw_line(p.x - size / 2.0, p.y + size / 2.0, p.x + size / 2.0, p.y - size / 2.0);
+		line.attr(
+			{
+				stroke: strokecolor,
+				"stroke-width": stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": dashstyle
+			}
+		)
+	}
+	else if (type == 2)
+	{
+		let c = paper.circle(p.x, p.y, size / 2.0);
+		c.attr(
+			{
+				stroke: strokecolor,
+				"stroke-width": stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": dashstyle
+			}
+		)
+	}
+	else if (type == 3)
+	{
+		let c = paper.circle(p.x, p.y, size / 2.0);
+		c.attr(
+			{
+				fill: strokecolor,
+				"stroke-width": stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": dashstyle
+			}
+		)
+	}
+	else if (type == 4)
+	{
+		let c = paper.circle(p.x, p.y, 1.0);
+		c.attr(
+			{
+				fill: strokecolor,
+				"stroke-width": stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": dashstyle
+			}
+		)
+	}
+
+	if (name != "")
+	{
+		element = paper.text( p.x + tx, p.y + ty, name);
+		element.attr(
+			{
+				fill: "white",
+				stroke: "white",
+				"stroke-width": 5,
+				"font-size": txt_size,
+				"text-anchor": "middle",
+				"font-weight": "bold"
+			}
+		)
+		element = paper.text( p.x + tx, p.y + ty, name);
+		element.attr(
+			{
+				fill: strokecolor,
+				"font-size": txt_size,
+				"text-anchor": "middle",
+			}
+		)
+	}
 }
 
 
@@ -300,6 +852,8 @@ function RepereGradue()
 		}
 	)
 
+	Draw_Objects(w, h, hor_start, hor_start + hor_pri_nbr * hor_pas, ver_start, ver_start + ver_pri_nbr * ver_pas);
+
 	// Draw text
 	for(let i = 0; i <= hor_pri_nbr; i++)
 	{
@@ -376,42 +930,53 @@ function draw_line(sx, sy, ex, ey)
 	return paper.path("M" + sx + " " + sy + "L" + ex + " " + ey);
 }
 
-function draw_polygone(points)
+function draw_polygone(points, close = true)
 {
 	let txt = "M" + points[0].x + " " + points[0].y;
 	for(let i = 1; i < points.length; i++){
 		txt += "L" + points[i].x + " " + points[i].y;
 	}
-	return paper.path(txt + "Z");
+	if (close)
+		return paper.path(txt + "Z");
+	else
+		return paper.path(txt);
 }
 
 
 
 function Save()
 {
-	var svg = paper.toSVG();
-	navigator.clipboard.writeText(svg);
+	var svgString = document.getElementById('preview').innerHTML;
+	a = document.createElement('a');
+	a.download = 'Forme.svg';
+	a.type = 'image/svg+xml';
+	blob = new Blob([svgString], {"type": "image/svg+xml"});
+	a.href = (window.URL || webkitURL).createObjectURL(blob);
+	a.click();
+	return;
+	// var svg = paper.toSVG();
+	// navigator.clipboard.writeText(svg);
 
 	// Alert the copied text
-	//alert("SVG copied");
+	// alert("SVG copied");
 	
-	let filename = "Forme.svg"
-	let type = ".svg"
-	var file = new Blob([svg], {type: type});
-	if (window.navigator.msSaveOrOpenBlob) // IE10+
-		window.navigator.msSaveOrOpenBlob(file, filename);
-	else { // Others
-		var a = document.createElement("a"),
-				url = URL.createObjectURL(file);
-		a.href = url;
-		a.download = filename;
-		document.body.appendChild(a);
-		a.click();
-		setTimeout(function() {
-			document.body.removeChild(a);
-			window.URL.revokeObjectURL(url);  
-		}, 0); 
-	}
+	// let filename = "Forme.svg"
+	// let type = ".svg"
+	// var file = new Blob([svg], {type: type});
+	// if (window.navigator.msSaveOrOpenBlob) // IE10+
+	// 	window.navigator.msSaveOrOpenBlob(file, filename);
+	// else { // Others
+	// 	var a = document.createElement("a"),
+	// 			url = URL.createObjectURL(file);
+	// 	a.href = url;
+	// 	a.download = filename;
+	// 	document.body.appendChild(a);
+	// 	a.click();
+	// 	setTimeout(function() {
+	// 		document.body.removeChild(a);
+	// 		window.URL.revokeObjectURL(url);  
+	// 	}, 0); 
+	// }
 }
 
 function SavePNG() {

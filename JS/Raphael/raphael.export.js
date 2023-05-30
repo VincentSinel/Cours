@@ -100,6 +100,43 @@
 								element = R.hsb2rgb(hsb[0], hsb[1], hsb[2]).toString();
 							}
 						}
+					case 'stroke-dasharray':
+						var sw = attrs['stroke-width'] !== undefined ? attrs['stroke-width'] : 1 ;
+						switch(element){
+							case "" :
+								element = "0";
+								break;
+							case "-" :
+								element = (3*sw)+","+sw;
+								break;
+							case "." :
+								element = sw+","+sw;
+								break;
+							case "-." :
+								element = (3*sw)+","+sw+","+sw+","+sw;
+								break;
+							case "-.." :
+								element = (3*sw)+","+sw+","+sw+","+sw+","+sw+","+sw;
+								break;
+							case ". " :
+								element = sw+","+(3*sw);
+								break;
+							case "- " :
+								element = (4*sw)+","+(3*sw);
+								break;
+							case "--" :
+								element = (8*sw)+","+(3*sw);
+								break;
+							case "- ." :
+								element = (4*sw)+","+(3*sw)+","+sw+","+(3*sw);
+								break;
+							case "--." :
+								element = (8*sw)+","+(3*sw)+","+sw+","+(3*sw);
+								break;
+							case "--.." :
+								element = (8*sw)+","+(3*sw)+","+sw+","+(3*sw)+","+sw+","+(3*sw);
+								break;
+						}
 				}
 
 				return name + '="' + escapeXML(element) + '"';

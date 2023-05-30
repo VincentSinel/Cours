@@ -9,11 +9,11 @@
 		<script src="/JS/Raphael/raphael.export.min.js"></script>
 		<script src="Formes.js"></script>
 		<script src="/JS/Menu.js"></script>
-		<link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
-		<link rel="manifest" href="Images/site.webmanifest">
+		<link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/Images/favicon-16x16.png">
+		<link rel="manifest" href="/Images/site.webmanifest">
 	</head>
 	<body>
 		<div class="nav-header">
@@ -33,18 +33,31 @@
 			</div>
 		  </header>
 		</div>
+
+		<div class="content">
+			<div>
+				<div style="background-color: white;">
+					<div id="preview"></div>
+				</div>
+				<div>
+					<button onclick="Save()">Enregistrer en SVG</button>
+					<button onclick="SavePNG()">Enregistrer en PNG</button>
+				</div>
+			</div>
+		</div>
+		
 		<div class="param">
 			<select id="gen_type" onchange="menu_changed()">
 				<option value="type1">Repère gradué</option>
 				<option value="type2">A VENIR</option>
 			</select>
 			<p style="text-align: center;">Paramètres</p>
-			<div class="leftpanel">
-				<button onclick="Regenerate()">Regénérer</button>
-				<div id="param_repere">
+			<button class="regenerate" onclick="Regenerate()">Regénérer</button>
+			<div class="panel leftpanel">
+				<div style="width: 100%;" id="param_repere">
 					<div class="formemenu show">
 						<span>Axe horizontal</span>
-						<div>
+						<div class="formemenu_div">
 							<label>Nombre de section principale:</label>
 							<input id="hor_pri_nbr" type="number" value="6" step="1" min="1" onchange="Regenerate()">
 							<label>Nombre de section secondaire:</label>
@@ -67,7 +80,7 @@
 					</div>
 					<div class="formemenu">
 						<span>Axe vertical</span>
-						<div>
+						<div class="formemenu_div">
 							<label>Nombre de section principale:</label>
 							<input id="ver_pri_nbr" type="number" value="6" step="1" min="1" onchange="Regenerate()">
 							<label>Nombre de section secondaire:</label>
@@ -90,7 +103,7 @@
 					</div>
 					<div class="formemenu">
 						<span>Traits principaux</span>
-						<div>
+						<div class="formemenu_div">
 							<label>Epaisseur:</label>
 							<input id="line_pry_stroke" type="number" value="3" step="1" min="1" onchange="Regenerate()">
 							<label>Couleur:</label>
@@ -109,7 +122,7 @@
 					</div>
 					<div class="formemenu">
 						<span>Traits secondaires</span>
-						<div>
+						<div class="formemenu_div">
 							<label>Epaisseur:</label>
 							<input id="line_sec_stroke" type="number" value="2" step="1" min="1" onchange="Regenerate()">
 							<label>Couleur:</label>
@@ -126,7 +139,7 @@
 					</div>
 					<div class="formemenu">
 						<span>Rendu final</span>
-						<div>	
+						<div class="formemenu_div">	
 							<label>Largeur :</label>
 							<input id="gen_width" type="number" value="500" step="20" min="0" onchange="Regenerate()">
 							<label>Hauteur :</label>
@@ -139,15 +152,11 @@
 			</div>
 		</div>
 
-		<div class="content">
-			<div>
-				<div style="background-color: white;">
-					<div id="preview"></div>
-				</div>
-				<div>
-					<button onclick="Save()">Enregistrer en SVG</button>
-					<button onclick="SavePNG()">Enregistrer en PNG</button>
-				</div>
+		<div class="objectliste">
+			<p style="text-align: center;">Objects</p>
+			<button onclick="Add_courbe()" class="newobject">Ajouter une courbe</button>
+			<button onclick="Add_point()" class="newobject">Ajouter un point</button>
+			<div id="object_list" class="panel rightpanel">
 			</div>
 		</div>
 
