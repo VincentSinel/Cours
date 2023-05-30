@@ -980,7 +980,7 @@ function Save()
 }
 
 function SavePNG() {
-	var svg = paper.toSVG();
+	var svg = document.getElementById('preview').innerHTML;
 	let img = document.createElement("img");
 	let url = URL.createObjectURL(new Blob([svg], { type: "image/svg+xml" }));
 	img.src = url;
