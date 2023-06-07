@@ -5,6 +5,8 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta http-equiv="content-language" content="fr">
   <link rel="stylesheet" href="/CSS/Cours.css"> 
+  <script src="/JS/Raphael/raphael.min.js"></script>
+  <script src="JS/Simulation.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
@@ -23,23 +25,346 @@
 
 <body>
 
-  <table id="TitleTable">
-    <tr>
-      <td id="ChapitreNumero">
-        Chapitre 19
-      </td>
-      <td id="ChapitreNom">
-        - Probabilité
-      </td>
-    </tr>
-  </table>
+	<table id="TitleTable">
+		<tr>
+		<td id="ChapitreNumero">
+			Chapitre 19
+		</td>
+		<td id="ChapitreNom">
+			- Probabilité
+		</td>
+		</tr>
+	</table>
 
-  <p class="exemple">
-    Activité Introduction
-  </p>
+	<p class="exemple">
+		Activité Introduction
+	</p>
+	<div class="flexobject">
+		<div class="flexobject" style="gap: 0;">
+			<img src="Images/0.png" style="max-height: 4cm;">
+			<img src="Images/1.png" style="max-height: 4cm;">
+			<img src="Images/2.png" style="max-height: 4cm;">
+			<img src="Images/3.png" style="max-height: 4cm;">
+			<img src="Images/4.png" style="max-height: 4cm;">
+			<img src="Images/5.png" style="max-height: 4cm;">
+			<img src="Images/6.png" style="max-height: 4cm;">
+			<img src="Images/7.png" style="max-height: 4cm;">
+			<br>
+		</div>
+		<div class="flexobject" style="gap: 0;">
+			<img src="Images/8.png" style="max-height: 4cm;">
+			<img src="Images/9.png" style="max-height: 4cm;">
+			<img src="Images/10.png" style="max-height: 4cm;">
+			<img src="Images/11.png" style="max-height: 4cm;">
+			<img src="Images/12.png" style="max-height: 4cm;">
+			<img src="Images/13.png" style="max-height: 4cm;">
+			<img src="Images/14.png" style="max-height: 4cm;">
+			<img src="Images/15.png" style="max-height: 4cm;">
+			<br>
+		</div>
+		<div class="flexobject" style="gap: 0;">
+			<img src="Images/16.png" style="max-height: 4cm;">
+			<img src="Images/17.png" style="max-height: 4cm;">
+			<img src="Images/18.png" style="max-height: 4cm;">
+			<img src="Images/19.png" style="max-height: 4cm;">
+			<img src="Images/20.png" style="max-height: 4cm;">
+			<img src="Images/21.png" style="max-height: 4cm;">
+			<img src="Images/22.png" style="max-height: 4cm;">
+			<img src="Images/23.png" style="max-height: 4cm;">
+			<br>
+		</div>
+		<div class="flexobject" style="gap: 0;">
+			<img src="Images/24.png" style="max-height: 4cm;">
+			<img src="Images/25.png" style="max-height: 4cm;">
+			<img src="Images/26.png" style="max-height: 4cm;">
+			<img src="Images/27.png" style="max-height: 4cm;">
+			<img src="Images/28.png" style="max-height: 4cm;">
+			<img src="Images/29.png" style="max-height: 4cm;">
+			<img src="Images/30.png" style="max-height: 4cm;">
+			<img src="Images/31.png" style="max-height: 4cm;">
+			<br>
+		</div>
+	</div>
+	<div class="flexobject">
+		<div>
+			<p>
+				On utilise un jeu de 32 cartes comme ci-dessus. On effectue l'expérience suivante : <br>
+				on mélange le paquet de 
+				cartes puis on tire une carte au hasard.<br>
+				<ol>
+					<li>Comment s'appelle ce type d'expérience ?</li>
+					<li>
+						Quelle est la probabilité des événements suivants:<br>
+						<ol type="a">
+							<li>« Obtenir un Valet »</li>
+							<li>« Obtenir un roi rouge »</li>
+							<li>« Obtenir le 7 de carreau »
+							<li>« Obtenir une autre carte qu'un roi rouge »</li>
+							<li>« Obtenir un valet ou un trèfle »</li>
+							<li>« Obtenir une carte qui n'est ni rouge ni noir »</li>
+							<li>« Obtenir une carte rouge ou noir »</li>
+						</ol>
+					</li>
+					<li>Quel est la particularité de l'événement f ? L'événement g ?</li>
+					<li>Que peut-on dire des événements b et d ?</li>
+				</ol>
+			</p>
+		</div>
+		<div>
+			<button style="width: 100%;" onclick="tirer_une_carte()">Tirer une carte</button><br>
+			<img id="carte" src="Images/31.png" style="max-height: 6cm;">
+		</div>
+	</div>
 
-  
+	<h1>Vocabulaires :</h1>
+		<h2>Expériences et événements :</h2>
+			<div class="definition">
+				Une <span class="CRed">expérience aléatoire</span> est une expérience dont on connait tous les 
+				résultats possibles sans pouvoir déterminer de manière certaine lequel va se produire.<br>
+				Chaque résultat possible est appelé une <span class="CRed">issue</span>.
+			</div>
+			<p class="exemple">Exemple :</p>
+			<ul>
+				<li>Lancer de dé</li>
+				<li>Lancer de pièce</li>
+				<li>Loterie, Loto</li>
+			</ul>
+			<p class="remarque">Remarque :</p>
+			<p>On étudie uniquement des Expériences pouvant être reproduites.</p>
+			<div class="definition">
+				Un <span class="CRed">événement</span> est constitué d'un ensemble d'issues 
+				(zéro, une ou plusieurs). Il <b>peut</b> ou <b>ne peut pas</b> être <u>réalisé</u>.
+			</div>
+			<p class="exemple">Exemple :</p>
+			<p>
+				« Obtenir 6 », « Faire Pile » ...<br>
+				Très souvent on l'associe à une lettre pour faciliter sa manipulation :<br>
+				On étudie un lancé de dé à 10 face
+				Soit A l'événement « Obtenir 6 »
+				La probabilité de A est de 0,1.
+			</p>
+		<h2>Événements Particuliers :</h2>
+			<p>
+				On se base pour la suite dans le cas de l'expérience aléatoire 
+				du lancer d'un dé à 6 faces numérotées de 1 à 6:
+			</p>
+			<div class="flexobject">
+				<img src="Images/Cube.svg" style="max-width: 2cm;">
+				<p>
+					<u>Description de l'expérience :</u><br>
+					On lance le dé et on lit le numéro inscrit sur la face de dessus.<br>
+					<u>Issues de l'expérience :</u><br>
+					1, 2, 3, 4, 5, 6, Soit au total 6 issues possible.<br>
+				</p>
+			</div>
+			<div class="flexobject">
+				<ul>
+					<li>A est l'événement « Obtenir 1 » </li>
+					<li>B est l'événement « Obtenir 1 ou 2 » </li>
+					<li>C est l'événement « Ne pas obtenir 1 ou 2 » </li>
+					<li>D est l'événement « Obtenir 0 » </li>
+					<li>E est l'événement « Obtenir un chiffre » </li>
+					<li>F est l'événement « Obtenir 4 ou plus » </li>
+				</ul>
+				<img src="Images/Ensemble.svg" style="max-width: 6cm;">
+			</div>
+			<h3>Evénement élémentaire :</h3>
+				<div class="definition">
+					On appelle <span class="CRed">événement élémentaire</span>, un événement qui ne contient 
+					qu'<b>une seule issue</b>.
+				</div>
+				<div class="flexobject">
+					<img src="Images/Cube.svg" style="max-width: 2cm;">
+					<div>
+						<p class="exemple">Exemple :</p>
+						<p>L'évènements A « Obtenir 1 » </p>
+					</div>
+				</div>
+			<h3>Evénement impossible :</h3>
+				<div class="definition">
+					On appelle <span class="CRed">événement impossible</span> un événement qui n'est constitué 
+					d'<b>aucune issue</b>, qui ne peut se réaliser.
+				</div>
+				<div class="flexobject">
+					<img src="Images/Cube.svg" style="max-width: 2cm;">
+					<div>
+						<p class="exemple">Exemple :</p>
+						<p>L'événement D « Obtenir 0 » ou encore « Obtenir un multiple de 10 » </p>
+					</div>
+				</div>
+			<h3>Evénement certain :</h3>
+				<div class="definition">
+					On appelle <span class="CRed">événement certain</span> un événement qui se réalise toujours, 
+					il contient <b>toutes les issues</b>.
+				</div>
+				<div class="flexobject">
+					<img src="Images/Cube.svg" style="max-width: 2cm;">
+					<div>
+						<p class="exemple">Exemple :</p>
+						<p>L'événement E « Obtenir un chiffre» ou encore « Obtenir un chiffre plus, petit  que 7  » </p>
+					</div>
+				</div>
+			<h3>Evénement contraire :</h3>
+				<div class="definition">
+					l' <span class="CRed">événement contraire</span> d'un événement A contient toutes 
+					les issues qui ne réalise pas A. On le note « non A » ou encore $\bar{\mathbf{A}}$.
+				</div>
+				<div class="flexobject">
+					<img src="Images/Cube.svg" style="max-width: 2cm;">
+					<div>
+						<p class="exemple">Exemple :</p>
+						<p>
+							Pour l'événement B « Obtenir 1 ou 2 » l'événement contraire est C « ne pas obtenir 1 ou 2 » 
+							ou dit autrement :  « Obtenir 3, 4, 5 ou 6 ». 
+						</p>
+					</div>
+				</div>
+			<h3>Evénement incompatibles :</h3>
+				<div class="definition">
+					Deux événements sont dit <span class="CRed">incompatible</span> s'ils ne peuvent se réaliser en même temps.
+				</div>
+				<div class="flexobject">
+					<img src="Images/Cube.svg" style="max-width: 2cm;">
+					<div>
+						<p class="exemple">Exemple :</p>
+						<p>
+							L'événement A « Obtenir 1 » et l'événement C « ne pas obtenir 1 ou 2 » sont incompatible<br>
+							L'événement A « Obtenir 1 » et l'événement F « obtenir 4 ou plus » sont incompatible
+							ou dit autrement :  « Obtenir 3, 4, 5 ou 6 ». 
+						</p>
+					</div>
+				</div>
+				<p class="remarque">Remarque :</p>
+				<p>Un événements et son événement contraire sont incompatibles</p>
+	<h1>Calcul de probabilité :</h1>
+		<h2>Probabilités d'issues :</h2>
+			<div class="definition">
+				La <span class="CRed">probabilité</span> d'une issue représente la chance 
+				qu"elle apparaisse lors d"une expérience aléatoire.
+			</div>
+			<div class="flexobject">
+				<img src="Images/Cube.svg" style="max-width: 2cm;">
+				<div>
+					<p class="exemple">Exemple :</p>
+					<p>
+						On a une chance sur 6 d'obtenir 3. On dit que la probabilité d'obtenir 3 
+						est de $\frac{1}{6}\ \approx 0,13$. 
+					</p>
+				</div>
+			</div>
+			<div class="definition">
+				<b>Propriétés :</b><br>
+				<ul>
+					<li>
+						La probabilité d'une issue est un nombre compris entre 0 et 1.
+					</li>
+					<li>
+						La somme des probabilités de toutes les issues d'une expérience aléatoires est égale à 1.
+					</li>
+				</ul>
+			</div>
+			<div class="flexobject">
+				<img src="Images/Cube.svg" style="max-width: 2cm;">
+				<div>
+					<p class="exemple">Exemple :</p>
+					<p>
+						Chaque face a une probabilité de \frac{1}{6} d'être obtenue.<br>
+						On a donc la somme des probabilités :<br>
+						$\frac{1}{6}+\frac{1}{6}+\frac{1}{6}+\frac{1}{6}+\frac{1}{6}+\frac{1}{6}=\ \frac{6\times1}{6}=1$.
+					</p>
+				</div>
+			</div>
+			<div class="definition">
+				<b>Si</b> dans une expérience aléatoire, <b>toutes les issues ont la même probabilité</b> d'apparaitre, 
+				<b>alors</b> on parle de situation d'<span class="CRed">équiprobabilité</span>.
+			</div>
+			<div class="flexobject">
+				<img src="Images/Cube.svg" style="max-width: 2cm;">
+				<div>
+					<p class="exemple">Exemple :</p>
+					<p>Lors du lancé d'un dé, chaque face a autant de chance d'être obtenue, nous sommes donc dans une situation d'équiprobabilité.
+					</p>
+				</div>
+			</div>
+		<h2>Probabilités d'événements :</h2>
+			<div class="definition">
+				La probabilité d'un événement A est la somme des probabilités des issues qui le réalisent.<br>
+				On note cette probabilité P(A).
+			</div>
+			<div class="flexobject">
+				<img src="Images/Cube.svg" style="max-width: 2cm;">
+				<div>
+					<p class="exemple">Exemple :</p>
+					<p>
+						Soit J l'événement « Faire un chiffre Pair ». <br>
+						J contient les issues 2,4 et 6 qui ont chacun une probabilité de $\frac{1}{6}$ d'apparaitre.<br>
+						Donc $P\left(J\right)=\frac{1}{6}+\frac{1}{6}+\frac{1}{6}=\frac{3}{6}=\frac{1}{2}=0,5$.
+					</p>
+				</div>
+			</div>
+			<p class="remarque">Remarque :</p>
+			<ul>
+				<li>La probabilité d'un événement certain est 1.</li>
+				<li>La probabilité d'un événement impossible est 0.</li>
+				<li>La somme des probabilités d'un événements A et de son contraire vaut 1, soit $P(A)+P(\bar{A})=1$.</li>
+			</ul>
+			<div class="definition">
+				<b>Propriétés :</b><br>
+				Si A et B sont <b>deux événements incompatibles</b>, la probabilité que <b>l'un <u>ou</u> l'autre</b> se réalise est 
+				<b>la somme de leurs probabilités</b> : $P\left(A\ ou\ B\right)=P\left(A\right)+P(B)$.
+			</div>
+			<div class="flexobject">
+				<img src="Images/Cube.svg" style="max-width: 2cm;">
+				<div>
+					<p class="exemple">Exemple :</p>
+					<p>
+						Soit B l'événement « Obtenir 1 ou 2 » et K l'événement « Obtenir plus de 5 ».<br>
+						A contient les issues 1,2 donc $P\left(A\right)=\frac{2}{6}$.<br>
+						B contient les issues 5,6 donc $P\left(B\right)=\frac{2}{6}$.<br>
+						Ces deux événements sont bien incompatibles. <br>
+						La probabilité de l'événement « Obtenir 1 ou 2 OU Obtenir plus de 5 » est alors :<br>
+						$P\left(A\ ou\ B\right)=P\left(A\right)+P\left(B\right)=\frac{2}{6}+\frac{2}{6}=\frac{4}{6}=\frac{2}{3}\approx0,66$.
+					</p>
+				</div>
+			</div>
+	<h1>Lien entre probabilité et fréquence :</h1>
+			<p>
+				Lorsque l'on répète un grand nombre de fois une expérience aléatoire, 
+				on peut mesurer l'apparition d'une issues en comptant le nombre d'apparitions 
+				de celle-ci et en calculant sa fréquence.
+			</p>
+			<div class="definition">
+				La fréquence d'une valeur est le quotient de son effectif par l'effectif total.<br>
+				$\frac{Effectif}{Effectif\ total}$
+			</div>
+			<p class="remarque">Remarque :</p>
+			<p>La fréquence est comprise entre 0 et 1.</p>
+			<div class="definition">
+				Lorsqu'on effectue un très grand nombre de fois une expérience aléatoire 
+				de façon indépendante et dans les mêmes conditions, la fréquence de réalisation 
+				d'une issue ou d'un événement se rapproche de la probabilité de celle ou celui-ci.
+			</div>
+			<div class="flexobject">
+				<div>
+					<p>
+						En rouge est indiqué la probabilité. En vert la fréquence d'apparition en fonction du nombre de tirage.<br>
+						On peut voir que la courbe verte se rapproche de la droite rouge au fur et à mesure que les tirage augmente.
+					</p>
+					<label>Nombre de tirages : </label>
+					<input id="nbr_tirage" type="number" min="100" max="10000" value="6000" step="100" onchange="Regenerate()"><br>
+					<label>Probabilité :</label>
+					<input id="proba_tirage" type="number" min="0.1" max="1" value="0.3" step="0.05" onchange="Regenerate()"><br>
+					<button onclick="Regenerate()">Relancer</button>
+				</div>
+				<div id="preview"></div>
+			</div>
 
 </body>
-
+<script>
+	function tirer_une_carte()
+	{
+		let a = Math.round(31 * Math.random())
+		document.getElementById("carte").src = "Images/" + a + ".png"
+	}
+</script>
 </html>
