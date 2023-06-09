@@ -5,6 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta http-equiv="content-language" content="fr">
   <link rel="stylesheet" href="/CSS/Cours.css"> 
+  <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
@@ -34,12 +35,143 @@
     </tr>
   </table>
 
-  <p class="exemple">
-    Activité Introduction
-  </p>
+	<p class="exemple">
+		Activité Introduction
+	</p>
+	<div class="flexobject">
+			<div id="ggbApplet"></div>
+			<div>
+				<p>
+					Basile a construit la figure ci-contre avec Geogebra.
+					<ol>
+						<li>
+							Si l'on modifie la taille du triangle, le rapport de longueur change-t-il ?
+						</li>
+						<li>
+							Si on modifie l'angle (curseur en haut à gauche), le rapport de longueur change-t-il ?
+						</li>
+						<li>
+							Que peut-on alors dire du rapport de longueur et de l'angle ?
+						</li>
+					</ol>
+				</p>
+			</div>
+	</div>
 
-  
+  	<h1>Cosinus :</h1>
+		<p>
+			Dans un triangle rectangle, lorsque l'on repére un angle <b>aigu</b>, 
+			le rapport de longueur du <span class="CRed">côté adjacent</span> à cette angle et de 
+			<span class="CGreen">l'hypoténuse</span> est <b>lié à la mesure de cette angle</b>. <br>
+			Il y a un lien entre les angles et 
+			la longueurs des côtés du triangle.
+			On dit alors que le rapport de longueur varie <b>en fonction de</b> l'angle.
+		</p>
+		<img src="Images/Fonction.svg" style="max-height: 4cm;">
+		<p>
+			Un nom a été donné à cette fonction : le <span class="CRed">cosinus</span>.
+		</p>
+		<div class="definition">
+			Dans un triangle <b>rectangle</b>, pour un angle « $\theta$ » aigu donné, on a :<br>
+			<span style="font-size: x-large;">
+				$\cos(\theta)=\frac{côté\ \textcolor{#e53935}{adjacent}\ à\ l'angle}{\textcolor{#43a047}{hypoténuse}}$
+			</span>
+		</div>
+		<p class="exemple">Exemple :</p>
+		<div class="flexobject">
+			<img src="Images/Triangle1.svg" style="max-height: 4cm;">
+			<p>
+				$\cos(\hat{CAB})=\cos(72°)\approx0.309$<br>
+				$\frac{AB}{AC}=\frac{30,9}{100}=0,309$<br>
+				On obtient bien le même résultat ici.
+			</p>
+		</div>
+		<p class="remarque">Remarques :</p>
+		<p>
+			<ul>
+				<li>La fonction cosinus n'est pas exprimable, il faut donc obligatoirement utiliser la calculatrice.</li>
+				<li>Le cosinus d'un angle aigu renvoie toujours une valeur entre 0 et 1.</li>
+			</ul>
+		</p>
+	<h1>Calcul d'une longueur dans un triangle rectangle :</h1>
+		<p>
+			<ol>
+				<li>On commence par faire un schéma du triangle montrant la position de
+					l'hypothénuse et du côté adjacent à l'angle connu.</li>
+				<li>On écrit l'égalité du cosinus et de rapport faisant intervenir le côté connu et le côté
+					que l'on souhaite calculer.</li>
+				<li>On résout l’équation simple ainsi obtenue.</li>
+			</ol>
+		</p>
+		<p class="exemple">Exemple :</p>
+		<p>
+			Soit ABC un triangle rectangle en A, tel que BC = 6cm et $\widehat{ABC} = 29°$. Calculer AB.
+		</p>
+		<div class="flexobject">
+			<div>
+				<ol>
+					<li>On fait un schéma.</li>
+				</ol>
+				<img src="Images/Triangle2.svg" style="height: 4cm;">
+			</div>
+			<div>
+				<ol start="2">
+					<li>
+						On écrit l'égalité trigonométrique qui lie les grandeurs.<br>
+						$cos(\widehat{ABC})=\frac{BA}{BC}$ donc $cos(29)=\frac{BA}{6}$
+					</li>
+					<li>
+						On résoud :<br>
+						$cos(29)=\frac{BA}{6}$ donc $\frac{cos(29)}{1}=\frac{BA}{6}$<br>
+						On fait un produit en croix :<br>
+						$BA = cos(29)\times6\div1\approx5,2cm$
+					</li>
+				</ol>
+			</div>
+		</div>
 
 </body>
-
+<script>
+	var parameters = {
+		"id": "ggbApplet",
+		"width":480,
+		"height":360,
+		"showMenuBar":false,
+		"showAlgebraInput":false,
+		"showToolBar":false,
+		"customToolBar":"0 39 | 1 501 67 , 5 19 , 72 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71 | 30 29 54 32 31 33 | 17 26 62 73 , 14 68 | 25 52 60 61 | 40 41 42 , 27 28 35 , 6",
+		"showToolBarHelp":false,
+		"showResetIcon":false,
+		"enableLabelDrags":false,
+		"enableShiftDragZoom":true,
+		"enableRightClick":false,
+		"errorDialogsActive":false,
+		"useBrowserForJS":false,
+		"allowStyleBar":false,
+		"preventFocus":false,
+		"showZoomButtons":false,
+		"capturingThreshold":3,
+		// add code here to run when the applet starts
+		"appletOnLoad":function(api){ /* api.evalCommand('Segment((1,2),(3,4))');*/ },
+		"showFullscreenButton":true,
+		"scale":1,
+		"disableAutoScale":false,
+		"allowUpscale":false,
+		"clickToLoad":false,
+		"appName":"classic",
+		"buttonRounding":0.7,
+		"buttonShadows":false,
+		"language":"fr",
+		// use this instead of ggbBase64 to load a material from geogebra.org
+		// "material_id":"RHYH3UQ8",
+		// use this instead of ggbBase64 to load a .ggb file
+		"filename":"intro.ggb",
+		//"ggbBase64":"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",
+	};
+	// is3D=is 3D applet using 3D view, AV=Algebra View, SV=Spreadsheet View, CV=CAS View, EV2=Graphics View 2, CP=Construction Protocol, PC=Probability Calculator DA=Data Analysis, FI=Function Inspector, macro=Macros
+	var views = {'is3D': 0,'AV': 0,'SV': 0,'CV': 0,'EV2': 0,'CP': 0,'PC': 0,'DA': 0,'FI': 0,'macro': 0};
+	var applet = new GGBApplet(parameters, '5.0', views);
+	window.onload = function() {applet.inject('ggbApplet')};
+	applet.setPreviewImage('data:image/gif;base64,R0lGODlhAQABAAAAADs=','https://www.geogebra.org/images/GeoGebra_loading.png','https://www.geogebra.org/images/applet_play.png');
+</script>
 </html>
