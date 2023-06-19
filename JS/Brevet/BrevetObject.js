@@ -8,7 +8,9 @@ class BrevetObject
         "Grèce",
         "Asie",
         "Antilles - Guyanne",
-        "Metropole",
+        "La réunion",
+        "Métropole - La réunion",
+		"Métropole - Antilles - Guyanne",
         "Polynesie",
         "Nouvelle Caledonie",
         "Brevet Blanc"

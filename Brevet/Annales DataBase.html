@@ -1,0 +1,153 @@
+<html>
+	<head>
+		<script src="/JS/Brevet/JSonCreator.js"></script>
+		<link rel="stylesheet" href="/CSS/DataBase.css"> 
+	</head>
+	<body>
+		<div class="flexholder">
+			<div class="flexmenu">
+				<div class="panel">
+					<ul id="list_img">
+
+					</ul>
+				</div>
+				<div class="content">
+					<div class="buttonhover">
+						<button onclick="zoomin()">+</button>
+						<button onclick="zoomout()">-</button>
+					</div>
+					<div  class="contentflex">
+						<img id="preview">
+					</div>
+				</div>
+				<div class="panel info">
+					<div>
+						<span>SUJET</span>
+						<div style="padding-left: 10px;">
+							<span>Région</span>
+							<div class="flexboxmulti">
+								<div>
+									<input type="checkbox" id="Sujet_AN">
+									<label for="Sujet_AN">Amérique du nord</label>
+								</div>
+								<div>
+									<input type="checkbox" id="Sujet_AS">
+									<label for="Sujet_AS">Amérique du sud</label>
+								</div>
+								<div>
+									<input type="checkbox" id="Sujet_CE">
+									<label for="Sujet_CE">Centres Etrangers</label>
+								</div>
+								<div>
+									<input type="checkbox" id="Sujet_AG">
+									<label for="Sujet_AG">Antilles - Guyanne</label>
+								</div>
+								<div>
+									<input type="checkbox" id="Sujet_R">
+									<label for="Sujet_R">La réunion</label>
+								</div>
+								<div>
+									<input type="checkbox" id="Sujet_M">
+									<label for="Sujet_M">Métropole</label>
+								</div>
+								<div>
+									<input type="checkbox" id="Sujet_P">
+									<label for="Sujet_P">Polynesie</label>
+								</div>
+								<div>
+									<input type="checkbox" id="Sujet_NC">
+									<label for="Sujet_NC">Nouvelle-Calédonie</label>
+								</div>
+								<div>
+									<input type="checkbox" id="Sujet_G">
+									<label for="Sujet_G">Grèce</label>
+								</div>
+								<div>
+									<input type="checkbox" id="Sujet_A">
+									<label for="Sujet_A">Asie</label>
+								</div>
+								<div>
+									<input type="checkbox" id="Sujet_BB">
+									<label for="Sujet_BB">Brevet Blanc</label>
+								</div>
+								<div>
+									<input type="checkbox" id="Sujet_AU">
+									<label for="Sujet_AU">Autre</label>
+								</div>
+							</div>
+							<div>
+								<span>Année</span>
+								<input id="Sujet_Year" type="number" value="2023" min="1900">
+							</div>
+							<div>
+								<span>Période</span>
+								<select id="Sujet_Periode">
+									<option value="normal">Normale</option>
+									<option value="rattrapage">Rattrapage</option>
+								</select>
+							</div>
+						</div>
+						<span>EXERCICE</span>
+						<div style="padding-left: 10px;">
+							<div>
+								<span>Numéro</span>
+								<input id="Exercice_Number" type="number" min="1" value="1" max="10">
+							</div>
+							<div>
+								<span>Points</span>
+								<input id="Exercice_Points" type="number" min="1" value="15" max="100">
+							</div>
+							<div>
+								<span>Difficultés</span>
+								<select id="Exercice_Difficulty" selectedIndex="2">
+									<option value="opt1">Très facile</option>
+									<option value="opt2">Facile</option>
+									<option value="opt3">Moyen</option>
+									<option value="opt4">Difficile</option>
+									<option value="opt5">Très Difficile</option>
+								</select>
+							</div>
+							<div>
+								<span>Tags</span>
+								<div style="width: 200px;" class="autocomplete">
+									<input id="Tags_input" type="text" placeholder="Tag">
+								</div>
+								<div id="Tags_List" class="taglist">
+								</div>
+							</div>
+						</div>
+						<div class="buttons">
+							<button onclick="Previous()">Sauvegarder et précédent</button>
+							<button onclick="Save()">Sauvegarder</button>
+							<button onclick="Next()">Sauvegarder et suivant</button>
+							<button onclick="Clear()">❌</button>
+						</div>
+						<div style="height: 30px;"></div>
+						<button style="width: 100%;" onclick="ExportSave()">Exporter</button>
+					</div>
+				</div>
+			</div>
+			<div class="bottom_menu">
+			</div>
+			
+		</div>
+	</body>
+	<script>
+		Load_Data();
+
+		var zoom = 100
+
+		function zoomin(){
+			let a = document.getElementById("preview");
+			zoom *= 1.2;
+			a.style.setProperty("width", Math.trunc(zoom).toString() + "%") ;
+		}
+		function zoomout(){
+			let a = document.getElementById("preview");
+			zoom /= 1.2;
+			a.style.setProperty("width", Math.trunc(zoom).toString() + "%") ;
+		}
+
+		autocomplete(document.getElementById("Tags_input"),  Object.keys(Tags));
+	</script>
+</html>

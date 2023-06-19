@@ -1,34 +1,34 @@
 :root {
-	--NavBarWidth: 350px;
-  --HeaderBarHeight: 60px;
-  --PanelBack: #1f1f23;
-  --PanelBackActive: #232327;
-  --PanelBackHover: #26262C;
-  --PanelBackHoverMenu: #36363C;
-  --PanelBackText: #DEDEE3;
-  --PanelBackTextDisabled: #7C7C7F;
-  --HeaderBack: #18181b;
-  --HeadMenuButton: #F9F9FF10;
-  --HeadMenuButtonHover: #F9F9FF1D;
-  --HeadMenuButtonActive: #F9F9FF05;
-	--OnWhiteTexte: #101010;
-  --HoverWhiter: #FFFFFF88; 
+	--NavBarWidth: 280px;
+	--HeaderBarHeight: 60px;
+	--PanelBack: #1f1f23;
+	--PanelBackActive: #232327;
+	--PanelBackHover: #26262C;
+	--PanelBackHoverMenu: #36363C;
+	--PanelBackText: #DEDEE3;
+	--PanelBackTextDisabled: #7C7C7F;
+	--HeaderBack: #18181b;
+	--HeadMenuButton: #F9F9FF10;
+	--HeadMenuButtonHover: #F9F9FF1D;
+	--HeadMenuButtonActive: #F9F9FF05;
+		--OnWhiteTexte: #101010;
+	--HoverWhiter: #FFFFFF88; 
 
-  --RedPanel: #7F3F4B;
-  --RedPanelActive: #4C262D;
-  --RedPanelHover: #CF6679;
+	--RedPanel: #7F3F4B;
+	--RedPanelActive: #4C262D;
+	--RedPanelHover: #CF6679;
 
-  --PurplePanel: #5E447F;
-  --PurplePanelActive: #38294C;
-  --PurplePanelHover: #BB86FC;
+	--PurplePanel: #5E447F;
+	--PurplePanelActive: #38294C;
+	--PurplePanelHover: #BB86FC;
 
-  --BluePanel: #037F73;
-  --BluePanelActive: #024C43;
-  --BluePanelHover: #06DAC6;
+	--BluePanel: #037F73;
+	--BluePanelActive: #024C43;
+	--BluePanelHover: #06DAC6;
 
-  --TexteFont: "Inter", "Roobert", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --scrollbarBG: transparent;
-  --thumbBG: #7C7C7F;
+	--TexteFont: "Inter", "Roobert", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--scrollbarBG: transparent;
+	--thumbBG: #7C7C7F;
 }
 
 .titrepagecollege span::before{

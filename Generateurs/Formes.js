@@ -343,9 +343,20 @@ function RemovePoint(name)
 function menu_changed()
 {
 	document.getElementById("param_repere").classList.add("hiddenparam")
+	document.getElementById("param_axe").classList.add("hiddenparam")
+	document.getElementById("object_repere").classList.add("hiddenparam")
+	document.getElementById("object_axe").classList.add("hiddenparam")
 	let type = document.getElementById("gen_type").selectedIndex;
 	if (type == 0)
+	{
 		document.getElementById("param_repere").classList.remove("hiddenparam")
+		document.getElementById("object_repere").classList.remove("hiddenparam")
+	}
+	if (type == 1)
+	{
+		document.getElementById("param_axe").classList.remove("hiddenparam")
+		document.getElementById("object_axe").classList.remove("hiddenparam")
+	}
 	Regenerate()
 }
 
@@ -362,6 +373,8 @@ function Regenerate()
 	let type = document.getElementById("gen_type").selectedIndex;
 	if (type == 0)
 		RepereGradue();
+	if (type == 1)
+		AxeGradue();
 }
 
 function Draw_Objects(width, height, xs, xe, ys, ye)
@@ -924,6 +937,9 @@ function RepereGradue()
 	}
 }
 
+function AxeGradue(){
+
+}
 
 function draw_line(sx, sy, ex, ey)
 {

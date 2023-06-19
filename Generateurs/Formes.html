@@ -48,7 +48,8 @@
 		<div class="param">
 			<select id="gen_type" onchange="menu_changed()">
 				<option value="type1">Repère gradué</option>
-				<option value="type2">A VENIR</option>
+				<option value="type2">Axe gradué (En cours de création)</option>
+				<option value="type3">A VENIR</option>
 			</select>
 			<p style="text-align: center;">Paramètres</p>
 			<button class="regenerate" onclick="Regenerate()">Regénérer</button>
@@ -136,16 +137,18 @@
 							<input id="line_sec_grid_color" type="color" value="#505050" onchange="Regenerate()">
 						</div>
 					</div>
-					<div class="formemenu">
-						<span>Rendu final</span>
-						<div class="formemenu_div">	
-							<label>Largeur :</label>
-							<input id="gen_width" type="number" value="500" step="20" min="0" onchange="Regenerate()">
-							<label>Hauteur :</label>
-							<input id="gen_height" type="number" value="500" step="20" min="0" onchange="Regenerate()">
-							<label>Marge suplémentaire :</label>
-							<input id="gen_margin" type="number" value="5" step="1" min="0" onchange="Regenerate()">
-						</div>
+				</div>
+				<div style="width: 100%;" id="param_axe" class="hiddenparam">
+				</div>
+				<div class="formemenu">
+					<span>Rendu final</span>
+					<div class="formemenu_div">	
+						<label>Largeur :</label>
+						<input id="gen_width" type="number" value="500" step="20" min="0" onchange="Regenerate()">
+						<label>Hauteur :</label>
+						<input id="gen_height" type="number" value="500" step="20" min="0" onchange="Regenerate()">
+						<label>Marge suplémentaire :</label>
+						<input id="gen_margin" type="number" value="5" step="1" min="0" onchange="Regenerate()">
 					</div>
 				</div>
 			</div>
@@ -153,8 +156,13 @@
 
 		<div class="objectliste">
 			<p style="text-align: center;">Objects</p>
-			<button onclick="Add_courbe()" class="newobject">Ajouter une courbe</button>
-			<button onclick="Add_point()" class="newobject">Ajouter un point</button>
+			<div id="object_repere">
+				<button onclick="Add_courbe()" class="newobjecthalf">Ajouter une courbe</button>
+				<button onclick="Add_point()" class="newobjecthalf">Ajouter un point</button>
+			</div>
+			<div id="object_axe" class="hiddenparam">
+				<button onclick="Add_point()" class="newobjectfull">Ajouter un point</button>
+			</div>
 			<div id="object_list" class="panel rightpanel">
 			</div>
 		</div>

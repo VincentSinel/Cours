@@ -1,7 +1,7 @@
 console.clear();
 var Resultats = {};
 var tagsclick = false;
-
+var new_count = 0;
 
 
 function Rechercher(texte)
@@ -165,6 +165,10 @@ function SelectExercice(elmt){
     let se = elmt.getAttribute("selected") == "true";
     if (ListExercices[id].Selected)
     {
+		new_count -= 1;
+		document.getElementById('nbrnotifier').innerHTML = new_count;
+		if (new_count == 0)
+			document.getElementById('nbrnotifier').classList.add	('nbrnotifier_hide');
         ListExercices[id].Selected = false;
         if (se)
         {
@@ -178,6 +182,9 @@ function SelectExercice(elmt){
     }
     else
     {
+		new_count += 1;
+		document.getElementById('nbrnotifier').classList.remove('nbrnotifier_hide');
+		document.getElementById('nbrnotifier').innerHTML = new_count;
         ListExercices[id].Selected = true;
         if (!se)
         {

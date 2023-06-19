@@ -84,11 +84,18 @@ body{
 	padding-left: 0px;
 }
 
-.newobject{
+.newobjectfull{
 	font-weight: bold;
 	text-align: center;
-	width: 49%;
 	display: inline-block;
+	width: 100%;
+}
+
+.newobjecthalf{
+	font-weight: bold;
+	text-align: center;
+	display: inline-block;
+	width: 49%;
 }
 
 
@@ -165,6 +172,7 @@ body{
 
 .hiddenparam{
 	visibility: collapse;
+	height: 0px;
 }
 
 @media only screen and (max-width:1220px) {

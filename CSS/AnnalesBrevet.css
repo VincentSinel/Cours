@@ -94,23 +94,6 @@ body{
     gap: 10px;
 }
 
-
-.switch {
-    cursor: pointer; 
-    width: var(--ButtonWidth);
-    height: 36px;
-}
-.switch div {
-    margin-top: -21px;
-}
-
-.switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-    
-}
-
 .slider {
     display: inline-block;
     transition-duration: 0.4s;
@@ -210,6 +193,10 @@ input:active + .slider {
 .exercice_img{
     object-fit: contain;
     max-width: 100%;
+	width: 800px;
+	text-align: center;
+	margin: auto;
+	display: block;
 }
 
 .Result:hover{
@@ -274,7 +261,7 @@ input:active + .slider {
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 10px;
-    border: solid var(--PanelBackTextDisabled);
+    border: solid var(--PanelBackHoverMenu);
     gap: 5px;
     border-radius: 0px;
     display: flex;
@@ -297,19 +284,6 @@ input:active + .slider {
     border: 3px solid var(--scrollbarBG);
 }
 
-.HideListe
-{
-    flex: 1;
-    visibility: collapse;
-    margin: 0px -26px 0px 0px;
-    opacity: 0;
-}
-
-.VisibleListe
-{
-    flex: 100;
-    margin: 0px;
-}
 
 .ResultPart 
 {
@@ -357,4 +331,75 @@ input:active + .slider {
 {
     background: #2196F3FF;
     transition-duration: 0.1s;
+}
+
+.nbrnotifier{
+	position: relative;
+	border-radius: 50%;
+	border: #e53935 solid 2px;
+	width: fit-content;
+	padding: 2px;
+	background: var(--RedPanel);
+	color: white;
+	left: 75px;
+	top: 3px;
+	opacity: 100%;
+    transition-duration: 0.2s;
+	min-width: 18px;
+}
+
+.nbrnotifier_hide{
+	opacity: 0%;
+}
+
+.HideListe
+{
+    flex: 1;
+    visibility: visible;
+    opacity: 100%;
+}
+
+.VisibleListe
+{
+    flex: 1;
+}
+
+.switch {
+	display: none;
+    cursor: pointer; 
+    width: var(--ButtonWidth);
+    height: 36px;
+}
+.switch div {
+    margin-top: -21px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+    
+}
+
+@media only screen and (max-width:1300px) {
+	.HideListe
+	{
+		flex: 1;
+		visibility: collapse;
+		margin: 0px -26px 0px 0px;
+		opacity: 0;
+	}
+	
+	.VisibleListe
+	{
+		flex: 100;
+		margin: 0px;
+	}
+
+	.switch {
+		display:block;
+		cursor: pointer; 
+		width: var(--ButtonWidth);
+		height: 36px;
+	} 
 }

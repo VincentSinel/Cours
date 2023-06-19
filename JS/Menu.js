@@ -22,6 +22,6 @@ function Outils()
 function Annales_brevets()
 {
 	//window.open("Annales Brevet.html");
-	window.location = "/annales_brevet.html";
-	window.location.href = "/annales_brevet.html";
+	window.location = "/Brevet/Annales Brevet.html";
+	window.location.href = "/Brevet/Annales Brevet.html";
 }
