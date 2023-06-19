@@ -124,7 +124,7 @@ header {
   background-color: var(--HeadMenuButtonActive);
 }
 .blockmenuprincipal span:before{
-  content: "Menu principal";
+  content: "🚧 Menu principal";
 }
 .blockmenucours span:before{
   content: "Cours";
@@ -133,7 +133,7 @@ header {
 	content: "Outils";
 }
 .blockmenuannales span:before{
-  content: "Annales du brevet";
+  content: "🚧 Annales du brevet";
 }
 .blockmenu span {
   cursor: pointer;
