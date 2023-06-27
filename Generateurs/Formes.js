@@ -88,7 +88,7 @@ function Add_courbe()
 	content.appendChild(label)
 	
 	label = document.createElement("label");
-	label.innerText = "]"
+	label.innerText = "["
 	content.appendChild(label)
 	input = document.createElement("input");
 	input.classList.add("input_coord");
@@ -110,7 +110,7 @@ function Add_courbe()
 	input.onchange = function(){ Regenerate() };
 	content.appendChild(input)
 	label = document.createElement("label");
-	label.innerText = "["
+	label.innerText = "]"
 	content.appendChild(label)
 
 	label = document.createElement("button");
@@ -164,7 +164,6 @@ function Add_point()
 	input.id = "poi" + id + "_px";
 	input.type = "number";
 	input.value = "0";
-	input.step = "0.1";
 	input.onchange = function(){ Regenerate() };
 	content.appendChild(input)
 	label = document.createElement("label");
@@ -175,7 +174,6 @@ function Add_point()
 	input.id = "poi" + id + "_py";
 	input.type = "number";
 	input.value = "0";
-	input.step = "0.1";
 	input.onchange = function(){ Regenerate() };
 	content.appendChild(input)
 	label = document.createElement("label");
@@ -198,6 +196,9 @@ function Add_point()
 	label.innerText = "Position du texte (pixel relatif) :"
 	content.appendChild(label)
 	label = document.createElement("br");
+	content.appendChild(label)
+	label = document.createElement("label");
+	label.innerText = "("
 	content.appendChild(label)
 	input = document.createElement("input");
 	input.classList.add("input_coord");
@@ -322,6 +323,229 @@ function Add_point()
 	Regenerate();
 }
 
+function Add_polygone()
+{
+	let ids = []
+	objects.forEach(obj =>{
+		if(obj.type == "polygone")
+			ids.push(obj.id);
+	})
+	let id = 1;
+	while(ids.indexOf(id) >= 0)
+		id += 1;
+	objects.push(
+		{
+			type: "polygone",
+			id: id,
+			hover: false
+		}
+	)
+
+	var menu = document.createElement("div");
+	menu.id = "pol" + id;
+	menu.classList.add("formemenu");
+	var titre = document.createElement("span");
+	titre.innerText = "Polygone " + id;
+	titre.onclick = function(){menu_click(menu)};
+	menu.appendChild(titre);
+	var content = document.createElement("div");
+	content.classList.add("formemenu_div");
+	var label = document.createElement("label");
+	label.innerText = "Points :"
+	content.appendChild(label)
+	label = document.createElement("br");
+	content.appendChild(label)
+
+	var points = document.createElement("div");
+	points.id = "pol" + id + "points_list";
+	points.classList.add("coord_poly");
+	for (let i = 0; i < 3; i++) {
+		var name = "pol"+ id + "_poi" + i;
+		var onepoint = document.createElement("div")
+		onepoint.id = name;
+		label = document.createElement("label");
+		label.innerText = "Point " + i + " :"
+		label.classList.add("first_child")
+		onepoint.appendChild(label)
+		label = document.createElement("label");
+		label.innerText = "("
+		onepoint.appendChild(label)
+
+		input = document.createElement("input");
+		input.classList.add("input_coord_poly");
+		input.id = name + "_px";
+		input.type = "number";
+		input.value = "0";
+		input.onchange = function(){ Regenerate() };
+		onepoint.appendChild(input)
+
+		label = document.createElement("label");
+		label.innerText = ";"
+		onepoint.appendChild(label)
+
+		input = document.createElement("input");
+		input.classList.add("input_coord_poly");
+		input.id = name + "_py";
+		input.type = "number";
+		input.value = "0";
+		input.onchange = function(){ Regenerate() };
+		onepoint.appendChild(input)
+
+		label = document.createElement("label");
+		label.innerText = ")"
+		onepoint.appendChild(label)
+
+		label = document.createElement("button");
+		label.onclick = function(){ Remove_Point_Polygone(id, i) };
+		label.innerText = "❌"
+		label.classList.add("coord_poly_delete")
+		onepoint.appendChild(label)
+
+		points.appendChild(onepoint)
+	}
+	content.appendChild(points)
+
+	label = document.createElement("button");
+	label.onclick = function(){ Add_Point_Polygone(id) };
+	label.innerText = "Ajouter un point"
+	content.appendChild(label)
+		
+	label = document.createElement("label");
+	label.innerText = "Epaisseur :"
+	content.appendChild(label)
+
+	input = document.createElement("input");
+	input.id = "pol" + id + "_stroke";
+	input.type = "number";
+	input.value = "2";
+	input.step = "1";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+		
+	label = document.createElement("label");
+	label.innerText = "Couleur :"
+	content.appendChild(label)
+
+	input = document.createElement("input");
+	input.id = "pol" + id + "_stroke_color";
+	input.type = "color";
+	input.value = "#FF0000";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+
+	label = document.createElement("label");
+	label.innerText = "Style de trait :"
+	content.appendChild(label)
+	
+	input = document.createElement("input");
+	input.id = "pol" + id + "_style";
+	input.type = "text";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+
+	input = document.createElement("input");
+	input.id = "pol" + id + "_fill";
+	input.type = "checkbox";
+	input.style.width = "auto";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+
+	label = document.createElement("label");
+	label.innerText = "Remplir la forme"
+	label.setAttribute("for", "pol" + id + "_fill")
+	label.style.width = "auto";
+	content.appendChild(label)
+	label = document.createElement("br");
+	content.appendChild(label)
+		
+	label = document.createElement("label");
+	label.innerText = "Couleur de remplissage :"
+	content.appendChild(label)
+
+	input = document.createElement("input");
+	input.id = "pol" + id + "_fill_color";
+	input.type = "color";
+	input.value = "#FFFFFF";
+	input.onchange = function(){ Regenerate() };
+	content.appendChild(input)
+
+	label = document.createElement("button");
+	label.onclick = function(){ RemovePolygone('pol' + id) };
+	label.innerText = "Supprimer"
+	label.classList.add("delete")
+	content.appendChild(label)
+
+	menu.appendChild(content);
+
+	document.getElementById("object_list").appendChild(menu);
+
+	Regenerate();
+}
+
+function Add_Point_Polygone(polygone_id)
+{
+	var points = document.getElementById("pol" + polygone_id + "points_list");
+	
+	let ids = []
+	let list = points.getElementsByTagName("div")
+	for (var i = 0; i < list.length; i++) {
+		ids.push(list[i].id);
+	}
+	let id = 1;
+	while(ids.indexOf("pol"+ polygone_id + "_poi" + id) >= 0)
+		id += 1;
+
+	var name = "pol"+ polygone_id + "_poi" + id;
+	var onepoint = document.createElement("div")
+	onepoint.id = name;
+	label = document.createElement("label");
+	label.innerText = "Point " + id + " :"
+	label.classList.add("first_child")
+	onepoint.appendChild(label)
+	label = document.createElement("label");
+	label.innerText = "("
+	onepoint.appendChild(label)
+
+	input = document.createElement("input");
+	input.classList.add("input_coord_poly");
+	input.id = name + "_px";
+	input.type = "number";
+	input.value = "0";
+	input.onchange = function(){ Regenerate() };
+	onepoint.appendChild(input)
+
+	label = document.createElement("label");
+	label.innerText = ";"
+	onepoint.appendChild(label)
+
+	input = document.createElement("input");
+	input.classList.add("input_coord_poly");
+	input.id = name + "_py";
+	input.type = "number";
+	input.value = "0";
+	input.onchange = function(){ Regenerate() };
+	onepoint.appendChild(input)
+
+	label = document.createElement("label");
+	label.innerText = ")"
+	onepoint.appendChild(label)
+
+	label = document.createElement("button");
+	label.onclick = function(){ Remove_Point_Polygone(polygone_id, id) };
+	label.innerText = "❌"
+	label.classList.add("coord_poly_delete")
+	onepoint.appendChild(label)
+
+	points.appendChild(onepoint)
+}
+
+function Remove_Point_Polygone(polygone_id, point_id)
+{
+	let element = document.getElementById("pol"+ polygone_id + "_poi" + point_id);
+	element.parentNode.removeChild(element);
+	Regenerate();
+}
+
 function RemoveCourbe(name)
 {
 	let element = document.getElementById(name);
@@ -340,12 +564,23 @@ function RemovePoint(name)
 	Regenerate();
 }
 
+function RemovePolygone(name)
+{
+	let element = document.getElementById(name);
+	element.parentNode.removeChild(element);
+	let id = parseInt(name.substring(3));
+	objects.splice(objects.findIndex(element => element.id == id && element.type == "polygone"), 1);
+	Regenerate();
+}
+
 function menu_changed()
 {
 	document.getElementById("param_repere").classList.add("hiddenparam")
 	document.getElementById("param_axe").classList.add("hiddenparam")
+	document.getElementById("param_quadrillage").classList.add("hiddenparam")
 	document.getElementById("object_repere").classList.add("hiddenparam")
 	document.getElementById("object_axe").classList.add("hiddenparam")
+	document.getElementById("object_quadrillage").classList.add("hiddenparam")
 	let type = document.getElementById("gen_type").selectedIndex;
 	if (type == 0)
 	{
@@ -356,6 +591,11 @@ function menu_changed()
 	{
 		document.getElementById("param_axe").classList.remove("hiddenparam")
 		document.getElementById("object_axe").classList.remove("hiddenparam")
+	}
+	if (type == 2)
+	{
+		document.getElementById("param_quadrillage").classList.remove("hiddenparam")
+		document.getElementById("object_quadrillage").classList.remove("hiddenparam")
 	}
 	Regenerate()
 }
@@ -375,6 +615,8 @@ function Regenerate()
 		RepereGradue();
 	if (type == 1)
 		AxeGradue();
+	if (type == 2)
+		Quadrillage();
 }
 
 function Draw_Objects(width, height, xs, xe, ys, ye)
@@ -385,6 +627,8 @@ function Draw_Objects(width, height, xs, xe, ys, ye)
 				Courbe(obj, width, height, xs, xe, ys, ye)
 			if (obj.type == "point")
 				Point(obj, width, height, xs, xe, ys, ye)
+			if (obj.type == "polygone")
+				Polygone(obj, width, height, xs, xe, ys, ye)
 		}
 		catch(e){
 			console.log(e)
@@ -599,6 +843,53 @@ function Point(obj, width, height, xs, xe, ys, ye)
 	}
 }
 
+function Polygone(obj, width, height, xs, xe, ys, ye)
+{
+	let points_div = document.getElementById("pol" + obj.id + "points_list");
+	let points = [];
+	let list = points_div.getElementsByTagName("div")
+	for (var i = 0; i < list.length; i++) {
+		console.log(list[i].id + "_x")
+		let x = document.getElementById(list[i].id + "_px").valueAsNumber
+		let y = document.getElementById(list[i].id + "_py").valueAsNumber
+		points.push({
+			x: Gen_Margin + 5 + (x - xs)/(xe - xs) * width, 
+			y: Canvas_height - (Gen_Margin + 5 + (y - ys)/(ye - ys) * height)});
+	}
+
+	let stroke = document.getElementById("pol" + obj.id + "_stroke").valueAsNumber
+	let strokecolor = document.getElementById("pol" + obj.id + "_stroke_color").value
+	let dashstyle = document.getElementById("pol" + obj.id + "_style").value
+	let fill = document.getElementById("pol" + obj.id + "_fill").checked
+	let fill_color = document.getElementById("pol" + obj.id + "_fill_color").value
+	
+	let polygone = draw_polygone(points, true);
+	if (fill)
+	{
+		polygone.attr(
+			{
+				stroke: strokecolor,
+				"stroke-width": stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": dashstyle,
+				"fill": fill_color
+			}
+		)
+	}
+	else
+	{
+		polygone.attr(
+			{
+				stroke: strokecolor,
+				"stroke-width": stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": dashstyle
+			}
+		)
+	}
+}
 
 function RepereGradue()
 {
@@ -937,7 +1228,105 @@ function RepereGradue()
 	}
 }
 
-function AxeGradue(){
+function AxeGradue()
+{
+
+}
+
+function Quadrillage()
+{
+	let c_hor_nbr = document.getElementById("c_hor_nbr").valueAsNumber;
+	let c_ver_nbr = document.getElementById("c_ver_nbr").valueAsNumber;
+	let c_size_x = document.getElementById("c_size_x").valueAsNumber;
+	let c_size_y = document.getElementById("c_size_y").valueAsNumber;
+	let q_line_color = document.getElementById("q_line_color").value;
+	let q_line_stroke = document.getElementById("q_line_stroke").valueAsNumber;
+
+	let q_int = document.getElementById("q_int").checked;
+	let c_int_hor_nbr = document.getElementById("c_int_hor_nbr").valueAsNumber;
+	let c_int_ver_nbr = document.getElementById("c_int_ver_nbr").valueAsNumber;
+	let q_int_line_color = document.getElementById("q_int_line_color").value;
+	let q_int_line_stroke = document.getElementById("q_int_line_stroke").valueAsNumber;
+
+	Canvas_width = c_hor_nbr * c_size_x + Gen_Margin*2 + 10; 
+	Canvas_height = c_ver_nbr * c_size_y + Gen_Margin*2 + 10;
+	document.getElementById("gen_width").value = Canvas_width;
+	document.getElementById("gen_height").value = Canvas_height;
+
+	paper.setSize(Canvas_width, Canvas_height);
+	paper.clear();
+	
+	if(q_int)
+	{
+		var x_s = c_size_x * 1.0 / c_int_hor_nbr;
+		var y_s = c_size_y * 1.0 / c_int_ver_nbr;
+		console.log(x_s)
+		console.log(y_s)
+		for (let x = 0; x < c_hor_nbr; x++) 
+		{
+			for (let y = 0; y < c_ver_nbr; y++) 
+			{
+				for (let i = 1; i < c_int_hor_nbr; i++) {
+
+					element = draw_line(
+						Gen_Margin + 5 + x * c_size_x + i * x_s, Gen_Margin + 5 + y * c_size_y, 
+						Gen_Margin + 5 + x * c_size_x + i * x_s, Gen_Margin + 5 + (y+1) * c_size_y);
+					element.attr(
+						{
+							stroke: q_int_line_color,
+							"stroke-width": q_int_line_stroke,
+							"stroke-linecap": "round",
+							"stroke-linejoin": "round"
+						})
+				}
+
+				for (let j = 1; j < c_int_ver_nbr; j++) {
+					element = draw_line(
+						Gen_Margin + 5 + x * c_size_x, Gen_Margin + 5 + y * c_size_y + j * y_s, 
+						Gen_Margin + 5 + (x+1) * c_size_x, Gen_Margin + 5 + y * c_size_y + j * y_s);
+					element.attr(
+						{
+							stroke: q_int_line_color,
+							"stroke-width": q_int_line_stroke,
+							"stroke-linecap": "round",
+							"stroke-linejoin": "round"
+						})
+				}
+			}
+		}
+	}
+
+	for (let i = 0; i <= c_hor_nbr; i++) 
+	{
+		element = draw_line(
+			Gen_Margin + 5 + i * c_size_x, Gen_Margin + 5, 
+			Gen_Margin + 5 + i * c_size_x, Canvas_height - Gen_Margin - 5);
+		element.attr(
+			{
+				stroke: q_line_color,
+				"stroke-width": q_line_stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round"
+			}
+		)
+	}
+	for (let i = 0; i <= c_ver_nbr; i++) 
+	{
+		element = draw_line(
+			Gen_Margin + 5, Gen_Margin + 5 + i * c_size_y, 
+			Canvas_width - Gen_Margin - 5, Gen_Margin + 5 + i * c_size_y);
+		element.attr(
+			{
+				stroke: q_line_color,
+				"stroke-width": q_line_stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round"
+			}
+		)
+	}
+	
+	Draw_Objects(c_hor_nbr * c_size_x, c_ver_nbr * c_size_y, 
+		0, c_hor_nbr, c_ver_nbr, 0);
 
 }
 

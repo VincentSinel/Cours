@@ -34,111 +34,40 @@
 
 <body onload="CreateAnimationObject()">
 
-  <table id="TitleTable">
-    <tr>
-      <td id="ChapitreNumero">
-        Chapitre 1
-      </td>
-      <td id="ChapitreNom">
-        - Fractions irréductibles
-      </td>
-    </tr>
-  </table>
+	<table id="TitleTable">
+		<tr>
+		<td id="ChapitreNumero">
+			Chapitre 1
+		</td>
+		<td id="ChapitreNom">
+			- Fractions irréductibles
+		</td>
+		</tr>
+	</table>
 
-  <p class="exemple">
-    Activité Introduction
-  </p>
+	<p class="exemple">
+		Activité Introduction
+	</p>
 
-  <p> 
-    Retrouver les nombres premiers à partir du crible d'Erathostène ci-dessous :
-  </p>
-  <ul>
-    <li>1 est mis à part car il divise tout les nombres</li>
-    <li>On garde le nombre suivant donc 2. Tout les multiples de 2 sont ensuite enlevés.</li>
-    <li>On garde le nombre suivant donc 3. Tout les multiples de 3 sont ensuite enlevés.</li>
-    <li>On garde le nombre suivant donc 5. Tout les multiples de 5 sont ensuite enlevés.</li>
-    <li>Etc...</li>
-  </ul> 
-  <p> 
-    Les nombres restant sont ainsi des nombres premiers.
-  </p>
+	<p> 
+		Retrouver les nombres premiers à partir du crible d'Erathostène ci-dessous :
+	</p>
+	<ul>
+		<li>1 est mis à part car il divise tout les nombres</li>
+		<li>On garde le nombre suivant donc 2. Tout les multiples de 2 sont ensuite enlevés.</li>
+		<li>On garde le nombre suivant donc 3. Tout les multiples de 3 sont ensuite enlevés.</li>
+		<li>On garde le nombre suivant donc 5. Tout les multiples de 5 sont ensuite enlevés.</li>
+		<li>Etc...</li>
+	</ul> 
+	<p> 
+		Les nombres restant sont ainsi des nombres premiers.
+	</p>
 
-  <div id="Animation1" class="animation center" width="480" height="360"></div>
+	<div id="Animation1" class="animation center" width="480" height="360"></div>
 
   
 
-  <h1>Définitions :</h1>
-      <h2>Division euclidienne :</h2>
-
-            <div class="definition">
-              La division euclidienne de $\textcolor{#43a047}{a}$ par $\textcolor{#039be5}{b}$ 
-              (avec $\textcolor{#039be5}{b}\ne0$ ), est la recherche de deux entiers 
-              $\textcolor{#ffb300}{q}$ et $\textcolor{#e53935}{r}$, tels que : 
-              $\textcolor{#43a047}{a}= \textcolor{#039be5}{b} \times \textcolor{#ffb300}{q} + \textcolor{#e53935}{r}$ 
-              avec $\textcolor{#e53935}{r} &lt; \textcolor{#039be5}{b}$
-            </div>
-
-            <p class="exemple">Exemple :</p>
-
-            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-              <div>
-                <table class="division">
-                  <tr>
-                    <td class="borderdivision">
-                      $\textcolor{#43a047}{128}$
-                    </td>
-                    <td style="border-bottom: 2px solid black;">
-                      $\textcolor{#039be5}{5}$</td>
-                  </tr>
-                  <tr>
-                    <td class="borderdivision">
-                      $↡$</td>
-                    <td>$\textcolor{#ffb300}{25}$</td>
-                  </tr>
-                  <tr>
-                    <td class="borderdivision">
-                      $\textcolor{#e53935}{3}$</td>
-                  </tr>
-                </table>
-              </div>
-              <div style="flex: 3;">
-                <table class="centertext">
-                  <tr>
-                    <td>$\textcolor{#43a047}{128}$</td>
-                    <td>$=$</td>
-                    <td>$\textcolor{#039be5}{5}$</td>
-                    <td>$\times$</td>
-                    <td>$\textcolor{#ffb300}{25}$</td>
-                    <td>$+$</td>
-                    <td>$\textcolor{#e53935}{3}$</td>
-                  </tr>
-                  <tr>
-                    <td>🠕</td>
-                    <td></td>
-                    <td>🠕</td>
-                    <td></td>
-                    <td>🠕</td>
-                    <td></td>
-                    <td>🠕</td>
-                  </tr>
-                  <tr>
-                    <td style="color: #43a047">Dividende</td>
-                    <td></td>
-                    <td style="color: #039be5">Diviseur</td>
-                    <td></td>
-                    <td style="color: #ffb300">Quotient</td>
-                    <td></td>
-                    <td style="color: #e53935">Reste</td>
-                  </tr>
-                  <tr>
-                    <td colspan="7" style="padding-top: 20px;">
-                      Avec $\textcolor{#e53935}{Reste} &lt; \textcolor{#039be5}{Diviseur}$
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-
+  	<h1>Nombres premiers :</h1>
       <h2>Multiples et diviseurs :</h2>
 
             <div class="definition">
@@ -185,49 +114,77 @@
               </div>
 
 
-  <h1>Critères de divisibilités :</h1>
-      <h2>Divisibilité par 2</h2>
-            <div class="definition">
-              Un nombre est divisible par 2 si son chiffre des unités est 0 ; 2 ; 4 ; 6 ou 8.
-            </div>
-            <p class="exemple">Exemple :</p>
-            <p>
-              2018 est divisible par 2 ; 2017 ne l’est pas.<br>
-            </p>
-      <h2>Divisibilité par 3</h2>
-            <div class="definition">
-              Un nombre est divisible par 3 si la somme de ses chiffre est divisible par 3.
-            </div>
-            <p class="exemple">Exemple :</p>
-            <p>
-              12 est divisible par trois, en effet $1+2 = 3$ qui est divisible par 3.<br>
-              12261 est divisible par trois car, $1+2+2+6+1 = 12 = 3\times4$ qui est divisible par 3.
-            </p>
-      <h2>Divisibilité par 5</h2>
-            <div class="definition">
-              Un nombre est divisible par 5 si son chiffre des unités est 0 ou 5.
-            </div>
-            <p class="exemple">Exemple :</p>
-            <p>
-              155 est divisible par 5 ; 17304 ne l’est pas.<br>
-            </p>
-      <h2>Divisibilité par 9</h2>
-            <div class="definition">
-              Un nombre est divisible par 9 si la somme de ses chiffre est divisible par 9.
-            </div>
-            <p class="exemple">Exemple :</p>
-            <p>
-              126 est divisible par 9, en effet $1+2+6 = 9$ qui est divisible par 9.<br>
-              30243 n'est pas divisible par 9 car, $3+0+2+4+3 = 12$ qui n'est pas divisible par 9.
-            </p>
-      <h2>Divisibilité par 10</h2>
-            <div class="definition">
-              Un nombre est divisible par 10 si son chiffre des unités est 0.
-            </div>
-            <p class="exemple">Exemple :</p>
-            <p>
-              6570 est divisible par 10 ; 2127 ne l’est pas.<br>
-            </p>
+  	<h1>Décomposition en produit de facteurs premiers:</h1>
+		<h2>Décomposition :</h2>
+			<div class="definition">
+				Décomposer un nombres en <span class="CRed">produit de facteurs premiers</span>, 
+				c'est l'écrire sous forme d'une multiplication de nombres premiers.
+			</div>
+			<p class="exemple">Exemple :</p>
+			<p>
+				$360 = 36\times10 = 6\times6\times2\times5=2\times3\times2\times3\times2\times5$<br>
+				$360 = 2^3\times3^2\times5$
+			</p>
+			<p>
+				La décomposition en produit de facteurs premiers permet de trouver rapidement dans quel table se trouve un nombre.
+			</p>
+		<h2>Diviseurs commun :</h2>
+			<div class="definition">
+				Dire qu'un nombre enier <span class="CBlue">$d$</span> est un <span = class="CRed">diviseur commun</span> à deux nombres, entiers $a$ et $b$
+				signifie que $a$ et $b$ sont divisibles par $d$
+			</div>
+			<p class="exemple">Exemple :</p>
+			<p>
+				Les diviseurs commun de 12 et 18 sont : 1,2,3 et 6.<br>
+				6 est appelée plus grand diviseur commun de 12 et 18 (noté <b>PGCD</b>), tout les diviseurs de ce nombres sont les diviseurs commun de 12 et 18.
+			</p>
+			<p class="remarque">Remarque :</p>
+			<ul>
+				<li>1 est un diviseurs commun à tous les nombres.</li>
+				<li>Si le seul diviseur commun à deux nombres est 1, on dit que ces deux nombres sont <span class="CRed">premiers entre eux</span>.</li>
+			</ul>
+			<p>
+				Pour trouver le plus grand diviseurs de deux nombres, ont peut utiliser la décomposition en produit de facteurs premiers :
+			</p>
+			<p>
+				$360 = \textcolor{#e53935}{2}^\textcolor{#039be5}{3}\times\textcolor{#e53935}{3}^2\times5$<br>
+				$336 = \textcolor{#e53935}{2}^4\times\textcolor{#e53935}{3}\times7$<br><br>
+				On garde les facteurs commun avec la puissance la plus petite :<br>
+				$\textcolor{#e53935}{2}^\textcolor{#039be5}{3}\times\textcolor{#e53935}{3} = 24$<br>
+				24 est le plus grand diviseur commun de 360 et 336.
+			</p>
+
+	<h1>Fraction irréductible :</h1>
+		<h2>Définition :</h2>
+			<div class="definition">
+				Une fraction est dites <span class="CRed">irréductible</span> lorsque le numérateur et le dénomintauer sont premiers entre eux.
+			</div>
+			<p class="exemple">Exemple :</p>
+			<p>
+				<span class="frac">$\frac{15}{14}$</span> est une fraction irréductible car 15 et 14 sont premiers entre eux (cela ne veut pas dire que 14 ou 15 sont premiers !).
+			</p>
+		<h2>Simplification :</h2>
+			<p>
+				Rendre une fraction irréductible, c'est la simplifier autant que possible.<br>
+				Cela revient à trouver des diviseurs communs au numérateur et dénominateur et simplifier.<br>
+				Pour cela on utilise la décomposition en produit de facteur premiers.
+			</p>
+			<p class="exemple">Exemple :</p>
+			<p>
+				<span class="frac">
+					$\frac{120}{84} = \frac{2\times2\times2\times3\times5}{2\times2\times3\times7}$$= 
+					\frac{\textcolor{#e53935}{\cancel{2}}\times\textcolor{#e53935}{\cancel{2}}
+					\times2\times\textcolor{#e53935}{\cancel{3}}\times5}{\textcolor{#e53935}{\cancel{2}}\times
+					\textcolor{#e53935}{\cancel{2}}\times\textcolor{#e53935}{\cancel{3}}\times7}$$=
+					\frac{2\times5}{7}$$=\frac{10}{7}$<br>
+					$\frac{10}{7}$
+				</span>
+				 est une fraction irréductible.
+			</p>
+			<p class="remarque">Remarque :</p>
+			<p>
+				Cela revient à diviser le numérateur et le dénominateur par leur plus grand diviseur commun. 
+			</p>
 
 </body>
 

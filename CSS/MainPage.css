@@ -135,6 +135,28 @@ header {
 .blockmenuannales span:before{
   content: "🚧 Annales du brevet";
 }
+.blockmenusecret{
+	margin-left: auto;
+	width: 48px;
+}
+.blockmenusecret span:before{
+	content: "🔑";
+}
+.secret_connect{
+	background-color: var(--PanelBack);
+	position: absolute;
+	top: calc(var(--HeaderBarHeight) + 5px);
+	padding: 5px;
+	border-radius: 5px;
+	width: 158px;
+	right: 5px;
+	z-index: 1;
+	box-shadow: 2px 2px 1px black;
+	display: none;
+}
+.secret_connect input{
+	width: 150px;
+}
 .blockmenu span {
   cursor: pointer;
   display: inline-block;

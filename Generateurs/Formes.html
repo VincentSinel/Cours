@@ -49,7 +49,8 @@
 			<select id="gen_type" onchange="menu_changed()">
 				<option value="type1">Repère gradué</option>
 				<option value="type2">Axe gradué (En cours de création)</option>
-				<option value="type3">A VENIR</option>
+				<option value="type3">Quadrillage</option>
+				<option value="type4">A VENIR</option>
 			</select>
 			<p style="text-align: center;">Paramètres</p>
 			<button class="regenerate" onclick="Regenerate()">Regénérer</button>
@@ -107,7 +108,7 @@
 							<label>Epaisseur:</label>
 							<input id="line_pry_stroke" type="number" value="3" step="1" min="1" onchange="Regenerate()">
 							<label>Couleur:</label>
-							<input id="line_pry_color" type="color" value="black" onchange="Regenerate()">
+							<input id="line_pry_color" type="color" value="#000000" onchange="Regenerate()">
 							<label>Taille des graduations:</label>
 							<input id="line_pry_pin_size" type="number" value="10" step="1" min="0" onchange="Regenerate()">
 							<label>Taille des flêches:</label>
@@ -126,7 +127,7 @@
 							<label>Epaisseur:</label>
 							<input id="line_sec_stroke" type="number" value="2" step="1" min="1" onchange="Regenerate()">
 							<label>Couleur:</label>
-							<input id="line_sec_color" type="color" value="black" onchange="Regenerate()">
+							<input id="line_sec_color" type="color" value="#000000" onchange="Regenerate()">
 							<label>Taille des graduations:</label>
 							<input id="line_sec_pin_size" type="number" value="5" step="1" min="0" onchange="Regenerate()">
 							<input id="line_sec_grid" type="checkbox" style="width: auto;" checked onchange="Regenerate()">
@@ -138,15 +139,48 @@
 						</div>
 					</div>
 				</div>
+				<div style="width: 100%;" id="param_quadrillage" class="hiddenparam">
+					<div class="formemenu show">
+						<span>Surface</span>
+						<div class="formemenu_div">
+							<label>Nombre de carreau horizontal :</label>
+							<input id="c_hor_nbr" type="number" value="10" step="1" min="1" onchange="Regenerate()">
+							<label>Nombre de carreau vertical :</label>
+							<input id="c_ver_nbr" type="number" value="5" step="1" min="1" onchange="Regenerate()">
+							<label>Taille des carreaux :</label>
+							<input id="c_size_x" type="number" value="40" step="5" min="0" onchange="Regenerate()">
+							<input id="c_size_y" type="number" value="40" step="5" min="0" onchange="Regenerate()">
+							<label>Epaisseur:</label>
+							<input id="q_line_stroke" type="number" value="2" step="1" min="1" onchange="Regenerate()">
+							<label>Couleur:</label>
+							<input id="q_line_color" type="color" value="#000000" onchange="Regenerate()">
+						</div>
+					</div>
+					<div class="formemenu show">
+						<span>Quadrillage interne</span>
+						<div class="formemenu_div">
+							<input id="q_int" type="checkbox" style="width: auto;" onchange="Regenerate()">
+							<label for="q_int" style="width: auto;">Activer le quadrillage interne</label><br>
+							<label>Nombre de carreau horizontal :</label>
+							<input id="c_int_hor_nbr" type="number" value="1" step="1" min="1" onchange="Regenerate()">
+							<label>Nombre de carreau vertical :</label>
+							<input id="c_int_ver_nbr" type="number" value="4" step="1" min="1" onchange="Regenerate()">
+							<label>Epaisseur:</label>
+							<input id="q_int_line_stroke" type="number" value="1" step="1" min="1" onchange="Regenerate()">
+							<label>Couleur:</label>
+							<input id="q_int_line_color" type="color" value="#75FFFF" onchange="Regenerate()">
+						</div>
+					</div>
+				</div>
 				<div style="width: 100%;" id="param_axe" class="hiddenparam">
 				</div>
 				<div class="formemenu">
 					<span>Rendu final</span>
 					<div class="formemenu_div">	
 						<label>Largeur :</label>
-						<input id="gen_width" type="number" value="500" step="20" min="0" onchange="Regenerate()">
+						<input id="gen_width" type="number" value="500" step="20" min="5" onchange="Regenerate()">
 						<label>Hauteur :</label>
-						<input id="gen_height" type="number" value="500" step="20" min="0" onchange="Regenerate()">
+						<input id="gen_height" type="number" value="500" step="20" min="5" onchange="Regenerate()">
 						<label>Marge suplémentaire :</label>
 						<input id="gen_margin" type="number" value="5" step="1" min="0" onchange="Regenerate()">
 					</div>
@@ -163,7 +197,42 @@
 			<div id="object_axe" class="hiddenparam">
 				<button onclick="Add_point()" class="newobjectfull">Ajouter un point</button>
 			</div>
+			<div id="object_quadrillage" class="hiddenparam">
+				<button onclick="Add_point()" class="newobjecthalf">Ajouter un point</button>
+				<button onclick="Add_polygone()" class="newobjecthalf">Ajouter un polygone</button>
+			</div>
 			<div id="object_list" class="panel rightpanel">
+				<!--
+					<div id="pol1" class="formemenu show">
+						<span>Polygone 1</span>
+						<div class="formemenu_div">
+							<label>Points :</label><br>
+							<div  class="coord_poly">
+								<div id="pol1_poi1">
+									<label class="first_child">Point 1</label>
+									<label>(</label>
+									<input class="input_coord_poly" id="pol1_poi1_px" type="number">
+									<label>;</label>
+									<input class="input_coord_poly" id="pol1_poi1_py" type="number">
+									<label>)</label>
+									<button class="coord_poly_delete" onclick="Remove_Point_Polygone(1,1)">❌</button>
+								</div>
+							</div>
+							<button onclick="Add_Point_Polygone(1)">Ajouter un point</button>
+							<label>Epaisseur :</label>
+							<input id="pol1_stroke" type="number" step="1" min="1">
+							<label>Couleur :</label>
+							<input id="pol1_stroke_color" type="color">
+							<label>Style de trait :</label>
+							<input id="pol1_style" type="text">
+							<input id="pol1_fill" type="checkbox" style="width: auto;" onchange="Regenerate()">
+							<label for="pol1_fill" style="width: auto;">Remplir la forme</label><br>
+							<label>Couleur de remplissage:</label>
+							<input id="pol1_fill_color" type="color" value="white">
+							<button class="delete">Supprimer</button>
+						</div>
+					</div>
+				-->
 			</div>
 		</div>
 

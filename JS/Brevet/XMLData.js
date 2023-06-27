@@ -12,7 +12,6 @@ var ListExercices
      };
      xmlhttp.open("GET", "/Brevet/BrevetData.xml" , true);
      xmlhttp.send();
-     
  }
  
  /**

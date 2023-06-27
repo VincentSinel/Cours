@@ -44,8 +44,12 @@
 		<div class="blockmenu blockmenucours" onclick="Cours()"><span></span></div>
 		<div class="blockmenu blockmenugenerateurs" onclick="Outils()"><span></span></div>
 		<div class="blockmenu blockmenuannales" onclick="Annales_brevets()"><span></span></div>
+		<div class="blockmenu blockmenusecret" onclick="ShowConnection()"><span></span></div>
       </div>
     </header>
+  </div>
+  <div id="secret" class="secret_connect">
+	  <input type="password" onfocusout="HideConnection()" onkeypress="CodeEnter(event)">
   </div>
   <div id="menu" class="aside">
     <div class="openmenu" onclick="toggleMenu()">
@@ -132,6 +136,16 @@
       lastselected.classList.add("selected")
       window.scrollTo(0, 0);
     }
+
+	function ShowConnection()
+	{
+		document.getElementById("secret").style.display = "block";
+		document.getElementById("secret").children[0].focus()
+	}
+	function HideConnection()
+	{
+		document.getElementById("secret").style.display = "none";
+	}
   </script>
   <script id="MathJax-script" async src="JS/Cours/Liste.js"></script>
 </body>

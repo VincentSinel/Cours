@@ -18,7 +18,7 @@
       </DataObject_Tags>
     </DataObject>
     <DataObject>
-      <DataObject_Infos Name="2020 - Antilles - Guyane" Correction="false" Path="2020\AG - Sep - Ex3.png" Year="2020" Sujet="5" Periode="0" Difficulty="2" Points="18" Index="3" />
+      <DataObject_Infos Name="2020 - Antilles - Guyane" Correction="false" Path="2020\AG - Sep - Ex3.png" Year="2020" Sujet="5" Periode="1" Difficulty="2" Points="18" Index="3" />
       <DataObject_Tags>
         <Tag Name="Géométrie" Pertinence="100" />
         <Tag Name="Arithmétique" Pertinence="30" />
@@ -32,7 +32,7 @@
       </DataObject_Tags>
     </DataObject>
     <DataObject>
-      <DataObject_Infos Name="2020 - Antilles - Guyane" Correction="false" Path="2020\AG - Sep - Ex5.png" Year="2020" Sujet="5" Periode="0" Difficulty="2" Points="18" Index="5" />
+      <DataObject_Infos Name="2020 - Antilles - Guyane" Correction="false" Path="2020\AG - Sep - Ex5.png" Year="2020" Sujet="5" Periode="1" Difficulty="2" Points="18" Index="5" />
       <DataObject_Tags>
         <Tag Name="Probabilités" Pertinence="100" />
         <Tag Name="Scratch" Pertinence="100" />
@@ -78,7 +78,7 @@
       </DataObject_Tags>
     </DataObject>
     <DataObject>
-      <DataObject_Infos Name="2020 - Antilles - Guyane" Correction="false" Path="2020\NC - Ex1.png" Year="2020" Sujet="5" Periode="1" Difficulty="2" Points="18" Index="11" />
+      <DataObject_Infos Name="2020 - Antilles - Guyane" Correction="false" Path="2020\NC - Ex1.png" Year="2020" Sujet="5" Periode="0" Difficulty="2" Points="18" Index="11" />
       <DataObject_Tags />
     </DataObject>
   </Exercices>

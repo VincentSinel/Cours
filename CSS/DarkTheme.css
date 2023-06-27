@@ -104,6 +104,38 @@ body{
 	display: inline-block;
 	padding: 0px;
 }
+.input_coord_poly{
+	width: 60px !important; 
+	display: inline-block;
+	padding: 0px;
+}
+.coord_poly_delete{
+	width: fit-content !important;
+	display: inline-block;
+}
+.coord_poly{
+	padding-left: 15px; 
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	border: solid var(--PanelBackTextDisabled) 1px;
+}
+.coord_poly div{
+	display: flex;
+	flex-direction: row;
+	gap: 0px;
+	align-items: center;
+	padding-left: 2px; 
+}
+.coord_poly div:nth-child(odd){
+	background-color: #FFFFFF30;
+}
+.coord_poly div *{
+	flex: none;
+}
+.first_child{
+	flex: auto !important;
+}
 
 .delete{
 	margin-top: 5px;
@@ -138,6 +170,9 @@ body{
 	padding-left: 20px; 
 	padding-right: 5px; 
 	padding-bottom: 10px;
+}
+.formemenu button{
+	text-align: center;
 }
 
 .show{
