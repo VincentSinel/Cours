@@ -22,7 +22,7 @@ var ListeCours = {
             id: 4,
             nom: "Fonctions (Généralités)",
             icone: 3,
-            ready : false,
+            ready : true,
         },
         {
             id: 5,
