@@ -17,6 +17,37 @@
   <title>Chapitre 3 - Puissances</title>
 
   <style>
+    .intro td{
+      padding: 0px 10px;
+    }
+    
+    .exempletab th,
+    .prefix {
+      text-align: center;
+    }
+    .intro tr:nth-child(odd),
+    .prefix tr:nth-child(odd){
+      background-color: aliceblue;
+    }
+    .exempletab tr:nth-child(1),
+    .prefix tr:nth-child(1){
+      background-color: lightgray;
+    }
+    .exempletab td,
+    .prefix th{
+      padding: 0px 5px;
+    }
+    .prefix tr th:not(:last-child),
+    .prefix tr td:not(:last-child) {
+      border-right: double black 5px;
+    }
+    .lightline{
+      color: gray;
+    }
+
+    .hide{
+      display: none;
+    }
   </style>
 
 </head>
@@ -38,7 +69,7 @@
     Activité Introduction
   </p>
 
-  <table>
+  <table class="intro">
     <tr>
       <td>Distance Terre - Lune</td>
       <td>Environ 380 000 km</td>
@@ -248,7 +279,7 @@
                 <li>$2,42\times10^{-3}$ est la notation scientifique de 0.00242</li>
               </ul>
             </p>
-            <table>
+            <table class="exempletab">
               <tr>
                 <th>Grandeur</th>
                 <th>Valeur</th>
@@ -274,7 +305,10 @@
             <p>La calculatrice donne les résultats en écriture scientifique lorsque ceux-ci sont trop grands ou trop petits.</p>
         <h2>Préfixe :</h2>
             <p>Les préfixes permettent de sous-entendre un facteur de taille vis-à-vis d'une unité.</p>
-            <table>
+            
+            <button id="prefix_button" style="margin-bottom: 5px;" onclick="ToggleTable()">Voir la table complète</button>
+            
+            <table id="prefix_simple" class="prefix">
               <tr>
                 <th>Puissance de 10 associés</th>
                 <th>Préfixe</th>
@@ -336,6 +370,118 @@
                 <td>n</td>
               </tr>
             </table>
+            <table id="prefix_complex" class="prefix hide">
+              <tr>
+                <th>Puissance de 10 associés</th>
+                <th>Préfixe</th>
+                <th>Symbole</th>
+              </tr>
+              <tr class="lightline">
+                <td>$10^{24}$</td>
+                <td>Yotta</td>
+                <td>Y</td>
+              </tr>
+              <tr class="lightline">
+                <td>$10^{21}$</td>
+                <td>Zetta</td>
+                <td>Z</td>
+              </tr>
+              <tr class="lightline">
+                <td>$10^{18}$</td>
+                <td>Exa</td>
+                <td>E</td>
+              </tr>
+              <tr class="lightline">
+                <td>$10^{15}$</td>
+                <td>Peta</td>
+                <td>P</td>
+              </tr>
+              <tr class="lightline">
+                <td>$10^{12}$</td>
+                <td>Tera</td>
+                <td>T</td>
+              </tr>
+              <tr>
+                <td>$10^9$</td>
+                <td>Giga</td>
+                <td>G</td>
+              </tr>
+              <tr>
+                <td>$10^6$</td>
+                <td>Méga</td>
+                <td>M</td>
+              </tr>
+              <tr>
+                <td>$10^3$</td>
+                <td>Kilo</td>
+                <td>k</td>
+              </tr>
+              <tr>
+                <td>$10^2$</td>
+                <td>Hecto</td>
+                <td>h</td>
+              </tr>
+              <tr>
+                <td>$10^1$</td>
+                <td>Déca</td>
+                <td>da</td>
+              </tr>
+              <tr>
+                <td>$10^0$</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>$10^{-1}$</td>
+                <td>Déci</td>
+                <td>d</td>
+              </tr>
+              <tr>
+                <td>$10^{-2}$</td>
+                <td>Centi</td>
+                <td>c</td>
+              </tr>
+              <tr>
+                <td>$10^{-3}$</td>
+                <td>Milli</td>
+                <td>m</td>
+              </tr>
+              <tr>
+                <td>$10^{-6}$</td>
+                <td>Micro</td>
+                <td>µ</td>
+              </tr>
+              <tr>
+                <td>$10^{-9}$</td>
+                <td>Nano</td>
+                <td>n</td>
+              </tr>
+              <tr class="lightline">
+                <td>$10^{-12}$</td>
+                <td>Pico</td>
+                <td>p</td>
+              </tr>
+              <tr class="lightline">
+                <td>$10^{-15}$</td>
+                <td>Femto</td>
+                <td>f</td>
+              </tr>
+              <tr class="lightline">
+                <td>$10^{-18}$</td>
+                <td>atto</td>
+                <td>a</td>
+              </tr>
+              <tr class="lightline">
+                <td>$10^{-21}$</td>
+                <td>zepto</td>
+                <td>z</td>
+              </tr>
+              <tr class="lightline">
+                <td>$10^{-24}$</td>
+                <td>yocto</td>
+                <td>y</td>
+              </tr>
+            </table>
             <p class="exemple">Exemple :</p>
             <p>
               <ul>
@@ -344,5 +490,23 @@
               </ul>
             </p>
 </body>
-
+<script>
+  var tablevisibility = false;
+  function ToggleTable(){
+    if (tablevisibility)
+    {
+      document.getElementById("prefix_complex").classList.add("hide");
+      document.getElementById("prefix_simple").classList.remove("hide");
+      document.getElementById("prefix_button").innerHTML = "Voir la liste complète"
+      tablevisibility = false;
+    }
+    else
+    {
+      document.getElementById("prefix_simple").classList.add("hide");
+      document.getElementById("prefix_complex").classList.remove("hide");
+      document.getElementById("prefix_button").innerHTML = "Voir la liste à apprendre"
+      tablevisibility = true;
+    }
+  }
+</script>
 </html>
