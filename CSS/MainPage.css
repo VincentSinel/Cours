@@ -1,9 +1,9 @@
 :root {
 	--NavBarWidth: 280px;
 	--HeaderBarHeight: 60px;
-	--PanelBack: #1f1f23;
-	--PanelBackActive: #232327;
-	--PanelBackHover: #26262C;
+	--PanelBack: #181818;
+	--PanelBackActive: #37373D;
+	--PanelBackHover: #2A2D2E;
 	--PanelBackHoverMenu: #36363C;
 	--PanelBackText: #DEDEE3;
 	--PanelBackTextDisabled: #7C7C7F;
@@ -306,7 +306,7 @@ nav::-webkit-scrollbar-thumb {
   padding: 10px 0px;
 }
 .selected{
-  background-color: var(--PanelBackHover);
+  background-color: var(--PanelBackActive);
 }
 /* FIN Navigation chapitres */
 
