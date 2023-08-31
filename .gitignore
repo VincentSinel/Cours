@@ -1,0 +1,5 @@
+# Ignore Good Sync folder :
+_gsdata_/
+
+# Ignore vscode folder :
+.vscode/
