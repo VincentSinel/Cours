@@ -16,7 +16,7 @@ var ListeCours = {
             id: 3,
             nom: "Puissances",
             icone: 1,
-            ready : false,
+            ready : true,
         },
         {
             id: 4,
