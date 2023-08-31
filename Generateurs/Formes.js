@@ -788,6 +788,7 @@ function menu_changed()
 
 function Regenerate()
 {
+
 	Canvas_width = document.getElementById("gen_width").valueAsNumber;
 	Canvas_height = document.getElementById("gen_height").valueAsNumber;
 	Gen_Margin = document.getElementById("gen_margin").valueAsNumber;
@@ -834,6 +835,19 @@ function Courbe(obj, width, height, xs, xe, ys, ye)
 	let start = document.getElementById("for" + obj.id + "_start").valueAsNumber
 	let end = document.getElementById("for" + obj.id + "_end").valueAsNumber
 	
+
+	// let data = 
+	// {
+	// 	"Canvas_width": document.getElementById("gen_width").valueAsNumber,
+	// 	"Canvas_height": document.getElementById("gen_height").valueAsNumber,
+	// 	"Gen_Margin": document.getElementById("gen_margin").valueAsNumber,
+	// 	"formule": document.getElementById("for" + obj.id + "_text").value,
+	// 	"stroke": document.getElementById("for" + obj.id + "_stroke").valueAsNumber,
+	// 	"strokecolor": document.getElementById("for" + obj.id + "_stroke_color").value,
+	// 	"dashstyle": document.getElementById("for" + obj.id + "_style").value,
+	// 	"start": document.getElementById("for" + obj.id + "_start").valueAsNumber,
+	// 	"end": document.getElementById("for" + obj.id + "_end").valueAsNumber,
+	// };
 
 	
 	if (formule == "" || formule == " ") return;
@@ -1406,7 +1420,7 @@ function RepereGradue()
 				y = hy + line_pry_pin_size / 2.0 + 2 + hor_text_size + hor_text_offset;
 			else
 				y = hy - line_pry_pin_size / 2.0 - hor_text_size - hor_text_offset;
-			let text = hor_start + hor_pas * i 
+			let text = Round(hor_start + hor_pas * i, 5) 
 			element = paper.text( x, y, text);
 			element.attr(
 				{
@@ -1441,7 +1455,7 @@ function RepereGradue()
 				x = vx - line_pry_pin_size / 2.0 - ver_text_size - ver_text_offset;
 			else
 				x = vx + line_pry_pin_size / 2.0 + ver_text_size + ver_text_offset;
-			let text = ver_start + ver_pas * i 
+			let text = Round(ver_start + ver_pas * i, 5) 
 			element = paper.text( x, y, text);
 			element.attr(
 				{

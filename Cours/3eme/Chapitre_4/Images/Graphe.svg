@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 242.04 154.98">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: aqua;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-1, .cls-3, .cls-4, .cls-5 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-3, .cls-5 {
+        stroke: #000;
+      }
+
+      .cls-2, .cls-7, .cls-8 {
+        stroke-linejoin: round;
+      }
+
+      .cls-9, .cls-10, .cls-11, .cls-7, .cls-8, .cls-12 {
+        font-size: 12px;
+      }
+
+      .cls-9, .cls-11 {
+        fill: #2e3192;
+      }
+
+      .cls-13, .cls-14, .cls-10, .cls-11, .cls-8, .cls-15 {
+        font-family: Bahnschrift, Bahnschrift;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-13, .cls-16 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-14, .cls-17 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-10, .cls-12 {
+        fill: #006837;
+      }
+
+      .cls-3 {
+        stroke-dasharray: 0 0 3.62 3.62;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        stroke: red;
+        stroke-linecap: round;
+      }
+
+      .cls-18 {
+        font-family: CMUSerif-Italic, 'CMU Serif';
+        font-style: italic;
+      }
+
+      .cls-7, .cls-8 {
+        fill: #fff;
+        stroke: #fff;
+        stroke-width: 3px;
+      }
+
+      .cls-19 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+      }
+
+      .cls-20 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-21 {
+        letter-spacing: -.01em;
+      }
+    </style>
+  </defs>
+  <g id="Calque_2" data-name="Calque 2">
+    <g>
+      <rect class="cls-1" x=".5" y="1.09" width="241.04" height="153.39"/>
+      <line class="cls-1" x1=".5" y1="132.57" x2="241.54" y2="132.57"/>
+      <line class="cls-1" x1=".5" y1="88.74" x2="241.54" y2="88.74"/>
+      <line class="cls-1" x1=".5" y1="66.83" x2="241.54" y2="66.83"/>
+      <line class="cls-1" x1=".5" y1="44.92" x2="241.54" y2="44.92"/>
+      <line class="cls-1" x1=".5" y1="23" x2="241.54" y2="23"/>
+      <line class="cls-1" x1="219.63" y1="1.09" x2="219.63" y2="154.48"/>
+      <line class="cls-1" x1="197.72" y1="1.09" x2="197.72" y2="154.48"/>
+      <line class="cls-1" x1="175.8" y1="1.09" x2="175.8" y2="154.48"/>
+      <line class="cls-1" x1="153.89" y1="1.09" x2="153.89" y2="154.48"/>
+      <line class="cls-1" x1="131.98" y1="1.09" x2="131.98" y2="154.48"/>
+      <line class="cls-1" x1="110.07" y1="1.09" x2="110.07" y2="154.48"/>
+      <g>
+        <line class="cls-5" x1="88.15" y1="8.25" x2="88.15" y2="154.48"/>
+        <polygon points="83.71 11.62 88.15 9.74 92.6 11.62 88.15 1.09 83.71 11.62"/>
+      </g>
+      <line class="cls-1" x1="66.24" y1="1.09" x2="66.24" y2="154.48"/>
+      <line class="cls-1" x1="44.33" y1="1.09" x2="44.33" y2="154.48"/>
+      <line class="cls-1" x1="22.41" y1="1.09" x2="22.41" y2="154.48"/>
+      <g>
+        <line class="cls-5" x1=".5" y1="110.66" x2="234.38" y2="110.66"/>
+        <polygon points="231.01 115.1 232.9 110.66 231.01 106.21 241.54 110.66 231.01 115.1"/>
+      </g>
+    </g>
+    <path class="cls-4" d="m22.41,132.57c7.13-45.77,9.7-55.71,21.91-65.74s23.43-10.97,43.83,0,55.91,25.03,87.65,0,37.91-34.63,43.83-43.83"/>
+    <g>
+      <line class="cls-5" x1="18.91" y1="132.57" x2="25.91" y2="132.57"/>
+      <line class="cls-5" x1="22.41" y1="129.07" x2="22.41" y2="136.07"/>
+    </g>
+    <g>
+      <line class="cls-5" x1="40.83" y1="66.83" x2="47.83" y2="66.83"/>
+      <line class="cls-5" x1="44.33" y1="63.33" x2="44.33" y2="70.33"/>
+    </g>
+    <g>
+      <line class="cls-5" x1="84.65" y1="66.83" x2="91.65" y2="66.83"/>
+      <line class="cls-5" x1="88.15" y1="63.33" x2="88.15" y2="70.33"/>
+    </g>
+    <g>
+      <line class="cls-5" x1="172.3" y1="66.83" x2="179.3" y2="66.83"/>
+      <line class="cls-5" x1="175.8" y1="63.33" x2="175.8" y2="70.33"/>
+    </g>
+    <g>
+      <line class="cls-5" x1="216.13" y1="23" x2="223.13" y2="23"/>
+      <line class="cls-5" x1="219.63" y1="19.5" x2="219.63" y2="26.5"/>
+    </g>
+    <g>
+      <line class="cls-5" x1="44.33" y1="66.83" x2="44.33" y2="68.83"/>
+      <line class="cls-3" x1="44.33" y1="72.45" x2="44.33" y2="106.85"/>
+      <line class="cls-5" x1="44.33" y1="108.66" x2="44.33" y2="110.66"/>
+    </g>
+    <line class="cls-3" x1="88.15" y1="66.83" x2="44.33" y2="66.83"/>
+    <line class="cls-3" x1="22.41" y1="110.66" x2="22.41" y2="132.57"/>
+    <line class="cls-3" x1="88.15" y1="132.57" x2="22.41" y2="132.57"/>
+    <line class="cls-3" x1="175.8" y1="66.83" x2="175.8" y2="110.66"/>
+    <line class="cls-3" x1="219.63" y1="23" x2="219.63" y2="110.66"/>
+    <line class="cls-3" x1="175.8" y1="66.83" x2="88.15" y2="66.83"/>
+    <line class="cls-3" x1="219.63" y1="23" x2="88.15" y2="23"/>
+    <line class="cls-2" x1="131.98" y1="106.92" x2="131.98" y2="114.39"/>
+    <line class="cls-2" x1="175.8" y1="106.92" x2="175.8" y2="114.39"/>
+    <line class="cls-2" x1="219.63" y1="106.92" x2="219.63" y2="114.39"/>
+    <line class="cls-2" x1="44.33" y1="106.92" x2="44.33" y2="114.39"/>
+    <line class="cls-2" x1="91.89" y1="23" x2="84.42" y2="23"/>
+  </g>
+  <g id="Calque_4" data-name="Calque 4">
+    <text class="cls-7" transform="translate(27.8 11.76)"><tspan class="cls-15"><tspan class="cls-16" x="0" y="0">V</tspan><tspan x="6.75" y="0">al</tspan><tspan class="cls-17" x="16.61" y="0">e</tspan><tspan x="22.9" y="0">ur</tspan></tspan><tspan class="cls-15" x="0" y="14.4">de</tspan><tspan class="cls-19" x="12.9" y="14.4"> </tspan><tspan class="cls-18" x="15.45" y="14.4">f(x)</tspan></text>
+    <text class="cls-7" transform="translate(170.93 140.11)"><tspan class="cls-13" x="0" y="0">V</tspan><tspan class="cls-15" x="6.75" y="0">al</tspan><tspan class="cls-14" x="16.61" y="0">e</tspan><tspan class="cls-15" x="22.9" y="0">ur de</tspan><tspan class="cls-19" x="50.82" y="0"> </tspan><tspan class="cls-18" x="53.36" y="0">x</tspan></text>
+    <text class="cls-8" transform="translate(95.95 138.02)"><tspan x="0" y="0">-</tspan><tspan class="cls-20" x="5.75" y="0">0</tspan><tspan x="12.02" y="0">,5</tspan></text>
+    <text class="cls-8" transform="translate(77.97 80.18)"><tspan x="0" y="0">1</tspan></text>
+    <text class="cls-8" transform="translate(76.86 24.78)"><tspan x="0" y="0">2</tspan></text>
+    <text class="cls-8" transform="translate(129.98 126.67)"><tspan x="0" y="0">1</tspan></text>
+    <text class="cls-8" transform="translate(39.54 126.67)"><tspan class="cls-21" x="0" y="0">-</tspan><tspan x="5.58" y="0">1</tspan></text>
+    <text class="cls-8" transform="translate(6.38 105.39)"><tspan class="cls-21" x="0" y="0">-</tspan><tspan x="5.58" y="0">1,5</tspan></text>
+    <text class="cls-8" transform="translate(172.7 126.67)"><tspan x="0" y="0">2</tspan></text>
+    <text class="cls-8" transform="translate(216.46 126.67)"><tspan x="0" y="0">3</tspan></text>
+  </g>
+  <g id="Calque_3" data-name="Calque 3">
+    <text class="cls-12" transform="translate(27.8 11.76)"><tspan class="cls-15"><tspan class="cls-16" x="0" y="0">V</tspan><tspan x="6.75" y="0">al</tspan><tspan class="cls-17" x="16.61" y="0">e</tspan><tspan x="22.9" y="0">ur</tspan></tspan><tspan class="cls-15" x="0" y="14.4">de</tspan><tspan class="cls-19" x="12.9" y="14.4"> </tspan><tspan class="cls-18" x="15.45" y="14.4">f(x)</tspan></text>
+    <text class="cls-9" transform="translate(170.93 140.11)"><tspan class="cls-13" x="0" y="0">V</tspan><tspan class="cls-15" x="6.75" y="0">al</tspan><tspan class="cls-14" x="16.61" y="0">e</tspan><tspan class="cls-15" x="22.9" y="0">ur de</tspan><tspan class="cls-19" x="50.82" y="0"> </tspan><tspan class="cls-18" x="53.36" y="0">x</tspan></text>
+    <text class="cls-10" transform="translate(95.95 138.02)"><tspan x="0" y="0">-</tspan><tspan class="cls-20" x="5.75" y="0">0</tspan><tspan x="12.02" y="0">,5</tspan></text>
+    <text class="cls-10" transform="translate(77.97 80.18)"><tspan x="0" y="0">1</tspan></text>
+    <text class="cls-10" transform="translate(76.86 24.78)"><tspan x="0" y="0">2</tspan></text>
+    <text class="cls-11" transform="translate(129.98 126.67)"><tspan x="0" y="0">1</tspan></text>
+    <text class="cls-11" transform="translate(39.54 126.67)"><tspan class="cls-21" x="0" y="0">-</tspan><tspan x="5.58" y="0">1</tspan></text>
+    <text class="cls-11" transform="translate(6.38 105.39)"><tspan class="cls-21" x="0" y="0">-</tspan><tspan x="5.58" y="0">1,5</tspan></text>
+    <text class="cls-11" transform="translate(172.71 126.67)"><tspan x="0" y="0">2</tspan></text>
+    <text class="cls-11" transform="translate(216.46 126.67)"><tspan x="0" y="0">3</tspan></text>
+  </g>
+</svg>

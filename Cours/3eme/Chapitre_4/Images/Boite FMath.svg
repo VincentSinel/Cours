@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 156.88 61.09">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        font-size: 12px;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        fill: #1d1d1b;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: LucidaCalligraphy-Italic, 'Lucida Calligraphy';
+        font-style: italic;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+
+      .cls-6 {
+        fill: #1d70b7;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <rect class="cls-6" x="55.38" y="8.45" width="55.5" height="36"/>
+  <text class="cls-2" transform="translate(80.67 30.45)"><tspan x="0" y="0">f</tspan></text>
+  <line class="cls-6" x1="110.88" y1="26.45" x2="156.88" y2="26.45"/>
+  <line class="cls-6" x1="55.38" y1="26.45" x2="9.38" y2="26.45"/>
+  <g>
+    <rect class="cls-5" x="30.38" y="22.45" width="4" height="8"/>
+    <polygon class="cls-4" points="30.38 22.45 30.38 30.45 34.38 26.45 30.38 22.45"/>
+  </g>
+  <g>
+    <rect class="cls-5" x="131.88" y="22.45" width="4" height="8"/>
+    <polygon class="cls-4" points="131.88 22.45 131.88 30.45 135.88 26.45 131.88 22.45"/>
+  </g>
+  <text class="cls-3" transform="translate(28.12 10.45)"><tspan x="0" y="0">x</tspan></text>
+  <text class="cls-3" transform="translate(122.93 10.45)"><tspan x="0" y="0">f(x)</tspan></text>
+  <text class="cls-1" transform="translate(.02 57.2)"><tspan x="0" y="0">Antécédent</tspan></text>
+  <text class="cls-1" transform="translate(117.2 57.2)"><tspan x="0" y="0">Image</tspan></text>
+</svg>

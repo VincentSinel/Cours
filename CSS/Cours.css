@@ -16,6 +16,10 @@
 	--Texte: #101010;
 	--BorderCase: #10101055;
   
+    --TableOdd: #F7794310;
+    --TableHeader: #F7794350;
+    --TableBorder: #F77943;
+
 }
 
 .CRed { color: var(--Cred);}
@@ -169,13 +173,6 @@ table {border-color: black}
 table, th, td, tr {
     border: none;
     border-collapse: collapse;
-}
-table.center {
-    margin-left: auto;
-    margin-right: auto;
-}
-table.centertext {
-    text-align: center;
 }
 
 .borderfull td{
@@ -377,4 +374,37 @@ ol > li::marker {
     display: inline-block; 
     border-bottom: 1px var(--Texte) dotted;
     width: 150px;
+}
+
+.colonnetable th,
+.colonnetable td,
+.linetable td{
+    text-align: center;
+}
+.linetable th{
+    text-align: left;
+    font-weight: bold;
+    background-color: var(--TableHeader);
+}
+.linetable th,
+.colonnetable th{
+    font-weight: bold;
+    background-color: var(--TableHeader);
+}
+.linetable th{
+    text-align: left;
+}
+
+.linetable td:nth-child(odd),
+.colonnetable td:nth-child(odd){
+    background-color: var(--TableOdd);
+}
+
+.bordertable td,
+.bordertable th{
+    border: solid var(--TableBorder) 1px;
+}
+.bordertable td,
+.bordertable th{
+    min-width: 2cm;
 }

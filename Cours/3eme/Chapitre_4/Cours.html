@@ -5,6 +5,9 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta http-equiv="content-language" content="fr">
   <link rel="stylesheet" href="/CSS/Cours.css"> 
+  
+  <script src="/Generateurs/Global_Generator.js"></script>
+  <script src="/JS/Raphael/raphael.min.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
@@ -17,6 +20,17 @@
   <title>Chapitre 4 - Fonctions (Généralités)</title>
 
   <style>
+    .actintro td,
+    .actintro th{
+      border: solid cyan 1px;
+      width: 2cm;
+    }
+    .actintro th{
+      background-color: lightcyan;
+    }
+    .actintro td{
+      text-align: center;
+    }
   </style>
 
 </head>
@@ -37,9 +51,317 @@
   <p class="exemple">
     Activité Introduction
   </p>
+  <div class="flexobject">
+    <div style="max-width: 21cm;">
+      <p>
+        Avec une corde de longueur 11m étendue sur le sol, on fabrique un rectangle.<br>
+        On désigne par $x$ la longueur d'un côté de ce rectangle.
+      </p>
+      <img src="Images/Act_Intro.png" style="max-height: 5cm;">
+      <ol>
+        <li>
+          <ol type="a">
+            <li>Quelles sont les dimensions du rectangle lorsque $x$ = 1m ?<br>
+                Calculer l'aire du rectangle dans ce cas.</li>
+            <li>Mêmes questions pour $x$ = 2m.</li>
+          </ol>
+        </li>
+        <li>
+          <ol type="a">
+            <li>Exprimer les dimensions du rectangle en fonction de $x$.</li>
+            <li>Démontrer que l'aire $A$ du rectangle s'exprime, en fonction de $x$, par la formule : $A(x)=5,5x-x^2$</li>
+          </ol>
+        </li>
+        <li>
+          On cherche la valeur de $x$ pour laquelle l'aire $A$ du rectangle est la plus grande possible.
+          <ol type="a">
+            <li>
+              Pour les différenres valeurs de $x$ données dans le tableau, calculer l'aire $A(x)$ du rectangle.
+              <table class="actintro">
+                <tr>
+                  <th>$x$</th>
+                  <td>1</td>
+                  <td>1,4</td>
+                  <td>1,8</td>
+                  <td>2,2</td>
+                  <td>2,6</td>
+                  <td>3</td>
+                  <td>3,4</td>
+                  <td>3,8</td>
+                </tr>
+                <tr>
+                  <th>$A(x)$</th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              Pour quelle valeur de $x$, l'aire $A$ du rectangle semble-t-elle la plus grande ?
+            </li>
+          </ol>
+        </li>
+        <li>
+          <ol type="a">
+            <li>Dans un repère (comme celui fournis), placer tous les points dont les coordonnées $(x;A(x))$ sont données dans le tableau précédent.</li>
+            <li>Estimer graphiquement l'aire maximale du rectangle.</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+    <img src="Images/Act_Graphique.svg">
+  </div>
 
-  
+  <h1>Notion de fonction :</h1>
+    <h2>Définition :</h2>
+      <img src="Images/Boite fonction.svg" style="max-height: 3cm; margin-bottom: 5px;">
+      <div class="definition">
+        Un processus qui, à un nombre de départ, associe un unique nombre d'arrivée s'appelle une fonction.<br>
+        Si on note $x$ le nombre de départ et $f$ la fonction, on note alors $f(x)$ (lu « $f$ de $x$ ») le nombre d'arrivée.
+      </div>
+      <p class="remarque">Remarque :</p>
+      <p>On définie une fonction ainsi :<br>
+        $f:x \mapsto 4x+1$&emsp;($f$ qui a $x$ associe $4x+1$)<br>
+        ou plus simplement $f(x)=4x+1$</p>
+      <p>Attention, $f$ est une fonction alors que $f(x)$ est un nombre.</p>
+      <p class="exemple">Exemple :</p>
+      <p>
+        Avec $f(x)=4x+1$&emsp;&emsp;$f(5)=4\times5+1=20+1=21$ donc $f(5)=21$.<br>
+        Avec $g(x)=\frac{3-x}{6+x}$&emsp;&emsp;$g(5)=\frac{3-5}{6+5}=\frac{-2}{11}$ donc $g(5)=\frac{-2}{11}$.
+      </p>
+    <h2>Vocabulaire :</h2>
+      <img src="Images/Boite FMath.svg" style="max-height: 3cm; margin-bottom: 5px;">
+      <div class="definition">
+        Dans une fonction qui à $x$ associe $f(x)$ on dit que :
+        <ul>
+          <li>$f(x)$ est <span class="CRed">l'image</span> de $x$ par la fonction $f$.</li>
+          <li>$x$ est un <span class="CRed">antécédent</span> de $f(x)$ par la fonction $f$</li>
+        </ul>
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>
+        Avec $f(x)=4x+1$<br>
+        L'image de 5 est 21 car $f(5)=21$.<br>
+        Un antécédent de 49 est 12 car $f(12)=49$.
+      </p>
+      <p class="remarque">Remarque :</p>
+      <ul>
+        <li>L'image d'un nombre est <b>unique</b>.</li>
+        <li>Il arrive parfois qu'un nombre n'ai pas d'image, 
+          on dit dans ce cas que la fonction <b>n'est pas définie</b> 
+          en cette valeur.<br>
+            Par exemple $g(x)=\frac{3-x}{6+x}$ n'est pas défini 
+            pour $x=-6$ pour eviter la division par 0.</li>
+        <li>Un nombre peut avoir 0 ; 1 ou plusieurs antécédents.<br>
+            Par exemple avec $h(x)=x^2$ :
+            <ul>
+              <li>-4 n'a pas d'antécédent car un carré est toujours positif ;</li>
+              <li>0 a un unique antécédent : 0&emsp;&emsp;$h(0)=0$</li>
+              <li>4 a deux antécédents : 2 et -2&emsp;&emsp;$h(2)=4$ 
+                et $h(-2)=4$</li>
+            </ul>
+        </li>
+      </ul>
+    <h2>Représentation graphique :</h2>
+      <p>Dans un repère, on considère les points M de coordonnées 
+        ($x$ ; $f(x)$) où $f$ est une fonction.
+      </p>
+      <p>L'ensemble des points M forme une courbe $C$ appelée la 
+        <span class="CRed">représentation graphique</span> de la fonction $f$.
+      </p>
+      <div id="preview" class="flexobject">
+        <div id="canvas"></div>
+        <div>
+          <p>$f(x) = -0,5x^3 + 0,5x^2 + 0,6x + 1,5$</p>
+          <p>$x$ = <span id="func_valx"></span></p>
+          <p>$f(x)$ = <span id="func_valfx"></span></p>
+          <input id="func_x" type="range" min="-1" max="2" value="1.5" step="0.01" oninput="Regenerate()">
+        </div>
+      </div>
+  <h1>Images et antécédents :</h1>
+    <h2>Tableau de valeurs</h2>
+      <p>Un tableau de valeur permet de définir une fonction. Par exemple :</p>
+      <table class="linetable bordertable" >
+        <tr>
+          <th>Nombre $x$</th>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <th>Nombre $g(x)$</th>
+          <td>-5</td>
+          <td>-3</td>
+          <td>0</td>
+          <td>5,2</td>
+          <td>0</td>
+          <td>7</td>
+        </tr>
+      </table>
+      <p>Ici on peut lire que $g(1)= -3$ et que 0 a deux antécédents 2 et 4.</p>
+      <p>
+        ⚠️ Un tableau de valeur n'est que <b>très rarement</b> proportionnel.
+      </p>
+    <h2>Expression littérale :</h2>
+      <p>Une expression permet de définir une fonction. Par exemple : $f(x) = 4x+1$</p>
+      <div class="flexobject">
+        <div><p>Une expression littérales permet de traduire un programme de calcul.</p></div>
+        <div>
+          <div class="definition">
+            <ul style="margin: 0; padding-left: 15px;">
+              <li>Choisir un nombre</li>
+              <li>Le multiplier par 4</li>
+              <li>Ajouter 1</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <h2>Graphique :</h2>
+      <p>Un graphique permet de définir une fonction. Par exemple :</p>
+      <img src="Images/Graphe.svg" style="max-height: 6cm;">
+      <p>On lit alors les antécédents sur l'axe des abscisses et l'image sur l'axe 
+        des ordonnées. Par exemple $f(3)=2$ ou encore, 1 à trois antécédents -1, 0 et 2</p>
 
 </body>
+<script>
+  var Canvas_width = 480;
+  var Canvas_height = 360;
+  var Gen_Margin = 25;
+  var paper = null;
+  window.onload = function(){
+    paper = Raphael("canvas", Canvas_width, Canvas_height);
+    Regenerate()
+  }
+  function Regenerate()
+  {
+    paper.clear();
 
+    let x = document.getElementById("func_x").valueAsNumber;
+    let fx = -0.5*x*x*x + 0.5*x*x + 0.6*x + 1.5
+    document.getElementById("func_valx").innerHTML = x;
+    document.getElementById("func_valfx").innerHTML = Round(fx, 3);
+
+    let p = x > 0
+
+    let data = 
+    {
+      "Canvas_width": Canvas_width,
+      "Canvas_height": Canvas_height,
+      "Gen_Margin": Gen_Margin,
+      "hor_pri_nbr": 3,
+      "hor_sec_nbr": 1,
+      "hor_start": -1,
+      "hor_pas": 1,
+      "hor_text": true,
+      "hor_text_pos": 0,
+      "hor_text_size": 12,
+      "hor_text_offset": 0,
+      "ver_pri_nbr": 3,
+      "ver_sec_nbr": 1,
+      "ver_start": 0,
+      "ver_pas": 1,
+      "ver_text": true,
+      "ver_text_pos": p ? 1 : 0,
+      "ver_text_size": 12,
+      "ver_text_offset": 0,
+      "line_pry_stroke": 3,
+      "line_pry_color": "#000000",
+      "line_pry_pin_size": 10,
+      "line_pry_arrow": 5,
+      "line_pry_grid": false,
+      "line_pry_grid_stroke": 1,
+      "line_pry_grid_color": "#000000",
+      "line_sec_stroke": 2,
+      "line_sec_color": "#000000",
+      "line_sec_pin_size": 5,
+      "line_sec_grid": false,
+      "line_sec_grid_stroke": 1,
+      "line_sec_grid_color": "#000000",
+      "objects": [
+        {
+          "type": "courbe",
+          "formule": "-0.5*x*x*x + 0.5*x*x + 0.6*x + 1.5",
+          "stroke": 2,
+          "strokecolor": "#FF0000",
+          "dashstyle": "",
+          "start": -1.5,
+          "end": 3,
+        },
+        {
+          "type": "line",
+          "xs": x,
+          "ys": fx,
+          "xe": 0,
+          "ye": fx,
+          "stroke": 2,
+          "strokecolor": "#AA00AA",
+          "dashstyle": "-",
+        },
+        {
+          "type": "line",
+          "xs": x,
+          "ys": fx,
+          "xe": x,
+          "ye": 0,
+          "stroke": 2,
+          "strokecolor": "#AA00AA",
+          "dashstyle": "-",
+        },
+        {
+          "type": "point",
+          "px": x,
+          "py": fx,
+          "name": "M",
+          "tx": 0,
+          "ty": -20,
+          "txt_size": 18,
+          "type_point": 1,
+          "size": 12,
+          "stroke": 2,
+          "strokecolor": "#AA00AA",
+          "dashstyle": "",
+        },
+        {
+          "type": "point",
+          "px": 0,
+          "py": fx,
+          "name": "f(x)",
+          "tx": -p ? -25 : 25,
+          "ty": 0,
+          "txt_size": 18,
+          "type_point": 1,
+          "size": 12,
+          "stroke": 2,
+          "strokecolor": "#AA00AA",
+          "dashstyle": "",
+        },
+        {
+          "type": "point",
+          "px": x,
+          "py": 0,
+          "name": "x",
+          "tx": 0,
+          "ty": 15,
+          "txt_size": 18,
+          "type_point": 1,
+          "size": 12,
+          "stroke": 2,
+          "strokecolor": "#AA00AA",
+          "dashstyle": "",
+        },
+      ],
+    };
+
+    RepereGradue(paper, data);
+  }
+</script>
 </html>
