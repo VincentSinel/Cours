@@ -308,7 +308,13 @@ nav::-webkit-scrollbar-thumb {
 .selected{
   background-color: var(--PanelBackActive);
 }
+.strike{
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #ff0000aa;
+}
 /* FIN Navigation chapitres */
+
 
 
 @media only screen and (max-width:1220px) {
@@ -344,7 +350,7 @@ nav::-webkit-scrollbar-thumb {
 	.secret_connect{
 		top: calc(2 *var(--HeaderBarHeight) + 5px);
 	}
-  }
+}
 
 @media only screen and (max-width:860px) {
   .nav-header {
