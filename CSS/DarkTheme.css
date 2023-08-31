@@ -104,6 +104,20 @@ body{
 	display: inline-block;
 	padding: 0px;
 }
+
+.coord{
+	display: flex;
+	gap: 0;
+	flex-direction: row;
+	align-items: center;
+}
+.coord label{
+	flex: none;
+}
+.coord input{
+	flex: auto;
+}
+
 .input_coord_poly{
 	width: 60px !important; 
 	display: inline-block;

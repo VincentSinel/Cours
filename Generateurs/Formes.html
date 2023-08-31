@@ -50,7 +50,6 @@
 				<option value="type1">Repère gradué</option>
 				<option value="type2">Axe gradué (En cours de création)</option>
 				<option value="type3">Quadrillage</option>
-				<option value="type4">A VENIR</option>
 			</select>
 			<p style="text-align: center;">Paramètres</p>
 			<button class="regenerate" onclick="Regenerate()">Regénérer</button>
@@ -173,6 +172,7 @@
 					</div>
 				</div>
 				<div style="width: 100%;" id="param_axe" class="hiddenparam">
+					Cet outils n'est pas encore disponible
 				</div>
 				<div class="formemenu">
 					<span>Rendu final</span>
@@ -200,35 +200,39 @@
 			<div id="object_quadrillage" class="hiddenparam">
 				<button onclick="Add_point()" class="newobjecthalf">Ajouter un point</button>
 				<button onclick="Add_polygone()" class="newobjecthalf">Ajouter un polygone</button>
+				<button onclick="Add_circle()" class="newobjecthalf">Ajouter un cercle</button>
 			</div>
 			<div id="object_list" class="panel rightpanel">
 				<!--
-					<div id="pol1" class="formemenu show">
-						<span>Polygone 1</span>
+					<div id="cir1" class="formemenu show">
+						<span>Cercle 1</span>
 						<div class="formemenu_div">
-							<label>Points :</label><br>
-							<div  class="coord_poly">
-								<div id="pol1_poi1">
-									<label class="first_child">Point 1</label>
-									<label>(</label>
-									<input class="input_coord_poly" id="pol1_poi1_px" type="number">
-									<label>;</label>
-									<input class="input_coord_poly" id="pol1_poi1_py" type="number">
-									<label>)</label>
-									<button class="coord_poly_delete" onclick="Remove_Point_Polygone(1,1)">❌</button>
-								</div>
+							<label>Centre :</label><br>
+							<div  class="coord">
+								<label>(</label>
+								<input id="cir1_px" type="number" value="1" onchange="Regenerate()">
+								<label>;</label>
+								<input id="cir1_py" type="number" value="1" onchange="Regenerate()">
+								<label>)</label>
 							</div>
-							<button onclick="Add_Point_Polygone(1)">Ajouter un point</button>
+							<label>Angle :</label><br>
+							<div  class="coord">
+								<input id="cir1_as" type="number" value="0" onchange="Regenerate()">
+								<label> - </label>
+								<input id="cir1_ae" type="number" value="360" onchange="Regenerate()">
+							</div>
+							<label>Rayon :</label>
+							<input id="cir1_radius" type="number" value="1" min="0" onchange="Regenerate()">
 							<label>Epaisseur :</label>
-							<input id="pol1_stroke" type="number" step="1" min="1">
+							<input id="cir1_stroke" type="number" value="2" step="1" min="1" onchange="Regenerate()">
 							<label>Couleur :</label>
-							<input id="pol1_stroke_color" type="color">
+							<input id="cir1_stroke_color" type="color" onchange="Regenerate()">
 							<label>Style de trait :</label>
-							<input id="pol1_style" type="text">
-							<input id="pol1_fill" type="checkbox" style="width: auto;" onchange="Regenerate()">
-							<label for="pol1_fill" style="width: auto;">Remplir la forme</label><br>
+							<input id="cir1_style" type="text" onchange="Regenerate()">
+							<input id="cir1_fill" type="checkbox" style="width: auto;" onchange="Regenerate()">
+							<label for="cir1_fill" style="width: auto;">Remplir la forme</label><br>
 							<label>Couleur de remplissage:</label>
-							<input id="pol1_fill_color" type="color" value="white">
+							<input id="cir1_fill_color" type="color" value="white" onchange="Regenerate()">
 							<button class="delete">Supprimer</button>
 						</div>
 					</div>

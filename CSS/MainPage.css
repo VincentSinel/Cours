@@ -340,6 +340,10 @@ nav::-webkit-scrollbar-thumb {
 	.openmenu{
 	  visibility: visible;
 	}
+	
+	.secret_connect{
+		top: calc(2 *var(--HeaderBarHeight) + 5px);
+	}
   }
 
 @media only screen and (max-width:860px) {
@@ -365,6 +369,9 @@ nav::-webkit-scrollbar-thumb {
   .container {
     margin-left: 0;
     top: calc(2 * var(--HeaderBarHeight));
+  }
+  .secret_connect{
+	  top: calc(2 *var(--HeaderBarHeight) + 5px);
   }
   /* .menuprincipale{
   } */

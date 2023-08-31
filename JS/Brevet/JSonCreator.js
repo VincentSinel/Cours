@@ -319,6 +319,7 @@ function Save()
 	data["Difficulte"] = document.getElementById("Exercice_Difficulty").selectedIndex;
 	data["Tags"] = current_tags;
 	data["Image"] = selected_line.innerText
+	data["Lock"] = false
 	var id = selected_line.innerText.replace(/\/\//g, '-')
 	id = id.replace(/\//g, '-')
 	id = id.replace(/\\\\/g, '-')
@@ -409,6 +410,17 @@ function Previous()
 		}
 		document.getElementById("list_img").children[id - 1].click();
 	}
+}
+
+function LockExo()
+{
+	var id = selected_line.innerText.replace(/\/\//g, '-')
+	id = id.replace(/\//g, '-')
+	id = id.replace(/\\\\/g, '-')
+	id = id.replace(/\\/g, '-')
+	console.log("lock " + id)
+	save_data[id]["Lock"] = true;
+
 }
 
 function ExportSave()

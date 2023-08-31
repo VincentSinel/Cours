@@ -12,365 +12,501 @@ window.onload = function(){
 	Regenerate()
 }
 
-
-function Add_courbe()
+// Ajout d'objet dans la liste latérale
 {
-	let ids = []
-	objects.forEach(obj =>{
-		if(obj.type == "courbe")
-			ids.push(obj.id);
-	})
-	let id = 1;
-	while(ids.indexOf(id) >= 0)
-		id += 1;
-	objects.push(
-		{
-			type: "courbe",
-			id: id,
-			hover: false
-		}
-	)
-	var menu = document.createElement("div");
-	menu.id = "for" + id;
-	menu.classList.add("formemenu");
-	var titre = document.createElement("span");
-	titre.innerText = "Courbe " + id;
-	titre.onclick = function(){menu_click(menu)};
-	menu.appendChild(titre);
-	var content = document.createElement("div");
-	content.classList.add("formemenu_div");
-	var label = document.createElement("label");
-	label.innerText = "Formule (en JavaScript) :"
-	content.appendChild(label)
-	var input = document.createElement("input");
-	input.id = "for" + id + "_text";
-	input.type = "text";
-	input.value = "";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-
-	label = document.createElement("label");
-	label.innerText = "Epaisseur :"
-	content.appendChild(label)
-	input = document.createElement("input");
-	input.id = "for" + id + "_stroke";
-	input.type = "number";
-	input.value = "2";
-	input.step = "1";
-	input.min = "1";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-
-	label = document.createElement("label");
-	label.innerText = "Couleur :"
-	content.appendChild(label)
-	input = document.createElement("input");
-	input.id = "for" + id + "_stroke_color";
-	input.type = "color";
-	input.value = "black";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-
-	label = document.createElement("label");
-	label.innerText = "Style de trait :"
-	content.appendChild(label)
-	input = document.createElement("input");
-	input.id = "for" + id + "_style";
-	input.type = "text";
-	input.value = "";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-
-	label = document.createElement("label");
-	label.innerText = "Interval x :"
-	content.appendChild(label)
-	label = document.createElement("br");
-	content.appendChild(label)
+	function Add_courbe()
+	{
+		let ids = []
+		objects.forEach(obj =>{
+			if(obj.type == "courbe")
+				ids.push(obj.id);
+		})
+		let id = 1;
+		while(ids.indexOf(id) >= 0)
+			id += 1;
+		objects.push(
+			{
+				type: "courbe",
+				id: id,
+				hover: false
+			}
+		)
+		var menu = document.createElement("div");
+		menu.id = "for" + id;
+		menu.classList.add("formemenu");
+		var titre = document.createElement("span");
+		titre.innerText = "Courbe " + id;
+		titre.onclick = function(){menu_click(menu)};
+		menu.appendChild(titre);
+		var content = document.createElement("div");
+		content.classList.add("formemenu_div");
+		var label = document.createElement("label");
+		label.innerText = "Formule (en JavaScript) :"
+		content.appendChild(label)
+		var input = document.createElement("input");
+		input.id = "for" + id + "_text";
+		input.type = "text";
+		input.value = "";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
 	
-	label = document.createElement("label");
-	label.innerText = "["
-	content.appendChild(label)
-	input = document.createElement("input");
-	input.classList.add("input_coord");
-	input.id = "for" + id + "_start";
-	input.type = "number";
-	input.value = "-3";
-	input.step = "1";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-	label = document.createElement("label");
-	label.innerText = ";"
-	content.appendChild(label)
-	input = document.createElement("input");
-	input.classList.add("input_coord");
-	input.id = "for" + id + "_end";
-	input.type = "number";
-	input.value = "3";
-	input.step = "1";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-	label = document.createElement("label");
-	label.innerText = "]"
-	content.appendChild(label)
-
-	label = document.createElement("button");
-	label.onclick = function(){ RemoveCourbe('for' + id) };
-	label.innerText = "Supprimer"
-	label.classList.add("delete")
-	content.appendChild(label)
-	menu.appendChild(content);
-
-	document.getElementById("object_list").appendChild(menu);
-	Regenerate();
-}
-
-function Add_point()
-{
-	let ids = []
-	objects.forEach(obj =>{
-		if(obj.type == "point")
-			ids.push(obj.id);
-	})
-	let id = 1;
-	while(ids.indexOf(id) >= 0)
-		id += 1;
-	objects.push(
-		{
-			type: "point",
-			id: id,
-			hover: false
-		}
-	)
-	var menu = document.createElement("div");
-	menu.id = "poi" + id;
-	menu.classList.add("formemenu");
-	var titre = document.createElement("span");
-	titre.innerText = "Point " + id;
-	titre.onclick = function(){menu_click(menu)};
-	menu.appendChild(titre);
-	var content = document.createElement("div");
-	content.classList.add("formemenu_div");
-	var label = document.createElement("label");
-	label.innerText = "Position :"
-	content.appendChild(label)
-	label = document.createElement("br");
-	content.appendChild(label)
+		label = document.createElement("label");
+		label.innerText = "Epaisseur :"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.id = "for" + id + "_stroke";
+		input.type = "number";
+		input.value = "2";
+		input.step = "1";
+		input.min = "1";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
 	
-	label = document.createElement("label");
-	label.innerText = "("
-	content.appendChild(label)
-	input = document.createElement("input");
-	input.classList.add("input_coord");
-	input.id = "poi" + id + "_px";
-	input.type = "number";
-	input.value = "0";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-	label = document.createElement("label");
-	label.innerText = ";"
-	content.appendChild(label)
-	input = document.createElement("input");
-	input.classList.add("input_coord");
-	input.id = "poi" + id + "_py";
-	input.type = "number";
-	input.value = "0";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-	label = document.createElement("label");
-	label.innerText = ")"
-	content.appendChild(label)
-	label = document.createElement("br");
-	content.appendChild(label)
-
-	label = document.createElement("label");
-	label.innerText = "Nom :"
-	content.appendChild(label)
-	var input = document.createElement("input");
-	input.id = "poi" + id + "_text";
-	input.type = "text";
-	input.value = "A";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-
-	label = document.createElement("label");
-	label.innerText = "Position du texte (pixel relatif) :"
-	content.appendChild(label)
-	label = document.createElement("br");
-	content.appendChild(label)
-	label = document.createElement("label");
-	label.innerText = "("
-	content.appendChild(label)
-	input = document.createElement("input");
-	input.classList.add("input_coord");
-	input.id = "poi" + id + "_tx";
-	input.type = "number";
-	input.value = "0";
-	input.step = "1";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-	label = document.createElement("label");
-	label.innerText = ";"
-	content.appendChild(label)
-	input = document.createElement("input");
-	input.classList.add("input_coord");
-	input.id = "poi" + id + "_ty";
-	input.type = "number";
-	input.value = "-15";
-	input.step = "1";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-	label = document.createElement("label");
-	label.innerText = ")"
-	content.appendChild(label)
-	label = document.createElement("br");
-	content.appendChild(label)
-
-	label = document.createElement("label");
-	label.innerText = "Taille du texte :"
-	content.appendChild(label)
-	input = document.createElement("input");
-	input.id = "poi" + id + "_text_size";
-	input.type = "number";
-	input.value = "12";
-	input.step = "2";
-	input.min = "0";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-
-
-	label = document.createElement("label");
-	label.innerText = "Type de symbole :"
-	content.appendChild(label)
-	input = document.createElement("select");
-	input.id = "poi" + id + "_type";
-	input.onchange = function(){ Regenerate() };
-	let option = document.createElement("option");
-	option.value = "1";
-	option.innerText = "+";
-	input.appendChild(option);
-	option = document.createElement("option");
-	option.value = "2";
-	option.innerText = "×";
-	input.appendChild(option);
-	option = document.createElement("option");
-	option.value = "3";
-	option.innerText = "○";
-	input.appendChild(option);
-	option = document.createElement("option");
-	option.value = "4";
-	option.innerText = "•";
-	input.appendChild(option);
-	option = document.createElement("option");
-	option.value = "5";
-	option.innerText = ".";
-	input.appendChild(option);
-	content.appendChild(input)
-
+		label = document.createElement("label");
+		label.innerText = "Couleur :"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.id = "for" + id + "_stroke_color";
+		input.type = "color";
+		input.value = "black";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
 	
-	label = document.createElement("label");
-	label.innerText = "Taille du symbole :"
-	content.appendChild(label)
-	input = document.createElement("input");
-	input.id = "poi" + id + "_size";
-	input.type = "number";
-	input.value = "5";
-	input.step = "1";
-	input.min = "0";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-
-	label = document.createElement("label");
-	label.innerText = "Epaisseur :"
-	content.appendChild(label)
-	input = document.createElement("input");
-	input.id = "poi" + id + "_stroke";
-	input.type = "number";
-	input.value = "2";
-	input.step = "1";
-	input.min = "1";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-
-	label = document.createElement("label");
-	label.innerText = "Couleur :"
-	content.appendChild(label)
-	input = document.createElement("input");
-	input.id = "poi" + id + "_stroke_color";
-	input.type = "color";
-	input.value = "red";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-
-	label = document.createElement("label");
-	label.innerText = "Style de trait :"
-	content.appendChild(label)
-	input = document.createElement("input");
-	input.id = "poi" + id + "_style";
-	input.type = "text";
-	input.value = "";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-
-	label = document.createElement("button");
-	label.onclick = function(){ RemoveCourbe('poi' + id) };
-	label.innerText = "Supprimer"
-	label.classList.add("delete")
-	content.appendChild(label)
-	menu.appendChild(content);
-
-	document.getElementById("object_list").appendChild(menu);
-
-	Regenerate();
-}
-
-function Add_polygone()
-{
-	let ids = []
-	objects.forEach(obj =>{
-		if(obj.type == "polygone")
-			ids.push(obj.id);
-	})
-	let id = 1;
-	while(ids.indexOf(id) >= 0)
-		id += 1;
-	objects.push(
-		{
-			type: "polygone",
-			id: id,
-			hover: false
+		label = document.createElement("label");
+		label.innerText = "Style de trait :"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.id = "for" + id + "_style";
+		input.type = "text";
+		input.value = "";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+		label = document.createElement("label");
+		label.innerText = "Interval x :"
+		content.appendChild(label)
+		label = document.createElement("br");
+		content.appendChild(label)
+		
+		label = document.createElement("label");
+		label.innerText = "["
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.classList.add("input_coord");
+		input.id = "for" + id + "_start";
+		input.type = "number";
+		input.value = "-3";
+		input.step = "1";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = ";"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.classList.add("input_coord");
+		input.id = "for" + id + "_end";
+		input.type = "number";
+		input.value = "3";
+		input.step = "1";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = "]"
+		content.appendChild(label)
+	
+		label = document.createElement("button");
+		label.onclick = function(){ RemoveCourbe('for' + id) };
+		label.innerText = "Supprimer"
+		label.classList.add("delete")
+		content.appendChild(label)
+		menu.appendChild(content);
+	
+		document.getElementById("object_list").appendChild(menu);
+		Regenerate();
+	}
+	
+	function Add_point()
+	{
+		let ids = []
+		objects.forEach(obj =>{
+			if(obj.type == "point")
+				ids.push(obj.id);
+		})
+		let id = 1;
+		while(ids.indexOf(id) >= 0)
+			id += 1;
+		objects.push(
+			{
+				type: "point",
+				id: id,
+				hover: false
+			}
+		)
+		var menu = document.createElement("div");
+		menu.id = "poi" + id;
+		menu.classList.add("formemenu");
+		var titre = document.createElement("span");
+		titre.innerText = "Point " + id;
+		titre.onclick = function(){menu_click(menu)};
+		menu.appendChild(titre);
+		var content = document.createElement("div");
+		content.classList.add("formemenu_div");
+		var label = document.createElement("label");
+		label.innerText = "Position :"
+		content.appendChild(label)
+		label = document.createElement("br");
+		content.appendChild(label)
+		
+		label = document.createElement("label");
+		label.innerText = "("
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.classList.add("input_coord");
+		input.id = "poi" + id + "_px";
+		input.type = "number";
+		input.value = "0";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = ";"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.classList.add("input_coord");
+		input.id = "poi" + id + "_py";
+		input.type = "number";
+		input.value = "0";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = ")"
+		content.appendChild(label)
+		label = document.createElement("br");
+		content.appendChild(label)
+	
+		label = document.createElement("label");
+		label.innerText = "Nom :"
+		content.appendChild(label)
+		var input = document.createElement("input");
+		input.id = "poi" + id + "_text";
+		input.type = "text";
+		input.value = "A";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+		label = document.createElement("label");
+		label.innerText = "Position du texte (pixel relatif) :"
+		content.appendChild(label)
+		label = document.createElement("br");
+		content.appendChild(label)
+		label = document.createElement("label");
+		label.innerText = "("
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.classList.add("input_coord");
+		input.id = "poi" + id + "_tx";
+		input.type = "number";
+		input.value = "0";
+		input.step = "1";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = ";"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.classList.add("input_coord");
+		input.id = "poi" + id + "_ty";
+		input.type = "number";
+		input.value = "-15";
+		input.step = "1";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = ")"
+		content.appendChild(label)
+		label = document.createElement("br");
+		content.appendChild(label)
+	
+		label = document.createElement("label");
+		label.innerText = "Taille du texte :"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.id = "poi" + id + "_text_size";
+		input.type = "number";
+		input.value = "12";
+		input.step = "2";
+		input.min = "0";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+	
+		label = document.createElement("label");
+		label.innerText = "Type de symbole :"
+		content.appendChild(label)
+		input = document.createElement("select");
+		input.id = "poi" + id + "_type";
+		input.onchange = function(){ Regenerate() };
+		let option = document.createElement("option");
+		option.value = "1";
+		option.innerText = "+";
+		input.appendChild(option);
+		option = document.createElement("option");
+		option.value = "2";
+		option.innerText = "×";
+		input.appendChild(option);
+		option = document.createElement("option");
+		option.value = "3";
+		option.innerText = "○";
+		input.appendChild(option);
+		option = document.createElement("option");
+		option.value = "4";
+		option.innerText = "•";
+		input.appendChild(option);
+		option = document.createElement("option");
+		option.value = "5";
+		option.innerText = ".";
+		input.appendChild(option);
+		content.appendChild(input)
+	
+		
+		label = document.createElement("label");
+		label.innerText = "Taille du symbole :"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.id = "poi" + id + "_size";
+		input.type = "number";
+		input.value = "5";
+		input.step = "1";
+		input.min = "0";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+		label = document.createElement("label");
+		label.innerText = "Epaisseur :"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.id = "poi" + id + "_stroke";
+		input.type = "number";
+		input.value = "2";
+		input.step = "1";
+		input.min = "1";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+		label = document.createElement("label");
+		label.innerText = "Couleur :"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.id = "poi" + id + "_stroke_color";
+		input.type = "color";
+		input.value = "red";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+		label = document.createElement("label");
+		label.innerText = "Style de trait :"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.id = "poi" + id + "_style";
+		input.type = "text";
+		input.value = "";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+		label = document.createElement("button");
+		label.onclick = function(){ RemoveCourbe('poi' + id) };
+		label.innerText = "Supprimer"
+		label.classList.add("delete")
+		content.appendChild(label)
+		menu.appendChild(content);
+	
+		document.getElementById("object_list").appendChild(menu);
+	
+		Regenerate();
+	}
+	
+	function Add_polygone()
+	{
+		let ids = []
+		objects.forEach(obj =>{
+			if(obj.type == "polygone")
+				ids.push(obj.id);
+		})
+		let id = 1;
+		while(ids.indexOf(id) >= 0)
+			id += 1;
+		objects.push(
+			{
+				type: "polygone",
+				id: id,
+				hover: false
+			}
+		)
+	
+		var menu = document.createElement("div");
+		menu.id = "pol" + id;
+		menu.classList.add("formemenu");
+		var titre = document.createElement("span");
+		titre.innerText = "Polygone " + id;
+		titre.onclick = function(){menu_click(menu)};
+		menu.appendChild(titre);
+		var content = document.createElement("div");
+		content.classList.add("formemenu_div");
+		var label = document.createElement("label");
+		label.innerText = "Points :"
+		content.appendChild(label)
+		label = document.createElement("br");
+		content.appendChild(label)
+	
+		var points = document.createElement("div");
+		points.id = "pol" + id + "points_list";
+		points.classList.add("coord_poly");
+		for (let i = 0; i < 3; i++) {
+			var name = "pol"+ id + "_poi" + i;
+			var onepoint = document.createElement("div")
+			onepoint.id = name;
+			label = document.createElement("label");
+			label.innerText = "Point " + i + " :"
+			label.classList.add("first_child")
+			onepoint.appendChild(label)
+			label = document.createElement("label");
+			label.innerText = "("
+			onepoint.appendChild(label)
+	
+			input = document.createElement("input");
+			input.classList.add("input_coord_poly");
+			input.id = name + "_px";
+			input.type = "number";
+			input.value = "0";
+			input.onchange = function(){ Regenerate() };
+			onepoint.appendChild(input)
+	
+			label = document.createElement("label");
+			label.innerText = ";"
+			onepoint.appendChild(label)
+	
+			input = document.createElement("input");
+			input.classList.add("input_coord_poly");
+			input.id = name + "_py";
+			input.type = "number";
+			input.value = "0";
+			input.onchange = function(){ Regenerate() };
+			onepoint.appendChild(input)
+	
+			label = document.createElement("label");
+			label.innerText = ")"
+			onepoint.appendChild(label)
+	
+			label = document.createElement("button");
+			label.onclick = function(){ Remove_Point_Polygone(id, i) };
+			label.innerText = "❌"
+			label.classList.add("coord_poly_delete")
+			onepoint.appendChild(label)
+	
+			points.appendChild(onepoint)
 		}
-	)
-
-	var menu = document.createElement("div");
-	menu.id = "pol" + id;
-	menu.classList.add("formemenu");
-	var titre = document.createElement("span");
-	titre.innerText = "Polygone " + id;
-	titre.onclick = function(){menu_click(menu)};
-	menu.appendChild(titre);
-	var content = document.createElement("div");
-	content.classList.add("formemenu_div");
-	var label = document.createElement("label");
-	label.innerText = "Points :"
-	content.appendChild(label)
-	label = document.createElement("br");
-	content.appendChild(label)
-
-	var points = document.createElement("div");
-	points.id = "pol" + id + "points_list";
-	points.classList.add("coord_poly");
-	for (let i = 0; i < 3; i++) {
-		var name = "pol"+ id + "_poi" + i;
+		content.appendChild(points)
+	
+		label = document.createElement("button");
+		label.onclick = function(){ Add_Point_Polygone(id) };
+		label.innerText = "Ajouter un point"
+		content.appendChild(label)
+			
+		label = document.createElement("label");
+		label.innerText = "Epaisseur :"
+		content.appendChild(label)
+	
+		input = document.createElement("input");
+		input.id = "pol" + id + "_stroke";
+		input.type = "number";
+		input.value = "2";
+		input.step = "1";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+			
+		label = document.createElement("label");
+		label.innerText = "Couleur :"
+		content.appendChild(label)
+	
+		input = document.createElement("input");
+		input.id = "pol" + id + "_stroke_color";
+		input.type = "color";
+		input.value = "#FF0000";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+		label = document.createElement("label");
+		label.innerText = "Style de trait :"
+		content.appendChild(label)
+		
+		input = document.createElement("input");
+		input.id = "pol" + id + "_style";
+		input.type = "text";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+		input = document.createElement("input");
+		input.id = "pol" + id + "_fill";
+		input.type = "checkbox";
+		input.style.width = "auto";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+		label = document.createElement("label");
+		label.innerText = "Remplir la forme"
+		label.setAttribute("for", "pol" + id + "_fill")
+		label.style.width = "auto";
+		content.appendChild(label)
+		label = document.createElement("br");
+		content.appendChild(label)
+			
+		label = document.createElement("label");
+		label.innerText = "Couleur de remplissage :"
+		content.appendChild(label)
+	
+		input = document.createElement("input");
+		input.id = "pol" + id + "_fill_color";
+		input.type = "color";
+		input.value = "#FFFFFF";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+		label = document.createElement("button");
+		label.onclick = function(){ RemovePolygone('pol' + id) };
+		label.innerText = "Supprimer"
+		label.classList.add("delete")
+		content.appendChild(label)
+	
+		menu.appendChild(content);
+	
+		document.getElementById("object_list").appendChild(menu);
+	
+		Regenerate();
+	}
+	
+	function Add_Point_Polygone(polygone_id)
+	{
+		var points = document.getElementById("pol" + polygone_id + "points_list");
+		
+		let ids = []
+		let list = points.getElementsByTagName("div")
+		for (var i = 0; i < list.length; i++) {
+			ids.push(list[i].id);
+		}
+		let id = 1;
+		while(ids.indexOf("pol"+ polygone_id + "_poi" + id) >= 0)
+			id += 1;
+	
+		var name = "pol"+ polygone_id + "_poi" + id;
 		var onepoint = document.createElement("div")
 		onepoint.id = name;
 		label = document.createElement("label");
-		label.innerText = "Point " + i + " :"
+		label.innerText = "Point " + id + " :"
 		label.classList.add("first_child")
 		onepoint.appendChild(label)
 		label = document.createElement("label");
 		label.innerText = "("
 		onepoint.appendChild(label)
-
+	
 		input = document.createElement("input");
 		input.classList.add("input_coord_poly");
 		input.id = name + "_px";
@@ -378,11 +514,11 @@ function Add_polygone()
 		input.value = "0";
 		input.onchange = function(){ Regenerate() };
 		onepoint.appendChild(input)
-
+	
 		label = document.createElement("label");
 		label.innerText = ";"
 		onepoint.appendChild(label)
-
+	
 		input = document.createElement("input");
 		input.classList.add("input_coord_poly");
 		input.id = name + "_py";
@@ -390,153 +526,191 @@ function Add_polygone()
 		input.value = "0";
 		input.onchange = function(){ Regenerate() };
 		onepoint.appendChild(input)
-
+	
 		label = document.createElement("label");
 		label.innerText = ")"
 		onepoint.appendChild(label)
-
+	
 		label = document.createElement("button");
-		label.onclick = function(){ Remove_Point_Polygone(id, i) };
+		label.onclick = function(){ Remove_Point_Polygone(polygone_id, id) };
 		label.innerText = "❌"
 		label.classList.add("coord_poly_delete")
 		onepoint.appendChild(label)
-
+	
 		points.appendChild(onepoint)
 	}
-	content.appendChild(points)
 
-	label = document.createElement("button");
-	label.onclick = function(){ Add_Point_Polygone(id) };
-	label.innerText = "Ajouter un point"
-	content.appendChild(label)
+	function Add_circle()
+	{
+		let ids = []
+		objects.forEach(obj =>{
+			if(obj.type == "circle")
+				ids.push(obj.id);
+		})
+		let id = 1;
+		while(ids.indexOf(id) >= 0)
+			id += 1;
+		objects.push(
+			{
+				type: "circle",
+				id: id,
+				hover: false
+			}
+		)
+		var name = "cir" + id;
+
+		var menu = document.createElement("div");
+		menu.id = name;
+		menu.classList.add("formemenu");
+		var titre = document.createElement("span");
+		titre.innerText = "Cercle " + id;
+		titre.onclick = function(){menu_click(menu)};
+		menu.appendChild(titre);
+		var content = document.createElement("div");
+		content.classList.add("formemenu_div");
+		var label = document.createElement("label");
+		label.innerText = "Position centre :"
+		content.appendChild(label)
+		label = document.createElement("br");
+		content.appendChild(label)
 		
-	label = document.createElement("label");
-	label.innerText = "Epaisseur :"
-	content.appendChild(label)
+		var coord = document.createElement("div");
+		coord.classList.add("coord")
 
-	input = document.createElement("input");
-	input.id = "pol" + id + "_stroke";
-	input.type = "number";
-	input.value = "2";
-	input.step = "1";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-		
-	label = document.createElement("label");
-	label.innerText = "Couleur :"
-	content.appendChild(label)
+		label = document.createElement("label");
+		label.innerText = "("
+		coord.appendChild(label)
+		var input = document.createElement("input");
+		input.classList.add("input_coord");
+		input.id = name + "_px";
+		input.type = "number";
+		input.value = "1";
+		input.onchange = function(){ Regenerate() };
+		coord.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = ";"
+		coord.appendChild(label)
+		input = document.createElement("input");
+		input.classList.add("input_coord");
+		input.id = name + "_py";
+		input.type = "number";
+		input.value = "1";
+		input.onchange = function(){ Regenerate() };
+		coord.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = ")"
+		coord.appendChild(label)
 
-	input = document.createElement("input");
-	input.id = "pol" + id + "_stroke_color";
-	input.type = "color";
-	input.value = "#FF0000";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
+		content.appendChild(coord)
 
-	label = document.createElement("label");
-	label.innerText = "Style de trait :"
-	content.appendChild(label)
+		label = document.createElement("label");
+		label.innerText = "Angle :"
+		content.appendChild(label)
+		label = document.createElement("br");
+		content.appendChild(label)
+
+		coord = document.createElement("div");
+		coord.classList.add("coord")
+
+		input = document.createElement("input");
+		input.classList.add("input_coord");
+		input.id = name + "_as";
+		input.type = "number";
+		input.value = "0";
+		input.onchange = function(){ Regenerate() };
+		coord.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = "->"
+		coord.appendChild(label)
+		input = document.createElement("input");
+		input.classList.add("input_coord");
+		input.id = name + "_ae";
+		input.type = "number";
+		input.value = "360";
+		input.onchange = function(){ Regenerate() };
+		coord.appendChild(input)
+
+		content.appendChild(coord)
 	
-	input = document.createElement("input");
-	input.id = "pol" + id + "_style";
-	input.type = "text";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-
-	input = document.createElement("input");
-	input.id = "pol" + id + "_fill";
-	input.type = "checkbox";
-	input.style.width = "auto";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-
-	label = document.createElement("label");
-	label.innerText = "Remplir la forme"
-	label.setAttribute("for", "pol" + id + "_fill")
-	label.style.width = "auto";
-	content.appendChild(label)
-	label = document.createElement("br");
-	content.appendChild(label)
-		
-	label = document.createElement("label");
-	label.innerText = "Couleur de remplissage :"
-	content.appendChild(label)
-
-	input = document.createElement("input");
-	input.id = "pol" + id + "_fill_color";
-	input.type = "color";
-	input.value = "#FFFFFF";
-	input.onchange = function(){ Regenerate() };
-	content.appendChild(input)
-
-	label = document.createElement("button");
-	label.onclick = function(){ RemovePolygone('pol' + id) };
-	label.innerText = "Supprimer"
-	label.classList.add("delete")
-	content.appendChild(label)
-
-	menu.appendChild(content);
-
-	document.getElementById("object_list").appendChild(menu);
-
-	Regenerate();
-}
-
-function Add_Point_Polygone(polygone_id)
-{
-	var points = document.getElementById("pol" + polygone_id + "points_list");
+		label = document.createElement("label");
+		label.innerText = "Rayon :"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.id = name + "_radius";
+		input.type = "number";
+		input.value = "1";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
 	
-	let ids = []
-	let list = points.getElementsByTagName("div")
-	for (var i = 0; i < list.length; i++) {
-		ids.push(list[i].id);
+		label = document.createElement("label");
+		label.innerText = "Epaisseur :"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.id = name + "_stroke";
+		input.type = "number";
+		input.value = "2";
+		input.step = "1";
+		input.min = "1";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+		label = document.createElement("label");
+		label.innerText = "Couleur :"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.id = name + "_stroke_color";
+		input.type = "color";
+		input.value = "red";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+		label = document.createElement("label");
+		label.innerText = "Style de trait :"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.id = name + "_style";
+		input.type = "text";
+		input.value = "";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+
+		input = document.createElement("input");
+		input.id = name + "_fill";
+		input.type = "checkbox";
+		input.style.width = "auto";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+		label = document.createElement("label");
+		label.innerText = "Remplir la forme"
+		label.setAttribute("for", name+ "_fill")
+		label.style.width = "auto";
+		content.appendChild(label)
+		label = document.createElement("br");
+		content.appendChild(label)
+			
+		label = document.createElement("label");
+		label.innerText = "Couleur de remplissage :"
+		content.appendChild(label)
+	
+		input = document.createElement("input");
+		input.id = name + "_fill_color";
+		input.type = "color";
+		input.value = "#FFFFFF";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+		label = document.createElement("button");
+		label.onclick = function(){ RemoveCircle(name) };
+		label.innerText = "Supprimer"
+		label.classList.add("delete")
+		content.appendChild(label)
+		menu.appendChild(content);
+	
+		document.getElementById("object_list").appendChild(menu);
+	
+		Regenerate();
 	}
-	let id = 1;
-	while(ids.indexOf("pol"+ polygone_id + "_poi" + id) >= 0)
-		id += 1;
-
-	var name = "pol"+ polygone_id + "_poi" + id;
-	var onepoint = document.createElement("div")
-	onepoint.id = name;
-	label = document.createElement("label");
-	label.innerText = "Point " + id + " :"
-	label.classList.add("first_child")
-	onepoint.appendChild(label)
-	label = document.createElement("label");
-	label.innerText = "("
-	onepoint.appendChild(label)
-
-	input = document.createElement("input");
-	input.classList.add("input_coord_poly");
-	input.id = name + "_px";
-	input.type = "number";
-	input.value = "0";
-	input.onchange = function(){ Regenerate() };
-	onepoint.appendChild(input)
-
-	label = document.createElement("label");
-	label.innerText = ";"
-	onepoint.appendChild(label)
-
-	input = document.createElement("input");
-	input.classList.add("input_coord_poly");
-	input.id = name + "_py";
-	input.type = "number";
-	input.value = "0";
-	input.onchange = function(){ Regenerate() };
-	onepoint.appendChild(input)
-
-	label = document.createElement("label");
-	label.innerText = ")"
-	onepoint.appendChild(label)
-
-	label = document.createElement("button");
-	label.onclick = function(){ Remove_Point_Polygone(polygone_id, id) };
-	label.innerText = "❌"
-	label.classList.add("coord_poly_delete")
-	onepoint.appendChild(label)
-
-	points.appendChild(onepoint)
 }
 
 function Remove_Point_Polygone(polygone_id, point_id)
@@ -573,8 +747,19 @@ function RemovePolygone(name)
 	Regenerate();
 }
 
+function RemoveCircle(name)
+{
+	let element = document.getElementById(name);
+	element.parentNode.removeChild(element);
+	let id = parseInt(name.substring(3));
+	objects.splice(objects.findIndex(element => element.id == id && element.type == "circle"), 1);
+	Regenerate();
+}
+
 function menu_changed()
 {
+	objects = [];
+	document.getElementById("object_list").innerHTML = "";
 	document.getElementById("param_repere").classList.add("hiddenparam")
 	document.getElementById("param_axe").classList.add("hiddenparam")
 	document.getElementById("param_quadrillage").classList.add("hiddenparam")
@@ -629,6 +814,8 @@ function Draw_Objects(width, height, xs, xe, ys, ye)
 				Point(obj, width, height, xs, xe, ys, ye)
 			if (obj.type == "polygone")
 				Polygone(obj, width, height, xs, xe, ys, ye)
+			if (obj.type == "circle")
+				Circle(obj, width, height, xs, xe, ys, ye)
 		}
 		catch(e){
 			console.log(e)
@@ -863,7 +1050,7 @@ function Polygone(obj, width, height, xs, xe, ys, ye)
 	let fill = document.getElementById("pol" + obj.id + "_fill").checked
 	let fill_color = document.getElementById("pol" + obj.id + "_fill_color").value
 	
-	let polygone = draw_polygone(points, true);
+	let polygone = draw_polygone(points, points.length > 2);
 	if (fill)
 	{
 		polygone.attr(
@@ -889,6 +1076,56 @@ function Polygone(obj, width, height, xs, xe, ys, ye)
 			}
 		)
 	}
+}
+
+function Circle(obj, width, height, xs, xe, ys, ye)
+{
+	var name = "cir" + obj.id
+	let px= document.getElementById(name + "_px").valueAsNumber
+	let py = document.getElementById(name + "_py").valueAsNumber
+	let as = document.getElementById(name + "_as").valueAsNumber;
+	let ae = document.getElementById(name + "_ae").valueAsNumber
+	let radius = document.getElementById(name + "_radius").valueAsNumber
+	let stroke = document.getElementById(name + "_stroke").valueAsNumber
+	let strokecolor = document.getElementById(name + "_stroke_color").value
+	let dashstyle = document.getElementById(name + "_style").value
+	let fill = document.getElementById(name + "_fill").checked
+	let fill_color = document.getElementById(name + "_fill_color").value
+
+	let p = {
+		x: Gen_Margin + 5 + (px - xs)/(xe - xs) * width,
+		y: Canvas_height - Gen_Margin - 5 - (py - ys)/(ye - ys) * height
+	}
+	var rx = (radius - Math.min(xs, xe))/Math.abs(xe - xs) * width
+	var ry = (radius - Math.min(ys, ye))/Math.abs(ye - ys) * height
+	if (ye < ys) {as *= -1;ae *= -1;}
+	var element = draw_ellipse_arc(p, as, ae, rx, ry, fill);
+	if (fill)
+	{
+		element.attr(
+			{
+				stroke: strokecolor,
+				"stroke-width": stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": dashstyle,
+				"fill": fill_color
+			}
+		)
+	}
+	else
+	{
+		element.attr(
+			{
+				stroke: strokecolor,
+				"stroke-width": stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": dashstyle
+			}
+		)
+	}
+
 }
 
 function RepereGradue()
@@ -1347,6 +1584,46 @@ function draw_polygone(points, close = true)
 		return paper.path(txt);
 }
 
+function Round(value, decimal = 0)
+{
+	return Math.round(value * Math.pow(10, decimal)) / Math.pow(10, decimal)
+}
+
+function draw_ellipse_arc(center, stara, enda, rx, ry, close = true)
+{
+	let sx = Round(center.x + rx * Math.cos(stara * Math.PI / 180.0),3);
+	let sy = Round(center.y + ry * Math.sin(stara * Math.PI / 180.0),3);
+
+	let ex = Round(center.x + rx * Math.cos(enda * Math.PI / 180.0),3);
+	let ey = Round(center.y + ry * Math.sin(enda * Math.PI / 180.0),3);
+
+	let txt = "M" + sx + " " + sy + " A ";
+	txt += Round(rx,3) + " " + Round(ry,3) + " 0 ";
+	if (Math.abs(enda - stara) < 360)
+	{
+		if (Math.abs(enda - stara) > 180)
+			txt += "1 "
+		else
+			txt += "0 "
+		if (enda < stara)
+			txt += "0 "
+		else
+			txt += "1 " 
+		
+		txt += ex + " " + ey
+		if (close)
+		{
+			txt += "L" + center.x + " " + center.y;
+			return paper.path(txt + "Z");
+		}
+		else
+			return paper.path(txt);
+	}
+	else
+	{
+		return paper.ellipse(center.x, center.y, rx, ry);
+	}
+}
 
 
 function Save()

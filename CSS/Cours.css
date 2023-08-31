@@ -178,6 +178,14 @@ table.centertext {
     text-align: center;
 }
 
+.borderfull td{
+    padding: 5px;
+    border: solid var(--Texte) 1px;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .definition {
     border: 1px solid var(--SectionSecondaire);
     box-shadow: -5px -5px lightgray;

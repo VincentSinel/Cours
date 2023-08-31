@@ -18,7 +18,8 @@ class BrevetObject
 
     static BrevetPeriode = [
         "Normale",
-        "Rattrapage"
+        "Rattrapage",
+		"Secours"
     ];
 
     static BrevetDifficulty = [
