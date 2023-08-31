@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 499.06 343.16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e30613;
+      }
+
+      .cls-2 {
+        fill: url(#Damier_4);
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-3 {
+        fill: url(#Damier_3);
+      }
+
+      .cls-4 {
+        fill: #f9b233;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+    </style>
+    <pattern id="Damier_3" data-name="Damier 3" x="0" y="0" width="28.35" height="28.35" patternTransform="translate(-19.62 -22.15)" patternUnits="userSpaceOnUse" viewBox="0 0 28.35 28.35">
+      <g>
+        <rect class="cls-5" x="0" y="0" width="28.35" height="28.35"/>
+        <rect class="cls-1" x="21.26" y="21.26" width="14.17" height="14.17"/>
+        <rect class="cls-1" x="-7.09" y="21.26" width="14.17" height="14.17"/>
+        <rect class="cls-1" x="7.09" y="7.09" width="14.17" height="14.17"/>
+        <rect class="cls-1" x="21.26" y="-7.09" width="14.17" height="14.17"/>
+        <rect class="cls-1" x="-7.09" y="-7.09" width="14.17" height="14.17"/>
+      </g>
+    </pattern>
+    <pattern id="Damier_4" data-name="Damier 4" x="0" y="0" width="28.35" height="28.35" patternTransform="translate(-19.62 -22.15)" patternUnits="userSpaceOnUse" viewBox="0 0 28.35 28.35">
+      <g>
+        <rect class="cls-5" y="0" width="28.35" height="28.35"/>
+        <rect class="cls-4" x="21.26" y="21.26" width="14.17" height="14.17"/>
+        <rect class="cls-4" x="-7.09" y="21.26" width="14.17" height="14.17"/>
+        <rect class="cls-4" x="7.09" y="7.09" width="14.17" height="14.17"/>
+        <rect class="cls-4" x="21.26" y="-7.09" width="14.17" height="14.17"/>
+        <rect class="cls-4" x="-7.09" y="-7.09" width="14.17" height="14.17"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect class="cls-3" x="1.5" y="199.93" width="141.73" height="141.73"/>
+  <rect class="cls-2" x="157.41" y="1.5" width="340.16" height="340.16"/>
+</svg>

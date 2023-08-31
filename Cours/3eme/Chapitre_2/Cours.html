@@ -23,6 +23,24 @@
       border-bottom: solid 1px;
     }
 
+    .casetable{
+      text-align: center;
+    }
+    .casetable th{
+      font-weight: bold;
+      background-color: lightgray;
+      font-size: 20px;
+    }
+    .casetable td{
+      padding: 5px 30px;
+    }
+    .casetable tr th:first-child {
+      border-right: double black 5px;
+    }
+    .casetable tr td:first-child {
+      border-right: double black 5px;
+    }
+
   </style>
 
 </head>
@@ -129,7 +147,7 @@
           Une homothétie de rapport k=-1 correspond à une symétrie centrale.
         </div>
       <h2>Cas particuliers :</h2>
-        <table class="">
+        <table class="casetable">
           <tr>
             <th>
               Cas des aires
@@ -140,18 +158,20 @@
           </tr>
           <tr>
             <td>
-              <img src="Images/Construction Homothétie k positif.svg" style="max-height: 4cm;">
+              <img src="Images/Surface.svg" style="max-height: 4cm;">
             </td>
             <td>
-              <img src="Images/Construction Homothétie k negatif.svg" style="max-height: 4cm;">
+              <img src="Images/Volume.svg" style="max-height: 4cm;">
             </td>
           </tr>
           <tr>
             <td>
-              <p>Construction de l'image du point M par rapport à O d'un rapport k = 4.</p>
+              <p>Lors d'une homothétie, l'aires<br>est multiplié par :</p>
+              <p class="CRed">$k^2$</p>
             </td>
             <td>
-              <p>Construction de l'image du point M par rapport à O d'un rapport k = -2.</p>
+              <p>Lors d'une homothétie, le volume<br>est multiplié par :</p>
+              <p class="CRed">$k^3$</p>
             </td>
           </tr>
         </table>

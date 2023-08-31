@@ -10,7 +10,7 @@ var ListeCours = {
             id: 2,
             nom: "Homothéties",
             icone: 2,
-            ready : false,
+            ready : true,
         },
         {
             id: 3,
