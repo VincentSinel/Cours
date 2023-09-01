@@ -7,7 +7,7 @@ var nbr_simulation = 6000;
 var objects = [
 ];
 window.onload = function(){
-	paper = Raphael("preview", Canvas_width, Canvas_height);
+	paper = Raphael("preview", "100%", "100%");
 	Regenerate()
 }
 
@@ -116,7 +116,8 @@ function Regenerate()
 
 	element = draw_polygone(points, false);
 	element.attr(style)
-
+	
+    paper.setViewBox(0, 0, Canvas_width, Canvas_height, true)
 }
 
 function draw_line(sx, sy, ex, ey)

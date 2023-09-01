@@ -406,5 +406,5 @@ ol > li::marker {
 }
 .bordertable td,
 .bordertable th{
-    min-width: 2cm;
+    width: 2cm;
 }

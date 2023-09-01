@@ -176,7 +176,7 @@
         <span class="CRed">représentation graphique</span> de la fonction $f$.
       </p>
       <div id="preview" class="flexobject">
-        <div id="canvas"></div>
+        <div id="canvas" style="width: 480px; height: auto;"></div>
         <div>
           <p>$f(x) = -0,5x^3 + 0,5x^2 + 0,6x + 1,5$</p>
           <p>$x$ = <span id="func_valx"></span></p>
@@ -238,7 +238,7 @@
   var Gen_Margin = 25;
   var paper = null;
   window.onload = function(){
-    paper = Raphael("canvas", Canvas_width, Canvas_height);
+    paper = Raphael("canvas", "100%", "100%");
     Regenerate()
   }
   function Regenerate()
@@ -362,6 +362,8 @@
     };
 
     RepereGradue(paper, data);
+
+    paper.setViewBox(0, 0, Canvas_width, Canvas_height, true)
   }
 </script>
 </html>

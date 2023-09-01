@@ -59,7 +59,7 @@ class Animation_Data
         console.log(window.innerWidth)
         this.hopew = parseInt(this.divcontent.attributes["width"].value) - 2;
         this.hopeh = parseInt(this.divcontent.attributes["height"].value) - 2
-        let selectedw = Math.min(this.hopew, window.innerWidth - 30)
+        let selectedw = Math.min(this.hopew, document.body.offsetWidth)
         canvas.width = selectedw;
         canvas.height = selectedw / this.hopew * this.hopeh;
         let animmenu = document.createElement("div");
@@ -96,7 +96,7 @@ class Animation_Data
 
     ResizeCanvas()
     {
-        let selectedw = Math.min(this.hopew, window.innerWidth - 30)
+        let selectedw = Math.min(this.hopew, document.body.offsetWidth)
         this.Context.canvas.width = selectedw;
         this.Context.canvas.height = selectedw / this.hopew * this.hopeh;
     }

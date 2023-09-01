@@ -2,7 +2,7 @@ var zoom = 1.0;
 var position = {x: 240, y: 180};
 var img = new Image();
 img.src = "Images/BasePavage.png"
-img.onload = function() { Refresh() }
+img.onload = function() { Resize() }
 var canvas = document.getElementById("pavagesCanvas");
 var ctx = canvas.getContext("2d");
 var w = 0;
@@ -12,8 +12,12 @@ var dh;
 var maxcount;
 var drawn = [];
 
-window.onresize = function() {
-    canvas.width = Math.min(480, window.innerWidth - 20)
+window.onresize = function() { Resize() }
+
+
+function Resize()
+{
+    canvas.width = Math.min(480, document.body.offsetWidth)
     canvas.height = 360 * canvas.width / 480;
     Refresh()
 }
