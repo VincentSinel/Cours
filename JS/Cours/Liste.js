@@ -28,7 +28,7 @@ var ListeCours = {
             id: 5,
             nom: "Transformations",
             icone: 2,
-            ready : false,
+            ready : true,
         },
         {
             id: 6,
