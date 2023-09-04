@@ -17,6 +17,15 @@
   <title>Chapitre 6 - Factorisation développement</title>
 
   <style>
+    .behindobj{
+      z-index: -1; 
+      left: 0; 
+      position: absolute;
+    }
+    .behindparent{
+      display: inline;
+      position: relative;
+    }
   </style>
 
 </head>
@@ -35,10 +44,166 @@
   </table>
 
   <p class="exemple">
-    Activité Introduction
-  </p>
+		Activité Introduction
+	</p>
+	<p>
+		Effectuer le développement suivant :<br>
+		$A(5x+8)$<br>
+		On peut développer de la même manière :<br>
+		$(3x+2)(5x+8)$<br>
+		$(3x+2)$ joue alors de le rôle de $A$.<br>
+		Développer $5x(3x+2) + 8(3x+2)$ et montrer que l'on obtient bien $15x^2+34x+16$<br>
+		Ce calcul s'appel une double distributivité car on effectue une distributivité simple deux fois.
+	</p>
+	<h1>Développement et factorisation simple :</h1>
+		<div class="definition">
+			La distributivité $k\times(m+n) = k\times m + k\times n$ permet d'écrire un produit 
+			entre un nombre et une somme comme une somme de deux produits. 
+            <table class="center">
+				<tr>
+				  	<td colspan="3" class="DRed">Factorisation</td>
+				</tr>
+				<tr style="line-height: 9px;">
+					<td colspan="3">
+						<img style="transform: scaleX(-1)" height="20px" src="Images/Fleche.svg">
+					</td>
+				</tr>
+				<tr>
+					<td>$\textcolor{#C00000}{k}\times(\textcolor{#0070C0}{m+n})$</td>
+					<td style="width: 2cm;">=</td>
+					<td>$\textcolor{#C00000}{k}\times \textcolor{#0070C0}{m}+
+					\textcolor{#C00000}{k}\times \textcolor{#0070C0}{n}$</td>
+				</tr>
+				<tr style="line-height: 9px;">
+					<td colspan="3">
+					<img height="20px" src="Images/Fleche.svg">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" class="DRed">Développement</td>
+				</tr>
+            </table>
+			<span class="CRed">Développer</span> une expression c'est transformer un produit en somme. 
+			Dans l'autre sens on dit que l'on <span class="CRed">factorise</span> une expression. 
+			Le facteur k est alors appelé <span class="CRed">facteur commun</span>. 
+		</div>
+		<p class="exemple">Exemples :</p>
+		<p>Développement : On multiplie chaque terme dans la parenthèse par le facteur se trouvant devant.</p>
+		<div class="behindparent">
+			<p style="display: inline; margin-left: 3px;">
+				$\textcolor{#ED1C24}{2x}(3x+5)$ $=
+				\textcolor{#ED1C24}{2x}\times3x + \textcolor{#ED1C24}{2x}\times5$ $=
+				6x^2+10x$
+			</p>
+			<img class="behindobj" style="top: -15px; " height="40px" src="Images/Developpement.svg">
+		</div>
+		<p>Factorisation : On trouve un facteur commun à chaque terme.</p>
+		<p>
+			$8x+12 = \textcolor{#ED1C24}{4}\times2x + \textcolor{#ED1C24}{4}\times3 = \textcolor{#ED1C24}{4}(2x+3)$
+		</p>
+		<p class="remarque">Remarques :</p>
+			<ul>
+				<li>
+					Le cas de figure suivant peut se présenter, on prend alors l'<b>opposé</b> de chacun des termes entre parenthèses :<br>
+					$-(3x-7) = -3x + 7$
+				</li>
+				<li>
+					Lorsque l'on regroupe des termes d'une même famille, on dit que l'on réduit.
+				</li>
+			</ul>
+        </p>
+	<h1>Double distributivité :</h1>
+		<h2>Cas générale :</h2>
+			<div class="definition">
+				<p>
+					La distributivité s'applique aussi lorsque l'on multiplie deux expressions entre parenthèses:<br>
+					$(\textcolor{#C00000}{k}+\textcolor{#C00000}{l})\times(\textcolor{#0070C0}{m}+\textcolor{#0070C0}{n})
+					= \textcolor{#C00000}{k}\times(\textcolor{#0070C0}{m}+\textcolor{#0070C0}{n})+
+					\textcolor{#C00000}{l}\times(\textcolor{#0070C0}{m}+\textcolor{#0070C0}{n})$ $
+					= \textcolor{#C00000}{k}\times\textcolor{#0070C0}{m} + \textcolor{#C00000}{k}\times\textcolor{#0070C0}{n} + 
+					\textcolor{#C00000}{l}\times\textcolor{#0070C0}{m} + \textcolor{#C00000}{l}\times\textcolor{#0070C0}{n}$<br>
+				</p>
+				
+				<div class="behindparent">
+					<p style="display: inline; margin-left: 3px;">
+						$(\ \textcolor{#C00000}{k}\ +\ \textcolor{#C00000}{l}\ )\times(\textcolor{#0070C0}{m}+\textcolor{#0070C0}{n})$
+					</p>
+					<img class="behindobj" style="top: -15px; left: 4px;" height="60px" src="Images/Developpement2.svg">
+				</div>
+				<div style="height: 20px;"></div>
+			</div>
+			<p class="exemple">Exemple :</p>
+			<div class="behindparent">
+				<p style="position: relative; display: inline; margin-left: 3px; top: 6px;line-height: 40px;">
+					$(\ x \ +\ 2\ )\times(2x+7)$ $=x\times2x+x\times7+2\times2x+2\times7$ $=2x^2+7x+4x+14=2x^2+22x+14$
+				</p>
+				<img class="behindobj" style="top: -12px; left: 5px;" height="70px" width="165px" src="Images/Developpement2.svg">
+			</div>
+			<p>
+				Il est plus facile de prendre le nombre avec son signe dans 
+				les calculs, cela permet de ne faire ques des addition et limite les erreurs de signes.<br>
+				<span style="line-height: 40px;">
+					$(-3x+8)(5x-3)$ $=(-3x)\times5x+(-3x)\times(-3)+8\times5x+8\times(-3)$ $=-15x^2+9x+40x-24=-15x^2+49x-24$
+				</span>
+			</p>
+		<h2>Cas particuliers :</h2>
+			<p>
+				Il existe trois formule de double distributivité fortement utiliser car elle permettent de factoriser une expressions.<br>
+				Ces formules sont appelées <b>identité remarquables</b>.
+			</p>	
+			<div class="definition">
+				$(\textcolor{#e53935}{a}+\textcolor{#039be5}{b})^2=
+				\textcolor{#e53935}{a}^2 + 
+				2\textcolor{#e53935}{a}\textcolor{#039be5}{b} +
+				\textcolor{#039be5}{b}^2$
+			</div>
+			<p class="exemple">Exemple :</p>
+			<p style="line-height: 40px;">
+				$(3x+7)^2=(3x)^2+2\times3x\times7+7^2$ $=9x^2+42x+49$
+			</p>
+			<p>
+				Démonstration :<br>
+				<span style="line-height: 40px;">
+					$(a+b)^2=(a+b)(a+b)$ $=a\times a+a\times b+b\times a+b\times b$ $=
+					a^2+ab+ab+b^2=a^2+2ab+b^2$
+				</span>
+			</p>
+			<div class="definition">
+				$(\textcolor{#e53935}{a}-\textcolor{#039be5}{b})^2=
+				\textcolor{#e53935}{a}^2 - 
+				2\textcolor{#e53935}{a}\textcolor{#039be5}{b} +
+				\textcolor{#039be5}{b}^2$
+			</div>
+			<p class="exemple">Exemple :</p>
+			<p style="line-height: 40px;">
+				$(5x-3)^2=(5x)^2-2\times5x\times3+3^2$ $=25x^2-30x+9$
+			</p>
+			<p>
+				Démonstration :<br>
+				<span style="line-height: 40px;">
+					$(a-b)^2=(a-b)(a-b)$ $=a\times a+a\times (-b)+(-b)\times a+(-b)\times (-b)$ $=
+					a^2-ab-ab+b^2=a^2-2ab+b^2$
+				</span>
+			</p>
+			<div class="definition">
+				$(\textcolor{#e53935}{a}-\textcolor{#039be5}{b})(\textcolor{#e53935}{a}+\textcolor{#039be5}{b})=
+				\textcolor{#e53935}{a}^2 -
+				\textcolor{#039be5}{b}^2$
+				$\ \ \ \ \ $ <span class="CRed">(Celle-ci est la seul a connaitre par coeur au collège)</span>
+			</div>
+			<p class="exemple">Exemple :</p>
+			<p>
+				$(8x-3)(8x+3)=(8x)^2-3^2=64x^2-9$
+			</p>
+			<p>
+				Démonstration :<br>
+				<span style="line-height: 40px;">
+					$(a-b)(a+b)$ $=a\times a+a\times b+(-b)\times a+(-b)\times b$ $=
+					a^2+ab-ab-b^2$ $=a^2-b^2$
+				</span>
+			</p>
 
-  
+
 
 </body>
 
