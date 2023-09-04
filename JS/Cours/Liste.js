@@ -34,7 +34,7 @@ var ListeCours = {
             id: 6,
             nom: "Factorisations développements",
             icone: 1,
-            ready : false,
+            ready : true,
         },
         {
             id: 7,
