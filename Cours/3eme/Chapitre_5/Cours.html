@@ -7,8 +7,10 @@
   <link rel="stylesheet" href="/CSS/Cours.css"> 
   <link rel="stylesheet" href="/CSS/Cours.css"> 
 
+  <script src="/JS/Svg.js/svg.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
   <script src="JS/Transformation.js"></script>
+  <script src="JS/Pavage.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
@@ -53,6 +55,19 @@
   <p class="exemple">
     Activité Introduction
   </p>
+  <div class="flexobject">
+    <div id="activiteIntro"></div>
+    <div>
+      Completer :
+      <ul>
+        <li>La figure __ est l'image de la figure 4 par la symétrie de centre A</li>
+        <li>La figure 4 est l'image de la figure __ par la rotation de centre A ; de 90° dans le sens anti-horaire</li>
+        <li>La figure 1 est l'image de la figure 8 par la translation de __ en __</li>
+        <li>La figure 3 est l'image de la figure __ par la symétrie d'axe (GL)</li>
+        <li>La figure 5 est l'image de la figure 1 par la rotation de centre __ ; de __° dans le sens __</li>
+      </ul>
+    </div>
+  </div>
 
   <h1>Symétrie axiale</h1>
     <div class="definition">
@@ -115,5 +130,31 @@
     <div id="homothetie3"></div>
 
 </body>
-
+<script>
+  let client = new XMLHttpRequest();
+    client.open('GET', 'Images/Lobster.svg');
+    client.onreadystatechange = function(state) {
+        if (client.readyState == 4)
+        {
+            lobster1img = client.responseText
+            if (lobster2img != "")
+                Init()
+        }
+    }
+    client.send();
+    let client2 = new XMLHttpRequest();
+    client2.open('GET', 'Images/Lobster2.svg');
+    client2.onreadystatechange = function(state) {
+        if (client2.readyState == 4)
+        {
+            lobster2img = client2.responseText
+            if (lobster1img != "")
+                Init()
+        }
+    }
+    client2.send();
+    
+    pavage = new Pavage();
+    pavage.DrawPavage();
+</script>
 </html>

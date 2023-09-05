@@ -2,36 +2,8 @@ var lobster1img = "";
 var lobster2img = "";
 
 
-window.onload = function(){
-    let client = new XMLHttpRequest();
-    client.open('GET', 'Images/Lobster.svg');
-    client.onreadystatechange = function(state) {
-        if (client.readyState == 4)
-        {
-            lobster1img = client.responseText
-            if (lobster2img != "")
-                Init()
-        }
-    }
-    client.send();
-    let client2 = new XMLHttpRequest();
-    client2.open('GET', 'Images/Lobster2.svg');
-    client2.onreadystatechange = function(state) {
-        if (client2.readyState == 4)
-        {
-            lobster2img = client2.responseText
-            if (lobster1img != "")
-                Init()
-        }
-    }
-    client2.send();
-}
-
-
 function Init()
 {
-    console.log(lobster2img)
-    console.log(lobster1img)
     Draw_SymAxial();
     Draw_SymCentral();
     Draw_Translation();
