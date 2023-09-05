@@ -14,6 +14,9 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/Images/favicon-16x16.png">
 		<link rel="manifest" href="/Images/site.webmanifest">
+
+		<style>
+		</style>
 	</head>
 	<body>
 		<div class="nav-header">
@@ -35,9 +38,9 @@
 		</div>
 
 		<div class="content">
-			<div>
-				<div style="background-color: white;">
-					<div id="preview"></div>
+			<div style="max-height: 100%; ">
+				<div class="content_container">
+					<div id="preview" style="background-color: white;"></div>
 				</div>
 				<div>
 					<button onclick="Save()">Enregistrer en SVG</button>
@@ -49,14 +52,14 @@
 		<div class="param">
 			<select id="gen_type" onchange="menu_changed()">
 				<option value="type1">Repère gradué</option>
-				<option value="type2">Axe gradué (En cours de création)</option>
+				<option value="type2">Axe gradué</option>
 				<option value="type3">Quadrillage</option>
 			</select>
 			<p style="text-align: center;">Paramètres</p>
 			<button class="regenerate" onclick="Regenerate()">Regénérer</button>
 			<div class="panel leftpanel">
-				<div style="width: 100%;" id="param_repere">
-					<div class="formemenu show">
+				<div style="width: 100%;" id="param_repere" class="hiddenparam">
+					<div class="formemenu">
 						<span>Axe horizontal</span>
 						<div class="formemenu_div">
 							<label>Nombre de section principale:</label>
@@ -173,7 +176,53 @@
 					</div>
 				</div>
 				<div style="width: 100%;" id="param_axe" class="hiddenparam">
-					Cet outils n'est pas encore disponible
+					<div class="formemenu">
+						<span>Paramètre principaux</span>
+						<div class="formemenu_div">
+							<label>Nombre de section principale:</label>
+							<input id="axe_pri_nbr" type="number" value="6" step="1" min="1" onchange="Regenerate()">
+							<label>Nombre de section secondaire:</label>
+							<input id="axe_sec_nbr" type="number" value="5" step="1" min="1" onchange="Regenerate()">
+							<label>Première valeur de l'axe:</label>
+							<input id="axe_start" type="number" value="-3" step="1" onchange="Regenerate()">
+							<label>Pas :</label>
+							<input id="axe_pas" type="number" value="1" step="1" onchange="Regenerate()">
+							<input id="axe_text" type="checkbox" style="width: auto;" checked onchange="Regenerate()">
+							<label for="axe_text" style="width: auto;">Générer le texte</label><br>
+							<select id="axe_text_pos" onchange="Regenerate()">
+								<option value="down">En dessous</option>
+								<option value="up">Au dessus</option>
+							</select>
+							<label>Taille texte :</label>
+							<input id="axe_text_size" type="number" value="12" step="2" onchange="Regenerate()">
+							<label>Offset y :</label>
+							<input id="axe_text_offset" type="number" value="0" step="5" onchange="Regenerate()">
+						</div>
+					</div>
+					<div class="formemenu">
+						<span>Traits principaux</span>
+						<div class="formemenu_div">
+							<label>Epaisseur:</label>
+							<input id="axe_line_pry_stroke" type="number" value="3" step="1" min="1" onchange="Regenerate()">
+							<label>Couleur:</label>
+							<input id="axe_line_pry_color" type="color" value="#000000" onchange="Regenerate()">
+							<label>Taille des graduations:</label>
+							<input id="axe_line_pry_pin_size" type="number" value="10" step="1" min="0" onchange="Regenerate()">
+							<label>Taille de la flêche:</label>
+							<input id="axe_line_pry_arrow" type="number" value="5" step="1" min="0" onchange="Regenerate()">
+						</div>
+					</div>
+					<div class="formemenu">
+						<span>Traits secondaires</span>
+						<div class="formemenu_div">
+							<label>Epaisseur:</label>
+							<input id="axe_line_sec_stroke" type="number" value="2" step="1" min="1" onchange="Regenerate()">
+							<label>Couleur:</label>
+							<input id="axe_line_sec_color" type="color" value="#000000" onchange="Regenerate()">
+							<label>Taille des graduations:</label>
+							<input id="axe_line_sec_pin_size" type="number" value="5" step="1" min="0" onchange="Regenerate()">
+						</div>
+					</div>
 				</div>
 				<div class="formemenu">
 					<span>Rendu final</span>

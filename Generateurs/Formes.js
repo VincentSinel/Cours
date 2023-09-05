@@ -9,6 +9,7 @@ var objects = [
 ];
 window.onload = function(){
 	paper = Raphael("preview", Canvas_width, Canvas_height);
+	menu_changed()
 	Regenerate()
 }
 
@@ -796,847 +797,193 @@ function Regenerate()
 	paper.setSize(Canvas_width, Canvas_height);
 	paper.clear();
 
+	let data = {};
+    data["Canvas_width"] = Canvas_width;
+    data["Canvas_height"] = Canvas_height;
+    data["Gen_Margin"] = Gen_Margin;
+    data["objects"] = Get_Objects();
+
 	let type = document.getElementById("gen_type").selectedIndex;
 	if (type == 0)
-		RepereGradue();
+		Draw_RepereGradue(data);
 	if (type == 1)
-		AxeGradue();
+		Draw_AxeGradue(data);
 	if (type == 2)
-		Quadrillage();
+		Draw_Quadrillage(data);
 }
 
-function Draw_Objects(width, height, xs, xe, ys, ye)
+function Get_Objects()
 {
+	let data = [];
 	objects.forEach(obj => {
 		try{
 			if (obj.type == "courbe")
-				Courbe(obj, width, height, xs, xe, ys, ye)
+				data.push(Get_Courbe(obj))
 			if (obj.type == "point")
-				Point(obj, width, height, xs, xe, ys, ye)
+				data.push(Get_Point(obj))
 			if (obj.type == "polygone")
-				Polygone(obj, width, height, xs, xe, ys, ye)
+				data.push(Get_Polygone(obj))
 			if (obj.type == "circle")
-				Circle(obj, width, height, xs, xe, ys, ye)
+				data.push(Get_Circle(obj))
 		}
 		catch(e){
 			console.log(e)
 		}
 	});
+	return data;
 }
 
-var x = 0;
-function Courbe(obj, width, height, xs, xe, ys, ye)
+function Get_Courbe(obj)
 {
-	console.log(obj.id)
-	let formule = document.getElementById("for" + obj.id + "_text").value;
-	let stroke = document.getElementById("for" + obj.id + "_stroke").valueAsNumber
-	let strokecolor = document.getElementById("for" + obj.id + "_stroke_color").value
-	let dashstyle = document.getElementById("for" + obj.id + "_style").value
-	let start = document.getElementById("for" + obj.id + "_start").valueAsNumber
-	let end = document.getElementById("for" + obj.id + "_end").valueAsNumber
-	
-
-	// let data = 
-	// {
-	// 	"Canvas_width": document.getElementById("gen_width").valueAsNumber,
-	// 	"Canvas_height": document.getElementById("gen_height").valueAsNumber,
-	// 	"Gen_Margin": document.getElementById("gen_margin").valueAsNumber,
-	// 	"formule": document.getElementById("for" + obj.id + "_text").value,
-	// 	"stroke": document.getElementById("for" + obj.id + "_stroke").valueAsNumber,
-	// 	"strokecolor": document.getElementById("for" + obj.id + "_stroke_color").value,
-	// 	"dashstyle": document.getElementById("for" + obj.id + "_style").value,
-	// 	"start": document.getElementById("for" + obj.id + "_start").valueAsNumber,
-	// 	"end": document.getElementById("for" + obj.id + "_end").valueAsNumber,
-	// };
-
-	
-	if (formule == "" || formule == " ") return;
-	let dx = (xe - xs) / width;
-	let points = [[]];
-	let index = 0
-	let inside = false
-	x = Math.max(start, xs)
-	let y = Function('"use strict";return (' + formule + ')')()
-	if (y > ys && y < ye)
-	{
-		points[index].push({
-			x: Gen_Margin + 5 + (x - xs)/(xe - xs) * width,
-			y: Canvas_height - Gen_Margin - 5 - (y - ys)/(ye - ys) * height});
-		inside = true;
-	}
-	
-	for(let px = 0; px < width; px++)
-	{
-		x = xs + dx * px;
-		if (x > start && x < end)
-		{
-			y = Function('"use strict";return (' + formule + ')')();
-			if (y > ys && y < ye)
-			{
-				points[index].push({
-					x: Gen_Margin + 5 + (x - xs)/(xe - xs) * width,
-					y: Canvas_height - Gen_Margin - 5 - (y - ys)/(ye - ys) * height});
-				inside = true;
-			}
-			else if (inside)
-			{
-				y = Math.max(ys, Math.min(ye, y))
-				points[index].push({
-					x: Gen_Margin + 5 + (x - xs)/(xe - xs) * width,
-					y: Canvas_height - Gen_Margin - 5 - (y - ys)/(ye - ys) * height});
-				points.push([])
-				index += 1;
-				inside = false;
-			}
-		}
-	}
-	x = Math.min(end, xe)
-	y = Function('"use strict";return (' + formule + ')')()
-	if (y > ys && y < ye)
-	{
-		points[index].push({
-			x: Gen_Margin + 5 + (x - xs)/(xe - xs) * width,
-			y: Canvas_height - Gen_Margin - 5 - (y - ys)/(ye - ys) * height});
-	}
-	points.forEach(poly => {
-		if (poly.length > 1)
-		{
-			element = draw_polygone(poly, false);
-			element.attr(
-				{
-					stroke: strokecolor,
-					"stroke-width": stroke,
-					"stroke-linecap": "round",
-					"stroke-linejoin": "round",
-					"stroke-dasharray": dashstyle
-				}
-			)
-		}
-	})
+	var name = "for" + obj.id;
+	data = {
+		"type": "courbe",
+		"formule": document.getElementById(name + "_text").value,
+		"stroke": document.getElementById(name + "_stroke").valueAsNumber,
+		"strokecolor": document.getElementById(name + "_stroke_color").value,
+		"dashstyle": document.getElementById(name + "_style").value,
+		"start": document.getElementById(name + "_start").valueAsNumber,
+		"end": document.getElementById(name + "_end").valueAsNumber,
+	};
+	return data;
 }
 
-function Point(obj, width, height, xs, xe, ys, ye)
+function Get_Point(obj)
 {
-	let px= document.getElementById("poi" + obj.id + "_px").valueAsNumber
-	let py = document.getElementById("poi" + obj.id + "_py").valueAsNumber
-	let name = document.getElementById("poi" + obj.id + "_text").value;
-	let tx = document.getElementById("poi" + obj.id + "_tx").valueAsNumber;
-	let ty = document.getElementById("poi" + obj.id + "_ty").valueAsNumber
-	let txt_size = document.getElementById("poi" + obj.id + "_text_size").valueAsNumber
-	let type = document.getElementById("poi" + obj.id + "_type").selectedIndex
-	let size = document.getElementById("poi" + obj.id + "_size").value
-	let stroke = document.getElementById("poi" + obj.id + "_stroke").value
-	let strokecolor = document.getElementById("poi" + obj.id + "_stroke_color").value
-	let dashstyle = document.getElementById("poi" + obj.id + "_style").value
-
-	let p = {
-		x: Gen_Margin + 5 + (px - xs)/(xe - xs) * width,
-		y: Canvas_height - Gen_Margin - 5 - (py - ys)/(ye - ys) * height
+	var name = "poi" + obj.id;
+	let data = {
+		"type": "point",
+		"px": document.getElementById(name + "_px").valueAsNumber,
+		"py": document.getElementById(name + "_py").valueAsNumber,
+		"name": document.getElementById(name + "_text").value,
+		"tx": document.getElementById(name + "_tx").valueAsNumber,
+		"ty": document.getElementById(name + "_ty").valueAsNumber,
+		"txt_size": document.getElementById(name + "_text_size").valueAsNumber,
+		"type_point": document.getElementById(name + "_type").selectedIndex,
+		"size": document.getElementById(name + "_size").value,
+		"stroke": document.getElementById(name + "_stroke").value,
+		"strokecolor": document.getElementById(name + "_stroke_color").value,
+		"dashstyle": document.getElementById(name + "_style").value,
 	}
-
-	if(type == 0)
-	{
-		let line = draw_line(p.x, p.y - size / 2.0, p.x, p.y + size / 2.0);
-		line.attr(
-			{
-				stroke: strokecolor,
-				"stroke-width": stroke,
-				"stroke-linecap": "round",
-				"stroke-linejoin": "round",
-				"stroke-dasharray": dashstyle
-			}
-		)
-		line = draw_line(p.x - size / 2.0, p.y, p.x + size / 2.0, p.y);
-		line.attr(
-			{
-				stroke: strokecolor,
-				"stroke-width": stroke,
-				"stroke-linecap": "round",
-				"stroke-linejoin": "round",
-				"stroke-dasharray": dashstyle
-			}
-		)
-	}
-	else if (type == 1)
-	{
-		let line = draw_line(p.x - size / 2.0, p.y - size / 2.0, p.x + size / 2.0, p.y + size / 2.0);
-		line.attr(
-			{
-				stroke: strokecolor,
-				"stroke-width": stroke,
-				"stroke-linecap": "round",
-				"stroke-linejoin": "round",
-				"stroke-dasharray": dashstyle
-			}
-		)
-		line = draw_line(p.x - size / 2.0, p.y + size / 2.0, p.x + size / 2.0, p.y - size / 2.0);
-		line.attr(
-			{
-				stroke: strokecolor,
-				"stroke-width": stroke,
-				"stroke-linecap": "round",
-				"stroke-linejoin": "round",
-				"stroke-dasharray": dashstyle
-			}
-		)
-	}
-	else if (type == 2)
-	{
-		let c = paper.circle(p.x, p.y, size / 2.0);
-		c.attr(
-			{
-				stroke: strokecolor,
-				"stroke-width": stroke,
-				"stroke-linecap": "round",
-				"stroke-linejoin": "round",
-				"stroke-dasharray": dashstyle
-			}
-		)
-	}
-	else if (type == 3)
-	{
-		let c = paper.circle(p.x, p.y, size / 2.0);
-		c.attr(
-			{
-				fill: strokecolor,
-				"stroke-width": stroke,
-				"stroke-linecap": "round",
-				"stroke-linejoin": "round",
-				"stroke-dasharray": dashstyle
-			}
-		)
-	}
-	else if (type == 4)
-	{
-		let c = paper.circle(p.x, p.y, 1.0);
-		c.attr(
-			{
-				fill: strokecolor,
-				"stroke-width": stroke,
-				"stroke-linecap": "round",
-				"stroke-linejoin": "round",
-				"stroke-dasharray": dashstyle
-			}
-		)
-	}
-
-	if (name != "")
-	{
-		element = paper.text( p.x + tx, p.y + ty, name);
-		element.attr(
-			{
-				fill: "white",
-				stroke: "white",
-				"stroke-width": 5,
-				"font-size": txt_size,
-				"text-anchor": "middle",
-				"font-weight": "bold"
-			}
-		)
-		element = paper.text( p.x + tx, p.y + ty, name);
-		element.attr(
-			{
-				fill: strokecolor,
-				"font-size": txt_size,
-				"text-anchor": "middle",
-			}
-		)
-	}
+	return data;
 }
 
-function Polygone(obj, width, height, xs, xe, ys, ye)
+function Get_Polygone(obj)
 {
-	let points_div = document.getElementById("pol" + obj.id + "points_list");
+	var name = "pol" + obj.id;
+	let points_div = document.getElementById(name + "points_list");
 	let points = [];
 	let list = points_div.getElementsByTagName("div")
 	for (var i = 0; i < list.length; i++) {
-		console.log(list[i].id + "_x")
 		let x = document.getElementById(list[i].id + "_px").valueAsNumber
 		let y = document.getElementById(list[i].id + "_py").valueAsNumber
-		points.push({
-			x: Gen_Margin + 5 + (x - xs)/(xe - xs) * width, 
-			y: Canvas_height - (Gen_Margin + 5 + (y - ys)/(ye - ys) * height)});
+		points.push({ x: x, y: y});
 	}
-
-	let stroke = document.getElementById("pol" + obj.id + "_stroke").valueAsNumber
-	let strokecolor = document.getElementById("pol" + obj.id + "_stroke_color").value
-	let dashstyle = document.getElementById("pol" + obj.id + "_style").value
-	let fill = document.getElementById("pol" + obj.id + "_fill").checked
-	let fill_color = document.getElementById("pol" + obj.id + "_fill_color").value
-	
-	let polygone = draw_polygone(points, points.length > 2);
-	if (fill)
-	{
-		polygone.attr(
-			{
-				stroke: strokecolor,
-				"stroke-width": stroke,
-				"stroke-linecap": "round",
-				"stroke-linejoin": "round",
-				"stroke-dasharray": dashstyle,
-				"fill": fill_color
-			}
-		)
+	let data = {
+		"type": "polygone",
+        "points": points,
+        "fill_color": document.getElementById(name + "_fill_color").value,
+        "fill": document.getElementById(name + "_fill").checked,
+        "stroke": document.getElementById(name + "_stroke").valueAsNumber,
+        "strokecolor": document.getElementById(name + "_stroke_color").value,
+        "dashstyle": document.getElementById(name + "_style").value,
 	}
-	else
-	{
-		polygone.attr(
-			{
-				stroke: strokecolor,
-				"stroke-width": stroke,
-				"stroke-linecap": "round",
-				"stroke-linejoin": "round",
-				"stroke-dasharray": dashstyle
-			}
-		)
-	}
+	return data;
 }
 
-function Circle(obj, width, height, xs, xe, ys, ye)
+function Get_Circle(obj)
 {
 	var name = "cir" + obj.id
-	let px= document.getElementById(name + "_px").valueAsNumber
-	let py = document.getElementById(name + "_py").valueAsNumber
-	let as = document.getElementById(name + "_as").valueAsNumber;
-	let ae = document.getElementById(name + "_ae").valueAsNumber
-	let radius = document.getElementById(name + "_radius").valueAsNumber
-	let stroke = document.getElementById(name + "_stroke").valueAsNumber
-	let strokecolor = document.getElementById(name + "_stroke_color").value
-	let dashstyle = document.getElementById(name + "_style").value
-	let fill = document.getElementById(name + "_fill").checked
-	let fill_color = document.getElementById(name + "_fill_color").value
-
-	let p = {
-		x: Gen_Margin + 5 + (px - xs)/(xe - xs) * width,
-		y: Canvas_height - Gen_Margin - 5 - (py - ys)/(ye - ys) * height
+	let data = {
+		"type": "circle",
+		"px": document.getElementById(name + "_px").valueAsNumber,
+		"py": document.getElementById(name + "_py").valueAsNumber,
+		"as": document.getElementById(name + "_as").valueAsNumber,
+		"ae": document.getElementById(name + "_ae").valueAsNumber,
+		"radius": document.getElementById(name + "_radius").valueAsNumber,
+		"stroke": document.getElementById(name + "_stroke").valueAsNumber,
+		"strokecolor": document.getElementById(name + "_stroke_color").value,
+		"dashstyle": document.getElementById(name + "_style").value,
+		"fill": document.getElementById(name + "_fill").checked,
+		"fill_color": document.getElementById(name + "_fill_color").value,
 	}
-	var rx = (radius - Math.min(xs, xe))/Math.abs(xe - xs) * width
-	var ry = (radius - Math.min(ys, ye))/Math.abs(ye - ys) * height
-	if (ye < ys) {as *= -1;ae *= -1;}
-	var element = draw_ellipse_arc(p, as, ae, rx, ry, fill);
-	if (fill)
-	{
-		element.attr(
-			{
-				stroke: strokecolor,
-				"stroke-width": stroke,
-				"stroke-linecap": "round",
-				"stroke-linejoin": "round",
-				"stroke-dasharray": dashstyle,
-				"fill": fill_color
-			}
-		)
-	}
-	else
-	{
-		element.attr(
-			{
-				stroke: strokecolor,
-				"stroke-width": stroke,
-				"stroke-linecap": "round",
-				"stroke-linejoin": "round",
-				"stroke-dasharray": dashstyle
-			}
-		)
-	}
+	return data;
 
 }
 
-function RepereGradue()
+function Draw_RepereGradue(data)
 {
-	let hor_pri_nbr = document.getElementById("hor_pri_nbr").valueAsNumber;
-	let hor_sec_nbr = document.getElementById("hor_sec_nbr").valueAsNumber;
-	let hor_start = document.getElementById("hor_start").valueAsNumber;
-	let hor_pas = document.getElementById("hor_pas").valueAsNumber;
-	let hor_text = document.getElementById("hor_text").checked;
-	let hor_text_pos = document.getElementById("hor_text_pos").selectedIndex;
-	let hor_text_size = document.getElementById("hor_text_size").valueAsNumber;
-	let hor_text_offset = document.getElementById("hor_text_offset").valueAsNumber;
+	data["hor_pri_nbr"] = document.getElementById("hor_pri_nbr").valueAsNumber;
+	data["hor_sec_nbr"] = document.getElementById("hor_sec_nbr").valueAsNumber;
+	data["hor_start"] = document.getElementById("hor_start").valueAsNumber;
+	data["hor_pas"] = document.getElementById("hor_pas").valueAsNumber;
+	data["hor_text"] = document.getElementById("hor_text").checked;
+	data["hor_text_pos"] = document.getElementById("hor_text_pos").selectedIndex;
+	data["hor_text_size"] = document.getElementById("hor_text_size").valueAsNumber;
+	data["hor_text_offset"] = document.getElementById("hor_text_offset").valueAsNumber;
+	data["ver_pri_nbr"] = document.getElementById("ver_pri_nbr").valueAsNumber;
+	data["ver_sec_nbr"] = document.getElementById("ver_sec_nbr").valueAsNumber;
+	data["ver_start"] = document.getElementById("ver_start").valueAsNumber;
+	data["ver_pas"] = document.getElementById("ver_pas").valueAsNumber;
+	data["ver_text"] = document.getElementById("ver_text").checked;
+	data["ver_text_pos"] = document.getElementById("ver_text_pos").selectedIndex;
+	data["ver_text_size"] = document.getElementById("ver_text_size").valueAsNumber;
+	data["ver_text_offset"] = document.getElementById("ver_text_offset").valueAsNumber;
+	data["line_pry_stroke"] = document.getElementById("line_pry_stroke").valueAsNumber;
+	data["line_pry_color"] = document.getElementById("line_pry_color").value;
+	data["line_pry_pin_size"] = document.getElementById("line_pry_pin_size").valueAsNumber;
+	data["line_pry_arrow"] = document.getElementById("line_pry_arrow").valueAsNumber;
+	data["line_pry_grid"] = document.getElementById("line_pry_grid").checked;
+	data["line_pry_grid_stroke"] = document.getElementById("line_pry_grid_stroke").valueAsNumber;
+	data["line_pry_grid_color"] = document.getElementById("line_pry_grid_color").value;
+	data["line_sec_stroke"] = document.getElementById("line_sec_stroke").valueAsNumber;
+	data["line_sec_color"] = document.getElementById("line_sec_color").value;
+	data["line_sec_pin_size"] = document.getElementById("line_sec_pin_size").valueAsNumber;
+	data["line_sec_grid"] = document.getElementById("line_sec_grid").checked;
+	data["line_sec_grid_stroke"] = document.getElementById("line_sec_grid_stroke").valueAsNumber;
+	data["line_sec_grid_color"] = document.getElementById("line_sec_grid_color").value;
 
-	let ver_pri_nbr = document.getElementById("ver_pri_nbr").valueAsNumber;
-	let ver_sec_nbr = document.getElementById("ver_sec_nbr").valueAsNumber;
-	let ver_start = document.getElementById("ver_start").valueAsNumber;
-	let ver_pas = document.getElementById("ver_pas").valueAsNumber;
-	let ver_text = document.getElementById("ver_text").checked;
-	let ver_text_pos = document.getElementById("ver_text_pos").selectedIndex;
-	let ver_text_size = document.getElementById("ver_text_size").valueAsNumber;
-	let ver_text_offset = document.getElementById("ver_text_offset").valueAsNumber;
-
-	let line_pry_stroke = document.getElementById("line_pry_stroke").valueAsNumber;
-	let line_pry_color = document.getElementById("line_pry_color").value;
-	let line_pry_pin_size = document.getElementById("line_pry_pin_size").valueAsNumber;
-	let line_pry_arrow = document.getElementById("line_pry_arrow").valueAsNumber;
-	let line_pry_grid = document.getElementById("line_pry_grid").checked;
-	let line_pry_grid_stroke = document.getElementById("line_pry_grid_stroke").valueAsNumber;
-	let line_pry_grid_color = document.getElementById("line_pry_grid_color").value;
-
-	let line_sec_stroke = document.getElementById("line_sec_stroke").valueAsNumber;
-	let line_sec_color = document.getElementById("line_sec_color").value;
-	let line_sec_pin_size = document.getElementById("line_sec_pin_size").valueAsNumber;
-	let line_sec_grid = document.getElementById("line_sec_grid").checked;
-	let line_sec_grid_stroke = document.getElementById("line_sec_grid_stroke").valueAsNumber;
-	let line_sec_grid_color = document.getElementById("line_sec_grid_color").value;
-	
-	let w = Canvas_width - Gen_Margin * 2 - line_pry_arrow - 10;
-	let h = Canvas_height - Gen_Margin * 2 - line_pry_arrow - 10;
-
-	let pdx = w * 1.0 / hor_pri_nbr;
-	let sdx = pdx * 1.0 / hor_sec_nbr;
-
-	let pdy = h * 1.0 / ver_pri_nbr;
-	let sdy = pdy * 1.0 / ver_sec_nbr;
-
-	let hy = 0;
-	let hx = Canvas_width -  Gen_Margin - line_pry_arrow;
-
-	let vx = 0;
-	let vy = Gen_Margin + line_pry_arrow;
-
-	if (ver_start >= 0)
-		hy = Canvas_height - Gen_Margin - 5
-	else if (ver_start + ver_pri_nbr * ver_pas <= 0)
-		hy = Gen_Margin + line_pry_arrow + 5
-	else
-		hy = Canvas_height - Gen_Margin - 5 + (ver_start / ver_pas) * pdy
-	
-	if (hor_start >= 0)
-		vx = Gen_Margin + 5
-	else if (hor_start + hor_pri_nbr * hor_pas <= 0)
-		vx = Canvas_width - Gen_Margin - line_pry_arrow - 5
-	else
-		vx = Gen_Margin + 5 - (hor_start / hor_pas) * pdx
-
-	// axe horizontale
-	
-	let element;
-
-
-	//Grilles
-	
-	
-	if (line_pry_grid)
-	{
-		for(let i = 0; i <= hor_pri_nbr; i++)
-		{
-			element = draw_line(
-				Gen_Margin + 5 + i * pdx, Gen_Margin + line_pry_arrow, 
-				Gen_Margin + 5 + i * pdx, Canvas_height - Gen_Margin);
-			element.attr(
-				{
-					stroke: line_pry_grid_color,
-					"stroke-width": line_pry_grid_stroke,
-					"stroke-linecap": "round",
-					"stroke-linejoin": "round"
-				}
-			)
-		}
-		for(let i = 0; i <= ver_pri_nbr; i++)
-		{
-			element = draw_line(
-				Gen_Margin, Canvas_height - Gen_Margin - 5 - i * pdy,
-				Canvas_width - Gen_Margin - line_pry_arrow, Canvas_height - Gen_Margin - 5 - i * pdy);
-			element.attr(
-				{
-					stroke: line_pry_grid_color,
-					"stroke-width": line_pry_grid_stroke,
-					"stroke-linecap": "round",
-					"stroke-linejoin": "round"
-				}
-			)
-		}
-	}
-
-	if (line_sec_grid)
-	{
-		for(let i = 0; i < hor_pri_nbr; i++)
-		{
-			for(let j = 1; j < hor_sec_nbr; j++)
-			{
-				element = draw_line(
-					Gen_Margin + 5 + i * pdx + j * sdx, Gen_Margin + line_pry_arrow, 
-					Gen_Margin + 5 + i * pdx + j * sdx, Canvas_height - Gen_Margin);
-				element.attr(
-					{
-						stroke: line_sec_grid_color,
-						"stroke-width": line_sec_grid_stroke,
-						"stroke-linecap": "round",
-						"stroke-linejoin": "round"
-					}
-				)
-			}
-		}
-		for(let i = 0; i < ver_pri_nbr; i++)
-		{
-			for(let j = 1; j < ver_sec_nbr; j++)
-			{
-				element = draw_line(
-					Gen_Margin, Canvas_height - Gen_Margin - 5 - i * pdy - j * sdy,
-					Canvas_width - Gen_Margin - line_pry_arrow, Canvas_height - Gen_Margin - 5 - i * pdy - j * sdy);
-				element.attr(
-					{
-						stroke: line_sec_grid_color,
-						"stroke-width": line_sec_grid_stroke,
-						"stroke-linecap": "round",
-						"stroke-linejoin": "round"
-					}
-				)
-			}
-		}
-	}
-
-
-	// Tiret
-	for(let i = 0; i <= hor_pri_nbr; i++)
-	{
-		if (hor_start + hor_pas * i  != 0)
-		{
-			element = draw_line(
-				Gen_Margin + 5 + i * pdx, hy - line_pry_pin_size / 2.0, 
-				Gen_Margin + 5 + i * pdx, hy + line_pry_pin_size / 2.0);
-			element.attr(
-				{
-					stroke: line_pry_color,
-					"stroke-width": line_pry_stroke,
-					"stroke-linecap": "round",
-					"stroke-linejoin": "round"
-				}
-			)
-		}
-		if (i < hor_pri_nbr)
-		{
-			for(let j = 1; j < hor_sec_nbr; j++)
-			{
-				element = draw_line(
-					Gen_Margin + 5 + i * pdx + j * sdx, hy - line_sec_pin_size / 2.0, 
-					Gen_Margin + 5 + i * pdx + j * sdx, hy + line_sec_pin_size / 2.0);
-				element.attr(
-					{
-						stroke: line_sec_color,
-						"stroke-width": line_sec_stroke,
-						"stroke-linecap": "round",
-						"stroke-linejoin": "round"
-					}
-				)
-			}
-		}
-	}
-	for(let i = 0; i <= ver_pri_nbr; i++)
-	{
-		if (ver_start + ver_pas * i  != 0)
-		{
-			element = draw_line(
-				vx - line_pry_pin_size / 2.0, Canvas_height - Gen_Margin - 5 - i * pdy,
-				vx + line_pry_pin_size / 2.0, Canvas_height - Gen_Margin - 5 - i * pdy);
-			element.attr(
-				{
-					stroke: line_pry_color,
-					"stroke-width": line_pry_stroke,
-					"stroke-linecap": "round",
-					"stroke-linejoin": "round"
-				}
-			)
-		}
-		if(i < ver_pri_nbr)
-		{
-			for(let j = 1; j < ver_sec_nbr; j++)
-			{
-				element = draw_line(
-					vx - line_sec_pin_size / 2.0, Canvas_height - Gen_Margin - 5 - i * pdy - j * sdy,
-					vx + line_sec_pin_size / 2.0, Canvas_height - Gen_Margin - 5 - i * pdy - j * sdy);
-				element.attr(
-					{
-						stroke: line_sec_color,
-						"stroke-width": line_sec_stroke,
-						"stroke-linecap": "round",
-						"stroke-linejoin": "round"
-					}
-				)
-			}
-		}
-	}
-
-	// Axes
-	element = draw_line(Gen_Margin, hy, hx, hy);
-	element.attr(
-		{
-			stroke: line_pry_color,
-			"stroke-width": line_pry_stroke,
-			"stroke-linecap": "round",
-			"stroke-linejoin": "round"
-		}
-	)
-	element = draw_line(vx, Canvas_height - Gen_Margin, vx, vy);
-	element.attr(
-		{
-			stroke: line_pry_color,
-			"stroke-width": line_pry_stroke,
-			"stroke-linecap": "round",
-			"stroke-linejoin": "round"
-		}
-	)
-
-	// Fleche
-	let points = [{x: hx,y: hy}, {x: hx + 0.25 * line_pry_arrow,y: hy}, 
-		{x: hx + 0.25 * line_pry_arrow,y: hy + 0.5 * line_pry_arrow},
-		{x: hx + line_pry_arrow,y: hy},
-		{x: hx + 0.25 * line_pry_arrow,y: hy - 0.5 * line_pry_arrow},
-		{x: hx + 0.25 * line_pry_arrow,y: hy}]
-	element = draw_polygone(points);
-	element.attr(
-		{
-			fill: line_pry_color,
-			stroke: line_pry_color,
-			"stroke-width": line_pry_stroke,
-			"stroke-linecap": "round",
-			"stroke-linejoin": "round"
-		}
-	)
-	points = [{x: vx,y: vy}, {x: vx,y: vy - 0.25 * line_pry_arrow}, 
-		{x: vx + 0.5 * line_pry_arrow,y: vy - 0.25 * line_pry_arrow},
-		{x: vx,y: vy - line_pry_arrow},
-		{x: vx - 0.5 * line_pry_arrow,y: vy - 0.25 * line_pry_arrow},
-		{x: vx,y: vy - 0.25 * line_pry_arrow}]
-	element = draw_polygone(points);
-	element.attr(
-		{
-			fill: line_pry_color,
-			stroke: line_pry_color,
-			"stroke-width": line_pry_stroke,
-			"stroke-linecap": "round",
-			"stroke-linejoin": "round"
-		}
-	)
-
-	Draw_Objects(w, h, hor_start, hor_start + hor_pri_nbr * hor_pas, ver_start, ver_start + ver_pri_nbr * ver_pas);
-
-	// Draw text
-	for(let i = 0; i <= hor_pri_nbr; i++)
-	{
-		if (hor_text && hor_start + hor_pas * i != 0)
-		{
-			let x = Gen_Margin + 5 + i * pdx
-			let y = 0;
-			if (hor_text_pos == 0)
-				y = hy + line_pry_pin_size / 2.0 + 2 + hor_text_size + hor_text_offset;
-			else
-				y = hy - line_pry_pin_size / 2.0 - hor_text_size - hor_text_offset;
-			let text = Round(hor_start + hor_pas * i, 5) 
-			element = paper.text( x, y, text);
-			element.attr(
-				{
-					fill: "white",
-					stroke: "white",
-					"stroke-width": 5,
-					"font-size": hor_text_size,
-					"text-anchor": "middle",
-					"font-weight": "bold"
-				}
-			)
-			element = paper.text( x, y, text);
-			element.attr(
-				{
-					fill: line_pry_color,
-					"font-size": hor_text_size,
-					"text-anchor": "middle",
-				}
-			)
-		}
-	}
-	for(let i = 0; i <= ver_pri_nbr; i++)
-	{
-		if (ver_text && ver_start + ver_pas * i != 0 )
-		{
-			element = draw_line(
-				vx - line_pry_pin_size / 2.0, Canvas_height - Gen_Margin - 5 - i * pdy,
-				vx + line_pry_pin_size / 2.0, Canvas_height - Gen_Margin - 5 - i * pdy);
-			let x = 0;
-			let y = Canvas_height - Gen_Margin - 5 - i * pdy;
-			if (ver_text_pos == 0)
-				x = vx - line_pry_pin_size / 2.0 - ver_text_size - ver_text_offset;
-			else
-				x = vx + line_pry_pin_size / 2.0 + ver_text_size + ver_text_offset;
-			let text = Round(ver_start + ver_pas * i, 5) 
-			element = paper.text( x, y, text);
-			element.attr(
-				{
-					fill: "white",
-					stroke: "white",
-					"stroke-width": 5,
-					"font-size": ver_text_size,
-					"text-anchor": "middle",
-					"font-weight": "bold"
-				}
-			)
-			element = paper.text( x, y, text);
-			element.attr(
-				{
-					fill: line_pry_color,
-					"font-size": ver_text_size,
-					"text-anchor": "middle",
-				}
-			)
-		}
-	}
+    RepereGradue(paper, data);
 }
 
-function AxeGradue()
+function Draw_AxeGradue(data)
 {
-
-}
-
-function Quadrillage()
-{
-	let c_hor_nbr = document.getElementById("c_hor_nbr").valueAsNumber;
-	let c_ver_nbr = document.getElementById("c_ver_nbr").valueAsNumber;
-	let c_size_x = document.getElementById("c_size_x").valueAsNumber;
-	let c_size_y = document.getElementById("c_size_y").valueAsNumber;
-	let q_line_color = document.getElementById("q_line_color").value;
-	let q_line_stroke = document.getElementById("q_line_stroke").valueAsNumber;
-
-	let q_int = document.getElementById("q_int").checked;
-	let c_int_hor_nbr = document.getElementById("c_int_hor_nbr").valueAsNumber;
-	let c_int_ver_nbr = document.getElementById("c_int_ver_nbr").valueAsNumber;
-	let q_int_line_color = document.getElementById("q_int_line_color").value;
-	let q_int_line_stroke = document.getElementById("q_int_line_stroke").valueAsNumber;
-
-	Canvas_width = c_hor_nbr * c_size_x + Gen_Margin*2 + 10; 
-	Canvas_height = c_ver_nbr * c_size_y + Gen_Margin*2 + 10;
-	document.getElementById("gen_width").value = Canvas_width;
-	document.getElementById("gen_height").value = Canvas_height;
-
-	paper.setSize(Canvas_width, Canvas_height);
-	paper.clear();
+	data["axe_pri_nbr"] = document.getElementById("axe_pri_nbr").valueAsNumber;
+	data["axe_sec_nbr"] = document.getElementById("axe_sec_nbr").valueAsNumber;
+	data["axe_start"] = document.getElementById("axe_start").valueAsNumber;
+	data["axe_pas"] = document.getElementById("axe_pas").valueAsNumber;
+	data["axe_text"] = document.getElementById("axe_text").checked;
+	data["axe_text_pos"] = document.getElementById("axe_text_pos").selectedIndex;
+	data["axe_text_size"] = document.getElementById("axe_text_size").valueAsNumber;
+	data["axe_text_offset"] = document.getElementById("axe_text_offset").valueAsNumber;
+	data["axe_line_pry_stroke"] = document.getElementById("axe_line_pry_stroke").valueAsNumber;
+	data["axe_line_pry_color"] = document.getElementById("axe_line_pry_color").value;
+	data["axe_line_pry_pin_size"] = document.getElementById("axe_line_pry_pin_size").valueAsNumber;
+	data["axe_line_pry_arrow"] = document.getElementById("axe_line_pry_arrow").valueAsNumber;
+	data["axe_line_sec_stroke"] = document.getElementById("axe_line_sec_stroke").valueAsNumber;
+	data["axe_line_sec_color"] = document.getElementById("axe_line_sec_color").value;
+	data["axe_line_sec_pin_size"] = document.getElementById("axe_line_sec_pin_size").valueAsNumber;
 	
-	if(q_int)
-	{
-		var x_s = c_size_x * 1.0 / c_int_hor_nbr;
-		var y_s = c_size_y * 1.0 / c_int_ver_nbr;
-		console.log(x_s)
-		console.log(y_s)
-		for (let x = 0; x < c_hor_nbr; x++) 
-		{
-			for (let y = 0; y < c_ver_nbr; y++) 
-			{
-				for (let i = 1; i < c_int_hor_nbr; i++) {
-
-					element = draw_line(
-						Gen_Margin + 5 + x * c_size_x + i * x_s, Gen_Margin + 5 + y * c_size_y, 
-						Gen_Margin + 5 + x * c_size_x + i * x_s, Gen_Margin + 5 + (y+1) * c_size_y);
-					element.attr(
-						{
-							stroke: q_int_line_color,
-							"stroke-width": q_int_line_stroke,
-							"stroke-linecap": "round",
-							"stroke-linejoin": "round"
-						})
-				}
-
-				for (let j = 1; j < c_int_ver_nbr; j++) {
-					element = draw_line(
-						Gen_Margin + 5 + x * c_size_x, Gen_Margin + 5 + y * c_size_y + j * y_s, 
-						Gen_Margin + 5 + (x+1) * c_size_x, Gen_Margin + 5 + y * c_size_y + j * y_s);
-					element.attr(
-						{
-							stroke: q_int_line_color,
-							"stroke-width": q_int_line_stroke,
-							"stroke-linecap": "round",
-							"stroke-linejoin": "round"
-						})
-				}
-			}
-		}
-	}
-
-	for (let i = 0; i <= c_hor_nbr; i++) 
-	{
-		element = draw_line(
-			Gen_Margin + 5 + i * c_size_x, Gen_Margin + 5, 
-			Gen_Margin + 5 + i * c_size_x, Canvas_height - Gen_Margin - 5);
-		element.attr(
-			{
-				stroke: q_line_color,
-				"stroke-width": q_line_stroke,
-				"stroke-linecap": "round",
-				"stroke-linejoin": "round"
-			}
-		)
-	}
-	for (let i = 0; i <= c_ver_nbr; i++) 
-	{
-		element = draw_line(
-			Gen_Margin + 5, Gen_Margin + 5 + i * c_size_y, 
-			Canvas_width - Gen_Margin - 5, Gen_Margin + 5 + i * c_size_y);
-		element.attr(
-			{
-				stroke: q_line_color,
-				"stroke-width": q_line_stroke,
-				"stroke-linecap": "round",
-				"stroke-linejoin": "round"
-			}
-		)
-	}
-	
-	Draw_Objects(c_hor_nbr * c_size_x, c_ver_nbr * c_size_y, 
-		0, c_hor_nbr, c_ver_nbr, 0);
-
+	AxeGradue(paper, data);
 }
 
-function draw_line(sx, sy, ex, ey)
+function Draw_Quadrillage(data)
 {
-	return paper.path("M" + sx + " " + sy + "L" + ex + " " + ey);
-}
+	data["c_hor_nbr"] = document.getElementById("c_hor_nbr").valueAsNumber;
+	data["c_ver_nbr"] = document.getElementById("c_ver_nbr").valueAsNumber;
+	data["c_size_x"] = document.getElementById("c_size_x").valueAsNumber;
+	data["c_size_y"] = document.getElementById("c_size_y").valueAsNumber;
+	data["q_line_color"] = document.getElementById("q_line_color").value;
+	data["q_line_stroke"] = document.getElementById("q_line_stroke").valueAsNumber;
+	data["q_int"] = document.getElementById("q_int").checked;
+	data["c_int_hor_nbr"] = document.getElementById("c_int_hor_nbr").valueAsNumber;
+	data["c_int_ver_nbr"] = document.getElementById("c_int_ver_nbr").valueAsNumber;
+	data["q_int_line_color"] = document.getElementById("q_int_line_color").value;
+	data["q_int_line_stroke"] = document.getElementById("q_int_line_stroke").valueAsNumber;
 
-function draw_polygone(points, close = true)
-{
-	let txt = "M" + points[0].x + " " + points[0].y;
-	for(let i = 1; i < points.length; i++){
-		txt += "L" + points[i].x + " " + points[i].y;
-	}
-	if (close)
-		return paper.path(txt + "Z");
-	else
-		return paper.path(txt);
-}
-
-function Round(value, decimal = 0)
-{
-	return Math.round(value * Math.pow(10, decimal)) / Math.pow(10, decimal)
-}
-
-function draw_ellipse_arc(center, stara, enda, rx, ry, close = true)
-{
-	let sx = Round(center.x + rx * Math.cos(stara * Math.PI / 180.0),3);
-	let sy = Round(center.y + ry * Math.sin(stara * Math.PI / 180.0),3);
-
-	let ex = Round(center.x + rx * Math.cos(enda * Math.PI / 180.0),3);
-	let ey = Round(center.y + ry * Math.sin(enda * Math.PI / 180.0),3);
-
-	let txt = "M" + sx + " " + sy + " A ";
-	txt += Round(rx,3) + " " + Round(ry,3) + " 0 ";
-	if (Math.abs(enda - stara) < 360)
-	{
-		if (Math.abs(enda - stara) > 180)
-			txt += "1 "
-		else
-			txt += "0 "
-		if (enda < stara)
-			txt += "0 "
-		else
-			txt += "1 " 
-		
-		txt += ex + " " + ey
-		if (close)
-		{
-			txt += "L" + center.x + " " + center.y;
-			return paper.path(txt + "Z");
-		}
-		else
-			return paper.path(txt);
-	}
-	else
-	{
-		return paper.ellipse(center.x, center.y, rx, ry);
-	}
+    let newsize = Quadrillage(paper, data);
+	document.getElementById("gen_width").value = newsize[0];
+	document.getElementById("gen_height").value = newsize[1];
 }
 
 

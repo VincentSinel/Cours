@@ -219,8 +219,13 @@ body{
 	width: 200px;
 }
 
+.content_container{
+	height: calc(inherit - 32px);
+	overflow-y: hidden;
+}
+
 .hiddenparam{
-	visibility: collapse;
+	display: none;
 	height: 0px;
 }
 

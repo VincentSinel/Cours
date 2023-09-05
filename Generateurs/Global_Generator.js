@@ -1,16 +1,5 @@
 
 
-var Canvas_width = 500;
-var Canvas_height = 500;
-var Gen_Margin = 5;
-var Gen_font = "Arial";
-var paper = null;
-var objects = [
-];
-window.onload = function(){
-	paper = Raphael("preview", Canvas_width, Canvas_height);
-	Regenerate()
-}
 
 { // Objects
     function Draw_Objects(paper, objects, context)
@@ -729,30 +718,160 @@ function RepereGradue(paper, data)
 	}
 }
 
-function AxeGradue()
+function AxeGradue(paper, data)
 {
+	let Canvas_width = data["Canvas_width"];
+    let Canvas_height = data["Canvas_height"];
+    let Gen_Margin = data["Gen_Margin"];
+    let objects = data["objects"];
+	
+	let axe_pri_nbr = data["axe_pri_nbr"];
+	let axe_sec_nbr = data["axe_sec_nbr"];
+	let axe_start = data["axe_start"];
+	let axe_pas = data["axe_pas"];
+	let axe_text = data["axe_text"];
+	let axe_text_pos = data["axe_text_pos"];
+	let axe_text_size = data["axe_text_size"];
+	let axe_text_offset = data["axe_text_offset"];
+	let axe_line_pry_stroke = data["axe_line_pry_stroke"];
+	let axe_line_pry_color = data["axe_line_pry_color"];
+	let axe_line_pry_pin_size = data["axe_line_pry_pin_size"];
+	let axe_line_pry_arrow = data["axe_line_pry_arrow"];
+	let axe_line_sec_stroke = data["axe_line_sec_stroke"];
+	let axe_line_sec_color = data["axe_line_sec_color"];
+	let axe_line_sec_pin_size = data["axe_line_sec_pin_size"];
+	
+	let w = Canvas_width - Gen_Margin * 2 - axe_line_pry_arrow - 10;
+	let h = Canvas_height - Gen_Margin * 2;
 
+	let pdx = w * 1.0 / axe_pri_nbr;
+	let sdx = pdx * 1.0 / axe_sec_nbr;
+
+	let hy = h / 2.0 + Gen_Margin;
+	let hx = Canvas_width -  Gen_Margin - axe_line_pry_arrow;
+
+	let element;
+
+
+
+	// Tiret
+	for(let i = 0; i <= axe_pri_nbr; i++)
+	{
+		element = draw_line(paper, 
+			Gen_Margin + 5 + i * pdx, hy - axe_line_pry_pin_size / 2.0, 
+			Gen_Margin + 5 + i * pdx, hy + axe_line_pry_pin_size / 2.0);
+		element.attr(
+			{
+				stroke: axe_line_pry_color,
+				"stroke-width": axe_line_pry_stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round"
+			}
+		)
+		if (i < axe_pri_nbr)
+		{
+			for(let j = 1; j < axe_sec_nbr; j++)
+			{
+				element = draw_line(paper, 
+					Gen_Margin + 5 + i * pdx + j * sdx, hy - axe_line_sec_pin_size / 2.0, 
+					Gen_Margin + 5 + i * pdx + j * sdx, hy + axe_line_sec_pin_size / 2.0);
+				element.attr(
+					{
+						stroke: axe_line_sec_color,
+						"stroke-width": axe_line_sec_stroke,
+						"stroke-linecap": "round",
+						"stroke-linejoin": "round"
+					}
+				)
+			}
+		}
+	}
+
+	// Axe
+	element = draw_line(paper, Gen_Margin, hy, hx, hy);
+	element.attr(
+		{
+			stroke: axe_line_pry_color,
+			"stroke-width": axe_line_pry_stroke,
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round"
+		}
+	)
+
+	// Fleche
+	let points = [{x: hx,y: hy}, {x: hx + 0.25 * axe_line_pry_arrow,y: hy}, 
+		{x: hx + 0.25 * axe_line_pry_arrow,y: hy + 0.5 * axe_line_pry_arrow},
+		{x: hx + axe_line_pry_arrow,y: hy},
+		{x: hx + 0.25 * axe_line_pry_arrow,y: hy - 0.5 * axe_line_pry_arrow},
+		{x: hx + 0.25 * axe_line_pry_arrow,y: hy}]
+	element = draw_polygone(paper,points);
+	element.attr(
+		{
+			fill: axe_line_pry_color,
+			stroke: axe_line_pry_color,
+			"stroke-width": axe_line_pry_stroke,
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round"
+		}
+	)
+
+	Draw_Objects(paper, objects, {
+        "width": w, "height": h, "xs": axe_start, "xe": axe_start + axe_pri_nbr * axe_pas,
+        "ys": 0, "ye": 0});
+
+	// Draw text
+	for(let i = 0; i <= axe_pri_nbr; i++)
+	{
+		let x = Gen_Margin + 5 + i * pdx
+		let y = 0;
+		if (axe_text_pos == 0)
+			y = hy + axe_line_pry_pin_size / 2.0 + 2 + axe_text_size + axe_text_offset;
+		else
+			y = hy - axe_line_pry_pin_size / 2.0 - axe_text_size - axe_text_offset;
+		let text = Round(axe_start + axe_pas * i, 5) 
+		element = paper.text( x, y, text);
+		element.attr(
+			{
+				fill: "white",
+				stroke: "white",
+				"stroke-width": 5,
+				"font-size": axe_text_size,
+				"text-anchor": "middle",
+				"font-weight": "bold"
+			}
+		)
+		element = paper.text( x, y, text);
+		element.attr(
+			{
+				fill: axe_line_pry_color,
+				"font-size": axe_text_size,
+				"text-anchor": "middle",
+			}
+		)
+	}
 }
 
-function Quadrillage()
+function Quadrillage(paper, data)
 {
-	let c_hor_nbr = document.getElementById("c_hor_nbr").valueAsNumber;
-	let c_ver_nbr = document.getElementById("c_ver_nbr").valueAsNumber;
-	let c_size_x = document.getElementById("c_size_x").valueAsNumber;
-	let c_size_y = document.getElementById("c_size_y").valueAsNumber;
-	let q_line_color = document.getElementById("q_line_color").value;
-	let q_line_stroke = document.getElementById("q_line_stroke").valueAsNumber;
+    let Canvas_width = data["Canvas_width"];
+    let Canvas_height = data["Canvas_height"];
+    let Gen_Margin = data["Gen_Margin"];
+    let objects = data["objects"];
 
-	let q_int = document.getElementById("q_int").checked;
-	let c_int_hor_nbr = document.getElementById("c_int_hor_nbr").valueAsNumber;
-	let c_int_ver_nbr = document.getElementById("c_int_ver_nbr").valueAsNumber;
-	let q_int_line_color = document.getElementById("q_int_line_color").value;
-	let q_int_line_stroke = document.getElementById("q_int_line_stroke").valueAsNumber;
+	let c_hor_nbr = data["c_hor_nbr"];
+	let c_ver_nbr = data["c_ver_nbr"];
+	let c_size_x = data["c_size_x"];
+	let c_size_y = data["c_size_y"];
+	let q_line_color = data["q_line_color"];
+	let q_line_stroke = data["q_line_stroke"];
+	let q_int = data["q_int"];
+	let c_int_hor_nbr = data["c_int_hor_nbr"];
+	let c_int_ver_nbr = data["c_int_ver_nbr"];
+	let q_int_line_color = data["q_int_line_color"];
+	let q_int_line_stroke = data["q_int_line_stroke"];
 
 	Canvas_width = c_hor_nbr * c_size_x + Gen_Margin*2 + 10; 
 	Canvas_height = c_ver_nbr * c_size_y + Gen_Margin*2 + 10;
-	document.getElementById("gen_width").value = Canvas_width;
-	document.getElementById("gen_height").value = Canvas_height;
 
 	paper.setSize(Canvas_width, Canvas_height);
 	paper.clear();
@@ -761,8 +880,6 @@ function Quadrillage()
 	{
 		var x_s = c_size_x * 1.0 / c_int_hor_nbr;
 		var y_s = c_size_y * 1.0 / c_int_ver_nbr;
-		console.log(x_s)
-		console.log(y_s)
 		for (let x = 0; x < c_hor_nbr; x++) 
 		{
 			for (let y = 0; y < c_ver_nbr; y++) 
@@ -831,6 +948,8 @@ function Quadrillage()
         "width": c_hor_nbr * c_size_x, 
         "height": c_ver_nbr * c_size_y, "xs": 0, "xe": c_hor_nbr,
         "ys": c_ver_nbr, "ye": 0});
+	
+	return [Canvas_width, Canvas_height]
 
 }
 
@@ -890,38 +1009,4 @@ function draw_ellipse_arc(paper, center, stara, enda, rx, ry, close = true)
 	{
 		return paper.ellipse(center.x, center.y, rx, ry);
 	}
-}
-
-
-function Save()
-{
-	var svgString = document.getElementById('preview').innerHTML;
-	a = document.createElement('a');
-	a.download = 'Forme.svg';
-	a.type = 'image/svg+xml';
-	blob = new Blob([svgString], {"type": "image/svg+xml"});
-	a.href = (window.URL || webkitURL).createObjectURL(blob);
-	a.click();
-}
-
-function SavePNG() {
-	var svg = document.getElementById('preview').innerHTML;
-	let img = document.createElement("img");
-	let url = (window.URL || webkitURL).createObjectURL(new Blob([svg], { type: "image/svg+xml" }));
-	img.src = url;
-	img.setAttribute("style", "position:fixed;left:-200vw;");
-	img.onload = function onload() {
-		let canvas = document.createElement("canvas");
-		let ctx = canvas.getContext("2d");
-		canvas.width = img.width;
-		canvas.height = img.height;
-		ctx.drawImage(img, 0, 0, img.width, img.height);
-		var link = document.createElement('a');
-		link.download = 'Forme.png';
-		link.href = canvas.toDataURL("image/png")
-		link.click();
-		img.remove();
-		(window.URL || webkitURL).revokeObjectURL(url);
-	};
-	document.body.appendChild(img);
 }
