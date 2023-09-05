@@ -3,6 +3,8 @@ var pavage;
 
 class Pavage{
 
+    //This class use SVG.js to work;
+
     Canvas_width = 300;
     Canvas_height = 300;
 
@@ -111,10 +113,7 @@ class Pavage{
         }
     }
 
-
-    
-    
-    DrawPolygone(ox, oy, ang = 0, color = "#f06")
+    DrawPolygone(ox, oy, ang = 0, color)
     {
         let d = this.size;
         let a90 = 0.5 * Math.PI;
@@ -124,10 +123,9 @@ class Pavage{
 
         let point = [];
 
-        // point.push([ox, oy]);
         ta += a;
-        let x = ox //+ d*2*Math.cos(ta);
-        let y = oy //+ d*2*Math.sin(ta);
+        let x = ox;
+        let y = oy;
         point.push([this.Round(x, 1), this.Round(y, 1)]);
         ta += a90;
         x += d*Math.cos(ta);
