@@ -1,15 +1,15 @@
 function Menu()
 {
 	//window.open("Annales Brevet.html");
-	window.location = "/";
-	window.location.href = "/";
+	window.location = "/MenuPrincipal.html";
+	window.location.href = "/MenuPrincipal.html";
 }
 
 function Cours()
 {
 	//window.open("Annales Brevet.html");
-	window.location = "/";
-	window.location.href = "/";
+	window.location = "/Cours/Menu.html";
+	window.location.href = "/Cours/Menu.html";
 }
 
 function Outils()
@@ -38,4 +38,15 @@ function CodeEnter(event) {
 		}
 			
 	}
+}
+
+
+function ShowConnection()
+{
+	document.getElementById("secret").style.display = "block";
+	document.getElementById("secret").children[0].focus()
+}
+function HideConnection()
+{
+	document.getElementById("secret").style.display = "none";
 }

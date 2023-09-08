@@ -1,0 +1,96 @@
+html{
+    height: 100%;
+    min-height: 100%;
+}
+
+body{
+  background: var(--PanelBack);
+  height: auto;
+  min-height: 100%;
+  position: relative;
+}
+
+
+p{
+    color: var(--PanelBackText);
+    font-family: var(--TexteFont);
+    text-align: center;
+}
+p.small
+{
+    line-height: 5px;
+}
+
+footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow:hidden;
+    width: 100%;
+}
+
+footer span{
+    color: var(--PanelBackText);
+    font-family: var(--TexteFont);
+    text-align: center;
+    font-size: 10pt;
+}
+footer div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 60px;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.menucontainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    padding: 0 20px;
+}
+.blockmenu{
+  flex: 0 1 auto;
+}
+
+.menucontainer div{
+    height: 60px;
+}
+.menucontainer p{
+    max-width: 400px;
+}
+.blockmenu{
+    width: 100%;
+    max-width: 300px;
+}
+.blockmenu span {
+    width: 100%;
+}
+
+@media only screen and (max-width:860px) {
+    .blockmenucours span:before{
+      content: "Cours";
+    }
+    .blockmenugenerateurs span::before{
+        content: "Outils";
+    }
+    .blockmenuannales span:before{
+        content: "🚧 Annales du brevet";
+    }
+    .blockmenu{
+        width: 100%;
+        max-width: 300px;
+    }
+    .blockmenu span {
+        width: 100%;
+    }
+  }

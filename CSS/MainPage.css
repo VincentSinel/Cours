@@ -108,6 +108,7 @@ header {
   border-radius: 5px;
   color: white;
   display: flex;
+  flex: 0 1 200px;
   font-family: var(--TexteFont);
   font-size: 19px;
   font-weight: 600;
@@ -115,7 +116,7 @@ header {
   padding: 0px 10px;
   text-align: center;
   transition: .25s all ease;
-  width: 200px;
+  width:max-content;
 }
 .blockmenu:hover{
   background-color: var(--PanelBackHover);
@@ -124,7 +125,7 @@ header {
   background-color: var(--HeadMenuButtonActive);
 }
 .blockmenuprincipal span:before{
-  content: "🚧 Menu principal";
+  content: "Menu principal";
 }
 .blockmenucours span:before{
   content: "Cours";
@@ -136,8 +137,8 @@ header {
   content: "🚧 Annales du brevet";
 }
 .blockmenusecret{
-	margin-left: auto;
-	width: 48px;
+  flex: 0 1 auto;
+  margin-left: auto;
 }
 .blockmenusecret span:before{
 	content: "🔑";
@@ -150,7 +151,7 @@ header {
 	border-radius: 5px;
 	width: 158px;
 	right: 5px;
-	z-index: 1;
+	z-index: 10;
 	box-shadow: 2px 2px 1px black;
 	display: none;
 }
@@ -162,7 +163,7 @@ header {
   display: inline-block;
   position: relative;
   transition: 0.5s;
-  width: 190px;
+  width: 100%;
 }
 .blockmenu span:after {
   content: '\00bb';
@@ -171,6 +172,9 @@ header {
   top: 0;
   right: 0px;
   transition: 0.5s;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 .blockmenu:hover span {
   padding-right: 10px;

@@ -63,8 +63,12 @@
 		<div class="blockmenu blockmenucours" onclick="Cours()"><span></span></div>
 		<div class="blockmenu blockmenugenerateurs" onclick="Outils()"><span></span></div>
 		<div class="blockmenu blockmenuannales" onclick="Annales_brevets()"><span></span></div>
+        <div class="blockmenu blockmenusecret" onclick="ShowConnection()"><span></span></div>
       </div>
     </header>
+  </div>
+  <div id="secret" class="secret_connect">
+      <input type="password" onfocusout="HideConnection()" onkeypress="CodeEnter(event)">
   </div>
   <div class="container">
     <div class="searchbar">

@@ -343,7 +343,7 @@ var ListeCours = {
         {
             id: 16,
             nom: "Aires",
-            icone: 2,
+            icone: 6,
             ready : false,
         },
         {
@@ -374,130 +374,100 @@ var ListeCours = {
     sixieme: [
         {
             id: 1,
-            nom: "Nombres premiers",
+            nom: "Entier et décimaux",
             icone: 1,
             ready : false,
         },
         {
             id: 2,
-            nom: "Théorème de Pythagore",
+            nom: "Premiers objets de géométrie",
             icone: 2,
             ready : false,
         },
         {
             id: 3,
-            nom: "Opérations sur les relatifs",
+            nom: "Comparaison de nombres décimaux",
             icone: 1,
             ready : false,
         },
         {
             id: 4,
-            nom: "Translations et pavages",
+            nom: "Parallèles et perpendiculaires",
             icone: 2,
             ready : false,
         },
         {
             id: 5,
-            nom: "Additions et soustractions de fractions",
-            icone: 1,
-            ready : false,
-        },
-        {
-            id: 6,
-            nom: "Egalité des produits en croix",
+            nom: "Gestion de données",
             icone: 5,
             ready : false,
         },
         {
+            id: 6,
+            nom: "Cercle et triangle",
+            icone: 2,
+            ready : false,
+        },
+        {
             id: 7,
-            nom: "Rotations",
+            nom: "Angles",
             icone: 2,
             ready : false,
         },
         {
             id: 8,
-            nom: "Puissances positives",
-            icone: 1,
+            nom: "Polygones et quadrilatères particuliers",
+            icone: 2,
             ready : false,
         },
         {
             id: 9,
-            nom: "Distributivité simple",
-            icone: 3,
-            ready : false,
-        },
-        {
-            id: 10,
-            nom: "Coordonnées sphériques",
-            icone: 2,
-            ready : false,
-        },
-        {
-            id: 11,
-            nom: "Réciproque du théorème de Pythagore",
-            icone: 2,
-            ready : false,
-        },
-        {
-            id: 12,
-            nom: "Multiplication et division de fraction",
+            nom: "Divisions",
             icone: 1,
             ready : false,
         },
         {
+            id: 10,
+            nom: "Nombres en écritures fractionnaires",
+            icone: 1,
+            ready : false,
+        },
+        {
+            id: 11,
+            nom: "Longueur et périmètres",
+            icone: 6,
+            ready : false,
+        },
+        {
+            id: 12,
+            nom: "Symétrie axiale",
+            icone: 2,
+            ready : false,
+        },
+        {
             id: 13,
-            nom: "Equation simple",
-            icone: 3,
+            nom: "Aires de figures planes usuelles",
+            icone: 6,
             ready : false,
         },
         {
             id: 14,
-            nom: "Puissances avec exposants négatifs",
+            nom: "Proportionnalité et pourcentages",
             icone: 1,
             ready : false,
         },
         {
             id: 15,
-            nom: "Triangle semblable",
+            nom: "Pavé droit",
             icone: 2,
             ready : false,
         },
         {
             id: 16,
-            nom: "Pyramides et cônes",
-            icone: 2,
+            nom: "Priorités opératoires",
+            icone: 1,
             ready : false,
         },
-        {
-            id: 17,
-            nom: "Médiane et étendue",
-            icone: 5,
-            ready : false,
-        },
-        {
-            id: 18,
-            nom: "Proportionnalité",
-            icone: 5,
-            ready : false,
-        },
-        {
-            id: 19,
-            nom: "Probabilité",
-            icone: 4,
-            ready : false,
-        },
-        {
-            id: 20,
-            nom: "Distributivité double",
-            icone: 3,
-            ready : false,
-        },
-        {
-            id: 21,
-            nom: "Cosinus",
-            icone: 3,
-            ready : false,
-        }
     ],
 }
 
@@ -564,7 +534,7 @@ function CreateDiv(parent, name, folder)
         if (element.ready)
         {
             a.onclick = function() { 
-                clic('Cours/' + folder + 'eme/Chapitre_' + element.id + '/Cours.html', this); }
+                clic('/Cours/' + folder + 'eme/Chapitre_' + element.id + '/Cours.html', this); }
             //a.ontouchend = function() {
             //    clic('Cours/' + folder + 'eme/Chapitre_' + element.id + '/Cours.html'); }
         }
@@ -574,7 +544,7 @@ function CreateDiv(parent, name, folder)
 
         var c = document.createElement("img");
         c.className += "chapitrebutttonimg";
-        c.src = "Images/Icones-0"+ element.icone + ".png"
+        c.src = "/Images/Icones-0"+ element.icone + ".png"
         
         var d = document.createElement("div");
         var e = document.createElement("p");
