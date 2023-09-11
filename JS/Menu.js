@@ -33,8 +33,8 @@ function CodeEnter(event) {
 		let a = document.getElementById("secret").children[0].value
 		if (parseInt(a,36) == 4660164328303140000)
 		{
-			window.location = "/hiddenmenu.html";
-			window.location.href = "/hiddenmenu.html";
+			window.location = "/Test/hiddenmenu.html";
+			window.location.href = "/Test/hiddenmenu.html";
 		}
 			
 	}

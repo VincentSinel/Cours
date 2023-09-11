@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="en">
+    <link rel="stylesheet" href="/CSS/MainPage.css"> 
+    <link rel="stylesheet" href="TestApp.css"> 
+
+    <script src="/JS/Interact.js/Interact.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    </style>
+
+    </head>
+
+    <body>
+        <div class="maincontainer">
+            <div class="options">
+                <div class="column">
+                    <div class="buttonpanel">
+                        <div class="iconbutton">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" 
+                            viewBox="0 -960 960 960" width="24">
+                                <path fill="currentColor" stroke="currentColor"
+                                d="M445-445.5H210v-70h235v-235h70v235h235v70H515v235h-70v-235Z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="listeclasse">
+                        <div class="listelement">
+                            <input type="text">
+                            <div class="iconbutton">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                    <path fill="currentColor" stroke="currentColor"
+                                    d="M480-326q72.5 0 123.25-50.75T654-500q0-72.5-50.75-123.25T480-674q-72.5 0-123.25 50.75T306-500q0 72.5 50.75 123.25T480-326Zm.118-68Q436-394 405-424.882q-31-30.883-31-75Q374-544 404.882-575q30.883-31 75-31Q524-606 555-575.118q31 30.883 31 75Q586-456 555.118-425q-30.883 31-75 31ZM480-208q-142.5 0-259-79.75T51-500q53.5-132.5 170-212.25T480-792q142.5 0 259 79.75T909-500q-53.5 132.5-170 212.25T480-208Zm0-292Zm0 217q111 0 204.5-58.5T827-500q-49-100-142.5-158.5T480-717q-111 0-204.5 58.5T133-500q49 100 142.5 158.5T480-283Z"/></svg>
+                            </div>
+                            <div class="iconbutton">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                    <path fill="currentColor" stroke="currentColor"
+                                    d="M283-130q-30.938 0-52.969-22.031Q208-174.062 208-205v-512h-39v-75h193v-38h237v38h193v75h-39v512q0 30.938-22.031 52.969Q708.938-130 678-130H283Zm395-587H283v512h395v-512ZM365-283.5h75v-355h-75v355Zm156 0h75v-355h-75v355ZM283-717v512-512Z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Liste des élèves :</p>
+                    <div id="listeeleve">
+                        <div class="listelement">
+                            <input type="text">
+                            <input type="text">
+                            <div class="iconbutton">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                    <path fill="currentColor" stroke="currentColor"
+                                    d="M283-130q-30.938 0-52.969-22.031Q208-174.062 208-205v-512h-39v-75h193v-38h237v38h193v75h-39v512q0 30.938-22.031 52.969Q708.938-130 678-130H283Zm395-587H283v512h395v-512ZM365-283.5h75v-355h-75v355Zm156 0h75v-355h-75v355ZM283-717v512-512Z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttonpanel">
+                        <div class="iconbutton">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" 
+                            viewBox="0 -960 960 960" width="24">
+                                <path fill="currentColor" stroke="currentColor"
+                                d="M445-445.5H210v-70h235v-235h70v235h235v70H515v235h-70v-235Z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <p>
+                        Nom de la salle :
+                    </p>
+                    <input type="text">
+                    <div id="image-dropdown" >
+                        <input checked="checked" type="radio" id="line1" name="line-style" value="1"  /><label for="line1"></label>
+                        <input type="radio" id="line2" name="line-style" value="2"  /><label for="line2"></label>
+                        <input type="radio" id="line3" name="line-style" value="3"  /><label for="line3"></label>
+                        <input type="radio" id="line4" name="line-style" value="4"  /><label for="line4"></label>
+                        <input type="radio" id="line5" name="line-style" value="5"  /><label for="line5"></label>
+                        <input type="radio" id="line6" name="line-style" value="6"  /><label for="line6"></label>
+                    </div>
+                    
+                    <button>Générer la salle</button>
+                    <p>Taille de la grille :</p>
+                    <input type="number" min="1" max="160" step="1" value="5">
+                    <div style="flex-grow: 1;"></div>
+                    <p style="text-align: left;">
+                        Classe de <span id="classeNbr">24</span> élèves <br>
+                        Dans ce plan :<br>
+                        - <span id="plan_double">0</span> élève(s) en double <br>
+                        - <span id="plan_nasign">0</span> élève(s) non assigné(s) <br> 
+                        - <span id="plan_libre">0</span> place(s) libre(s) <br>
+                        - <span id="plan_fixe">0</span> place(s) fixée(s) <br>
+                        - <span id="plan_total">0</span> place(s) au total <br><br>
+                    </p>
+                </div>
+            </div>
+            <div class="preview">
+                <div class="aspect">
+                    <div id="content">
+                        <div id="dragtest" class="draggable">
+                            <div class="draggable_inner">
+                                <img src="Table.svg">
+                                <div>
+                                    <span>SINEL</span><br>
+                                    <span>Vincent</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    <script id="Animation" src="/JS/Test.js"></script>
+</html>
+
+
+
+  
