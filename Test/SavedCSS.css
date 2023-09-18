@@ -1,0 +1,88 @@
+/*o.v.*/
+/* Selectable with image*/
+
+/* <div id="image-dropdown" >
+    <input checked="checked" type="radio" id="line1" name="line-style" value="1" /><label for="line1"></label>
+    <input type="radio" id="line2" name="line-style" value="2"  /><label for="line2"></label>
+    <input type="radio" id="line3" name="line-style" value="3"  /><label for="line3"></label>
+    <input type="radio" id="line4" name="line-style" value="4"  /><label for="line4"></label>
+    <input type="radio" id="line5" name="line-style" value="5"  /><label for="line5"></label>
+    <input type="radio" id="line6" name="line-style" value="6"  /><label for="line6"></label>
+</div> */
+
+#image-dropdown {
+    /*style the "box" in its minimzed state*/
+    border:1px solid black; width:100%; height:135px; overflow:hidden;
+    /*animate collapsing the dropdown from open to closed state (v. fast)*/
+    -moz-transition: height 0.1s; 
+    -webkiAt-transition: height 0.1s; 
+    -ms-transition: height 0.1s;  
+    -o-transition: height 0.1s;  
+    transition: height 0.1s;
+}
+#image-dropdown:hover {
+    /*when expanded, the dropdown will get native means of scrolling*/
+    height:135px; overflow-y:scroll;
+    /*nice and smooth expand - speed this up at your preference or remove animation altogether*/
+    -moz-transition: height 0.5s; 
+    -webkit-transition: height 0.5s; 
+    -ms-transition: height 0.5s;  
+    -o-transition: height 0.5s;  
+    transition: height 0.5s;
+}
+#image-dropdown input {
+    /*hide the nasty default radio buttons. like, completely!*/
+    position:absolute;top:0;left:0;opacity:0;
+}
+
+
+#image-dropdown label {
+    /*style the labels to look like dropdown options, kinda*/
+    display:none; margin:2px; height:135px; opacity:0.2;
+    background-repeat: no-repeat;
+}
+
+#image-dropdown label[for=line1] {
+    background:url("Images/Type1.svg") 50% 50%;
+    background-repeat: no-repeat;}
+    
+#image-dropdown label[for=line2] {
+    background:url("Images/Type2.svg") 50% 50%;
+    background-repeat: no-repeat;}
+    
+#image-dropdown label[for=line3] {
+    background:url("Images/Type3.svg") 50% 50%;
+    background-repeat: no-repeat;}
+    
+#image-dropdown label[for=line4] {
+    background:url("Images/Type4.svg") 50% 50%;
+    background-repeat: no-repeat;}
+    
+#image-dropdown label[for=line5] {
+    background:url("Images/Type5.svg") 50% 50%;
+    background-repeat: no-repeat;}
+    
+#image-dropdown label[for=line6] {
+    background:url("Images/Type6.svg") 50% 50%;
+    background-repeat: no-repeat;}
+    
+
+#image-dropdown:hover label{
+    /*this is how labels render in the "expanded" state. 
+    we want to see only the selected radio button in the 
+    collapsed menu, and all of them when expanded*/
+    display:block;
+}
+#image-dropdown label:hover {
+    opacity:0.5;
+}
+#image-dropdown input:checked + label {
+    /*tricky! labels immediately following a checked radio 
+    button (with our markup they are semantically related) 
+    should be fully opaque regardless of hover, and they 
+    should always be visible (i.e. even in the collapsed menu*/
+    opacity:1 !important; display:block;
+}
+
+/*pfft, nothing as cool here, just the value trace*/
+#trace {margin:0 0 20px;}

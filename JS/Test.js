@@ -42,6 +42,9 @@ class TableElement{
 
   CreateHtmlObject(ox, oy)
   {
+    ox = Math.round(ox / GridSize) * GridSize
+    oy = Math.round(oy / GridSize) * GridSize
+
     let id = "table" + ox + "-" + oy;
     let trans = 'translate(' + ox + 'px, ' + oy + 'px)';
     trans += ' rotate(' + this.angle + 'deg)'
@@ -482,6 +485,7 @@ function InitAll()
   TableSize.h = TableSize.w * 41.0 / 44.0;
   Data = new DataBase();
   UpdateInfoPlan();
+  UpdatePlanTypeSelect();
 } 
 
 function AddClasse(select = false, addtoparent = true, classe = null)
@@ -495,7 +499,7 @@ function AddClasse(select = false, addtoparent = true, classe = null)
   div.classList.add("listelement");
   div.id = "classe" + id
   div.innerHTML =
-  '<input type="text" value="Classe ' + id + '" id="classe_' + id +
+  '<input type="text" value="' + classe.Nom + '" id="classe_' + id +
   '_nom" oninput="ClasseNameChange(this.value,' + id + ')"> <div class="icon' +
   'button" onclick="SelectClasse(' + id + ')"><svg xmlns="http:'+
   '//www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" w'+
@@ -525,6 +529,8 @@ function AddClasse(select = false, addtoparent = true, classe = null)
 }
 function DeleteClasse(id)
 {
+  let doit = confirm("Voulez-vous supprimer cette classe ? (Pas d'annulation possible)");
+  if (!doit) return;
   Data.Classes = Data.Classes.filter(classe => classe.UID != id);
   if (id == ClasseSelected)
   {
@@ -566,6 +572,8 @@ function SelectClasse(id)
   document.getElementById("selectedplan").innerHTML = "Aucun plan selectionné";
   PlanSelected = null;
 
+  document.getElementById("content").innerHTML = "";
+
   UpdateInfoPlan();
 }
 
@@ -603,6 +611,9 @@ function AddToList(eleve)
 }
 function DeleteEleve(id)
 {
+  let doit = confirm("Voulez-vous supprimer cet élève ? (Pas d'annulation possible)");
+  if (!doit) return;
+  
   ClasseSelected.ListeEleve = ClasseSelected.ListeEleve.filter(eleve => eleve.UID != id);
   let child = document.getElementById("eleve"+id)
   document.getElementById("listeeleve").removeChild(child);
@@ -654,6 +665,8 @@ function AddPlan(nom = null, addtoparent = true, plan = null, select = false)
 function DeletePlan(id)
 {
   if (ClasseSelected == null) return;
+  let doit = confirm("Voulez-vous supprimer ce plan ? (Pas d'annulation possible)");
+  if (!doit) return;
   ClasseSelected.Plans = ClasseSelected.Plans.filter(plan => plan.UID != id);
   if (id == PlanSelected)
   {
@@ -674,6 +687,7 @@ function PlanNameChange(nom, id)
     let t = document.getElementById("plan_" + id + "_nom").value;
     document.getElementById("selectedplan").innerHTML = 
     "Plan actuel : " + t;
+    UpdateInfoPlan();
   }
 }
 function SelectPlan(id)
@@ -837,18 +851,22 @@ function hideMenu(e) {
 
 function GenerateClasse(e)
 {
+  // PlanSelected = new Plan();
   if (PlanSelected == null) return;
+  let doit = confirm("Voulez-vous remplacer le plan actuel ? (Pas d'annulation possible)");
+  if (!doit) return;
   PlanSelected.Tables = [];
-  let id = document.querySelector('input[name="line-style"]:checked').value;
-  if (id == 1)
+  // let id = document.querySelector('input[name="line-style"]:checked').value;
+  let id = document.getElementById("PlanType").selectedIndex;
+  
+  if (id == 0)  
   {
     let ox = Math.round(PlanSize.x / 2.0 / GridSize) * GridSize;
     let oy = Math.round(PlanSize.y / 2.0 / GridSize) * GridSize;
-    for (let i = 0; i < 8; i++) {
-      if ((i+1) % 3 == 0) continue;
+    for (let i = 0; i < 6; i++) {
       for (let j = 0; j < 5; j++) {
-        let x = (ox - TableSize.w*(i - 3));
-        let y = (oy - (TableSize.h * 1.5)*j + TableSize.h * 2.5);
+        let x = (ox - (TableSize.w+3)*(i - 2));
+        let y = (oy - (TableSize.h+1)*(1.5 * j - 2.5));
         x = Math.round(x / GridSize) * GridSize
         y = Math.round(y / GridSize) * GridSize
         PlanSelected.AddTable(x, y, 0);
@@ -856,7 +874,170 @@ function GenerateClasse(e)
     }
     PlanSelected.ChargeTables();
   }
+  else if (id == 1)  
+  {
+    let ox = Math.round(PlanSize.x / 2.0 / GridSize) * GridSize;
+    let oy = Math.round(PlanSize.y / 2.0 / GridSize) * GridSize;
+    for (let i = 0; i < 7; i++) {
+      if ((i+1) % 4 == 0) continue;
+      for (let j = 0; j < 5; j++) {
+        let x = (ox - (TableSize.w+3)*(i - 2.5));
+        let y = (oy - (TableSize.h+1)*(1.5 * j - 2.5));
+        x = Math.round(x / GridSize) * GridSize
+        y = Math.round(y / GridSize) * GridSize
+        PlanSelected.AddTable(x, y, 0);
+      }  
+    }
+    PlanSelected.ChargeTables();
+  }
+  else if (id == 2)  
+  {
+    let ox = Math.round(PlanSize.x / 2.0 / GridSize) * GridSize;
+    let oy = Math.round(PlanSize.y / 2.0 / GridSize) * GridSize;
+    for (let i = 0; i < 8; i++) {
+      if ((i+1) % 3 == 0) continue;
+      for (let j = 0; j < 5; j++) {
+        let x = (ox - (TableSize.w+3)*(i - 3));
+        let y = (oy - (TableSize.h+1)*(1.5 * j - 2.5));
+        x = Math.round(x / GridSize) * GridSize
+        y = Math.round(y / GridSize) * GridSize
+        PlanSelected.AddTable(x, y, 0);
+      }  
+    }
+    PlanSelected.ChargeTables();
+  }
+  else if (id == 3)  
+  {
+    let ox = Math.round(PlanSize.x / 2.0 / GridSize) * GridSize;
+    let oy = Math.round(PlanSize.y / 2.0 / GridSize) * GridSize;
+    for (let i = 0; i < 4; i++) {
+      for (let j = 0; j < 4; j++) {
+        for (let k = 0; k < 2; k++) {
+          if ((i % 3 == 0) && (j == 3)) continue;
+          let x = (ox - (TableSize.w+3)*k - (i - 1.5) * 2 * (TableSize.w+3 + 15));
+          let y = (oy - (TableSize.h+1)*(1.5 * j - 1.75));
+          if (i % 3 == 0) y = (oy - (TableSize.h+1)*(1.5 * j - 1.25));
+          x = Math.round(x / GridSize) * GridSize
+          y = Math.round(y / GridSize) * GridSize
+          PlanSelected.AddTable(x, y, 0);
+        }
+      }
+    }
+    PlanSelected.ChargeTables();
+  }
+  else if (id == 4)  
+  {
+    let ox = Math.round(PlanSize.x / 2.0 / GridSize) * GridSize;
+    let oy = Math.round(PlanSize.y / 2.0 / GridSize) * GridSize;
+    for (let i = 0; i < 4; i++) {
+      for (let j = 0; j < 4; j++) {
+        for (let k = 0; k < 2; k++) {
+          let x = (ox - (TableSize.w+3)*k - (i - 1.5) * 2 * (TableSize.w+3 + 15));
+          let y = (oy - (TableSize.h+1)*(1.5 * j - 1.75));
+          x = Math.round(x / GridSize) * GridSize
+          y = Math.round(y / GridSize) * GridSize
+          PlanSelected.AddTable(x, y, 0);
+        }
+      }
+    }
+    PlanSelected.ChargeTables();
+  }
+  else if (id == 5)
+  {
+    let ox = Math.round(PlanSize.x / 2.0 / GridSize) * GridSize;
+    let oy = Math.round(PlanSize.y / 2.0 / GridSize) * GridSize;
+    for (let i = 0; i < 6; i++) {
+      let x = (ox - (TableSize.w+3)*(i-2));
+      let y = (oy - (TableSize.w+3)* 3);
+      x = Math.round(x / GridSize) * GridSize
+      y = Math.round(y / GridSize) * GridSize
+      PlanSelected.AddTable(x, y, 0);
+      if (i % 5 != 0)
+      {
+        x = Math.round(x / GridSize) * GridSize
+        y = Math.round((y+ (TableSize.w*2+3 - TableSize.h)) / GridSize) * GridSize
+        PlanSelected.AddTable(x, y, 0);
+      }
+    }
+    for (let i = 0; i < 6; i++) {
+      let x = (ox - 3 *(TableSize.w+3) - TableSize.h-3);
+      let y = (oy - (TableSize.w+3)* (3-i) + (TableSize.w - TableSize.h) / 2.0);
+      x = Math.round(x / GridSize) * GridSize
+      y = Math.round(y / GridSize) * GridSize
+      PlanSelected.AddTable(x, y, -90);
+      x = (ox + 2 *(TableSize.w+3) + TableSize.h+4);
+      x = Math.round(x / GridSize) * GridSize
+      PlanSelected.AddTable(x, y, 90);
+    }
+    for (let i = 0; i < 4; i++) {
+      let x = (ox - 2*(TableSize.w+3));
+      let y = (oy - (TableSize.w+3)* (1-i) + (TableSize.w - TableSize.h) / 2.0);
+      x = Math.round(x / GridSize) * GridSize
+      y = Math.round(y / GridSize) * GridSize
+      PlanSelected.AddTable(x, y, -90);
+      x = (ox + (TableSize.w+3));
+      x = Math.round(x / GridSize) * GridSize
+      PlanSelected.AddTable(x, y, 90);
+    }
+    PlanSelected.ChargeTables();
+  }
+  else if (id >= 6)
+  {
+    console.log(id);
+    let plancible = Data.PlanTemplate[id - 6];
+    plancible.Tables.forEach(table => {
+      let x = parseFloat(table.element.getAttribute('data-x')) || 0;
+      let y = parseFloat(table.element.getAttribute('data-y')) || 0;
+      PlanSelected.AddTable(x, y, table.angle);
+    })
+    PlanSelected.ChargeTables();
+  }
+  UpdateInfoPlan();
 }
+
+function UpdatePlanTypeSelect()
+{
+  let select = document.getElementById("PlanType");
+  select.innerHTML = '<option>Autobus 1 colonne (30 tables) </option>'+
+                     '<option>Autobus 2 colonnes (30 tables)</option>'+
+                     '<option>Autobus 3 colonnes (30 tables)</option>'+
+                     '<option>Autobus 4 colonnes (28 tables)</option>'+
+                     '<option>Autobus 4 colonnes (32 tables)</option>'+
+                     '<option>Classe en U (30 tables)</option>'
+  
+  Data.PlanTemplate.forEach(plan => {
+    let option = document.createElement("option");
+    option.innerHTML = plan.Nom;
+    select.appendChild(option);
+  })
+}
+function SavePlan()
+{
+  if (PlanSelected == null) return;
+  let nplan = new Plan();
+  nplan.Nom = prompt("Entrer un nom pour votre plan (cela écrasera un plan du même nom)");
+  if (nplan.Nom == null || nplan.Nom == "") return;
+  PlanSelected.Tables.forEach(table => {
+    let x = parseFloat(table.element.getAttribute('data-x')) || 0;
+    let y = parseFloat(table.element.getAttribute('data-y')) || 0;
+    nplan.AddTable(x, y, table.angle);
+  })
+  Data.PlanTemplate = Data.PlanTemplate.filter(plan => plan.Nom != nplan.Nom);
+  Data.PlanTemplate.push(nplan);
+  UpdatePlanTypeSelect();
+}
+
+function ClearClasse()
+{
+  if (PlanSelected == null) return;
+  let doit = confirm("Voulez-vous supprimer toutes les tables ? (Pas d'annulation possible)");
+  if (!doit) return;
+  
+  PlanSelected.Tables = [];
+  PlanSelected.ChargeTables();
+  UpdateInfoPlan();
+}
+
 
 
 function GridSizeChanged(e)
@@ -943,9 +1124,12 @@ function processJSON(contents) {
   Data.LoadData(JSON.parse(contents));
 
   document.getElementById("listeclasse").innerHTML = "";
+  document.getElementById("listeplan").innerHTML = "";
+  document.getElementById("listeeleve").innerHTML = "";
   Data.Classes.forEach(classe => {
       AddClasse(false, false, classe);
     })
+  UpdatePlanTypeSelect();
 }
 
 function Remplir()
@@ -979,7 +1163,19 @@ function Remplir()
 }
 
 var TablePNG = null;
-const tablesvg64 = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iVGFibGUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDQgNDEiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICAgIDxwYXRoIGQ9Ik0zNC42LDExLjVjLTEtMS43LTMuMi0xLTQuNi0xYy0xLjUsMC0yLjctMC45LTIuNy0yLjENCiAgICBzMS4yLTIuMSwyLjctMi4xYzIuMywwLDYuNy0wLjQsNi43LTIuNnMtNS4yLTMuMy0xNC41LTMuMw0KICAgIFM3LjcsMS42LDcuNywzLjhzNC4zLDIuNiw2LjcsMi42YzEuNSwwLDIuNywwLjksMi43LDIuMQ0KICAgIHMtMS4yLDIuMS0yLjcsMi4xYy0xLjUsMC0zLjYtMC44LTQuNiwxIE0wLjUsMTEuNWg0M3YyOQ0KICAgIGgtNDNWMTEuNXoiIHN0eWxlPSJzdHJva2UtbGluZWNhcDogcm91bmQ7IHN0cm9rZS1saW5lam9pbjogcm91bmQ7IiANCiAgICBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIC8+DQo8L3N2Zz4='
+const tablesvg64 = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iM'+
+'S4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iVGF'+
+'ibGUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpb'+
+'ms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0'+
+'KCSB2aWV3Qm94PSIwIDAgNDQgNDEiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICAgI'+
+'DxwYXRoIGQ9Ik0zNC42LDExLjVjLTEtMS43LTMuMi0xLTQuNi0xYy0xLjUsMC0yLjc'+
+'tMC45LTIuNy0yLjENCiAgICBzMS4yLTIuMSwyLjctMi4xYzIuMywwLDYuNy0wLjQsN'+
+'i43LTIuNnMtNS4yLTMuMy0xNC41LTMuMw0KICAgIFM3LjcsMS42LDcuNywzLjhzNC4'+
+'zLDIuNiw2LjcsMi42YzEuNSwwLDIuNywwLjksMi43LDIuMQ0KICAgIHMtMS4yLDIuM'+
+'S0yLjcsMi4xYy0xLjUsMC0zLjYtMC44LTQuNiwxIE0wLjUsMTEuNWg0M3YyOQ0KICA'+
+'gIGgtNDNWMTEuNXoiIHN0eWxlPSJzdHJva2UtbGluZWNhcDogcm91bmQ7IHN0cm9rZ'+
+'S1saW5lam9pbjogcm91bmQ7IiANCiAgICBmaWxsPSJub25lIiBzdHJva2U9IiMwMDA'+
+'wMDAiIC8+DQo8L3N2Zz4='
 
 function printDiv(divName) 
 {

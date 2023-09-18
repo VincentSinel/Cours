@@ -2,12 +2,50 @@
     --TableWidth : 77px;
     --TableHeight: calc(var(--TableWidth) * 41.0 / 44.0);
     --TableFontSize: calc(var(--TableWidth) * 8.0 / 44.0);
+
+    --Back: #181818;
+    --BackObject: #262626;
+	--BackActive: #37373D;
+	--BackHover: #2A2D2E;
+	--BackHoverMenu: #36363C;
+	--BackText: #DEDEE3;
+	--DBackText: #CFCFD3;
+
+    --WBack: #353535;
+	--WBackActive: #53535B;
+	--WBackHover: #494D4F;
+	--WBackHoverMenu: #52525B;
+	--WBackText: #F9F9FF;
 }
 
 body{
     min-height: 100%;
+    background-color: var(--PanelBackHoverMenu);
 }
 
+p, span, div{
+    color: var(--BackText);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button, input, select{
+    border: solid gray 1px;
+    border-radius: 5px;
+    background-color: var(--BackText);
+}
+button:focus,
+button:hover,
+input:focus,
+input:hover,
+select:focus,
+select:hover{
+    background-color: var(--WBackText);
+}
+button:focus,
+select:focus,
+input:focus{
+    outline: solid var(--BluePanelHover) 1px;
+}
 
 .maincontainer
 {
@@ -21,6 +59,7 @@ body{
     display: flex;
     padding: 5px;
     gap: 5px;
+    background-color: var(--PanelBack);
 }
 
 .column{
@@ -28,7 +67,6 @@ body{
     width: 275px;
     height: 100%;
     max-height: 100%;
-    background-color: white;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -43,41 +81,43 @@ body{
     display: flex;
     height: auto;
     justify-content: center;
-    gap: 5px;
+    gap: 15px;
+}
+#listeclasse,
+#listeplan,
+#listeeleve
+{
+    padding: 1px;
+    border: solid var(--BackHover) 1px;
+    overflow-y: scroll;
+    background-color: var(--BackObject);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
 #listeclasse,
 #listeplan{
-    height: 30%;
-    padding: 1px;
-    border: solid gray 1px;
-    overflow-y: scroll  ;
+    min-height: 30%;
 }
-
 #listeeleve{
-    padding: 1px;
-    border: solid gray 1px;
-    overflow-y: scroll;
     flex: 1 1 auto;
 }
 
 .iconbutton{
     width: 24px;
     height: 24px;
-    transition: 300ms;
+    transition: 150ms;
     border-radius: 5px;
     display: inline-block;
-    border: solid cornflowerblue 1px;
-    background-color: cornflowerblue;
-    color: white;
+    background-color: var(--HeadMenuButton);
+    color: var(--WBackText);;
 }
 .iconbutton:hover{
-    background-color: white;
-    color: cornflowerblue;
+    background-color: var(--WBackHover);
 }
 .iconbutton:active{
-    background-color: lightgray;
-    color: dodgerblue;
+    background-color: var(--WBackActive);
 }
 
 .listelement{
@@ -92,22 +132,30 @@ body{
     height: 24px;
     display: inline-block;
 }
-
+.preview_container{
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+}
 .preview{
     height: 100%;
     width: 800px;
+    margin: 30;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 20px;
     justify-content: center;
 }
+.preview span{
+    color: var(--Back);
+}
 
 .aspect{
     aspect-ratio: 297/ 210;
     width: 800px;
     max-height: 100%;
-    background: gold;
+    background: var(--WBackText);
     position: relative;
 }
 
@@ -118,25 +166,11 @@ body{
 
 
 
-/* @media print {
-    body {
-      visibility: hidden;
-      overflow: hidden;
-    }
-    #printarea {
-      visibility: visible;
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-  } */
-
-
-
 
 
 
 #titreplan{
+    color: var(--Back);
     position: absolute;
     top: 10px;
     width: 100%;
@@ -147,7 +181,7 @@ body{
 
 #content
 {
-    border: solid gray 1px;
+    border: solid var(--BackText) 1px;
     position: absolute;
     top: 35px; bottom: 10px; left: 10px; right: 10px;
     overflow: hidden;
@@ -157,7 +191,6 @@ body{
     position:absolute;
     width: var(--TableWidth);
     height: var(--TableHeight);
-    background-color: #29e;
     color: black;
     touch-action: none;
     user-select: none;
@@ -197,82 +230,6 @@ body{
     text-overflow: ellipsis;
 }
 
-
-
-
-/*o.v.*/
-
-#image-dropdown {
-    /*style the "box" in its minimzed state*/
-    border:1px solid black; width:100%; height:135px; overflow:hidden;
-    /*animate collapsing the dropdown from open to closed state (v. fast)*/
-    -moz-transition: height 0.1s; 
-    -webkiAt-transition: height 0.1s; 
-    -ms-transition: height 0.1s;  
-    -o-transition: height 0.1s;  
-    transition: height 0.1s;
-}
-#image-dropdown:hover {
-    /*when expanded, the dropdown will get native means of scrolling*/
-    height:135px; overflow-y:scroll;
-    /*nice and smooth expand - speed this up at your preference or remove animation altogether*/
-    -moz-transition: height 0.5s; 
-    -webkit-transition: height 0.5s; 
-    -ms-transition: height 0.5s;  
-    -o-transition: height 0.5s;  
-    transition: height 0.5s;
-}
-#image-dropdown input {
-    /*hide the nasty default radio buttons. like, completely!*/
-    position:absolute;top:0;left:0;opacity:0;
-}
-
-
-#image-dropdown label {
-    /*style the labels to look like dropdown options, kinda*/
-    display:none; margin:2px; height:135px; opacity:0.2;
-    background-repeat: no-repeat;
-}
-
-#image-dropdown label[for=line1] {
-    background:url("Images/Type1.svg") 50% 50%;
-    background-repeat: no-repeat;}
-    
-#image-dropdown label[for=line2] {
-    background:url("Images/Type2.svg") 50% 50%;
-    background-repeat: no-repeat;}
-    
-#image-dropdown label[for=line3] {
-    background:url("Images/Type3.svg") 50% 50%;
-    background-repeat: no-repeat;}
-    
-#image-dropdown label[for=line4] {
-    background:url("Images/Type4.svg") 50% 50%;
-    background-repeat: no-repeat;}
-    
-#image-dropdown label[for=line5] {
-    background:url("Images/Type5.svg") 50% 50%;
-    background-repeat: no-repeat;}
-    
-#image-dropdown label[for=line6] {
-    background:url("Images/Type6.svg") 50% 50%;
-    background-repeat: no-repeat;}
-    
-
-#image-dropdown:hover label{
-    /*this is how labels render in the "expanded" state. we want to see only the selected radio button in the collapsed menu, and all of them when expanded*/
-    display:block;
-}
-#image-dropdown label:hover {
-    opacity:0.5;
-}
-#image-dropdown input:checked + label {
-    /*tricky! labels immediately following a checked radio button (with our markup they are semantically related) should be fully opaque regardless of hover, and they should always be visible (i.e. even in the collapsed menu*/
-    opacity:1 !important; display:block;
-}
-
-/*pfft, nothing as cool here, just the value trace*/
-#trace {margin:0 0 20px;}
 
 
 .context-menu,
