@@ -16,7 +16,6 @@ class TableElement{
   nom;
   prenom;
   fixed = false;
-  empty = false;
 
 
   interact;
@@ -90,14 +89,13 @@ class TableElement{
     let y = parseFloat(this.element.getAttribute('data-y')) || 0;
     let uid = null
     if (this.Eleve != null) uid = this.Eleve.UID
-    return {ox: x, oy: y, angle: this.angle, eleveuid: uid, fixed: this.fixed, empty: this.empty};
+    return {ox: x, oy: y, angle: this.angle, eleveuid: uid, fixed: this.fixed};
   }
 
   static LoadData(parent, data)
   {
     let table = new TableElement(parent, data.ox, data.oy, data.angle);
     table.fixed = data.fixed;
-    table.empty = data.empty;
     if (parent != null)
     {
       if (parent.Parent != null)
