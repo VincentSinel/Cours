@@ -4,6 +4,8 @@
 }
 body{
     font-family: var(--TexteFont);
+    padding: 10px;
+    padding-left: 50px;
 }
 .container{
     margin-left: 0;

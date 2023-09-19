@@ -23,7 +23,12 @@
   <title>Cours M.SINEL</title>
 
   <style>
-    
+    #noiframe{
+      display: inline-block; 
+      margin-left: 45px; 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      text-align: left; 
+      width: calc(100% - 45px);}
   </style>
 
 </head>
@@ -43,7 +48,7 @@
 		<div class="blockmenu blockmenuprincipal" onclick="Menu()"><span></span></div>
 		<div class="blockmenu blockmenucours" onclick="Cours()"><span></span></div>
 		<div class="blockmenu blockmenugenerateurs" onclick="Outils()"><span></span></div>
-		<div class="blockmenu blockmenuannales" onclick="Annales_brevets()"><span></span></div>
+		<div class="blockmenu blockmenuapps" onclick="Applications()"><span></span></div>
 		<div class="blockmenu blockmenusecret" onclick="ShowConnection()"><span></span></div>
       </div>
     </header>
@@ -78,6 +83,9 @@
   </div>
   <div class="container">
     <div>
+      <span id="noiframe">
+        ← Choisissez une application depuis le menu ci-contre.
+      </span>
       <iframe id="Iframe"></iframe>
     </div>
   </div>
@@ -86,7 +94,6 @@
 
     function toggleMenu()
     {
-      console.log("clic")
       let menu = document.getElementById("menu");
       menu.classList.toggle("asideshow");
     }
@@ -129,12 +136,14 @@
 
     function clic(path, a)
     {
+      document.getElementById("noiframe").style.display = "none"
       frame.src = path
       if (lastselected != null)
         lastselected.classList.remove("selected")
       lastselected = a
       lastselected.classList.add("selected")
       window.scrollTo(0, 0);
+      menu.classList.remove("asideshow");
     }
 
   </script>

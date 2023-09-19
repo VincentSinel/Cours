@@ -83,8 +83,8 @@ footer div{
     .blockmenugenerateurs span::before{
         content: "Outils";
     }
-    .blockmenuannales span:before{
-        content: "🚧 Annales du brevet";
+    .blockmenuapps span:before{
+        content: "Applications";
     }
     .blockmenu{
         width: 100%;

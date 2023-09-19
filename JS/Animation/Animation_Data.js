@@ -56,7 +56,6 @@ class Animation_Data
         let animzone = document.createElement("div");
         animzone.classList.add("animationzone");
         let canvas = document.createElement("canvas");
-        console.log(window.innerWidth)
         this.hopew = parseInt(this.divcontent.attributes["width"].value) - 2;
         this.hopeh = parseInt(this.divcontent.attributes["height"].value) - 2
         let selectedw = Math.min(this.hopew, document.body.offsetWidth)

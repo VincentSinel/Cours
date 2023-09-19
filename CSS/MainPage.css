@@ -124,17 +124,21 @@ header {
 .blockmenu:active{
   background-color: var(--HeadMenuButtonActive);
 }
-.blockmenuprincipal span:before{
+.blockmenu span::before
+{
+  padding-right: 10px;
+}
+.blockmenuprincipal span::before{
   content: "Menu principal";
 }
-.blockmenucours span:before{
+.blockmenucours span::before{
   content: "Cours";
 }
 .blockmenugenerateurs span::before{
 	content: "Outils";
 }
-.blockmenuannales span:before{
-  content: "🚧 Annales du brevet";
+.blockmenuapps span::before{
+  content: "Applications";
 }
 .blockmenusecret{
   flex: 0 1 auto;
@@ -225,6 +229,9 @@ header {
   -ms-user-select: none;
   user-select: none;
   visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .openmenu:hover{
   background-color: var(--PanelBackHoverMenu);
@@ -334,8 +341,8 @@ nav::-webkit-scrollbar-thumb {
 	  left: 0;
 	}
 	.aside {
-	  width: calc(100% - 40px);
-	  left: calc(40px - 100%);
+	  width: calc(var(--NavBarWidth) - 40px);
+	  left: calc(40px - var(--NavBarWidth));
 	  top: calc(2 * var(--HeaderBarHeight));
 	}
 	.asideshow{
@@ -356,6 +363,8 @@ nav::-webkit-scrollbar-thumb {
 	}
 }
 
+
+
 @media only screen and (max-width:860px) {
   .nav-header {
     height: calc(2 * var(--HeaderBarHeight));
@@ -369,8 +378,9 @@ nav::-webkit-scrollbar-thumb {
     left: 0;
   }
   .aside {
-    width: calc(100% - 40px);
-    left: calc(40px - 100%);
+	  max-width: calc(var(--NavBarWidth) - 40px);
+	  width: calc(100% - 40px);
+	  left: calc(40px - var(--NavBarWidth));
     top: calc(2 * var(--HeaderBarHeight));
   }
   .asideshow{
@@ -392,10 +402,10 @@ nav::-webkit-scrollbar-thumb {
     content: "📚️";
   }
   .blockmenugenerateurs span:before{
-    content: "🛠️";
+    content: "✏️";
   }
-  .blockmenuannales span:before{
-    content: "🗄️";
+  .blockmenuapps span:before{
+    content: "💿";
   }
   .blockmenu span {
     width: 30px;
@@ -405,5 +415,14 @@ nav::-webkit-scrollbar-thumb {
   }
   .openmenu{
     visibility: visible;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .aside {
+	  left: calc(40px - 100%);
+  }
+  .asideshow{
+    left: 0px;
   }
 }

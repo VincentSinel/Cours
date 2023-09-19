@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta http-equiv="content-language" content="fr">
   <link rel="stylesheet" href="/CSS/MainPage.css"> 
-  <link rel="stylesheet" href="/CSS/AnnalesBrevet.css"> 
+  <link rel="stylesheet" href="AnnalesBrevet.css"> 
   <script src="/JS/Menu.js"></script>
   <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
@@ -48,29 +48,7 @@
 </head>
 
 <body onload="FirstLaunch();">
-
-  <div class="nav-header">
-    <div class="nav-headertext">
-      <div class="titrepageback">
-        <p class="titrepage"> SINEL Vincent</p>
-        <p class="titrepagecollege"><span></span></p>
-        <p class="titrepagedate"><span></span></p>
-      </div>
-    </div>
-    <header>
-      <div class="menuprincipale">
-		<div class="blockmenu blockmenuprincipal" onclick="Menu()"><span></span></div>
-		<div class="blockmenu blockmenucours" onclick="Cours()"><span></span></div>
-		<div class="blockmenu blockmenugenerateurs" onclick="Outils()"><span></span></div>
-		<div class="blockmenu blockmenuannales" onclick="Annales_brevets()"><span></span></div>
-        <div class="blockmenu blockmenusecret" onclick="ShowConnection()"><span></span></div>
-      </div>
-    </header>
-  </div>
-  <div id="secret" class="secret_connect">
-      <input type="password" onfocusout="HideConnection()" onkeypress="CodeEnter(event)">
-  </div>
-  <div class="container">
+    
     <div class="searchbar">
         <button class="searchbutton" onclick="Rechercher(document.getElementById('recherche').value)">
             <svg width="33" height="33" fill="#2d6172">
@@ -84,37 +62,39 @@
             </svg>
         </button>
     </div>
-	<p style="color: white; font-weight: bold;">🛑🚧CET OUTILS EST EN COURS DE CREATION🚧🛑</p>
-    <div class="Unselectable searchmenu">
-        <label class="switch">
-            <input type="radio" name="selection" checked onclick="
-                document.getElementById('Selection').classList.add('HideListe');
-                document.getElementById('Resultats').classList.remove('HideListe');
-                document.getElementById('Selection').classList.remove('VisibleListe');
-                document.getElementById('Resultats').classList.add('VisibleListe');
-                ">
-            <div class="slider">
-                <a>Resultat(s)</a>
-            </div>
-        </label>
-        <label class="switch">
-            <input type="radio" name="selection" onclick="
-                document.getElementById('Selection').classList.remove('HideListe');
-                document.getElementById('Resultats').classList.add('HideListe');
-                document.getElementById('Selection').classList.add('VisibleListe');
-                document.getElementById('Resultats').classList.remove('VisibleListe');
-                document.getElementById('nbrnotifier').classList.add('nbrnotifier_hide');
-                ">
-            <div class="slider">
-                <a>Selection</a>
-            </div>
-			<div id="nbrnotifier" class="nbrnotifier nbrnotifier_hide">
-				25
-			</div>
-        </label>
-        <button class="clearbutton" onclick="ClearSelection()">
-            Effacer la selection
-        </button>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <p style="color: white; font-weight: bold;">🛑🚧CET APPLICATION EST EN COURS DE CREATION🚧🛑</p>
+        <div class="Unselectable searchmenu">
+            <label class="switch">
+                <input type="radio" name="selection" checked onclick="
+                    document.getElementById('Selection').classList.add('HideListe');
+                    document.getElementById('Resultats').classList.remove('HideListe');
+                    document.getElementById('Selection').classList.remove('VisibleListe');
+                    document.getElementById('Resultats').classList.add('VisibleListe');
+                    ">
+                <div class="slider">
+                    <a>Resultat(s)</a>
+                </div>
+            </label>
+            <label class="switch">
+                <input type="radio" name="selection" onclick="
+                    document.getElementById('Selection').classList.remove('HideListe');
+                    document.getElementById('Resultats').classList.add('HideListe');
+                    document.getElementById('Selection').classList.add('VisibleListe');
+                    document.getElementById('Resultats').classList.remove('VisibleListe');
+                    document.getElementById('nbrnotifier').classList.add('nbrnotifier_hide');
+                    ">
+                <div class="slider">
+                    <a>Selection</a>
+                </div>
+                <div id="nbrnotifier" class="nbrnotifier nbrnotifier_hide">
+                    25
+                </div>
+            </label>
+            <button class="clearbutton" onclick="ClearSelection()">
+                Effacer la selection
+            </button>
+        </div>
     </div>
     <div class="ResultPart">
         <div id="Resultats" class="VisibleListe">
@@ -125,7 +105,7 @@
             </div>
         </div>
     </div>
-  </div>
+ 
   <script id="MathJax-script" async src="/JS/Cours/Liste.js"></script>
 </body>
 

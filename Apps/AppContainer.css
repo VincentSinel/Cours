@@ -1,0 +1,59 @@
+:root{
+    --AppListWidth: 280px;
+}
+
+
+.container{
+    margin-left: 0;
+    background-color: var(--PanelBack);
+    min-height: calc(100%- var(--HeaderBarHeight));
+    max-height: calc(100% - var(--HeaderBarHeight));
+    height: calc(100% - var(--HeaderBarHeight));
+    overflow-y: hidden;    
+    bottom: 0;
+    position: relative;
+    display: flex; 
+    align-items: stretch;
+}
+.iframe_container{
+    flex-grow: 1;
+}
+@media only screen and (max-width:1220px) {
+    .container{
+        min-height: calc(100%- 2*var(--HeaderBarHeight));
+        max-height: calc(100% - 2*var(--HeaderBarHeight));
+        height: calc(100% - 2*var(--HeaderBarHeight));
+    }
+}
+@media only screen and (max-width:860px) {
+    
+}
+
+
+
+.aside {
+    width: calc(var(--NavBarWidth) - 40px);
+    left: calc(40px - var(--NavBarWidth));
+    /* top: calc(var(--HeaderBarHeight)); */
+}
+.asideshow{
+    left: 0px;
+}
+.openmenu{
+    visibility: visible;
+    height: 100%;
+}
+
+.listeapp{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 5px;
+}
+.listeapp div{
+    width: calc(100% - 20px);
+    flex: 0 1 45px;
+}
+.listeapp div span{
+    width: 100%;
+}

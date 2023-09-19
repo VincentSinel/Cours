@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/MainPage.css">
+  <link rel="stylesheet" href="AppContainer.css">
+  <script src="/JS/Menu.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Images/favicon-16x16.png">
+  <link rel="manifest" href="/Images/site.webmanifest">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Cours M.SINEL</title>
+
+  <style>
+    .buttonbrevet span::before{ content: "🚧 Annales du brevet"; }
+    .buttonplandc span::before{ content: "Générateur de plan de classe"; }
+    #noiframe{display: inline-block; margin-left: 45px; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: left; width: calc(100% - 45px);}
+  </style>
+
+</head>
+
+<body>
+
+  <div class="nav-header">
+    <div class="nav-headertext">
+      <div class="titrepageback">
+        <p class="titrepage"> SINEL Vincent</p>
+        <p class="titrepagecollege"><span></span></p>
+        <p class="titrepagedate"><span></span></p>
+      </div>
+    </div>
+    <header>
+      <div class="menuprincipale">
+		<div class="blockmenu blockmenuprincipal" onclick="Menu()"><span></span></div>
+		<div class="blockmenu blockmenucours" onclick="Cours()"><span></span></div>
+		<div class="blockmenu blockmenugenerateurs" onclick="Outils()"><span></span></div>
+		<div class="blockmenu blockmenuapps" onclick="Annales_brevets()"><span></span></div>
+        <div class="blockmenu blockmenusecret" onclick="ShowConnection()"><span></span></div>
+      </div>
+    </header>
+  </div>
+  <div id="secret" class="secret_connect">
+      <input type="password" onfocusout="HideConnection()" onkeypress="CodeEnter(event)">
+  </div>
+  <div id="menu" class="aside">
+    <div class="openmenu" onclick="toggleMenu()">
+      ☰
+    </div>
+    <nav>
+        <div class="listeapp">
+            <div class="blockmenu buttonbrevet" onclick="OpenMenu('/Brevet/Annales Brevet.html')"><span></span></div>
+            <div class="blockmenu buttonplandc" onclick="OpenMenu('/Apps/Generateur_PlanClasse/Generateur_PlanClasse.html')"><span></span></div>
+            <!-- <div class="blockmenu" onclick="OpenMenu()"><span></span></div>
+            <div class="blockmenu" onclick="OpenMenu()"><span></span></div> -->
+        </div>
+    </nav>
+  </div>
+  <div  class="container">
+    <div class="iframe_container">
+      <span id="noiframe">
+        ← Choisissez une application depuis le menu ci-contre.
+      </span>
+        <iframe id="appcontent">
+        </iframe>
+    </div>
+  </div>
+  <script id="MathJax-script" async src="/JS/Cours/Liste.js"></script>
+  <script>
+    function toggleMenu()
+    {
+      console.log("clic")
+      let menu = document.getElementById("menu");
+      menu.classList.toggle("asideshow");
+    }
+
+    function OpenMenu(path)
+    {
+        document.getElementById("noiframe").style.display = "none"
+        document.getElementById("appcontent").src = path
+        toggleMenu();
+    }
+  </script>
+</body>
+
+
+
+  
