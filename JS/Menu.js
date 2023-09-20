@@ -1,27 +1,23 @@
 function Menu()
 {
-	//window.open("Annales Brevet.html");
-	window.location = "/MenuPrincipal.html";
-	window.location.href = "/MenuPrincipal.html";
+	window.location = "/";
+	window.location.href = "/";
 }
 
 function Cours()
 {
-	//window.open("Annales Brevet.html");
 	window.location = "/Cours/Menu.html";
 	window.location.href = "/Cours/Menu.html";
 }
 
 function Outils()
 {
-	//window.open("Annales Brevet.html");
 	window.location = "/Generateurs/Formes.html";
 	window.location.href = "/Generateurs/Formes.html";
 }
 
 function Applications()
 {
-	//window.open("Annales Brevet.html");
 	window.location = "/Apps/AppContainer.html";
 	window.location.href = "/Apps/AppContainer.html";
 }
