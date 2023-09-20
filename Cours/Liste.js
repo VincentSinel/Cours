@@ -40,7 +40,7 @@ var ListeCours = {
             id: 7,
             nom: "Gestions de données",
             icone: 5,
-            ready : false,
+            ready : true,
         },
         {
             id: 8,
