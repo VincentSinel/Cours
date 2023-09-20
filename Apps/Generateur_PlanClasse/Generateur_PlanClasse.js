@@ -182,7 +182,7 @@ class TableElement{
 
   wheelEvent(event)
   {
-    this.set_angle(this.angle + 5 * event.deltaY / Math.abs(event.deltaY))
+    this.set_angle(this.angle + 5 * Math.round(event.deltaY / Math.abs(event.deltaY)))
     event.preventDefault();
   }
 
@@ -553,6 +553,7 @@ function ClasseNameChange(nom, id)
     document.getElementById("selectedclasse").innerHTML = 
     "Classe selectionné : " + t;
   }
+  UpdateInfoPlan()
 }
 function SelectClasse(id)
 {
