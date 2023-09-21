@@ -52,7 +52,7 @@ var ListeCours = {
             id: 9,
             nom: "Equations",
             icone: 1,
-            ready : false,
+            ready : true,
         },
         {
             id: 10,
