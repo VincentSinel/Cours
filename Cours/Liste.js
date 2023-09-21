@@ -46,7 +46,7 @@ var ListeCours = {
             id: 8,
             nom: "Théorème de Thalès Sens Direct",
             icone: 2,
-            ready : false,
+            ready : true,
         },
         {
             id: 9,

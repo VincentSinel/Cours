@@ -6,6 +6,10 @@
   <meta http-equiv="content-language" content="fr">
   <link rel="stylesheet" href="/CSS/Cours.css"> 
 
+  <script src="/JS/Svg.js/svg.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+  <script src="JS/Homothetie.js"></script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
     MathJax = {
@@ -17,6 +21,11 @@
   <title>Chapitre 8 - Théorème de Thalès Sens Direct</title>
 
   <style>
+    #graphiqueintro
+    {
+      border: solid black 1px;
+      width: fit-content;
+    }
   </style>
 
 </head>
@@ -37,9 +46,96 @@
   <p class="exemple">
     Activité Introduction
   </p>
-
   
+  <p>Effectuer la construction suivante :</p>
+  <ol>
+    <li>Construire un triangle ABC quelconque.</li>
+    <li>Construire l'image de ABC par l'homothétie de centre A de rapport 1,5.</li>
+    <li>Que vaut :
+      <ol type="a">
+        <li>$\frac{AB}{AM}$</li>
+        <li>$\frac{AC}{AN}$</li>
+        <li>$\frac{BC}{MN}$</li>
+      </ol>
+      Que remarque-t-on ?
+    </li>
+    <li>Que peut-on dire des droite BC et MN ?</li>
+    <li>Que peut-on dire des points A ; B et M ?</li>
+    <li>Que peut-on dire des points A ; C et N ?</li>
+  </ol>
 
+  <div class="flexobject">
+    <div>
+      <div class="flexobject" style="align-items: center; gap: 10px;">
+        <span>Rapport :</span>
+        <input id="graphiqueintro_range" type="range" min="-0.5" max="2.0" step="0.01" value="1.5">
+        <span id="graphiqueintro_range_value"></span>
+      </div>
+      <div id="graphiqueintro"></div>
+    </div>
+    <div class="flexobject" style="flex: 1 1 100px;">
+      <div id="frac1" class="frac">$\frac{AB}{AM}$</div>
+      <div id="frac2" class="frac">$\frac{AC}{AN}$</div>
+      <div id="frac3" class="frac">$\frac{BC}{MN}$</div>
+    </div>
+  </div>
+
+  <h1>Théorème de Thalès :</h1>
+      <h2>Théorème :</h2>
+        <div class="definition">
+          <b>Théorème de Thalès :</b><br>
+          <b>Si</b>, dans un triangle ABC, ou M est un point de (AB) 
+          et N un point de (AC), les droites (BC) et (MN) sont parallèles, 
+          <b>alors</b> on a l'égalité des rapports suivants :<br>
+          <span class="frac">
+            $\frac{AB}{AM}=\frac{AC}{AN}=\frac{BC}{MN}$
+          </span>
+        </div>
+        <div class="flexobject">
+          <img src="Images/Triangle 1.svg" style="max-width: 7cm;">
+          <div style="flex: 1 1 9cm;">
+            <p class="remarque">Remarque :</p>
+            <p><ul>
+              <li>Cela s'apparente à une homothétie de ABC de centre A d'un rapport 
+                quelconque. Les rapports de longueurs sont alors tous égaux au rapport
+              de l'homothétie.</li>
+              <li>Les triangles ABC et AMN sont <b>semblables</b>.</li>
+            </ul></p>
+          </div>
+        </div>
+      <h2>Les différents cas de figure :</h2>
+        <div class="flexobject">
+          <img src="Images/Triangle 2.svg" style="max-width: 7cm;">
+          <img src="Images/Triangle 3.svg" style="max-width: 7cm;">
+          <img src="Images/Triangle 4.svg" style="max-width: 7cm;">
+        </div>
+  <h1>Calcul d'une longueur manquante :</h1>
+      <h2>(Rappels) Egalité des produits en croix :</h2>
+        <div class="definition">
+          Dans une égalité de quotient, on a égalité des produits en croix :<br>
+          <b>Si</b> <span class="frac">$\frac{a}{b} = \frac{c}{d}$</span>, <b>alors</b> $a\times d = b \times c$
+        </div>
+        <p>On utilise cela dans la règle de 3 :</p>
+        <p>
+          <span class="frac">$\frac{5}{8}=\frac{7}{?}$</span> → $?=8\times 7 \div 5 = 11,2$
+        </p>
+      <h2>Application :</h2>
+        <div class="flexobject">
+          <img src="Images/Exemple 1.svg" style="max-width: 7cm;">
+          <div style="flex: 1 1 7cm;">
+            <p>Dans la figure ci-contre, les droites (BC)  et (AD) sont parallèles. 
+              On peut donc utiliser le théorème de Thalès pour calculer la longueur BC.
+            </p>
+            <p>D'après le théorème de Thalès on a :</p>
+            <p><span class="frac">
+              $\frac{EA}{EB}=\frac{ED}{EC}=\frac{AD}{BC}$
+            </span></p>
+            <p>
+              Soit <span class="frac">$\frac{EA}{EB}=\frac{4}{5}=\frac{3,5}{BC}$</span> et
+              en utilisant l'égalité des produits en croix, $BC = \frac{5\times3,5}{4}=4,375cm$
+            </p>
+          </div>
+        </div>
 </body>
 
 </html>
