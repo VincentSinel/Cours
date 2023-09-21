@@ -17,6 +17,30 @@
   <title>Chapitre 9 - Equations</title>
 
   <style>
+    #balance{
+      align-items: center;
+      text-align: center;
+      padding: 2px;
+      row-gap: 5px;
+      border: 1px solid black;
+      font-family: Bahnschrift;
+      font-size: 16px;
+      font-weight: bold;
+      max-width: 500px;
+    }
+    #balance table{
+      width: calc(100% - 1px);
+      border-collapse: collapse;
+    }
+    #balance td{
+      min-width: 25px;
+    }
+    #balance th{
+      border-bottom: solid black;
+    }
+    #balance input{
+      width: calc(100% - 7px);
+    }
   </style>
 
 </head>
@@ -38,8 +62,416 @@
     Activité Introduction
   </p>
 
+  <div class="flexobject">
+    <div style="max-width: 15cm;">
+      <p>
+        Sur une balance Roberval comme celle représentée, lorsque les masses sur chacun des plateaux sont égales, les plateaux sont au même niveau en position d’équilibre.
+      </p>
+      <ol>
+        <li>Sur l’image, les plateaux sont en position d’équilibre, qu’est-ce que cela signifie ?</li>
+        <li>Que doit-on faire pour retrouver une position d’équilibre lorsque :
+          <ol type="a">
+            <li>On ajoute 50g sur le plateau de gauche ?</li>
+            <li>On retire le 10g sur le plateau de droite ?</li>
+            <li>On enlève une balle de tennis sur le plateau de droite ?</li>
+          </ol>
+        </li>
+        <li>Compléter la phrase suivante :<br> 
+          Pour que la masse reste <span class="Blank1"></span>, lorsque l'on effectue une modification sur un plateau, il faut effectuer <span class="Blank3"></span> sur le second.</li>
+        <li>On souhaite connaître la masse d’une balle de tennis en partant de l’égalité du dessin. Pour cela Louis effectue les manipulations suivantes. Traduire ses manipulations à l’aide d’égalités, en notant $b$ le poids d’une balle de tennis<br>
+          <ul>
+            <li>On retire 15g des deux plateaux.</li>
+            <li>On retire 2 balles de tennis des deux plateaux.</li>
+            <li>On prend la moitié du contenu de chaque plateau.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+    <div style="max-width: 500px">
+      <p><b>Balance de Roberval :</b></p>
+      <image src="Images/Balance.svg"></image>
+    </div>
+  </div>
   
+  
+  
+  
+  <h1>Equations :</h1>
+      <h2>Vocabulaire :</h2>
+          <div class="definition">
+            Une <span class="DRed">équation</span> est une <b>égalité</b> comportant un ou plusieurs nombres inconnus désignés par des lettres (que l’on nomme <span class="DRed">inconnues</span> de l’équation).
+          </div>
+          <p class="exemple">Exemples :</p>
+          
+          <div class="flexobject">
+            <div>• $5x=20$</div>
+            <div>• $3x+2=5$</div>
+            <div>• $8x+7y=0$</div>
+            <div>• $15x-8=-6x+7$</div>
+          </div>
+          <p class="remarque">Remarques :</p>
+          <ul>
+            <li>On utilise régulièrement la lettre $x$ comme inconnue.</li>
+            <li>Les deux expressions qui composent une équation sont appelées <span class="DRed">membres</span> de l'équation.<br>
+              <table>
+                <tr>
+                  <td style="text-align: right;">$5x+3$</td>
+                  <td style="text-align: center; width: 20px;">=</td>
+                  <td>$6x-1$</td>
+                </tr>
+                <tr style="line-height: 5px;">
+                  <td style="text-align: right;"><img height="5px" width="50px" src="Images/Accolade_200.svg"></td>
+                  <td></td>
+                  <td><img height="5px" width="50px" src="Images/Accolade_200.svg"></td>
+                </tr>
+                <tr class="DBlue">
+                  <td style="text-align: right;">Membre de gauche</td>
+                  <td></td>
+                  <td>Membre de droite</td>
+                </tr>
+              </table>
+            </li>
+          </ul>
+      <h2>Egalité :</h2>
+      <div class="definition">
+            <span class="DRed">Résoudre</span> une équation d’inconnue $x$ revient à trouver, si cela est 
+            possible, les nombres par lesquels remplacer $x$ pour que <b>l’égalité soit vraie</b>. Un tel nombre est appelé <span class="DRed">solution</span> de l’équation.
+          </div>
+          <p class="exemple">Exemples :</p>
+          <p>Dans $5x=20$ :<br>
+            <ul>
+              <li>4 est solution de l’équation car $5\times4=20$.</li>
+              <li>7 n’est pas solution de l’équation car $5\times7\ne20$. ($5\times7 = 35$)</li>
+            </ul>
+          </p>
+          <p>Dans $3x+5=6x-1$ :<br>
+            <ul>
+              <li><span class="DRed">2</span> est solution de l’équation car $3\times\textcolor{#C00000}{2}+5=11$ 
+                et $6\times\textcolor{#C00000}{2}-1=11$ donc l’égalité est <span class="DRed">vraie</span> pour $x=\textcolor{#C00000}{2}$</li>
+                <li><span class="DRed">5</span> n'est pas solution de l’équation car $3\times\textcolor{#C00000}{5}+5=20$ 
+                  et $6\times\textcolor{#C00000}{5}-1=29$ donc l’égalité est <span class="DRed">fausse</span> pour $x=\textcolor{#C00000}{5}$</li>
+            </ul>
+          </p>
+          <p class="remarque">Remarque :</p>
+          <ul>
+            <li>On dit aussi que l'égalité est, ou n'est pas, <b>vérifiée</b>.</li>
+          </ul>
+  <h1>Résolutions d’équation :</h1>
+  <h2>Règles de résolution :</h2>
+          <div class="definition">
+            <span class="DRed">Propriété</span><br>
+            Une égalité reste vraie quand on ajoute (ou soustrait) un même nombre aux deux membres.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <table>
+            <tr>
+              <td>$3x+5$</td>
+              <td style="text-align: center; width: 20px;">=</td>
+              <td>$6x-1$</td>
+            </tr>
+            <tr>
+              <td>$3x+5\textcolor{#009900}{+1}$</td>
+              <td style="text-align: center; width: 20px;">=</td>
+              <td>$6x-1\textcolor{#009900}{+1}$</td>
+            </tr>
+            <tr>
+              <td>$3x+6$</td>
+              <td style="text-align: center; width: 20px;">=</td>
+              <td>$6x$</td>
+            </tr>
+          </table>
+          <p class="remarque">Remarque :</p>
+          <p>$x$ est un nombre, on peut donc appliquer cette propriété avec $x$</p>
+          <table>
+            <tr>
+              <td>$3x+6$</td>
+              <td style="text-align: center; width: 20px;">=</td>
+              <td>$6x$</td>
+            </tr>
+            <tr>
+              <td>$3x+6\textcolor{#009900}{-3x}$</td>
+              <td style="text-align: center; width: 20px;">=</td>
+              <td>$6x\textcolor{#009900}{-3x}$</td>
+            </tr>
+            <tr>
+              <td>$6$</td>
+              <td style="text-align: center; width: 20px;">=</td>
+              <td>$3x$</td>
+            </tr>
+          </table><br>
+          <div class="definition">
+            <span class="DRed">Propriété</span><br>
+            Une égalité reste vraie quand on multiplie (ou divise) les deux membres par un même nombre <b>non nul</b>.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <table>
+            <tr>
+              <td>$6$</td>
+              <td style="text-align: center; width: 20px;">=</td>
+              <td>$3x$</td>
+            </tr>
+            <tr>
+              <td>$6\textcolor{#C00000}{\div3}$</td>
+              <td style="text-align: center; width: 20px;">=</td>
+              <td>$3x\textcolor{#C00000}{\div3}$</td>
+            </tr>
+            <tr>
+              <td>$2$</td>
+              <td style="text-align: center; width: 20px;">=</td>
+              <td>$x$</td>
+            </tr>
+          </table>
+          <p>Comme vu précédement, on obtient bien 2 comme solution.</p>
+          <p><b>Autre exemple de résolution complète :</b></p>
+          <table>
+            <tr>
+              <td style="text-align: right;">$3x$</td>
+              <td>$-6$</td>
+              <td style="text-align: center; width: 20px;">=</td>
+              <td>$-5x$</td>
+              <td>$+4,4$</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>$\textcolor{#009900}{+6}$</td>
+              <td></td>
+              <td></td>
+              <td>$\textcolor{#009900}{+6}$</td>
+            </tr>
+            <tr>
+              <td style="text-align: right;">$3x$</td>
+              <td></td>
+              <td style="text-align: center; width: 20px;">=</td>
+              <td>$-5x$</td>
+              <td>$+10,4$</td>
+            </tr>
+            <tr>
+              <td style="text-align: right;">$\textcolor{#009900}{+5x}$</td>
+              <td></td>
+              <td></td>
+              <td>$\textcolor{#009900}{+5x}$</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="text-align: right;">$8x$</td>
+              <td></td>
+              <td style="text-align: center; width: 20px;">=</td>
+              <td></td>
+              <td>$+10,4$</td>
+            </tr>
+            <tr>
+              <td style="text-align: right;">$\textcolor{#C00000}{\div8}$</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>$\textcolor{#C00000}{\div8}$</td>
+            </tr>
+            <tr>
+              <td style="text-align: right;">$x$</td>
+              <td></td>
+              <td style="text-align: center; width: 20px;">=</td>
+              <td></td>
+              <td>$1,3$</td>
+            </tr>
+          </table>
+      <h2>Mise en équation :</h2>
+      <div class="definition">
+        Pour résoudre un problème à l’aide d’équations, il faut :<br>
+            <div class="NumR" style="margin-right: 1em;">1</div>Choisir une inconnue et la nommer avec une lettre.<br>
+            <div class="NumR" style="margin-right: 1em;">2</div>Mettre le problème en équation.<br>
+            <div class="NumR" style="margin-right: 1em;">3</div>Trouver une solution de cette équation.<br>
+            <div class="NumR" style="margin-right: 1em;">4</div>Répondre en interprétant la solution de l’équation en fonction du problème initial.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <p>Deux enfants ont ensemble 200€. L’un des deux enfants a 20 € de plus que l’autre. Combien à chaque enfant ?</p>
+          <p>
+            On repère les inconnues : L'argent de l'enfant A et l'argent de l'enfant B.<br>
+            <div class="NumR" style="margin-right: 1em;">1</div> On choisi de noter $\textcolor{#C00000}{x}$ l'argent de l'enfant A.<br><br>
+            <div class="NumR" style="margin-right: 1em;">2</div> Pour mettre le problème en équation, on essaye d'exprimer la seconde 
+            inconnue en fonction de $\textcolor{#C00000}{x}$. Pour cela on utilise les informations de l'énoncé.<br>
+            Les deux enfants ont ensemble 200€ donc l'enfant B a : $\textcolor{#0070C0}{200-x}$ €<br>
+            Il faut maintenant écrire une égalité. On utilise la seconde information.<br>
+            L'un a 20€ de plus que l'autre, on suppose que c'est l'enfant A.
+            Si on retire 20€ à l'enfant A il lui reste le même montant que l'enfant B (donc égalité) :<br>
+            $\textcolor{#C00000}{x}-20=\textcolor{#0070C0}{200-x}$<br><br>
+            <div class="NumR" style="margin-right: 1em;">3</div> On résoud :
+            <table>
+              <tr>
+                <td style="text-align: right;">$x$</td>
+                <td>$-20$</td>
+                <td style="text-align: center; width: 20px;">=</td>
+                <td>$200$</td>
+                <td>$-x$</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>$\textcolor{#009900}{+20}$</td>
+                <td></td>
+                <td>$\textcolor{#009900}{+20}$</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td style="text-align: right;">$x$</td>
+                <td></td>
+                <td style="text-align: center; width: 20px;">=</td>
+                <td>$220$</td>
+                <td>$-x$</td>
+              </tr>
+              <tr>
+                <td>$\textcolor{#009900}{+x}$</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>$\textcolor{#009900}{+x}$</td>
+              </tr>
+              <tr>
+                <td style="text-align: right;">$2x$</td>
+                <td></td>
+                <td style="text-align: center; width: 20px;">=</td>
+                <td>$220$</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>$\textcolor{#C00000}{\div2}$</td>
+                <td></td>
+                <td></td>
+                <td>$\textcolor{#C00000}{\div2}$</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td style="text-align: right;">$x$</td>
+                <td></td>
+                <td style="text-align: center; width: 20px;">=</td>
+                <td>$110$</td>
+                <td></td>
+              </tr>
+            </table><br>
+            <div class="NumR" style="margin-right: 1em;">4</div> Un des enfants a donc 110€ et l'autre le complément donc 90€.
+            
+          </p><br><br><br>
+          
+          <p><b>Un outil pour essayer de résoudre des équations :</b></p>
+          <div id="balance">
+            <div style="border-bottom: solid lightgray 1px; padding: 5px 0px;">
+              <table>
+                <tr>
+                  <th>
+                    <input id="x1num" type="number" value="4">
+                  </th>
+                  <td rowspan="2" style="padding: 5px;">
+                    <label style="text-align: center;">x +</label>
+                  </td>
+                  <th>
+                    <input id="c1num" type="number" value="15">
+                  </th>
+                  <td rowspan="2">
+                    <button id="balance_generate" onclick="Balance.instance.CreateEquation()"
+                    style="width: 30px; margin: auto 5px;">=</button>
+                  </td>
+                  <th>
+                    <input id="x2num" type="number" value="2">
+                  </th>
+                  <td rowspan="2" style="padding: 5px;">
+                    x + 
+                  </td>
+                  <th>
+                    <input id="c2num" type="number" value="131">
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    <input id="x1den" type="number" value="1" min="1">
+                  </td>
+                  <td>
+                    <input id="c1den" type="number" value="1" min="1">
+                  </td>
+                  <td>
+                    <input id="x2den" type="number" value="1" min="1">
+                  </td>
+                  <td>
+                    <input id="c2den" type="number" value="1" min="1">
+                  </td>
+                </tr>
+              </table>
+            </div>
+            
+            <div style="border-bottom: solid lightgray 1px;">
+              <canvas id="balance_canvas"></canvas>
+            </div>
+          
+            <div style="border-bottom: solid lightgray 1px; padding: 5px 0px;">
+              <table>
+                <tr>
+                  <td style="width: 35%;">
+                    <button onclick="Balance.instance.AddToEquation(0)">⬉</button>
+                  </td>
+                  <td>
+                    <button onclick="Balance.instance.AddToEquation(1)">⬉|⬈</button>
+                  </td>
+                  <td style="width: 35%;">
+                    <button onclick="Balance.instance.AddToEquation(2)">⬈</button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          
+            <div>
+              <table>
+                <tr>
+                  <td style="width: 35%;">
+                    <table>
+                      <tr>
+                        <td style="user-select: none;">
+                          <div>
+                            <input style="width: auto;" id="Balance_add_unknow" type="checkbox" value="false">
+                            <label for="Balance_add_unknow">x ?</label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <input id="anum" type="number" value="0">
+                        </th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input id="aden" type="number" value="1" min="1">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td style="width: 30%;vertical-align: center; padding-top: 22px;">
+                    <div>
+                      <button onclick="Balance.instance.Regroupe()">Regrouper</button>
+                    </div>
+                  </td>
+                  <td style="width: 35%; vertical-align: bottom;">
+                    <div class="flexobject" style="gap: 2px; flex-wrap: nowrap;">
+                      <button style="width: 30px" onclick="Balance.instance.MultiplyEquation()">x</button>
+                      <button style="width: 30px" onclick="Balance.instance.DivideEquation()">÷</button>
 
+                      <table style="flex: 1 1 auto;">
+                        <tr>
+                          <th>
+                            <input id="coefnum" type="number" value="0">
+                          </th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <input id="coefden" type="number" value="1" min="1">
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
 </body>
+<script src="/Cours/4eme/Chapitre_13/JS/Balance.js"></script>
+<script>
+  Balance.instance.CreateEquation()
+</script>
 
 </html>
