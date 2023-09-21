@@ -44,7 +44,7 @@ class Balance
 
     Equation = new Equation();
 
-    Folder = "Images/"
+    Folder = "/Cours/4eme/Chapitre_13/Images/"
     Images = { }
 
     Resize()

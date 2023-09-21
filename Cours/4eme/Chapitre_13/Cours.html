@@ -446,24 +446,23 @@
                     </div>
                   </td>
                   <td style="width: 35%; vertical-align: bottom;">
-                    <table>
-                      <tr>
-                        <td>
-                          <button style="width: 30px" onclick="Balance.instance.MultiplyEquation()">x</button>
-                        </td>
-                        <th>
-                          <input id="coefnum" type="number" value="0">
-                        </th>
-                      </tr>
-                      <tr>
-                        <td>
-                          <button style="width: 30px" onclick="Balance.instance.DivideEquation()">÷</button>
-                        </td>
-                        <td>
-                          <input id="coefden" type="number" value="1" min="1">
-                        </td>
-                      </tr>
-                    </table>
+                    <div class="flexobject" style="gap: 2px; flex-wrap: nowrap;">
+                      <button style="width: 30px" onclick="Balance.instance.MultiplyEquation()">x</button>
+                      <button style="width: 30px" onclick="Balance.instance.DivideEquation()">÷</button>
+
+                      <table style="flex: 1 1 auto;">
+                        <tr>
+                          <th>
+                            <input id="coefnum" type="number" value="0">
+                          </th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <input id="coefden" type="number" value="1" min="1">
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
                   </td>
                 </tr>
               </table>
