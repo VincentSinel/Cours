@@ -1,7 +1,7 @@
 
 html{
-    height: calc(100% - 16px);
     width: 1000px;
+    height: 650px;
 }
 
 .maintable{
