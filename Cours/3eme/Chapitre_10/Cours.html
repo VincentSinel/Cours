@@ -5,6 +5,11 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta http-equiv="content-language" content="fr">
   <link rel="stylesheet" href="/CSS/Cours.css"> 
+  <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+  <script src="/JS/Svg.js/svg.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+  <script src="JS/Trigonometrie.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
@@ -37,9 +42,131 @@
   <p class="exemple">
     Activité Introduction
   </p>
+	<div class="flexobject">
+			<div id="ggbApplet"></div>
+			<div>
+				<p>
+					<ol>
+						<li>Construire un triangle ABC rectangle en B.</li>
+					</ol>
+				</p>
+			</div>
+	</div>
 
-  
+  	<h1>Fonctions trigonométriques :</h1>
+		<p>
+			Dans un triangle rectangle, lorsque l'on repére un angle <b>aigu</b>, 
+			le rapport de longueur du <span class="CRed">côté adjacent</span> à cette angle et de 
+			<span class="CGreen">l'hypoténuse</span> est <b>lié à la mesure de cette angle</b>. <br>
+			Il y a un lien entre les angles et 
+			la longueurs des côtés du triangle.
+			On dit alors que le rapport de longueur varie <b>en fonction de</b> l'angle.
+		</p>
+		<img src="Images/Fonction.svg" style="max-height: 4cm;">
+		<p>
+			Un nom a été donné à cette fonction : le <span class="CRed">cosinus</span>.
+		</p>
+		<div class="definition">
+			Dans un triangle <b>rectangle</b>, pour un angle « $\theta$ » aigu donné, on a :<br>
+			<span style="font-size: x-large;">
+				$\cos(\theta)=\frac{côté\ \textcolor{#e53935}{adjacent}\ à\ l'angle}{\textcolor{#43a047}{hypoténuse}}$
+			</span>
+		</div>
+		<p class="exemple">Exemple :</p>
+		<div class="flexobject">
+			<img src="Images/Triangle1.svg" style="max-height: 4cm;">
+			<p>
+				$\cos(\hat{CAB})=\cos(72°)\approx0.309$<br>
+				$\frac{AB}{AC}=\frac{30,9}{100}=0,309$<br>
+				On obtient bien le même résultat ici.
+			</p>
+		</div>
+		<p class="remarque">Remarques :</p>
+		<p>
+			<ul>
+				<li>La fonction cosinus n'est pas exprimable, il faut donc obligatoirement utiliser la calculatrice.</li>
+				<li>Le cosinus d'un angle aigu renvoie toujours une valeur entre 0 et 1.</li>
+			</ul>
+		</p>
+	<h1>Calcul d'une longueur dans un triangle rectangle :</h1>
+		<p>
+			<ol>
+				<li>On commence par faire un schéma du triangle montrant la position de
+					l'hypothénuse et du côté adjacent à l'angle connu.</li>
+				<li>On écrit l'égalité du cosinus et de rapport faisant intervenir le côté connu et le côté
+					que l'on souhaite calculer.</li>
+				<li>On résout l'équation simple ainsi obtenue.</li>
+			</ol>
+		</p>
+		<p class="exemple">Exemple :</p>
+		<p>
+			Soit ABC un triangle rectangle en A, tel que BC = 6cm et $\widehat{ABC} = 29°$. Calculer AB.
+		</p>
+		<div class="flexobject">
+			<div>
+				<ol>
+					<li>On fait un schéma.</li>
+				</ol>
+				<img src="Images/Triangle2.svg" style="height: 4cm;">
+			</div>
+			<div>
+				<ol start="2">
+					<li>
+						On écrit l'égalité trigonométrique qui lie les grandeurs.<br>
+						$cos(\widehat{ABC})=\frac{BA}{BC}$ donc $cos(29)=\frac{BA}{6}$
+					</li>
+					<li>
+						On résoud :<br>
+						$cos(29)=\frac{BA}{6}$ donc $\frac{cos(29)}{1}=\frac{BA}{6}$<br>
+						On fait un produit en croix :<br>
+						$BA = cos(29)\times6\div1\approx5,2cm$
+					</li>
+				</ol>
+			</div>
+		</div>
 
 </body>
-
+<script>
+	var parameters = {
+		"id": "ggbApplet",
+		"width":900,
+		"height":630,
+		"showMenuBar":false,
+		"showAlgebraInput":false,
+		"showToolBar":false,
+		"customToolBar":"0 39 | 1 501 67 , 5 19 , 72 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71 | 30 29 54 32 31 33 | 17 26 62 73 , 14 68 | 25 52 60 61 | 40 41 42 , 27 28 35 , 6",
+		"showToolBarHelp":false,
+		"showResetIcon":false,
+		"enableLabelDrags":false,
+		"enableShiftDragZoom":false,
+		"enableRightClick":false,
+		"errorDialogsActive":false,
+		"useBrowserForJS":false,
+		"allowStyleBar":false,
+		"preventFocus":false,
+		"showZoomButtons":false,
+		"capturingThreshold":3,
+		// add code here to run when the applet starts
+		"appletOnLoad":function(api){ /* api.evalCommand('Segment((1,2),(3,4))');*/ },
+		"showFullscreenButton":true,
+		"scale":0.75,
+		"disableAutoScale":false,
+		"allowUpscale":false,
+		"clickToLoad":false,
+		"appName":"classic",
+		"buttonRounding":0.7,
+		"buttonShadows":false,
+		"language":"fr",
+		// use this instead of ggbBase64 to load a material from geogebra.org
+		// "material_id":"RHYH3UQ8",
+		// use this instead of ggbBase64 to load a .ggb file
+		"filename":"Trigonométrie Activité d'introduction.ggb",
+		//"ggbBase64":"",
+	};
+	// is3D=is 3D applet using 3D view, AV=Algebra View, SV=Spreadsheet View, CV=CAS View, EV2=Graphics View 2, CP=Construction Protocol, PC=Probability Calculator DA=Data Analysis, FI=Function Inspector, macro=Macros
+	var views = {'is3D': 0,'AV': 0,'SV': 0,'CV': 0,'EV2': 0,'CP': 0,'PC': 0,'DA': 0,'FI': 0,'macro': 0};
+	var applet = new GGBApplet(parameters, '5.0', views);
+	window.onload = function() {applet.inject('ggbApplet')};
+	applet.setPreviewImage('data:image/gif;base64,R0lGODlhAQABAAAAADs=','https://www.geogebra.org/images/GeoGebra_loading.png','https://www.geogebra.org/images/applet_play.png');
+</script>
 </html>
