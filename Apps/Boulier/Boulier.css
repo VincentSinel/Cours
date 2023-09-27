@@ -8,11 +8,11 @@ body{
 
 .panelbuttonspace
 {
-    width: 40px;
+    min-width: 40px;
 }
 body:fullscreen .panelbuttonspace
 {
-    width: 0px;
+    min-width: 0px;
 }
 
 .maintable{
