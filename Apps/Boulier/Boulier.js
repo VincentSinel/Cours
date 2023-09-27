@@ -92,6 +92,7 @@ function ClicUnit(id, e)
     txt.innerHTML = a + ",";
 
     unitpos = id;
+    UpdateText(0, nu.children.length - 1);
 }
 
 function ClicBoule(e)
