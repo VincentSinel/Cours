@@ -94,7 +94,7 @@ body:fullscreen .panelbuttonspace
 
 .boule{
     flex: 1 1 auto;
-    max-width: 8vh;
+    max-width: 9vh;
     border-radius: 50%;
     background: radial-gradient(white, black 70%);
     cursor: pointer;
