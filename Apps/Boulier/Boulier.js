@@ -1,6 +1,6 @@
 const TCOLONNE = 12
 
-window.addEventListener("load", () => {ChangeSize(TCOLONNE)});
+window.addEventListener("load", () => {ChangeSize(TCOLONNE, 0)});
 const BOULE = '<svg viewBox="0 0 100 100" class="boule"><circle cx="50" cy="50" r="49" fill="currentColor" stroke="#442C40" stroke-width="2"/></svg><div class="empty"></div>'
 
 // Esri color ramps - Metro Movement
@@ -9,10 +9,12 @@ const COLORS = ["rgba(237, 81, 81, 0.5)", "rgba(20, 158, 206, 0.5)", "rgba(167, 
 
 var tColonne = 0;
 var unitpos = TCOLONNE-1;
+var typeBoulier = 0;
 
-function Generate(tcolonne)
+function Generate(tcolonne, newt)
 {
     tColonne = tcolonne;
+    typeBoulier = newt;
     let nu = document.getElementById("numbers");
     let lu = document.getElementById("unitline");
     let l1 = document.getElementById("line1");
@@ -41,7 +43,8 @@ function Generate(tcolonne)
         d = document.createElement("div");
         d.classList.add("colonne");
         t = '<div class="empty emptyexpand"></div>';
-        t += BOULE;
+        t += BOULE
+        if (typeBoulier == 0) t += BOULE;
         d.innerHTML = t;
         d.style.color = COLORS[i % COLORS.length];
         l1.appendChild(d);
@@ -51,6 +54,7 @@ function Generate(tcolonne)
         d.classList.add("colonne");
         t = '<div class="empty emptyexpand"></div>';
         for( let i = 0 ; i < 4; i++) t += BOULE;
+        if (typeBoulier == 0) t += BOULE;
         d.innerHTML = t;
         d.style.color = COLORS[i % COLORS.length];
         l2.appendChild(d);
@@ -114,23 +118,39 @@ function ClicBoule(e)
     {
         children[id+1].classList.add("emptyexpand");
         let a = parseInt(txt.getAttribute("value"));
-        if (line.id == "line1") a += 5
-        if (line.id == "line2") a = Math.floor(a / 5) * 5 + (id+1) / 2;
+        if (line.id == "line1") a += 5 * (id - fid + 1) / 2;
+        if (line.id == "line2") a += 1 * (id - fid + 1) / 2;
         txt.setAttribute("value", a);
-        txt.innerHTML = a
-        if (col == unitpos) txt.innerHTML = a + ",";
     }
     else
     {
         children[id-1].classList.add("emptyexpand");
         let a = parseInt(txt.getAttribute("value"));
-        if (line.id == "line1") a -= 5
-        if (line.id == "line2") a = Math.floor(a / 5) * 5 + (id-1) / 2;
+        if (line.id == "line1") a -= 5 * (fid - id + 1) / 2
+        if (line.id == "line2") a -= 1 * (fid - id + 1) / 2;
         txt.setAttribute("value", a);
-        txt.innerHTML = a
-        if (col == unitpos) txt.innerHTML = a + ",";
     } 
-        
+    UpdateText(0, nu.children.length - 1);
+}
+
+function UpdateText(ret, id)
+{
+    let nu = document.getElementById("numbers");
+    let txt = nu.children[id];
+    let ptxt = nu.children[id- 1];
+    let a = parseInt(txt.getAttribute("value"));
+    if (ptxt != undefined)
+    {
+        txt.innerHTML = (a + ret) % 10
+        if (id == unitpos) txt.innerHTML = txt.innerHTML + ",";
+        UpdateText(Math.floor((a + ret) / 10), id-1)
+        return;
+    }
+    else
+    {
+        txt.innerHTML = (a + ret)
+        if (id == unitpos) txt.innerHTML = txt.innerHTML + ",";
+    }
 }
 
 function AfficherNombre()
@@ -140,7 +160,7 @@ function AfficherNombre()
 
 function RemiseZero()
 {
-    Generate(tColonne)
+    Generate(tColonne, typeBoulier)
     let lu = document.getElementById("unitline");
     lu.children[unitpos].children[0].checked = true
     ClicUnit(unitpos, null)
@@ -150,7 +170,7 @@ function ChangeSize(value)
 {
     document.getElementById("bouliersize").value = value;
     unitpos = value-1;
-    Generate(value);
+    Generate(value, typeBoulier);
 }
 
 function PleinEcran()
@@ -163,4 +183,11 @@ function PleinEcran()
     } else {
         document.exitFullscreen();
     }
+}
+
+function ChangeType()
+{
+    typeBoulier = (typeBoulier + 1) % 2
+    Generate(tColonne, typeBoulier)
+    RemiseZero()
 }

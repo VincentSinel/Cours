@@ -15,7 +15,6 @@
 
     <body>
         <div class="flexpage">
-            <div class="panelbuttonspace"></div>
             <div class="maintable">
                 <div id="numbers" class="line">
                 </div>
@@ -27,6 +26,10 @@
                 </div>
             </div>
             <div class="options">
+                <div>
+                    <input class="tgl tgl-skewed" id="cb3" type="checkbox" onchange="ChangeType()"/>
+                    <label class="tgl-btn" data-tg-off="chinois" data-tg-on="japonais" for="cb3"></label>
+                </div>
                 <button onclick="RemiseZero()">Mise à zéro</button>
                 <button onclick="AfficherNombre()">Afficher / Cacher le nombre</button>
                 <label>Taille :</label>
