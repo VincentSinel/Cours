@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="en">
+    <link rel="stylesheet" href="/CSS/MainPage.css"> 
+    <link rel="stylesheet" href="Boulier.css"> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    </style>
+
+    </head>
+
+    <body>
+        <div class="flexpage">
+            <div class="panelbuttonspace"></div>
+            <div class="maintable">
+                <div id="numbers" class="line">
+                </div>
+                <div id="unitline" class="line">
+                </div>
+                <div id="line1" class="line">
+                </div>
+                <div id="line2" class="line">
+                </div>
+            </div>
+            <div class="options">
+                <button onclick="RemiseZero()">Mise à zéro</button>
+                <button onclick="AfficherNombre()">Afficher / Cacher le nombre</button>
+                <label>Taille :</label>
+                <input id="bouliersize" value="12" step="1" min="6" max="21" type="number" onchange="ChangeSize(this.value)">
+                <button onclick="PleinEcran()">Plein Ecran</button>
+            </div>
+        </div>
+    </body>
+
+    <script src="Boulier.js"></script>
+</html>
+
+
+
+  

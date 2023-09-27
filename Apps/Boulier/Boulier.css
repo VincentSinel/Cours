@@ -5,6 +5,16 @@ html{
 body{
     background-color: white;
 }
+
+.panelbuttonspace
+{
+    width: 40px;
+}
+body:fullscreen .panelbuttonspace
+{
+    width: 0px;
+}
+
 .maintable{
     width: calc(100% - 200px);
     height: 100%;
