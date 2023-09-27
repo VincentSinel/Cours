@@ -16,6 +16,26 @@
 		<link rel="manifest" href="/Images/site.webmanifest">
 
 		<style>
+			.smallscreen{ display: none;}
+			.smallscreen p {
+				text-align: center;
+				font-size: 30px;
+				color: white;
+				font-family: var(--TexteFont);
+			}
+			@media only screen and (max-width:1150px) {
+				.content,
+				.param,
+				.objectliste{ display: none;}
+				.smallscreen{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					height: 100%;
+					background-color: var(--PanelBack);
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -292,6 +312,12 @@
 					</div>
 				-->
 			</div>
+		</div>
+
+		<div class="smallscreen">
+			<p>
+				La taille de votre écran est trop petite pour utiliser cet outils.
+			</p>
 		</div>
 
 	</body>
