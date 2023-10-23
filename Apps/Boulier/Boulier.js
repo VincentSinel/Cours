@@ -42,10 +42,11 @@ function Generate(tcolonne, newt)
         //Create first line.
         d = document.createElement("div");
         d.classList.add("colonne");
-        t = '<div class="empty emptyexpand"></div>';
+        t = '<div class="empty"></div>';
         t += BOULE
         if (typeBoulier == 0) t += BOULE;
         d.innerHTML = t;
+        d.lastChild.classList.add("emptyexpand");
         d.style.color = COLORS[i % COLORS.length];
         l1.appendChild(d);
 
@@ -119,7 +120,7 @@ function ClicBoule(e)
     {
         children[id+1].classList.add("emptyexpand");
         let a = parseInt(txt.getAttribute("value"));
-        if (line.id == "line1") a += 5 * (id - fid + 1) / 2;
+        if (line.id == "line1") a -= 5 * (id - fid + 1) / 2;
         if (line.id == "line2") a += 1 * (id - fid + 1) / 2;
         txt.setAttribute("value", a);
     }
@@ -127,7 +128,7 @@ function ClicBoule(e)
     {
         children[id-1].classList.add("emptyexpand");
         let a = parseInt(txt.getAttribute("value"));
-        if (line.id == "line1") a -= 5 * (fid - id + 1) / 2
+        if (line.id == "line1") a += 5 * (fid - id + 1) / 2
         if (line.id == "line2") a -= 1 * (fid - id + 1) / 2;
         txt.setAttribute("value", a);
     } 
