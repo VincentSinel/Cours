@@ -7,7 +7,7 @@
 	.st1{fill:#2BACE2;stroke:#2E368F;stroke-linejoin:round;stroke-miterlimit:10;}
 	.st2{fill:none;stroke:#010101;stroke-linejoin:round;stroke-miterlimit:10;}
 	.st3{fill:none;stroke:#EC2227;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
-	.st4{fill:none;stroke:#019547;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#019547;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
 	.st5{fill:#010101;}
 	.st6{fill:#009444;}
 	.st7{fill:#ED1C24;}
