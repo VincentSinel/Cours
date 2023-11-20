@@ -58,7 +58,7 @@ var ListeCours = {
             id: 10,
             nom: "Trigonométrie",
             icone: 2,
-            ready : false,
+            ready : true,
         },
         {
             id: 11,
