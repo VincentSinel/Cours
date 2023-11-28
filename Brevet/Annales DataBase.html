@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<script src="/JS/Brevet/Global.js"></script>
 		<script src="/JS/Brevet/JSonCreator.js"></script>
 		<link rel="stylesheet" href="DataBase.css"> 
 	</head>
@@ -24,6 +25,13 @@
 					<div>
 						<span>SUJET</span>
 						<div style="padding-left: 10px;">
+							<div>
+								<span>Série</span>
+								<select id="Sujet_Serie">
+									<option value="generale">Générale</option>
+									<option value="pro">Professionnel</option>
+								</select>
+							</div>
 							<span>Région</span>
 							<div class="flexboxmulti">
 								<div>
@@ -125,7 +133,8 @@
 							<button onclick="Clear()">❌</button>
 						</div>
 						<div style="height: 30px;"></div>
-						<button style="width: 100%;" onclick="ExportSave()">Exporter</button>
+						<button style="width: 100%;" onclick="Export()">Exporter</button>
+						<button style="width: 100%;" onclick="ExportSave()">Exporter et Sauvegarder</button>
 					</div>
 				</div>
 			</div>

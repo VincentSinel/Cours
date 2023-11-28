@@ -1,6 +1,11 @@
 class BrevetObject
 {
 
+    static BrevetSerie = [
+        "Generale",
+        "Professionnel"
+    ]
+
     static BrevetSujet = [
         "Amerique du Nord",
         "Amerique du Sud",
@@ -30,36 +35,47 @@ class BrevetObject
         "Tres Facile",
     ];
 
-    constructor(xmlnode)
+    constructor(imgname, data)
     {
         this.Tags = {};
         this.Selected = false;
+        
+        this.Serie = data["Serie"];
+        this.Sujet = data["Sujet"];
+        this.Annee = data["Annee"];
+        this.Periode = data["Periode"];
+        this.Number = data["Number"];
+        this.Points = data["Points"];
+        this.Difficulte = data["Difficulte"];
+        this.Tags = data["Tags"];
+        this.Image = data["Image"];
+    }
 
-        var child;
-        for (var j = 0; j < xmlnode.childNodes.length; j++) {
-            child = xmlnode.childNodes[j];
-            if (child.nodeName === 'DataObject_Infos') {
-                this.Correction =  ("true" === child.getAttribute("Correction"));
-                this.Name = child.getAttribute("Name");
-                this.Path = child.getAttribute("Path");
-                this.Year = parseInt(child.getAttribute("Year"));
-                this.Sujet = BrevetObject.BrevetSujet[parseInt(child.getAttribute("Sujet"))];
-                this.Periode = BrevetObject.BrevetPeriode[parseInt(child.getAttribute("Periode"))];
-                this.Difficulty = BrevetObject.BrevetDifficulty[parseInt(child.getAttribute("Difficulty"))];
-                this.Points = parseInt(child.getAttribute("Points"));
-                this.Index = parseInt(child.getAttribute("Index"));
+    GetTitle()
+    {
+        var title = "[GEN] - ";
+        if (this.Serie == 0)
+            title = "[PRO] - "
+
+        this.Sujet.forEach(sujet => {
+            switch (sujet)
+            {
+                case "AN": title += "Amérique du nord - "; break;
+                case "AS": title += "Amérique du sud - "; break;
+                case "CE": title += "Centres étrangers - "; break;
+                case "AG": title += "Antilles Guyanne - "; break;
+                case "R": title += "La Réunion - "; break;
+                case "M": title += "Métropole - "; break;
+                case "P": title += "Polynésie - "; break;
+                case "NC": title += "Nouvelle-Calédonie - "; break;
+                case "G": title += "Grèce - "; break;
+                case "A": title += "Asie - "; break;
+                case "BB": title += "Brevet blanc - "; break;
+                case "AU": title += "Autre - "; break;
             }
-            else if (child.nodeName === 'DataObject_Tags') {
-                var tagg;
-                for (var i = 0; i < child.childNodes.length; i++) {
-                    tagg = child.childNodes[i];
-                    if (tagg.nodeName == "Tag")
-                    {
-                        this.Tags[tagg.getAttribute("Name")] = parseInt(tagg.getAttribute("Pertinence"));
-                    }
-                }
-            }
-        }
+        });
+        title += this.Annee + " - Exercice " + this.Number;
+        return title
     }
 
     CreateHtmlResultat(indexexo)
@@ -76,7 +92,7 @@ class BrevetObject
 
         var label = document.createElement("label");
         label.setAttribute("class", "titreExo");
-        label.innerHTML = this.Name + " - Exercice " + this.Index;
+        label.innerHTML = this.GetTitle();
         ligneblock.appendChild(label);
         ligneblock.appendChild(document.createElement("br"));
 
@@ -151,13 +167,13 @@ class BrevetObject
         var label = document.createElement("a");
         label.setAttribute("class", "titreExo");
         label.setAttribute("style", "color: #222222;");
-        label.innerHTML = this.Name + " - Exercice " + this.Index;
+        label.innerHTML = this.GetTitle();
         ligneblock.appendChild(label);
         ligneblock.appendChild(document.createElement("br"));
 
         var image = new Image();
         image.classList.add("exercice_img")
-        image.src = "Brevet/" + this.Path;
+        image.src = this.Image;
         ligneblock.appendChild(image);
 
         let but = document.createElement("button");

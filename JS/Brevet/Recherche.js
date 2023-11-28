@@ -2,6 +2,35 @@ console.clear();
 var Resultats = {};
 var tagsclick = false;
 var new_count = 0;
+var ListExercices;
+
+
+function LoadData()
+{
+    var client2 = new XMLHttpRequest();
+	client2.open('GET', 'DataBase.json');
+	client2.onreadystatechange = function() {
+		if (client2.readyState === 4){ 
+			End_load(client2.responseText);
+		}
+	}
+	client2.send();
+}
+
+function End_load(json)
+{
+    var save_data = {};
+	save_data = JSON.parse(json);
+
+    ListExercices = [];
+
+    for (const [key, value] of Object.entries(save_data)) {
+        ListExercices.push(new BrevetObject(key, value));
+    }
+
+    Rechercher("");
+}
+
 
 
 function Rechercher(texte)
@@ -18,7 +47,7 @@ function Rechercher(texte)
             continue;
         }
         var exo = ListExercices[l];
-        var titre = " " + exo.Name + " Exercice " + exo.Index + " ";
+        var titre = exo.GetTitle();// " " + exo.Name + " Exercice " + exo.Index + " ";
 
         titre = FormatText(titre)
 

@@ -181,6 +181,7 @@ input:active + .slider {
     display: inline-block;
     transition-duration: 0.4s;
     position: relative;
+    min-height: 46.4px;
 }
 .Result a{
     color: black;

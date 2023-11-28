@@ -2,141 +2,6 @@ var selected_line = null;
 
 var current_tags = {};
 
-var Tags = {
-	"Arithmétique": [
-        "nombres premiers",
-        "premiers",
-        "diviseur",
-        "multiple",
-        "decomposition",
-        "facteurs"
-	],
-	"Expressions litterales": [
-        "x",
-        "developpement",
-        "factorisation",
-        "reduction",
-        "equation"
-	],
-	"Fonction": [
-        "affine",
-        "linéaire",
-        "graphique",
-        "courbe",
-        "abscisse",
-        "ordonnée",
-        "repérage",
-        "antécédent",
-        "image"
-	],
-	"Fraction": [
-        "division",
-        "calcul",
-        "nombres"
-	],
-	"Géométrie": [
-        "geometrie",
-        "pavage",
-        "transformation du plan",
-        "homothetie",
-        "translation",
-        "rotation",
-        "symetrie",
-        "cercle",
-        "aire",
-        "perimetre",
-        "semblable"
-	],
-	"Probabilités": [
-        "chance",
-        "fréquence",
-        "aléatoire"
-	],
-	"Proportionnalité": [
-        "tableau",
-        "produit en croix",
-        "pourcentage",
-        "echelle",
-        "ratio"
-	],
-	"QCM": [
-        "choix multiples",
-        "tableau",
-        "Questionnaire"
-	],
-	"Puissances": [
-        "exposant",
-        "carrée",
-        "cube"
-	],
-	"Pythagore": [
-        "pithagore",
-        "triangle rectangle",
-        "egalite",
-        "pytagore",
-        "pitagore"
-	],
-	"Scratch": [
-        "ordinateur",
-        "algorithme",
-        "programmation",
-        "algo"
-	],
-	"Solide": [
-        "volume",
-        "sphere",
-        "cube",
-        "boule",
-        "pavé droit",
-        "pyramide",
-        "prisme",
-        "cône",
-        "3D"
-	],
-	"Statistique": [
-        "graphique",
-        "diagramme",
-        "courbe",
-        "moyenne",
-        "mediane",
-        "etendue",
-        "frequence",
-        "serie"
-	],
-	"Tâche complexe": [
-        "ouvert",
-        "problèmes"
-	],
-	"Tableur": [
-        "ordinateur",
-        "cellule",
-        "formule"
-	],
-	"Thalès": [
-        "tales",
-        "agrandissement",
-        "reduction",
-        "egalite"
-	],
-	"Trigonométrie": [
-        "cosinus",
-        "trigo",
-        "sinus",
-        "tangente",
-        "cos",
-        "sin",
-        "tan",
-        "arcsin",
-        "arccos",
-        "arctan",
-        "triangle rectangle"
-	],
-	"Vrai faux": [
-        "vrai faux",
-        "affirmation"
-	],
-}
-
 
 var save_data = {};
 
@@ -220,7 +85,6 @@ function Select_exercice(li)
 function Validate_exercice(li)
 {
 	li.classList.add("fait")
-	
 }
 
 function Add_Tag(value = 100)
@@ -293,12 +157,14 @@ function Clear(from_previous = false)
 	document.getElementById("Sujet_AU").checked = false;
 	document.getElementById("Sujet_Year").value = 2023;
 	document.getElementById("Sujet_Periode").selectedIndex = 0;
+	document.getElementById("Sujet_Serie").selectedIndex = 0;
 }
 
 function Save()
 {
 	if (selected_line === null) return;
 	data = {}
+	data["Serie"] = document.getElementById("Sujet_Serie").selectedIndex
 	data["Sujet"] = [];
 	if (document.getElementById("Sujet_AN").checked) data["Sujet"].push("AN");
 	if (document.getElementById("Sujet_AS").checked) data["Sujet"].push("AS");
@@ -339,6 +205,8 @@ function Load()
 	if (save_data.hasOwnProperty(id))
 	{
 		var data = save_data[id]
+
+		if (data["Serie"]) document.getElementById("Sujet_Serie").selectedIndex = data["Serie"]
 		
 		if(data["Sujet"].indexOf("AN") != -1) document.getElementById("Sujet_AN").checked = true
 		if(data["Sujet"].indexOf("AS") != -1) document.getElementById("Sujet_AS").checked = true
@@ -426,7 +294,12 @@ function LockExo()
 function ExportSave()
 {
 	Save()
-	let jsonData = JSON.stringify(save_data);
+	Export()
+}
+
+function Export()
+{
+	let jsonData = JSON.stringify(save_data, null, "\t");
 	var a = document.createElement("a");
     var file = new Blob([jsonData], {type: 'text/plain'});
     a.href = URL.createObjectURL(file);
