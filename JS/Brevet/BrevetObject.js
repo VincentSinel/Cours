@@ -54,7 +54,7 @@ class BrevetObject
     GetTitle()
     {
         var title = "[GEN] - ";
-        if (this.Serie == 0)
+        if (this.Serie == 1)
             title = "[PRO] - "
 
         this.Sujet.forEach(sujet => {
@@ -135,6 +135,7 @@ class BrevetObject
         if (this.Selected)
         {
             ligneblock.setAttribute("selected", "true");
+            ligneblock.classList.add("selected_result");
             this.AddCheckMark(ligneblock);
         }
 
@@ -163,6 +164,7 @@ class BrevetObject
         ligneblock.name = this.Name;
         ligneblock.id = this.Index;
         ligneblock.style.background = 'white';
+        ligneblock.style.minHeight = 'unset';
 
         var label = document.createElement("a");
         label.setAttribute("class", "titreExo");

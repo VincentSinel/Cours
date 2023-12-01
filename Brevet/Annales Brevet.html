@@ -44,65 +44,175 @@
             Rechercher(document.getElementById('recherche').value)
         }
 
+        function ShowHideMenu()
+        {
+            document.getElementById("paramtersmenu").classList.toggle("paramHide");
+        }
+
     </script>
 
 </head>
 
 <body onload="FirstLaunch();">
-    
-    <div class="searchbar">
-        <button class="searchbutton" onclick="Rechercher(document.getElementById('recherche').value)">
-            <svg width="33" height="33" fill="#2d6172">
-                <path d="M26.71,25.29,18.6,17.18a7,7,0,1,0-1.42,1.42l8.11,8.11a1,1,0,0,0,1.42,0A1,1,0,0,0,26.71,25.29ZM8,13a5,5,0,1,1,5,5A5,5,0,0,1,8,13Z"/>
-            </svg>
-        </button>
-        <input id="recherche" class="searchtext" type="text" placeholder="Recherche ..." onkeydown="KeyDown"/>
-        <button class="searchbutton" onclick="document.getElementById('recherche').value = ''; Rechercher('');">
-            <svg width="33" height="33" fill="#2d6172">
-                <path d="M17.91,16.5,26.7,7.71A1,1,0,0,0,25.29,6.3L16.5,15.09,7.71,6.29A1,1,0,0,0,6.29,7.71l8.8,8.79L6.3,25.29a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l8.79-8.79,8.79,8.79A1,1,0,0,0,26,27a1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41Z"/>
-            </svg>
-        </button>
-    </div>
-    <div style="display: flex; flex-direction: column; align-items: center;">
-        <p style="color: white; font-weight: bold;">🛑🚧CET APPLICATION EST EN COURS DE CREATION🚧🛑</p>
-        <div class="Unselectable searchmenu">
-            <label class="switch">
-                <input type="radio" name="selection" checked onclick="
-                    document.getElementById('Selection').classList.add('HideListe');
-                    document.getElementById('Resultats').classList.remove('HideListe');
-                    document.getElementById('Selection').classList.remove('VisibleListe');
-                    document.getElementById('Resultats').classList.add('VisibleListe');
-                    ">
-                <div class="slider">
-                    <a>Resultat(s)</a>
-                </div>
-            </label>
-            <label class="switch">
-                <input type="radio" name="selection" onclick="
-                    document.getElementById('Selection').classList.remove('HideListe');
-                    document.getElementById('Resultats').classList.add('HideListe');
-                    document.getElementById('Selection').classList.add('VisibleListe');
-                    document.getElementById('Resultats').classList.remove('VisibleListe');
-                    document.getElementById('nbrnotifier').classList.add('nbrnotifier_hide');
-                    ">
-                <div class="slider">
-                    <a>Selection</a>
-                </div>
-                <div id="nbrnotifier" class="nbrnotifier nbrnotifier_hide">
-                    25
-                </div>
-            </label>
-            <button class="clearbutton" onclick="ClearSelection()">
-                Effacer la selection
+    <div class="AppContainer">
+        <!-- <p style="color: white; font-weight: bold; text-align: center;">🛑🚧CET APPLICATION EST EN COURS DE CREATION🚧🛑</p> -->
+        <div class="searchbar">
+            <button class="searchbutton" onclick="ShowHideMenu()">
+                <svg width="33" height="33" viewBox="0 0 56.69 56.69" fill="#2d6172">
+                    <path d="M42.26,35.41h0l-.37,0L28.94,22.5a3.26,3.26,0,0,0-3.36-.76l2-5.92a3.37,3.37,0,0,0-.73-3.13L22.64,8.46a3.39,3.39,0,0,0-3.14-.74L17,8.59a1,1,0,0,0-.75.67,1,1,0,0,0,.38.93l2.72,2.71a2.49,2.49,0,0,1,0,3.5L16.4,19.31a2.49,2.49,0,0,1-3.5,0L10.19,16.6a1,1,0,0,0-.93-.38,1,1,0,0,0-.67.75L7.72,19.5a3.38,3.38,0,0,0,.74,3.14l4.23,4.23a3.37,3.37,0,0,0,3.13.73l5.92-2a3.26,3.26,0,0,0,.76,3.36L35.43,41.88c0,.12,0,.25,0,.38a6.85,6.85,0,1,0,6.85-6.85Zm0,10.43a3.59,3.59,0,0,1-3.59-3.58,3.58,3.58,0,0,1,3.59-3.59,3.59,3.59,0,0,1,0,7.17Z"/>
+                </svg>
+            </button>
+              
+            <button class="searchbutton" onclick="Rechercher(document.getElementById('recherche').value)">
+                <svg width="33" height="33" fill="#2d6172">
+                    <path d="M26.71,25.29,18.6,17.18a7,7,0,1,0-1.42,1.42l8.11,8.11a1,1,0,0,0,1.42,0A1,1,0,0,0,26.71,25.29ZM8,13a5,5,0,1,1,5,5A5,5,0,0,1,8,13Z"/>
+                </svg>
+            </button>
+            <input id="recherche" class="searchtext" type="text" placeholder="Recherche ..." onkeydown="KeyDown"/>
+            <button class="searchbutton" onclick="document.getElementById('recherche').value = ''; Rechercher('');">
+                <svg width="33" height="33" fill="#2d6172">
+                    <path d="M17.91,16.5,26.7,7.71A1,1,0,0,0,25.29,6.3L16.5,15.09,7.71,6.29A1,1,0,0,0,6.29,7.71l8.8,8.79L6.3,25.29a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l8.79-8.79,8.79,8.79A1,1,0,0,0,26,27a1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41Z"/>
+                </svg>
             </button>
         </div>
-    </div>
-    <div class="ResultPart">
-        <div id="Resultats" class="VisibleListe">
+        <div id="paramtersmenu" class="parameters paramHide">
+            <div class="horflex">
+                <div class="flexboxmulti" style="flex-shrink: 0; flex-direction: column;">
+                    <div>
+                        <input type="checkbox" id="Serie_Gen" checked>
+                        <label for="Serie_Gen">Série générale</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Serie_Pro" checked>
+                        <label for="Serie_Pro">Série professionnel</label>
+                    </div>
+                </div>
+                <div class="flexboxmulti">
+                    <div>
+                        <input type="checkbox" id="Sujet_AN" checked>
+                        <label for="Sujet_AN">Amérique du nord</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Sujet_AS" checked>
+                        <label for="Sujet_AS">Amérique du sud</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Sujet_CE" checked>
+                        <label for="Sujet_CE">Centres Etrangers</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Sujet_AG" checked>
+                        <label for="Sujet_AG">Antilles - Guyanne</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Sujet_R" checked>
+                        <label for="Sujet_R">La réunion</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Sujet_M" checked>
+                        <label for="Sujet_M">Métropole</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Sujet_P" checked>
+                        <label for="Sujet_P">Polynesie</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Sujet_NC" checked>
+                        <label for="Sujet_NC">Nouvelle-Calédonie</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Sujet_G" checked>
+                        <label for="Sujet_G">Grèce</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Sujet_A" checked>
+                        <label for="Sujet_A">Asie</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Sujet_BB" checked>
+                        <label for="Sujet_BB">Brevet Blanc</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Sujet_AU" checked>
+                        <label for="Sujet_AU">Autre</label>
+                    </div>
+                </div>
+                <div class="flexboxmulti" style="min-width: 185px;max-width: 185px;">
+                    <div>
+                        <input type="checkbox" id="Serie_2023" checked>
+                        <label for="Serie_2023">2023</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Serie_2022" checked>
+                        <label for="Serie_2022">2022</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Serie_2021" checked>
+                        <label for="Serie_2021">2021</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Serie_2020" checked>
+                        <label for="Serie_2020">2020</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Serie_2019" checked>
+                        <label for="Serie_2019">2019</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Serie_2018" checked>
+                        <label for="Serie_2018">2018</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Serie_2017" checked>
+                        <label for="Serie_2017">2017</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Serie_2016" checked>
+                        <label for="Serie_2016">2016</label>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="Selection" class="HideListe"> 
-            <div class="Result" id="1">
-                Aucun exercice selectionné
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div class="Unselectable searchmenu">
+                <label class="switch">
+                    <input type="radio" name="selection" checked onclick="
+                        document.getElementById('Selection').classList.add('HideListe');
+                        document.getElementById('Resultats').classList.remove('HideListe');
+                        document.getElementById('Selection').classList.remove('VisibleListe');
+                        document.getElementById('Resultats').classList.add('VisibleListe');
+                        ">
+                    <div class="slider">
+                        <a>Resultat(s)</a>
+                    </div>
+                </label>
+                <label class="switch">
+                    <input type="radio" name="selection" onclick="
+                        document.getElementById('Selection').classList.remove('HideListe');
+                        document.getElementById('Resultats').classList.add('HideListe');
+                        document.getElementById('Selection').classList.add('VisibleListe');
+                        document.getElementById('Resultats').classList.remove('VisibleListe');
+                        document.getElementById('nbrnotifier').classList.add('nbrnotifier_hide');
+                        ">
+                    <div class="slider">
+                        <a>Selection</a>
+                    </div>
+                    <div id="nbrnotifier" class="nbrnotifier nbrnotifier_hide">
+                        25
+                    </div>
+                </label>
+                <button class="clearbutton" onclick="ClearSelection()">
+                    Effacer la selection
+                </button>
+            </div>
+        </div>
+        <div class="ResultPart">
+            <div id="Resultats" class="VisibleListe">
+            </div>
+            <div id="Selection" class="HideListe"> 
+                <div class="Result" id="1">
+                    Aucun exercice selectionné
+                </div>
             </div>
         </div>
     </div>

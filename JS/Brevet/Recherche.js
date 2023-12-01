@@ -27,6 +27,7 @@ function End_load(json)
     for (const [key, value] of Object.entries(save_data)) {
         ListExercices.push(new BrevetObject(key, value));
     }
+    ListExercices.sort((a, b) =>  a.GetTitle().localeCompare(b.GetTitle()))
 
     Rechercher("");
 }
@@ -41,12 +42,14 @@ function Rechercher(texte)
     Resultats = {};
     for(var l = 0; l<ListExercices.length; l++)
     {
+        var exo = ListExercices[l];
+        if (!CheckAdvanced(exo)) continue;
+
         if (texte == "")
         {
             Add(l, 1);
             continue;
         }
-        var exo = ListExercices[l];
         var titre = exo.GetTitle();// " " + exo.Name + " Exercice " + exo.Index + " ";
 
         titre = FormatText(titre)
@@ -93,6 +96,56 @@ function Rechercher(texte)
         });
     }
     CreateListeResultat();
+}
+
+function CheckAdvanced(exo)
+{
+    let a = document.getElementById("Serie_Gen").checked;
+    let b = document.getElementById("Serie_Pro").checked;
+    if (!a && exo.Serie == 0) return false;
+    if (!b && exo.Serie == 1) return false;
+    let s0 = document.getElementById("Sujet_AN").checked;
+	let s1 = document.getElementById("Sujet_AS").checked;
+	let s2 = document.getElementById("Sujet_CE").checked;
+	let s3 = document.getElementById("Sujet_AG").checked;
+	let s4 = document.getElementById("Sujet_R").checked;
+	let s5 = document.getElementById("Sujet_M").checked;
+	let s6 = document.getElementById("Sujet_P").checked;
+	let s7 = document.getElementById("Sujet_NC").checked;
+	let s8 = document.getElementById("Sujet_G").checked;
+	let s9 = document.getElementById("Sujet_A").checked;
+	let sA = document.getElementById("Sujet_BB").checked;
+	let sB = document.getElementById("Sujet_AU").checked;
+    let keep = false;
+    exo.Sujet.forEach(sujet => {
+        switch (sujet)
+        {
+            case "AN": if(s0) keep = true; break;
+            case "AS": if(s1) keep = true; break;
+            case "CE": if(s2) keep = true; break;
+            case "AG": if(s3) keep = true; break;
+            case "R":  if(s4) keep = true; break;
+            case "M":  if(s5) keep = true; break;
+            case "P":  if(s6) keep = true; break;
+            case "NC": if(s7) keep = true; break;
+            case "G":  if(s8) keep = true; break;
+            case "A":  if(s9) keep = true; break;
+            case "BB": if(sA) keep = true; break;
+            case "AU": if(sB) keep = true; break;
+        }
+    });
+    if (!keep) return false;
+    
+    if (exo.Annee == 2023 && !document.getElementById("Serie_2023").checked) return false;
+    if (exo.Annee == 2022 && !document.getElementById("Serie_2022").checked) return false;
+    if (exo.Annee == 2021 && !document.getElementById("Serie_2021").checked) return false;
+    if (exo.Annee == 2020 && !document.getElementById("Serie_2020").checked) return false;
+    if (exo.Annee == 2019 && !document.getElementById("Serie_2019").checked) return false;
+    if (exo.Annee == 2018 && !document.getElementById("Serie_2018").checked) return false;
+    if (exo.Annee == 2017 && !document.getElementById("Serie_2017").checked) return false;
+    if (exo.Annee == 2016 && !document.getElementById("Serie_2016").checked) return false;
+
+    return true; 
 }
 
 function FormatText(txt)
@@ -228,9 +281,12 @@ function SelectExercice(elmt){
 
 function ClearSelection()
 {
+    new_count = 0;
+    document.getElementById('nbrnotifier').classList.add('nbrnotifier_hide');
     const checkmark = document.querySelectorAll('.CheckMark')  
     for (const el of checkmark) {  
         el.parentNode.setAttribute("selected", "false");
+        el.parentNode.classList.remove("selected_result");
         el.parentNode.removeChild(el);  
     }
     for (let i = 0; i < ListExercices.length; i++) {
