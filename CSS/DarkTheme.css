@@ -202,14 +202,17 @@ body{
 .content{
 	position: fixed;
 	width: calc(100% - var(--ParamWidth) * 2);
-	height: calc(100% - var(--HeaderBarHeight));
+	height: calc(100% - var(--HeaderBarHeight) - 20px);
 	top: var(--HeaderBarHeight);
 	left: 320px;
 	vertical-align: middle;
 	text-align: center;	
 	display:flex;
+	padding: 10px;
+	flex-direction: column;
 	justify-content:center;
 	align-items:center;
+	overflow-x: hidden;
 }
 .content img{
 	min-height: 200px;
@@ -220,7 +223,7 @@ body{
 }
 
 .content_container{
-	height: calc(inherit - 32px);
+	/* height: calc(inherit - 42px); */
 	overflow-y: hidden;
 }
 

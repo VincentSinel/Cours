@@ -231,6 +231,10 @@ table, th, td, tr {
     row-gap: 10px;
 }
 
+.flexobject p {
+    flex: 1 1 7cm;
+}
+
 .differentcase{
     border: thick double var(--BorderCase);
     border-radius: 10px;
@@ -407,4 +411,16 @@ ol > li::marker {
 .bordertable td,
 .bordertable th{
     width: 2cm;
+}
+
+.porpotionnaltable td, th{
+    border: solid var(--TableBorder) 2px;
+    border-collapse: collapse;
+    padding: 3px 10px;
+    width: 40px;
+    text-align: center;
+}
+.porpotionnaltable th{
+    width: 100px;
+    background-color: var(--TableHeader);
 }
