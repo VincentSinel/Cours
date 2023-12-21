@@ -17,6 +17,14 @@
   <title>Chapitre 11 - Médiane et étendu</title>
 
   <style>
+    .valeur{
+      column-gap: 5px;
+    }
+    .valeur div{
+      max-width: 30px;
+      min-width: 30px;
+      text-align: center;
+    }
   </style>
 
 </head>
@@ -34,12 +42,246 @@
     </tr>
   </table>
 
+
   <p class="exemple">
     Activité Introduction
   </p>
 
-  
+  <div class="flexobject">
+    <a href="https://fr.freepik.com/vecteurs-libre/fond-embleme-bowling_3948892.htm#query=logo%20bowling&position=13&from_view=search&track=ais" style="max-width: 10cm;">
+      <img src="Images/Bowling.jpg" >
+    </a>
+    <div style="max-width: 17cm;">
+      <p>Treize élève jouent au bowling. <br> Voici la série de scores obtenus par les septs joueurs de 
+        l'équipe des <span class="CGreen">verts</span> :<br>
+        <span class="CGreen">105</span> ; <span class="CGreen">120</span> ; <span class="CGreen">104</span> ; 
+        <span class="CGreen">121</span> ; <span class="CGreen">99</span> ; <span class="CGreen">127</span> ; 
+        <span class="CGreen">108</span>.<br> Voici la série de scores obtenus par les six joueurs de 
+        l'équipe des <span class="CBlue">bleus</span> : <br>
+        <span class="CBlue">93</span> ; <span class="CBlue">181</span> ; <span class="CBlue">89</span> ; 
+        <span class="CBlue">98</span> ; <span class="CBlue">117</span> ; <span class="CBlue">94</span> <br>
+    
+        <ol>
+          <li>Au vue du nombre de joueur, peut-on ajouter les scores pour désigner l'équipe gagnante ?</li>
+          <li>L'un des joueurs propose alors de calculer la moyenne de chacune des équipes pour désigner la gagante. Effectuer le calcul, que remarque-t-on ?</li>
+          <li>
+            Il existe un autre outils statistique permettant de comparer deux séries de valeurs, la médianne.<br>
+            La médianne est obtenue en trouvant la valeur centrale de la série. Pour chacune des série :
+            <ol type="a">
+              <li>Range les valeurs dans l'ordre croissant.</li>
+              <li>Trouve la valeur centrale (milieu de la série).</li>
+            </ol>
+          </li>
+          <li>Quelle est alors l'équipe gagnante ?</li>
+          <li>Pour chaque équipe, calcul l'écart entre le score maximal et minimal. Cette valeur est appelé <b>Etendu</b></li>
+        </ol>
+      </p>
+    </div>
+  </div>
 
+  <h1>Vocabulaire :</h1>
+      <h2>Série de valeurs :</h2>
+          <p>
+            On étudie les résultats d'une classe à un contrôle, voici les notes obtenues :<br>
+            <div class="flexobject valeur">
+              <div>7</div>
+              <div>13</div>
+              <div>10</div>
+              <div>14</div>
+              <div>14</div>
+              <div>15</div>
+              <div>7</div>
+              <div>10</div>
+              <div>15</div>
+              <div>10</div>
+              <div>13</div>
+              <div>20</div>
+              <div>9</div>
+              <div>9</div>
+              <div>13</div>
+              <div>14</div>
+              <div>15</div>
+              <div>14</div>
+              <div>7</div>
+              <div>10</div>
+            </div>
+            L'ensemble de ces notes est appelé <span class="CRed">population</span> de la série.<br>
+            Le <span class="CRed">caractère</span> étudié est le résultats en point.<br>
+            Les <span class="CRed">valeurs</span> du caractère sont 7 ; 9 ; 10 ; 13 ; 14 ; 15 et 20.<br>
+            L'<span class="CRed">effectif</span> d'une valeur est le nombre de fois ou celle-ci apparaît, par exemple l'effectif de la valeur 10 est 4.<br>
+            L'<span class="CRed">effectif total</span> est 20.
+          </p>
+
+          <table class="porpotionnaltable">
+            <tr>
+              <th>Note<br>(valeur)</th>
+              <td>7</td>
+              <td>9</td>
+              <td>10</td>
+              <td>13</td>
+              <td>14</td>
+              <td>15</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <th>Effectif</th>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>3</td>
+              <td>4</td>
+              <td>3</td>
+              <td>1</td>
+            </tr>
+          </table>
+      <h2>Fréquence :</h2>
+          <div class="definition">
+            La <span class="CRed">fréquence</span> d’une valeur est le quotient de l’effectif de cette valeur par l’effectif total.<br>
+            $Fréquence = \frac{Effectif\thinspace de\thinspace\thinspace la\thinspace valeur}{Effectif\thinspace total}$
+          </div>
+          <p class="exemple">Exemple :</p>
+          <p>Dans l’exemple précèdent il y a 20 notes au total. 
+            La fréquence de la valeur 10 est donc de $\frac{4}{20}=\frac{1}{5}=0.2=20%$</p>
+  <h1>Outils statistiques :</h1>
+      <h2>Moyenne :</h2>
+          <div class="definition">
+            La <span class="CRed">moyenne</span> d’une série de valeurs est égale à la somme de toutes 
+            les valeurs de la série, divisée par l’effectif total de la série.<br>
+            $Moyenne = \frac{Somme\thinspace de\thinspace toutes\thinspace les\thinspace valeurs}{Effectif\thinspace total}$
+          </div>
+          <p class="exemple">Exemple :</p>
+          <p>On a relevé les notes des 7 derniers contrôles de Pierre : </p>
+          <div class="flexobject valeur">
+            <div>7</div>
+            <div>17</div>
+            <div>15</div>
+            <div>16</div>
+            <div>12</div>
+            <div>14</div>
+            <div>10</div>
+          </div>
+          <p>On peut alors calculer sa moyenne :</p>
+          $Moyenne = \frac{7+17+15+16+12+14+10}{7}=13$
+          <p>
+            <b>Interprétation :</b><br>
+            Si pierre avait eu la même note à tous les contrôle il aurait eu 13 à chaque fois.
+          </p>
+          <p>
+            Sur l'exemple précédent :
+            <table class="porpotionnaltable">
+              <tr>
+                <th>Note<br>(valeur)</th>
+                <td>7</td>
+                <td>9</td>
+                <td>10</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <th>Effectif</th>
+                <td>3</td>
+                <td>2</td>
+                <td>4</td>
+                <td>3</td>
+                <td>4</td>
+                <td>3</td>
+                <td>1</td>
+              </tr>
+            </table>
+            <br>
+            $Moyenne = \frac{7\times3+9\times2+10\times4+13\times3+14\times4+15\times3+20\times1}{20}$ $=11.95$
+          </p>
+          <p class="remarque">Remarque :</p>
+          <ul>
+            <li>La moyenne est très sensible au valeurs extrême.</li>
+            <li>Lorsque l'on calcul la moyenne avec des effectifs, on parle de <span class="CRed">moyenne pondérée</span>.</li>
+          </ul>
+      <h2>Médiane :</h2>
+          <div class="definition">
+            La <span class="CRed">médiane</span> d’une série de valeurs est une valeur telle qu’il y a :
+            <ul>
+              <li>Au moins 50% des valeurs inférieures ou égales à cette médiane</li>
+              <li>Au moins 50% des valeurs supérieurs ou égales à cette médiane.</li>
+            </ul>
+          </div>
+          <p class="exemple">Exemple :</p>
+          <p>On reprend les notes de Pierre :</p>
+          <div class="flexobject valeur">
+            <div>7</div>
+            <div>17</div>
+            <div>15</div>
+            <div>16</div>
+            <div>12</div>
+            <div>14</div>
+            <div>10</div>
+          </div>
+          <p>On les classe tous d’abord par ordre croissant pour identifier la médiane:</p>
+          <div class="flexobject valeur">
+            <div>7</div>
+            <div>10</div>
+            <div>12</div>
+            <div class="CRRound">14</div>
+            <div>15</div>
+            <div>16</div>
+            <div>17</div>
+          </div>
+          <p>La médiane est une valeur de la série car l’effectif des notes est impair.</p>
+          <p>Au contrôle suivant Pierre obtient 15 :</p>
+          <div class="flexobject valeur">
+            <div>7</div>
+            <div>17</div>
+            <div>15</div>
+            <div>16</div>
+            <div>12</div>
+            <div>14</div>
+            <div>10</div>
+            <div>15</div>
+          </div>
+          <p>On ré-identifie la médiane:</p>
+          <div class="flexobject valeur">
+            <div>7</div>
+            <div>10</div>
+            <div>12</div>
+            <div>14</div>
+            <div class="CRRound">-</div>
+            <div>15</div>
+            <div>15</div>
+            <div>16</div>
+            <div>17</div>
+          </div>
+          <p>
+            La médiane ici n’est plus une valeur de la série car l’effectif des notes est Pair.
+            La médiane de ces notes est une note comprise entre la 4e et 5e valeur. En générale on prend la moitié soit 14,5 ici.</p>
+          </p>
+          <p>
+            <b>Interprétation :</b><br>
+            La moitié des notes de Pierre sont inférieur ou égale à 14,5.<br>
+            La moitié des notes de Pierre sont supérieur ou égale à 14,5.
+          </p>
+      <h2>Etendu :</h2>
+        <div class="definition">
+          L' <span class="CRed">étendu</span> d’une série de valeurs est la différence entre la valeur maximal et la valeur minimal :<br>
+          $Etendue = valeur\thinspace max - valeur\thinspace min$
+        </div>
+        <p class="exemple">Exemple :</p>
+        <p>On reprend les notes de Pierre :</p>
+        <div class="flexobject valeur">
+          <div>7</div>
+          <div>17</div>
+          <div>15</div>
+          <div>16</div>
+          <div>12</div>
+          <div>14</div>
+          <div>10</div>
+        </div>
+        <p>L'étendue est ici 17-7 = 10</p>
+        <p>
+          <b>Interprétation :</b><br>
+          L'écart entre la plus grande et la plus petite valeur est 10.
+        </p>
+          
 </body>
 
 </html>
