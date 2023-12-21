@@ -64,13 +64,13 @@ var ListeCours = {
             id: 11,
             nom: "Médiane et étendu",
             icone: 5,
-            ready : false,
+            ready : true,
         },
         {
             id: 12,
             nom: "Fonctions linéaires et affines",
             icone: 3,
-            ready : false,
+            ready : true,
         },
         {
             id: 13,
