@@ -413,14 +413,14 @@ ol > li::marker {
     width: 2cm;
 }
 
-.porpotionnaltable td, th{
+.proportionnaltable td, th{
     border: solid var(--TableBorder) 2px;
     border-collapse: collapse;
     padding: 3px 10px;
     width: 40px;
     text-align: center;
 }
-.porpotionnaltable th{
+.proportionnaltable th{
     width: 100px;
     background-color: var(--TableHeader);
 }
