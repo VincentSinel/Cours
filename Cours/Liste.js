@@ -82,7 +82,7 @@ var ListeCours = {
             id: 14,
             nom: "Trigonométrie Calcul d'angle",
             icone: 2,
-            ready : false,
+            ready : true,
         },
         {
             id: 15,
