@@ -88,7 +88,7 @@ var ListeCours = {
             id: 15,
             nom: "Reciproque de Thalès",
             icone: 2,
-            ready : false,
+            ready : true,
         },
         {
             id: 16,

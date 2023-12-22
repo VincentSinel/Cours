@@ -17,6 +17,17 @@
   <title>Chapitre 15 - Reciproque de Thalès</title>
 
   <style>
+    .tableaud{
+      display: grid;
+      width: calc(2 * 200px);
+      grid-template-columns: repeat(2, 200px);
+      grid-auto-rows: minmax(30px, auto);
+      border: 1px solid black;
+    }
+    .tableaud div{
+      border: 1px solid black;
+      text-align: center;
+    }
   </style>
 
 </head>
@@ -39,7 +50,7 @@
   </p>
 
   <div class="flexobject">
-    <div style="max-width: 14cm;">
+    <div style="flex: 1 1 7cm;">
       On considère la figure ci-contre représentant la table de camping de Léon, dont les pieds [DE] et [CF] sont sécants en A.<br>
       On donne :<br>
       AD = 30cm, AE= 50cm, AC = 24cm et AF = 40cm.<br>
@@ -50,16 +61,107 @@
   <ol>
     <li>
       <ol type="a">
+        <li>Les quotients $\frac{AD}{AE}$ et $\frac{AC}{AF}$ sont-ils égaux ?</li>
         <li>Réaliser une figure à l'échelle $\frac{1}{10}$</li>
-        <li>Les droites (EF) et (DC) semblent-elles parallèles ?</li>
-        <li>Quelle transformation permet alors de passer du triangle AEF au triangle ACD ?</li>
-        <li>Calculer le rapport $\frac{AD}{AE}$. Calculer de même $\frac{AC}{AF}$. Que remarque-t-on ?</li>
-        <li>Peut-on dire </li>
+        <li>Les droites (EF) et (DC) semblent-elles parallèles ?<br>
+        Que peut-on en conclure pour le plateau de la table ?</li>
+        <li>Si les droites (EF) et (DC) étaient parallèles, que pourrait-on dire des rapports 
+          $\frac{AD}{AE}$ et $\frac{AC}{AF}$ ?<br>
+          D'après quelle théorème ?
+        </li>
+        <li>Justifier alors la conjecture émise à la question <b>1. c.</b></li>
       </ol>
+    </li>
+    <li>
+      Léon décide de raccourcir le pied [AC] en coupant 1cm. Le plateau est-il parallèle au sol dans ce cas ?
     </li>
   </ol>
 
+  <h1>Réciproque du théorème de Thalès :</h1>
+    <div class="definition">
+      Soit (BM) et (CN) deux droites sécantes en A.<br>
+      <div class="flexobject" style="gap: 5px;">
+        <span class="CRed" style="font-size: 24px;">SI</span>
+        <span>$\frac{A\textcolor{#039be5}{M}}{A\textcolor{#e53935}{B}}=\frac{A\textcolor{#039be5}{N}}{A\textcolor{#e53935}{C}}$</span>
+        <span style="min-width: 1cm; text-align: center;">et</span>
+        <div style="flex: 1 1 5cm;">
+          Les points A ; <span class="CRed">B</span> ; <span class="CBlue">M</span> et les
+          points A ; <span class="CRed">C</span> ; <span class="CBlue">N</span> sont aligné
+          <b><i><u>dans le même ordre</u></i></b>
+        </div>
+        <span class="CRed" style="font-size: 24px;">ALORS</span>
+        <span>Les droites (<span class="CRed">BC</span>) et (<span class="CBlue">MN</span>) sont parallèles.</span>
+      </div>
+    </div>
+
+    <div class="tableaud">
+      <div style="grid-column: 1; grid-row: 1; background-color: lightgray;"><b>Ordre des points A ; <span class="CRed">B</span> ; <span class="CBlue">M</span></b></div>
+      <div style="grid-column: 2; grid-row: 1; background-color: lightgray;"><b>Ordre des points A ; <span class="CRed">C</span> ; <span class="CBlue">N</span></b></div>
+      <div style="grid-column: 1 / 3; grid-row: 2; border: none;"><img src="Images/Fleche.svg" style="max-height: 10px; vertical-align: middle;"></div>
+      <div style="grid-column: 1 / 3; grid-row: 3; border: none;"><img src="Images/Fleche.svg" style="max-height: 10px; vertical-align: middle;"></div>
+      <div style="grid-column: 1 / 3; grid-row: 4; border: none;"><img src="Images/Fleche.svg" style="max-height: 10px; vertical-align: middle;"></div>
+      <div style="grid-column: 1; grid-row: 2">A puis <span class="CRed">B</span> puis <span class="CBlue">M</span></div>
+      <div style="grid-column: 1; grid-row: 3"><span class="CRed">B</span> puis <span class="CBlue">M</span> puis A</div>
+      <div style="grid-column: 1; grid-row: 4"><span class="CBlue">M</span> puis A puis <span class="CRed">B</span></div>
+      <div style="grid-column: 2; grid-row: 2">A puis <span class="CRed">C</span> puis <span class="CBlue">N</span></div>
+      <div style="grid-column: 2; grid-row: 3"><span class="CRed">C</span> puis <span class="CBlue">N</span> puis A</div>
+      <div style="grid-column: 2; grid-row: 4"><span class="CBlue">N</span> puis A puis <span class="CRed">C</span></div>
+    </div>
+
+    <p class="exemple">Exemples :</p>
+    <div class="flexobject">
+      <img src="Images/Configuration-01.svg" style="max-width: 7cm;">
+      <p>
+        Ici les points sont bien aligné dans le même ordre.
+      </p>
+    </div>
+    <div class="flexobject">
+      <img src="Images/Configuration-02.svg" style="max-width: 7cm;">
+      <p>
+        Ici les points ne sont pas aligné dans le même ordre.
+      </p>
+    </div>
   
+    <h1>Réciproque du théorème de thalès :</h1>
+        <h2>Montrer que deux droites sont parallèles :</h2>
+          <div class="flexobject">
+            <img src="Images/Figure-01.svg" style="max-width: 3cm;">
+            <p>
+              Les droites (BN) et (CM) sont sécantes en A.<br>
+              On a $\frac{AB}{AN}=\frac{10,5}{22,5}=\frac{7}{15}$ et $\frac{AC}{AM}=\frac{7}{15}$ donc
+              $\frac{AB}{AN}=\frac{AC}{AM}$. De plus les points A;B;N et A;C;M sont aligné dans cette ordre.<br>
+              Donc d'après la réciproque du théorème de Thalès on peut affirmer que (BC) et (MN) sont parallèles.
+            </p>
+          </div>
+
+        <h2>Montrer que deux droites ne sont sont parallèles :</h2>
+          <div class="flexobject">
+            <img src="Images/Figure-02.svg" style="max-width: 3cm;">
+            <p>
+              Les droites (BN) et (CM) sont sécantes en A.<br>
+              On a $\frac{AB}{AN}=\frac{7,2}{4,5}=1,6$ et $\frac{AC}{AM}=\frac{6}{4}=1,5$ donc
+              $\frac{AB}{AN}\neq\frac{AC}{AM}$.<br>
+              Donc d'après la réciproque du théorème de Thalès on peut affirmer que (BC) et (MN) ne sont pas parallèles.
+            </p>
+          </div>
+          <p>⚠️ ATTENTION : Sans figure, il peut y avoir des cas qui ne fonctionne pas.</p>
+          <p>
+            Soit (BN) et (CM) deux droites sécantes en A tel que :<br>
+            <ul>
+              <li>AB = 9 cm</li>
+              <li>AC = 15 cm</li>
+              <li>AN = 1,5 cm</li>
+              <li>AM = 2,5 cm</li>
+            </ul>
+            Plusieurs cas de figures sont possible :
+          </p>
+          <div class="flexobject">
+            <img src="Images/Figure-03.svg" style="max-width: 5cm;">
+            <img src="Images/Figure-04.svg" style="max-width: 5cm;">
+          </div>
+          <p>
+            Dans le premier cas, les points ne sont pas aligné dans le même ordre.
+          </p>
 
 </body>
 

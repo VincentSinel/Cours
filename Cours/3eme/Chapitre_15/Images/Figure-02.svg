@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.47 112.34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1d1d1b;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 12px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-2 {
+        fill: #e62e31;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-3" points="18.41 26.92 43.4 14.34 34.19 100.43 82.58 76.07 18.41 26.92"/>
+  <text class="cls-1" transform="translate(36.65 11.66)"><tspan x="0" y="0">N</tspan></text>
+  <text class="cls-1" transform="translate(6.56 31.17)"><tspan x="0" y="0">M</tspan></text>
+  <text class="cls-1" transform="translate(84.49 82.56)"><tspan x="0" y="0">C</tspan></text>
+  <text class="cls-1" transform="translate(29.64 111.17)"><tspan x="0" y="0">B</tspan></text>
+  <text class="cls-1" transform="translate(40.94 59.65)"><tspan x="0" y="0">A</tspan></text>
+  <text class="cls-2" transform="translate(32.14 94.64) rotate(-83.22)"><tspan x="0" y="0">7,2 cm</tspan></text>
+  <text class="cls-2" transform="translate(52.11 45.49) rotate(-84.04)"><tspan x="0" y="0">4,5 cm</tspan></text>
+  <text class="cls-2" transform="translate(55.25 52.71) rotate(38.05)"><tspan x="0" y="0">6 cm</tspan></text>
+  <text class="cls-2" transform="translate(13.08 34.81) rotate(38.05)"><tspan x="0" y="0">4 cm</tspan></text>
+</svg>
