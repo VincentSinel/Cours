@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4cm" height="4cm" viewBox="0 0 113.39 113.39">
+  <title>Solides</title>
+  <circle cx="56.69" cy="56.69" r="49.95" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2"/>
+  <path d="M6.74,56.69c0-13.79,22.37-25,49.95-25s50,11.18,50,25" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2" stroke-dasharray="5.54 3.17"/>
+  <path d="M106.64,56.69c0,13.8-22.36,25-49.95,25S6.74,70.49,6.74,56.69" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2"/>
+  <path d="M56.69,6.74c13.8,0,25,22.37,25,49.95s-11.18,50-25,50" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2" stroke-dasharray="5.54 3.17"/>
+  <path d="M56.69,106.64c-13.79,0-25-22.36-25-49.95S42.9,6.74,56.69,6.74" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2"/>
+</svg>

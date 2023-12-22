@@ -76,7 +76,7 @@ var ListeCours = {
             id: 13,
             nom: "Volumes (Boules)",
             icone: 2,
-            ready : false,
+            ready : true,
         },
         {
             id: 14,
