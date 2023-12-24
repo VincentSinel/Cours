@@ -712,6 +712,388 @@ window.onload = function(){
 	
 		Regenerate();
 	}
+
+	function Add_segment()
+	{
+		let ids = []
+		objects.forEach(obj =>{
+			if(obj.type == "segment")
+				ids.push(obj.id);
+		})
+		let id = 1;
+		while(ids.indexOf(id) >= 0)
+			id += 1;
+		objects.push(
+			{
+				type: "segment",
+				id: id,
+				hover: false
+			}
+		)
+		var name = "seg" + id;
+
+		var menu = document.createElement("div");
+		menu.id = name;
+		menu.classList.add("formemenu");
+		var titre = document.createElement("span");
+		titre.innerText = "Segment " + id;
+		titre.onclick = function(){menu_click(menu)};
+		menu.appendChild(titre);
+		var content = document.createElement("div");
+		content.classList.add("formemenu_div");
+
+		// POSITION DEPART
+		var label = document.createElement("label");
+		label.innerText = "Position départ :"
+		content.appendChild(label)
+		label = document.createElement("br");
+		content.appendChild(label)
+		
+		var coord = document.createElement("div");
+		coord.classList.add("coord")
+
+		label = document.createElement("label");
+		label.innerText = "("
+		coord.appendChild(label)
+		var input = document.createElement("input");
+		input.classList.add("input_coord");
+		input.id = name + "_psx";
+		input.type = "number";
+		input.value = "1";
+		input.onchange = function(){ Regenerate() };
+		coord.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = ";"
+		coord.appendChild(label)
+		input = document.createElement("input");
+		input.classList.add("input_coord");
+		input.id = name + "_psy";
+		input.type = "number";
+		input.value = "1";
+		input.onchange = function(){ Regenerate() };
+		coord.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = ")"
+		coord.appendChild(label)
+
+		content.appendChild(coord)
+
+		// POSITION D ARRIVEE
+		label = document.createElement("label");
+		label.innerText = "Position d'arrivée :"
+		content.appendChild(label)
+		label = document.createElement("br");
+		content.appendChild(label)
+		
+		coord = document.createElement("div");
+		coord.classList.add("coord")
+
+		label = document.createElement("label");
+		label.innerText = "("
+		coord.appendChild(label)
+		input = document.createElement("input");
+		input.classList.add("input_coord");
+		input.id = name + "_pex";
+		input.type = "number";
+		input.value = "1";
+		input.onchange = function(){ Regenerate() };
+		coord.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = ";"
+		coord.appendChild(label)
+		input = document.createElement("input");
+		input.classList.add("input_coord");
+		input.id = name + "_pey";
+		input.type = "number";
+		input.value = "1";
+		input.onchange = function(){ Regenerate() };
+		coord.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = ")"
+		coord.appendChild(label)
+
+		content.appendChild(coord)
+
+		//STYLE DEBUT
+		label = document.createElement("label");
+		label.innerText = "Style début :"
+		content.appendChild(label)
+		label = document.createElement("br");
+		content.appendChild(label)
+		
+		coord = document.createElement("div");
+		coord.classList.add("coord")
+
+		input = document.createElement("select");
+		input.id = name + "_ss";
+		input.onchange = function(){ Regenerate() };
+		let option = document.createElement("option");
+		option.value = 0;
+		option.innerHTML = "Aucun";
+		input.appendChild(option);
+		option = document.createElement("option");
+		option.value = 1;
+		option.innerHTML = "Flêche 1";
+		input.appendChild(option);
+		option = document.createElement("option");
+		option.value = 2;
+		option.innerHTML = "Flêche 2";
+		input.appendChild(option);
+		option = document.createElement("option");
+		option.value = 3;
+		option.innerHTML = "Flêche 3";
+		input.appendChild(option);
+		option = document.createElement("option");
+		option.value = 4;
+		option.innerHTML = "Segment";
+		input.appendChild(option);
+		option = document.createElement("option");
+		option.value = 5;
+		option.innerHTML = "Rond";
+		input.appendChild(option);
+		coord.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = " - "
+		coord.appendChild(label)
+		input = document.createElement("input");
+		input.classList.add("input_coord");
+		input.id = name + "_sss";
+		input.type = "number";
+		input.value = "100";
+		input.step = "5";
+		input.min = "0";
+		input.onchange = function(){ Regenerate() };
+		coord.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = "%"
+		coord.appendChild(label)
+		
+		content.appendChild(coord)
+
+		//STYLE FIN
+		label = document.createElement("label");
+		label.innerText = "Style fin :"
+		content.appendChild(label)
+		label = document.createElement("br");
+		content.appendChild(label)
+		
+		coord = document.createElement("div");
+		coord.classList.add("coord")
+
+		input = document.createElement("select");
+		input.id = name + "_se";
+		input.onchange = function(){ Regenerate() };
+		option = document.createElement("option");
+		option.value = 0;
+		option.innerHTML = "Aucun";
+		input.appendChild(option);
+		option = document.createElement("option");
+		option.value = 1;
+		option.innerHTML = "Flêche 1";
+		input.appendChild(option);
+		option = document.createElement("option");
+		option.value = 2;
+		option.innerHTML = "Flêche 2";
+		input.appendChild(option);
+		option = document.createElement("option");
+		option.value = 3;
+		option.innerHTML = "Flêche 3";
+		input.appendChild(option);
+		option = document.createElement("option");
+		option.value = 4;
+		option.innerHTML = "Segment";
+		input.appendChild(option);
+		option = document.createElement("option");
+		option.value = 5;
+		option.innerHTML = "Rond";
+		input.appendChild(option);
+		coord.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = " - "
+		coord.appendChild(label)
+		input = document.createElement("input");
+		input.classList.add("input_coord");
+		input.id = name + "_ses";
+		input.type = "number";
+		input.value = "100";
+		input.step = "5";
+		input.min = "0";
+		input.onchange = function(){ Regenerate() };
+		coord.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = "%"
+		coord.appendChild(label)
+		
+		content.appendChild(coord)
+		
+		// EPAISSEUR
+		label = document.createElement("label");
+		label.innerText = "Epaisseur :"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.id = name + "_stroke";
+		input.type = "number";
+		input.value = "2";
+		input.step = "1";
+		input.min = "1";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+		label = document.createElement("label");
+		label.innerText = "Couleur :"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.id = name + "_stroke_color";
+		input.type = "color";
+		input.value = "red";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+		label = document.createElement("label");
+		label.innerText = "Style de trait :"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.id = name + "_style";
+		input.type = "text";
+		input.value = "";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+
+	
+		label = document.createElement("button");
+		label.onclick = function(){ RemoveSegment(name) };
+		label.innerText = "Supprimer"
+		label.classList.add("delete")
+		content.appendChild(label)
+		menu.appendChild(content);
+	
+		document.getElementById("object_list").appendChild(menu);
+	
+		Regenerate();
+	}
+	
+	function Add_texte()
+	{
+		let ids = []
+		objects.forEach(obj =>{
+			if(obj.type == "texte")
+				ids.push(obj.id);
+		})
+		let id = 1;
+		while(ids.indexOf(id) >= 0)
+			id += 1;
+		objects.push(
+			{
+				type: "texte",
+				id: id,
+				hover: false
+			}
+		)
+		var name = "txt" + id;
+
+		var menu = document.createElement("div");
+		menu.id = name;
+		menu.classList.add("formemenu");
+		var titre = document.createElement("span");
+		titre.innerText = "Texte " + id;
+		titre.onclick = function(){menu_click(menu)};
+		menu.appendChild(titre);
+		var content = document.createElement("div");
+		content.classList.add("formemenu_div");
+		var label = document.createElement("label");
+		label.innerText = "Position :"
+		content.appendChild(label)
+		label = document.createElement("br");
+		content.appendChild(label)
+		
+		label = document.createElement("label");
+		label.innerText = "("
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.classList.add("input_coord");
+		input.id = name + "_px";
+		input.type = "number";
+		input.value = "0";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = ";"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.classList.add("input_coord");
+		input.id = name + "_py";
+		input.type = "number";
+		input.value = "0";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+		label = document.createElement("label");
+		label.innerText = ")"
+		content.appendChild(label)
+		label = document.createElement("br");
+		content.appendChild(label)
+	
+		label = document.createElement("label");
+		label.innerText = "Nom :"
+		content.appendChild(label)
+		var input = document.createElement("input");
+		input.id = name + "_text";
+		input.type = "text";
+		input.value = "A";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+
+		
+		label = document.createElement("label");
+		label.innerText = "Angle :"
+		content.appendChild(label)
+		label = document.createElement("br");
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.id = name + "_angle";
+		input.type = "number";
+		input.value = "0";
+		input.step = "5";
+		input.min = "-360";
+		input.max = "360";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+	
+		label = document.createElement("label");
+		label.innerText = "Taille du texte :"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.id = name + "_text_size";
+		input.type = "number";
+		input.value = "12";
+		input.step = "2";
+		input.min = "0";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+
+	
+		label = document.createElement("label");
+		label.innerText = "Couleur :"
+		content.appendChild(label)
+		input = document.createElement("input");
+		input.id = name + "_stroke_color";
+		input.type = "color";
+		input.value = "red";
+		input.onchange = function(){ Regenerate() };
+		content.appendChild(input)
+	
+	
+		label = document.createElement("button");
+		label.onclick = function(){ RemoveCourbe('poi' + id) };
+		label.innerText = "Supprimer"
+		label.classList.add("delete")
+		content.appendChild(label)
+		menu.appendChild(content);
+	
+		document.getElementById("object_list").appendChild(menu);
+	
+		Regenerate();
+	}
 }
 
 function Remove_Point_Polygone(polygone_id, point_id)
@@ -757,10 +1139,28 @@ function RemoveCircle(name)
 	Regenerate();
 }
 
+function RemoveSegment(name)
+{
+	let element = document.getElementById(name);
+	element.parentNode.removeChild(element);
+	let id = parseInt(name.substring(3));
+	objects.splice(objects.findIndex(element => element.id == id && element.type == "segment"), 1);
+	Regenerate();
+}
+
+function RemoveTexte(name)
+{
+	let element = document.getElementById(name);
+	element.parentNode.removeChild(element);
+	let id = parseInt(name.substring(3));
+	objects.splice(objects.findIndex(element => element.id == id && element.type == "texte"), 1);
+	Regenerate();
+}
+
 function menu_changed()
 {
 	objects = [];
-	document.getElementById("object_list").innerHTML = "";
+	// document.getElementById("object_list").innerHTML = "";
 	document.getElementById("param_repere").classList.add("hiddenparam")
 	document.getElementById("param_axe").classList.add("hiddenparam")
 	document.getElementById("param_quadrillage").classList.add("hiddenparam")
@@ -825,6 +1225,10 @@ function Get_Objects()
 				data.push(Get_Polygone(obj))
 			if (obj.type == "circle")
 				data.push(Get_Circle(obj))
+			if (obj.type == "segment")
+				data.push(Get_Segment(obj))
+			if (obj.type == "texte")
+				data.push(Get_Texte(obj))
 		}
 		catch(e){
 			console.log(e)
@@ -909,6 +1313,41 @@ function Get_Circle(obj)
 	}
 	return data;
 
+}
+
+function Get_Segment(obj)
+{
+	var name = "seg" + obj.id
+	let data = {
+		"type": "segment",
+		"psx": document.getElementById(name + "_psx").valueAsNumber,
+		"psy": document.getElementById(name + "_psy").valueAsNumber,
+		"pex": document.getElementById(name + "_pex").valueAsNumber,
+		"pey": document.getElementById(name + "_pey").valueAsNumber,
+		"ss": document.getElementById(name + "_ss").selectedIndex,
+		"sss": document.getElementById(name + "_sss").valueAsNumber,
+		"se": document.getElementById(name + "_se").selectedIndex,
+		"ses": document.getElementById(name + "_ses").valueAsNumber,
+		"stroke": document.getElementById(name + "_stroke").valueAsNumber,
+		"strokecolor": document.getElementById(name + "_stroke_color").value,
+		"dashstyle": document.getElementById(name + "_style").value,
+	}
+	return data;
+}
+
+function Get_Texte(obj)
+{
+	var name = "txt" + obj.id;
+	let data = {
+		"type": "texte",
+		"px": document.getElementById(name + "_px").valueAsNumber,
+		"py": document.getElementById(name + "_py").valueAsNumber,
+		"name": document.getElementById(name + "_text").value,
+		"angle": document.getElementById(name + "_angle").valueAsNumber,
+		"txt_size": document.getElementById(name + "_text_size").valueAsNumber,
+		"strokecolor": document.getElementById(name + "_stroke_color").value,
+	}
+	return data;
 }
 
 function Draw_RepereGradue(data)

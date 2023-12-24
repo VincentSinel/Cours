@@ -16,6 +16,10 @@
                     Circle(paper, context, obj)
                 if (obj["type"] == "line")
                     Line(paper, context, obj)
+				if (obj["type"] == "segment")
+					Segment(paper, context, obj)
+				if (obj["type"] == "texte")
+					Texte(paper, context, obj)
             }
             catch(e){
                 console.log(e)
@@ -375,6 +379,160 @@
             }
         )
     }
+
+	function Segment(paper, context, data)
+    {
+        let width = context["width"];
+        let height = context["height"];
+        let xs = context["xs"];
+        let xe = context["xe"];
+        let ys = context["ys"];
+        let ye = context["ye"];
+        let pxs = data["psx"];
+        let pys = data["psy"];
+        let pxe = data["pex"];
+        let pye = data["pey"];
+		let style_s = data["ss"];
+		let style_e = data["se"];
+		let style_s_size = data["sss"];
+		let style_e_size = data["ses"];
+        let stroke = data["stroke"];
+        let strokecolor = data["strokecolor"];
+        let dashstyle = data["dashstyle"];
+
+        let dxs = Gen_Margin + 5 + (pxs - xs)/(xe - xs) * width;
+        let dxe = Gen_Margin + 5 + (pxe - xs)/(xe - xs) * width;
+        let dys = Canvas_height - (Gen_Margin + 5 + (pys - ys)/(ye - ys) * height);
+        let dye = Canvas_height - (Gen_Margin + 5 + (pye - ys)/(ye - ys) * height);
+    
+		let dx1 = 0; let dy1 = 0;
+		let dx2 = 0; let dy2 = 0;
+		if (style_s == 2 || style_s == 5)
+		{
+			dx = dxe - dxs;
+			dy = dye - dys;
+			let l = Math.sqrt(dx * dx + dy * dy);
+			dx1 = dx / l * style_s_size / 10.0;
+			dy1 = dy / l * style_s_size / 10.0;
+		}
+		if (style_e == 2 || style_e == 5)
+		{
+			dx = dxs - dxe;
+			dy = dys - dye;
+			let l = Math.sqrt(dx * dx + dy * dy);
+			dx2= dx / l * style_s_size / 10.0;
+			dy2 = dy / l * style_s_size / 10.0;
+		}
+        let line = draw_line(paper, dxs + dx1, dys + dy1, dxe + dx2, dye + dy2);
+        line.attr(
+            {
+                stroke: strokecolor,
+                "stroke-width": stroke,
+                "stroke-linecap": "round",
+                "stroke-linejoin": "round",
+                "stroke-dasharray": dashstyle,
+            }
+        )
+
+		console.log(data)
+
+		let poly = draw_fleche(style_s, dxs, dys, dxe, dye, style_s_size);
+		switch (style_s) {
+			case 1:
+			case 2:
+			case 4:
+			case 5:
+				poly.attr(
+					{
+						stroke: strokecolor,
+						"stroke-width": stroke,
+						"stroke-linecap": "round",
+						"stroke-linejoin": "round",
+					}
+				)
+				break;
+			case 3:
+				poly.attr(
+					{
+						stroke: strokecolor,
+						"fill": strokecolor
+					}
+				)
+			default:
+				break;
+		}
+		poly = draw_fleche(style_e, dxe, dye, dxs, dys, style_e_size);
+		switch (style_e) {
+			case 1:
+			case 2:
+			case 4:
+			case 5:
+				poly.attr(
+					{
+						stroke: strokecolor,
+						"stroke-width": stroke,
+						"stroke-linecap": "round",
+						"stroke-linejoin": "round",
+					}
+				)
+				break;
+			case 3:
+				poly.attr(
+					{
+						stroke: strokecolor,
+						"fill": strokecolor
+					}
+				)
+			default:
+				break;
+		}
+    }
+
+	function Texte(paper, context, data)
+	{
+		let width = context["width"];
+		let height = context["height"];
+		let xs = context["xs"];
+		let xe = context["xe"];
+		let ys = context["ys"];
+		let ye = context["ye"];
+		let px = data["px"];
+		let py = data["py"];
+		let name = data["name"];
+		let angle = data["angle"];
+		let txt_size = data["txt_size"];
+		let strokecolor = data["strokecolor"];
+
+		let p = {
+			x: Gen_Margin + 5 + (px - xs)/(xe - xs) * width,
+			y: Canvas_height - Gen_Margin - 5 - (py - ys)/(ye - ys) * height
+		}
+
+		if (name != "")
+		{
+			element = paper.text( p.x, p.y, name);
+			element.attr(
+				{
+					fill: "white",
+					stroke: "white",
+					"stroke-width": 5,
+					"font-size": txt_size,
+					"text-anchor": "middle",
+					"font-weight": "bold",
+				}
+			)
+			element.rotate(angle);
+			element = paper.text( p.x, p.y, name);
+			element.attr(
+				{
+					fill: strokecolor,
+					"font-size": txt_size,
+					"text-anchor": "middle",
+				}
+			)
+			element.rotate(angle);
+		}
+	}
 }
 
 
@@ -1009,4 +1167,45 @@ function draw_ellipse_arc(paper, center, stara, enda, rx, ry, close = true)
 	{
 		return paper.ellipse(center.x, center.y, rx, ry);
 	}
+}
+
+function draw_fleche(type = 0, px, py, dx, dy, size)
+{
+	dx = dx - px;
+	dy = dy - py;
+	let l = Math.sqrt(dx * dx + dy * dy);
+	let vx = dx / l;
+	let vy = dy / l;
+	let nx = -vy;
+	let ny = vx;
+	let c = size / 10.0;
+	let p1; let p2; let p3; let p4;
+	switch (type) {
+		case 1:
+			p1 = {x: px + (vx + nx * 0.5) * c,y: py + (vy + ny * 0.5) * c};
+			p2 = {x: px,y: py};
+			p3 = {x: px + (vx - nx * 0.5) * c,y: py + (vy - ny * 0.5) * c};
+			return draw_polygone(paper, [p1,p2,p3], false);
+		case 2:
+			p1 = {x: px + (vx + nx * 0.5) * c,y: py + (vy + ny * 0.5) * c};
+			p2 = {x: px,y: py};
+			p3 = {x: px + (vx - nx * 0.5) * c,y: py + (vy - ny * 0.5) * c};
+			return draw_polygone(paper, [p1,p2,p3], true);
+		case 3:
+			p1 = {x: px + (vx + nx * 0.5) * c,y: py + (vy + ny * 0.5) * c};
+			p2 = {x: px,y: py};
+			p3 = {x: px + (vx - nx * 0.5) * c,y: py + (vy - ny * 0.5) * c};
+			p4 = {x: px + (vx * 0.5) * c,y: py + (vy * 0.5) * c};
+			return draw_polygone(paper, [p1,p2,p3,p4], true);
+		case 4:
+			p1 = {x: px + nx * c,y: py + ny * c};
+			p2 = {x: px - nx * c,y: py - ny * c};
+			return draw_line(paper, p1.x, p1.y, p2.x, p2.y);
+		case 5:
+			p1 = {x: px,y: py};
+			return draw_ellipse_arc(paper, p1, 0, 360, c, c, true);
+		default:
+			break;
+	}
+
 }
