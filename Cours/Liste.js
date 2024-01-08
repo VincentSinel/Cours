@@ -94,7 +94,7 @@ var ListeCours = {
             id: 16,
             nom: "Equations produit nul",
             icone: 1,
-            ready : false,
+            ready : true,
         },
         {
             id: 17,
