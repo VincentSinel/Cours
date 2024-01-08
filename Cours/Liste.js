@@ -68,7 +68,7 @@ var ListeCours = {
         },
         {
             id: 12,
-            nom: "Fonctions linéaires et affines",
+            nom: "Fonctions linéaires",
             icone: 3,
             ready : true,
         },
