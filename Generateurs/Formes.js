@@ -1168,7 +1168,7 @@ function RemoveTexte(name)
 function menu_changed()
 {
 	objects = [];
-	// document.getElementById("object_list").innerHTML = "";
+	document.getElementById("object_list").innerHTML = "";
 	document.getElementById("param_repere").classList.add("hiddenparam")
 	document.getElementById("param_axe").classList.add("hiddenparam")
 	document.getElementById("param_quadrillage").classList.add("hiddenparam")
