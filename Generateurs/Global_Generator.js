@@ -50,7 +50,12 @@
         let index = 0
         let inside = false
         x = Math.max(start, xs)
-        let y = Function('"use strict";return (' + formule + ')')()
+		try {
+			let y = Function('"use strict";return (' + formule + ')')()
+		} catch (error) {
+			alert("La formule entrée n'est pas correct : " + error)
+			return;
+		}
         if (y > ys && y < ye)
         {
             points[index].push({
