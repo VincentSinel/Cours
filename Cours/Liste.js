@@ -98,9 +98,9 @@ var ListeCours = {
         },
         {
             id: 17,
-            nom: "Fonction affines",
+            nom: "Fonctions affines",
             icone: 3,
-            ready : false,
+            ready : true,
         },
         {
             id: 18,
