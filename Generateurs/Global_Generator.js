@@ -128,11 +128,13 @@
         let stroke = data["stroke"];
         let strokecolor = data["strokecolor"];
         let dashstyle = data["dashstyle"];
-    
+
         let p = {
-            x: Gen_Margin + 5 + (px - xs)/(xe - xs) * width,
+			x: Gen_Margin + 5 + (px - xs)/(xe - xs) * width,
             y: Canvas_height - Gen_Margin - 5 - (py - ys)/(ye - ys) * height
         }
+		if (ye == ys)
+			p.y = Canvas_height * 0.5
     
         if(type == 0)
         {
