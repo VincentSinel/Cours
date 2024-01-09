@@ -15,7 +15,7 @@ window.onload = function(){
 
 // Ajout d'objet dans la liste latérale
 {
-	function Add_courbe()
+	function Add_courbe(clone = false)
 	{
 		let ids = []
 		objects.forEach(obj =>{
@@ -50,7 +50,7 @@ window.onload = function(){
 		var input = document.createElement("input");
 		input.id = name + "_text";
 		input.type = "text";
-		input.value = "";
+		input.value = clone ? clone["formule"] : "";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 	
@@ -60,7 +60,7 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_stroke";
 		input.type = "number";
-		input.value = "2";
+		input.value = clone ? clone["stroke"] : "2";
 		input.step = "1";
 		input.min = "1";
 		input.onchange = function(){ Regenerate() };
@@ -72,7 +72,7 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_stroke_color";
 		input.type = "color";
-		input.value = "black";
+		input.value = clone ? clone["strokecolor"] : "black";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 	
@@ -82,7 +82,7 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_style";
 		input.type = "text";
-		input.value = "";
+		input.value = clone ? clone["dashstyle"] : "";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 	
@@ -99,7 +99,7 @@ window.onload = function(){
 		input.classList.add("input_coord");
 		input.id = name + "_start";
 		input.type = "number";
-		input.value = "-3";
+		input.value = clone ? clone["start"] : "-3";
 		input.step = "1";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
@@ -110,7 +110,7 @@ window.onload = function(){
 		input.classList.add("input_coord");
 		input.id = name + "_end";
 		input.type = "number";
-		input.value = "3";
+		input.value = clone ? clone["end"] : "3";
 		input.step = "1";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
@@ -118,6 +118,12 @@ window.onload = function(){
 		label.innerText = "]"
 		content.appendChild(label)
 	
+		label = document.createElement("button");
+		label.onclick = function(){ Add_courbe(Get_Courbe({id: id})) };
+		label.innerText = "Dupliquer"
+		label.classList.add("delete")
+		content.appendChild(label)
+		
 		label = document.createElement("button");
 		label.onclick = function(){ RemoveCourbe(name) };
 		label.innerText = "Supprimer"
@@ -129,7 +135,7 @@ window.onload = function(){
 		Regenerate();
 	}
 	
-	function Add_point()
+	function Add_point(clone = false)
 	{
 		let ids = []
 		objects.forEach(obj =>{
@@ -171,7 +177,7 @@ window.onload = function(){
 		input.classList.add("input_coord");
 		input.id = name + "_px";
 		input.type = "number";
-		input.value = "0";
+		input.value = clone ? clone["px"] : "0";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 		label = document.createElement("label");
@@ -181,7 +187,7 @@ window.onload = function(){
 		input.classList.add("input_coord");
 		input.id = name + "_py";
 		input.type = "number";
-		input.value = "0";
+		input.value = clone ? clone["py"] : "0";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 		label = document.createElement("label");
@@ -196,7 +202,7 @@ window.onload = function(){
 		var input = document.createElement("input");
 		input.id = name + "_text";
 		input.type = "text";
-		input.value = "A";
+		input.value = clone ? clone["name"] : "A";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 	
@@ -212,7 +218,7 @@ window.onload = function(){
 		input.classList.add("input_coord");
 		input.id = name + "_tx";
 		input.type = "number";
-		input.value = "0";
+		input.value = clone ? clone["tx"] : "0";
 		input.step = "1";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
@@ -223,7 +229,7 @@ window.onload = function(){
 		input.classList.add("input_coord");
 		input.id = name + "_ty";
 		input.type = "number";
-		input.value = "-15";
+		input.value = clone ? clone["ty"] : "-15";
 		input.step = "1";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
@@ -239,7 +245,7 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_text_size";
 		input.type = "number";
-		input.value = "12";
+		input.value = clone ? clone["txt_size"] : "12";
 		input.step = "2";
 		input.min = "0";
 		input.onchange = function(){ Regenerate() };
@@ -275,6 +281,7 @@ window.onload = function(){
 		option = document.createElement("option");
 		option.value = "6";
 		option.innerText = "";
+		input.selectedIndex = clone ? clone["type_point"] : 0;
 		input.appendChild(option);
 		content.appendChild(input)
 	
@@ -285,7 +292,7 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_size";
 		input.type = "number";
-		input.value = "5";
+		input.value = clone ? clone["size"] : "5";
 		input.step = "1";
 		input.min = "0";
 		input.onchange = function(){ Regenerate() };
@@ -297,7 +304,7 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_stroke";
 		input.type = "number";
-		input.value = "2";
+		input.value = clone ? clone["stroke"] : "2";
 		input.step = "1";
 		input.min = "1";
 		input.onchange = function(){ Regenerate() };
@@ -309,7 +316,7 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_stroke_color";
 		input.type = "color";
-		input.value = "red";
+		input.value = clone ? clone["strokecolor"] : "red";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 	
@@ -319,9 +326,15 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_style";
 		input.type = "text";
-		input.value = "";
+		input.value = clone ? clone["dashstyle"] : "";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
+	
+		label = document.createElement("button");
+		label.onclick = function(){ Add_point(Get_Point({id: id})) };
+		label.innerText = "Dupliquer"
+		label.classList.add("delete")
+		content.appendChild(label)
 	
 		label = document.createElement("button");
 		label.onclick = function(){ RemoveCourbe(name) };
@@ -335,7 +348,7 @@ window.onload = function(){
 		Regenerate();
 	}
 	
-	function Add_polygone()
+	function Add_polygone(clone = false)
 	{
 		let ids = []
 		objects.forEach(obj =>{
@@ -373,7 +386,8 @@ window.onload = function(){
 		var points = document.createElement("div");
 		points.id = name + "points_list";
 		points.classList.add("coord_poly");
-		for (let i = 0; i < 3; i++) {
+		var nbr = clone ? clone["points"].length : 3;
+		for (let i = 0; i < nbr; i++) {
 			var name = "pol"+ id + "_poi" + i;
 			var onepoint = document.createElement("div")
 			onepoint.id = name;
@@ -389,7 +403,7 @@ window.onload = function(){
 			input.classList.add("input_coord_poly");
 			input.id = name + "_px";
 			input.type = "number";
-			input.value = "0";
+			input.value = clone ? clone["points"][i].x : "0";
 			input.onchange = function(){ Regenerate() };
 			onepoint.appendChild(input)
 	
@@ -401,7 +415,7 @@ window.onload = function(){
 			input.classList.add("input_coord_poly");
 			input.id = name + "_py";
 			input.type = "number";
-			input.value = "0";
+			input.value = clone ? clone["points"][i].y : "0";
 			input.onchange = function(){ Regenerate() };
 			onepoint.appendChild(input)
 	
@@ -431,7 +445,7 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_stroke";
 		input.type = "number";
-		input.value = "2";
+		input.value = clone ? clone["stroke"] : "2";
 		input.step = "1";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
@@ -443,7 +457,7 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_stroke_color";
 		input.type = "color";
-		input.value = "#FF0000";
+		input.value = clone ? clone["strokecolor"] : "#FF0000";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 	
@@ -454,6 +468,7 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_style";
 		input.type = "text";
+		input.value = clone ? clone["dashstyle"] : "";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 	
@@ -461,6 +476,7 @@ window.onload = function(){
 		input.id = name + "_fill";
 		input.type = "checkbox";
 		input.style.width = "auto";
+		input.checked = clone ? clone["fill"] : false;
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 	
@@ -479,9 +495,15 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_fill_color";
 		input.type = "color";
-		input.value = "#FFFFFF";
+		input.value = clone ? clone["fill_color"] : "#FFFFFF";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
+	
+		label = document.createElement("button");
+		label.onclick = function(){ Add_polygone(Get_Polygone({id: id})) };
+		label.innerText = "Dupliquer"
+		label.classList.add("delete")
+		content.appendChild(label)
 	
 		label = document.createElement("button");
 		label.onclick = function(){ RemovePolygone(name) };
@@ -553,7 +575,7 @@ window.onload = function(){
 		points.appendChild(onepoint)
 	}
 
-	function Add_circle()
+	function Add_circle(clone = false)
 	{
 		let ids = []
 		objects.forEach(obj =>{
@@ -597,7 +619,7 @@ window.onload = function(){
 		input.classList.add("input_coord");
 		input.id = name + "_px";
 		input.type = "number";
-		input.value = "1";
+		input.value = clone ? clone["px"] : "1";
 		input.onchange = function(){ Regenerate() };
 		coord.appendChild(input)
 		label = document.createElement("label");
@@ -607,7 +629,7 @@ window.onload = function(){
 		input.classList.add("input_coord");
 		input.id = name + "_py";
 		input.type = "number";
-		input.value = "1";
+		input.value = clone ? clone["py"] : "1";
 		input.onchange = function(){ Regenerate() };
 		coord.appendChild(input)
 		label = document.createElement("label");
@@ -629,7 +651,7 @@ window.onload = function(){
 		input.classList.add("input_coord");
 		input.id = name + "_as";
 		input.type = "number";
-		input.value = "0";
+		input.value = clone ? clone["as"] : "0";
 		input.onchange = function(){ Regenerate() };
 		coord.appendChild(input)
 		label = document.createElement("label");
@@ -639,7 +661,7 @@ window.onload = function(){
 		input.classList.add("input_coord");
 		input.id = name + "_ae";
 		input.type = "number";
-		input.value = "360";
+		input.value = clone ? clone["ae"] : "360";
 		input.onchange = function(){ Regenerate() };
 		coord.appendChild(input)
 
@@ -651,7 +673,7 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_radius";
 		input.type = "number";
-		input.value = "1";
+		input.value = clone ? clone["radius"] : "1";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 	
@@ -661,7 +683,7 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_stroke";
 		input.type = "number";
-		input.value = "2";
+		input.value = clone ? clone["stroke"] : "2";
 		input.step = "1";
 		input.min = "1";
 		input.onchange = function(){ Regenerate() };
@@ -673,7 +695,7 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_stroke_color";
 		input.type = "color";
-		input.value = "red";
+		input.value = clone ? clone["strokecolor"] : "red";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 	
@@ -683,7 +705,7 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_style";
 		input.type = "text";
-		input.value = "";
+		input.value = clone ? clone["dashstyle"] : "";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 
@@ -691,6 +713,7 @@ window.onload = function(){
 		input.id = name + "_fill";
 		input.type = "checkbox";
 		input.style.width = "auto";
+		input.checked = clone ? clone["fill"] : false;
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 	
@@ -709,9 +732,15 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_fill_color";
 		input.type = "color";
-		input.value = "#FFFFFF";
+		input.value = clone ? clone["fill_color"] : "#FFFFFF";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
+	
+		label = document.createElement("button");
+		label.onclick = function(){ Add_circle(Get_Circle({id: id})) };
+		label.innerText = "Dupliquer"
+		label.classList.add("delete")
+		content.appendChild(label)
 	
 		label = document.createElement("button");
 		label.onclick = function(){ RemoveCircle(name) };
@@ -725,7 +754,7 @@ window.onload = function(){
 		Regenerate();
 	}
 
-	function Add_segment()
+	function Add_segment(clone = false)
 	{
 		let ids = []
 		objects.forEach(obj =>{
@@ -771,7 +800,7 @@ window.onload = function(){
 		input.classList.add("input_coord");
 		input.id = name + "_psx";
 		input.type = "number";
-		input.value = "1";
+		input.value = clone ? clone["psx"] : "1";
 		input.onchange = function(){ Regenerate() };
 		coord.appendChild(input)
 		label = document.createElement("label");
@@ -781,7 +810,7 @@ window.onload = function(){
 		input.classList.add("input_coord");
 		input.id = name + "_psy";
 		input.type = "number";
-		input.value = "1";
+		input.value = clone ? clone["psy"] : "1";
 		input.onchange = function(){ Regenerate() };
 		coord.appendChild(input)
 		label = document.createElement("label");
@@ -807,7 +836,7 @@ window.onload = function(){
 		input.classList.add("input_coord");
 		input.id = name + "_pex";
 		input.type = "number";
-		input.value = "1";
+		input.value = clone ? clone["pex"] : "1";
 		input.onchange = function(){ Regenerate() };
 		coord.appendChild(input)
 		label = document.createElement("label");
@@ -817,7 +846,7 @@ window.onload = function(){
 		input.classList.add("input_coord");
 		input.id = name + "_pey";
 		input.type = "number";
-		input.value = "1";
+		input.value = clone ? clone["pey"] : "1";
 		input.onchange = function(){ Regenerate() };
 		coord.appendChild(input)
 		label = document.createElement("label");
@@ -863,6 +892,7 @@ window.onload = function(){
 		option.value = 5;
 		option.innerHTML = "Rond";
 		input.appendChild(option);
+		input.selectedIndex = clone ? clone["ss"] : 0;
 		coord.appendChild(input)
 		label = document.createElement("label");
 		label.innerText = " - "
@@ -871,7 +901,7 @@ window.onload = function(){
 		input.classList.add("input_coord");
 		input.id = name + "_sss";
 		input.type = "number";
-		input.value = "100";
+		input.value = clone ? clone["sss"] : "100";
 		input.step = "5";
 		input.min = "0";
 		input.onchange = function(){ Regenerate() };
@@ -919,6 +949,7 @@ window.onload = function(){
 		option.value = 5;
 		option.innerHTML = "Rond";
 		input.appendChild(option);
+		input.selectedIndex = clone ? clone["se"] : 0;
 		coord.appendChild(input)
 		label = document.createElement("label");
 		label.innerText = " - "
@@ -927,7 +958,7 @@ window.onload = function(){
 		input.classList.add("input_coord");
 		input.id = name + "_ses";
 		input.type = "number";
-		input.value = "100";
+		input.value = clone ? clone["ses"] : "100";
 		input.step = "5";
 		input.min = "0";
 		input.onchange = function(){ Regenerate() };
@@ -945,7 +976,7 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_stroke";
 		input.type = "number";
-		input.value = "2";
+		input.value = clone ? clone["stroke"] : "2";
 		input.step = "1";
 		input.min = "1";
 		input.onchange = function(){ Regenerate() };
@@ -957,7 +988,7 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_stroke_color";
 		input.type = "color";
-		input.value = "red";
+		input.value = clone ? clone["strokecolor"] : "red";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 	
@@ -967,9 +998,15 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_style";
 		input.type = "text";
-		input.value = "";
+		input.value = clone ? clone["dashstyle"] : "";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
+	
+		label = document.createElement("button");
+		label.onclick = function(){ Add_segment(Get_Segment({id: id})) };
+		label.innerText = "Dupliquer"
+		label.classList.add("delete")
+		content.appendChild(label)
 
 	
 		label = document.createElement("button");
@@ -984,7 +1021,7 @@ window.onload = function(){
 		Regenerate();
 	}
 	
-	function Add_texte()
+	function Add_texte(clone = false)
 	{
 		let ids = []
 		objects.forEach(obj =>{
@@ -1025,7 +1062,7 @@ window.onload = function(){
 		input.classList.add("input_coord");
 		input.id = name + "_px";
 		input.type = "number";
-		input.value = "0";
+		input.value = clone ? clone["px"] : "0";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 		label = document.createElement("label");
@@ -1035,7 +1072,7 @@ window.onload = function(){
 		input.classList.add("input_coord");
 		input.id = name + "_py";
 		input.type = "number";
-		input.value = "0";
+		input.value = clone ? clone["py"] : "0";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 		label = document.createElement("label");
@@ -1050,7 +1087,7 @@ window.onload = function(){
 		var input = document.createElement("input");
 		input.id = name + "_text";
 		input.type = "text";
-		input.value = "A";
+		input.value = clone ? clone["name"] : "A";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 
@@ -1063,7 +1100,7 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_angle";
 		input.type = "number";
-		input.value = "0";
+		input.value = clone ? clone["angle"] : "0";
 		input.step = "5";
 		input.min = "-360";
 		input.max = "360";
@@ -1077,7 +1114,7 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_text_size";
 		input.type = "number";
-		input.value = "12";
+		input.value = clone ? clone["txt_size"] : "12";
 		input.step = "2";
 		input.min = "0";
 		input.onchange = function(){ Regenerate() };
@@ -1090,9 +1127,15 @@ window.onload = function(){
 		input = document.createElement("input");
 		input.id = name + "_stroke_color";
 		input.type = "color";
-		input.value = "red";
+		input.value = clone ? clone["strokecolor"] : "red";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
+	
+		label = document.createElement("button");
+		label.onclick = function(){ Add_texte(Get_Texte({id: id})) };
+		label.innerText = "Dupliquer"
+		label.classList.add("delete")
+		content.appendChild(label)
 	
 	
 		label = document.createElement("button");
