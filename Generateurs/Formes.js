@@ -32,8 +32,11 @@ window.onload = function(){
 				hover: false
 			}
 		)
+
+		var name = "for" + id;
+		
 		var menu = document.createElement("div");
-		menu.id = "for" + id;
+		menu.id = name;
 		menu.classList.add("formemenu");
 		var titre = document.createElement("span");
 		titre.innerText = "Courbe " + id;
@@ -45,7 +48,7 @@ window.onload = function(){
 		label.innerText = "Formule (en JavaScript) :"
 		content.appendChild(label)
 		var input = document.createElement("input");
-		input.id = "for" + id + "_text";
+		input.id = name + "_text";
 		input.type = "text";
 		input.value = "";
 		input.onchange = function(){ Regenerate() };
@@ -55,7 +58,7 @@ window.onload = function(){
 		label.innerText = "Epaisseur :"
 		content.appendChild(label)
 		input = document.createElement("input");
-		input.id = "for" + id + "_stroke";
+		input.id = name + "_stroke";
 		input.type = "number";
 		input.value = "2";
 		input.step = "1";
@@ -67,7 +70,7 @@ window.onload = function(){
 		label.innerText = "Couleur :"
 		content.appendChild(label)
 		input = document.createElement("input");
-		input.id = "for" + id + "_stroke_color";
+		input.id = name + "_stroke_color";
 		input.type = "color";
 		input.value = "black";
 		input.onchange = function(){ Regenerate() };
@@ -77,7 +80,7 @@ window.onload = function(){
 		label.innerText = "Style de trait :"
 		content.appendChild(label)
 		input = document.createElement("input");
-		input.id = "for" + id + "_style";
+		input.id = name + "_style";
 		input.type = "text";
 		input.value = "";
 		input.onchange = function(){ Regenerate() };
@@ -94,7 +97,7 @@ window.onload = function(){
 		content.appendChild(label)
 		input = document.createElement("input");
 		input.classList.add("input_coord");
-		input.id = "for" + id + "_start";
+		input.id = name + "_start";
 		input.type = "number";
 		input.value = "-3";
 		input.step = "1";
@@ -105,7 +108,7 @@ window.onload = function(){
 		content.appendChild(label)
 		input = document.createElement("input");
 		input.classList.add("input_coord");
-		input.id = "for" + id + "_end";
+		input.id = name + "_end";
 		input.type = "number";
 		input.value = "3";
 		input.step = "1";
@@ -116,7 +119,7 @@ window.onload = function(){
 		content.appendChild(label)
 	
 		label = document.createElement("button");
-		label.onclick = function(){ RemoveCourbe('for' + id) };
+		label.onclick = function(){ RemoveCourbe(name) };
 		label.innerText = "Supprimer"
 		label.classList.add("delete")
 		content.appendChild(label)
@@ -143,8 +146,11 @@ window.onload = function(){
 				hover: false
 			}
 		)
+
+		var name = "poi" + id
+
 		var menu = document.createElement("div");
-		menu.id = "poi" + id;
+		menu.id = name;
 		menu.classList.add("formemenu");
 		var titre = document.createElement("span");
 		titre.innerText = "Point " + id;
@@ -163,7 +169,7 @@ window.onload = function(){
 		content.appendChild(label)
 		input = document.createElement("input");
 		input.classList.add("input_coord");
-		input.id = "poi" + id + "_px";
+		input.id = name + "_px";
 		input.type = "number";
 		input.value = "0";
 		input.onchange = function(){ Regenerate() };
@@ -173,7 +179,7 @@ window.onload = function(){
 		content.appendChild(label)
 		input = document.createElement("input");
 		input.classList.add("input_coord");
-		input.id = "poi" + id + "_py";
+		input.id = name + "_py";
 		input.type = "number";
 		input.value = "0";
 		input.onchange = function(){ Regenerate() };
@@ -188,7 +194,7 @@ window.onload = function(){
 		label.innerText = "Nom :"
 		content.appendChild(label)
 		var input = document.createElement("input");
-		input.id = "poi" + id + "_text";
+		input.id = name + "_text";
 		input.type = "text";
 		input.value = "A";
 		input.onchange = function(){ Regenerate() };
@@ -204,7 +210,7 @@ window.onload = function(){
 		content.appendChild(label)
 		input = document.createElement("input");
 		input.classList.add("input_coord");
-		input.id = "poi" + id + "_tx";
+		input.id = name + "_tx";
 		input.type = "number";
 		input.value = "0";
 		input.step = "1";
@@ -215,7 +221,7 @@ window.onload = function(){
 		content.appendChild(label)
 		input = document.createElement("input");
 		input.classList.add("input_coord");
-		input.id = "poi" + id + "_ty";
+		input.id = name + "_ty";
 		input.type = "number";
 		input.value = "-15";
 		input.step = "1";
@@ -231,7 +237,7 @@ window.onload = function(){
 		label.innerText = "Taille du texte :"
 		content.appendChild(label)
 		input = document.createElement("input");
-		input.id = "poi" + id + "_text_size";
+		input.id = name + "_text_size";
 		input.type = "number";
 		input.value = "12";
 		input.step = "2";
@@ -244,7 +250,7 @@ window.onload = function(){
 		label.innerText = "Type de symbole :"
 		content.appendChild(label)
 		input = document.createElement("select");
-		input.id = "poi" + id + "_type";
+		input.id = name + "_type";
 		input.onchange = function(){ Regenerate() };
 		let option = document.createElement("option");
 		option.value = "1";
@@ -273,7 +279,7 @@ window.onload = function(){
 		label.innerText = "Taille du symbole :"
 		content.appendChild(label)
 		input = document.createElement("input");
-		input.id = "poi" + id + "_size";
+		input.id = name + "_size";
 		input.type = "number";
 		input.value = "5";
 		input.step = "1";
@@ -285,7 +291,7 @@ window.onload = function(){
 		label.innerText = "Epaisseur :"
 		content.appendChild(label)
 		input = document.createElement("input");
-		input.id = "poi" + id + "_stroke";
+		input.id = name + "_stroke";
 		input.type = "number";
 		input.value = "2";
 		input.step = "1";
@@ -297,7 +303,7 @@ window.onload = function(){
 		label.innerText = "Couleur :"
 		content.appendChild(label)
 		input = document.createElement("input");
-		input.id = "poi" + id + "_stroke_color";
+		input.id = name + "_stroke_color";
 		input.type = "color";
 		input.value = "red";
 		input.onchange = function(){ Regenerate() };
@@ -307,14 +313,14 @@ window.onload = function(){
 		label.innerText = "Style de trait :"
 		content.appendChild(label)
 		input = document.createElement("input");
-		input.id = "poi" + id + "_style";
+		input.id = name + "_style";
 		input.type = "text";
 		input.value = "";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 	
 		label = document.createElement("button");
-		label.onclick = function(){ RemoveCourbe('poi' + id) };
+		label.onclick = function(){ RemoveCourbe(name) };
 		label.innerText = "Supprimer"
 		label.classList.add("delete")
 		content.appendChild(label)
@@ -342,9 +348,11 @@ window.onload = function(){
 				hover: false
 			}
 		)
+
+		var name = "pol" + id
 	
 		var menu = document.createElement("div");
-		menu.id = "pol" + id;
+		menu.id = name;
 		menu.classList.add("formemenu");
 		var titre = document.createElement("span");
 		titre.innerText = "Polygone " + id;
@@ -359,7 +367,7 @@ window.onload = function(){
 		content.appendChild(label)
 	
 		var points = document.createElement("div");
-		points.id = "pol" + id + "points_list";
+		points.id = name + "points_list";
 		points.classList.add("coord_poly");
 		for (let i = 0; i < 3; i++) {
 			var name = "pol"+ id + "_poi" + i;
@@ -417,7 +425,7 @@ window.onload = function(){
 		content.appendChild(label)
 	
 		input = document.createElement("input");
-		input.id = "pol" + id + "_stroke";
+		input.id = name + "_stroke";
 		input.type = "number";
 		input.value = "2";
 		input.step = "1";
@@ -429,7 +437,7 @@ window.onload = function(){
 		content.appendChild(label)
 	
 		input = document.createElement("input");
-		input.id = "pol" + id + "_stroke_color";
+		input.id = name + "_stroke_color";
 		input.type = "color";
 		input.value = "#FF0000";
 		input.onchange = function(){ Regenerate() };
@@ -440,13 +448,13 @@ window.onload = function(){
 		content.appendChild(label)
 		
 		input = document.createElement("input");
-		input.id = "pol" + id + "_style";
+		input.id = name + "_style";
 		input.type = "text";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 	
 		input = document.createElement("input");
-		input.id = "pol" + id + "_fill";
+		input.id = name + "_fill";
 		input.type = "checkbox";
 		input.style.width = "auto";
 		input.onchange = function(){ Regenerate() };
@@ -454,7 +462,7 @@ window.onload = function(){
 	
 		label = document.createElement("label");
 		label.innerText = "Remplir la forme"
-		label.setAttribute("for", "pol" + id + "_fill")
+		label.setAttribute("for", name + "_fill")
 		label.style.width = "auto";
 		content.appendChild(label)
 		label = document.createElement("br");
@@ -465,14 +473,14 @@ window.onload = function(){
 		content.appendChild(label)
 	
 		input = document.createElement("input");
-		input.id = "pol" + id + "_fill_color";
+		input.id = name + "_fill_color";
 		input.type = "color";
 		input.value = "#FFFFFF";
 		input.onchange = function(){ Regenerate() };
 		content.appendChild(input)
 	
 		label = document.createElement("button");
-		label.onclick = function(){ RemovePolygone('pol' + id) };
+		label.onclick = function(){ RemovePolygone(name) };
 		label.innerText = "Supprimer"
 		label.classList.add("delete")
 		content.appendChild(label)
@@ -1084,7 +1092,7 @@ window.onload = function(){
 	
 	
 		label = document.createElement("button");
-		label.onclick = function(){ RemoveCourbe('poi' + id) };
+		label.onclick = function(){ RemoveTexte(name) };
 		label.innerText = "Supprimer"
 		label.classList.add("delete")
 		content.appendChild(label)
