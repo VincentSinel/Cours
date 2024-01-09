@@ -272,6 +272,10 @@ window.onload = function(){
 		option.value = "5";
 		option.innerText = ".";
 		input.appendChild(option);
+		option = document.createElement("option");
+		option.value = "6";
+		option.innerText = "";
+		input.appendChild(option);
 		content.appendChild(input)
 	
 		
