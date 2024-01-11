@@ -1219,9 +1219,10 @@ function menu_changed()
 	document.getElementById("param_repere").classList.add("hiddenparam")
 	document.getElementById("param_axe").classList.add("hiddenparam")
 	document.getElementById("param_quadrillage").classList.add("hiddenparam")
+	document.getElementById("param_solide").classList.add("hiddenparam")
 	document.getElementById("object_repere").classList.add("hiddenparam")
 	document.getElementById("object_axe").classList.add("hiddenparam")
-	document.getElementById("object_quadrillage").classList.add("hiddenparam")
+	document.getElementById("object_solide").classList.add("hiddenparam")
 	let type = document.getElementById("gen_type").selectedIndex;
 	if (type == 0)
 	{
@@ -1237,6 +1238,11 @@ function menu_changed()
 	{
 		document.getElementById("param_quadrillage").classList.remove("hiddenparam")
 		document.getElementById("object_quadrillage").classList.remove("hiddenparam")
+	}
+	if (type == 3)
+	{
+		document.getElementById("param_solide").classList.remove("hiddenparam")
+		document.getElementById("object_solide").classList.remove("hiddenparam")
 	}
 	Regenerate()
 }
@@ -1265,6 +1271,8 @@ function Regenerate()
 		Draw_AxeGradue(data);
 	if (type == 2)
 		Draw_Quadrillage(data);
+	if (type == 2)
+		Draw_Solide(data);
 }
 
 function Get_Objects()
@@ -1478,6 +1486,13 @@ function Draw_Quadrillage(data)
     let newsize = Quadrillage(paper, data);
 	document.getElementById("gen_width").value = newsize[0];
 	document.getElementById("gen_height").value = newsize[1];
+}
+
+function Draw_Solide(data)
+{
+	data["f_width"] = document.getElementById("f_width");
+	data["f_height"] = document.getElementById("f_height");
+	data["f_depth"] = document.getElementById("f_depth");
 }
 
 

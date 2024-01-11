@@ -78,6 +78,7 @@
 				<option value="type1">Repère gradué</option>
 				<option value="type2">Axe gradué</option>
 				<option value="type3">Quadrillage</option>
+				<!-- <option value="type4">Solide</option> -->
 			</select>
 			<p style="text-align: center;">Paramètres</p>
 			<button class="regenerate" onclick="Regenerate()">Regénérer</button>
@@ -166,39 +167,6 @@
 						</div>
 					</div>
 				</div>
-				<div style="width: 100%;" id="param_quadrillage" class="hiddenparam">
-					<div class="formemenu show">
-						<span>Surface</span>
-						<div class="formemenu_div">
-							<label>Nombre de carreau horizontal :</label>
-							<input id="c_hor_nbr" type="number" value="10" step="1" min="1" onchange="Regenerate()">
-							<label>Nombre de carreau vertical :</label>
-							<input id="c_ver_nbr" type="number" value="5" step="1" min="1" onchange="Regenerate()">
-							<label>Taille des carreaux :</label>
-							<input id="c_size_x" type="number" value="40" step="5" min="0" onchange="Regenerate()">
-							<input id="c_size_y" type="number" value="40" step="5" min="0" onchange="Regenerate()">
-							<label>Epaisseur:</label>
-							<input id="q_line_stroke" type="number" value="2" step="1" min="1" onchange="Regenerate()">
-							<label>Couleur:</label>
-							<input id="q_line_color" type="color" value="#000000" onchange="Regenerate()">
-						</div>
-					</div>
-					<div class="formemenu show">
-						<span>Quadrillage interne</span>
-						<div class="formemenu_div">
-							<input id="q_int" type="checkbox" style="width: auto;" onchange="Regenerate()">
-							<label for="q_int" style="width: auto;">Activer le quadrillage interne</label><br>
-							<label>Nombre de carreau horizontal :</label>
-							<input id="c_int_hor_nbr" type="number" value="1" step="1" min="1" onchange="Regenerate()">
-							<label>Nombre de carreau vertical :</label>
-							<input id="c_int_ver_nbr" type="number" value="4" step="1" min="1" onchange="Regenerate()">
-							<label>Epaisseur:</label>
-							<input id="q_int_line_stroke" type="number" value="1" step="1" min="1" onchange="Regenerate()">
-							<label>Couleur:</label>
-							<input id="q_int_line_color" type="color" value="#75FFFF" onchange="Regenerate()">
-						</div>
-					</div>
-				</div>
 				<div style="width: 100%;" id="param_axe" class="hiddenparam">
 					<div class="formemenu">
 						<span>Paramètre principaux</span>
@@ -248,6 +216,81 @@
 						</div>
 					</div>
 				</div>
+				<div style="width: 100%;" id="param_quadrillage" class="hiddenparam">
+					<div class="formemenu show">
+						<span>Surface</span>
+						<div class="formemenu_div">
+							<label>Nombre de carreau horizontal :</label>
+							<input id="c_hor_nbr" type="number" value="10" step="1" min="1" onchange="Regenerate()">
+							<label>Nombre de carreau vertical :</label>
+							<input id="c_ver_nbr" type="number" value="5" step="1" min="1" onchange="Regenerate()">
+							<label>Taille des carreaux :</label>
+							<input id="c_size_x" type="number" value="40" step="5" min="0" onchange="Regenerate()">
+							<input id="c_size_y" type="number" value="40" step="5" min="0" onchange="Regenerate()">
+							<label>Epaisseur:</label>
+							<input id="q_line_stroke" type="number" value="2" step="1" min="1" onchange="Regenerate()">
+							<label>Couleur:</label>
+							<input id="q_line_color" type="color" value="#000000" onchange="Regenerate()">
+						</div>
+					</div>
+					<div class="formemenu show">
+						<span>Quadrillage interne</span>
+						<div class="formemenu_div">
+							<input id="q_int" type="checkbox" style="width: auto;" onchange="Regenerate()">
+							<label for="q_int" style="width: auto;">Activer le quadrillage interne</label><br>
+							<label>Nombre de carreau horizontal :</label>
+							<input id="c_int_hor_nbr" type="number" value="1" step="1" min="1" onchange="Regenerate()">
+							<label>Nombre de carreau vertical :</label>
+							<input id="c_int_ver_nbr" type="number" value="4" step="1" min="1" onchange="Regenerate()">
+							<label>Epaisseur:</label>
+							<input id="q_int_line_stroke" type="number" value="1" step="1" min="1" onchange="Regenerate()">
+							<label>Couleur:</label>
+							<input id="q_int_line_color" type="color" value="#75FFFF" onchange="Regenerate()">
+						</div>
+					</div>
+				</div>
+				<div style="width: 100%;" id="param_solide" class="hiddenparam">
+					<select id="sol_type" onchange="menu_changed()">
+						<option value="type1">Pavé droit</option>
+						<option value="type2">Prisme droit régulier</option>
+						<option value="type3">Cylindre</option>
+						<option value="type4">Pyramide régulière</option>
+						<option value="type5">Cône</option>
+						<option value="type6">Sphère</option>
+					</select>
+					<div class="formemenu show">
+						<span>Principaux</span>
+						<div class="formemenu_div">
+							<label>Epaisseur:</label>
+							<input id="sol_line_stroke" type="number" value="2" step="1" min="1" onchange="Regenerate()">
+							<label>Couleur:</label>
+							<input id="sol_line_color" type="color" value="#000000" onchange="Regenerate()">
+							<input id="sol_show_hide" type="checkbox" checked onchange="Regenerate()">
+							<label for="sol_show_hide">Afficher les arête caché :</label>
+							<label>Style arête caché :</label>
+							<input id="sol_hide_style" type="text" value="--" onchange="Regenerate()">
+							<input id="sol_fill" type="checkbox" checked onchange="Regenerate()">
+							<label for="sol_fill">Remplir les faces :</label>
+							<label>Couleur:</label>
+							<input id="sol_fill_color" type="color" value="#000000" onchange="Regenerate()">
+						</div>
+					</div>
+					<div class="formemenu show">
+						<span>Indications</span>
+						<div class="formemenu_div">
+							<input id="sol_h" type="checkbox" style="width: auto;" onchange="Regenerate()">
+							<label for="sol_h" style="width: auto;">Afficher une hauteur</label><br>
+							<input id="sol_r" type="checkbox" style="width: auto;" onchange="Regenerate()">
+							<label for="sol_r" style="width: auto;">Afficher un rayon</label><br>
+							<label>Epaisseur:</label>
+							<input id="sol_hr_stroke" type="number" value="2" step="1" min="1" onchange="Regenerate()">
+							<label>Couleur:</label>
+							<input id="sol_hr_color" type="color" value="#000000" onchange="Regenerate()">
+							<label>Style :</label>
+							<input id="sol_hr_style" type="text" value="--" onchange="Regenerate()">
+						</div>
+					</div>
+				</div>
 				<div class="formemenu">
 					<span>Rendu final</span>
 					<div class="formemenu_div">	
@@ -279,6 +322,8 @@
 				<button onclick="Add_circle()" class="newobjecthalf">Ajouter un cercle</button>
 				<button onclick="Add_segment()" class="newobjecthalf">Ajouter un segment</button>
 				<button onclick="Add_texte()" class="newobjecthalf">Ajouter un texte</button>
+			</div>
+			<div id="object_solide" class="hiddenparam">
 			</div>
 			<div id="object_list" class="panel rightpanel">
 				

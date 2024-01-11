@@ -542,6 +542,7 @@
 	}
 }
 
+{ // Type
 
 function RepereGradue(paper, data)
 {
@@ -1118,6 +1119,15 @@ function Quadrillage(paper, data)
 
 }
 
+function Solide(paper, data)
+{
+	
+}
+
+}
+
+{ //TOOLS
+
 function draw_line(paper, sx, sy, ex, ey)
 {
 	return paper.path("M" + sx + " " + sy + "L" + ex + " " + ey);
@@ -1214,5 +1224,7 @@ function draw_fleche(type = 0, px, py, dx, dy, size)
 		default:
 			break;
 	}
+
+}
 
 }
