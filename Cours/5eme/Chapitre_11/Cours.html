@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta http-equiv="content-language" content="en">
+  <meta http-equiv="content-language" content="fr">
   <link rel="stylesheet" href="/CSS/Cours.css"> 
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,17 +14,9 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>Chapitre 1 - Nombres premiers</title>
+  <title>Chapitre 11 - Additions et Soustractions de Nombres Relatifs</title>
 
   <style>
-    .tableau tr td { border: 1px solid black; }
-    .one { background-color: palevioletred; }
-    .prime { background-color: yellow; }
-    .notprime { background-color: black; }
-    .cribletable tr td { background-color: white!important; }
-    .division tr {border: none;}
-    .division {border: none;}
-    .division td { width: 40px; border: none; font-size: 16pt; padding: 0px 5px;}
   </style>
 
 </head>
@@ -34,10 +26,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        Chapitre 1
+        Chapitre 11
       </td>
       <td id="ChapitreNom">
-        - Nombres premiers
+        - Additions et Soustractions de Nombres Relatifs
       </td>
     </tr>
   </table>
@@ -46,266 +38,7 @@
     Activité Introduction
   </p>
 
-  <p> 
-    Jean  a confectionné des truffes au chocolat. Il souhaite les disposer de telle sorte qu’elles puissent former un rectangle une fois rangées, sans espace vide.
-  </p>
-  <ol>
-    <li> Jean a confectionné 20 truffes.<br>
-      <ol type="a">
-        <li>Représenter, par un schéma, une façon de disposer ces truffes.</li>
-        <li>Existe-t-il d’autre façons de les ranger ? Si oui, combien ?</li>
-      </ol>
-    </li>
-    
-    <li> Sa sœur passe dans la cuisine et mange une truffe !<br>
-      <ol type="a">
-        <li>Reprendre les questions précédentes.</li>
-        <li>Quelle remarque peut-on faire à propos des rangements de Jean ?</li>
-      </ol>
-    </li>
-
-    <li> Quand la seule façon de disposer n truffes est de les mettre en une ligne, on dit que le nombre n est un nombre premier.<br>
-      A l’aide du tableau suivant trouve les nombre premiers. (Utilise un crayon à papier pour barrer les nombres qui ne le sont pas).<br>
-    </li>
-  </ol>
-
-  <table class="center">
-    <tr>
-      <td>
-        <table id="crible" class="cribletable tableau">
-          <tr style="height: 1cm; text-align: center;">
-            <td class="one" style="width: 1cm; background-color: palevioletred!important;"> 1 </td>
-            <td class="prime" style="width: 1cm;"> 2 </td>
-            <td class="prime" style="width: 1cm;"> 3 </td>
-            <td class="notprime" style="width: 1cm;"> 4 </td>
-            <td class="prime" style="width: 1cm;"> 5 </td>
-            <td class="notprime" style="width: 1cm;"> 6 </td>
-            <td class="prime" style="width: 1cm;"> 7 </td>
-            <td class="notprime" style="width: 1cm;"> 8 </td>
-            <td class="notprime" style="width: 1cm;"> 9 </td>
-            <td class="notprime" style="width: 1cm;"> 10 </td>
-          </tr>
-          <tr style="height: 1cm; text-align: center;">
-            <td class="prime" style="width: 1cm;"> 11 </td>
-            <td class="notprime" style="width: 1cm;"> 12 </td>
-            <td class="prime" style="width: 1cm;"> 13 </td>
-            <td class="notprime" style="width: 1cm;"> 14 </td>
-            <td class="notprime" style="width: 1cm;"> 15 </td>
-            <td class="notprime" style="width: 1cm;"> 16 </td>
-            <td class="prime" style="width: 1cm;"> 17 </td>
-            <td class="notprime" style="width: 1cm;"> 18 </td>
-            <td class="prime" style="width: 1cm;"> 19 </td>
-            <td class="notprime" style="width: 1cm;"> 20 </td>
-          </tr>
-          <tr style="height: 1cm; text-align: center;">
-            <td class="notprime" style="width: 1cm;"> 21 </td>
-            <td class="notprime" style="width: 1cm;"> 22 </td>
-            <td class="prime" style="width: 1cm;"> 23 </td>
-            <td class="notprime" style="width: 1cm;"> 24 </td>
-            <td class="notprime" style="width: 1cm;"> 25 </td>
-            <td class="notprime" style="width: 1cm;"> 26 </td>
-            <td class="notprime" style="width: 1cm;"> 27 </td>
-            <td class="notprime" style="width: 1cm;"> 28 </td>
-            <td class="prime" style="width: 1cm;"> 29 </td>
-            <td class="notprime" style="width: 1cm;"> 30 </td>
-          </tr>
-          <tr style="height: 1cm; text-align: center;">
-            <td class="prime" style="width: 1cm;"> 31 </td>
-            <td class="notprime" style="width: 1cm;"> 32 </td>
-            <td class="notprime" style="width: 1cm;"> 33 </td>
-            <td class="notprime" style="width: 1cm;"> 34 </td>
-            <td class="notprime" style="width: 1cm;"> 35 </td>
-            <td class="notprime" style="width: 1cm;"> 36 </td>
-            <td class="prime" style="width: 1cm;"> 37 </td>
-            <td class="notprime" style="width: 1cm;"> 38 </td>
-            <td class="notprime" style="width: 1cm;"> 39 </td>
-            <td class="notprime" style="width: 1cm;"> 40 </td>
-          </tr>
-          <tr style="height: 1cm; text-align: center;">
-            <td class="prime" style="width: 1cm;"> 41 </td>
-            <td class="notprime" style="width: 1cm;"> 42 </td>
-            <td class="prime" style="width: 1cm;"> 43 </td>
-            <td class="notprime" style="width: 1cm;"> 44 </td>
-            <td class="notprime" style="width: 1cm;"> 45 </td>
-            <td class="notprime" style="width: 1cm;"> 46 </td>
-            <td class="prime" style="width: 1cm;"> 47 </td>
-            <td class="notprime" style="width: 1cm;"> 48 </td>
-            <td class="notprime" style="width: 1cm;"> 49 </td>
-            <td class="notprime" style="width: 1cm;"> 50 </td>
-          </tr>
-        </table>
-      </td>
-      <td style="padding: 10px; vertical-align: middle;">
-        <button style="margin: auto;" onclick="document.getElementById('crible').classList.remove('cribletable') ">
-          Voir la solution
-        </button>
-      </td>
-    </tr>
-  </table>
-
   
-
-  <h1>Définitions :</h1>
-      <h2>Division euclidienne :</h2>
-
-            <div class="definition">
-              La division euclidienne de $\textcolor{#43a047}{a}$ par $\textcolor{#039be5}{b}$ 
-              (avec $\textcolor{#039be5}{b}\ne0$ ), est la recherche de deux entiers 
-              $\textcolor{#ffb300}{q}$ et $\textcolor{#e53935}{r}$, tels que : 
-              $\textcolor{#43a047}{a}= \textcolor{#039be5}{b} \times \textcolor{#ffb300}{q} + \textcolor{#e53935}{r}$ 
-              avec $\textcolor{#e53935}{r} &lt; \textcolor{#039be5}{b}$
-            </div>
-
-            <p class="exemple">Exemple :</p>
-
-            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-              <div>
-                <table class="division">
-                  <tr>
-                    <td style="text-align: right; border-right-style: solid; border-right-color: 2px;">
-                      $\textcolor{#43a047}{128}$
-                    </td>
-                    <td style="border-bottom-style: solid; border-bottom-color: 2px;">
-                      $\textcolor{#039be5}{5}$</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: right; border-right-style: solid; border-right-color: 2px;">
-                      $↡$</td>
-                    <td>$\textcolor{#ffb300}{25}$</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: right; border-right-style: solid; border-right-color: 2px;">
-                      $\textcolor{#e53935}{3}$</td>
-                  </tr>
-                </table>
-              </div>
-              <div style="flex: 3;">
-                <table class="centertext">
-                  <tr>
-                    <td>$\textcolor{#43a047}{128}$</td>
-                    <td>$=$</td>
-                    <td>$\textcolor{#039be5}{5}$</td>
-                    <td>$\times$</td>
-                    <td>$\textcolor{#ffb300}{25}$</td>
-                    <td>$+$</td>
-                    <td>$\textcolor{#e53935}{3}$</td>
-                  </tr>
-                  <tr>
-                    <td>🠕</td>
-                    <td></td>
-                    <td>🠕</td>
-                    <td></td>
-                    <td>🠕</td>
-                    <td></td>
-                    <td>🠕</td>
-                  </tr>
-                  <tr>
-                    <td style="color: #43a047">Dividende</td>
-                    <td></td>
-                    <td style="color: #039be5">Diviseur</td>
-                    <td></td>
-                    <td style="color: #ffb300">Quotient</td>
-                    <td></td>
-                    <td style="color: #e53935">Reste</td>
-                  </tr>
-                  <tr>
-                    <td colspan="7" style="padding-top: 20px;">
-                      Avec $\textcolor{#e53935}{Reste} &lt; \textcolor{#039be5}{Diviseur}$
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-
-      <h2>Multiples et diviseurs :</h2>
-
-            <div class="definition">
-              Un nombre entier $\textcolor{#43a047}{a}$ est un <span style="color: red;">multiple</span> d’un nombre entier 
-              $\textcolor{#039be5}{b}$ ($\textcolor{#039be5}{b}\ne0$) 
-              lorsque le reste de la division euclidienne de $\textcolor{#43a047}{a}$ par 
-              $\textcolor{#039be5}{b}$ est 0. <br>
-              On dit aussi que $\textcolor{#039be5}{b}$ est le <span style="color: red;">diviseur</span> de 
-              $\textcolor{#43a047}{a}$ ou que $\textcolor{#43a047}{a}$ est <span style="color: red;">divisible</span> par 
-              $\textcolor{#039be5}{b}$.
-            </div>
-
-            <p class="exemple">Exemple :</p>
-            <p>512 est un multiple de 16 car $512 = 16\times32$.</p>
-
-      <h2>Nombres premiers</h2>
-
-              <div class="definition">
-                Un <span style="color: red;">nombre premier</span> est un nombre qui possède exactement deux diviseurs, 1 et lui même.
-              </div>
-
-              <p class="remarque">Remarque :</p>
-              <ul>
-                <li>Le nombre 1 n’est pas un nombre premier !</li>
-                <li>Il existe un nombre infini de nombre premier.</li>
-              </ul>
-              <p class="exemple">Exemple :</p>
-              <p>
-                Le nombre 11 est premier car 11 n’est divisible que par 1 et 11.<br>
-                Le nombre 12 n’est pas premier car il est divisible par 1, 2, 3, 4, 6 et 12.
-              </p>
-              <p style="font-style: italic;"> Les nombres premiers compris entre 1 et 50 sont :</p>
-
-              <div style="display: flex; gap: 5px;">
-                <div>
-                  ❤️
-                </div>
-                <div style="border: 2px solid red; padding: 0 5px;">
-                  2 ; 3 ; 5 ; 7 ; 11 ; 13 ; 17 ; 19 
-                </div>
-                <div style="border: 2px solid transparent;">
-                  ; 23 ; 29 ; 31 ; 37 ; 41 ; 43 ; 47
-                </div>
-              </div>
-
-
-  <h1>Critères de divisibilités :</h1>
-      <h2>Divisibilité par 2</h2>
-            <div class="definition">
-              Un nombre est divisible par 2 si son chiffre des unités est 0 ; 2 ; 4 ; 6 ou 8.
-            </div>
-            <p class="exemple">Exemple :</p>
-            <p>
-              2018 est divisible par 2 ; 2017 ne l’est pas.<br>
-            </p>
-      <h2>Divisibilité par 3</h2>
-            <div class="definition">
-              Un nombre est divisible par 3 si la somme de ses chiffre est divisible par 3.
-            </div>
-            <p class="exemple">Exemple :</p>
-            <p>
-              12 est divisible par trois, en effet $1+2 = 3$ qui est divisible par 3.<br>
-              12261 est divisible par trois car, $1+2+2+6+1 = 12 = 3\times4$ qui est divisible par 3.
-            </p>
-      <h2>Divisibilité par 5</h2>
-            <div class="definition">
-              Un nombre est divisible par 5 si son chiffre des unités est 0 ou 5.
-            </div>
-            <p class="exemple">Exemple :</p>
-            <p>
-              155 est divisible par 5 ; 17304 ne l’est pas.<br>
-            </p>
-      <h2>Divisibilité par 9</h2>
-            <div class="definition">
-              Un nombre est divisible par 9 si la somme de ses chiffre est divisible par 9.
-            </div>
-            <p class="exemple">Exemple :</p>
-            <p>
-              126 est divisible par 9, en effet $1+2+6 = 9$ qui est divisible par 9.<br>
-              30243 n'est pas divisible par 9 car, $3+0+2+4+3 = 12$ qui n'est pas divisible par 9.
-            </p>
-      <h2>Divisibilité par 10</h2>
-            <div class="definition">
-              Un nombre est divisible par 10 si son chiffre des unités est 0.
-            </div>
-            <p class="exemple">Exemple :</p>
-            <p>
-              6570 est divisible par 10 ; 2127 ne l’est pas.<br>
-            </p>
 
 </body>
 
