@@ -12,8 +12,13 @@ var Tags = {
         "developpement",
         "factorisation",
         "reduction",
-        "equation"
 	],
+        "Equation":[
+        "egalité",
+        "equation",
+        "equations",
+        "produit nul",
+        ],
 	"Fonction": [
         "affine",
         "linéaire",

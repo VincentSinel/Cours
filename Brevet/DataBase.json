@@ -1765,7 +1765,7 @@
 		"Difficulte": 2,
 		"Tags": {
 			"Expressions litterales": 100,
-			"Equations": 100
+			"Equation": 100
 		},
 		"Image": "2020\\Brevet_Caledonie_dec_2020_DV-2\\Brevet_Caledonie_dec_2020_DV-2_Exo3.png",
 		"Lock": false
@@ -2041,7 +2041,7 @@
 		"Tags": {
 			"QCM": 100,
 			"Fonction": 40,
-			"Equations": 20,
+			"Equation": 20,
 			"Statistique": 20
 		},
 		"Image": "2020\\DNB_septembre2020_metropole\\DNB_septembre2020_metropole_Ex1.png",
@@ -2302,7 +2302,7 @@
 		"Points": 10,
 		"Difficulte": 2,
 		"Tags": {
-			"Equations": 100
+			"Equation": 100
 		},
 		"Image": "2020\\math__se_rie_pro_dnb_2020\\math__se_rie_pro_dnb_2020_Ex7.png",
 		"Lock": false
@@ -2341,7 +2341,7 @@
 		"Difficulte": 2,
 		"Tags": {
 			"Fonction": 100,
-			"Equations": 100
+			"Equation": 100
 		},
 		"Image": "2021\\Brevet Generale\\Gen10.png",
 		"Lock": false
@@ -2361,7 +2361,7 @@
 			"Arithmétique": 20,
 			"Fonction": 20,
 			"Tableur": 20,
-			"Equations": 20,
+			"Equation": 20,
 			"Ratio": 20
 		},
 		"Image": "2021\\Brevet Generale\\Gen11.png",
@@ -2397,7 +2397,7 @@
 		"Difficulte": 2,
 		"Tags": {
 			"Scratch": 50,
-			"Equations": 100,
+			"Equation": 100,
 			"Probabilités": 50
 		},
 		"Image": "2021\\Brevet Generale\\Gen13.png",
@@ -2449,7 +2449,7 @@
 		"Tags": {
 			"Vrai faux": 100,
 			"Arithmétique": 25,
-			"Equations": 25,
+			"Equation": 25,
 			"Expressions litterales": 25,
 			"Solide": 25
 		},
@@ -2552,7 +2552,7 @@
 		"Tags": {
 			"Géométrie": 20,
 			"Expressions litterales": 20,
-			"Equations": 20,
+			"Equation": 20,
 			"Arithmétique": 20,
 			"Coordonnées sphériques": 20
 		},
@@ -2622,7 +2622,7 @@
 		"Tags": {
 			"Proportionnalité": 100,
 			"Fonction": 100,
-			"Equations": 100
+			"Equation": 100
 		},
 		"Image": "2021\\Brevet Generale\\Gen25.png",
 		"Lock": false
@@ -2695,7 +2695,7 @@
 		"Tags": {
 			"Scratch": 100,
 			"Expressions litterales": 100,
-			"Equations": 100
+			"Equation": 100
 		},
 		"Image": "2021\\Brevet Generale\\Gen29.png",
 		"Lock": false
@@ -3114,7 +3114,7 @@
 		"Tags": {
 			"Scratch": 100,
 			"Expressions litterales": 100,
-			"Equations": 100
+			"Equation": 100
 		},
 		"Image": "2021\\Brevet Generale\\Gen8.png",
 		"Lock": false
@@ -3249,7 +3249,7 @@
 		"Difficulte": 2,
 		"Tags": {
 			"QCM": 100,
-			"Equations": 20,
+			"Equation": 20,
 			"Statistique": 20
 		},
 		"Image": "2021\\e_nonce__dnb2021_mathspro\\e_nonce__dnb2021_mathspro_Ex1.png",
@@ -3338,7 +3338,7 @@
 		"Tags": {
 			"Statistique": 100,
 			"Fonction": 100,
-			"Equations": 100
+			"Equation": 100
 		},
 		"Image": "2021\\sujet_maths_dnb_pro_2021_sept\\sujet_maths_dnb_pro_2021_sept_Ex1.png",
 		"Lock": false
