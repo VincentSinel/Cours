@@ -3410,5 +3410,159 @@
 		},
 		"Image": "2021\\sujet_maths_dnb_pro_2021_sept\\sujet_maths_dnb_pro_2021_sept_Ex5.png",
 		"Lock": false
+	},
+	"2019-2019brevet_prof_promatpo1_maths.png-Ex1.png": {
+		"Serie": 1,
+		"Sujet": [
+			"P"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 1,
+		"Points": 17,
+		"Difficulte": 2,
+		"Tags": {
+			"Fraction": 100,
+			"Proportionnalité": 100
+		},
+		"Image": "2019\\2019brevet_prof_promatpo1_maths.png\\Ex1.png",
+		"Lock": false
+	},
+	"2019-2019brevet_prof_promatpo1_maths.png-Ex2.png": {
+		"Serie": 1,
+		"Sujet": [
+			"P"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 2,
+		"Points": 19,
+		"Difficulte": 2,
+		"Tags": {
+			"Proportionnalité": 100,
+			"Tableur": 100
+		},
+		"Image": "2019\\2019brevet_prof_promatpo1_maths.png\\Ex2.png",
+		"Lock": false
+	},
+	"2019-2019brevet_prof_promatpo1_maths.png-Ex3.png": {
+		"Serie": 1,
+		"Sujet": [
+			"P"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 3,
+		"Points": 14,
+		"Difficulte": 2,
+		"Tags": {
+			"Fonction": 100
+		},
+		"Image": "2019\\2019brevet_prof_promatpo1_maths.png\\Ex3.png",
+		"Lock": false
+	},
+	"2019-2019brevet_prof_promatpo1_maths.png-Ex4.png": {
+		"Serie": 1,
+		"Sujet": [
+			"P"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 4,
+		"Points": 15,
+		"Difficulte": 2,
+		"Tags": {
+			"Proportionnalité": 100,
+			"Statistique": 100
+		},
+		"Image": "2019\\2019brevet_prof_promatpo1_maths.png\\Ex4.png",
+		"Lock": false
+	},
+	"2019-2019brevet_prof_promatpo1_maths.png-Ex5.png": {
+		"Serie": 1,
+		"Sujet": [
+			"P"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 5,
+		"Points": 10,
+		"Difficulte": 2,
+		"Tags": {
+			"Probabilités": 100
+		},
+		"Image": "2019\\2019brevet_prof_promatpo1_maths.png\\Ex5.png",
+		"Lock": false
+	},
+	"2019-2019brevet_prof_promatpo1_maths.png-Ex6.png": {
+		"Serie": 1,
+		"Sujet": [
+			"P"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 6,
+		"Points": 14,
+		"Difficulte": 2,
+		"Tags": {
+			"Pythagore": 100,
+			"Thalès": 100
+		},
+		"Image": "2019\\2019brevet_prof_promatpo1_maths.png\\Ex6.png",
+		"Lock": false
+	},
+	"2019-2019brevet_prof_promatpo1_maths.png-Ex7.png": {
+		"Serie": 1,
+		"Sujet": [
+			"P"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 7,
+		"Points": 10,
+		"Difficulte": 2,
+		"Tags": {
+			"Scratch": 100
+		},
+		"Image": "2019\\2019brevet_prof_promatpo1_maths.png\\Ex7.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex01.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AN"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 1,
+		"Points": 14,
+		"Difficulte": 2,
+		"Tags": {
+			"Pythagore": 100,
+			"Trigonométrie": 100,
+			"Thalès": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex01.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex02.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AN"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 2,
+		"Points": 17,
+		"Difficulte": 2,
+		"Tags": {
+			"Vrai faux": 100,
+			"Fraction": 25,
+			"Fonction": 25,
+			"Probabilités": 25,
+			"Equation": 25
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex02.png",
+		"Lock": false
 	}
 }
