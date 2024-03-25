@@ -3557,12 +3557,771 @@
 		"Difficulte": 2,
 		"Tags": {
 			"Vrai faux": 100,
-			"Fraction": 25,
-			"Fonction": 25,
-			"Probabilités": 25,
-			"Equation": 25
+			"Fraction": 100,
+			"Fonction": 100,
+			"Probabilités": 100,
+			"Equation": 100
 		},
 		"Image": "2019\\brevet_2019_index_v4.png\\Ex02.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex03.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AN"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 3,
+		"Points": 12,
+		"Difficulte": 2,
+		"Tags": {
+			"Statistique": 100,
+			"Tableur": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex03.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex04.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AN"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 4,
+		"Points": 10,
+		"Difficulte": 2,
+		"Tags": {
+			"Scratch": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex04.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex05.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AN"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 5,
+		"Points": 10,
+		"Difficulte": 2,
+		"Tags": {
+			"Géométrie": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex05.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex06.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AN"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 6,
+		"Points": 12,
+		"Difficulte": 2,
+		"Tags": {
+			"Tâche complexe": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex06.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex07.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AN"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 7,
+		"Points": 15,
+		"Difficulte": 2,
+		"Tags": {
+			"Tâche complexe": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex07.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex08.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AN"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 8,
+		"Points": 10,
+		"Difficulte": 2,
+		"Tags": {
+			"Statistique": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex08.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex09.png": {
+		"Serie": 0,
+		"Sujet": [
+			"CE"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 1,
+		"Points": 15,
+		"Difficulte": 2,
+		"Tags": {
+			"QCM": 100,
+			"Arithmétique": 25,
+			"Statistique": 25,
+			"Géométrie": 25,
+			"Trigonométrie": 25
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex09.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex10.png": {
+		"Serie": 0,
+		"Sujet": [
+			"CE"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 2,
+		"Points": 14,
+		"Difficulte": 2,
+		"Tags": {
+			"Expressions litterales": 100,
+			"Tableur": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex10.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex11.png": {
+		"Serie": 0,
+		"Sujet": [
+			"CE"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 3,
+		"Points": 16,
+		"Difficulte": 2,
+		"Tags": {
+			"Scratch": 100,
+			"Expressions litterales": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex11.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex12.png": {
+		"Serie": 0,
+		"Sujet": [
+			"CE"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 4,
+		"Points": 13,
+		"Difficulte": 2,
+		"Tags": {
+			"Probabilités": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex12.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex13.png": {
+		"Serie": 0,
+		"Sujet": [
+			"CE"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 5,
+		"Points": 14,
+		"Difficulte": 2,
+		"Tags": {
+			"Thalès": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex13.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex14.png": {
+		"Serie": 0,
+		"Sujet": [
+			"CE"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 6,
+		"Points": 14,
+		"Difficulte": 1,
+		"Tags": {
+			"Proportionnalité": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex14.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex15.png": {
+		"Serie": 0,
+		"Sujet": [
+			"CE"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 7,
+		"Points": 14,
+		"Difficulte": 2,
+		"Tags": {
+			"Tâche complexe": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex15.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex16.png": {
+		"Serie": 0,
+		"Sujet": [
+			"G"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 1,
+		"Points": 12,
+		"Difficulte": 2,
+		"Tags": {
+			"Probabilités": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex16.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex17.png": {
+		"Serie": 0,
+		"Sujet": [
+			"G"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 2,
+		"Points": 20,
+		"Difficulte": 2,
+		"Tags": {
+			"Géométrie": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex17.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex18.png": {
+		"Serie": 0,
+		"Sujet": [
+			"G"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 3,
+		"Points": 15,
+		"Difficulte": 2,
+		"Tags": {
+			"Arithmétique": 100,
+			"Proportionnalité": 100,
+			"Tâche complexe": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex18.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex19.png": {
+		"Serie": 0,
+		"Sujet": [
+			"G"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 4,
+		"Points": 16,
+		"Difficulte": 2,
+		"Tags": {
+			"Scratch": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex19.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex20.png": {
+		"Serie": 0,
+		"Sujet": [
+			"G"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 5,
+		"Points": 15,
+		"Difficulte": 2,
+		"Tags": {
+			"Fonction": 100,
+			"Expressions litterales": 100,
+			"QCM": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex20.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex21.png": {
+		"Serie": 0,
+		"Sujet": [
+			"G"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 6,
+		"Points": 22,
+		"Difficulte": 2,
+		"Tags": {
+			"Solide": 100,
+			"Thalès": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex21.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex22.png": {
+		"Serie": 0,
+		"Sujet": [
+			"A"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 1,
+		"Points": 14,
+		"Difficulte": 2,
+		"Tags": {
+			"Equation": 100,
+			"Expressions litterales": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex22.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex23.png": {
+		"Serie": 0,
+		"Sujet": [
+			"A"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 2,
+		"Points": 11,
+		"Difficulte": 2,
+		"Tags": {
+			"Fraction": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex23.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex24.png": {
+		"Serie": 0,
+		"Sujet": [
+			"A"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 3,
+		"Points": 17,
+		"Difficulte": 2,
+		"Tags": {
+			"Scratch": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex24.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex25.png": {
+		"Serie": 0,
+		"Sujet": [
+			"A"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 4,
+		"Points": 16,
+		"Difficulte": 2,
+		"Tags": {
+			"Tâche complexe": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex25.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex26.png": {
+		"Serie": 0,
+		"Sujet": [
+			"A"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 5,
+		"Points": 12,
+		"Difficulte": 2,
+		"Tags": {
+			"Géométrie": 100,
+			"Pythagore": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex26.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex27.png": {
+		"Serie": 0,
+		"Sujet": [
+			"A"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 6,
+		"Points": 14,
+		"Difficulte": 2,
+		"Tags": {
+			"Tâche complexe": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex27.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex28.png": {
+		"Serie": 0,
+		"Sujet": [
+			"A"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 7,
+		"Points": 16,
+		"Difficulte": 2,
+		"Tags": {
+			"Fonction": 100,
+			"Tableur": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex28.png",
+		"Lock": false
+	},
+	"2019-brevet_2019_index_v4.png-Ex29.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AG"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 1,
+		"Points": 13,
+		"Difficulte": 2,
+		"Tags": {
+			"Probabilités": 100
+		},
+		"Image": "2019\\brevet_2019_index_v4.png\\Ex29.png",
+		"Lock": false
+	},
+	"2019-dnb_2019_serie_prof__metropole_la_reunion_mayotte.png-Ex1.png": {
+		"Serie": 1,
+		"Sujet": [
+			"AG",
+			"M"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 1,
+		"Points": 18,
+		"Difficulte": 2,
+		"Tags": {
+			"Géométrie": 100
+		},
+		"Image": "2019\\dnb_2019_serie_prof__metropole_la_reunion_mayotte.png\\Ex1.png",
+		"Lock": false
+	},
+	"2019-dnb_2019_serie_prof__metropole_la_reunion_mayotte.png-Ex2.png": {
+		"Serie": 1,
+		"Sujet": [
+			"AG",
+			"M"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 2,
+		"Points": 16,
+		"Difficulte": 2,
+		"Tags": {
+			"Probabilités": 100
+		},
+		"Image": "2019\\dnb_2019_serie_prof__metropole_la_reunion_mayotte.png\\Ex2.png",
+		"Lock": false
+	},
+	"2019-dnb_2019_serie_prof__metropole_la_reunion_mayotte.png-Ex3.png": {
+		"Serie": 1,
+		"Sujet": [
+			"AG",
+			"M"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 3,
+		"Points": 15,
+		"Difficulte": 2,
+		"Tags": {
+			"Trigonométrie": 100,
+			"Pythagore": 100,
+			"Proportionnalité": 100
+		},
+		"Image": "2019\\dnb_2019_serie_prof__metropole_la_reunion_mayotte.png\\Ex3.png",
+		"Lock": false
+	},
+	"2019-dnb_2019_serie_prof__metropole_la_reunion_mayotte.png-Ex4.png": {
+		"Serie": 1,
+		"Sujet": [
+			"AG",
+			"M"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 4,
+		"Points": 18,
+		"Difficulte": 2,
+		"Tags": {
+			"St": 100
+		},
+		"Image": "2019\\dnb_2019_serie_prof__metropole_la_reunion_mayotte.png\\Ex4.png",
+		"Lock": false
+	},
+	"2019-dnb_2019_serie_prof__metropole_la_reunion_mayotte.png-Ex5.png": {
+		"Serie": 1,
+		"Sujet": [
+			"AG",
+			"M"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 5,
+		"Points": 15,
+		"Difficulte": 2,
+		"Tags": {
+			"Trigonométrie": 100
+		},
+		"Image": "2019\\dnb_2019_serie_prof__metropole_la_reunion_mayotte.png\\Ex5.png",
+		"Lock": false
+	},
+	"2019-dnb_2019_serie_prof__metropole_la_reunion_mayotte.png-Ex6.png": {
+		"Serie": 1,
+		"Sujet": [
+			"AG",
+			"M"
+		],
+		"Annee": 2019,
+		"Periode": 0,
+		"Number": 6,
+		"Points": 18,
+		"Difficulte": 2,
+		"Tags": {
+			"Scratch": 100,
+			"Equation": 100
+		},
+		"Image": "2019\\dnb_2019_serie_prof__metropole_la_reunion_mayotte.png\\Ex6.png",
+		"Lock": false
+	},
+	"2019-dnb_sept19_mathematiques_serie_professionnelle_me_ag.png-Ex1.png": {
+		"Serie": 1,
+		"Sujet": [
+			"AG",
+			"M"
+		],
+		"Annee": 2019,
+		"Periode": 1,
+		"Number": 1,
+		"Points": 16,
+		"Difficulte": 2,
+		"Tags": {
+			"Statistique": 100
+		},
+		"Image": "2019\\dnb_sept19_mathematiques_serie_professionnelle_me_ag.png\\Ex1.png",
+		"Lock": false
+	},
+	"2019-dnb_sept19_mathematiques_serie_professionnelle_me_ag.png-Ex2.png": {
+		"Serie": 1,
+		"Sujet": [
+			"AG",
+			"M"
+		],
+		"Annee": 2019,
+		"Periode": 1,
+		"Number": 2,
+		"Points": 14,
+		"Difficulte": 2,
+		"Tags": {
+			"Trigonométrie": 100
+		},
+		"Image": "2019\\dnb_sept19_mathematiques_serie_professionnelle_me_ag.png\\Ex2.png",
+		"Lock": false
+	},
+	"2019-dnb_sept19_mathematiques_serie_professionnelle_me_ag.png-Ex3.png": {
+		"Serie": 1,
+		"Sujet": [
+			"AG",
+			"M"
+		],
+		"Annee": 2019,
+		"Periode": 1,
+		"Number": 3,
+		"Points": 22,
+		"Difficulte": 2,
+		"Tags": {
+			"Tâche complexe": 100
+		},
+		"Image": "2019\\dnb_sept19_mathematiques_serie_professionnelle_me_ag.png\\Ex3.png",
+		"Lock": false
+	},
+	"2019-dnb_sept19_mathematiques_serie_professionnelle_me_ag.png-Ex4.png": {
+		"Serie": 1,
+		"Sujet": [
+			"AG",
+			"M"
+		],
+		"Annee": 2019,
+		"Periode": 1,
+		"Number": 4,
+		"Points": 10,
+		"Difficulte": 2,
+		"Tags": {
+			"Scratch": 100
+		},
+		"Image": "2019\\dnb_sept19_mathematiques_serie_professionnelle_me_ag.png\\Ex4.png",
+		"Lock": false
+	},
+	"2019-dnb_sept19_mathematiques_serie_professionnelle_me_ag.png-Ex5.png": {
+		"Serie": 1,
+		"Sujet": [
+			"AG",
+			"M"
+		],
+		"Annee": 2019,
+		"Periode": 1,
+		"Number": 5,
+		"Points": 16,
+		"Difficulte": 2,
+		"Tags": {
+			"Proportionnalité": 100,
+			"Fonction": 100
+		},
+		"Image": "2019\\dnb_sept19_mathematiques_serie_professionnelle_me_ag.png\\Ex5.png",
+		"Lock": false
+	},
+	"2019-dnb_sept19_mathematiques_serie_professionnelle_me_ag.png-Ex6.png": {
+		"Serie": 1,
+		"Sujet": [
+			"AG",
+			"M"
+		],
+		"Annee": 2019,
+		"Periode": 1,
+		"Number": 6,
+		"Points": 22,
+		"Difficulte": 2,
+		"Tags": {
+			"Probabilités": 100
+		},
+		"Image": "2019\\dnb_sept19_mathematiques_serie_professionnelle_me_ag.png\\Ex6.png",
+		"Lock": false
+	},
+	"2019-sujetdnbprosessionnormale2019_cale_donie.png-Ex1.png": {
+		"Serie": 1,
+		"Sujet": [
+			"NC"
+		],
+		"Annee": 2019,
+		"Periode": 1,
+		"Number": 1,
+		"Points": 16,
+		"Difficulte": 2,
+		"Tags": {
+			"QCM": 100,
+			"Puissances": 15,
+			"Statistique": 25,
+			"Proportionnalité": 15
+		},
+		"Image": "2019\\sujetdnbprosessionnormale2019_cale_donie.png\\Ex1.png",
+		"Lock": false
+	},
+	"2019-sujetdnbprosessionnormale2019_cale_donie.png-Ex2.png": {
+		"Serie": 1,
+		"Sujet": [
+			"NC"
+		],
+		"Annee": 2019,
+		"Periode": 1,
+		"Number": 2,
+		"Points": 26,
+		"Difficulte": 2,
+		"Tags": {
+			"Equation": 100,
+			"Proportionnalité": 100
+		},
+		"Image": "2019\\sujetdnbprosessionnormale2019_cale_donie.png\\Ex2.png",
+		"Lock": false
+	},
+	"2019-sujetdnbprosessionnormale2019_cale_donie.png-Ex3.png": {
+		"Serie": 1,
+		"Sujet": [
+			"NC"
+		],
+		"Annee": 2019,
+		"Periode": 1,
+		"Number": 3,
+		"Points": 20,
+		"Difficulte": 2,
+		"Tags": {
+			"Statistique": 100
+		},
+		"Image": "2019\\sujetdnbprosessionnormale2019_cale_donie.png\\Ex3.png",
+		"Lock": false
+	},
+	"2019-sujetdnbprosessionnormale2019_cale_donie.png-Ex4.png": {
+		"Serie": 1,
+		"Sujet": [
+			"NC"
+		],
+		"Annee": 2019,
+		"Periode": 1,
+		"Number": 4,
+		"Points": 20,
+		"Difficulte": 2,
+		"Tags": {
+			"Géométrie": 100,
+			"Pythagore": 100,
+			"Thalès": 100
+		},
+		"Image": "2019\\sujetdnbprosessionnormale2019_cale_donie.png\\Ex4.png",
+		"Lock": false
+	},
+	"2019-sujetdnbprosessionnormale2019_cale_donie.png-Ex5.png": {
+		"Serie": 1,
+		"Sujet": [
+			"NC"
+		],
+		"Annee": 2019,
+		"Periode": 1,
+		"Number": 5,
+		"Points": 10,
+		"Difficulte": 2,
+		"Tags": {
+			"Solide": 100,
+			"Tâche complexe": 100
+		},
+		"Image": "2019\\sujetdnbprosessionnormale2019_cale_donie.png\\Ex5.png",
+		"Lock": false
+	},
+	"2019-sujetdnbprosessionnormale2019_cale_donie.png-Ex6.png": {
+		"Serie": 1,
+		"Sujet": [
+			"NC"
+		],
+		"Annee": 2019,
+		"Periode": 1,
+		"Number": 6,
+		"Points": 15,
+		"Difficulte": 2,
+		"Tags": {
+			"Scratch": 100,
+			"QCM": 100
+		},
+		"Image": "2019\\sujetdnbprosessionnormale2019_cale_donie.png\\Ex6.png",
 		"Lock": false
 	}
 }
