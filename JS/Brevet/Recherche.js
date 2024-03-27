@@ -83,14 +83,14 @@ function Rechercher(texte)
                             if (globalRegex.test(element))
                                 Add(l, count('(' + txt + ')+', element) * txt.length / element.length + value);
                         }
-                        let globalRegex = RegExp('(' + txt + ')+');
-                        let element = tagname;
-                            
-                        element = FormatText(element)
-
-                        if (globalRegex.test(element))
-                            Add(l, count('(' + txt + ')+', element) * txt.length / element.length + value);
                     }
+                    let globalRegex = RegExp('(' + txt + ')+');
+                    let element = tagname;
+                        
+                    element = FormatText(element)
+
+                    if (globalRegex.test(element))
+                        Add(l, count('(' + txt + ')+', element) * txt.length / element.length + value);
                 });
             }
         });

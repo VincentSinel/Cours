@@ -3558,10 +3558,10 @@
 		"Difficulte": 2,
 		"Tags": {
 			"Vrai faux": 100,
-			"Fraction": 100,
-			"Fonction": 100,
-			"Probabilités": 100,
-			"Equation": 100
+			"Fraction": 25,
+			"Fonction": 25,
+			"Probabilités": 25,
+			"Equation": 25
 		},
 		"Image": "2019\\brevet_2019_index_v4.png\\Ex02.png",
 		"Lock": false

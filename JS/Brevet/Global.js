@@ -48,6 +48,11 @@ var Tags = {
         "perimetre",
         "semblable"
 	],
+        "Homothétie": [
+        "homothetie",
+        "agrandissement",
+        "reduction"
+        ],
 	"Probabilités": [
         "chance",
         "fréquence",
@@ -60,6 +65,12 @@ var Tags = {
         "echelle",
         "ratio"
 	],
+        "Pourcentage": [
+        "pourcentage",
+        ],
+        "Ratio": [
+        "ratio",
+        ],
 	"QCM": [
         "choix multiples",
         "tableau",
