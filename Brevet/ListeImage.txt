@@ -47,6 +47,7 @@
 2019\brevet_2019_index_v4.png\Ex40.png 
 2019\brevet_2019_index_v4.png\Ex41.png 
 2019\brevet_2019_index_v4.png\Ex42.png 
+2019\brevet_2019_index_v4.png\Ex42_1.png 
 2019\brevet_2019_index_v4.png\Ex43.png 
 2019\brevet_2019_index_v4.png\Ex44.png 
 2019\brevet_2019_index_v4.png\Ex45.png 
@@ -61,7 +62,6 @@
 2019\brevet_2019_index_v4.png\Ex54.png 
 2019\brevet_2019_index_v4.png\Ex55.png 
 2019\brevet_2019_index_v4.png\Ex56.png 
-2019\brevet_2019_index_v4.png\Ex57.png 
 2019\brevet_2019_index_v4.png\Ex58.png 
 2019\brevet_2019_index_v4.png\Ex59.png 
 2019\brevet_2019_index_v4.png\Ex60.png 
