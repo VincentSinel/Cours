@@ -5248,5 +5248,387 @@
 		},
 		"Image": "2019\\brevet_2019_index_v4.png\\Ex82.png",
 		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex01.png": {
+		"Serie": 0,
+		"Sujet": [
+			"P"
+		],
+		"Annee": 2023,
+		"Periode": 1,
+		"Number": 1,
+		"Points": 16,
+		"Difficulte": 2,
+		"Tags": {
+			"QCM": 100,
+			"Pourcentage": 25,
+			"Thalès": 25,
+			"Probabilités": 50
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex01.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex02.png": {
+		"Serie": 0,
+		"Sujet": [
+			"P"
+		],
+		"Annee": 2023,
+		"Periode": 1,
+		"Number": 2,
+		"Points": 25,
+		"Difficulte": 2,
+		"Tags": {
+			"Expressions litterales": 100,
+			"Equation": 100,
+			"Fonction": 100,
+			"Tableur": 100
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex02.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex03.png": {
+		"Serie": 0,
+		"Sujet": [
+			"P"
+		],
+		"Annee": 2023,
+		"Periode": 1,
+		"Number": 3,
+		"Points": 19,
+		"Difficulte": 2,
+		"Tags": {
+			"Scratch": 100
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex03.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex04.png": {
+		"Serie": 0,
+		"Sujet": [
+			"P"
+		],
+		"Annee": 2023,
+		"Periode": 1,
+		"Number": 4,
+		"Points": 20,
+		"Difficulte": 2,
+		"Tags": {
+			"Trigonométrie": 100,
+			"Solide": 100
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex04.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex05.png": {
+		"Serie": 0,
+		"Sujet": [
+			"P"
+		],
+		"Annee": 2023,
+		"Periode": 1,
+		"Number": 5,
+		"Points": 20,
+		"Difficulte": 2,
+		"Tags": {
+			"Coordonnées sphériques": 100,
+			"Statistique": 100,
+			"Géométrie": 100
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex05.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex06.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AG",
+			"M"
+		],
+		"Annee": 2023,
+		"Periode": 1,
+		"Number": 1,
+		"Points": 20,
+		"Difficulte": 2,
+		"Tags": {
+			"QCM": 100,
+			"Arithmétique": 20,
+			"Homothétie": 40,
+			"Expressions litterales": 20,
+			"Probabilités": 20
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex06.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex07.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AG",
+			"M"
+		],
+		"Annee": 2023,
+		"Periode": 1,
+		"Number": 2,
+		"Points": 14,
+		"Difficulte": 2,
+		"Tags": {
+			"Scratch": 100,
+			"Géométrie": 100
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex07.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex08.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AG",
+			"M"
+		],
+		"Annee": 2023,
+		"Periode": 1,
+		"Number": 3,
+		"Points": 22,
+		"Difficulte": 2,
+		"Tags": {
+			"Fonction": 100,
+			"Statistique": 100,
+			"Solide": 100
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex08.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex09.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AG",
+			"M"
+		],
+		"Annee": 2023,
+		"Periode": 1,
+		"Number": 4,
+		"Points": 20,
+		"Difficulte": 2,
+		"Tags": {
+			"Pourcentage": 100,
+			"Proportionnalité": 100
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex09.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex10.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AG",
+			"M"
+		],
+		"Annee": 2023,
+		"Periode": 1,
+		"Number": 5,
+		"Points": 24,
+		"Difficulte": 2,
+		"Tags": {
+			"Pythagore": 100,
+			"Trigonométrie": 100,
+			"Thalès": 100
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex10.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex11.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AS"
+		],
+		"Annee": 2023,
+		"Periode": 0,
+		"Number": 1,
+		"Points": 20,
+		"Difficulte": 2,
+		"Tags": {
+			"Pythagore": 100,
+			"Trigonométrie": 100,
+			"Homothétie": 100,
+			"Géométrie": 100
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex11.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex12.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AS"
+		],
+		"Annee": 2023,
+		"Periode": 0,
+		"Number": 2,
+		"Points": 21,
+		"Difficulte": 2,
+		"Tags": {
+			"Géométrie": 100,
+			"Expressions litterales": 100,
+			"Tableur": 100,
+			"Fonction": 100
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex12.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex13.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AS"
+		],
+		"Annee": 2023,
+		"Periode": 0,
+		"Number": 3,
+		"Points": 20,
+		"Difficulte": 2,
+		"Tags": {
+			"Vrai faux": 100,
+			"Proportionnalité": 25,
+			"Arithmétique": 25,
+			"Equation": 25
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex13.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex14.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AS"
+		],
+		"Annee": 2023,
+		"Periode": 0,
+		"Number": 4,
+		"Points": 16,
+		"Difficulte": 2,
+		"Tags": {
+			"Solide": 100,
+			"Pourcentage": 100,
+			"Statistique": 100
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex14.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex15.png": {
+		"Serie": 0,
+		"Sujet": [
+			"AS"
+		],
+		"Annee": 2023,
+		"Periode": 0,
+		"Number": 5,
+		"Points": 23,
+		"Difficulte": 2,
+		"Tags": {
+			"Probabilités": 100,
+			"Scratch": 100
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex15.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex16.png": {
+		"Serie": 0,
+		"Sujet": [
+			"NC"
+		],
+		"Annee": 2023,
+		"Periode": 0,
+		"Number": 1,
+		"Points": 15,
+		"Difficulte": 2,
+		"Tags": {
+			"QCM": 100,
+			"Fraction": 20,
+			"Pourcentage": 20,
+			"Homothétie": 20,
+			"Statistique": 20
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex16.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex17.png": {
+		"Serie": 0,
+		"Sujet": [
+			"NC"
+		],
+		"Annee": 2023,
+		"Periode": 0,
+		"Number": 2,
+		"Points": 18,
+		"Difficulte": 2,
+		"Tags": {
+			"Arithmétique": 100,
+			"Tâche complexe": 100
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex17.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex18.png": {
+		"Serie": 0,
+		"Sujet": [
+			"NC"
+		],
+		"Annee": 2023,
+		"Periode": 0,
+		"Number": 3,
+		"Points": 18,
+		"Difficulte": 2,
+		"Tags": {
+			"Trigonométrie": 100,
+			"Pythagore": 100
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex18.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex19.png": {
+		"Serie": 0,
+		"Sujet": [
+			"NC"
+		],
+		"Annee": 2023,
+		"Periode": 0,
+		"Number": 4,
+		"Points": 13,
+		"Difficulte": 2,
+		"Tags": {
+			"Thalès": 100,
+			"Tâche complexe": 100
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex19.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex20.png": {
+		"Serie": 0,
+		"Sujet": [
+			"NC"
+		],
+		"Annee": 2023,
+		"Periode": 0,
+		"Number": 5,
+		"Points": 20,
+		"Difficulte": 2,
+		"Tags": {
+			"Fonction": 100,
+			"Tableur": 100,
+			"Equation": 100
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex20.png",
+		"Lock": false
+	},
+	"2023-Brevet_Annee_2023_DV_2.png-Ex21.png": {
+		"Serie": 0,
+		"Sujet": [
+			"NC"
+		],
+		"Annee": 2023,
+		"Periode": 0,
+		"Number": 6,
+		"Points": 16,
+		"Difficulte": 2,
+		"Tags": {
+			"Scratch": 100,
+			"Géométrie": 100
+		},
+		"Image": "2023\\Brevet_Annee_2023_DV_2.png\\Ex21.png",
+		"Lock": false
 	}
 }
