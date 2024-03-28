@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 257.34 119.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c1ddf5;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        font-size: 36px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #1d1d1b;
+        font-family: Verdana-Bold, Verdana;
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        font-size: 12px;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-1" points="256.84 1.58 .5 1.58 .5 13.11 .5 40.72 .5 119 85.95 119 85.95 40.72 256.84 40.72 256.84 1.58"/>
+  <g>
+    <rect class="cls-4" x=".5" y="1.58" width="256.34" height="117.42"/>
+    <line class="cls-4" x1=".5" y1="79.86" x2="256.84" y2="79.86"/>
+    <line class="cls-4" x1=".5" y1="40.72" x2="256.84" y2="40.72"/>
+    <line class="cls-4" x1="171.39" y1="1.58" x2="171.39" y2="119"/>
+    <line class="cls-4" x1="85.95" y1="1.58" x2="85.95" y2="119"/>
+  </g>
+  <line class="cls-4" x1=".5" y1="1.58" x2="85.95" y2="40.72"/>
+  <text class="cls-3" transform="translate(28.11 14.36)"><tspan x="0" y="0">1</tspan></text>
+  <text class="cls-3" transform="translate(36.64 10.36) scale(.58)"><tspan x="0" y="0">er</tspan></text>
+  <text class="cls-3" transform="translate(44.76 14.36)"><tspan x="0" y="0" xml:space="preserve"> lancé</tspan></text>
+  <text class="cls-3" transform="translate(1.58 22.83)"><tspan x="0" y="0">2</tspan></text>
+  <text class="cls-3" transform="translate(10.11 18.84) scale(.58)"><tspan x="0" y="0">ème</tspan></text>
+  <text class="cls-3" transform="translate(1.58 37.23)"><tspan x="0" y="0">lancé</tspan></text>
+  <text class="cls-2" transform="translate(108.37 28.73) scale(.58)"><tspan x="0" y="0">Pile</tspan></text>
+  <text class="cls-2" transform="translate(21.39 67.87) scale(.58)"><tspan x="0" y="0">Pile</tspan></text>
+  <text class="cls-2" transform="translate(16.25 105.31) scale(.58)"><tspan x="0" y="0">Face</tspan></text>
+  <text class="cls-2" transform="translate(192.04 28.73) scale(.58)"><tspan x="0" y="0">Face</tspan></text>
+</svg>

@@ -15,7 +15,7 @@ function Regenerate()
 {
 	paper.clear();
 	nbr_simulation = document.getElementById("nbr_tirage").valueAsNumber;
-	var proba = document.getElementById("proba_tirage").valueAsNumber;
+	var proba = 1.0 / document.getElementById("proba_tirage").valueAsNumber;
 	
 	var ymax = Math.min(Math.max(proba * 3.33333,0.1), 1);
 	var pasy = ymax / 10.0;

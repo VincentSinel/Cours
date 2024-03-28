@@ -106,7 +106,7 @@ h1 {
     font-weight: bold;
     text-decoration: underline;
     margin-top: 50px;
-    margin-left: 2.5rem;
+    margin-left: 2rem;
 }
 h1::marker {
     display: list-item;
@@ -125,7 +125,7 @@ h2 {
     font-size: 16pt;
     font-style: italic;
     text-decoration: underline;
-    margin-left: 3rem;
+    margin-left: 2.5rem;
 }
 h2::marker {
     display: list-item;
@@ -144,7 +144,7 @@ h3 {
     font-size: 14pt;
     font-style: italic;
     text-decoration: underline;
-    margin-left: 3.5rem;
+    margin-left: 3rem;
     font-weight: normal;
 }
 h3::marker {
@@ -153,6 +153,20 @@ h3::marker {
     text-decoration: underline;
     color: var(--SectionSecondaire);
     font-weight: normal;
+}
+
+
+
+@media only screen and (max-width:1024px) {
+    h1 {
+        margin-left: 3rem;
+    }
+    h2 {
+        margin-left: 3.5rem;
+    }
+    h4 {
+        margin-left: 4rem;
+    }
 }
 
 p, div, ul, ol, li {color: var(--Texte);}

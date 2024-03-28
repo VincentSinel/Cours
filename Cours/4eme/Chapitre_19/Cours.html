@@ -5,8 +5,6 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta http-equiv="content-language" content="fr">
   <link rel="stylesheet" href="/CSS/Cours.css"> 
-  <script src="/JS/Raphael/raphael.min.js"></script>
-  <script src="JS/Simulation.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
@@ -331,41 +329,6 @@
 						La probabilité de l'événement « Obtenir 1 ou 2 OU Obtenir plus de 5 » est alors :<br>
 						$P\left(A\ ou\ B\right)=P\left(A\right)+P\left(B\right)=\frac{2}{6}+\frac{2}{6}$ $=\frac{4}{6}=\frac{2}{3}\approx0,66$.
 					</p>
-				</div>
-			</div>
-	<h1>Lien entre probabilité et fréquence :</h1>
-			<p>
-				Lorsque l'on répète un grand nombre de fois une expérience aléatoire, 
-				on peut mesurer l'apparition d'une issues en comptant le nombre d'apparitions 
-				de celle-ci et en calculant sa fréquence.
-			</p>
-			<div class="definition">
-				La fréquence d'une valeur est le quotient de son effectif par l'effectif total.<br>
-				$\frac{Effectif}{Effectif\ total}$
-			</div>
-			<p class="remarque">Remarque :</p>
-			<p>La fréquence est comprise entre 0 et 1.</p>
-			<div class="definition">
-				Lorsqu'on effectue un très grand nombre de fois une expérience aléatoire 
-				de façon indépendante et dans les mêmes conditions, la fréquence de réalisation 
-				d'une issue ou d'un événement se rapproche de la probabilité de celle ou celui-ci.
-			</div>
-			<div class="flexobject">
-				<div>
-					<p>
-						En rouge est indiqué la probabilité. En vert la fréquence d'apparition en fonction du nombre de tirage.<br>
-						On peut voir que la courbe verte se rapproche de la droite rouge au fur et à mesure que les tirage augmente.
-					</p>
-					<label>Nombre de tirages : </label>
-					<input id="nbr_tirage" type="number" min="100" max="10000" value="6000" step="100" onchange="Regenerate()"><br>
-					<label>Probabilité :</label>
-					<input id="proba_tirage" type="number" min="0.1" max="1" value="0.3" step="0.05" onchange="Regenerate()"><br>
-					<button onclick="Regenerate()">Relancer</button>
-				</div>
-				<div style="width: 100%;">
-					fréquence<br>
-					<div id="preview" style="display: inline-block; width: calc(100% - 86px); max-width: 480px;"></div>
-					<div style="display: inline-block;">Nombre de<br>tirages<br> <br></div>
 				</div>
 			</div>
 

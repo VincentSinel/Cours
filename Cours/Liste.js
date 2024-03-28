@@ -1,4 +1,12 @@
 var ListeCours = {
+    troisiemePM: [
+        {
+            id: 1,
+            nom: "Fractions irréductibles",
+            icone: 1,
+            ready : true,
+        },
+    ],
     troisieme: [
         {
             id: 1,
@@ -106,7 +114,7 @@ var ListeCours = {
             id: 18,
             nom: "Probabilités",
             icone: 4,
-            ready : false,
+            ready : true,
         },
         {
             id: 19,
@@ -473,15 +481,19 @@ var ListeCours = {
 
 function SelectClasse(id)
 {
+    // var v1 = document.getElementById("Cours3emePM");
     var w1 = document.getElementById("Cours3eme");
     var x1 = document.getElementById("Cours4eme");
     var y1 = document.getElementById("Cours5eme");
     var z1 = document.getElementById("Cours6eme");
+    // var v2 = document.getElementById("niveau3PM");
     var w2 = document.getElementById("niveau3");
     var x2 = document.getElementById("niveau4");
     var y2 = document.getElementById("niveau5");
     var z2 = document.getElementById("niveau6");
+    // var list = [v1, w1, x1, y1, z1]
     var list = [w1, x1, y1, z1]
+    // var list2 = [v2, w2, x2, y2, z2]
     var list2 = [w2, x2, y2, z2]
     i = 0;
     list.forEach(element => {
@@ -506,22 +518,26 @@ function SelectClasse(id)
 
 function CreateNavBar()
 {
+    // var v = document.getElementById("Cours3emePM");
     var w = document.getElementById("Cours3eme");
     var x = document.getElementById("Cours4eme");
     var y = document.getElementById("Cours5eme");
     var z = document.getElementById("Cours6eme");
+    // v.innerHTML = '';
     w.innerHTML = '';
     x.innerHTML = '';
     y.innerHTML = '';
     z.innerHTML = '';
+    // v.style.visibility = "hidden";
     w.style.visibility = "hidden";
     x.style.visibility = "hidden";
     y.style.visibility = "hidden";
     z.style.visibility = "hidden";
-    CreateDiv(w, "troisieme", 3)
-    CreateDiv(x, "quatrieme", 4)
-    CreateDiv(y, "cinquieme", 5)
-    CreateDiv(z, "sixieme", 6)
+    // CreateDiv(v, "troisiemePM", "3emePM")
+    CreateDiv(w, "troisieme", "3eme")
+    CreateDiv(x, "quatrieme", "4eme")
+    CreateDiv(y, "cinquieme", "5eme")
+    CreateDiv(z, "sixieme", "6eme")
     SelectClasse(1)
 }
 
@@ -534,7 +550,7 @@ function CreateDiv(parent, name, folder)
         if (element.ready)
         {
             a.onclick = function() { 
-                clic('/Cours/' + folder + 'eme/Chapitre_' + element.id + '/Cours.html', this); }
+                clic('/Cours/' + folder + '/Chapitre_' + element.id + '/Cours.html', this); }
             //a.ontouchend = function() {
             //    clic('Cours/' + folder + 'eme/Chapitre_' + element.id + '/Cours.html'); }
         }
