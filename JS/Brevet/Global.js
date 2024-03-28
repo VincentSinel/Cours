@@ -147,4 +147,16 @@ var Tags = {
         "vrai faux",
         "affirmation"
 	],
+        "Coordonnées sphériques": [
+        "coordonnee",
+        "coordonne",
+        "coordone",
+        "cordone",
+        "cordonne",
+        "cordonnee",
+        "cordonee",
+        "coordonee",
+        "gps",
+        "terre",
+        ]
 }
