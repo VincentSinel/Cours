@@ -178,8 +178,11 @@ class BrevetObject
         image.src = this.Image;
         ligneblock.appendChild(image);
 
-        let but = document.createElement("button");
+        let but = document.createElement("a");
         but.setAttribute("class", "PDFButton");
+        but.href = this.DownloadPDF();
+        but.target="_blank";
+        but.download="Sujet.pdf"
 
         let svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         svg.setAttribute('width', '27');
@@ -237,5 +240,11 @@ class BrevetObject
         ligneblock.appendChild(but);
 
         return ligneblock
+    }
+
+    DownloadPDF() {
+        var dirname = this.Image.match(/(.*)[\/\\]/)[1]||'';
+        dirname +="\\Sujet.pdf";
+        return dirname 
     }
 }

@@ -136,6 +136,7 @@ function CheckAdvanced(exo)
     });
     if (!keep) return false;
     
+    if (exo.Annee == 2024 && !document.getElementById("Serie_2024").checked) return false;
     if (exo.Annee == 2023 && !document.getElementById("Serie_2023").checked) return false;
     if (exo.Annee == 2022 && !document.getElementById("Serie_2022").checked) return false;
     if (exo.Annee == 2021 && !document.getElementById("Serie_2021").checked) return false;
