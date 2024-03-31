@@ -317,7 +317,7 @@ input:active + .slider {
     border-radius: 5px;
     padding: 2px;
     transition-duration: 0.4s;
-    display: none;/* MUST BE CHANGE WHEN PDF ADDED*/
+    /* display: none;MUST BE CHANGE WHEN PDF ADDED */
 }
 .PDFButton:hover
 {
