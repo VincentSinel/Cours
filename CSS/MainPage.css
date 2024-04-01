@@ -326,6 +326,27 @@ nav::-webkit-scrollbar-thumb {
 }
 /* FIN Navigation chapitres */
 
+.PDFButton
+{
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    padding: 2px;
+    transition-duration: 0.4s;
+    /* display: none;MUST BE CHANGE WHEN PDF ADDED */
+}
+.PDFButton:hover
+{
+    background: #2196F388;
+}
+.PDFButton:active
+{
+    background: #2196F3FF;
+    transition-duration: 0.1s;
+}
 
 
 @media only screen and (max-width:1220px) {
