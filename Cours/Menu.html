@@ -147,6 +147,8 @@
 
     function clic(path, a)
     {
+      let but = document.getElementById("PdfButton");
+      but.setAttribute("style", "display: none;");
       document.getElementById("noiframe").style.display = "none"
       frame.src = path
       if (lastselected != null)
@@ -155,7 +157,7 @@
       lastselected.classList.add("selected")
       window.scrollTo(0, 0);
       menu.classList.remove("asideshow");
-      SetPdfHref(path);
+      frame.addEventListener( "load", function() { SetPdfHref(path); });
     }
 
     function CreatePDFButton()
