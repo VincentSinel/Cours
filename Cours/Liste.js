@@ -120,7 +120,7 @@ var ListeCours = {
             id: 19,
             nom: "Ratios",
             icone: 1,
-            ready : false,
+            ready : true,
         },
         {
             id: 20,

@@ -17,6 +17,11 @@
   <title>Chapitre 19 - Ratios</title>
 
   <style>
+    .barrefractionnaire td{
+      width: 20px;
+      height: 20px;
+      border: solid black 1px;
+    }
   </style>
 
 </head>
@@ -37,6 +42,117 @@
   <p class="exemple">
     Activité Introduction
   </p>
+
+  <div class="flexobject">
+    <img src="Images/Sirop.png" style="max-width: 7cm;">
+    <div style="flex: 1 1 10cm">
+      Pour une fête, on veut préparer 1,6L de boisson.
+      <ul>
+        <li>
+          A partir de la photo ci-contre, quelle quantité de sirop et d'eau 
+          faut-il pour un dosage « dilué à 1 + 7 » ?<br>
+          On dit alors que le sirop et l'eau sont dans un ratio 1 : 7.
+        </li>
+        <li>
+          Quelle quantité de sirop et d'eau faut-il pour un dosage « dilué à 1 + 10 » ?<br>
+          On dit alors que le sirop et l'eau sont dans un ratio 1 : 10.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="flexobject">
+    <div style="flex: 1 1 10cm">
+      Dans un cocktail sans alcool, le sirop de grenadine, le jus d'orange et 
+      l'eau gazeuse sont dans le ratio 1:4:2, et on ajoute une quantité négligeable 
+      de colorant bleu.
+      <ul>
+        <li>Quelle fraction défini la quantité de sirop de grenadine ?</li>
+        <li>Quelle fraction défini la quantité d'eau gazeuse ?</li>
+        <li>
+          Pour une fête, on veut préparer 2,1 L de cette boisson. 
+          Quelle quantité de sirop, de jus d'orange et d'eau gazeuse 
+          faut-il prévoir ?
+        </li>
+        <li>Avec 1 L de jus d'orange, quelle quantité de cocktail fabrique-t-on ?</li>
+      </ul>
+    </div>
+    <img src="Images/Cocktail.png" style="max-width: 7cm;">
+  </div>
+
+  <h1>Définition :</h1>
+      <div class="definition">
+        Un <span class="CRed">ratio</span> exprime une comparaison entre deux ou plusieurs quantités.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>
+        Le partage de 207€ entre Louis, Yazid et Agatha se fait dans le ratio $1:3:5$. 
+        Combien chaque personne reçoit-elle ?<br>
+        <span class="CRed">$1$</span> $:$ <span class="CBlue">$3$</span> $:$ <span class="CGreen">$5$</span> 
+        signifie que quand <span class="CRed">Louis reçoit une part</span>,
+        <span class="CBlue">Yazid en reçoit 3</span> et <span class="CGreen">Agatha en reçoit 5</span>.<br>
+        Il y a donc au total 9 part identique à partager ($1 + 5 + 3 = 9$).
+      </p>
+      <table class="barrefractionnaire">
+        <tr>
+          <td style="background-color: var(--Cred);"></td>
+          <td style="background-color: var(--Cblue);"></td>
+          <td style="background-color: var(--Cblue);"></td>
+          <td style="background-color: var(--Cblue);"></td>
+          <td style="background-color: var(--Cgreen);"></td>
+          <td style="background-color: var(--Cgreen);"></td>
+          <td style="background-color: var(--Cgreen);"></td>
+          <td style="background-color: var(--Cgreen);"></td>
+          <td style="background-color: var(--Cgreen);"></td>
+        </tr>
+      </table>
+      <p>
+        $207\div9=23$<br>
+        <span class="CRed">Louis reçoit 23€</span>,
+        <span class="CBlue">Yazid reçoit $23\times3$=69€</span> et 
+        <span class="CGreen">Agatha reçoit $23\times5$=115€</span>
+      </p>
+      <p class="remarque">Remarque :</p>
+      <p>
+        Chaque quantité dans un ratio correspond à une fraction du total :<br>
+        Dans le ratio $1:3:5$   :
+        <ul>
+          <li>1 correspond à $\frac{1}{1+3+5}=\frac{1}{9}$</li>
+          <li>3 correspond à $\frac{3}{1+3+5}=\frac{3}{9}$</li>
+          <li>5 correspond à $\frac{5}{1+3+5}=\frac{5}{9}$</li>
+        </ul>
+      </p>
+  <h1>Utilisation :</h1>
+      <div class="definition">
+        L'écriture d'un ratio n'est pas unique.<br>
+        Deux ratios, <span class="CRed">$a_1:b_1:c_1$</span> et <span class="CBlue">$a_2:b_2:c_2$</span> sont identique si :<br>
+        <span class="frac">
+          $\frac{\textcolor{#e53935}{a_1}}{\textcolor{#039be5}{a_2}}=
+          \frac{\textcolor{#e53935}{b_1}}{\textcolor{#039be5}{b_2}}=
+          \frac{\textcolor{#e53935}{c_1}}{\textcolor{#039be5}{c_2}}$
+        </span>
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>
+        $1:3$ est identique à $2:6$ car $\frac{1}{2}=\frac{3}{6}$.
+      </p>
+      <p class="exemple">Exercice type :</p>
+      <p>
+        La fabrication de béton se fait dans un ratio de $1:2:3$ pour le ciment, sable et gravier.<br>
+        Je souhaite utiliser 12m³ de gravier pour une terrasse, quelle quantité de ciment et de sable dois-je prévoir ? 
+      </p>
+      <p>
+        <i>
+          Je note <span class="CBlue"><b>$c$</b></span> la quantité de ciment, 
+          <span class="CBlue"><b>$s$</b></span> la quantité de sable et 
+          <span class="CBlue"><b>$g$</b></span> la quantité de gravier. On a alors :<br>
+          <span class="frac">
+            $\frac{\textcolor{#039be5}{c}}{1}=\frac{\textcolor{#039be5}{s}}{2}=\frac{\textcolor{#039be5}{g}}{3}$</span> donc 
+          <span class="frac">
+            $\frac{\textcolor{#039be5}{c}}{1}=\frac{\textcolor{#039be5}{s}}{2}=\frac{12}{3}$</span><br>
+          On en déduis à l'aide d'un produit en croix que $\textcolor{#039be5}{c}=4$ et $\textcolor{#039be5}{s}=8$.<br>
+          Il faut donc prévoir $4m^3$ de ciment et $8m^3$ de sable.
+        </i>
+      </p>
 
   
 
