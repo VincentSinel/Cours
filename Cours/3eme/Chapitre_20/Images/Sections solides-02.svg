@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.87 49.21">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-dasharray: 0 2;
+        stroke-width: .75px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-3 {
+        fill: #cbbba0;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        stroke: #634e42;
+      }
+
+      .cls-2 {
+        fill: #c1ddf5;
+        stroke: #1d71b8;
+      }
+
+      .cls-4 {
+        fill: #7b6a58;
+      }
+    </style>
+  </defs>
+  <path class="cls-3" d="m61.56,46.16c0,1.41-6.69,2.55-14.94,2.55s-14.94-1.14-14.94-2.55v-16.23h29.87v16.23Z"/>
+  <path class="cls-1" d="m61.56,46.16c0-1.41-6.69-2.55-14.94-2.55s-14.94,1.14-14.94,2.55"/>
+  <polygon class="cls-2" points="28.67 10.93 .5 32.54 65.01 41.56 94.37 19.78 28.67 10.93"/>
+  <rect class="cls-3" x="31.69" y="3.05" width="29.87" height="23.45"/>
+  <ellipse class="cls-3" cx="46.63" cy="3.05" rx="14.94" ry="2.55"/>
+  <ellipse class="cls-4" cx="46.63" cy="26.5" rx="14.94" ry="2.55"/>
+</svg>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78.62 42.36">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-5, .cls-6 {
+        stroke: #634e42;
+      }
+
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-width: .75px;
+      }
+
+      .cls-2, .cls-5 {
+        fill: #cbbba0;
+      }
+
+      .cls-3 {
+        stroke-dasharray: 0 2;
+      }
+
+      .cls-4 {
+        fill: #c1ddf5;
+        stroke: #1d71b8;
+      }
+
+      .cls-6 {
+        fill: #7b6a58;
+      }
+    </style>
+  </defs>
+  <path class="cls-5" d="m11.67,13.58c-1.57,2.98-2.55,7.23-2.55,11.94,0,9.02,3.6,16.34,8.04,16.34h31.63c3.25,0,6.05-3.92,7.32-9.56"/>
+  <path class="cls-1" d="m24.48,32.3c-1.27,5.64-4.07,9.56-7.32,9.56"/>
+  <path class="cls-3" d="m48.79,41.86c-4.44,0-8.04-7.32-8.04-16.34,0-4.71.98-8.96,2.55-11.94"/>
+  <polygon class="cls-4" points=".5 .5 26.29 38.93 78.12 38.93 48.12 .5 .5 .5"/>
+  <path class="cls-2" d="m11.67,13.58c1.44-2.73,3.37-4.4,5.49-4.4h31.63c4.44,0,8.04,7.32,8.04,16.34,0,2.42-.26,4.71-.72,6.78l-12.81-18.71H11.67Z"/>
+  <path class="cls-3" d="m43.3,13.58c1.44-2.73,3.37-4.4,5.49-4.4"/>
+  <polygon class="cls-6" points="11.67 13.59 24.48 32.3 56.11 32.3 43.3 13.59 11.67 13.59"/>
+  <path class="cls-1" d="m17.16,9.18c4.44,0,8.04,7.32,8.04,16.34,0,2.42-.26,4.71-.72,6.78"/>
+</svg>

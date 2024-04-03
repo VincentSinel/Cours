@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 115.21 30.52">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-1, .cls-3, .cls-5 {
+        stroke: #652581;
+      }
+
+      .cls-2 {
+        fill: #733a8e;
+        stroke: #662483;
+      }
+
+      .cls-3 {
+        stroke-dasharray: 0 2;
+        stroke-width: .75px;
+      }
+
+      .cls-4 {
+        fill: #c1ddf5;
+        stroke: #1d71b8;
+      }
+
+      .cls-5 {
+        fill: #a37bb4;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-5" points="29.94 25.8 66.61 30.02 74.92 26.67 39.48 23.45 29.94 25.8"/>
+  <polygon class="cls-5" points="29.94 25.8 29.94 22.27 39.48 23.45 29.94 25.8"/>
+  <line class="cls-1" x1="66.61" y1="30.02" x2="66.61" y2="25.22"/>
+  <polyline class="cls-4" points=".5 20.59 71.73 28.93 114.71 12.59 42.88 4.33 .5 20.19"/>
+  <polygon class="cls-5" points="29.94 16.97 39.48 13.62 74.92 16.84 74.92 3.72 39.48 .5 29.94 3.85 29.94 16.97"/>
+  <polygon class="cls-1" points="29.94 3.85 66.61 7.07 74.92 3.72 39.48 .5 29.94 3.85"/>
+  <polygon class="cls-2" points="29.94 16.97 66.61 20.19 74.92 16.84 39.48 13.62 29.94 16.97"/>
+  <line class="cls-3" x1="39.48" y1=".5" x2="39.48" y2="13.62"/>
+  <line class="cls-1" x1="66.61" y1="7.07" x2="66.61" y2="20.19"/>
+</svg>

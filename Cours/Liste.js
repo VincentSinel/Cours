@@ -126,7 +126,7 @@ var ListeCours = {
             id: 20,
             nom: "Repérage dans l'espace",
             icone: 2,
-            ready : false,
+            ready : true,
         }
     ],
     quatrieme: [
