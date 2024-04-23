@@ -595,8 +595,8 @@ function AddToList(eleve)
   div.classList.add("listelement");
   div.id = "eleve" + id
   div.innerHTML = 
-  '<input type="text" placeholder="NOM" value="' + eleve.Nom + '" id="eleve_' + id + '_nom">'+
-  '<input type="text" placeholder="Prenom" value="' + eleve.Prenom + '" id="eleve_' + id + '_prenom">'+
+  '<input type="text" placeholder="NOM" value="' + eleve.Nom + '" id="eleve_' + id + '_nom" oninput="ChangeName(' + id + ')">'+
+  '<input type="text" placeholder="Prenom" value="' + eleve.Prenom + '" id="eleve_' + id + '_prenom" oninput="ChangeName(' + id + ')">'+
   '<div class="iconbutton" onclick="DeleteEleve(' + id + ')">'+
   '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0'+
   ' -960 960 960" width="24"><path fill="currentColor" stroke="cu'+
@@ -607,6 +607,20 @@ function AddToList(eleve)
   '2Z"/></svg></div>'
   document.getElementById("listeeleve").appendChild(div);
 
+}
+function ChangeName(id)
+{
+  let nom = document.getElementById("eleve_" + id + "_nom").value;
+  let prenom = document.getElementById("eleve_" + id + "_prenom").value;
+  let eleve = ClasseSelected.ListeEleve.filter(eleve => eleve.UID == id)[0];
+  eleve.Nom = nom;
+  eleve.Prenom = prenom;
+  if (PlanSelected != null)
+  {
+    PlanSelected.ChargeTables();
+    PlanSelected.UpdateData();
+  }
+  UpdateInfoPlan();
 }
 function DeleteEleve(id)
 {
@@ -759,6 +773,7 @@ function AsignFree()
 {
   if (PlanSelected == null) return;
   TableSelected.SetEleve(null, !TableSelected.fixed);
+  UpdateInfoPlan();
 }
 function AsignStudent(e)
 {
