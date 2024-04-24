@@ -829,18 +829,22 @@ function ClickPlan(e) {
   MouseRightClickPosition.y = e.layerY;
   if (e.target == document.getElementById("content"))
   {
+    let x = e.pageX - Math.max(0,176 + e.layerX - e.originalTarget.clientWidth)
+    let y = e.pageY - Math.max(0, 59 + e.layerY - e.originalTarget.clientHeight)
     var menu = document.getElementById("contextMenu1")      
     menu.style.display = 'block'; 
-    menu.style.left = e.pageX + "px"; 
-    menu.style.top = e.pageY + "px"; 
+    menu.style.left = x + "px"; 
+    menu.style.top = y + "px"; 
   }
   else if (e.target.classList.contains("draggable"))
   {
+    let x = e.pageX - Math.max(0, 185 + e.layerX - e.originalTarget.clientWidth)
+    let y = e.pageY - Math.max(0, 136 + e.layerY - e.originalTarget.clientHeight)
     TableSelected = e.target.table;
     var menu = document.getElementById("contextMenu2")      
     menu.style.display = 'block';
-    menu.style.left = e.pageX + "px";
-    menu.style.top = e.pageY + "px";
+    menu.style.left = x + "px";
+    menu.style.top = y + "px";
   }
 }
 function hideMenu(e) {
@@ -1115,6 +1119,17 @@ function Save()
         }, 0); 
     }
 }
+function PageOpen()
+{
+  var client = new XMLHttpRequest();
+	client.open('GET', 'PlanDeClasse_DataBase.json');
+	client.onreadystatechange = function() {
+		if (client.readyState === 4){ 
+			processJSON(client.responseText);
+		}
+	}
+	client.send();
+}
 function Open()
 {
   let input = document.createElement("input");
@@ -1145,6 +1160,26 @@ function processJSON(contents) {
     })
   UpdatePlanTypeSelect();
 }
+var HelpVisible = false;
+function ShowHelp()
+{
+  if (HelpVisible)
+  {
+    document.getElementById("Help1").style.display = "none"
+    document.getElementById("Help2").style.display = "none"
+    document.getElementById("Help3").style.display = "none"
+    document.getElementById("Help4").style.display = "none"
+    HelpVisible = false
+  }
+  else
+  {
+    document.getElementById("Help1").style.display = "block"
+    document.getElementById("Help2").style.display = "block"
+    document.getElementById("Help3").style.display = "block"
+    document.getElementById("Help4").style.display = "block"
+    HelpVisible = true;
+  }
+}
 
 function Remplir()
 {
@@ -1172,6 +1207,19 @@ function Remplir()
     tablesallowed[p].SetEleve(e, false);
     tablesallowed.splice(p, 1);
   }
+  PlanSelected.UpdateData();
+  UpdateInfoPlan();
+}
+
+function Clear()
+{
+  if (ClasseSelected == null) return;
+  if (PlanSelected == null) return;
+
+  PlanSelected.Tables.forEach(table => {
+    table.SetEleve(null, false);
+  })
+
   PlanSelected.UpdateData();
   UpdateInfoPlan();
 }

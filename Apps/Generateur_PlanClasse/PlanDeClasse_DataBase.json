@@ -1,0 +1,258 @@
+{
+	"classes": [
+		{
+			"nom": "Classe exemple",
+			"eleves": [
+				{
+					"nom": "DALTON",
+					"prenom": "Joe",
+					"uid": 877060807
+				},
+				{
+					"nom": "DALTON",
+					"prenom": "William",
+					"uid": 134063290
+				},
+				{
+					"nom": "DALTON",
+					"prenom": "Jack",
+					"uid": 575914049
+				},
+				{
+					"nom": "DALTON",
+					"prenom": "Averell",
+					"uid": 700911715
+				},
+				{
+					"nom": "LUCKY",
+					"prenom": "Luke",
+					"uid": 327340554
+				},
+				{
+					"nom": "JUMPER",
+					"prenom": "Jolly",
+					"uid": 251421021
+				}
+			],
+			"plans": [
+				{
+					"tables": [
+						{
+							"ox": 630,
+							"oy": 440,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 630,
+							"oy": 335,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 630,
+							"oy": 225,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 630,
+							"oy": 115,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 630,
+							"oy": 5,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 550,
+							"oy": 440,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 550,
+							"oy": 335,
+							"angle": 0,
+							"eleveuid": 877060807,
+							"fixed": false
+						},
+						{
+							"ox": 550,
+							"oy": 225,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 550,
+							"oy": 115,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 550,
+							"oy": 5,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 390,
+							"oy": 440,
+							"angle": 0,
+							"eleveuid": 700911715,
+							"fixed": false
+						},
+						{
+							"ox": 390,
+							"oy": 335,
+							"angle": 0,
+							"eleveuid": 251421021,
+							"fixed": false
+						},
+						{
+							"ox": 390,
+							"oy": 225,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 390,
+							"oy": 115,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 390,
+							"oy": 5,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 310,
+							"oy": 440,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 310,
+							"oy": 335,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 310,
+							"oy": 225,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 310,
+							"oy": 115,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 310,
+							"oy": 5,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 150,
+							"oy": 440,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 150,
+							"oy": 335,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 150,
+							"oy": 225,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 150,
+							"oy": 115,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 150,
+							"oy": 5,
+							"angle": 0,
+							"eleveuid": 134063290,
+							"fixed": false
+						},
+						{
+							"ox": 70,
+							"oy": 440,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 70,
+							"oy": 335,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 70,
+							"oy": 225,
+							"angle": 0,
+							"eleveuid": null,
+							"fixed": false
+						},
+						{
+							"ox": 70,
+							"oy": 115,
+							"angle": 0,
+							"eleveuid": 575914049,
+							"fixed": false
+						},
+						{
+							"ox": 70,
+							"oy": 5,
+							"angle": 0,
+							"eleveuid": 327340554,
+							"fixed": false
+						}
+					],
+					"nom": "Salle 1"
+				}
+			],
+			"uid": 212245169
+		}
+	],
+	"plans": []
+}

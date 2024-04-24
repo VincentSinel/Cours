@@ -52,6 +52,7 @@ input:focus{
     display: flex;
     width: 100%;
     min-height: 100%;
+    max-height: 100%;
 }
 
 .options{
@@ -66,6 +67,7 @@ input:focus{
 .column{
     width: 275px;
     min-height: 100%;
+    max-height: 100%;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -82,26 +84,53 @@ input:focus{
     justify-content: center;
     gap: 15px;
 }
-#listeclasse,
-#listeplan,
-#listeeleve
-{
-    padding: 1px;
+.liste_classe_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 150px;
     border: solid var(--BackHover) 1px;
-    overflow-y: scroll;
     background-color: var(--BackObject);
+}
+#listeclasse,
+#listeplan{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    padding: 2px;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     gap: 2px;
-    max-height: 360px;
+}
+.help_container{
+    display: none;
+    pointer-events: none;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    background-color: #FFFD;
+    color: var(--Back);
+    border-radius: 5px;
+    padding: 3px;
+    z-index: 5;
+    text-align: center;
+    align-content: center;
 }
 
-#listeclasse,
-#listeplan{
-    min-height: 25%;
+.liste_eleve_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    flex: 1 1 auto;
+    overflow-y: hidden;
+    border: solid var(--BackHover) 1px;
+    background-color: var(--BackObject);
 }
 #listeeleve{
-    flex: 1 1 auto;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    padding: 2px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
 .iconbutton{
@@ -185,6 +214,22 @@ input:focus{
     position: absolute;
     top: 35px; bottom: 10px; left: 10px; right: 10px;
     overflow: hidden;
+}
+
+
+#Help4{
+    background-color: #000A;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    align-content: center;
+    position: absolute;
+    display: none;
+    top: 35px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
 }
 
 .draggable {
@@ -311,3 +356,4 @@ input:focus{
 .notasign:active{
     color: black;
 }
+

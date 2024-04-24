@@ -21,21 +21,28 @@
         <div class="maincontainer">
             <div class="options">
                 <div class="column">
-                    <div id="listeclasse">
-                        <div class="listelement">
-                            <input type="text">
-                            <div class="iconbutton">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                                    <path fill="currentColor" stroke="currentColor"
-                                    d="M480-326q72.5 0 123.25-50.75T654-500q0-72.5-50.75-123.25T480-674q-72.5 0-123.25 50.75T306-500q0 72.5 50.75 123.25T480-326Zm.118-68Q436-394 405-424.882q-31-30.883-31-75Q374-544 404.882-575q30.883-31 75-31Q524-606 555-575.118q31 30.883 31 75Q586-456 555.118-425q-30.883 31-75 31ZM480-208q-142.5 0-259-79.75T51-500q53.5-132.5 170-212.25T480-792q142.5 0 259 79.75T909-500q-53.5 132.5-170 212.25T480-208Zm0-292Zm0 217q111 0 204.5-58.5T827-500q-49-100-142.5-158.5T480-717q-111 0-204.5 58.5T133-500q49 100 142.5 158.5T480-283Z"/></svg>
-                            </div>
-                            <div class="iconbutton">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                                    <path fill="currentColor" stroke="currentColor"
-                                    d="M283-130q-30.938 0-52.969-22.031Q208-174.062 208-205v-512h-39v-75h193v-38h237v38h193v75h-39v512q0 30.938-22.031 52.969Q708.938-130 678-130H283Zm395-587H283v512h395v-512ZM365-283.5h75v-355h-75v355Zm156 0h75v-355h-75v355ZM283-717v512-512Z"/></svg>
+                    <div class="liste_classe_container">
+                        <div id="listeclasse">
+                            <div class="listelement">
+                                <input type="text">
+                                <div class="iconbutton">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                        <path fill="currentColor" stroke="currentColor"
+                                        d="M480-326q72.5 0 123.25-50.75T654-500q0-72.5-50.75-123.25T480-674q-72.5 0-123.25 50.75T306-500q0 72.5 50.75 123.25T480-326Zm.118-68Q436-394 405-424.882q-31-30.883-31-75Q374-544 404.882-575q30.883-31 75-31Q524-606 555-575.118q31 30.883 31 75Q586-456 555.118-425q-30.883 31-75 31ZM480-208q-142.5 0-259-79.75T51-500q53.5-132.5 170-212.25T480-792q142.5 0 259 79.75T909-500q-53.5 132.5-170 212.25T480-208Zm0-292Zm0 217q111 0 204.5-58.5T827-500q-49-100-142.5-158.5T480-717q-111 0-204.5 58.5T133-500q49 100 142.5 158.5T480-283Z"/></svg>
+                                </div>
+                                <div class="iconbutton">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                        <path fill="currentColor" stroke="currentColor"
+                                        d="M283-130q-30.938 0-52.969-22.031Q208-174.062 208-205v-512h-39v-75h193v-38h237v38h193v75h-39v512q0 30.938-22.031 52.969Q708.938-130 678-130H283Zm395-587H283v512h395v-512ZM365-283.5h75v-355h-75v355Zm156 0h75v-355h-75v355ZM283-717v512-512Z"/></svg>
+                                </div>
                             </div>
                         </div>
+                        <div id="Help1" class="help_container">
+                            1) Créer une classe
+                        </div>
                     </div>
+                    <!-- <div class="liste_classe_flex">
+                    </div> -->
                     <div class="buttonpanel">
                         <div id="selectedclasse">
                             Aucune classe selectionné
@@ -49,15 +56,20 @@
                         </div>
                     </div>
                     <p>Liste des élèves :</p>
-                    <div id="listeeleve">
-                        <div class="listelement">
-                            <input type="text" placeholder="NOM">
-                            <input type="text" placeholder="Prenom">
-                            <div class="iconbutton">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                                    <path fill="currentColor" stroke="currentColor"
-                                    d="M283-130q-30.938 0-52.969-22.031Q208-174.062 208-205v-512h-39v-75h193v-38h237v38h193v75h-39v512q0 30.938-22.031 52.969Q708.938-130 678-130H283Zm395-587H283v512h395v-512ZM365-283.5h75v-355h-75v355Zm156 0h75v-355h-75v355ZM283-717v512-512Z"/></svg>
+                    <div class="liste_eleve_container">
+                        <div id="listeeleve">
+                            <div class="listelement">
+                                <input type="text" placeholder="NOM">
+                                <input type="text" placeholder="Prenom">
+                                <div class="iconbutton">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                        <path fill="currentColor" stroke="currentColor"
+                                        d="M283-130q-30.938 0-52.969-22.031Q208-174.062 208-205v-512h-39v-75h193v-38h237v38h193v75h-39v512q0 30.938-22.031 52.969Q708.938-130 678-130H283Zm395-587H283v512h395v-512ZM365-283.5h75v-355h-75v355Zm156 0h75v-355h-75v355ZM283-717v512-512Z"/></svg>
+                                </div>
                             </div>
+                        </div>
+                        <div id="Help2" class="help_container">
+                            2) Créer la liste des élèves<br>(Il est possible de charger un fichier .csv généré par pronote)
                         </div>
                     </div>
                     <div class="buttonpanel">
@@ -78,19 +90,24 @@
                     </div>
                 </div>
                 <div class="column">
-                    <div id="listeplan">
-                        <div class="listelement">
-                            <input type="text">
-                            <div class="iconbutton">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                                    <path fill="currentColor" stroke="currentColor"
-                                    d="M480-326q72.5 0 123.25-50.75T654-500q0-72.5-50.75-123.25T480-674q-72.5 0-123.25 50.75T306-500q0 72.5 50.75 123.25T480-326Zm.118-68Q436-394 405-424.882q-31-30.883-31-75Q374-544 404.882-575q30.883-31 75-31Q524-606 555-575.118q31 30.883 31 75Q586-456 555.118-425q-30.883 31-75 31ZM480-208q-142.5 0-259-79.75T51-500q53.5-132.5 170-212.25T480-792q142.5 0 259 79.75T909-500q-53.5 132.5-170 212.25T480-208Zm0-292Zm0 217q111 0 204.5-58.5T827-500q-49-100-142.5-158.5T480-717q-111 0-204.5 58.5T133-500q49 100 142.5 158.5T480-283Z"/></svg>
+                    <div class="liste_classe_container">
+                        <div id="listeplan">
+                            <div class="listelement">
+                                <input type="text">
+                                <div class="iconbutton">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                        <path fill="currentColor" stroke="currentColor"
+                                        d="M480-326q72.5 0 123.25-50.75T654-500q0-72.5-50.75-123.25T480-674q-72.5 0-123.25 50.75T306-500q0 72.5 50.75 123.25T480-326Zm.118-68Q436-394 405-424.882q-31-30.883-31-75Q374-544 404.882-575q30.883-31 75-31Q524-606 555-575.118q31 30.883 31 75Q586-456 555.118-425q-30.883 31-75 31ZM480-208q-142.5 0-259-79.75T51-500q53.5-132.5 170-212.25T480-792q142.5 0 259 79.75T909-500q-53.5 132.5-170 212.25T480-208Zm0-292Zm0 217q111 0 204.5-58.5T827-500q-49-100-142.5-158.5T480-717q-111 0-204.5 58.5T133-500q49 100 142.5 158.5T480-283Z"/></svg>
+                                </div>
+                                <div class="iconbutton">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                        <path fill="currentColor" stroke="currentColor"
+                                        d="M283-130q-30.938 0-52.969-22.031Q208-174.062 208-205v-512h-39v-75h193v-38h237v38h193v75h-39v512q0 30.938-22.031 52.969Q708.938-130 678-130H283Zm395-587H283v512h395v-512ZM365-283.5h75v-355h-75v355Zm156 0h75v-355h-75v355ZM283-717v512-512Z"/></svg>
+                                </div>
                             </div>
-                            <div class="iconbutton">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                                    <path fill="currentColor" stroke="currentColor"
-                                    d="M283-130q-30.938 0-52.969-22.031Q208-174.062 208-205v-512h-39v-75h193v-38h237v38h193v75h-39v512q0 30.938-22.031 52.969Q708.938-130 678-130H283Zm395-587H283v512h395v-512ZM365-283.5h75v-355h-75v355Zm156 0h75v-355h-75v355ZM283-717v512-512Z"/></svg>
-                            </div>
+                        </div>
+                        <div id="Help3" class="help_container">
+                            3) Créer une nouvelle salle ou un nouveau plan
                         </div>
                     </div>
                     <div class="buttonpanel">
@@ -139,6 +156,19 @@
                                 d="M165-170q-32 0-53.5-21.5T90-245v-470q0-32 21.5-53.5T165-790h240l75 75h315q31.5 0 52.75 22T870-640H449l-75-75H165v462l94-312h678L834.5-225q-8 25-28.5 40t-46 15H165Zm76-75h521l74-245H315l-74 245Zm0 0 74-245-74 245Zm-76-395v-75 75Z"/>
                             </svg>
                         </div>
+                        <div class="iconbutton" onclick="ShowHelp()">
+                            <svg id="svg2" xmlns="http://www.w3.org/2000/svg" height="24" width="24" version="1.0">
+                                <path fill="currentColor" d="M12,1C5.9,1,1,5.9,1,12s4.9,11,11,11s11-4.9,11-11S18.1,1,12,1z M12,2.4c5.3,0,9.6,4.3,9.6,9.6
+                                s-4.3,9.6-9.6,9.6S2.4,17.3,2.4,12S6.7,2.4,12,2.4z M12.2,4.7c-0.6,0-1.2,0.1-1.7,0.2c-0.5,0.1-1,0.4-1.4,0.7
+                                c-0.4,0.3-0.7,0.6-1,0.9C7.7,7.2,7.4,7.9,7.3,8.7c0,0.1,0,0.1,0,0.1c0,0,2.4,0.3,2.4,0.3c0,0,0,0,0-0.1C10,8.1,10.4,7.5,11,7.1
+                                c0.5-0.3,1.1-0.4,1.7-0.3c0.3,0,0.6,0.1,0.8,0.2c0.3,0.1,0.6,0.4,0.8,0.6c0.2,0.2,0.3,0.5,0.3,0.8c0,0.1,0,0.3,0,0.4
+                                c0,0.2-0.1,0.4-0.2,0.5c-0.1,0.2-0.2,0.3-0.3,0.4c-0.2,0.2-0.6,0.5-1.2,1c-0.4,0.3-0.7,0.6-0.9,0.8c-0.5,0.6-0.8,1-0.9,1.6
+                                C11,13.6,10.9,14,11,14.7c0,0.2,0,0.3,0,0.3v0h2.4l0-0.3c0-0.4,0-0.6,0.1-0.8c0.1-0.4,0.2-0.6,0.4-0.9c0.2-0.2,0.4-0.4,0.8-0.7
+                                c0.5-0.4,0.9-0.8,1.2-1.1c0.5-0.5,0.8-0.9,1-1.3c0.2-0.3,0.2-0.7,0.3-1c0-0.1,0-0.3,0-0.4c0-0.8-0.3-1.5-0.9-2.1
+                                c-0.1-0.1-0.3-0.3-0.4-0.4c-0.5-0.5-1.2-0.8-1.9-1c-0.5-0.1-0.9-0.2-1.5-0.2C12.3,4.7,12.2,4.7,12.2,4.7z M11,16.1v2.4h2.4v-2.4H11z
+                                "/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -147,6 +177,14 @@
                     <div id="printarea" class="aspect">
                         <span id="titreplan">Titre</span>
                         <div id="content">
+                        </div>
+                        <div id="Help4">
+                            4) Créer le contenu d'un plan ou le générer<br>
+                            Un plan doit être séléctionné au préalable.<br>
+                            Faire un clic droit pour obtenir le menu contextuel pour créer une nouvelle table a un emplacement libre ou assigner des élèves.<br>
+                            Les tables peuvent être tourné à l'aide de la molette et déplacer en restant cliqué dessus.<br>
+                            Les élèves placés de force sur une table ou les places vide ne sont pas modifié lors de l'assignation de place aléatoires.<br>     
+                            Il est possible de générer une organisation de salle prédéfinie avec les bouton de gauche, la disposition d'une salle peut aussi être enregistrer pour la réutiliser avec une autre classe.<br>
                         </div>
                     </div>
                     <div id="contextMenu1" class="context-menu" style="display: none"> 
@@ -168,8 +206,37 @@
                     </div>
                     <div class="optionpreview">
                         <button onclick="Remplir()">Placer les élèves aléatoirement</button>
+                        <button onclick="Clear()">Vider les tables</button>
                         <button onclick="printDiv('printarea')">Imprimer</button>
                     </div>
+                </div>
+            </div>
+            <div id="help_overlay" class="help_container" style="display: none;">
+                <div class="option">
+                    <div class="column">
+                        <div class="listeclasse">
+                            <div class="help_element">
+                                1) Créer une classe
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="help_element" style="margin-top: 5px; margin-left: 50px; height: 150px;">
+                    1) Créer une classe
+                </div>
+                <div class="help_element" style="margin-top: 230px; margin-left: 50px; height: 350px;">
+                    2) Créer la liste des élèves<br>(Il est possible de charger un fichier .csv généré par pronote)
+                </div>
+                <div class="help_element" style="margin-top: 5px; margin-left: 325px; height: 150px;">
+                    3) Créer une salle / un plan
+                </div>
+                <div class="help_element" 
+                style="margin-top: 40px; margin-left: 720px; height: 500px; width: 700px; background-color: #000A; color: #fff;">
+                    4) Créer un plan<br>
+                    Un plan doit être séléctionné au préalable.<br>
+                    Faire un clic droit pour obtenir le menu contextuel.<br>
+                    Les tables peuvent être tourné à l'aide de la molette.<br>
+                    Les élèves placés de force sur une table ne sont pas déplacés lors de l'assignation de place aléatoires.
                 </div>
             </div>
         </div>
@@ -177,6 +244,9 @@
     </body>
 
     <script src="Generateur_PlanClasse.js"></script>
+    <script>
+        PageOpen()
+    </script>
 </html>
 
 
