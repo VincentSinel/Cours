@@ -384,7 +384,7 @@ var ListeCours = {
             id: 1,
             nom: "Entier et décimaux",
             icone: 1,
-            ready : false,
+            ready : true,
         },
         {
             id: 2,
