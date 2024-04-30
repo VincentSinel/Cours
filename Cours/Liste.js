@@ -390,7 +390,7 @@ var ListeCours = {
             id: 2,
             nom: "Premiers objets de géométrie",
             icone: 2,
-            ready : false,
+            ready : true,
         },
         {
             id: 3,
