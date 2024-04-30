@@ -538,7 +538,7 @@ function CreateNavBar()
     CreateDiv(x, "quatrieme", "4eme")
     CreateDiv(y, "cinquieme", "5eme")
     CreateDiv(z, "sixieme", "6eme")
-    SelectClasse(1)
+    SelectClasse(3)
 }
 
 function CreateDiv(parent, name, folder)
