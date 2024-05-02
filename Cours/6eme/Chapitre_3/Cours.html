@@ -17,7 +17,21 @@
   <title>Chapitre 3 - Comparaison de nombres décimaux</title>
 
   <style>
-    
+    .encadrement{
+      text-align: center;
+    }
+    .encadrement th{
+      border: solid 3px var(--SectionSecondaire);
+      background-color: var(--Cviolet);
+      color: white;
+    }
+    .encadrement td{
+      border: solid 3px var(--SectionSecondaire);
+    }
+    .encadrement td,th{
+      width: auto;
+      line-height: 40px;
+    }
   </style>
 
 </head>
@@ -39,6 +53,139 @@
     Activité Introduction
   </p>
 
+  <div class="flexobject">
+    <img src="Images/Activite_intro.svg" style="flex: 1 2 10cm; max-width: 14cm;">
+    <div style="flex: 1 1 12cm;">
+      <p>
+        Le facteur doit livrer huit colis. Leur masse est inscrite sur chacun d'eux.
+        <ol>
+          <li>
+            Quel est le colis le plus lourd ? Le plus léger ?
+          </li>
+          <li>
+            Aide le facteur à ranger ces paquets du plus léger au plus lourd.
+          </li>
+        </ol>
+      </p>
+    </div>
+  </div>
+
+  <h1>Comparaison :</h1>
+      <h2>Repère graduée :</h2>
+          <div class="definition">
+            Sur une demi-droite graduée on trouve :
+            <ul>
+              <li>Une <span class="CRed">unité de longueur</span></li>
+              <li>Une <span class="CRed">origine</span></li>
+            </ul>
+            On peut repérer la position de point à l'aide d'un nombre appelé <span class="CRed">abscisse</span>.
+          </div>
+          <img src="Images/Axe graduee 1.svg">
+          <p>
+            L'origine de cette demi-droite graduée a pour abscisse 0.
+            <ul>
+              <li>Le point A a pour abscisse 2,0 : on écrit $A(2)$.</li>
+              <li>Le point B a pour abscisse 3,5 : on écrit $B(3,5)$.</li>
+              <li>Le point C a pour abscisse 2,8 : on écrit $C(2,8)$.</li>
+            </ul>
+            Sur la droite gradué, plus un nombre est à droite, plus il est grand.
+          </p>
+      <h2>Comparer :</h2>
+          <div class="definition">
+            <span class="CRed">Comparer</span> deux nombres c'est dire si l'un <u>plus petit</u> ; <u>plus grand</u> ou <u>égal</u> à l'autre.
+          </div>
+          <p class="remarque">Remarque :</p>
+          <p>
+            Pour comparer, on utilise les symboles suivants :
+            <ul>
+              <li>$>$  &emsp; Supérieur (Strict)</li>
+              <li>$<$  &emsp; Inférieur (Strict)</li>
+              <li>$=$  &emsp; Egale</li>
+              <li>$\neq$ &emsp; Non égale</li>
+              <li>$\ge$ &emsp; Supérieur ou égale</li>
+              <li>$\le$ &emsp; Inférieur ou égale</li>
+            </ul>
+          </p>
+          <p class="exemple">Exemple :</p>
+          <p>
+            $2<15$ &emsp; se lit "2 est <b>inférieur</b> à 15".<br>
+            $3>2,5$ &emsp; se lit "3 est <b>supérieur</b> à 2,5".
+          </p>
+    <h1>Classer et encadrer :</h1>
+      <h2>Classement :</h2>
+          <div class="definition">
+            <ul>
+              <li>
+                <span class="CRed">Classer</span> des nommbres dans l'ordre <span class="CRed">croissant</span>, c'est ranger du plus petit au plus grand.
+              </li>
+              <li>
+                <span class="CRed">Classer</span> des nommbres dans l'ordre <span class="CRed">décroissant</span>, c'est ranger du plus grand au plus petit.
+              </li>
+            </ul>
+          </div>
+          <p class="exemple">Exemple :</p>
+          <p>
+            On peut ranger les valeurs suivantes : 0,89 ; 0,7 ; 2,47 ; 1,5 ; 1,03<br>
+            <ul>
+              <li>Par ordre <b>croissant</b> :<br>
+              $0,7<0,89<1,03<1,5<2,47$</li>
+              <li>Par ordre <b>décroisant</b> :<br>
+              $2,47>1,5>1,03>0,89>0,7$</li>
+            </ul>
+          </p>
+      <h2>Encadrement :</h2>
+          <div class="definition">
+            <span class="CRed">Encadrer</span> un nombre, c'est trouver un nombre plus petit et un nombre plus grand que ce nombre.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <p>
+            On peut encadrer 56 a la dixaine près entre 50 et 60 :<br>
+            $50<56<60$
+          </p>
+          <p class="remarque">Remarque :</p>
+          <p>
+            La différence entre les deux nombres qui trouvé est appelé l'<span class="CRed">amplitude</span>.
+          </p>
+          <table class="encadrement">
+            <tr>
+              <th>Encadrement de 7,846</th>
+              <th>Amplitude</th>
+              <th>Valeurs approchées</th>
+            </tr>
+            <tr>
+              <td>
+                $\textcolor{#e53935}{7}<7,846<\textcolor{#e53935}{8}$
+              </td>
+              <td>
+                1
+              </td>
+              <td>
+                <span class="CRed">7</span> et <span class="CRed">8</span> (approchées à l'unité près)
+              </td>
+            </tr>
+            <tr>
+              <td>
+                $\textcolor{#039be5}{7,8}<7,846<\textcolor{#039be5}{7,9}$
+              </td>
+              <td>
+                0,1
+              </td>
+              <td>
+                <span class="CBlue">7,8</span> et <span class="CBlue">7,9</span> (approchées au dixième près)
+              </td>
+            </tr>
+            <tr>
+              <td>
+                $\textcolor{#43a047}{7,84}<7,846<\textcolor{#43a047}{7,85}$
+              </td>
+              <td>
+                0,01
+              </td>
+              <td>
+                <span class="CGreen">7,84</span> et <span class="CGreen">7,85</span> (approchées au centième près)
+              </td>
+            </tr>
+          </table>
 
 
 </body>
