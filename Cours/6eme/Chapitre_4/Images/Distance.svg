@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 165.1 113.9" style="enable-background:new 0 0 165.1 113.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#3AAA35;}
+	.st1{fill:none;stroke:#662483;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st2{fill:#E30613;}
+	.st3{font-family:'Cambria'; font-style: italic;}
+	.st4{font-size:20px;}
+	.st5{fill:none;stroke:#000000;stroke-linecap:round;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#E30613;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+<rect x="102.9" y="62.2" class="st0" width="12.4" height="12.4"/>
+<line class="st1" x1="102.9" y1="1" x2="102.9" y2="106.7"/>
+<text transform="matrix(1 0 0 1 -2.059937e-04 64.6078)" class="st2 st3 st4">(d)</text>
+<g>
+	<line class="st5" x1="98.7" y1="26.9" x2="107.1" y2="35.4"/>
+	<line class="st5" x1="107.1" y1="26.9" x2="98.7" y2="35.4"/>
+</g>
+<g>
+	<g>
+		<path d="M114.5,22.7h1.5l4.6,12.4h-1.9l-3.4-10l-3.4,10h-1.9L114.5,22.7z M112,30.8h6.5v1.7H112V30.8z"/>
+	</g>
+</g>
+<line class="st6" x1="9.4" y1="74.5" x2="164.1" y2="74.5"/>
+<g>
+	<g>
+		<path d="M88.5,79.8h2V94h-2V79.8z M89.7,86h7.9v1.9h-7.9V86z M96.5,79.8h2V94h-2V79.8z"/>
+	</g>
+</g>
+</svg>

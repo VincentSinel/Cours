@@ -13,15 +13,24 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script id="Animation" src="/JS/Animation/animation_holder.js"></script>
 
   <title>Chapitre 4 - Parallèles et perpendiculaires</title>
 
   <style>
+    .intro div{
+      flex: 1 1 4cm; text-align: center;
+    }
+    .intro p{
+      padding: 10px;
+    }
+    #Animation1 { width: max-content;}
+    #Animation2 { width: max-content;}
   </style>
 
 </head>
 
-<body>
+<body onload="CreateAnimationObject()">
 
   <table id="TitleTable">
     <tr>
@@ -37,6 +46,156 @@
   <p class="exemple">
     Activité Introduction
   </p>
+
+  <p>
+    Les figures ci-dessous représentent cinq étapes successives permettant de construire, par pliage, la droite $(d_2)$ <b>perpendiculaire</b> à la droite $(d_1)$ et passant par le point A.
+  </p>
+  <div class="flexobject intro">
+    <div>
+      <img src="Images/Intro1.svg" style="max-width: 8cm;">
+      <p>
+        Sur un papier uni, tracer une droite $(d_1)$ et placer un point A n'appartenant pas à la droite.
+      </p>
+    </div>
+    <div>
+      <img src="Images/Intro2.svg" style="max-width: 6.5cm;">
+      <p>
+        Plier la feuille selon la droite $(d_1)$.
+      </p>
+    </div>
+    <div>
+      <img src="Images/Intro3.svg" style="max-width: 8cm;">
+      <p>
+        Plier une seconde fois la feuille selon un pli passant par A, enfaisant coïncider les deux demi-droites rouges.
+      </p>
+    </div>
+    <div>
+      <img src="Images/Intro4.svg" style="max-width: 6cm;">
+      <p>
+        Marquer les plis puis déplier la feuille.
+      </p>
+    </div>
+    <div>
+      <img src="Images/Intro5.svg" style="max-width: 8cm;">
+      <p>
+        Tracer la droite $(d_2)$ à l'aide du pli passant par A.<br>
+        On note l'angle droit à l'aide d'un carré rouge.
+      </p>
+    </div>
+  </div>
+  <ol>
+    <li>Réaliser chacune de ces étapes en suivant les consignes indiquées.</li>
+    <li>Construire, de même, la droite $(d_3)$ perpendiculaire à $(d_2)$ et passant par A.</li>
+    <li>
+      <ol type="a">
+        <li>Que peut-on dire de la position de la droite $(d_1)$ par rapport à la droite $(d_3)$ ?</li>
+        <li>
+          Compléter la phrase suivante à l'aide des symboles $\perp$ (perpendiculaire) ou $\parallel$ (parallèle).<br>
+          Par construction, nous avons $(d_1)$ <span class="CYellow">.....</span> $(d_2)$ et $(d_3)$  <span class="CYellow">.....</span> $(d_2)$, donc $(d_1)$  <span class="CYellow">.....</span> $(d_3)$.
+        </li>
+      </ol>
+    </li>
+  </ol>
+
+  <h1>Définition :</h1>
+      <h2>Droites perpendiculaires :</h2>
+          <div class="definition">
+            Deux droites <span class="CRed">perpendiculaires</span> sont deux droites qui se coupent en formant <span class="CRed">quatre angles droits</span>.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <div class="flexobject">
+            <div style="flex: 1 1 6cm; max-width: 10cm;">
+              H est appelé pied de la perpendiculaire à $(d)$.
+            </div>
+            <img src="Images/Perpendiculaire.svg" style="flex: 1 1 2cm; max-width: 4cm;">
+          </div>
+          <p class="remarque">Remarques :</p>
+          <ul>
+            <li>$(d')$ se lit "d prime".</li>
+            <li>Pour noter deux droites perpendiculaires, on utilise le symbole $\perp$<br>
+            Ici $(d)\perp(d')$</li>
+            <li>Le point d'intersection H est appelé <span class="CRed">pied de la perpendiculaire</span> de $(d')$ par rapport à $(d)$.</li>
+          </ul>
+      <h2>Droites parallèles :</h2>
+          <div class="definition">
+            Deux droites <span class="CRed">parallèles</span> sont deux droites qui <b>ne sont pas sécantes</b>. 
+          </div>
+          <p class="exemple">Exemple :</p>
+          <div class="flexobject">
+            <div style="flex: 1 1 6cm; max-width: 10cm;">
+              $(d)$ et $(d')$ sont parallèles, on note cela $(d)\parallel(d')$
+            </div>
+            <img src="Images/Parallèles.svg" style="flex: 1 1 2cm; max-width: 4cm;">
+          </div>
+          <p class="remarque">Remarque :</p>
+          <ul>
+            <li>Lorsque deux droites sont confondues (qu'elles sont superposées), on dit aussi qu'elles sont parallèles.  </li>
+          </ul>
+  <h1>Propriétés :</h1>
+      <h2>Parallèles :</h2>
+          <div class="definition">
+            <i><b>Propriété :</b></i><br>
+            <b>Si</b> deux droites sont parallèles à une même troisième droite, <b>alors</b> ces droites sont parallèles entre elles.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <div class="flexobject">
+            <div style="flex: 1 1 6cm; max-width: 10cm;">
+              $\textcolor{#43a047}{(d_1)}\parallel\textcolor{#7C4DA5}{(d_3)}$ et $\textcolor{#e53935}{(d_2)}\parallel\textcolor{#7C4DA5}{(d_3)}$ donc $\textcolor{#43a047}{(d_1)}\parallel\textcolor{#e53935}{(d_2)}$
+            </div>
+            <img src="Images/Propriete1.svg" style="flex: 1 1 3cm; max-width: 6cm;">
+          </div>
+          <div class="definition">
+            <i><b>Propriété :</b></i><br>
+            <b>Si</b> deux droites sont perpendiculaires à une même troisième droite, <b>alors</b> ces droites sont parallèles entre elles.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <div class="flexobject">
+            <div style="flex: 1 1 6cm; max-width: 10cm;">
+              $\textcolor{#43a047}{(d_1)}\perp\textcolor{#7C4DA5}{(d_3)}$ et $\textcolor{#e53935}{(d_2)}\perp\textcolor{#7C4DA5}{(d_3)}$ donc $\textcolor{#43a047}{(d_1)}\parallel\textcolor{#e53935}{(d_2)}$
+            </div>
+            <img src="Images/Propriete2.svg" style="flex: 1 1 3cm; max-width: 6cm;">
+          </div>
+      <h2>Perpendiculaires :</h2>
+          <div class="definition">
+            <i><b>Propriété :</b></i><br>
+            <b>Si</b> deux droites sont parallèles et que l'une d'elle est perpendiculaire a une troisième droite, <b>alors</b> cette troisième droite est aussi perpendiculaire à l'autre.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <div class="flexobject">
+            <div style="flex: 1 1 6cm; max-width: 10cm;">
+              $\textcolor{#43a047}{(d_1)}\parallel\textcolor{#e53935}{(d_2)}$ et $\textcolor{#43a047}{(d_1)}\perp\textcolor{#7C4DA5}{(d_3)}$ donc $\textcolor{#e53935}{(d_2)}\perp\textcolor{#7C4DA5}{(d_3)}$
+            </div>
+            <img src="Images/Propriete3.svg" style="flex: 1 1 3cm; max-width: 6cm;">
+          </div>
+  <h1>Distance d'un point à une droite :</h1>
+      <div class="definition">
+        La <b>distance</b> d'un point à une droite est <b>longueur du plus court chemin</b> entre ce point et la droite.
+      </div>
+
+      <div class="definition">
+          La distance d'un point A à une droite $(d)$ est la longueur du segment reliant le point A au <b>pied de la perpendiculaire</b> à $(d)$ passant par A.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <div class="flexobject">
+        <div style="flex: 1 1 6cm; max-width: 10cm;">
+          La distance du point A à la droite $(d)$ est la longueur AH.
+        </div>
+        <img src="Images/Distance.svg" style="flex: 1 1 3cm; max-width: 6cm;">
+      </div>
+  <h1>Constructions :</h1>
+      <h2>Droites perpendiculaires :</h2>
+      <div class="flexobject">
+        <div id="Animation1" class="animation center" width="480" height="360"></div>
+        <div id="Animation2" class="animation center" width="480" height="360"></div>
+
+      </div>
+      <h2>Droites parallèles :</h2>
+      <div class="flexobject">
+        <div id="Animation3" class="animation center" width="480" height="360"></div>
+        <div id="Animation4" class="animation center" width="480" height="360"></div>
+      </div>
+
+
 
   
 

@@ -396,13 +396,13 @@ var ListeCours = {
             id: 3,
             nom: "Comparaison de nombres décimaux",
             icone: 1,
-            ready : false,
+            ready : true,
         },
         {
             id: 4,
             nom: "Parallèles et perpendiculaires",
             icone: 2,
-            ready : false,
+            ready : true,
         },
         {
             id: 5,

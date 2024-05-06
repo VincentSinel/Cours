@@ -3,6 +3,7 @@ var Scripts = [
     "Animation_Data.js",
     "Objects/Anim_Object.js",
     "Objects/Anim_Image.js",
+    "Objects/Anim_Regle.js",
     "Objects/Anim_Equerre.js",
     "Objects/Anim_Rapporteur.js",
     "Objects/Anim_Rectangle.js",
