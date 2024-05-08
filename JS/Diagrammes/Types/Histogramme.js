@@ -1,59 +1,4 @@
-
-
-window.onload = function()
-{
-    CreateDiagrammes();
-}
-
-
-function CreateDiagrammes()
-{
-    let config1 = {
-        "element_id": "diagintro",
-        "margin": 10,
-        "width": 400,
-        "height": 300,
-        "intervalle": 5,
-        "start": 28,
-        "pas": 2,
-        "max_eff": 18,
-        "name": "Effectif en fonction du calibre",
-        "axe_name": "Calibre (mm)",
-        "effectifs": [4],
-    }
-    new Diagramme(config1);
-    let config2 = {
-        "element_id": "diagexemple1",
-        "margin": 10,
-        "width": 400,
-        "height": 300,
-        "intervalle": 3,
-        "start": 145,
-        "pas": 5,
-        "max_eff": 13,
-        "name": "Répartition de la taille des élèves",
-        "axe_name": "Taille (cm)",
-        "effectifs": [9,12,7],
-    }
-    new Diagramme(config2);
-    let config3 = {
-        "element_id": "diagexemple2",
-        "margin": 10,
-        "width": 400,
-        "height": 300,
-        "intervalle": 5,
-        "start": 0,
-        "pas": 30,
-        "max_eff": 12,
-        "name": "Quantité de SMS envoyé par jour",
-        "axe_name": "SMS",
-        "effectifs": [2,6,10,5,1],
-    }
-    new Diagramme(config3);
-}
-
-
-class Diagramme
+class Histogramme
 {
     Canvas_width = 400;
     Canvas_height = 300;
@@ -61,7 +6,10 @@ class Diagramme
 
     element_id = "";
 
-    margin = 10; 
+    margin_up = 10; // Marge en dehors du diagramme
+    margin_down = 10; // Marge en dehors du diagramme
+    margin_left = 10; // Marge en dehors du diagramme
+    margin_right = 10; // Marge en dehors du diagramme
     intervalle = 5; 
     start = 0; 
     pas = 1; 
@@ -69,26 +17,31 @@ class Diagramme
     stroke_width = 1;
     graduation_size = 6;
     text_size = 12;
-    name = ""; 
-    axe_name = "";
+    title = ""; 
+    Haxe_name = "";
+    Vaxe_name = "Effectif";
     grid = true;
     grid_color = "#75FFFF"
     effectifs = [5,3,4,7,2];
     transparency = "AA";
-    colors = ["#FDC463","#ADEBF6","#465058","#F77C55"];
+    colors = ["#e60049", "#0bb4ff", "#50e991", "#e6d800", "#9b19f5", "#ffa300", "#dc0ab4", "#b3d4ff", "#00bfa0", "#f0cccc"];
 
     constructor(config)
     {
         if (config.hasOwnProperty("element_id")) this.element_id = config["element_id"];
-        if (config.hasOwnProperty("margin")) this.margin = config["margin"];
+        if (config.hasOwnProperty("margin_up")) this.margin_up = config["margin_up"];
+        if (config.hasOwnProperty("margin_down")) this.margin_down = config["margin_down"];
+        if (config.hasOwnProperty("margin_left")) this.margin_left = config["margin_left"];
+        if (config.hasOwnProperty("margin_right")) this.margin_right = config["margin_right"];
         if (config.hasOwnProperty("width")) this.Canvas_width = config["width"];
         if (config.hasOwnProperty("height")) this.Canvas_height = config["height"];
         if (config.hasOwnProperty("intervalle")) this.intervalle = config["intervalle"];
         if (config.hasOwnProperty("start")) this.start = config["start"];
         if (config.hasOwnProperty("pas")) this.pas = config["pas"];
         if (config.hasOwnProperty("max_eff")) this.max_eff = config["max_eff"];
-        if (config.hasOwnProperty("name")) this.name = config["name"];
-        if (config.hasOwnProperty("axe_name")) this.axe_name = config["axe_name"];
+        if (config.hasOwnProperty("title")) this.title = config["title"];
+        if (config.hasOwnProperty("Haxe_name")) this.Haxe_name = config["Haxe_name"];
+        if (config.hasOwnProperty("Vaxe_name")) this.Vaxe_name = config["Vaxe_name"];
         if (config.hasOwnProperty("grid")) this.grid = config["grid"];
         if (config.hasOwnProperty("grid_color")) this.grid_color = config["grid_color"];
         if (config.hasOwnProperty("effectifs")) this.effectifs = config["effectifs"];
@@ -98,7 +51,11 @@ class Diagramme
         if (config.hasOwnProperty("stroke_width")) this.stroke_width = config["stroke_width"];
         if (config.hasOwnProperty("grid_width")) this.grid_width = config["grid_width"];
         if (config.hasOwnProperty("transparency")) this.transparency = config["transparency"];
+        let e = document.getElementById(this.element_id);
+        e.style.border = "solid black 1px";
+        e.style.width = "fit-content"
         this.Draw();
+
     }
 
     lineh;
@@ -106,33 +63,33 @@ class Diagramme
     Draw()
     {
         this.draw = SVG().addTo("#" + this.element_id).size(this.Canvas_width, this.Canvas_height)
-        let w = this.Canvas_width - this.margin * 2;
-        let h = this.Canvas_height - this.margin * 2;
+        let w = this.Canvas_width - this.margin_left - this.margin_right;
+        let h = this.Canvas_height - this.margin_up - this.margin_down;
 
         this.lineh = Math.floor(this.text_size * 96.0/72.0);
 
-        let sx = this.lineh + this.margin;
-        let sy = this.margin + h - this.lineh * 2;
+        let sx = this.lineh + this.margin_left;
+        let sy = this.margin_up + h - this.lineh * 2;
 
-        let ex1 = w + this.margin;
-        let ey2 = this.margin + this.lineh;
+        let ex1 = w + this.margin_left;
+        let ey2 = this.margin_up + this.lineh * 2;
 
         let dw = ex1 - sx
         let dh = ey2 - sy
         if (this.grid)
             this.Draw_Grid(sx, sy, dw, dh);
-        this.Draw_Histogramme(sx, sy, dw, dh);
+        this.Draw_Diagramme(sx, sy, dw, dh);
         this.Draw_Axes(sx, sy, dw, dh);
         this.Draw_Text(sx, sy, dw, dh);
 
-        let text1 = this.draw.text(this.axe_name)
+        let text1 = this.draw.text(this.Haxe_name)
         text1.move(ex1, sy + this.graduation_size / 2.0 + this.lineh)
         text1.font({ fill: 'black', family: 'Bahnschrift', size: this.text_size, anchor:'end' })
-        let text2 = this.draw.text("Effectif")
-        text2.move(this.margin, this.margin - this.lineh /4)
+        let text2 = this.draw.text(this.Vaxe_name)
+        text2.move(this.margin_up, this.margin_up + this.lineh - this.lineh /4)
         text2.font({ fill: 'black', family: 'Bahnschrift', size: this.text_size, anchor:'start' })
-        let text3 = this.draw.text(this.name)
-        text3.move(this.margin + w / 2, this.margin - this.lineh /4)
+        let text3 = this.draw.text(this.title)
+        text3.move(this.margin_left + w / 2, this.margin_up - this.lineh /4)
         text3.font({ fill: 'black', family: 'Bahnschrift', size: this.text_size, anchor:'middle' })
         
     }
@@ -140,18 +97,19 @@ class Diagramme
 
     Draw_Grid(sx, sy, w, h)
     {
+        let grid_style = {width: this.grid_width, color: this.grid_color}
         let dy = h / this.max_eff;
         let pass = Math.max(1, Math.floor(this.lineh / Math.abs(dy) / 2));
         for (let i = 1; i <= this.max_eff; i++) {
             if (i % pass != 0) continue;
             let y = sy + i * dy;
             this.draw.line(sx, y, sx + w, y)
-            .stroke({width: this.grid_width, color: this.grid_color});
+            .stroke(grid_style);
         }
         for (let i = 1; i <= this.intervalle; i++) {
             let dx = sx + i * w / (this.intervalle);
             this.draw.line(dx, sy, dx, sy + h)
-            .stroke({width: this.grid_width, color: this.grid_color});
+            .stroke(grid_style);
         }
 
     }
@@ -195,7 +153,7 @@ class Diagramme
         }
     }
 
-    Draw_Histogramme(sx, sy, w, h)
+    Draw_Diagramme(sx, sy, w, h)
     {
         let dx = w / (this.intervalle);
         let dy = h / this.max_eff;

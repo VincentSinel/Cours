@@ -6,6 +6,10 @@
   <meta http-equiv="content-language" content="fr">
   <link rel="stylesheet" href="/CSS/Cours.css"> 
 
+  <script src="/JS/Svg.js/svg.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+	<script src="/JS/Diagrammes/Diagramme_Holder.js"></script> 
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
     MathJax = {
@@ -17,7 +21,60 @@
   <title>Chapitre 5 - Gestion de données</title>
 
   <style>
-    
+    .feuille{
+      background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(243,243,243,1) 100%);
+      border-radius: 5px;
+      border: solid 1px #b2b2b2;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      width: max-content;
+    }
+    .feuille tr td{
+      width: 60px;
+      text-align: center;
+    }
+    .feuille tr td:nth-child(1)
+    {
+      color: var(--Dred);
+    }
+    .feuille tr td:nth-child(3)
+    {
+      color: var(--Dviolet);
+    }
+    .DebutTable td, th{
+      border: solid 1px black;
+      width: auto;
+      text-align: center;
+      min-width: 80px;
+    }
+    .DebutTable th{
+      background-color: #c9a5e9;
+    }
+    .DebutTable td:last-child{
+      border-right: dashed 1px black;
+    }
+    .tableau_simple td, th{
+      border: solid 1px black;
+      width: auto;
+      text-align: center;
+      min-width: 80px;
+    }
+    .tableau_simple th{
+      background-color: #99da9c;
+    }
+    table th.crossed
+    {
+      background-image: linear-gradient(to bottom left,  transparent calc(50% - 1px), black, transparent calc(50% + 1px)); 
+      min-width: 120px;
+    }
+    .tableau_double td, th{
+      border: solid 1px black;
+      width: auto;
+      text-align: center;
+      min-width: 80px;
+    }
+    .tableau_double th{
+      background-color: #ec7b78;
+    }
   </style>
 
 </head>
@@ -38,6 +95,309 @@
   <p class="exemple">
     Activité Introduction
   </p>
+
+  <p>
+    <ol>
+      <li>
+        Un sondage a été organisé dans une classe de 6<sup>ème</sup>, avec deux questions :
+        <ul>
+          <li>Quel âge as-tu ?</li>
+          <li>Quel est ton sport favori ?</li>
+        </ul>
+        Voici les réponses.
+        <div class="flexobject" style="justify-content: center;">
+          <div class="feuille">
+            <table>
+              <tr>
+                <td>Kenzo</td>
+                <td>11 ans</td>
+                <td>Tennis</td>
+              </tr>
+              <tr>
+                <td>Simon</td>
+                <td>10 ans</td>
+                <td>Football</td>
+              </tr>
+              <tr>
+                <td>Yazid</td>
+                <td>12 ans</td>
+                <td>Rugby</td>
+              </tr>
+              <tr>
+                <td>Anaïs</td>
+                <td>11 ans</td>
+                <td>Football</td>
+              </tr>
+              <tr>
+                <td>Lucas</td>
+                <td>12 ans</td>
+                <td>Basket</td>
+              </tr>
+              <tr>
+                <td>Tarek</td>
+                <td>11 ans</td>
+                <td>Natation</td>
+              </tr>
+              <tr>
+                <td>Lina</td>
+                <td>12 ans</td>
+                <td>Basket</td>
+              </tr>
+              <tr>
+                <td>Léa</td>
+                <td>11 ans</td>
+                <td>Tennis</td>
+              </tr>
+            </table>
+          </div>
+          <div class="feuille">
+            <table>
+              <tr>
+                <td>Christophe</td>
+                <td>12 ans</td>
+                <td>Rugby</td>
+              </tr>
+              <tr>
+                <td>Nina</td>
+                <td>10 ans</td>
+                <td>Basket</td>
+              </tr>
+              <tr>
+                <td>Hélène</td>
+                <td>12 ans</td>
+                <td>Football</td>
+              </tr>
+              <tr>
+                <td>Assia</td>
+                <td>12 ans</td>
+                <td>Tennis</td>
+              </tr>
+              <tr>
+                <td>Elias</td>
+                <td>11 ans</td>
+                <td>Football</td>
+              </tr>
+              <tr>
+                <td>Hugo</td>
+                <td>13 ans</td>
+                <td>Tennis</td>
+              </tr>
+              <tr>
+                <td>Emma</td>
+                <td>10 ans</td>
+                <td>Natation</td>
+              </tr>
+              <tr>
+                <td>Basile</td>
+                <td>11 ans</td>
+                <td>Rugby</td>
+              </tr>
+            </table>
+          </div>
+          <div class="feuille">
+            <table>
+              <tr>
+                <td>Sirine</td>
+                <td>10 ans</td>
+                <td>Basket</td>
+              </tr>
+              <tr>
+                <td>Jules</td>
+                <td>13 ans</td>
+                <td>Football</td>
+              </tr>
+              <tr>
+                <td>Sami</td>
+                <td>11 ans</td>
+                <td>Rugby</td>
+              </tr>
+              <tr>
+                <td>Alice</td>
+                <td>12 ans</td>
+                <td>Natation</td>
+              </tr>
+              <tr>
+                <td>Rayan</td>
+                <td>12 ans</td>
+                <td>Tennis</td>
+              </tr>
+              <tr>
+                <td>Chimène</td>
+                <td>11 ans</td>
+                <td>Basket</td>
+              </tr>
+              <tr>
+                <td>Noam</td>
+                <td>12 ans</td>
+                <td>Natation</td>
+              </tr>
+              <tr>
+                <td>Lola</td>
+                <td>12 ans</td>
+                <td>Football</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <ol type="a">
+          <li>Réaliser un tableau à deux lignes tel que celui commencé ci-dessous et le compléter.<br>
+          <table class="DebutTable">
+            <tr>
+              <th>Sport favori</th>
+              <td>Tennis</td>
+              <td>Football</td>
+            </tr>
+            <tr>
+              <th>Nombre d'élèves</th>
+              <td>5</td>
+              <td></td>
+            </tr>
+          </table>
+          </li>
+          <li>
+            De la même façon, réaliser un tableau à deux colonnes donnant le nombre de filles et le nombres de garçons de cette classe.
+          </li>
+        </ol>
+      </li>
+      <li>
+        On reprend les résultats du sondage présenté à la question 1.
+        <ol type="a">
+          <li>Réaliser un tableau à double entrée tel que celui commencé ci-dessous et le compléter.<br>
+            <table class="DebutTable">
+              <tr>
+                <td style="border: none;"></td>
+                <td>Tennis</td>
+                <td>Football</td>
+              </tr>
+              <tr>
+                <th>Nombre de filles</th>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Nombre de garçons</th>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </li>
+          <li>
+            Quels sont les avantages et les inconvénients de ce tableau comparés à deux des tableaux de la question 1 ?
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </p>
+
+  <h1>Organisation des données :</h1>
+      <div class="definition">
+        Les <span class="CRed">tableaux</span> permettent de rassembler un grand nombre de données et de les présenter de façon organisé. Il en existe deux types :
+        <ul>
+          <li>A simple entré</li>
+          <li>A double entrés</li>
+        </ul>
+      </div>
+      <p class="exemple">Exemples :</p>
+      <p>
+        Tableau à simple entrée (Population en 2013) :
+      </p>
+      <table class="tableau_simple">
+        <tr>
+          <th>Ville</th>
+          <td>Paris</td>
+          <td>Marseille</td>
+          <td>Lyon</td>
+          <td>Toulouse</td>
+        </tr>
+        <tr>
+          <th>Population</th>
+          <td>2 229 621</td>
+          <td>855 393</td>
+          <td>500 715</td>
+          <td>458 298</td>
+        </tr>
+      </table>
+
+      <p>Tableau à double entrée (Résultats des JO de 2016):</p>
+      <table class="tableau_double">
+        <tr>
+          <th class="crossed">
+            <div style="text-align: right;">
+              Médaille
+            </div>
+            <div style="text-align: left;">
+              Pays
+            </div>
+          </th>
+          <th>Or</th>
+          <th>Argent</th>
+          <th>Bronze</th>
+        </tr>
+        <tr>
+          <th>Russie</th>
+          <td>13</td>
+          <td>11</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <th>Norvège</th>
+          <td>11</td>
+          <td>5</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <th>Canada</th>
+          <td>10</td>
+          <td>10</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <th>Etats-Unis</th>
+          <td>9</td>
+          <td>7</td>
+          <td>12</td>
+        </tr>
+      </table>
+  <h1>Représentation graphique :</h1>
+      <h2>Diagramme en bâtons :</h2>
+          <div class="definition">
+            Dans un diagramme en bâtons, la hauteur des batôns est proportionnelle à la quantité représentée.
+          </div>
+          <div class="flexobject">
+            <div id="baton1" style="flex: 1 1 5cm;"></div>
+            <div style="flex: 1 1 5cm;">
+              Diagramme en bâtons de la répartition de la population de la france et des pays voisin en 2018.
+            </div>
+          </div>
+          <p class="remarque">Remarque :</p>
+          <ul><li>Ce type de diagramme permet de représenter un tableau à simple entrée</li></ul>
+      <h2>Diagramme circulaire :</h2>
+          <div class="definition">
+            Dans un diagramme circulaire, la taille des sections est proportionnelle à la quantité représentée.
+          </div>
+          <div class="flexobject">
+            <div id="circulaire1" style="flex: 1 1 5cm;"></div>
+            <div style="flex: 1 1 5cm;">
+              Diagramme circulaire de la population mondiale par continent en 2022.<br>
+              Ici on peut voir que c'est l'Asie qui regroupe la plus grande partie de la population mondiale.
+            </div>
+          </div>
+          <p class="remarque">Remarque :</p>
+          <ul><li>Ce type de diagramme permet de représenter un tableau à simple entrée</li></ul>
+      <h2>Diagramme cartésien :</h2>
+          <div class="definition">
+            Dans un diagramme cartésien, on représente les valeur par des points relier entre-eux.
+            la position des points est définit par deux grandeur qui évolue entre-elles.
+          </div>
+          <div class="flexobject">
+            <div id="cartesien1" style="flex: 1 1 5cm;"></div>
+            <div style="flex: 1 1 5cm;">
+              Diagramme cartésien montrant l'évolution de la vitesse d'Usain Bolt en fonction de la distance parcourue en 2009 sur 100m.<br>
+              On peut lire par exemple que à 30m, sa vitesse était de 11 m/s.
+            </div>
+          </div>
+          <p class="remarque">Remarque :</p>
+          <ul><li>On utilise souvent ce type de diagramme pour représenter l'évolution d'une grandeur en fonction du temps.</li></ul>
 
 
 
