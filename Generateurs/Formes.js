@@ -1222,6 +1222,7 @@ function menu_changed()
 	document.getElementById("param_solide").classList.add("hiddenparam")
 	document.getElementById("object_repere").classList.add("hiddenparam")
 	document.getElementById("object_axe").classList.add("hiddenparam")
+	document.getElementById("object_quadrillage").classList.add("hiddenparam")
 	document.getElementById("object_solide").classList.add("hiddenparam")
 	let type = document.getElementById("gen_type").selectedIndex;
 	if (type == 0)

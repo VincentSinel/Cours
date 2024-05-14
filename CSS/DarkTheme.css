@@ -30,6 +30,8 @@ body{
 	font-family: var(--TexteFont);
 	border: var(--PanelBackHoverMenu);
 	font-weight: bold;
+	display: flex;
+	flex-direction: column;
 }
 
 .regenerate{
