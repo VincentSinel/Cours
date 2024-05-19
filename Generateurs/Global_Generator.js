@@ -1047,8 +1047,6 @@ function Quadrillage(paper, data)
 	{
 		var x_s = c_size_x * 1.0 / c_int_hor_nbr;
 		var y_s = c_size_y * 1.0 / c_int_ver_nbr;
-		var start = 1;
-		if (q_points) start = 0;
 		
 		for (let i = 0; i <= c_hor_nbr * c_int_hor_nbr; i++) 
 		{
