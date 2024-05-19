@@ -119,6 +119,8 @@
     {
       // set the height of the iframe as 
       // the height of the iframe content
+      if (frame.contentWindow.document.documentURI == "about:blank")
+        return;
       frame.style.height = 
       frame.contentWindow.document.body.scrollHeight + 120 + 'px';
       
@@ -134,6 +136,8 @@
     {
       // set the height of the iframe as 
       // the height of the iframe content
+      if (frame.contentWindow.document.documentURI == "about:blank")
+        return;
       frame.style.height = 
       frame.contentWindow.document.body.scrollHeight + 120 + 'px';
       
