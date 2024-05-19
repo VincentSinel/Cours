@@ -1028,6 +1028,7 @@ function Quadrillage(paper, data)
 	let c_ver_nbr = data["c_ver_nbr"];
 	let c_size_x = data["c_size_x"];
 	let c_size_y = data["c_size_y"];
+	let q_points = data["q_points"];
 	let q_line_color = data["q_line_color"];
 	let q_line_stroke = data["q_line_stroke"];
 	let q_int = data["q_int"];
@@ -1046,67 +1047,88 @@ function Quadrillage(paper, data)
 	{
 		var x_s = c_size_x * 1.0 / c_int_hor_nbr;
 		var y_s = c_size_y * 1.0 / c_int_ver_nbr;
-		for (let x = 0; x < c_hor_nbr; x++) 
+		var start = 1;
+		if (q_points) start = 0;
+		
+		for (let i = 0; i <= c_hor_nbr * c_int_hor_nbr; i++) 
 		{
-			for (let y = 0; y < c_ver_nbr; y++) 
-			{
-				for (let i = 1; i < c_int_hor_nbr; i++) {
-
-					element = draw_line(paper, 
-						Gen_Margin + 5 + x * c_size_x + i * x_s, Gen_Margin + 5 + y * c_size_y, 
-						Gen_Margin + 5 + x * c_size_x + i * x_s, Gen_Margin + 5 + (y+1) * c_size_y);
-					element.attr(
-						{
-							stroke: q_int_line_color,
-							"stroke-width": q_int_line_stroke,
-							"stroke-linecap": "round",
-							"stroke-linejoin": "round"
-						})
-				}
-
-				for (let j = 1; j < c_int_ver_nbr; j++) {
-					element = draw_line(paper, 
-						Gen_Margin + 5 + x * c_size_x, Gen_Margin + 5 + y * c_size_y + j * y_s, 
-						Gen_Margin + 5 + (x+1) * c_size_x, Gen_Margin + 5 + y * c_size_y + j * y_s);
-					element.attr(
-						{
-							stroke: q_int_line_color,
-							"stroke-width": q_int_line_stroke,
-							"stroke-linecap": "round",
-							"stroke-linejoin": "round"
-						})
-				}
-			}
+			if (!q_points && i % c_int_hor_nbr == 0) continue;
+			element = draw_line(paper, 
+				Gen_Margin + 5 + i * x_s, Gen_Margin + 5, 
+				Gen_Margin + 5 + i * x_s, Canvas_height - Gen_Margin - 5);
+			element.attr(
+				{
+					stroke: q_int_line_color,
+					"stroke-width": q_int_line_stroke,
+					"stroke-linecap": "round",
+					"stroke-linejoin": "round"
+				})
+		}
+		for (let i = 0; i <= c_ver_nbr * c_int_ver_nbr; i++) 
+		{
+			if (!q_points && i % c_int_ver_nbr == 0) continue;
+			element = draw_line(paper, 
+				Gen_Margin + 5, Gen_Margin + 5 + i * y_s, 
+				Canvas_width - Gen_Margin - 5, Gen_Margin + 5 + i * y_s);
+			element.attr(
+				{
+					stroke: q_int_line_color,
+					"stroke-width": q_int_line_stroke,
+					"stroke-linecap": "round",
+					"stroke-linejoin": "round"
+				})
 		}
 	}
 
-	for (let i = 0; i <= c_hor_nbr; i++) 
+	if (q_points)
 	{
-		element = draw_line(paper, 
-			Gen_Margin + 5 + i * c_size_x, Gen_Margin + 5, 
-			Gen_Margin + 5 + i * c_size_x, Canvas_height - Gen_Margin - 5);
-		element.attr(
+		for (let i = 0; i <= c_hor_nbr; i++) 
+		{
+			for (let j = 0; j <= c_ver_nbr; j++) 
 			{
-				stroke: q_line_color,
-				"stroke-width": q_line_stroke,
-				"stroke-linecap": "round",
-				"stroke-linejoin": "round"
+				element = paper.circle(
+					Gen_Margin + 5 + i * c_size_x,
+					Gen_Margin + 5 + j * c_size_y,
+					q_line_stroke / 2.0
+				)
+				element.attr(
+					{
+						fill: q_line_color,
+					}
+				)
 			}
-		)
+		}
 	}
-	for (let i = 0; i <= c_ver_nbr; i++) 
+	else
 	{
-		element = draw_line(paper, 
-			Gen_Margin + 5, Gen_Margin + 5 + i * c_size_y, 
-			Canvas_width - Gen_Margin - 5, Gen_Margin + 5 + i * c_size_y);
-		element.attr(
-			{
-				stroke: q_line_color,
-				"stroke-width": q_line_stroke,
-				"stroke-linecap": "round",
-				"stroke-linejoin": "round"
-			}
-		)
+		for (let i = 0; i <= c_hor_nbr; i++) 
+		{
+			element = draw_line(paper, 
+				Gen_Margin + 5 + i * c_size_x, Gen_Margin + 5, 
+				Gen_Margin + 5 + i * c_size_x, Canvas_height - Gen_Margin - 5);
+			element.attr(
+				{
+					stroke: q_line_color,
+					"stroke-width": q_line_stroke,
+					"stroke-linecap": "round",
+					"stroke-linejoin": "round"
+				}
+			)
+		}
+		for (let i = 0; i <= c_ver_nbr; i++) 
+		{
+			element = draw_line(paper, 
+				Gen_Margin + 5, Gen_Margin + 5 + i * c_size_y, 
+				Canvas_width - Gen_Margin - 5, Gen_Margin + 5 + i * c_size_y);
+			element.attr(
+				{
+					stroke: q_line_color,
+					"stroke-width": q_line_stroke,
+					"stroke-linecap": "round",
+					"stroke-linejoin": "round"
+				}
+			)
+		}
 	}
 
     
@@ -1224,7 +1246,6 @@ function draw_fleche(type = 0, px, py, dx, dy, size)
 		default:
 			break;
 	}
-
 }
 
 }

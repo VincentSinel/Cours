@@ -1479,6 +1479,7 @@ function Draw_Quadrillage(data)
 	data["q_line_color"] = document.getElementById("q_line_color").value;
 	data["q_line_stroke"] = document.getElementById("q_line_stroke").valueAsNumber;
 	data["q_int"] = document.getElementById("q_int").checked;
+	data["q_points"] = document.getElementById("q_points").checked;
 	data["c_int_hor_nbr"] = document.getElementById("c_int_hor_nbr").valueAsNumber;
 	data["c_int_ver_nbr"] = document.getElementById("c_int_ver_nbr").valueAsNumber;
 	data["q_int_line_color"] = document.getElementById("q_int_line_color").value;

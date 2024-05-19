@@ -231,6 +231,8 @@
 							<input id="q_line_stroke" type="number" value="2" step="1" min="1" onchange="Regenerate()">
 							<label>Couleur:</label>
 							<input id="q_line_color" type="color" value="#000000" onchange="Regenerate()">
+							<input id="q_points" type="checkbox" style="width: auto;" onchange="Regenerate()">
+							<label for="q_points" style="width: auto;">Afficher uniquement les points d'intersection du quadrillage.</label><br>
 						</div>
 					</div>
 					<div class="formemenu show">
@@ -239,9 +241,9 @@
 							<input id="q_int" type="checkbox" style="width: auto;" onchange="Regenerate()">
 							<label for="q_int" style="width: auto;">Activer le quadrillage interne</label><br>
 							<label>Nombre de carreau horizontal :</label>
-							<input id="c_int_hor_nbr" type="number" value="1" step="1" min="1" onchange="Regenerate()">
+							<input id="c_int_hor_nbr" type="number" value="1" step="1" min="0" onchange="Regenerate()">
 							<label>Nombre de carreau vertical :</label>
-							<input id="c_int_ver_nbr" type="number" value="4" step="1" min="1" onchange="Regenerate()">
+							<input id="c_int_ver_nbr" type="number" value="4" step="1" min="0" onchange="Regenerate()">
 							<label>Epaisseur:</label>
 							<input id="q_int_line_stroke" type="number" value="1" step="1" min="1" onchange="Regenerate()">
 							<label>Couleur:</label>
