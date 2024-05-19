@@ -245,7 +245,7 @@ nav{
   bottom: 0px;
   left: 0;
   position: relative;
-  height: calc(100% - 36.8px);
+  height: calc(100% - 42.6px);
   scrollbar-width: thin;          /* "auto" or "thin" */
   scrollbar-color: var(--PanelBackText) transparent;   /* scroll thumb and track */
 }
@@ -362,7 +362,8 @@ nav::-webkit-scrollbar-thumb {
 	  left: 0;
 	}
 	.aside {
-	  width: calc(var(--NavBarWidth) - 40px);
+	  max-width: calc(var(--NavBarWidth) - 40px);
+	  width: calc(100% - 40px);
 	  left: calc(40px - var(--NavBarWidth));
 	  top: calc(2 * var(--HeaderBarHeight));
 	}
@@ -372,6 +373,7 @@ nav::-webkit-scrollbar-thumb {
 	.container {
 	  margin-left: 0;
 	  top: calc(2 * var(--HeaderBarHeight));
+    min-height: calc(100% - 2 * var(--HeaderBarHeight));
 	}
 	/* .menuprincipale{
 	} */
@@ -398,21 +400,16 @@ nav::-webkit-scrollbar-thumb {
     top: var(--HeaderBarHeight);
     left: 0;
   }
-  .aside {
-	  max-width: calc(var(--NavBarWidth) - 40px);
-	  width: calc(100% - 40px);
-	  left: calc(40px - var(--NavBarWidth));
-    top: calc(2 * var(--HeaderBarHeight));
-  }
   .asideshow{
     left: 0px;
   }
   .container {
     margin-left: 0;
     top: calc(2 * var(--HeaderBarHeight));
+    min-height: calc(100% - 2 * var(--HeaderBarHeight));
   }
   .secret_connect{
-	  top: calc(2 *var(--HeaderBarHeight) + 5px);
+	  top: calc(2 * var(--HeaderBarHeight) + 5px);
   }
   /* .menuprincipale{
   } */
