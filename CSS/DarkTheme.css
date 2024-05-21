@@ -243,7 +243,11 @@ body{
 	justify-content: space-between;
 	align-items: center;
 }
-.flexparameters input, select{
+.flexparameters input{
+	max-width: 50%;
+	flex: 1 1 30%;
+}
+.flexparameters select{
 	max-width: 50%;
 	flex: 1 1 30%;
 }
