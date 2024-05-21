@@ -158,7 +158,6 @@ body{
 }
 
 .formemenu{
-	background-color: var(--PanelBackActive);
 	transition: .4s all ease;
 	height: 28px;
 	overflow-y: hidden;
@@ -171,9 +170,10 @@ body{
 	user-select: none;	
 }
 .formemenu span{
-	padding: 5px 5px;
+	background-color: var(--PanelBackActive);
+	padding: 2px 2px;
 	display: inline-block;
-	height: 28px;
+	height: 24px;
 	width: 100%;
 }
 .formemenu span:hover{
@@ -186,6 +186,9 @@ body{
 	padding-left: 20px; 
 	padding-right: 5px; 
 	padding-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
 }
 .formemenu button{
 	text-align: center;
@@ -230,8 +233,35 @@ body{
 }
 
 .hiddenparam{
-	display: none;
+	display: none !important;
 	height: 0px;
+}
+
+.flexparameters{
+	display: flex;
+	gap: 5px;
+	justify-content: space-between;
+	align-items: center;
+}
+.flexparameters input, select{
+	max-width: 50%;
+	flex: 1 1 30%;
+}
+.subsection{
+	padding-left: 5px;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	border-left: solid 1px var(--PanelBackTextDisabled);
+}
+
+hr{
+	background-color: var(--PanelBackTextDisabled);
+	color: var(--PanelBackTextDisabled);
+	height: 0px;
+	width: 100%;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 @media only screen and (max-width:1220px) {

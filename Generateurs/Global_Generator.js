@@ -1,4 +1,28 @@
-
+// Version 4.0
+const pSBC=(p,c0,c1,l)=>{
+	let r,g,b,P,f,t,h,i=parseInt,m=Math.round,a=typeof(c1)=="string";
+	if(typeof(p)!="number"||p<-1||p>1||typeof(c0)!="string"||(c0[0]!='r'&&c0[0]!='#')||(c1&&!a))return null;
+	if(!this.pSBCr)this.pSBCr=(d)=>{
+			let n=d.length,x={};
+			if(n>9){
+					[r,g,b,a]=d=d.split(","),n=d.length;
+					if(n<3||n>4)return null;
+					x.r=i(r[3]=="a"?r.slice(5):r.slice(4)),x.g=i(g),x.b=i(b),x.a=a?parseFloat(a):-1
+			}else{
+					if(n==8||n==6||n<4)return null;
+					if(n<6)d="#"+d[1]+d[1]+d[2]+d[2]+d[3]+d[3]+(n>4?d[4]+d[4]:"");
+					d=i(d.slice(1),16);
+					if(n==9||n==5)x.r=d>>24&255,x.g=d>>16&255,x.b=d>>8&255,x.a=m((d&255)/0.255)/1000;
+					else x.r=d>>16,x.g=d>>8&255,x.b=d&255,x.a=-1
+			}return x};
+	h=c0.length>9,h=a?c1.length>9?true:c1=="c"?!h:false:h,f=this.pSBCr(c0),P=p<0,t=c1&&c1!="c"?this.pSBCr(c1):P?{r:0,g:0,b:0,a:-1}:{r:255,g:255,b:255,a:-1},p=P?p*-1:p,P=1-p;
+	if(!f||!t)return null;
+	if(l)r=m(P*f.r+p*t.r),g=m(P*f.g+p*t.g),b=m(P*f.b+p*t.b);
+	else r=m((P*f.r**2+p*t.r**2)**0.5),g=m((P*f.g**2+p*t.g**2)**0.5),b=m((P*f.b**2+p*t.b**2)**0.5);
+	a=f.a,t=t.a,f=a>=0||t>=0,a=f?a<0?t:t<0?a:a*P+t*p:0;
+	if(h)return"rgb"+(f?"a(":"(")+r+","+g+","+b+(f?","+m(a*1000)/1000:"")+")";
+	else return"#"+(4294967296+r*16777216+g*65536+b*256+(f?m(a*255):0)).toString(16).slice(1,f?undefined:-2)
+}
 
 
 { // Objects
@@ -50,12 +74,14 @@
         let index = 0
         let inside = false
         x = Math.max(start, xs)
-		try {
-			let y = Function('"use strict";return (' + formule + ')')()
-		} catch (error) {
-			alert("La formule entrée n'est pas correct : " + error)
-			return;
-		}
+				let y;
+				try {
+					y = Function('"use strict";return (' + formule + ')')()
+				} catch (error) {
+					alert("La formule entrée n'est pas correct : " + error)
+					return;
+				}
+
         if (y > ys && y < ye)
         {
             points[index].push({
@@ -265,11 +291,14 @@
         let stroke = data["stroke"];
         let strokecolor = data["strokecolor"];
         let dashstyle = data["dashstyle"];
+
+
+				console.log(context)
     
         let points = [];
         for (var i = 0; i < points_not.length; i++) {
-            let x = points_not.x
-            let y = points_not.y
+            let x = points_not[i].x
+            let y = points_not[i].y
             points.push({
                 x: Gen_Margin + 5 + (x - xs)/(xe - xs) * width, 
                 y: Canvas_height - (Gen_Margin + 5 + (y - ys)/(ye - ys) * height)});
@@ -387,7 +416,7 @@
         )
     }
 
-	function Segment(paper, context, data)
+		function Segment(paper, context, data)
     {
         let width = context["width"];
         let height = context["height"];
@@ -399,10 +428,10 @@
         let pys = data["psy"];
         let pxe = data["pex"];
         let pye = data["pey"];
-		let style_s = data["ss"];
-		let style_e = data["se"];
-		let style_s_size = data["sss"];
-		let style_e_size = data["ses"];
+				let style_s = data["ss"];
+				let style_e = data["se"];
+				let style_s_size = data["sss"];
+				let style_e_size = data["ses"];
         let stroke = data["stroke"];
         let strokecolor = data["strokecolor"];
         let dashstyle = data["dashstyle"];
@@ -412,24 +441,24 @@
         let dys = Canvas_height - (Gen_Margin + 5 + (pys - ys)/(ye - ys) * height);
         let dye = Canvas_height - (Gen_Margin + 5 + (pye - ys)/(ye - ys) * height);
     
-		let dx1 = 0; let dy1 = 0;
-		let dx2 = 0; let dy2 = 0;
-		if (style_s == 2 || style_s == 5)
-		{
-			dx = dxe - dxs;
-			dy = dye - dys;
-			let l = Math.sqrt(dx * dx + dy * dy);
-			dx1 = dx / l * style_s_size / 10.0;
-			dy1 = dy / l * style_s_size / 10.0;
-		}
-		if (style_e == 2 || style_e == 5)
-		{
-			dx = dxs - dxe;
-			dy = dys - dye;
-			let l = Math.sqrt(dx * dx + dy * dy);
-			dx2= dx / l * style_s_size / 10.0;
-			dy2 = dy / l * style_s_size / 10.0;
-		}
+				let dx1 = 0; let dy1 = 0;
+				let dx2 = 0; let dy2 = 0;
+				if (style_s == 2 || style_s == 5)
+				{
+					dx = dxe - dxs;
+					dy = dye - dys;
+					let l = Math.sqrt(dx * dx + dy * dy);
+					dx1 = dx / l * style_s_size / 10.0;
+					dy1 = dy / l * style_s_size / 10.0;
+				}
+				if (style_e == 2 || style_e == 5)
+				{
+					dx = dxs - dxe;
+					dy = dys - dye;
+					let l = Math.sqrt(dx * dx + dy * dy);
+					dx2= dx / l * style_s_size / 10.0;
+					dy2 = dy / l * style_s_size / 10.0;
+				}
         let line = draw_line(paper, dxs + dx1, dys + dy1, dxe + dx2, dye + dy2);
         line.attr(
             {
@@ -1019,10 +1048,10 @@ function AxeGradue(paper, data)
 
 function Quadrillage(paper, data)
 {
-    let Canvas_width = data["Canvas_width"];
-    let Canvas_height = data["Canvas_height"];
-    let Gen_Margin = data["Gen_Margin"];
-    let objects = data["objects"];
+	let Canvas_width = data["Canvas_width"];
+	let Canvas_height = data["Canvas_height"];
+	let Gen_Margin = data["Gen_Margin"];
+	let objects = data["objects"];
 
 	let c_hor_nbr = data["c_hor_nbr"];
 	let c_ver_nbr = data["c_ver_nbr"];
@@ -1087,11 +1116,12 @@ function Quadrillage(paper, data)
 				element = paper.circle(
 					Gen_Margin + 5 + i * c_size_x,
 					Gen_Margin + 5 + j * c_size_y,
-					q_line_stroke / 2.0
+					q_line_stroke
 				)
 				element.attr(
 					{
 						fill: q_line_color,
+						stroke: "none",
 					}
 				)
 			}
@@ -1109,7 +1139,7 @@ function Quadrillage(paper, data)
 					stroke: q_line_color,
 					"stroke-width": q_line_stroke,
 					"stroke-linecap": "round",
-					"stroke-linejoin": "round"
+					"stroke-linejoin": "round",
 				}
 			)
 		}
@@ -1139,9 +1169,133 @@ function Quadrillage(paper, data)
 
 }
 
-function Solide(paper, data)
+function Solide_PaveDroit(paper, data)
 {
+	let Canvas_width = data["Canvas_width"];
+	let Canvas_height = data["Canvas_height"];
+
+	let Gen_Margin = data["Gen_Margin"];
+	let objects = data["objects"];
+
+	let sol_pavdrt_L = data["sol_pavdrt_L"]
+	let sol_pavdrt_H = data["sol_pavdrt_H"]
+	let sol_pavdrt_P = data["sol_pavdrt_P"]
+	let sol_pavdrt_line_stroke = data["sol_pavdrt_line_stroke"]
+	let sol_pavdrt_line_color = data["sol_pavdrt_line_color"]
+	let sol_pavdrt_show_hide = data["sol_pavdrt_show_hide"]
+	let sol_pavdrt_hide_style = data["sol_pavdrt_hide_style"]
+	let sol_pavdrt_hide_color = data["sol_pavdrt_hide_color"]
+	let sol_pavdrt_hide_stroke = data["sol_pavdrt_hide_stroke"]
+	let sol_pavdrt_fill = data["sol_pavdrt_fill"]
+	let sol_pavdrt_fill_shadow = data["sol_pavdrt_fill_shadow"]
+	let sol_pavdrt_fill_color = data["sol_pavdrt_fill_color"]
+	let sol_pavdrt_fill_color_alpha = data["sol_pavdrt_fill_color_alpha"]
+
+	let sqrt2p = sol_pavdrt_P / (Math.SQRT2 * 2.0);
+
+	Canvas_width = Gen_Margin * 2 + sol_pavdrt_L + sqrt2p;
+	Canvas_height = Gen_Margin * 2 + sol_pavdrt_H + sqrt2p;
 	
+	let p1 = {
+		x: Gen_Margin + sqrt2p, 
+		y: Gen_Margin}
+	let p2 = {
+		x: Gen_Margin + sqrt2p + sol_pavdrt_L, 
+		y: Gen_Margin}
+	let p3 = {
+		x: Gen_Margin, 
+		y: Gen_Margin + sqrt2p}
+	let p4 = {
+		x: Gen_Margin + sol_pavdrt_L, 
+		y: Gen_Margin + sqrt2p}
+	let p5 = {
+		x: Gen_Margin + sqrt2p, 
+		y: Gen_Margin + sol_pavdrt_H}
+	let p6 = {
+		x: Gen_Margin + sqrt2p + sol_pavdrt_L, 
+		y: Gen_Margin + sol_pavdrt_H}
+	let p7 = {
+		x: Gen_Margin, 
+		y: Gen_Margin + sqrt2p + sol_pavdrt_H}
+	let p8 = {
+		x: Gen_Margin + sol_pavdrt_L, 
+		y: Gen_Margin + sqrt2p + sol_pavdrt_H}
+
+	if (sol_pavdrt_show_hide)
+	{
+		let style = 
+		{
+				stroke: sol_pavdrt_hide_color,
+				"stroke-width": sol_pavdrt_hide_stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": sol_pavdrt_hide_style,
+		}
+
+
+		let line = draw_line(paper, p5.x, p5.y, p1.x, p1.y);
+		line.attr(style)
+		line = draw_line(paper, p5.x, p5.y, p6.x, p6.y);
+		line.attr(style)
+		line = draw_line(paper, p5.x, p5.y, p7.x, p7.y);
+		line.attr(style)
+	}
+
+	if (sol_pavdrt_fill)
+	{
+		let a = Math.floor(sol_pavdrt_fill_color_alpha * 255).toString(16);
+		console.log(a)
+		let polygone;
+		polygone = draw_polygone(paper, [p4, p3, p7, p8]);
+		polygone.attr( { stroke: "none", "fill": sol_pavdrt_fill_color, "opacity": sol_pavdrt_fill_color_alpha } )
+		
+		polygone = draw_polygone(paper, [p1, p2, p4, p3]);
+		if (sol_pavdrt_fill_shadow)
+			polygone.attr( { stroke: "none", "fill": pSBC(-0.4, sol_pavdrt_fill_color), "opacity": sol_pavdrt_fill_color_alpha } )
+		else
+			polygone.attr( { stroke: "none", "fill": sol_pavdrt_fill_color, "opacity": sol_pavdrt_fill_color_alpha } )
+
+		polygone = draw_polygone(paper, [p2, p4, p8, p6]);
+		if (sol_pavdrt_fill_shadow)
+			polygone.attr( { stroke: "none", "fill": pSBC(-0.8, sol_pavdrt_fill_color), "opacity": sol_pavdrt_fill_color_alpha } )
+		else
+			polygone.attr( { stroke: "none", "fill": sol_pavdrt_fill_color, "opacity": sol_pavdrt_fill_color_alpha } )
+	}
+	
+
+	// Main lines
+	{
+		let style = 
+		{
+				stroke: sol_pavdrt_line_color,
+				"stroke-width": sol_pavdrt_line_stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+		}
+
+		let line = draw_line(paper,p3.x, p3.y, p1.x, p1.y);
+		line.attr(style)
+		line = draw_line(paper,p3.x, p3.y, p4.x, p4.y);
+		line.attr(style)
+		line = draw_line(paper,p3.x, p3.y, p7.x, p7.y);
+		line.attr(style)
+		line = draw_line(paper,p2.x, p2.y, p1.x, p1.y);
+		line.attr(style)
+		line = draw_line(paper,p2.x, p2.y, p4.x, p4.y);
+		line.attr(style)
+		line = draw_line(paper,p2.x, p2.y, p6.x, p6.y);
+		line.attr(style)
+		line = draw_line(paper,p8.x, p8.y, p7.x, p7.y);
+		line.attr(style)
+		line = draw_line(paper,p8.x, p8.y, p6.x, p6.y);
+		line.attr(style)
+		line = draw_line(paper,p8.x, p8.y, p4.x, p4.y);
+		line.attr(style)
+	}
+
+
+	
+	return [Canvas_width, Canvas_height]
 }
 
 }
@@ -1247,3 +1401,4 @@ function draw_fleche(type = 0, px, py, dx, dy, size)
 }
 
 }
+
