@@ -1762,7 +1762,7 @@ function Solide_Pyramide(paper, data)
 {
 	let objects = data["objects"];
 
-	let sol_pyrami_L = data["sol_pyrami_L"]
+	let sol_pyrami_L = data["sol_pyrami_L"] * 2.0
 	let sol_pyrami_H = data["sol_pyrami_H"]
 	let sol_pyrami_P = data["sol_pyrami_P"]
 	let sol_pyrami_F = data["sol_pyrami_F"]
@@ -2234,7 +2234,233 @@ function Solide_Cone(paper, data)
 
 function Solide_Sphere(paper, data)
 {
+	let objects = data["objects"];
 
+	let sol_sphere_R = data["sol_sphere_R"]
+	let sol_sphere_H = sol_sphere_R / 3.0
+	let sol_sphere_line_stroke = data["sol_sphere_line_stroke"]
+	let sol_sphere_line_color = data["sol_sphere_line_color"]
+	let sol_sphere_show_hide = data["sol_sphere_show_hide"]
+	let sol_sphere_hide_style = data["sol_sphere_hide_style"]
+	let sol_sphere_hide_color = data["sol_sphere_hide_color"]
+	let sol_sphere_hide_stroke = data["sol_sphere_hide_stroke"]
+	let sol_sphere_fill = data["sol_sphere_fill"]
+	let sol_sphere_fill_shadow = data["sol_sphere_fill_shadow"]
+	let sol_sphere_fill_color = data["sol_sphere_fill_color"]
+	let sol_sphere_fill_color_alpha = data["sol_sphere_fill_color_alpha"]
+	let sol_sphere_fill_base = data["sol_sphere_fill_base"]
+	let sol_sphere_base_full = data["sol_sphere_base_full"]
+	let sol_sphere_base_stroke = data["sol_sphere_base_stroke"]
+	let sol_sphere_base_color = data["sol_sphere_base_color"]
+	let sol_sphere_base_style = data["sol_sphere_base_style"]
+	let sol_sphere_h = data["sol_sphere_h"]
+	let sol_sphere_h_stroke = data["sol_sphere_h_stroke"]
+	let sol_sphere_h_color = data["sol_sphere_h_color"]
+	let sol_sphere_h_style = data["sol_sphere_h_style"]
+	let sol_sphere_r = data["sol_sphere_r"]
+	let sol_sphere_r_stroke = data["sol_sphere_r_stroke"]
+	let sol_sphere_r_color = data["sol_sphere_r_color"]
+	let sol_sphere_r_style = data["sol_sphere_r_style"]
+	let sol_sphere_ag = data["sol_sphere_ag"]
+	let sol_sphere_ag_stroke = data["sol_sphere_ag_stroke"]
+	let sol_sphere_ag_full = data["sol_sphere_ag_full"]
+	let sol_sphere_ag_color = data["sol_sphere_ag_color"]
+	let sol_sphere_ag_style = data["sol_sphere_ag_style"]
+
+	let ry = Math.floor(sol_sphere_R / 3.0);
+
+	Canvas_width = Gen_Margin * 2 + sol_sphere_R * 2;
+	Canvas_height = Gen_Margin * 2 + sol_sphere_H + ry * 2;
+	
+	paper.setSize(Canvas_width, Canvas_height);
+	paper.clear();
+
+	let c = {x: Canvas_width / 2, y: Gen_Margin + ry}
+
+
+	let style = 
+	{
+			stroke: sol_sphere_line_color,
+			"stroke-width": sol_sphere_line_stroke,
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round",
+	}
+
+	let ellipse = paper.ellipse(c.x, c.y, sol_sphere_R, ry)
+	ellipse.attr(style)
+	c.y += sol_sphere_H
+
+	let line = draw_line(paper, Gen_Margin, Gen_Margin + ry, Gen_Margin, c.y)
+	line.attr(style)
+	line = draw_line(paper, Canvas_width - Gen_Margin, Gen_Margin + ry, Canvas_width - Gen_Margin, c.y)
+	line.attr(style)
+
+	let arc = draw_ellipse_arc(paper, c, 0, 180, sol_sphere_R, ry, false)
+	arc.attr(style)
+
+	if (sol_sphere_fill)
+	{
+		let top_ellipse = paper.ellipse(c.x, c.y - sol_sphere_H, sol_sphere_R, ry)
+		top_ellipse.attr(style)
+		if (sol_sphere_fill_shadow)
+			top_ellipse.attr( { stroke: "none", "fill": pSBC(-0.2, sol_sphere_fill_color), "opacity": sol_sphere_fill_color_alpha } )
+		else
+		top_ellipse.attr( { stroke: "none", "fill": sol_sphere_fill_color, "opacity": sol_sphere_fill_color_alpha } )
+		top_ellipse.toBack();
+
+		let path = "M" + (c.x + sol_sphere_R).toString() + " " + (c.y - sol_sphere_H).toString()
+		path += get_ellipse_arc(c.x, c.y - sol_sphere_H, 0, 180, sol_sphere_R, ry, false)
+		path += " L " + (c.x - sol_sphere_R).toString() + "," + c.y.toString();
+		path += get_ellipse_arc(c.x, c.y, 180, 0, sol_sphere_R, ry, false);
+		path += "Z"
+		let front_face = paper.path(path);
+		if (sol_sphere_fill_shadow)
+		{
+			let c1 = pSBC(-0.8, sol_sphere_fill_color);
+			let grad = "0-" + c1 + "-" + sol_sphere_fill_color + "-" + c1;
+			front_face.attr( { stroke: "none", "fill": grad, 
+			"opacity": sol_sphere_fill_color_alpha } )
+			
+		}
+		else
+			front_face.attr( {"title":"test", stroke: "none", "fill": sol_sphere_fill_color, "opacity": sol_sphere_fill_color_alpha } )
+
+		front_face.toBack();
+		// Hack pour rendre le remplissage bien transparent (non implémenté dans Raphaël.js)
+		document.getElementById("preview").getElementsByTagName("path")[0].setAttribute("style", "opacity:" + sol_sphere_fill_color_alpha.toString())
+	}
+
+	if (sol_sphere_h)
+	{
+		
+		let line = draw_line(paper, c.x, c.y, c.x, c.y - sol_sphere_H)
+		line.attr({
+				stroke: sol_sphere_h_color,
+				"stroke-width": sol_sphere_h_stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": sol_sphere_h_style,
+		})
+		line.toBack();
+	}
+	if (sol_sphere_r)
+	{
+		let x = c.x + sol_sphere_R * Math.cos(Math.PI / 4.0)
+		let y = c.y + ry * Math.sin(Math.PI / 4.0)
+		let line = draw_line(paper, c.x, c.y, x, y)
+		line.attr({
+				stroke: sol_sphere_r_color,
+				"stroke-width": sol_sphere_r_stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": sol_sphere_r_style,
+		})
+		line.toBack()
+	}
+	if (sol_sphere_ag)
+	{
+		let style = {
+				stroke: sol_sphere_ag_color,
+				"stroke-width": sol_sphere_ag_stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": sol_sphere_ag_style,
+		}
+		let x = sol_sphere_R * Math.cos(Math.PI / 4.0)
+		let y = ry * Math.sin(Math.PI / 4.0)
+		let coef = Math.sqrt(x*x + y*y);
+		let p1 = {x: c.x + 20 * x / coef, y: c.y + 20 * y /coef}
+		let p2 = {x: c.x + 20 * x / coef, y: c.y + 20 * y /coef-20}
+		let p3 = {x: c.x , y: c.y -20}
+		if (sol_sphere_ag_full)
+		{
+			let poly = draw_polygone(paper, [p1,p2,p3,c])
+			poly.attr({ stroke: "none", "fill": sol_sphere_ag_color })
+			poly.toBack();
+		}
+		else
+		{
+			let line = draw_line(paper, p1.x, p1.y, p2.x, p2.y)
+			line.attr(style)
+			line.toBack()
+			line = draw_line(paper, p3.x, p3.y, p2.x, p2.y)
+			line.attr(style)
+			line.toBack()
+		}
+	}
+
+
+	if (sol_sphere_show_hide)
+	{
+		let arc2 = draw_ellipse_arc(paper, c, 180, 360, sol_sphere_R, ry, false)
+		arc2.attr({
+				stroke: sol_sphere_hide_color,
+				"stroke-width": sol_sphere_hide_stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": sol_sphere_hide_style,
+			})
+			arc2.toBack();
+	}
+
+	if (sol_sphere_fill_base)
+	{
+		if (sol_sphere_base_full)
+		{
+			let ellipse = paper.ellipse(c.x, c.y, sol_sphere_R, ry)
+			ellipse.attr({ stroke: "none", "fill": sol_sphere_base_color })
+			ellipse.toBack();
+		}
+		else
+		{
+			let style = 
+			{
+					stroke: sol_sphere_base_color,
+					"stroke-width": sol_sphere_base_stroke,
+					"stroke-linecap": "round",
+					"stroke-linejoin": "round",
+					"stroke-dasharray": sol_sphere_base_style,
+			}
+
+			let dt = 0;
+			let count = 0;
+			let b = Gen_Margin * 2 + sol_sphere_H;
+
+			let sr1 = sol_sphere_R * sol_sphere_R;
+			let sr2 = ry * ry;
+
+			let db = sol_sphere_base_stroke * 4.0 * Math.SQRT2;
+
+			while (dt < Canvas_width && count < 500)
+			{
+
+				let A = 2.0 * (sr2 + sr1)
+				let B = -2*(c.x * sr2 + sr1*(b - c.y))
+				let C = sr2*c.x*c.x+sr1*(b - c.y)*(b-c.y) - sr1*sr2;
+
+				let delta = B*B - 2*A*C;
+				if (delta > 0)
+				{
+					let x1 = (-B + Math.sqrt(delta)) / A;
+					let x2 = (-B - Math.sqrt(delta)) / A;
+					let y1 = b - x1;
+					let y2 = b - x2;
+					let line = draw_line(paper, x1, y1, x2, y2)
+					line.attr(style)
+					line.toBack();
+				}
+
+				b += db;
+				dt += db * Math.SQRT1_2;
+
+				count += 1;
+			}
+		}
+	}
+
+
+	
+	return [Canvas_width, Canvas_height]
 }
 
 }
