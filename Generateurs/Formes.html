@@ -78,7 +78,7 @@
 				<option value="type1">Repère gradué</option>
 				<option value="type2">Axe gradué</option>
 				<option value="type3">Quadrillage</option>
-				<!-- <option value="type4">Solide</option> -->
+				<option value="type4">Solide</option>
 			</select>
 			<!-- <button class="regenerate" onclick="Regenerate()">Regénérer</button> -->
 			<p style="text-align: center;">Paramètres</p>
@@ -361,6 +361,11 @@
 								<input id="q_line_color" type="color" value="#000000" oninput="Regenerate()">
 							</div>
 							<hr>
+							<div class="flexparameters">
+								<label>Style de trait :</label>
+								<input id="q_line_style" type="text" oninput="Regenerate();">
+							</div>
+							<hr>
 							<div>
 								<input id="q_points" type="checkbox" style="width: auto;" oninput="Regenerate()">
 								<label for="q_points" style="width: auto;">Afficher uniquement les points d'intersection du quadrillage.</label><br>
@@ -394,6 +399,10 @@
 									<label>Couleur:</label>
 									<input id="q_int_line_color" type="color" value="#75FFFF" oninput="Regenerate()">
 								</div>
+								<div class="flexparameters">
+									<label>Style de trait :</label>
+									<input id="q_int_line_style" type="text" oninput="Regenerate();">
+								</div>
 							</div>
 						</div>
 					</div>
@@ -406,8 +415,9 @@
 						<option value="type3">Cylindre</option>
 						<option value="type4">Pyramide régulière</option>
 						<option value="type5">Cône</option>
-						<option value="type6">Sphère</option>
+						<!-- <option value="type6">Sphère</option> -->
 					</select>
+					<!-- Parametres pavé droit -->
 					<div id="sol_pavdrt_param" class="hiddenparam">
 						<div class="formemenu show">
 							<span>Principaux</span>
@@ -447,16 +457,39 @@
 								</div>
 								<div id="sol_pavdrt_show_hide_section" class="subsection">
 									<div class="flexparameters">
-										<label>Style arrêtes cachés&#8239;:</label>
+										<label>Style&#8239;:</label>
 										<input id="sol_pavdrt_hide_style" type="text" value="--" oninput="Regenerate();">
 									</div>
 									<div class="flexparameters">
-										<label>Couleur arrêtes cachés&#8239;:</label>
+										<label>Couleur&#8239;:</label>
 										<input id="sol_pavdrt_hide_color" type="color" value="#888888" oninput="Regenerate()">
 									</div>
 									<div class="flexparameters">
-										<label>Epaisseur arrêtes cachés&#8239;:</label>
+										<label>Epaisseur&#8239;:</label>
 										<input id="sol_pavdrt_hide_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input id="sol_pavdrt_fill_base" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_pavdrt_fill_base')">
+									<label for="sol_pavdrt_fill_base">Remplir la base.</label>
+								</div>
+								<div id="sol_pavdrt_fill_base_section" class="subsection hiddenparam">
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_pavdrt_base_color" type="color" value="#FF0000" oninput="Regenerate()">
+									</div>
+									<div>
+										<input id="sol_pavdrt_base_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
+										<label for="sol_pavdrt_base_full">Plein.</label>
+									</div>
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_pavdrt_base_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_pavdrt_base_style" type="text" value="" oninput="Regenerate();">
 									</div>
 								</div>
 								<hr>
@@ -481,87 +514,735 @@
 							</div>
 						</div>
 					</div>
+					<!-- Parametres prisme droit -->
 					<div id="sol_prmdrt_param" class="hiddenparam">
 						<div class="formemenu show">
 							<span>Principaux</span>
 							<div class="formemenu_div">
-								<label>Type :</label>
+								<div class="flexparameters">
+									<label>Longueur :</label>
+									<input id="sol_prmdrt_L" type="number" value="150" step="10" min="0" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Hauteur :</label>
+									<input id="sol_prmdrt_H" type="number" value="150" step="10" min="0" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Profondeur :</label>
+									<input id="sol_prmdrt_P" type="number" value="150" step="10" min="0" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Nombre de face :</label>
+									<input id="sol_prmdrt_F" type="number" value="3" step="1" min="3" oninput="Regenerate()">
+								</div>
 								<hr>
 								<div class="flexparameters">
 									<label>Angle de vue :</label>
-									<input id="sol_angle" type="number" value="0" step="5" min="-360" max="360" oninput="Regenerate()">
+									<input id="sol_prmdrt_A" type="number" value="0" step="2" min="-360" max="360" oninput="Regenerate()">
 								</div>
-								<hr>
+							</div>
+						</div>
+						<div class="formemenu show">
+							<span>Rendu</span>
+							<div class="formemenu_div">
 								<div class="flexparameters">
 									<label>Epaisseur:</label>
-									<input id="sol_line_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									<input id="sol_prmdrt_line_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
 								</div>
 								<hr>
 								<div class="flexparameters">
-									<label>Couleur:</label>
-									<input id="sol_line_color" type="color" value="#000000" oninput="Regenerate()">
+									<label>Couleur :</label>
+									<input id="sol_prmdrt_line_color" type="color" value="#000000" oninput="Regenerate()">
 								</div>
 								<hr>
 								<div>
-									<input id="sol_show_hide" type="checkbox" style="width: auto;"  checked oninput="Regenerate(); show_hide_param('sol_show_hide')">
-									<label for="sol_show_hide">Afficher les arrêtes cachés.</label>
+									<input id="sol_prmdrt_show_hide" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_prmdrt_show_hide')">
+									<label for="sol_prmdrt_show_hide">Afficher les arrêtes cachés.</label>
 								</div>
-								<div id="sol_show_hide_section" class="subsection">
+								<div id="sol_prmdrt_show_hide_section" class="subsection">
 									<div class="flexparameters">
-										<label>Style arête caché&#8239;:</label>
-										<input id="sol_hide_style" type="text" value="--" oninput="Regenerate();">
+										<label>Style&#8239;:</label>
+										<input id="sol_prmdrt_hide_style" type="text" value="--" oninput="Regenerate();">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_prmdrt_hide_color" type="color" value="#888888" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_prmdrt_hide_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
 									</div>
 								</div>
 								<hr>
 								<div>
-									<input id="sol_fill" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate(); show_hide_param('sol_fill')">
-									<label for="sol_fill">Remplir les faces.</label>
+									<input id="sol_prmdrt_fill_base" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_prmdrt_fill_base')">
+									<label for="sol_prmdrt_fill_base">Remplir la base.</label>
 								</div>
-								<div id="sol_fill_section" class="subsection hiddenparam">
+								<div id="sol_prmdrt_fill_base_section" class="subsection hiddenparam">
 									<div class="flexparameters">
-										<label>Couleur:</label>
-										<input id="sol_fill_color" type="color" value="#000000" oninput="Regenerate()">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_prmdrt_base_color" type="color" value="#FF0000" oninput="Regenerate()">
+									</div>
+									<div>
+										<input id="sol_prmdrt_base_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
+										<label for="sol_prmdrt_base_full">Plein.</label>
+									</div>
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_prmdrt_base_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_prmdrt_base_style" type="text" value="" oninput="Regenerate();">
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input id="sol_prmdrt_fill" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate(); show_hide_param('sol_prmdrt_fill')">
+									<label for="sol_prmdrt_fill">Remplir les faces.</label>
+								</div>
+								<div id="sol_prmdrt_fill_section" class="subsection hiddenparam">
+									<div>
+										<input id="sol_prmdrt_fill_shadow" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
+										<label for="sol_prmdrt_fill_shadow">Effet 3D.</label>
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_prmdrt_fill_color" type="color" value="#888888" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Opacité&#8239;:</label>
+										<input id="sol_prmdrt_fill_color_alpha" type="range" value="1" min="0" max="1" step="0.1" oninput="Regenerate()">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Parametres cylindre -->
+					<div id="sol_cylind_param" class="hiddenparam">
+						<div class="formemenu">
+							<span>Principaux</span>
+							<div class="formemenu_div">
+								<div class="flexparameters">
+									<label>Rayon :</label>
+									<input id="sol_cylind_R" type="number" value="150" step="10" min="0" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Hauteur :</label>
+									<input id="sol_cylind_H" type="number" value="200" step="10" min="0" oninput="Regenerate()">
+								</div>
+							</div>
+						</div>
+						<div class="formemenu">
+							<span>Rendu</span>
+							<div class="formemenu_div">
+								<div class="flexparameters">
+									<label>Epaisseur:</label>
+									<input id="sol_cylind_line_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Couleur :</label>
+									<input id="sol_cylind_line_color" type="color" value="#000000" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div>
+									<input id="sol_cylind_show_hide" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_cylind_show_hide')">
+									<label for="sol_cylind_show_hide">Afficher les arrêtes cachés.</label>
+								</div>
+								<div id="sol_cylind_show_hide_section" class="subsection">
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_cylind_hide_style" type="text" value="--" oninput="Regenerate();">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_cylind_hide_color" type="color" value="#888888" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_cylind_hide_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input id="sol_cylind_fill_base" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_cylind_fill_base')">
+									<label for="sol_cylind_fill_base">Remplir la base.</label>
+								</div>
+								<div id="sol_cylind_fill_base_section" class="subsection hiddenparam">
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_cylind_base_color" type="color" value="#FF0000" oninput="Regenerate()">
+									</div>
+									<div>
+										<input id="sol_cylind_base_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
+										<label for="sol_cylind_base_full">Plein.</label>
+									</div>
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_cylind_base_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_cylind_base_style" type="text" value="" oninput="Regenerate();">
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input id="sol_cylind_fill" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate(); show_hide_param('sol_cylind_fill')">
+									<label for="sol_cylind_fill">Remplir les faces.</label>
+								</div>
+								<div id="sol_cylind_fill_section" class="subsection hiddenparam">
+									<div>
+										<input id="sol_cylind_fill_shadow" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
+										<label for="sol_cylind_fill_shadow">Effet 3D.</label>
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_cylind_fill_color" type="color" value="#888888" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Opacité&#8239;:</label>
+										<input id="sol_cylind_fill_color_alpha" type="range" value="1" min="0" max="1" step="0.1" oninput="Regenerate()">
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="formemenu show">
-							<span>Indications</span>
+							<span>Information</span>
 							<div class="formemenu_div">
 								<div>
-									<input id="sol_h" type="checkbox" style="width: auto;" oninput="Regenerate()">
-									<label for="sol_h" style="width: auto;">Afficher une hauteur</label>
+									<input id="sol_cylind_h" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_cylind_h')">
+									<label for="sol_cylind_h">Afficher la hauteur centrale.</label>
+								</div>
+								<div id="sol_cylind_h_section" class="subsection">
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_cylind_h_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_cylind_h_color" type="color" value="#8888EE" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_cylind_h_style" type="text" value="--" oninput="Regenerate();">
+									</div>
 								</div>
 								<hr>
 								<div>
-									<input id="sol_r" type="checkbox" style="width: auto;" oninput="Regenerate()">
-									<label for="sol_r" style="width: auto;">Afficher un rayon</label>
+									<input id="sol_cylind_r" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_cylind_r')">
+									<label for="sol_cylind_r">Afficher un rayon.</label>
+								</div>
+								<div id="sol_cylind_r_section" class="subsection">
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_cylind_r_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_cylind_r_color" type="color" value="#CC8888" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_cylind_r_style" type="text" value="--" oninput="Regenerate();">
+									</div>
 								</div>
 								<hr>
-								<div class="flexparameters">
-									<label>Epaisseur:</label>
-									<input id="sol_hr_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+								<div>
+									<input id="sol_cylind_ag" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_cylind_ag')">
+									<label for="sol_cylind_ag">Afficher l'angle droit.</label>
+								</div>
+								<div id="sol_cylind_ag_section" class="subsection">
+									<div>
+										<input id="sol_cylind_ag_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
+										<label for="sol_cylind_ag_full">Plein.</label>
+									</div>
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_cylind_ag_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_cylind_ag_color" type="color" value="#88CC88" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_cylind_ag_style" type="text" value="" oninput="Regenerate();">
+									</div>
 								</div>
 								<hr>
-								<div class="flexparameters">
-									<label>Couleur:</label>
-									<input id="sol_hr_color" type="color" value="#000000" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Style :</label>
-									<input id="sol_hr_style" type="text" value="--" oninput="Regenerate()">
-								</div>
 							</div>
 						</div>
 					</div>
-					<div id="sol_cylind_param" class="hiddenparam">
-					</div>
+					<!-- Parametres Pyramides -->
 					<div id="sol_pyrami_param" class="hiddenparam">
+						<div class="formemenu show">
+							<span>Principaux</span>
+							<div class="formemenu_div">
+								<div class="flexparameters">
+									<label>Longueur :</label>
+									<input id="sol_pyrami_L" type="number" value="150" step="10" min="0" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Hauteur :</label>
+									<input id="sol_pyrami_H" type="number" value="150" step="10" min="0" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Profondeur :</label>
+									<input id="sol_pyrami_P" type="number" value="150" step="10" min="0" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Nombre de face :</label>
+									<input id="sol_pyrami_F" type="number" value="3" step="1" min="3" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Angle de vue :</label>
+									<input id="sol_pyrami_A" type="number" value="0" step="2" min="-360" max="360" oninput="Regenerate()">
+								</div>
+							</div>
+						</div>
+						<div class="formemenu show">
+							<span>Rendu</span>
+							<div class="formemenu_div">
+								<div class="flexparameters">
+									<label>Epaisseur:</label>
+									<input id="sol_pyrami_line_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Couleur :</label>
+									<input id="sol_pyrami_line_color" type="color" value="#000000" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div>
+									<input id="sol_pyrami_show_hide" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_pyrami_show_hide')">
+									<label for="sol_pyrami_show_hide">Afficher les arrêtes cachés.</label>
+								</div>
+								<div id="sol_pyrami_show_hide_section" class="subsection">
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_pyrami_hide_style" type="text" value="--" oninput="Regenerate();">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_pyrami_hide_color" type="color" value="#888888" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_pyrami_hide_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input id="sol_pyrami_fill_base" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_pyrami_fill_base')">
+									<label for="sol_pyrami_fill_base">Remplir la base.</label>
+								</div>
+								<div id="sol_pyrami_fill_base_section" class="subsection hiddenparam">
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_pyrami_base_color" type="color" value="#FF0000" oninput="Regenerate()">
+									</div>
+									<div>
+										<input id="sol_pyrami_base_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
+										<label for="sol_pyrami_base_full">Plein.</label>
+									</div>
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_pyrami_base_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_pyrami_base_style" type="text" value="" oninput="Regenerate();">
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input id="sol_pyrami_fill" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate(); show_hide_param('sol_pyrami_fill')">
+									<label for="sol_pyrami_fill">Remplir les faces.</label>
+								</div>
+								<div id="sol_pyrami_fill_section" class="subsection hiddenparam">
+									<div>
+										<input id="sol_pyrami_fill_shadow" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
+										<label for="sol_pyrami_fill_shadow">Effet 3D.</label>
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_pyrami_fill_color" type="color" value="#888888" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Opacité&#8239;:</label>
+										<input id="sol_pyrami_fill_color_alpha" type="range" value="1" min="0" max="1" step="0.1" oninput="Regenerate()">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="formemenu show">
+							<span>Information</span>
+							<div class="formemenu_div">
+								<div>
+									<input id="sol_pyrami_h" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_pyrami_h')">
+									<label for="sol_pyrami_h">Afficher la hauteur centrale.</label>
+								</div>
+								<div id="sol_pyrami_h_section" class="subsection">
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_pyrami_h_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_pyrami_h_color" type="color" value="#8888EE" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_pyrami_h_style" type="text" value="--" oninput="Regenerate();">
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input id="sol_pyrami_ag" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_pyrami_ag')">
+									<label for="sol_pyrami_ag">Afficher l'angle droit.</label>
+								</div>
+								<div id="sol_pyrami_ag_section" class="subsection">
+									<div>
+										<input id="sol_pyrami_ag_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
+										<label for="sol_pyrami_ag_full">Plein.</label>
+									</div>
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_pyrami_ag_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_pyrami_ag_color" type="color" value="#88CC88" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_pyrami_ag_style" type="text" value="" oninput="Regenerate();">
+									</div>
+								</div>
+								<hr>
+							</div>
+						</div>
 					</div>
+					<!-- Parametres Cones -->
 					<div id="sol_cone_param" class="hiddenparam">
+						<div class="formemenu">
+							<span>Principaux</span>
+							<div class="formemenu_div">
+								<div class="flexparameters">
+									<label>Rayon :</label>
+									<input id="sol_cone_R" type="number" value="150" step="10" min="0" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Hauteur :</label>
+									<input id="sol_cone_H" type="number" value="200" step="10" min="0" oninput="Regenerate()">
+								</div>
+							</div>
+						</div>
+						<div class="formemenu">
+							<span>Rendu</span>
+							<div class="formemenu_div">
+								<div class="flexparameters">
+									<label>Epaisseur:</label>
+									<input id="sol_cone_line_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Couleur :</label>
+									<input id="sol_cone_line_color" type="color" value="#000000" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div>
+									<input id="sol_cone_show_hide" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_cone_show_hide')">
+									<label for="sol_cone_show_hide">Afficher les arrêtes cachés.</label>
+								</div>
+								<div id="sol_cone_show_hide_section" class="subsection">
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_cone_hide_style" type="text" value="--" oninput="Regenerate();">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_cone_hide_color" type="color" value="#888888" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_cone_hide_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input id="sol_cone_fill_base" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_cone_fill_base')">
+									<label for="sol_cone_fill_base">Remplir la base.</label>
+								</div>
+								<div id="sol_cone_fill_base_section" class="subsection hiddenparam">
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_cone_base_color" type="color" value="#FF0000" oninput="Regenerate()">
+									</div>
+									<div>
+										<input id="sol_cone_base_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
+										<label for="sol_cone_base_full">Plein.</label>
+									</div>
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_cone_base_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_cone_base_style" type="text" value="" oninput="Regenerate();">
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input id="sol_cone_fill" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate(); show_hide_param('sol_cone_fill')">
+									<label for="sol_cone_fill">Remplir les faces.</label>
+								</div>
+								<div id="sol_cone_fill_section" class="subsection hiddenparam">
+									<div>
+										<input id="sol_cone_fill_shadow" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
+										<label for="sol_cone_fill_shadow">Effet 3D.</label>
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_cone_fill_color" type="color" value="#888888" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Opacité&#8239;:</label>
+										<input id="sol_cone_fill_color_alpha" type="range" value="1" min="0" max="1" step="0.1" oninput="Regenerate()">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="formemenu show">
+							<span>Information</span>
+							<div class="formemenu_div">
+								<div>
+									<input id="sol_cone_h" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_cone_h')">
+									<label for="sol_cone_h">Afficher la hauteur centrale.</label>
+								</div>
+								<div id="sol_cone_h_section" class="subsection">
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_cone_h_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_cone_h_color" type="color" value="#8888EE" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_cone_h_style" type="text" value="--" oninput="Regenerate();">
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input id="sol_cone_r" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_cone_r')">
+									<label for="sol_cone_r">Afficher un rayon.</label>
+								</div>
+								<div id="sol_cone_r_section" class="subsection">
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_cone_r_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_cone_r_color" type="color" value="#CC8888" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_cone_r_style" type="text" value="--" oninput="Regenerate();">
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input id="sol_cone_ag" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_cone_ag')">
+									<label for="sol_cone_ag">Afficher l'angle droit.</label>
+								</div>
+								<div id="sol_cone_ag_section" class="subsection">
+									<div>
+										<input id="sol_cone_ag_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
+										<label for="sol_cone_ag_full">Plein.</label>
+									</div>
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_cone_ag_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_cone_ag_color" type="color" value="#88CC88" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_cone_ag_style" type="text" value="" oninput="Regenerate();">
+									</div>
+								</div>
+								<hr>
+							</div>
+						</div>
 					</div>
+					<!-- Parametres Spheres -->
 					<div id="sol_sphere_param" class="hiddenparam">
+						<div class="formemenu">
+							<span>Principaux</span>
+							<div class="formemenu_div">
+								<div class="flexparameters">
+									<label>Rayon :</label>
+									<input id="sol_sphere_R" type="number" value="150" step="10" min="0" oninput="Regenerate()">
+								</div>
+							</div>
+						</div>
+						<div class="formemenu">
+							<span>Rendu</span>
+							<div class="formemenu_div">
+								<div class="flexparameters">
+									<label>Epaisseur:</label>
+									<input id="sol_sphere_line_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Couleur :</label>
+									<input id="sol_sphere_line_color" type="color" value="#000000" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div>
+									<input id="sol_sphere_show_hide" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_sphere_show_hide')">
+									<label for="sol_sphere_show_hide">Afficher les arrêtes cachés.</label>
+								</div>
+								<div id="sol_sphere_show_hide_section" class="subsection">
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_sphere_hide_style" type="text" value="--" oninput="Regenerate();">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_sphere_hide_color" type="color" value="#888888" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_sphere_hide_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input id="sol_sphere_fill_base" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_sphere_fill_base')">
+									<label for="sol_sphere_fill_base">Remplir la base.</label>
+								</div>
+								<div id="sol_sphere_fill_base_section" class="subsection hiddenparam">
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_sphere_base_color" type="color" value="#FF0000" oninput="Regenerate()">
+									</div>
+									<div>
+										<input id="sol_sphere_base_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
+										<label for="sol_sphere_base_full">Plein.</label>
+									</div>
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_sphere_base_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_sphere_base_style" type="text" value="" oninput="Regenerate();">
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input id="sol_sphere_fill" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate(); show_hide_param('sol_sphere_fill')">
+									<label for="sol_sphere_fill">Remplir les faces.</label>
+								</div>
+								<div id="sol_sphere_fill_section" class="subsection hiddenparam">
+									<div>
+										<input id="sol_sphere_fill_shadow" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
+										<label for="sol_sphere_fill_shadow">Effet 3D.</label>
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_sphere_fill_color" type="color" value="#888888" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Opacité&#8239;:</label>
+										<input id="sol_sphere_fill_color_alpha" type="range" value="1" min="0" max="1" step="0.1" oninput="Regenerate()">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="formemenu show">
+							<span>Information</span>
+							<div class="formemenu_div">
+								<div>
+									<input id="sol_sphere_h" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_sphere_h')">
+									<label for="sol_sphere_h">Afficher la hauteur centrale.</label>
+								</div>
+								<div id="sol_sphere_h_section" class="subsection">
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_sphere_h_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_sphere_h_color" type="color" value="#8888EE" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_sphere_h_style" type="text" value="--" oninput="Regenerate();">
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input id="sol_sphere_r" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_sphere_r')">
+									<label for="sol_sphere_r">Afficher un rayon.</label>
+								</div>
+								<div id="sol_sphere_r_section" class="subsection">
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_sphere_r_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_sphere_r_color" type="color" value="#CC8888" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_sphere_r_style" type="text" value="--" oninput="Regenerate();">
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input id="sol_sphere_ag" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_sphere_ag')">
+									<label for="sol_sphere_ag">Afficher l'angle droit.</label>
+								</div>
+								<div id="sol_sphere_ag_section" class="subsection">
+									<div>
+										<input id="sol_sphere_ag_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
+										<label for="sol_sphere_ag_full">Plein.</label>
+									</div>
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_sphere_ag_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_sphere_ag_color" type="color" value="#88CC88" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_sphere_ag_style" type="text" value="" oninput="Regenerate();">
+									</div>
+								</div>
+								<hr>
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- Parametres généraux -->
@@ -1005,7 +1686,6 @@
 
 		function show_hide_param(element_name)
 		{
-			console.log(element_name)
 			let a = document.getElementById(element_name).checked;
 			if (a)
 			{

@@ -1,0 +1,8 @@
+R = rayon vertical
+C = rayon horizontal
+S = hauteur sommet
+
+Position point tangence
+y = R² / S
+x = C * sqrt(1 - R²/S²)
+

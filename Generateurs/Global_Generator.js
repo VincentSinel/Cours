@@ -291,9 +291,6 @@ const pSBC=(p,c0,c1,l)=>{
         let stroke = data["stroke"];
         let strokecolor = data["strokecolor"];
         let dashstyle = data["dashstyle"];
-
-
-				console.log(context)
     
         let points = [];
         for (var i = 0; i < points_not.length; i++) {
@@ -469,8 +466,6 @@ const pSBC=(p,c0,c1,l)=>{
                 "stroke-dasharray": dashstyle,
             }
         )
-
-		console.log(data)
 
 		let poly = draw_fleche(style_s, dxs, dys, dxe, dye, style_s_size);
 		switch (style_s) {
@@ -1059,11 +1054,13 @@ function Quadrillage(paper, data)
 	let c_size_y = data["c_size_y"];
 	let q_points = data["q_points"];
 	let q_line_color = data["q_line_color"];
+	let q_line_style = data["q_line_style"];
 	let q_line_stroke = data["q_line_stroke"];
 	let q_int = data["q_int"];
 	let c_int_hor_nbr = data["c_int_hor_nbr"];
 	let c_int_ver_nbr = data["c_int_ver_nbr"];
 	let q_int_line_color = data["q_int_line_color"];
+	let q_int_line_style = data["q_int_line_style"];
 	let q_int_line_stroke = data["q_int_line_stroke"];
 
 	Canvas_width = c_hor_nbr * c_size_x + Gen_Margin*2 + 10; 
@@ -1088,7 +1085,8 @@ function Quadrillage(paper, data)
 					stroke: q_int_line_color,
 					"stroke-width": q_int_line_stroke,
 					"stroke-linecap": "round",
-					"stroke-linejoin": "round"
+					"stroke-linejoin": "round",
+					"stroke-dasharray": q_int_line_style,
 				})
 		}
 		for (let i = 0; i <= c_ver_nbr * c_int_ver_nbr; i++) 
@@ -1102,7 +1100,8 @@ function Quadrillage(paper, data)
 					stroke: q_int_line_color,
 					"stroke-width": q_int_line_stroke,
 					"stroke-linecap": "round",
-					"stroke-linejoin": "round"
+					"stroke-linejoin": "round",
+					"stroke-dasharray": q_int_line_style,
 				})
 		}
 	}
@@ -1140,6 +1139,7 @@ function Quadrillage(paper, data)
 					"stroke-width": q_line_stroke,
 					"stroke-linecap": "round",
 					"stroke-linejoin": "round",
+					"stroke-dasharray": q_line_style,
 				}
 			)
 		}
@@ -1153,7 +1153,8 @@ function Quadrillage(paper, data)
 					stroke: q_line_color,
 					"stroke-width": q_line_stroke,
 					"stroke-linecap": "round",
-					"stroke-linejoin": "round"
+					"stroke-linejoin": "round",
+					"stroke-dasharray": q_line_style,
 				}
 			)
 		}
@@ -1171,10 +1172,6 @@ function Quadrillage(paper, data)
 
 function Solide_PaveDroit(paper, data)
 {
-	let Canvas_width = data["Canvas_width"];
-	let Canvas_height = data["Canvas_height"];
-
-	let Gen_Margin = data["Gen_Margin"];
 	let objects = data["objects"];
 
 	let sol_pavdrt_L = data["sol_pavdrt_L"]
@@ -1190,11 +1187,19 @@ function Solide_PaveDroit(paper, data)
 	let sol_pavdrt_fill_shadow = data["sol_pavdrt_fill_shadow"]
 	let sol_pavdrt_fill_color = data["sol_pavdrt_fill_color"]
 	let sol_pavdrt_fill_color_alpha = data["sol_pavdrt_fill_color_alpha"]
+	let sol_pavdrt_fill_base = data["sol_pavdrt_fill_base"]
+	let sol_pavdrt_base_full = data["sol_pavdrt_base_full"]
+	let sol_pavdrt_base_stroke = data["sol_pavdrt_base_stroke"]
+	let sol_pavdrt_base_color = data["sol_pavdrt_base_color"]
+	let sol_pavdrt_base_style = data["sol_pavdrt_base_style"]
 
 	let sqrt2p = sol_pavdrt_P / (Math.SQRT2 * 2.0);
 
 	Canvas_width = Gen_Margin * 2 + sol_pavdrt_L + sqrt2p;
 	Canvas_height = Gen_Margin * 2 + sol_pavdrt_H + sqrt2p;
+	
+	paper.setSize(Canvas_width, Canvas_height);
+	paper.clear();
 	
 	let p1 = {
 		x: Gen_Margin + sqrt2p, 
@@ -1220,6 +1225,34 @@ function Solide_PaveDroit(paper, data)
 	let p8 = {
 		x: Gen_Margin + sol_pavdrt_L, 
 		y: Gen_Margin + sqrt2p + sol_pavdrt_H}
+	
+	if (sol_pavdrt_fill_base)
+	{
+		if (sol_pavdrt_base_full)
+		{
+			let polygone = draw_polygone(paper, [p5, p6, p8, p7]);
+			polygone.attr( { stroke: "none", "fill": sol_pavdrt_base_color } )
+		}
+		else
+		{
+			let style = 
+			{
+					stroke: sol_pavdrt_base_color,
+					"stroke-width": sol_pavdrt_base_stroke,
+					"stroke-linecap": "round",
+					"stroke-linejoin": "round",
+					"stroke-dasharray": sol_pavdrt_base_style,
+			}
+
+			let space = 4;
+			for (let i = 0; i < (sol_pavdrt_L / (sol_pavdrt_base_stroke * space)); i++) 
+			{
+				let line = draw_line(paper, p5.x + i * sol_pavdrt_base_stroke * space, p5.y, p7.x + i * sol_pavdrt_base_stroke * space, p7.y);
+				line.attr(style)
+			}
+		}
+	}
+	
 
 	if (sol_pavdrt_show_hide)
 	{
@@ -1244,7 +1277,6 @@ function Solide_PaveDroit(paper, data)
 	if (sol_pavdrt_fill)
 	{
 		let a = Math.floor(sol_pavdrt_fill_color_alpha * 255).toString(16);
-		console.log(a)
 		let polygone;
 		polygone = draw_polygone(paper, [p4, p3, p7, p8]);
 		polygone.attr( { stroke: "none", "fill": sol_pavdrt_fill_color, "opacity": sol_pavdrt_fill_color_alpha } )
@@ -1296,6 +1328,913 @@ function Solide_PaveDroit(paper, data)
 
 	
 	return [Canvas_width, Canvas_height]
+}
+
+function Solide_PrismeDroit(paper, data)
+{
+	let objects = data["objects"];
+
+	let sol_prmdrt_L = data["sol_prmdrt_L"] * 2.0
+	let sol_prmdrt_H = data["sol_prmdrt_H"]
+	let sol_prmdrt_P = data["sol_prmdrt_P"]
+	let sol_prmdrt_F = data["sol_prmdrt_F"]
+	let sol_prmdrt_A = data["sol_prmdrt_A"]
+	let sol_prmdrt_line_stroke = data["sol_prmdrt_line_stroke"]
+	let sol_prmdrt_line_color = data["sol_prmdrt_line_color"]
+	let sol_prmdrt_show_hide = data["sol_prmdrt_show_hide"]
+	let sol_prmdrt_hide_style = data["sol_prmdrt_hide_style"]
+	let sol_prmdrt_hide_color = data["sol_prmdrt_hide_color"]
+	let sol_prmdrt_hide_stroke = data["sol_prmdrt_hide_stroke"]
+	let sol_prmdrt_fill = data["sol_prmdrt_fill"]
+	let sol_prmdrt_fill_shadow = data["sol_prmdrt_fill_shadow"]
+	let sol_prmdrt_fill_color = data["sol_prmdrt_fill_color"]
+	let sol_prmdrt_fill_color_alpha = data["sol_prmdrt_fill_color_alpha"]
+	let sol_prmdrt_fill_base = data["sol_prmdrt_fill_base"]
+	let sol_prmdrt_base_full = data["sol_prmdrt_base_full"]
+	let sol_prmdrt_base_stroke = data["sol_prmdrt_base_stroke"]
+	let sol_prmdrt_base_color = data["sol_prmdrt_base_color"]
+	let sol_prmdrt_base_style = data["sol_prmdrt_base_style"]
+
+	let ry = Math.SQRT1_2 * sol_prmdrt_P;
+
+	Canvas_width = Gen_Margin * 2 + sol_prmdrt_L;
+	Canvas_height = Gen_Margin * 2 + sol_prmdrt_H + ry;
+	
+	paper.setSize(Canvas_width, Canvas_height);
+	paper.clear();
+
+	let c = {x: Canvas_width / 2, y: Gen_Margin + ry / 2.0}
+
+	let circlepoints = [];
+	let da = Math.PI * 2.0 / sol_prmdrt_F;
+	let off_a = sol_prmdrt_A / 180.0 * Math.PI;
+	for (let i = 0; i < sol_prmdrt_F; i++) {
+		let x = c.x + sol_prmdrt_L / 2.0 * Math.cos(da * i + off_a);
+		let y = c.y + ry / 2.0 * Math.sin(da * i + off_a);
+		circlepoints.push({x: x, y: y})
+	}
+
+	let backlines = [];
+
+	let style1 = 
+	{
+			stroke: sol_prmdrt_line_color,
+			"stroke-width": sol_prmdrt_line_stroke,
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round",
+	}
+	let style2 = 
+	{
+			stroke: sol_prmdrt_hide_color,
+			"stroke-width": sol_prmdrt_hide_stroke,
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round",
+			"stroke-dasharray": sol_prmdrt_hide_style,
+	}
+	for (let i = 0; i < sol_prmdrt_F; i++) 
+	{
+		let p1 = circlepoints[i];
+		let p2 = circlepoints[(i + 1) % sol_prmdrt_F];
+		let p3 = circlepoints[(i + sol_prmdrt_F - 1) % sol_prmdrt_F];
+		let line1 = draw_line(paper, p1.x, p1.y, p2.x, p2.y);
+		line1.attr(style1)
+		if (p2.x <= p1.x)
+		{
+			let line2 = draw_line(paper, p1.x, p1.y + sol_prmdrt_H, p2.x, p2.y + sol_prmdrt_H);
+			let line3 = draw_line(paper, p1.x, p1.y, p1.x, p1.y + sol_prmdrt_H);
+			line2.attr(style1)
+			line3.attr(style1)
+			line2.toFront()
+			line3.toFront()
+		}
+		else if (p1.x < p3.x)
+		{
+			let line3 = draw_line(paper, p1.x, p1.y, p1.x, p1.y + sol_prmdrt_H);
+			line3.attr(style1)
+			line3.toFront()
+			if (sol_prmdrt_show_hide)
+			{
+				let line2 = draw_line(paper, p1.x, p1.y + sol_prmdrt_H, p2.x, p2.y + sol_prmdrt_H);
+				line2.attr(style2)
+				backlines.push(line2)
+			}
+			
+		}
+		else if (sol_prmdrt_show_hide)
+		{
+			let line2 = draw_line(paper, p1.x, p1.y + sol_prmdrt_H, p2.x, p2.y + sol_prmdrt_H);
+			let line3 = draw_line(paper, p1.x, p1.y, p1.x, p1.y + sol_prmdrt_H);
+			line2.attr(style2)
+			line3.attr(style2)
+			backlines.push(line2)
+			backlines.push(line3)
+		}
+	}
+
+	if (sol_prmdrt_fill)
+	{
+		var polygone = draw_polygone(paper, circlepoints);
+		if (sol_prmdrt_fill_shadow)
+			polygone.attr( { stroke: "none", "fill": pSBC(-0.2, sol_prmdrt_fill_color), "opacity": sol_prmdrt_fill_color_alpha } )
+		else
+			polygone.attr( { stroke: "none", "fill": sol_prmdrt_fill_color, "opacity": sol_prmdrt_fill_color_alpha } )
+		polygone.toBack();
+		for (let i = 0; i < sol_prmdrt_F; i++) 
+		{
+			let p1 = circlepoints[i];
+			let p2 = circlepoints[(i + 1) % sol_prmdrt_F];
+			if (p2.x <= p1.x)
+			{
+				let p3 = {x: p2.x, y: p2.y + sol_prmdrt_H}
+				let p4 = {x: p1.x, y: p1.y + sol_prmdrt_H}
+				polygone = draw_polygone(paper, [p1, p2, p3, p4]);
+				let coef = - Math.abs((p1.x - c.x) + (p2.x - c.x)) / sol_prmdrt_L;
+				if (sol_prmdrt_fill_shadow)
+					polygone.attr( { stroke: "none", "fill": pSBC(coef, sol_prmdrt_fill_color), "opacity": sol_prmdrt_fill_color_alpha } )
+				else
+					polygone.attr( { stroke: "none", "fill": sol_prmdrt_fill_color, "opacity": sol_prmdrt_fill_color_alpha } )
+				polygone.toBack();
+			}
+		}
+	}
+	
+	for (let i = 0; i < backlines.length; i++) {
+		backlines[i].toBack();
+	}
+
+	if (sol_prmdrt_fill_base)
+	{
+		if (sol_prmdrt_base_full)
+		{
+			var polygone = draw_polygone(paper, circlepoints);
+			polygone.attr( { stroke: "none", "fill": sol_prmdrt_base_color } )
+			polygone.translate(0, sol_prmdrt_H)
+			polygone.toBack();
+		}
+		else
+		{
+			let style = 
+			{
+					stroke: sol_prmdrt_base_color,
+					"stroke-width": sol_prmdrt_base_stroke,
+					"stroke-linecap": "round",
+					"stroke-linejoin": "round",
+					"stroke-dasharray": sol_prmdrt_base_style,
+			}
+
+			let ida = 1;
+			let idb = sol_prmdrt_F - 1
+			let op1 = circlepoints[0];
+			let op2 = circlepoints[1];
+			let dx = (op1.y - op2.y) / length(op1, op2);
+			let dy = -(op1.x - op2.x) / length(op1, op2);
+			var count = 0;
+			let space = 4.0;
+			while (ida != idb && count < 500)
+			{
+				var line = draw_line(paper, op1.x, op1.y, op2.x, op2.y)
+				line.attr(style)
+				line.translate(0, sol_prmdrt_H)
+				line.toBack();
+
+				let np1 = {
+					x: op1.x + dx * sol_prmdrt_base_stroke * space, 
+					y: op1.y + dy * sol_prmdrt_base_stroke * space}
+				let np2 = {
+					x: op2.x + dx * sol_prmdrt_base_stroke * space, 
+					y: op2.y + dy * sol_prmdrt_base_stroke * space}
+
+				op1 = line_intersection(np1, np2, circlepoints[idb],circlepoints[(idb + 1) % sol_prmdrt_F])
+				while(idb != ida && !point_between(circlepoints[idb],circlepoints[(idb + 1) % sol_prmdrt_F], op1))
+				{
+					idb -= 1;
+					op1 = line_intersection(np1, np2, circlepoints[idb],circlepoints[(idb + 1) % sol_prmdrt_F])
+				}
+				op2 = line_intersection(np1, np2, circlepoints[ida],circlepoints[(ida + 1) % sol_prmdrt_F])
+				while(idb != ida && !point_between(circlepoints[ida],circlepoints[(ida + 1) % sol_prmdrt_F], op2))
+				{
+					ida += 1;
+					op2 = line_intersection(np1, np2, circlepoints[ida],circlepoints[(ida + 1) % sol_prmdrt_F])
+				}
+
+
+				count += 1;
+			}
+		}
+	}
+
+	
+	return [Canvas_width, Canvas_height]
+}
+
+function Solide_Cylindre(paper, data)
+{
+	let objects = data["objects"];
+
+	let sol_cylind_R = data["sol_cylind_R"]
+	let sol_cylind_H = data["sol_cylind_H"]
+	let sol_cylind_line_stroke = data["sol_cylind_line_stroke"]
+	let sol_cylind_line_color = data["sol_cylind_line_color"]
+	let sol_cylind_show_hide = data["sol_cylind_show_hide"]
+	let sol_cylind_hide_style = data["sol_cylind_hide_style"]
+	let sol_cylind_hide_color = data["sol_cylind_hide_color"]
+	let sol_cylind_hide_stroke = data["sol_cylind_hide_stroke"]
+	let sol_cylind_fill = data["sol_cylind_fill"]
+	let sol_cylind_fill_shadow = data["sol_cylind_fill_shadow"]
+	let sol_cylind_fill_color = data["sol_cylind_fill_color"]
+	let sol_cylind_fill_color_alpha = data["sol_cylind_fill_color_alpha"]
+	let sol_cylind_fill_base = data["sol_cylind_fill_base"]
+	let sol_cylind_base_full = data["sol_cylind_base_full"]
+	let sol_cylind_base_stroke = data["sol_cylind_base_stroke"]
+	let sol_cylind_base_color = data["sol_cylind_base_color"]
+	let sol_cylind_base_style = data["sol_cylind_base_style"]
+	let sol_cylind_h = data["sol_cylind_h"]
+	let sol_cylind_h_stroke = data["sol_cylind_h_stroke"]
+	let sol_cylind_h_color = data["sol_cylind_h_color"]
+	let sol_cylind_h_style = data["sol_cylind_h_style"]
+	let sol_cylind_r = data["sol_cylind_r"]
+	let sol_cylind_r_stroke = data["sol_cylind_r_stroke"]
+	let sol_cylind_r_color = data["sol_cylind_r_color"]
+	let sol_cylind_r_style = data["sol_cylind_r_style"]
+	let sol_cylind_ag = data["sol_cylind_ag"]
+	let sol_cylind_ag_stroke = data["sol_cylind_ag_stroke"]
+	let sol_cylind_ag_full = data["sol_cylind_ag_full"]
+	let sol_cylind_ag_color = data["sol_cylind_ag_color"]
+	let sol_cylind_ag_style = data["sol_cylind_ag_style"]
+
+	let ry = Math.floor(sol_cylind_R / 3.0);
+
+	Canvas_width = Gen_Margin * 2 + sol_cylind_R * 2;
+	Canvas_height = Gen_Margin * 2 + sol_cylind_H + ry * 2;
+	
+	paper.setSize(Canvas_width, Canvas_height);
+	paper.clear();
+
+	let c = {x: Canvas_width / 2, y: Gen_Margin + ry}
+
+
+	let style = 
+	{
+			stroke: sol_cylind_line_color,
+			"stroke-width": sol_cylind_line_stroke,
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round",
+	}
+
+	let ellipse = paper.ellipse(c.x, c.y, sol_cylind_R, ry)
+	ellipse.attr(style)
+	c.y += sol_cylind_H
+
+	let line = draw_line(paper, Gen_Margin, Gen_Margin + ry, Gen_Margin, c.y)
+	line.attr(style)
+	line = draw_line(paper, Canvas_width - Gen_Margin, Gen_Margin + ry, Canvas_width - Gen_Margin, c.y)
+	line.attr(style)
+
+	let arc = draw_ellipse_arc(paper, c, 0, 180, sol_cylind_R, ry, false)
+	arc.attr(style)
+
+	if (sol_cylind_fill)
+	{
+		let top_ellipse = paper.ellipse(c.x, c.y - sol_cylind_H, sol_cylind_R, ry)
+		top_ellipse.attr(style)
+		if (sol_cylind_fill_shadow)
+			top_ellipse.attr( { stroke: "none", "fill": pSBC(-0.2, sol_cylind_fill_color), "opacity": sol_cylind_fill_color_alpha } )
+		else
+		top_ellipse.attr( { stroke: "none", "fill": sol_cylind_fill_color, "opacity": sol_cylind_fill_color_alpha } )
+		top_ellipse.toBack();
+
+		let path = "M" + (c.x + sol_cylind_R).toString() + " " + (c.y - sol_cylind_H).toString()
+		path += get_ellipse_arc(c.x, c.y - sol_cylind_H, 0, 180, sol_cylind_R, ry, false)
+		path += " L " + (c.x - sol_cylind_R).toString() + "," + c.y.toString();
+		path += get_ellipse_arc(c.x, c.y, 180, 0, sol_cylind_R, ry, false);
+		path += "Z"
+		let front_face = paper.path(path);
+		if (sol_cylind_fill_shadow)
+		{
+			let c1 = pSBC(-0.8, sol_cylind_fill_color);
+			let grad = "0-" + c1 + "-" + sol_cylind_fill_color + "-" + c1;
+			front_face.attr( { stroke: "none", "fill": grad, 
+			"opacity": sol_cylind_fill_color_alpha } )
+			
+		}
+		else
+			front_face.attr( {"title":"test", stroke: "none", "fill": sol_cylind_fill_color, "opacity": sol_cylind_fill_color_alpha } )
+
+		front_face.toBack();
+		// Hack pour rendre le remplissage bien transparent (non implémenté dans Raphaël.js)
+		document.getElementById("preview").getElementsByTagName("path")[0].setAttribute("style", "opacity:" + sol_cylind_fill_color_alpha.toString())
+	}
+
+	if (sol_cylind_h)
+	{
+		
+		let line = draw_line(paper, c.x, c.y, c.x, c.y - sol_cylind_H)
+		line.attr({
+				stroke: sol_cylind_h_color,
+				"stroke-width": sol_cylind_h_stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": sol_cylind_h_style,
+		})
+		line.toBack();
+	}
+	if (sol_cylind_r)
+	{
+		let x = c.x + sol_cylind_R * Math.cos(Math.PI / 4.0)
+		let y = c.y + ry * Math.sin(Math.PI / 4.0)
+		let line = draw_line(paper, c.x, c.y, x, y)
+		line.attr({
+				stroke: sol_cylind_r_color,
+				"stroke-width": sol_cylind_r_stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": sol_cylind_r_style,
+		})
+		line.toBack()
+	}
+	if (sol_cylind_ag)
+	{
+		let style = {
+				stroke: sol_cylind_ag_color,
+				"stroke-width": sol_cylind_ag_stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": sol_cylind_ag_style,
+		}
+		let x = sol_cylind_R * Math.cos(Math.PI / 4.0)
+		let y = ry * Math.sin(Math.PI / 4.0)
+		let coef = Math.sqrt(x*x + y*y);
+		let p1 = {x: c.x + 20 * x / coef, y: c.y + 20 * y /coef}
+		let p2 = {x: c.x + 20 * x / coef, y: c.y + 20 * y /coef-20}
+		let p3 = {x: c.x , y: c.y -20}
+		if (sol_cylind_ag_full)
+		{
+			let poly = draw_polygone(paper, [p1,p2,p3,c])
+			poly.attr({ stroke: "none", "fill": sol_cylind_ag_color })
+			poly.toBack();
+		}
+		else
+		{
+			let line = draw_line(paper, p1.x, p1.y, p2.x, p2.y)
+			line.attr(style)
+			line.toBack()
+			line = draw_line(paper, p3.x, p3.y, p2.x, p2.y)
+			line.attr(style)
+			line.toBack()
+		}
+	}
+
+
+	if (sol_cylind_show_hide)
+	{
+		let arc2 = draw_ellipse_arc(paper, c, 180, 360, sol_cylind_R, ry, false)
+		arc2.attr({
+				stroke: sol_cylind_hide_color,
+				"stroke-width": sol_cylind_hide_stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": sol_cylind_hide_style,
+			})
+			arc2.toBack();
+	}
+
+	if (sol_cylind_fill_base)
+	{
+		if (sol_cylind_base_full)
+		{
+			let ellipse = paper.ellipse(c.x, c.y, sol_cylind_R, ry)
+			ellipse.attr({ stroke: "none", "fill": sol_cylind_base_color })
+			ellipse.toBack();
+		}
+		else
+		{
+			let style = 
+			{
+					stroke: sol_cylind_base_color,
+					"stroke-width": sol_cylind_base_stroke,
+					"stroke-linecap": "round",
+					"stroke-linejoin": "round",
+					"stroke-dasharray": sol_cylind_base_style,
+			}
+
+			let dt = 0;
+			let count = 0;
+			let b = Gen_Margin * 2 + sol_cylind_H;
+
+			let sr1 = sol_cylind_R * sol_cylind_R;
+			let sr2 = ry * ry;
+
+			let db = sol_cylind_base_stroke * 4.0 * Math.SQRT2;
+
+			while (dt < Canvas_width && count < 500)
+			{
+
+				let A = 2.0 * (sr2 + sr1)
+				let B = -2*(c.x * sr2 + sr1*(b - c.y))
+				let C = sr2*c.x*c.x+sr1*(b - c.y)*(b-c.y) - sr1*sr2;
+
+				let delta = B*B - 2*A*C;
+				if (delta > 0)
+				{
+					let x1 = (-B + Math.sqrt(delta)) / A;
+					let x2 = (-B - Math.sqrt(delta)) / A;
+					let y1 = b - x1;
+					let y2 = b - x2;
+					let line = draw_line(paper, x1, y1, x2, y2)
+					line.attr(style)
+					line.toBack();
+				}
+
+				b += db;
+				dt += db * Math.SQRT1_2;
+
+				count += 1;
+			}
+		}
+	}
+
+
+	
+	return [Canvas_width, Canvas_height]
+}
+
+function Solide_Pyramide(paper, data)
+{
+	let objects = data["objects"];
+
+	let sol_pyrami_L = data["sol_pyrami_L"]
+	let sol_pyrami_H = data["sol_pyrami_H"]
+	let sol_pyrami_P = data["sol_pyrami_P"]
+	let sol_pyrami_F = data["sol_pyrami_F"]
+	let sol_pyrami_A = data["sol_pyrami_A"]
+	let sol_pyrami_line_stroke = data["sol_pyrami_line_stroke"]
+	let sol_pyrami_line_color = data["sol_pyrami_line_color"]
+	let sol_pyrami_show_hide = data["sol_pyrami_show_hide"]
+	let sol_pyrami_hide_style = data["sol_pyrami_hide_style"]
+	let sol_pyrami_hide_color = data["sol_pyrami_hide_color"]
+	let sol_pyrami_hide_stroke = data["sol_pyrami_hide_stroke"]
+	let sol_pyrami_fill = data["sol_pyrami_fill"]
+	let sol_pyrami_fill_shadow = data["sol_pyrami_fill_shadow"]
+	let sol_pyrami_fill_color = data["sol_pyrami_fill_color"]
+	let sol_pyrami_fill_color_alpha = data["sol_pyrami_fill_color_alpha"]
+	let sol_pyrami_fill_base = data["sol_pyrami_fill_base"]
+	let sol_pyrami_base_full = data["sol_pyrami_base_full"]
+	let sol_pyrami_base_stroke = data["sol_pyrami_base_stroke"]
+	let sol_pyrami_base_color = data["sol_pyrami_base_color"]
+	let sol_pyrami_base_style = data["sol_pyrami_base_style"]
+	let sol_pyrami_h = data["sol_pyrami_h"]
+	let sol_pyrami_h_stroke = data["sol_pyrami_h_stroke"]
+	let sol_pyrami_h_color = data["sol_pyrami_h_color"]
+	let sol_pyrami_h_style = data["sol_pyrami_h_style"]
+	let sol_pyrami_r = data["sol_pyrami_r"]
+	let sol_pyrami_r_stroke = data["sol_pyrami_r_stroke"]
+	let sol_pyrami_r_color = data["sol_pyrami_r_color"]
+	let sol_pyrami_r_style = data["sol_pyrami_r_style"]
+	let sol_pyrami_ag = data["sol_pyrami_ag"]
+	let sol_pyrami_ag_stroke = data["sol_pyrami_ag_stroke"]
+	let sol_pyrami_ag_full = data["sol_pyrami_ag_full"]
+	let sol_pyrami_ag_color = data["sol_pyrami_ag_color"]
+	let sol_pyrami_ag_style = data["sol_pyrami_ag_style"]
+
+	let ry = Math.SQRT1_2 * sol_pyrami_P;
+
+	Canvas_width = Gen_Margin * 2 + sol_pyrami_L;
+	Canvas_height = Gen_Margin * 2 + sol_pyrami_H + ry / 2.0;
+	
+	paper.setSize(Canvas_width, Canvas_height);
+	paper.clear();
+
+	let c = {x: Canvas_width / 2, y: Gen_Margin}
+
+	let circlepoints = [];
+	let da = Math.PI * 2.0 / sol_pyrami_F;
+	let off_a = sol_pyrami_A / 180.0 * Math.PI;
+	for (let i = 0; i < sol_pyrami_F; i++) {
+		let x = c.x + sol_pyrami_L / 2.0 * Math.cos(da * i + off_a);
+		let y = c.y + ry / 2.0 * Math.sin(da * i + off_a) + sol_pyrami_H;
+		circlepoints.push({x: x, y: y})
+	}
+
+	let backlines = [];
+
+
+	let style1 = 
+	{
+			stroke: sol_pyrami_line_color,
+			"stroke-width": sol_pyrami_line_stroke,
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round",
+	}
+	let style2 = 
+	{
+			stroke: sol_pyrami_hide_color,
+			"stroke-width": sol_pyrami_hide_stroke,
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round",
+			"stroke-dasharray": sol_pyrami_hide_style,
+	}
+	for (let i = 0; i < sol_pyrami_F; i++) 
+	{
+		let p1 = circlepoints[i];
+		let p2 = circlepoints[(i + 1) % sol_pyrami_F];
+		let p3 = circlepoints[(i + sol_pyrami_F - 1) % sol_pyrami_F];
+		let a1 = Math.atan2(p1.y - c.y, p1.x - c.x)
+		let a2 = Math.atan2(p2.y - c.y, p2.x - c.x)
+		let a3 = Math.atan2(p3.y - c.y, p3.x - c.x)
+		
+		let p4 = {x: (p1.x + p2.x) / 2.0, y: (p1.y + p2.y) / 2.0}
+		let a4 = Math.atan2(p4.y - c.y, p4.x - c.x)
+
+		if (a4 < a2 || a4 > a1)
+		{
+			let line2 = draw_line(paper, p1.x, p1.y, p2.x, p2.y);
+			line2.attr(style1)
+			line2.toFront()
+		}
+		else if (sol_pyrami_show_hide)
+		{
+			let line2 = draw_line(paper, p1.x, p1.y, p2.x, p2.y);
+			line2.attr(style2)
+			backlines.push(line2)
+		}
+
+		if (a1 < a2 || a1 > a3)
+		{
+			let line3 = draw_line(paper, p1.x, p1.y, c.x, c.y);
+			line3.attr(style1)
+			line3.toFront()
+		}
+		else if (sol_pyrami_show_hide)
+		{
+			let line3 = draw_line(paper, p1.x, p1.y, c.x, c.y);
+			line3.attr(style2)
+			backlines.push(line3)
+		}
+	}
+
+	if (sol_pyrami_fill)
+	{
+		for (let i = 0; i < sol_pyrami_F; i++) 
+		{
+			let p1 = circlepoints[i];
+			let p2 = circlepoints[(i + 1) % sol_pyrami_F];
+			let p3 = {x: (p1.x + p2.x) / 2.0, y: (p1.y + p2.y) / 2.0}
+			let a1 = Math.atan2(p1.y - c.y, p1.x - c.x)
+			let a2 = Math.atan2(p2.y - c.y, p2.x - c.x)
+			let a3 = Math.atan2(p3.y - c.y, p3.x - c.x)
+			if (a3 < a2 || a3 > a1)
+			{
+				polygone = draw_polygone(paper, [p1, p2, c]);
+				let coef = - Math.abs((p1.x - c.x) + (p2.x - c.x)) / sol_pyrami_L;
+				if (sol_pyrami_fill_shadow)
+					polygone.attr( { stroke: "none", "fill": pSBC(coef, sol_pyrami_fill_color), "opacity": sol_pyrami_fill_color_alpha } )
+				else
+					polygone.attr( { stroke: "none", "fill": sol_pyrami_fill_color, "opacity": sol_pyrami_fill_color_alpha } )
+				polygone.toBack();
+			}
+		}
+	}
+
+	if (sol_pyrami_h)
+		{
+			
+			let line = draw_line(paper, c.x, c.y, c.x, c.y + sol_pyrami_H)
+			line.attr({
+					stroke: sol_pyrami_h_color,
+					"stroke-width": sol_pyrami_h_stroke,
+					"stroke-linecap": "round",
+					"stroke-linejoin": "round",
+					"stroke-dasharray": sol_pyrami_h_style,
+			})
+			line.toBack();
+		}
+		if (sol_pyrami_ag)
+		{
+			let style = {
+					stroke: sol_pyrami_ag_color,
+					"stroke-width": sol_pyrami_ag_stroke,
+					"stroke-linecap": "round",
+					"stroke-linejoin": "round",
+					"stroke-dasharray": sol_pyrami_ag_style,
+			}
+			let x = sol_pyrami_L * Math.cos(Math.PI / 4.0)
+			let y = ry * Math.sin(Math.PI / 4.0)
+			let coef = Math.sqrt(x*x + y*y);
+			let p1 = {x: c.x + 20 * x / coef, y: c.y + 20 * y /coef + sol_pyrami_H}
+			let p2 = {x: c.x + 20 * x / coef, y: c.y + 20 * y /coef-20 + sol_pyrami_H}
+			let p3 = {x: c.x , y: c.y -20 + sol_pyrami_H}
+			let p4 = {x: c.x , y: c.y + sol_pyrami_H}
+			if (sol_pyrami_ag_full)
+			{
+				let poly = draw_polygone(paper, [p1,p2,p3,p4])
+				poly.attr({ stroke: "none", "fill": sol_pyrami_ag_color })
+				poly.toBack();
+			}
+			else
+			{
+				let line = draw_line(paper, p1.x, p1.y, p2.x, p2.y)
+				line.attr(style)
+				line.toBack()
+				line = draw_line(paper, p3.x, p3.y, p2.x, p2.y)
+				line.attr(style)
+				line.toBack()
+			}
+		}
+	
+	for (let i = 0; i < backlines.length; i++) {
+		backlines[i].toBack();
+	}
+
+	if (sol_pyrami_fill_base)
+	{
+		if (sol_pyrami_base_full)
+		{
+			var polygone = draw_polygone(paper, circlepoints);
+			polygone.attr( { stroke: "none", "fill": sol_pyrami_base_color } )
+			polygone.toBack();
+		}
+		else
+		{
+			let style = 
+			{
+					stroke: sol_pyrami_base_color,
+					"stroke-width": sol_pyrami_base_stroke,
+					"stroke-linecap": "round",
+					"stroke-linejoin": "round",
+					"stroke-dasharray": sol_pyrami_base_style,
+			}
+
+			let ida = 1;
+			let idb = sol_pyrami_F - 1
+			let op1 = circlepoints[0];
+			let op2 = circlepoints[1];
+			let dx = (op1.y - op2.y) / length(op1, op2);
+			let dy = -(op1.x - op2.x) / length(op1, op2);
+			var count = 0;
+			let space = 4.0;
+			while (ida != idb && count < 500)
+			{
+				var line = draw_line(paper, op1.x, op1.y, op2.x, op2.y)
+				line.attr(style)
+				line.toBack();
+
+				let np1 = {
+					x: op1.x + dx * sol_pyrami_base_stroke * space, 
+					y: op1.y + dy * sol_pyrami_base_stroke * space}
+				let np2 = {
+					x: op2.x + dx * sol_pyrami_base_stroke * space, 
+					y: op2.y + dy * sol_pyrami_base_stroke * space}
+
+				op1 = line_intersection(np1, np2, circlepoints[idb],circlepoints[(idb + 1) % sol_pyrami_F])
+				while(idb != ida && !point_between(circlepoints[idb],circlepoints[(idb + 1) % sol_pyrami_F], op1))
+				{
+					idb -= 1;
+					op1 = line_intersection(np1, np2, circlepoints[idb],circlepoints[(idb + 1) % sol_pyrami_F])
+				}
+				op2 = line_intersection(np1, np2, circlepoints[ida],circlepoints[(ida + 1) % sol_pyrami_F])
+				while(idb != ida && !point_between(circlepoints[ida],circlepoints[(ida + 1) % sol_pyrami_F], op2))
+				{
+					ida += 1;
+					op2 = line_intersection(np1, np2, circlepoints[ida],circlepoints[(ida + 1) % sol_pyrami_F])
+				}
+
+
+				count += 1;
+			}
+		}
+	}
+
+	
+	return [Canvas_width, Canvas_height]
+}
+
+function Solide_Cone(paper, data)
+{
+	let objects = data["objects"];
+
+	let sol_cone_R = data["sol_cone_R"]
+	let sol_cone_H = data["sol_cone_H"]
+	let sol_cone_line_stroke = data["sol_cone_line_stroke"]
+	let sol_cone_line_color = data["sol_cone_line_color"]
+	let sol_cone_show_hide = data["sol_cone_show_hide"]
+	let sol_cone_hide_style = data["sol_cone_hide_style"]
+	let sol_cone_hide_color = data["sol_cone_hide_color"]
+	let sol_cone_hide_stroke = data["sol_cone_hide_stroke"]
+	let sol_cone_fill = data["sol_cone_fill"]
+	let sol_cone_fill_shadow = data["sol_cone_fill_shadow"]
+	let sol_cone_fill_color = data["sol_cone_fill_color"]
+	let sol_cone_fill_color_alpha = data["sol_cone_fill_color_alpha"]
+	let sol_cone_fill_base = data["sol_cone_fill_base"]
+	let sol_cone_base_full = data["sol_cone_base_full"]
+	let sol_cone_base_stroke = data["sol_cone_base_stroke"]
+	let sol_cone_base_color = data["sol_cone_base_color"]
+	let sol_cone_base_style = data["sol_cone_base_style"]
+	let sol_cone_h = data["sol_cone_h"]
+	let sol_cone_h_stroke = data["sol_cone_h_stroke"]
+	let sol_cone_h_color = data["sol_cone_h_color"]
+	let sol_cone_h_style = data["sol_cone_h_style"]
+	let sol_cone_r = data["sol_cone_r"]
+	let sol_cone_r_stroke = data["sol_cone_r_stroke"]
+	let sol_cone_r_color = data["sol_cone_r_color"]
+	let sol_cone_r_style = data["sol_cone_r_style"]
+	let sol_cone_ag = data["sol_cone_ag"]
+	let sol_cone_ag_stroke = data["sol_cone_ag_stroke"]
+	let sol_cone_ag_full = data["sol_cone_ag_full"]
+	let sol_cone_ag_color = data["sol_cone_ag_color"]
+	let sol_cone_ag_style = data["sol_cone_ag_style"]
+
+	let ry = Math.floor(sol_cone_R / 3.0);
+
+	Canvas_width = Gen_Margin * 2 + sol_cone_R * 2;
+	Canvas_height = Gen_Margin * 2 + sol_cone_H + ry;
+	
+	paper.setSize(Canvas_width, Canvas_height);
+	paper.clear();
+
+	let c = {x: Canvas_width / 2, y: Gen_Margin + sol_cone_H}
+
+
+	let style = 
+	{
+			stroke: sol_cone_line_color,
+			"stroke-width": sol_cone_line_stroke,
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round",
+	}
+	// Calcul des points de tangence à l'ellipse
+	let y = - ry * ry / sol_cone_H;
+	let x = sol_cone_R * Math.sqrt(1 - ry * ry / (sol_cone_H * sol_cone_H))
+	let line = draw_line(paper, c.x + x, c.y + y, c.x, c.y - sol_cone_H)
+	line.attr(style)
+	line = draw_line(paper, c.x - x, c.y + y, c.x, c.y - sol_cone_H)
+	line.attr(style)
+
+	let txt = "M" + (c.x+x).toString() + " " + (c.y + y).toString() + " A ";
+	txt += sol_cone_R + " " + ry.toString() + " 0 1 1 " + (c.x-x).toString();
+	txt += " " + (c.y + y).toString();
+	let ell = paper.path(txt);
+	ell.attr(style);
+
+
+	if (sol_cone_fill)
+	{
+		let path = "M" + (c.x+x).toString() + " " + (c.y + y).toString()
+		path += " A " +sol_cone_R + " " + ry.toString() + " 0 1 1 " + (c.x-x).toString() + " " + (c.y + y).toString()
+		path += " L " + (c.x).toString() + "," + (c.y - sol_cone_H).toString();
+		path += "Z"
+		let front_face = paper.path(path);
+		if (sol_cone_fill_shadow)
+		{
+			let c1 = pSBC(-0.8, sol_cone_fill_color);
+			let grad = "0-" + c1 + "-" + sol_cone_fill_color + "-" + c1;
+			front_face.attr( { stroke: "none", "fill": grad, 
+			"opacity": sol_cone_fill_color_alpha } )
+			
+		}
+		else
+			front_face.attr( {"title":"test", stroke: "none", "fill": sol_cone_fill_color, "opacity": sol_cone_fill_color_alpha } )
+
+		front_face.toBack();
+		// Hack pour rendre le remplissage bien transparent (non implémenté dans Raphaël.js)
+		document.getElementById("preview").getElementsByTagName("path")[0].setAttribute("style", "opacity:" + sol_cone_fill_color_alpha.toString())
+	}
+
+	if (sol_cone_h)
+	{
+		
+		let line = draw_line(paper, c.x, c.y, c.x, c.y - sol_cone_H)
+		line.attr({
+				stroke: sol_cone_h_color,
+				"stroke-width": sol_cone_h_stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": sol_cone_h_style,
+		})
+		line.toBack();
+	}
+	if (sol_cone_r)
+	{
+		let x = c.x + sol_cone_R * Math.cos(Math.PI / 4.0)
+		let y = c.y + ry * Math.sin(Math.PI / 4.0)
+		let line = draw_line(paper, c.x, c.y, x, y)
+		line.attr({
+				stroke: sol_cone_r_color,
+				"stroke-width": sol_cone_r_stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": sol_cone_r_style,
+		})
+		line.toBack()
+	}
+	if (sol_cone_ag)
+	{
+		let style = {
+				stroke: sol_cone_ag_color,
+				"stroke-width": sol_cone_ag_stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": sol_cone_ag_style,
+		}
+		let x = sol_cone_R * Math.cos(Math.PI / 4.0)
+		let y = ry * Math.sin(Math.PI / 4.0)
+		let coef = Math.sqrt(x*x + y*y);
+		let p1 = {x: c.x + 20 * x / coef, y: c.y + 20 * y /coef}
+		let p2 = {x: c.x + 20 * x / coef, y: c.y + 20 * y /coef-20}
+		let p3 = {x: c.x , y: c.y -20}
+		if (sol_cone_ag_full)
+		{
+			let poly = draw_polygone(paper, [p1,p2,p3,c])
+			poly.attr({ stroke: "none", "fill": sol_cone_ag_color })
+			poly.toBack();
+		}
+		else
+		{
+			let line = draw_line(paper, p1.x, p1.y, p2.x, p2.y)
+			line.attr(style)
+			line.toBack()
+			line = draw_line(paper, p3.x, p3.y, p2.x, p2.y)
+			line.attr(style)
+			line.toBack()
+		}
+	}
+
+
+	if (sol_cone_show_hide)
+	{
+		let arc2 = draw_ellipse_arc(paper, c, 180, 360, sol_cone_R, ry, false)
+		arc2.attr({
+				stroke: sol_cone_hide_color,
+				"stroke-width": sol_cone_hide_stroke,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": sol_cone_hide_style,
+			})
+			arc2.toBack();
+	}
+
+	if (sol_cone_fill_base)
+	{
+		if (sol_cone_base_full)
+		{
+			let ellipse = paper.ellipse(c.x, c.y, sol_cone_R, ry)
+			ellipse.attr({ stroke: "none", "fill": sol_cone_base_color })
+			ellipse.toBack();
+		}
+		else
+		{
+			let style = 
+			{
+					stroke: sol_cone_base_color,
+					"stroke-width": sol_cone_base_stroke,
+					"stroke-linecap": "round",
+					"stroke-linejoin": "round",
+					"stroke-dasharray": sol_cone_base_style,
+			}
+
+			let dt = 0;
+			let count = 0;
+			let b = Gen_Margin * 2 + sol_cone_H;
+
+			let sr1 = sol_cone_R * sol_cone_R;
+			let sr2 = ry * ry;
+
+			let db = sol_cone_base_stroke * 4.0 * Math.SQRT2;
+
+			while (dt < Canvas_width && count < 500)
+			{
+
+				let A = 2.0 * (sr2 + sr1)
+				let B = -2*(c.x * sr2 + sr1*(b - c.y))
+				let C = sr2*c.x*c.x+sr1*(b - c.y)*(b-c.y) - sr1*sr2;
+
+				let delta = B*B - 2*A*C;
+				if (delta > 0)
+				{
+					let x1 = (-B + Math.sqrt(delta)) / A;
+					let x2 = (-B - Math.sqrt(delta)) / A;
+					let y1 = b - x1;
+					let y2 = b - x2;
+					let line = draw_line(paper, x1, y1, x2, y2)
+					line.attr(style)
+					line.toBack();
+				}
+
+				b += db;
+				dt += db * Math.SQRT1_2;
+
+				count += 1;
+			}
+		}
+	}
+
+
+	
+	return [Canvas_width, Canvas_height]
+}
+
+function Solide_Sphere(paper, data)
+{
+
 }
 
 }
@@ -1360,6 +2299,39 @@ function draw_ellipse_arc(paper, center, stara, enda, rx, ry, close = true)
 	}
 }
 
+function get_ellipse_arc(cx, cy, stara, enda, rx, ry, close = true)
+{
+	let sx = Round(cx + rx * Math.cos(stara * Math.PI / 180.0),3);
+	let sy = Round(cy + ry * Math.sin(stara * Math.PI / 180.0),3);
+
+	let ex = Round(cx + rx * Math.cos(enda * Math.PI / 180.0),3);
+	let ey = Round(cy + ry * Math.sin(enda * Math.PI / 180.0),3);
+
+	let txt = " A ";
+	txt += Round(rx,3) + " " + Round(ry	,3) + " 0 ";
+	if (Math.abs(enda - stara) < 360)
+	{
+		if (Math.abs(enda - stara) > 180)
+			txt += "1 "
+		else
+			txt += "0 "
+		if (enda < stara)
+			txt += "0 "
+		else
+			txt += "1 " 
+		txt += ex + " " + ey
+		console.log(cx)
+		if (close)
+		{
+			txt += "L" + cx + " " + cy;
+			return txt + "Z";
+		}
+		else
+			return txt;
+	}
+	return "";
+}
+
 function draw_fleche(type = 0, px, py, dx, dy, size)
 {
 	dx = dx - px;
@@ -1398,6 +2370,39 @@ function draw_fleche(type = 0, px, py, dx, dy, size)
 		default:
 			break;
 	}
+}
+
+function line_intersection(p1,p2,p3,p4)
+{
+	let a1 = (p1.y - p2.y) / (p1.x - p2.x);
+	let b1 = p1.y - a1 * p1.x ;
+	let a2 = (p3.y - p4.y) / (p3.x - p4.x);
+	let b2 = p3.y - a2 * p3.x ;
+	if (Math.abs(p1.x - p2.x) <= 0.001)
+	{
+		return {x: p1.x, y: a2 * p1.x + b2};
+	}
+	else if (Math.abs(p3.x - p4.x) <= 0.001)
+	{
+		return {x: p3.x, y: a1 * p3.x + b1};
+	}
+	let x = (b2 - b1)/(a1-a2);
+	let y = a1 * x + b1
+	return {x: x, y: y};
+}
+
+function point_between(p1, p2, p)
+{
+	if (p.x < Math.min(p1.x, p2.x) - 0.01) return false;
+	if (p.x > Math.max(p1.x, p2.x) + 0.01) return false;
+	if (p.y < Math.min(p1.y, p2.y) - 0.01) return false;
+	if (p.y > Math.max(p1.y, p2.y) + 0.01) return false;
+	return true;
+}
+
+function length(p1, p2)
+{
+	return Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2))
 }
 
 }

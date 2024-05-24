@@ -23,7 +23,6 @@ function ClearObject()
 
 function Regenerate()
 {
-
 	Canvas_width = document.getElementById("gen_width").valueAsNumber;
 	Canvas_height = document.getElementById("gen_height").valueAsNumber;
 	Gen_Margin = document.getElementById("gen_margin").valueAsNumber;
@@ -111,12 +110,14 @@ function Draw_Quadrillage(data)
 	data["c_size_x"] = document.getElementById("c_size_x").valueAsNumber;
 	data["c_size_y"] = document.getElementById("c_size_y").valueAsNumber;
 	data["q_line_color"] = document.getElementById("q_line_color").value;
+	data["q_line_style"] = document.getElementById("q_line_style").value;
 	data["q_line_stroke"] = document.getElementById("q_line_stroke").valueAsNumber;
 	data["q_int"] = document.getElementById("q_int").checked;
 	data["q_points"] = document.getElementById("q_points").checked;
 	data["c_int_hor_nbr"] = document.getElementById("c_int_hor_nbr").valueAsNumber;
 	data["c_int_ver_nbr"] = document.getElementById("c_int_ver_nbr").valueAsNumber;
 	data["q_int_line_color"] = document.getElementById("q_int_line_color").value;
+	data["q_int_line_style"] = document.getElementById("q_int_line_style").value;
 	data["q_int_line_stroke"] = document.getElementById("q_int_line_stroke").valueAsNumber;
 
   let newsize = Quadrillage(paper, data);
@@ -142,6 +143,11 @@ function Draw_Solide(data)
 		data["sol_pavdrt_fill_shadow"] = document.getElementById("sol_pavdrt_fill_shadow").checked;
 		data["sol_pavdrt_fill_color"] = document.getElementById("sol_pavdrt_fill_color").value;
 		data["sol_pavdrt_fill_color_alpha"] = document.getElementById("sol_pavdrt_fill_color_alpha").value;
+		data["sol_pavdrt_fill_base"] = document.getElementById("sol_pavdrt_fill_base").checked;
+		data["sol_pavdrt_base_full"] = document.getElementById("sol_pavdrt_base_full").checked;
+		data["sol_pavdrt_base_stroke"] = document.getElementById("sol_pavdrt_base_stroke").value;
+		data["sol_pavdrt_base_color"] = document.getElementById("sol_pavdrt_base_color").value;
+		data["sol_pavdrt_base_style"] = document.getElementById("sol_pavdrt_base_style").value;
 
 		let newsize = Solide_PaveDroit(paper, data);
 		document.getElementById("gen_width").value = newsize[0];
@@ -150,18 +156,144 @@ function Draw_Solide(data)
 	}
 	else if (type == 1) // Prisme droit régulier
 	{
+		data["sol_prmdrt_L"] = document.getElementById("sol_prmdrt_L").valueAsNumber;
+		data["sol_prmdrt_H"] = document.getElementById("sol_prmdrt_H").valueAsNumber;
+		data["sol_prmdrt_P"] = document.getElementById("sol_prmdrt_P").valueAsNumber;
+		data["sol_prmdrt_F"] = document.getElementById("sol_prmdrt_F").valueAsNumber;
+		data["sol_prmdrt_A"] = document.getElementById("sol_prmdrt_A").valueAsNumber;
+		data["sol_prmdrt_line_stroke"] = document.getElementById("sol_prmdrt_line_stroke").valueAsNumber;
+		data["sol_prmdrt_line_color"] = document.getElementById("sol_prmdrt_line_color").value;
+		data["sol_prmdrt_show_hide"] = document.getElementById("sol_prmdrt_show_hide").checked;
+		data["sol_prmdrt_hide_style"] = document.getElementById("sol_prmdrt_hide_style").value;
+		data["sol_prmdrt_hide_color"] = document.getElementById("sol_prmdrt_hide_color").value;
+		data["sol_prmdrt_hide_stroke"] = document.getElementById("sol_prmdrt_hide_stroke").value;
+		data["sol_prmdrt_fill"] = document.getElementById("sol_prmdrt_fill").checked;
+		data["sol_prmdrt_fill_shadow"] = document.getElementById("sol_prmdrt_fill_shadow").checked;
+		data["sol_prmdrt_fill_color"] = document.getElementById("sol_prmdrt_fill_color").value;
+		data["sol_prmdrt_fill_color_alpha"] = document.getElementById("sol_prmdrt_fill_color_alpha").value;
+		data["sol_prmdrt_fill_base"] = document.getElementById("sol_prmdrt_fill_base").checked;
+		data["sol_prmdrt_base_full"] = document.getElementById("sol_prmdrt_base_full").checked;
+		data["sol_prmdrt_base_stroke"] = document.getElementById("sol_prmdrt_base_stroke").value;
+		data["sol_prmdrt_base_color"] = document.getElementById("sol_prmdrt_base_color").value;
+		data["sol_prmdrt_base_style"] = document.getElementById("sol_prmdrt_base_style").value;
 
+		let newsize = Solide_PrismeDroit(paper, data);
+		document.getElementById("gen_width").value = newsize[0];
+		document.getElementById("gen_height").value = newsize[1];
+		return;
 	}
 	else if (type == 2) // Cylindre
 	{
-		
+		data["sol_cylind_R"] = document.getElementById("sol_cylind_R").valueAsNumber;
+		data["sol_cylind_H"] = document.getElementById("sol_cylind_H").valueAsNumber;
+		data["sol_cylind_line_stroke"] = document.getElementById("sol_cylind_line_stroke").valueAsNumber;
+		data["sol_cylind_line_color"] = document.getElementById("sol_cylind_line_color").value;
+		data["sol_cylind_show_hide"] = document.getElementById("sol_cylind_show_hide").checked;
+		data["sol_cylind_hide_style"] = document.getElementById("sol_cylind_hide_style").value;
+		data["sol_cylind_hide_color"] = document.getElementById("sol_cylind_hide_color").value;
+		data["sol_cylind_hide_stroke"] = document.getElementById("sol_cylind_hide_stroke").value;
+		data["sol_cylind_fill"] = document.getElementById("sol_cylind_fill").checked;
+		data["sol_cylind_fill_shadow"] = document.getElementById("sol_cylind_fill_shadow").checked;
+		data["sol_cylind_fill_color"] = document.getElementById("sol_cylind_fill_color").value;
+		data["sol_cylind_fill_color_alpha"] = document.getElementById("sol_cylind_fill_color_alpha").value;
+		data["sol_cylind_fill_base"] = document.getElementById("sol_cylind_fill_base").checked;
+		data["sol_cylind_base_full"] = document.getElementById("sol_cylind_base_full").checked;
+		data["sol_cylind_base_stroke"] = document.getElementById("sol_cylind_base_stroke").value;
+		data["sol_cylind_base_color"] = document.getElementById("sol_cylind_base_color").value;
+		data["sol_cylind_base_style"] = document.getElementById("sol_cylind_base_style").value;
+		data["sol_cylind_h"] = document.getElementById("sol_cylind_h").checked;
+		data["sol_cylind_h_stroke"] = document.getElementById("sol_cylind_h_stroke").value;
+		data["sol_cylind_h_color"] = document.getElementById("sol_cylind_h_color").value;
+		data["sol_cylind_h_style"] = document.getElementById("sol_cylind_h_style").value;
+		data["sol_cylind_r"] = document.getElementById("sol_cylind_r").checked;
+		data["sol_cylind_r_stroke"] = document.getElementById("sol_cylind_r_stroke").value;
+		data["sol_cylind_r_color"] = document.getElementById("sol_cylind_r_color").value;
+		data["sol_cylind_r_style"] = document.getElementById("sol_cylind_r_style").value;
+		data["sol_cylind_ag"] = document.getElementById("sol_cylind_ag").checked;
+		data["sol_cylind_ag_stroke"] = document.getElementById("sol_cylind_ag_stroke").value;
+		data["sol_cylind_ag_full"] = document.getElementById("sol_cylind_ag_full").checked;
+		data["sol_cylind_ag_color"] = document.getElementById("sol_cylind_ag_color").value;
+		data["sol_cylind_ag_style"] = document.getElementById("sol_cylind_ag_style").value;
+
+		let newsize = Solide_Cylindre(paper, data);
+		document.getElementById("gen_width").value = newsize[0];
+		document.getElementById("gen_height").value = newsize[1];
+		return;
 	}
 	else if (type == 3) // Pyramide régulière
 	{
+		data["sol_pyrami_L"] = document.getElementById("sol_pyrami_L").valueAsNumber;
+		data["sol_pyrami_H"] = document.getElementById("sol_pyrami_H").valueAsNumber;
+		data["sol_pyrami_P"] = document.getElementById("sol_pyrami_P").valueAsNumber;
+		data["sol_pyrami_F"] = document.getElementById("sol_pyrami_F").valueAsNumber;
+		data["sol_pyrami_A"] = document.getElementById("sol_pyrami_A").valueAsNumber;
+		data["sol_pyrami_line_stroke"] = document.getElementById("sol_pyrami_line_stroke").valueAsNumber;
+		data["sol_pyrami_line_color"] = document.getElementById("sol_pyrami_line_color").value;
+		data["sol_pyrami_show_hide"] = document.getElementById("sol_pyrami_show_hide").checked;
+		data["sol_pyrami_hide_style"] = document.getElementById("sol_pyrami_hide_style").value;
+		data["sol_pyrami_hide_color"] = document.getElementById("sol_pyrami_hide_color").value;
+		data["sol_pyrami_hide_stroke"] = document.getElementById("sol_pyrami_hide_stroke").value;
+		data["sol_pyrami_fill"] = document.getElementById("sol_pyrami_fill").checked;
+		data["sol_pyrami_fill_shadow"] = document.getElementById("sol_pyrami_fill_shadow").checked;
+		data["sol_pyrami_fill_color"] = document.getElementById("sol_pyrami_fill_color").value;
+		data["sol_pyrami_fill_color_alpha"] = document.getElementById("sol_pyrami_fill_color_alpha").value;
+		data["sol_pyrami_fill_base"] = document.getElementById("sol_pyrami_fill_base").checked;
+		data["sol_pyrami_base_full"] = document.getElementById("sol_pyrami_base_full").checked;
+		data["sol_pyrami_base_stroke"] = document.getElementById("sol_pyrami_base_stroke").value;
+		data["sol_pyrami_base_color"] = document.getElementById("sol_pyrami_base_color").value;
+		data["sol_pyrami_base_style"] = document.getElementById("sol_pyrami_base_style").value;
+		data["sol_pyrami_h"] = document.getElementById("sol_pyrami_h").checked;
+		data["sol_pyrami_h_stroke"] = document.getElementById("sol_pyrami_h_stroke").value;
+		data["sol_pyrami_h_color"] = document.getElementById("sol_pyrami_h_color").value;
+		data["sol_pyrami_h_style"] = document.getElementById("sol_pyrami_h_style").value;
+		data["sol_pyrami_ag"] = document.getElementById("sol_pyrami_ag").checked;
+		data["sol_pyrami_ag_stroke"] = document.getElementById("sol_pyrami_ag_stroke").value;
+		data["sol_pyrami_ag_full"] = document.getElementById("sol_pyrami_ag_full").checked;
+		data["sol_pyrami_ag_color"] = document.getElementById("sol_pyrami_ag_color").value;
+		data["sol_pyrami_ag_style"] = document.getElementById("sol_pyrami_ag_style").value;
 		
+		let newsize = Solide_Pyramide(paper, data);
+		document.getElementById("gen_width").value = newsize[0];
+		document.getElementById("gen_height").value = newsize[1];
+		return;
 	}
 	else if (type == 4) // Cône
 	{
+		data["sol_cone_R"] = document.getElementById("sol_cone_R").valueAsNumber;
+		data["sol_cone_H"] = document.getElementById("sol_cone_H").valueAsNumber;
+		data["sol_cone_line_stroke"] = document.getElementById("sol_cone_line_stroke").valueAsNumber;
+		data["sol_cone_line_color"] = document.getElementById("sol_cone_line_color").value;
+		data["sol_cone_show_hide"] = document.getElementById("sol_cone_show_hide").checked;
+		data["sol_cone_hide_style"] = document.getElementById("sol_cone_hide_style").value;
+		data["sol_cone_hide_color"] = document.getElementById("sol_cone_hide_color").value;
+		data["sol_cone_hide_stroke"] = document.getElementById("sol_cone_hide_stroke").value;
+		data["sol_cone_fill"] = document.getElementById("sol_cone_fill").checked;
+		data["sol_cone_fill_shadow"] = document.getElementById("sol_cone_fill_shadow").checked;
+		data["sol_cone_fill_color"] = document.getElementById("sol_cone_fill_color").value;
+		data["sol_cone_fill_color_alpha"] = document.getElementById("sol_cone_fill_color_alpha").value;
+		data["sol_cone_fill_base"] = document.getElementById("sol_cone_fill_base").checked;
+		data["sol_cone_base_full"] = document.getElementById("sol_cone_base_full").checked;
+		data["sol_cone_base_stroke"] = document.getElementById("sol_cone_base_stroke").value;
+		data["sol_cone_base_color"] = document.getElementById("sol_cone_base_color").value;
+		data["sol_cone_base_style"] = document.getElementById("sol_cone_base_style").value;
+		data["sol_cone_h"] = document.getElementById("sol_cone_h").checked;
+		data["sol_cone_h_stroke"] = document.getElementById("sol_cone_h_stroke").value;
+		data["sol_cone_h_color"] = document.getElementById("sol_cone_h_color").value;
+		data["sol_cone_h_style"] = document.getElementById("sol_cone_h_style").value;
+		data["sol_cone_r"] = document.getElementById("sol_cone_r").checked;
+		data["sol_cone_r_stroke"] = document.getElementById("sol_cone_r_stroke").value;
+		data["sol_cone_r_color"] = document.getElementById("sol_cone_r_color").value;
+		data["sol_cone_r_style"] = document.getElementById("sol_cone_r_style").value;
+		data["sol_cone_ag"] = document.getElementById("sol_cone_ag").checked;
+		data["sol_cone_ag_stroke"] = document.getElementById("sol_cone_ag_stroke").value;
+		data["sol_cone_ag_full"] = document.getElementById("sol_cone_ag_full").checked;
+		data["sol_cone_ag_color"] = document.getElementById("sol_cone_ag_color").value;
+		data["sol_cone_ag_style"] = document.getElementById("sol_cone_ag_style").value;
+
+		let newsize = Solide_Cone(paper, data);
+		document.getElementById("gen_width").value = newsize[0];
+		document.getElementById("gen_height").value = newsize[1];
+		return;
 		
 	}
 	else if (type == 5) // Sphère
