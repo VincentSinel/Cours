@@ -46,6 +46,8 @@
 .DYRound{ border-radius: 20px; padding: 1px; width: fit-content; height: fit-content; display: inline-block; border: 2px solid var(--Dyellow);}
 .DVRound{ border-radius: 20px; padding: 1px; width: fit-content; height: fit-content; display: inline-block; border: 2px solid var(--Dviolet);}
 
+.CRRound-bottom{ border-radius: 20px; padding: 1px; width: fit-content; height: fit-content; display: inline-block; border-bottom: 2px solid var(--Cred);}
+
 .NumR{ border-radius: 50%; width: 15px; height: 15px; vertical-align:middle; margin-bottom: 0.25em; display: inline-block; border: 2px solid var(--Texte); background: var(--Texte);
     color: white; text-align: center; vertical-align: middle; font: 12px Arial, sans-serif;}
 
@@ -427,7 +429,8 @@ ol > li::marker {
     width: 2cm;
 }
 
-.proportionnaltable td, th{
+.proportionnaltable td,
+.proportionnaltable th{
     border: solid var(--TableBorder) 2px;
     border-collapse: collapse;
     padding: 3px 10px;
