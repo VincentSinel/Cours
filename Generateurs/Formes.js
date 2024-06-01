@@ -298,7 +298,45 @@ function Draw_Solide(data)
 	}
 	else if (type == 5) // Sphère
 	{
-		
+		data["sol_sphere_R"] = document.getElementById("sol_sphere_R").valueAsNumber;
+		data["sol_sphere_A"] = document.getElementById("sol_sphere_A").valueAsNumber;
+		data["sol_sphere_line_stroke"] = document.getElementById("sol_sphere_line_stroke").valueAsNumber;
+		data["sol_sphere_line_color"] = document.getElementById("sol_sphere_line_color").value;
+		data["sol_sphere_show_hide"] = document.getElementById("sol_sphere_show_hide").checked;
+		data["sol_sphere_hide_style"] = document.getElementById("sol_sphere_hide_style").value;
+		data["sol_sphere_fill"] = document.getElementById("sol_sphere_fill").checked;
+		data["sol_sphere_fill_shadow"] = document.getElementById("sol_sphere_fill_shadow").checked;
+		data["sol_sphere_fill_color"] = document.getElementById("sol_sphere_fill_color").value;
+		data["sol_sphere_fill_color_alpha"] = document.getElementById("sol_sphere_fill_color_alpha").value;
+		data["sol_sphere_e"] = document.getElementById("sol_sphere_e").checked;
+		data["sol_sphere_e_stroke"] = document.getElementById("sol_sphere_e_stroke").value;
+		data["sol_sphere_e_color"] = document.getElementById("sol_sphere_e_color").value;
+		data["sol_sphere_e_style"] = document.getElementById("sol_sphere_e_style").value;
+		data["sol_sphere_lon"] = document.getElementById("sol_sphere_lon").checked;
+		data["sol_sphere_lon_angle"] = document.getElementById("sol_sphere_lon_angle").valueAsNumber;
+		data["sol_sphere_lon_stroke"] = document.getElementById("sol_sphere_lon_stroke").value;
+		data["sol_sphere_lon_color"] = document.getElementById("sol_sphere_lon_color").value;
+		data["sol_sphere_lon_style"] = document.getElementById("sol_sphere_lon_style").value;
+		data["sol_sphere_lat"] = document.getElementById("sol_sphere_lat").checked;
+		data["sol_sphere_lat_angle"] = document.getElementById("sol_sphere_lat_angle").valueAsNumber;
+		data["sol_sphere_lat_stroke"] = document.getElementById("sol_sphere_lat_stroke").value;
+		data["sol_sphere_lat_color"] = document.getElementById("sol_sphere_lat_color").value;
+		data["sol_sphere_lat_style"] = document.getElementById("sol_sphere_lat_style").value;
+		data["sol_sphere_h"] = document.getElementById("sol_sphere_h").checked;
+		data["sol_sphere_h_stroke"] = document.getElementById("sol_sphere_h_stroke").value;
+		data["sol_sphere_h_color"] = document.getElementById("sol_sphere_h_color").value;
+		data["sol_sphere_h_style"] = document.getElementById("sol_sphere_h_style").value;
+		data["sol_sphere_r"] = document.getElementById("sol_sphere_r").checked;
+		data["sol_sphere_r_lon"] = document.getElementById("sol_sphere_r_lon").valueAsNumber;
+		data["sol_sphere_r_lat"] = document.getElementById("sol_sphere_r_lat").valueAsNumber;
+		data["sol_sphere_r_stroke"] = document.getElementById("sol_sphere_r_stroke").value;
+		data["sol_sphere_r_color"] = document.getElementById("sol_sphere_r_color").value;
+		data["sol_sphere_r_style"] = document.getElementById("sol_sphere_r_style").value;
+
+		let newsize = Solide_Sphere(paper, data);
+		document.getElementById("gen_width").value = newsize[0];
+		document.getElementById("gen_height").value = newsize[1];
+		return;
 	}
 }
 

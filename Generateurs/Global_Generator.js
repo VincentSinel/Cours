@@ -2236,55 +2236,309 @@ function Solide_Sphere(paper, data)
 {
 	let objects = data["objects"];
 
-	let sol_sphere_R = data["sol_sphere_R"]
-	let sol_sphere_H = sol_sphere_R / 3.0
-	let sol_sphere_line_stroke = data["sol_sphere_line_stroke"]
-	let sol_sphere_line_color = data["sol_sphere_line_color"]
+	let R = data["sol_sphere_R"]
+	let AngleVue = data["sol_sphere_A"]
 	let sol_sphere_show_hide = data["sol_sphere_show_hide"]
-	let sol_sphere_hide_style = data["sol_sphere_hide_style"]
-	let sol_sphere_hide_color = data["sol_sphere_hide_color"]
-	let sol_sphere_hide_stroke = data["sol_sphere_hide_stroke"]
 	let sol_sphere_fill = data["sol_sphere_fill"]
 	let sol_sphere_fill_shadow = data["sol_sphere_fill_shadow"]
 	let sol_sphere_fill_color = data["sol_sphere_fill_color"]
 	let sol_sphere_fill_color_alpha = data["sol_sphere_fill_color_alpha"]
-	let sol_sphere_fill_base = data["sol_sphere_fill_base"]
-	let sol_sphere_base_full = data["sol_sphere_base_full"]
-	let sol_sphere_base_stroke = data["sol_sphere_base_stroke"]
-	let sol_sphere_base_color = data["sol_sphere_base_color"]
-	let sol_sphere_base_style = data["sol_sphere_base_style"]
 	let sol_sphere_h = data["sol_sphere_h"]
-	let sol_sphere_h_stroke = data["sol_sphere_h_stroke"]
-	let sol_sphere_h_color = data["sol_sphere_h_color"]
-	let sol_sphere_h_style = data["sol_sphere_h_style"]
 	let sol_sphere_r = data["sol_sphere_r"]
-	let sol_sphere_r_stroke = data["sol_sphere_r_stroke"]
-	let sol_sphere_r_color = data["sol_sphere_r_color"]
-	let sol_sphere_r_style = data["sol_sphere_r_style"]
-	let sol_sphere_ag = data["sol_sphere_ag"]
-	let sol_sphere_ag_stroke = data["sol_sphere_ag_stroke"]
-	let sol_sphere_ag_full = data["sol_sphere_ag_full"]
-	let sol_sphere_ag_color = data["sol_sphere_ag_color"]
-	let sol_sphere_ag_style = data["sol_sphere_ag_style"]
+	let sol_sphere_r_lon = data["sol_sphere_r_lon"]
+	let sol_sphere_r_lat = data["sol_sphere_r_lat"]
+	let sol_sphere_e = data["sol_sphere_e"]
+	let sol_sphere_lon = data["sol_sphere_lon"]
+	let sol_sphere_lon_angle = data["sol_sphere_lon_angle"]
+	let sol_sphere_lat = data["sol_sphere_lat"]
+	let sol_sphere_lat_angle = data["sol_sphere_lat_angle"]
 
-	let ry = Math.floor(sol_sphere_R / 3.0);
-
-	Canvas_width = Gen_Margin * 2 + sol_sphere_R * 2;
-	Canvas_height = Gen_Margin * 2 + sol_sphere_H + ry * 2;
+	Canvas_width = Gen_Margin * 2 + R * 2;
+	Canvas_height = Canvas_width;
 	
 	paper.setSize(Canvas_width, Canvas_height);
 	paper.clear();
 
-	let c = {x: Canvas_width / 2, y: Gen_Margin + ry}
+	let c = {x: Canvas_width / 2, y: Canvas_height / 2}
 
 
-	let style = 
+	let style_main = 
 	{
-			stroke: sol_sphere_line_color,
-			"stroke-width": sol_sphere_line_stroke,
+			stroke: data["sol_sphere_line_color"],
+			"stroke-width": data["sol_sphere_line_stroke"],
 			"stroke-linecap": "round",
 			"stroke-linejoin": "round",
 	}
+	let style_e = 
+	{
+			stroke: data["sol_sphere_e_color"],
+			"stroke-width": data["sol_sphere_e_stroke"],
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round",
+	}
+	let style_e_hide = 
+	{
+			stroke: data["sol_sphere_e_color"],
+			"stroke-width": data["sol_sphere_e_stroke"],
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round",
+			"stroke-dasharray": data["sol_sphere_hide_style"],
+	}
+	let style_lon = 
+	{
+			stroke: data["sol_sphere_lon_color"],
+			"stroke-width": data["sol_sphere_lon_stroke"],
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round",
+	}
+	let style_lon_hide = 
+	{
+			stroke: data["sol_sphere_lon_color"],
+			"stroke-width": data["sol_sphere_lon_stroke"],
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round",
+			"stroke-dasharray": data["sol_sphere_hide_style"],
+	}
+	let style_lat = 
+	{
+			stroke: data["sol_sphere_lat_color"],
+			"stroke-width": data["sol_sphere_lat_stroke"],
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round",
+	}
+	let style_lat_hide = 
+	{
+			stroke: data["sol_sphere_lat_color"],
+			"stroke-width": data["sol_sphere_lat_stroke"],
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round",
+			"stroke-dasharray": data["sol_sphere_hide_style"],
+	}
+	let style_h = 
+	{
+			stroke: data["sol_sphere_h_color"],
+			"stroke-width": data["sol_sphere_h_stroke"],
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round",
+			"stroke-dasharray": data["sol_sphere_h_style"],
+	}
+	let style_r = 
+	{
+			stroke: data["sol_sphere_r_color"],
+			"stroke-width": data["sol_sphere_r_stroke"],
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round",
+			"stroke-dasharray": data["sol_sphere_r_style"],
+	}
+	let style_c = 
+	{
+			stroke: data["sol_sphere_line_color"],
+			"stroke-width": 2,
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round",
+	}
+	let circle = paper.ellipse(c.x, c.y, R, R);
+	circle.attr(style_main);
+
+	var get_lat_size = function(h, sphere_r, angle)
+	{
+		let hr = Math.sqrt(sphere_r * sphere_r - h*h);
+		let vr = Math.abs(hr * Math.sin(angle * Math.PI / 180.0));
+		let y = h * Math.cos(angle * Math.PI / 180.0);
+		return [y, hr, vr];
+	}
+	var get_lon_size = function(sphere_r, angle, angle_vue)
+	{
+		let al_r = angle * Math.PI / 180.0
+		let av_r = angle_vue * Math.PI / 180.0
+		let equate_r = Math.abs(sphere_r * Math.sin(av_r));
+		let dx = sphere_r * Math.cos(al_r);
+		let dy = equate_r * Math.sin(al_r);
+		let ang_ellipse;
+		if (dy == 0)
+			ang_ellipse = -Math.PI / 2.0;
+		else
+		{
+			ang_ellipse = Math.atan2(-dx, dy);
+			if (angle_vue < 0)
+				ang_ellipse *= -1
+		}
+		
+
+		let y1 = sphere_r * Math.cos(av_r);
+		let c = 1 - y1 * y1 * Math.sin(ang_ellipse) * Math.sin(ang_ellipse) / (sphere_r * sphere_r);
+		let b;
+		if (c == 0)
+			b = sphere_r * Math.sin(al_r);
+		else
+			b = y1*Math.cos(ang_ellipse) / Math.sqrt(c);
+
+
+		return [Round(ang_ellipse, 3), Round(b, 3)]
+	}
+	
+	// Fill
+	if (sol_sphere_fill)
+		{
+			let color_circle = paper.ellipse(c.x, c.y, R, R);
+			if (sol_sphere_fill_shadow)
+			{
+				let c_border = pSBC(-0.8, sol_sphere_fill_color)
+				color_circle.attr( { stroke: "none", "fill": "r(0.25, 0.25)" + sol_sphere_fill_color.toString() + "-" + c_border.toString(), "opacity": sol_sphere_fill_color_alpha } )
+			}
+			else
+				color_circle.attr( { stroke: "none", "fill": sol_sphere_fill_color, "opacity": sol_sphere_fill_color_alpha } )
+			color_circle.toBack();
+			document.getElementById("preview").getElementsByTagName("ellipse")[0].setAttribute("style", "opacity:" + sol_sphere_fill_color_alpha.toString())
+		}
+	// Hauteur
+	if (sol_sphere_h && sol_sphere_show_hide)
+		{
+			let y = R * Math.cos(AngleVue * Math.PI / 180.0);
+			let line = draw_line(paper, c.x, c.y + y, c.x, c.y - y);
+			line.attr(style_h)
+			line.toBack();
+		}
+	// Rayon
+	if (sol_sphere_r)
+	{
+		let h = R * Math.sin(-sol_sphere_r_lat * Math.PI / 180.0)
+		let size = get_lat_size(h, R, AngleVue)
+
+		let x = size[1] * Math.cos(sol_sphere_r_lon * Math.PI / 180.0 + Math.PI / 2.0);
+		let y = size[2] * Math.sin(sol_sphere_r_lon * Math.PI / 180.0 + Math.PI / 2.0);
+
+		let line = draw_line(paper, c.x, c.y, c.x + x, c.y + size[0] + y);
+		line.attr(style_r)
+		line.toBack();
+	}
+	// Center
+	{
+		let line = draw_line(paper, c.x - 2, c.y - 2, c.x + 2, c.y + 2);
+		line.attr(style_c)
+		line.toBack();
+		line = draw_line(paper, c.x - 2, c.y + 2, c.x + 2, c.y - 2);
+		line.attr(style_c)
+		line.toBack();
+	}
+	// Equateur
+	if (sol_sphere_e)
+	{
+		let size = get_lat_size(0, R, AngleVue)
+		if (AngleVue == 0)
+		{
+			let line = draw_line(paper, c.x - R, c.y, c.x + R, c.y);
+			line.attr(style_e)
+		}
+		else
+		{
+			let ellipse;
+			if (AngleVue > 0)
+				ellipse = draw_ellipse_arc(paper, c, 0, 180, R, size[2], false);
+			else
+				ellipse = draw_ellipse_arc(paper, c, 180, 360, R, size[2], false);
+			ellipse.attr(style_e);
+			if (sol_sphere_show_hide)
+			{
+				let ellipse;
+				if (AngleVue > 0)
+					ellipse = draw_ellipse_arc(paper, c, 180, 360, R, size[2], false);
+				else
+					ellipse = draw_ellipse_arc(paper, c, 0, 180, R, size[2], false);
+				ellipse.attr(style_e_hide);
+				ellipse.toBack();
+			}
+		}
+	}
+	// Latitude
+	if (sol_sphere_lat)
+	{
+		let h = R * Math.sin(-sol_sphere_lat_angle * Math.PI / 180.0)
+		let size = get_lat_size(h, R, AngleVue)
+		let ec = {x: c.x, y: c.y + size[0]};
+		if (AngleVue == 0)
+		{
+			let line = draw_line(paper, ec.x - size[1], ec.y, ec.x + size[1], ec.y);
+			line.attr(style_lat)
+		}
+		else
+		{
+			let sol = circleEllipse_intersection(c, R, ec, size[1], size[2]);
+			if (sol.length > 1)
+			{
+				let a1 = (Math.atan2(sol[0].y - ec.y, sol[0].x - ec.x) * 180.0 / Math.PI + 360) % 360;
+				let a2 = (Math.atan2(sol[1].y - ec.y, sol[1].x - ec.x) * 180.0 / Math.PI + 360) % 360;
+				let ellipse;
+				if (AngleVue > 0)
+					if (h < 0)
+						ellipse = draw_ellipse_arc(paper, ec, a2, a1 - 360, size[1], size[2], false);
+					else
+						ellipse = draw_ellipse_arc(paper, ec, a1, a2, size[1], size[2], false);
+				else
+				{
+					if (h >= 0)
+						ellipse = draw_ellipse_arc(paper, ec, a2, 360 + a1, size[1], size[2], false);
+					else
+						ellipse = draw_ellipse_arc(paper, ec, a1, a2, size[1], size[2], false);
+				}
+				ellipse.attr(style_lat);
+				if (sol_sphere_show_hide)
+				{
+					let ellipse;
+					if (AngleVue > 0 && h < 0)
+						ellipse = draw_ellipse_arc(paper, ec, a1, a2, size[1], size[2], false);
+					else
+						ellipse = draw_ellipse_arc(paper, ec, a2, a1 - 360, size[1], size[2], false);
+					ellipse.attr(style_lat_hide);
+					ellipse.toBack();
+				}
+			}
+			else
+			{
+				let ellipse;
+				ellipse = paper.ellipse(ec.x, ec.y, size[1], size[2]);
+				if (sol_sphere_show_hide && ((h > 0 && AngleVue < 0) || (h < 0 && AngleVue > 0)))
+					ellipse.attr(style_lat);
+				else
+				{
+					ellipse.attr(style_lat_hide);
+					ellipse.toBack();
+				}
+			}
+		}
+	}
+	// Longitude
+	if (sol_sphere_lon)
+	{
+		let size = get_lon_size(R, sol_sphere_lon_angle, AngleVue);
+		console.log(size)
+		let ellipse;
+		if (size[1] == 0)
+		{
+			ellipse = draw_line(paper, c.x + R, c.y, c.x - R, c.y)
+			ellipse.rotate(size[0] * 180.0 / Math.PI)
+			ellipse.attr(style_lon);
+		}
+		else
+		{
+			let ang = size[0] * 180.0 / Math.PI
+			let d = 0;
+			if (AngleVue < 0) d = 360
+			ellipse = draw_ellipse_arc(paper, c, 180, 360-d, R, size[1], false);
+			ellipse.rotate(ang, c.x, c.y)
+			ellipse.attr(style_lon);
+			ellipse = draw_ellipse_arc(paper, c, 180, d, R, size[1], false);
+			ellipse.rotate(ang, c.x, c.y)
+			ellipse.attr(style_lon_hide);
+			ellipse.toBack();
+		}
+	}
+
+	
+	circle.toFront()
+
+	return [Canvas_width, Canvas_width]
+	
 
 	let ellipse = paper.ellipse(c.x, c.y, sol_sphere_R, ry)
 	ellipse.attr(style)
@@ -2615,6 +2869,32 @@ function line_intersection(p1,p2,p3,p4)
 	let x = (b2 - b1)/(a1-a2);
 	let y = a1 * x + b1
 	return {x: x, y: y};
+}
+
+function circleEllipse_intersection(circle_center,circle_r, ellipse_center, ellipse_rx, ellipse_ry)
+{
+	let a = ellipse_rx * ellipse_rx;
+	let b = ellipse_ry * ellipse_ry;
+	let alpha = a / b - 1.0;
+	let beta = 2 * (circle_center.y - a / b * ellipse_center.y);
+	let gamma = a / b * (ellipse_center.y * ellipse_center.y) - circle_center.y * circle_center.y - a * circle_r * circle_r;
+	if (alpha == 0)
+			return [];
+	else
+	{
+		let y = -beta / (2 * alpha);
+		let delta = Round(circle_r * circle_r - Math.pow(y - circle_center.y, 2), 3);
+		if (delta < 0)
+				return [];
+		else if (delta == 0)
+				return [{x: circle_center.x, y: y}];
+		else
+		{
+				let x1 = circle_center.x + Math.sqrt(delta);
+				let x2 = circle_center.x - Math.sqrt(delta);
+				return [{x: x1, y: y},{x: x2, y: y}];
+		}
+	}
 }
 
 function point_between(p1, p2, p)

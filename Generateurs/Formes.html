@@ -85,7 +85,7 @@
 			<div class="panel leftpanel">
 				<!-- Paramètres repère gradué -->
 				<div style="width: 100%;" id="param_repere" class="hiddenparam">
-					<div class="formemenu">
+					<div class="formemenu show">
 						<span>Axe horizontal</span>
 						<div class="formemenu_div">
 							<label><b>Nombre de sections:</b></label>
@@ -127,7 +127,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="formemenu">
+					<div class="formemenu show">
 						<span>Axe vertical</span>
 						<div class="formemenu_div">
 							<label>Nombre de section :</label>
@@ -169,7 +169,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="formemenu">
+					<div class="formemenu show">
 						<span>Traits principaux</span>
 						<div class="formemenu_div">
 							<div class="flexparameters">
@@ -208,7 +208,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="formemenu">
+					<div class="formemenu show">
 						<span>Traits secondaires</span>
 						<div class="formemenu_div">
 							<div class="flexparameters">
@@ -245,7 +245,7 @@
 				</div>
 				<!-- Paramètres axe gradué -->
 				<div style="width: 100%;" id="param_axe" class="hiddenparam">
-					<div class="formemenu">
+					<div class="formemenu show">
 						<span>Paramètre principaux</span>
 						<div class="formemenu_div">
 							<label>Nombre de section :</label>
@@ -287,7 +287,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="formemenu">
+					<div class="formemenu show">
 						<span>Traits principaux</span>
 						<div class="formemenu_div">
 							<div class="flexparameters">
@@ -311,7 +311,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="formemenu">
+					<div class="formemenu show">
 						<span>Traits secondaires</span>
 						<div class="formemenu_div">
 							<div class="flexparameters">
@@ -415,7 +415,7 @@
 						<option value="type3">Cylindre</option>
 						<option value="type4">Pyramide régulière</option>
 						<option value="type5">Cône</option>
-						<!-- <option value="type6">Sphère</option> -->
+						<option value="type6">Sphère</option>
 					</select>
 					<!-- Parametres pavé droit -->
 					<div id="sol_pavdrt_param" class="hiddenparam">
@@ -623,7 +623,7 @@
 					</div>
 					<!-- Parametres cylindre -->
 					<div id="sol_cylind_param" class="hiddenparam">
-						<div class="formemenu">
+						<div class="formemenu show">
 							<span>Principaux</span>
 							<div class="formemenu_div">
 								<div class="flexparameters">
@@ -637,7 +637,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="formemenu">
+						<div class="formemenu show">
 							<span>Rendu</span>
 							<div class="formemenu_div">
 								<div class="flexparameters">
@@ -935,7 +935,7 @@
 					</div>
 					<!-- Parametres Cones -->
 					<div id="sol_cone_param" class="hiddenparam">
-						<div class="formemenu">
+						<div class="formemenu show">
 							<span>Principaux</span>
 							<div class="formemenu_div">
 								<div class="flexparameters">
@@ -949,7 +949,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="formemenu">
+						<div class="formemenu show">
 							<span>Rendu</span>
 							<div class="formemenu_div">
 								<div class="flexparameters">
@@ -1093,16 +1093,21 @@
 					</div>
 					<!-- Parametres Spheres -->
 					<div id="sol_sphere_param" class="hiddenparam">
-						<div class="formemenu">
+						<div class="formemenu show">
 							<span>Principaux</span>
 							<div class="formemenu_div">
 								<div class="flexparameters">
 									<label>Rayon :</label>
 									<input id="sol_sphere_R" type="number" value="150" step="10" min="0" oninput="Regenerate()">
 								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Angle de vue :</label>
+									<input id="sol_sphere_A" type="number" value="10" step="5" min="-90" max="90" oninput="Regenerate()">
+								</div>
 							</div>
 						</div>
-						<div class="formemenu">
+						<div class="formemenu show">
 							<span>Rendu</span>
 							<div class="formemenu_div">
 								<div class="flexparameters">
@@ -1123,37 +1128,6 @@
 									<div class="flexparameters">
 										<label>Style&#8239;:</label>
 										<input id="sol_sphere_hide_style" type="text" value="--" oninput="Regenerate();">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_sphere_hide_color" type="color" value="#888888" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_sphere_hide_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
-									</div>
-								</div>
-								<hr>
-								<div>
-									<input id="sol_sphere_fill_base" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_sphere_fill_base')">
-									<label for="sol_sphere_fill_base">Remplir la base.</label>
-								</div>
-								<div id="sol_sphere_fill_base_section" class="subsection hiddenparam">
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_sphere_base_color" type="color" value="#FF0000" oninput="Regenerate()">
-									</div>
-									<div>
-										<input id="sol_sphere_base_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
-										<label for="sol_sphere_base_full">Plein.</label>
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_sphere_base_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_sphere_base_style" type="text" value="" oninput="Regenerate();">
 									</div>
 								</div>
 								<hr>
@@ -1181,10 +1155,75 @@
 							<span>Information</span>
 							<div class="formemenu_div">
 								<div>
-									<input id="sol_sphere_h" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_sphere_h')">
+									<input id="sol_sphere_e" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_sphere_e')">
+									<label for="sol_sphere_e">Afficher la hauteur centrale.</label>
+								</div>
+								<div id="sol_sphere_e_section" class="subsection hiddenparam">
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_sphere_e_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_sphere_e_color" type="color" value="#8888EE" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_sphere_e_style" type="text" value="--" oninput="Regenerate();">
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input id="sol_sphere_lon" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_sphere_lon')">
+									<label for="sol_sphere_lon">Afficher une longitude.</label>
+								</div>
+								<div id="sol_sphere_lon_section" class="subsection hiddenparam">
+									<div class="flexparameters">
+										<label>Angle&#8239;:</label>
+										<input id="sol_sphere_lon_angle" type="number" value="30" step="1" min="0" max="180" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_sphere_lon_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_sphere_lon_color" type="color" value="#8888EE" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_sphere_lon_style" type="text" value="--" oninput="Regenerate();">
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input id="sol_sphere_lat" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_sphere_lat')">
+									<label for="sol_sphere_lat">Afficher une latitude.</label>
+								</div>
+								<div id="sol_sphere_lat_section" class="subsection hiddenparam">
+									<div class="flexparameters">
+										<label>Angle&#8239;:</label>
+										<input id="sol_sphere_lat_angle" type="number" value="30" step="1" min="-90" max="90" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Epaisseur&#8239;:</label>
+										<input id="sol_sphere_lat_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Couleur&#8239;:</label>
+										<input id="sol_sphere_lat_color" type="color" value="#8888EE" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Style&#8239;:</label>
+										<input id="sol_sphere_lat_style" type="text" value="--" oninput="Regenerate();">
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input id="sol_sphere_h" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_sphere_h')">
 									<label for="sol_sphere_h">Afficher la hauteur centrale.</label>
 								</div>
-								<div id="sol_sphere_h_section" class="subsection">
+								<div id="sol_sphere_h_section" class="subsection hiddenparam">
 									<div class="flexparameters">
 										<label>Epaisseur&#8239;:</label>
 										<input id="sol_sphere_h_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
@@ -1200,10 +1239,18 @@
 								</div>
 								<hr>
 								<div>
-									<input id="sol_sphere_r" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_sphere_r')">
+									<input id="sol_sphere_r" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_sphere_r')">
 									<label for="sol_sphere_r">Afficher un rayon.</label>
 								</div>
-								<div id="sol_sphere_r_section" class="subsection">
+								<div id="sol_sphere_r_section" class="subsection hiddenparam">
+									<div class="flexparameters">
+										<label>Longitude&#8239;:</label>
+										<input id="sol_sphere_r_lon" type="number" value="30" step="1" min="0" max="360" oninput="Regenerate()">
+									</div>
+									<div class="flexparameters">
+										<label>Latitude&#8239;:</label>
+										<input id="sol_sphere_r_lat" type="number" value="30" step="1" min="-90" max="90" oninput="Regenerate()">
+									</div>
 									<div class="flexparameters">
 										<label>Epaisseur&#8239;:</label>
 										<input id="sol_sphere_r_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
@@ -1217,30 +1264,6 @@
 										<input id="sol_sphere_r_style" type="text" value="--" oninput="Regenerate();">
 									</div>
 								</div>
-								<hr>
-								<div>
-									<input id="sol_sphere_ag" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_sphere_ag')">
-									<label for="sol_sphere_ag">Afficher l'angle droit.</label>
-								</div>
-								<div id="sol_sphere_ag_section" class="subsection">
-									<div>
-										<input id="sol_sphere_ag_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
-										<label for="sol_sphere_ag_full">Plein.</label>
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_sphere_ag_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_sphere_ag_color" type="color" value="#88CC88" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_sphere_ag_style" type="text" value="" oninput="Regenerate();">
-									</div>
-								</div>
-								<hr>
 							</div>
 						</div>
 					</div>
