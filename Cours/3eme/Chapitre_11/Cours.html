@@ -206,7 +206,7 @@
               <li>Au moins 50% des valeurs supérieurs ou égales à cette médiane.</li>
             </ul>
           </div>
-          <p class="exemple">Exemple :</p>
+          <p class="exemple">Exemple 1 :</p>
           <p>On reprend les notes de Pierre :</p>
           <div class="flexobject valeur">
             <div>7</div>
@@ -228,6 +228,7 @@
             <div>17</div>
           </div>
           <p>La médiane est une valeur de la série car l’effectif des notes est impair.</p>
+          <p class="exemple">Exemple 2 :</p>
           <p>Au contrôle suivant Pierre obtient 15 :</p>
           <div class="flexobject valeur">
             <div>7</div>
@@ -240,26 +241,210 @@
             <div>15</div>
           </div>
           <p>On ré-identifie la médiane:</p>
-          <div class="flexobject valeur">
-            <div>7</div>
-            <div>10</div>
-            <div>12</div>
-            <div>14</div>
-            <div class="CRRound">-</div>
-            <div>15</div>
-            <div>15</div>
-            <div>16</div>
-            <div>17</div>
-          </div>
+          <table style="text-align: center;">
+            <tr>
+              <td>
+                <div class="flexobject valeur" style="column-gap: 5px;">
+                  <div><span class="CBlue">1<sup>er</sup></span></div>
+                  <div><span class="CBlue">...</span></div>
+                  <div><span class="CBlue">...</span></div>
+                  <div><span class="CBlue">4<sup>ème</sup></span></div>
+                </div>
+              </td>
+              <td></td>
+              <td>
+                <div class="flexobject valeur" style="column-gap: 5px;">
+                  <div><span class="CBlue">5<sup>ème</sup></span></div>
+                  <div><span class="CBlue">...</span></div>
+                  <div><span class="CBlue">...</span></div>
+                  <div><span class="CBlue">8<sup>ème</sup></span></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="CRRound-bottom flexobject valeur" style="column-gap: 5px;">
+                  <div>7</div>
+                  <div>10</div>
+                  <div>12</div>
+                  <div>14</div>
+                </div>
+              </td>
+              <td>
+                <span class="CRed">|</span>
+              </td>
+              <td>
+                <div class="CRRound-bottom flexobject valeur" style="column-gap: 5px;">
+                  <div>15</div>
+                  <div>15</div>
+                  <div>16</div>
+                  <div>17</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>4 valeurs</td>
+              <td><span class="CRed">Médiane</span></td>
+              <td>4 valeurs</td>
+            </tr>
+          </table>
           <p>
             La médiane ici n’est plus une valeur de la série car l’effectif des notes est Pair.
-            La médiane de ces notes est une note comprise entre la 4e et 5e valeur. En générale on prend la moitié soit 14,5 ici.</p>
+            La médiane de ces notes est une note comprise entre la 4<sup>ème</sup> et 5<sup>ème</sup> valeur. En générale on prend la moitié soit 14,5 ici ($\frac{14 + 15}{2}=14,5$).</p>
           </p>
+          <p class="exemple">Exemple 3 :</p>
+          <table class="proportionnaltable">
+            <tr>
+              <th>Valeur</th>
+              <td>3</td>
+              <td>8</td>
+              <td>12</td>
+              <td>24</td>
+            </tr>
+            <tr>
+              <th>Effectif</th>
+              <td>32</td>
+              <td>57</td>
+              <td>28</td>
+              <td>64</td>
+            </tr>
+          </table>
+          <p>Pour trouver la médiane dans ce cas, on utilise les effectifs cumulés. <br>On les obtient en ajoutant l'effectif d'une valeur avec le total précédent, cela nous permet de connaitre la position des valeurs.<br>Ici on obtient :</p>
+          <table class="proportionnaltable">
+            <tr>
+              <th>Valeur</th>
+              <td>3</td>
+              <td>8</td>
+              <td>12</td>
+              <td>24</td>
+            </tr>
+            <tr>
+              <th>Effectif</th>
+              <td>32</td>
+              <td>57</td>
+              <td>28</td>
+              <td>64</td>
+            </tr>
+            <tr>
+              <th>Effectif<br>cumulé</th>
+              <td>32</td>
+              <td>89</td>
+              <td>117</td>
+              <td>181</td>
+            </tr>
+            <tr class="tableprop">
+              <td></td>
+              <td>1<sup>er</sup>&#8239;─&#8239;32<sup>ème</sup>;</td>
+              <td>33<sup>ème</sup>&#8239;─&#8239;89<sup>ème</sup>;</td>
+              <td>90<sup>ème</sup>&#8239;─&#8239;117<sup>ème</sup>;</td>
+              <td>118<sup>ème</sup>&#8239;─&#8239;181<sup>ème</sup></td>
+            </tr>
+          </table>
           <p>
-            <b>Interprétation :</b><br>
-            La moitié des notes de Pierre sont inférieur ou égale à 14,5.<br>
-            La moitié des notes de Pierre sont supérieur ou égale à 14,5.
+            On connait donc les intervalles de position de valeur. On maintenant la valeur médiane.<br>Le nombre de valeur étant impair, la médiane fait partie de la liste de valeur. On a donc la médiane au centre et deux paquets de valeur de même taille avant et après. Il faut donc répartir $181 - 1 = 180$ valeurs de part et d'autre de la médiane donc 90 valeurs de chaque côté.
           </p>
+          <table style="text-align: center;">
+            <tr>
+              <td>
+                <div class="CRRound-bottom flexobject valeur" style="column-gap: 5px;">
+                  <div><span class="CBlue">1<sup>er</sup></span></div>
+                  <div><span class="CBlue">...</span></div>
+                  <div><span class="CBlue">...</span></div>
+                  <div><span class="CBlue">80<sup>ème</sup></span></div>
+                </div>
+              </td>
+              <td>
+                <div class="CRRound CBlue">81<sup>ème</sup></div>
+              </td>
+              <td>
+                <div class="CRRound-bottom flexobject valeur" style="column-gap: 5px;">
+                  <div><span class="CBlue">82<sup>ème</sup></span></div>
+                  <div><span class="CBlue">...</span></div>
+                  <div><span class="CBlue">...</span></div>
+                  <div><span class="CBlue">161<sup>ème</sup></span></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>80 valeurs</td>
+              <td><span class="CRed">Médiane</span></td>
+              <td>80 valeurs</td>
+            </tr>
+          </table>
+          <p>
+            On cherche donc la 81<sup>ème</sup> valeur dans le tableau. Si on se référe aux intervalles indiqués sous les effectifs cumulés, nous sommes donc entre la 33<sup>ème</sup> et la 89<sup>ème</sup> valeurs, donc la 81<sup>ème</sup> est un 8.<br>
+            <b>La médiane est donc 8.</b>
+          </p>
+          <p class="exemple">Exemple 4 (Rédaction plus optimale) :</p>
+          <p>On rempli directement le tableau.</p>
+          <table class="proportionnaltable">
+            <tr>
+              <th>Valeur</th>
+              <td>26</td>
+              <td>34</td>
+              <td>96</td>
+            </tr>
+            <tr>
+              <th>Effectif</th>
+              <td>36</td>
+              <td>22</td>
+              <td>58</td>
+            </tr>
+            <tr>
+              <th>Effectif<br>cumulé</th>
+              <td>36</td>
+              <td>58</td>
+              <td>116</td>
+            </tr>
+            <tr class="tableprop">
+              <td></td>
+              <td>1<sup>er</sup>&#8239;─&#8239;36<sup>ème</sup>;</td>
+              <td>37<sup>ème</sup>&#8239;─&#8239;58<sup>ème</sup>;</td>
+              <td>59<sup>ème</sup>&#8239;─&#8239;116<sup>ème</sup></td>
+            </tr>
+          </table>
+          <p>Le nombre de valeur est pair donc la médiane est entre deux valeurs de la série. On fait des paquets de $116\div2=58$ valeurs :</p>
+          <table style="text-align: center;">
+            <tr>
+              <td>
+                <div class="CRRound-bottom flexobject valeur" style="column-gap: 5px;">
+                  <div><span class="CBlue">1<sup>er</sup></span></div>
+                  <div><span class="CBlue">...</span></div>
+                  <div><span class="CBlue">...</span></div>
+                  <div><span class="CBlue">58<sup>ème</sup></span></div>
+                </div>
+              </td>
+              <td>
+                <span class="CRed">|</span>
+              </td>
+              <td>
+                <div class="CRRound-bottom flexobject valeur" style="column-gap: 5px;">
+                  <div><span class="CBlue">59<sup>ème</sup></span></div>
+                  <div><span class="CBlue">...</span></div>
+                  <div><span class="CBlue">...</span></div>
+                  <div><span class="CBlue">116<sup>ème</sup></span></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>58 valeurs</td>
+              <td><span class="CRed">Médiane</span></td>
+              <td>58 valeurs</td>
+            </tr>
+          </table>
+          <p>
+            On cherche donc la 58<sup>ème</sup> valeur et la 59<sup>ème</sup>.
+            Ici grace aux intervalles on obtient :
+            <ul>
+              <li>La 58<sup>ème</sup> valeur est un 34</li>
+              <li>La 59<sup>ème</sup> valeur est un 96</li>
+            </ul>
+            <b>La médiane est donc $\frac{34 + 96}{2} = 65$</b>
+          </p>
+          <p class="remarque">Remarque :</p>
+          <ul>
+            <li>La médiane est la valeur centrale d'une série. Cela signifie que la moitié des valeurs sont inférieur et la moitié des valeurs sont supérieur à la médiane.</li>
+          </ul>
       <h2>Etendu :</h2>
         <div class="definition">
           L' <span class="CRed">étendu</span> d’une série de valeurs est la différence entre la valeur maximal et la valeur minimal :<br>
