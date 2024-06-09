@@ -1,86 +1,179 @@
-class Anim_Point extends Anim_Object
+class Anim_Point
 {
-    InitSpec()
-    {
-        this.Type = "Point"
-        this.KeyFramesDataType.AddParam("ColorR", 0);
-        this.KeyFramesDataType.AddParam("ColorG", 0);
-        this.KeyFramesDataType.AddParam("ColorB", 0);
-        this.KeyFramesDataType.AddParam("ColorA", 1);
-        this.KeyFramesDataType.AddParam("Size", 5);
-        this.KeyFramesDataType.AddParam("BorderSize", 1);
-        this.KeyFramesDataType.AddParam("PosAngle", -90);
-        this.KeyFramesDataType.AddParam("Type", 0, false);
-        this.KeyFramesDataType.AddParam("Text", "M", false);
-        this.KeyFramesDataType.AddParam("FontSize", 20);
-        this.KeyFramesDataType.AddParam("FontName", "Bahnschrift", false);
+    Parent;
+    CurrentValue;
+
+    get Content() {
+        return this.Parent.Content;
     }
 
-
-    PreDraw()
+    constructor(parent)
     {
-        let w = this.KeyFrameDataCurrent.Data["Width"];
-        let h = this.KeyFrameDataCurrent.Data["Height"];
-        this.offsetdrawing[0] = this.offsetdrawingcoef[0] * w
-        this.offsetdrawing[1] = this.offsetdrawingcoef[1] * h
+        this.Parent = parent;
+        this.Init();
+        this.Create();
     }
 
-    Draw(Context)
+    Init()
     {
-        let cr = this.KeyFrameDataCurrent.Data["ColorR"]
-        let cg = this.KeyFrameDataCurrent.Data["ColorG"]
-        let cb = this.KeyFrameDataCurrent.Data["ColorB"]
-        let ca = this.KeyFrameDataCurrent.Data["ColorA"]
-        let color = "rgba(" + cr + "," + cg + "," + cb +"," + ca + ")"
-        let size = this.KeyFrameDataCurrent.Data["Size"]
-        let text = this.KeyFrameDataCurrent.Data["Text"];
-        let type = this.KeyFrameDataCurrent.Data["Type"];
-        let ang = this.KeyFrameDataCurrent.Data["PosAngle"] * Math.PI / 180;
-        let fsize = this.KeyFrameDataCurrent.Data["FontSize"]
-        Context.fillStyle = color;
-        Context.strokeStyle = color;
-        Context.lineWidth = this.KeyFrameDataCurrent.Data["BorderSize"];
-        Context.font = fsize + "px " + this.KeyFrameDataCurrent.Data["FontName"]
-        Context.textAlign = 'center';
-        Context.textBaseline = 'middle';
-        Context.lineCap='round';
-        let a = Context.measureText(text).width
-        a = Math.sqrt(a * a + fsize * fsize) / 2;
-
-        if (type == 0)
-        {
-            let s2 = Math.SQRT2
-            Context.beginPath()
-            Context.moveTo(-size/Math.SQRT2, -size/Math.SQRT2)
-            Context.lineTo(size/Math.SQRT2, size/Math.SQRT2)
-            Context.moveTo(-size/Math.SQRT2, size/Math.SQRT2)
-            Context.lineTo(size/Math.SQRT2, -size/Math.SQRT2)
-            Context.stroke();
-        }
-        else if (type == 1)
-        {
-            Context.beginPath()
-            Context.moveTo(0, -size)
-            Context.lineTo(0, size)
-            Context.moveTo(-size, 0)
-            Context.lineTo(size, 0)
-            Context.stroke();
-        }
-        else if (type == 2)
-        {
-            Context.beginPath()
-            Context.ellipse(0,0, size, size, 0, 0, Math.PI*2)
-            Context.fill();
-        }
-        else if (type == 3)
-        {
-            Context.beginPath()
-            Context.ellipse(0,0, size, size, 0, 0, Math.PI*2)
-            Context.stroke();
+        this.CurrentValue = {
+            "center": {x: 0,y: 0},
+            "type": 1, // Can be 0 ; 1 ; 2
+            "size": 5,
+            "distance": 15,
+            "angle": -90,
+            "text": "M",
         }
 
-        Context.fillText(text,
-            (size + a + 2) * Math.cos(ang),
-            (size + a + 2) * Math.sin(ang))
+        this.Point_Style = {fill: 'none', stroke: '#000' ,'stroke-width': 2 ,linecap: 'round', linejoin: 'round'}
+        this.Text_Style = {fill: '#000'}
+        this.Text_Font = {family: 'bahnschrift', size: 18}
+    }
+
+    Create()
+    {
+        if (this.CurrentValue["type"] == 0)
+            this.Point = this.Content.path(this._Get_Path1(this.CurrentValue))
+        else if (this.CurrentValue["type"] == 1)
+            this.Point = this.Content.path(this._Get_Path2(this.CurrentValue))
+        else if (this.CurrentValue["type"] == 2)
+        {
+            this.Point = this.Content.circle(this.CurrentValue["size"])
+            this.Point.center(this.CurrentValue["center"].x, this.CurrentValue["center"].y)
+        }
+        this.Point.attr(this.Point_Style)
+        
+        this.Text = this.Content.text(this.CurrentValue["text"])
+        let p = this.CurrentValue["center"];
+        p.x += this.CurrentValue["distance"] * Math.cos(this.CurrentValue["angle"] * Math.PI / 180.0)
+        p.y += this.CurrentValue["distance"] * Math.sin(this.CurrentValue["angle"] * Math.PI / 180.0)
+        this.Text.center(p.x,p.y)
+        this.Text.attr(this.Text_Style).font(this.Text_Font)
+    }
+
+    _Get_Path1(parameters)
+    {
+        let p = parameters["center"];
+        let size = parameters["size"]/Math.SQRT2;
+        return ['M',p.x-size,p.y-size,'L',p.x+size,p.y+size,'M',p.x-size,p.y+size,'L',p.x+size,p.y-size].join(' ');
+    }
+
+    _Get_Path2(parameters)
+    {
+        let p = parameters["center"];
+        let size = parameters["size"];
+        return ['M',p.x-size,p.y,'L',p.x+size,p.y,'M',p.x,p.y+size,'L',p.x,p.y-size].join(' ');
+    }
+
+    attr(parameters)
+    {
+        for (const key in this.CurrentValue) 
+        { parameters[key] = parameters[key] || this.CurrentValue[key] }
+
+        
+        if (parameters["type"] != this.CurrentValue["type"])
+        {
+            this.CurrentValue["type"] = parameters["type"]
+            this.Point.remove();
+            if (parameters["type"] == 0)
+                this.Point = this.Content.path(this._Get_Path1(parameters))
+            else if (parameters["type"] == 1)
+                this.Point = this.Content.path(this._Get_Path2(parameters))
+            else if (parameters["type"] == 2)
+            {
+                this.Point = this.Content.circle(parameters["size"])
+                this.Point.center(parameters["center"].x, parameters["center"].y)
+            }
+        }
+
+        if (parameters["size"] != this.CurrentValue["size"] ||
+        parameters["center"] != this.CurrentValue["center"]
+        )
+        {
+            this.CurrentValue["size"] = parameters["size"]
+            if (parameters["type"] == 0)
+                this.Point.plot(this._Get_Path1(parameters))
+            else if (parameters["type"] == 1)
+                this.Point.plot(this._Get_Path2(parameters))
+            else if (parameters["type"] == 2)
+                this.Point.size(parameters["size"])
+        }
+        
+        if (parameters.hasOwnProperty("point-style"))
+        {
+            this.Point.attr(parameters["point-style"])
+            for (const key in parameters["point-style"]) 
+                { this.Point_Style[key] = parameters["point-style"][key] || this.Point_Style[key] }
+        }
+        if (parameters.hasOwnProperty("text-style"))
+        {
+            this.Text.attr(parameters["text-style"])
+            for (const key in parameters["text-style"]) 
+                { this.Text_Style[key] = parameters["text-style"][key] || this.Text_Style[key] }
+        }
+        if (parameters.hasOwnProperty("text-font"))
+        {
+            this.Text.font(parameters["text-font"])
+            for (const key in parameters["text-font"]) 
+                { this.Text_Font[key] = parameters["text-font"][key] || this.Text_Font[key] }
+        }
+        
+        if (parameters["text"] != this.CurrentValue["text"])
+        {
+            this.CurrentValue["text"] = parameters["text"]
+            this.Text.text(parameters["text"])
+        }
+
+        
+        this.CurrentValue["center"] = parameters["center"]
+        this.CurrentValue["distance"] = parameters["distance"]
+        let p = parameters["center"];
+        if (parameters["type"] == 2)
+            this.Point.center(p.x, p.y)
+        p.x += parameters["distance"] * Math.cos(parameters["angle"] * Math.PI / 180.0)
+        p.y += parameters["distance"] * Math.sin(parameters["angle"] * Math.PI / 180.0)
+        this.Text.center(p.x,p.y)
+    }
+
+    AddAnimation(parameters, delay, duration, easy = "<>")
+    {
+        for (const key in this.CurrentValue) 
+        { parameters[key] = parameters[key] || this.CurrentValue[key] }
+
+        if (parameters["type"] == 2)
+        {
+            if (parameters["center"] != this.CurrentValue["center"])
+                this.Parent.AddAnimation(this.Point, {attr: {'cx': parameters["center"].x, 'cy': parameters["center"].y}}, delay, duration, easy);
+            if (parameters["size"] != this.CurrentValue["size"])
+                this.Parent.AddAnimation(this.Point, {attr: {'r': parameters["size"]}}, delay, duration, easy);
+        }
+        else
+        {
+            if (parameters["center"] != this.CurrentValue["center"] ||
+                parameters["size"] != this.CurrentValue["size"])
+            {
+                if (parameters["type"] == 0)
+                    this.Parent.AddAnimation(this.Point, {plot: this._Get_Path1(parameters)}, delay, duration, easy);
+                else
+                    this.Parent.AddAnimation(this.Point, {plot: this._Get_Path2(parameters)}, delay, duration, easy);
+            }
+        }
+
+        if (parameters.hasOwnProperty("point-style"))
+            this.Parent.AddAnimation(this.Point, {attr: parameters["point-style"]}, delay, duration, easy);
+        if (parameters.hasOwnProperty("text-style"))
+            this.Parent.AddAnimation(this.Text, {attr: parameters["text-style"]}, delay, duration, easy);
+
+        if (parameters["center"] != this.CurrentValue["center"] ||
+        parameters["distance"] != this.CurrentValue["distance"] ||
+        parameters["angle"] != this.CurrentValue["angle"])
+        {
+            this.CurrentValue["center"] = parameters["center"]
+            this.CurrentValue["distance"] = parameters["distance"]
+            let p = parameters["center"];
+            p.x += parameters["distance"] * Math.cos(parameters["angle"] * Math.PI / 180.0)
+            p.y += parameters["distance"] * Math.sin(parameters["angle"] * Math.PI / 180.0)
+            this.Parent.AddAnimation(this.Text, {attr: {'cx': p.x, 'cy': p.y}}, delay, duration, easy);
+        }
     }
 }

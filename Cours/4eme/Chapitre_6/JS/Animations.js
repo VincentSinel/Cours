@@ -3,37 +3,25 @@
  */
 class Animation1 extends Animation_Data
 {
-    CreateFrames()
-    {
-        this.AddFrame(2.0, true);
-        this.AddFrame(2.0);
-    }
-
     CreateObjects()
     {
-        let points = [];
-        for (let i = 0; i < 4; i++) 
-        {
-            if (i == 0)
-                points.push(new Anim_BreakLine(this,this));
-            else
-                points.push(new Anim_BreakLine(this,this, points[i - 1]));
-            let x = -20 + i % 2 * 40;
-            let y = -15 + Math.floor((i + 1) % 4  / 2) * 30
-            points[i].QuickAssignKeyFrame(0, {
-                "SX": x, 
-                "SY": y,
-                "LinePartE": 0,
-                "LineWidth": 5})
-            points[i].QuickAssignKeyFrame(1, {
-                "SX": x, 
-                "SY": y,
-                "LinePartS": 0,
-                "LinePartE": 1})
-            points[i].QuickAssignKeyFrame(2, {
-                "SX": x, 
-                "SY": y,
-                "LinePartS": 1})
-        }
+        
+        let stroke_style = {color: "#000", width: 5,linecap: 'round', linejoin: 'round', "opacity" : 0.0}
+
+        let line1 = this.Content.line(65, 15, 65,15)
+        line1.stroke(stroke_style);
+        this.AddAnimation(line1, {attr: {'stroke-opacity': 1.0}, plot: [65, 15, 95, 45]}, 0, 500, "-")
+        this.AddAnimation(line1, {attr: {'stroke-opacity': 0.0}, plot: [95, 45, 95, 45]}, 1200, 500, "-")
+
+        let line2 = this.Content.line(95, 45, 95, 45)
+        line2.stroke(stroke_style);
+        this.AddAnimation(line2, {attr: {'stroke-opacity': 1.0}, plot: [95, 45, 65, 45]}, 400, 500, "-")
+        this.AddAnimation(line2, {attr: {'stroke-opacity': 0.0}, plot: [65, 45, 65, 45]}, 1600, 500, "-")
+
+        let line3 = this.Content.line(65, 45, 65, 45)
+        line3.stroke(stroke_style);
+        this.AddAnimation(line3, {attr: {'stroke-opacity': 1.0}, plot: [65, 45, 95,15]}, 800, 500, "-")
+        this.AddAnimation(line3, {attr: {'stroke-opacity': 0.0}, plot: [95, 15, 95,15]}, 2000, 500, "-")
+
     }
 }

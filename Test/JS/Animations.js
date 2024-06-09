@@ -1,165 +1,189 @@
 /**
  * Le nom de la classe doit être l'id du div contenant l'animation
  */
-class Animation2 extends Animation_Data
+
+// Animation perpendiculaire à l'equerre
+class Animation1 extends Animation_Data
 {
-    CreateFrames()
-    {
-        this.AddFrame(1.0); //1
-        this.AddFrame(1.0); //2
-        this.AddFrame(1.0); //3
-        this.AddFrame(1.0); //4
-        this.AddFrame(1.0); //5
-        this.AddFrame(1.0); //6
-        this.AddFrame(1.0); //7
-        this.AddFrame(1.0); //8
-        this.AddFrame(1.0); //9
-    }
 
     CreateObjects()
     {
-        let centerx = 55;
-        let centery = -25;
-        let a1 = new Anim_Line(this,this)
-        a1.QuickAssignKeyFrame(0,
-            {
-                "LineSX": centerx - 200,
-                "LineSY": centery + 120,
-                "LineEX": centerx + 40,
-                "LineEY": centery - 120,
-                "LineWidth": 0,
-                "ColorB": 255
-            })
+        let cx = this.width / 2.0;
+        let cy = this.height / 2.0;
         
-        let a2 = new Anim_Line(this,this)
-        a2.QuickAssignKeyFrame(0,
-            {
-                "LineSX": centerx - 150,
-                "LineSY": centery + 170,
-                "LineEX": centerx + 110,
-                "LineEY": centery - 90,
-                "LineWidth": 0,
-                "ColorB": 255,
-                "Opacity": 0,
-            })
-        a2.QuickAssignKeyFrame(8,
-            {
-                "Opacity": 0,
-            })
-        a2.QuickAssignKeyFrame(9,
-            {
-                "Opacity": 1,
-            })
+        let stroke_style = {color: "#000", width: 5,linecap: 'round', linejoin: 'round', "opacity" : 0.0}
 
-        let b = new Anim_Point(this, this);
-        b.QuickAssignKeyFrame(0, {
-            "X": centerx - 30,
-            "Y": centery + 50,
-            "Type": 1,
-            "BorderSize": 2,
-            "Text": "M",
-            "ColorR": 255,
-            "PosAngle": 45})
+        let line1 = this.Content.line(40, 15, 40,15)
+        line1.stroke(stroke_style);
+        this.AddAnimation(line1, {attr: {'stroke-opacity': 1.0}, plot: [40, 15, 120, 45]}, 0, 500, "-")
+        this.AddAnimation(line1, {attr: {'stroke-opacity': 0.0}, plot: [120, 45, 120, 45]}, 1200, 500, "-")
 
-        let b1 = new Anim_Point(this, this);
-        b1.QuickAssignKeyFrame(0, {
-            "X": centerx - 130,
-            "Y": centery + 50,
-            "Type": 1,
-            "BorderSize": 2,
-            "Text": "A",
-            "ColorR": 255,
-            "PosAngle": -45,
-            "Opacity": 0})
-        b1.QuickAssignKeyFrame(1, {
-            "Opacity": 1,})
-        let b2 = new Anim_Point(this, this);
-        b2.QuickAssignKeyFrame(0, {
-            "X": centerx - 10,
-            "Y": centery - 70,
-            "Type": 1,
-            "BorderSize": 2,
-            "Text": "B",
-            "ColorR": 255,
-            "PosAngle": -45,
-            "Opacity": 0})
-        b2.QuickAssignKeyFrame(1, {
-            "Opacity": 1,})
+        let line2 = this.Content.line(120, 45, 120, 45)
+        line2.stroke(stroke_style);
+        this.AddAnimation(line2, {attr: {'stroke-opacity': 1.0}, plot: [120, 45, 40, 45]}, 400, 500, "-")
+        this.AddAnimation(line2, {attr: {'stroke-opacity': 0.0}, plot: [40, 45, 40, 45]}, 1600, 500, "-")
 
-        let f = new Anim_Compas(this, this)
-        f.QuickAssignKeyFrame(0,
-            {
-                "P1X": centerx - 160,
-                "P1Y": centery + 80,
-                "P2X": centerx - 100,
-                "P2Y": centery + 100,
-                "Position": 0,
+        let line3 = this.Content.line(40, 45, 40, 45)
+        line3.stroke(stroke_style);
+        this.AddAnimation(line3, {attr: {'stroke-opacity': 1.0}, plot: [40, 45, 120,15]}, 800, 500, "-")
+        this.AddAnimation(line3, {attr: {'stroke-opacity': 0.0}, plot: [120, 15, 120,15]}, 2000, 500, "-")
 
-            })
-        f.QuickAssignKeyFrame(1,
-            {
-                "P1X": centerx - 160,
-                "P1Y": centery + 80,
-                "P2X": centerx - 100,
-                "P2Y": centery + 100,
-            })
-        f.QuickAssignKeyFrame(2,
-            {
-                "P1X": centerx - 130,
-                "P1Y": centery,
-                "P2X": centerx - 30,
-                "P2Y": centery,
-                "Draw": 0,
-                "DAngle": 0,
-            })
-        f.QuickAssignKeyFrame(3,
-            {
-                "P1X": centerx - 10,
-                "P1Y": centery + 120,
-                "P2X": centerx + 90,
-                "P2Y": centery + 120,
-                "DAngle": 20,
-                "Draw": 1,
-            })
-        f.QuickAssignKeyFrame(4,
-            {
-                "P1X": centerx - 10,
-                "P1Y": centery + 120,
-                "P2X": centerx + 90,
-                "P2Y": centery + 120,
-                "Draw": 0,
-                "DAngle": -20,
-            })
-        f.QuickAssignKeyFrame(5,
-            {
-                "P1X": centerx - 130,
-                "P1Y": centery,
-                "P2X": centerx - 10,
-                "P2Y": centery + 120,
-                "DAngle": 0,
-            })
-        f.QuickAssignKeyFrame(6,
-            {
-                "P1X": centerx - 30,
-                "P1Y": centery,
-                "P2X": centerx + 90,
-                "P2Y": centery + 120,
-                "DAngle": -20,
-                "Draw": 1,
-            })
-        f.QuickAssignKeyFrame(7,
-            {
-                "P1X": centerx - 30,
-                "P1Y": centery,
-                "P2X": centerx + 90,
-                "P2Y": centery + 120,
-                "DAngle": 20,
-                "Draw": 0,
-                "Opacity": 1
-            })
-        f.QuickAssignKeyFrame(8,
-            {
-                "Opacity": 0,
-            })
+    }
+}
+
+// Animation perpendiculaire au compas
+class Animation2 extends Animation_Data
+{
+
+    CreateObjects()
+    {
+        let cx = this.width / 2.0;
+        let cy = this.height / 2.0;
+
+        let line1 = this.Content.line(cx-145, cy - 95, cx + 95, cy + 145)
+        line1.stroke({color: '#00F' ,'stroke-width': 1 ,linecap: 'round', linejoin: 'round'})
+
+        let line2 = this.Content.line(cx+100, cy - 150, cx - 120, cy + 70)
+        line2.stroke({opacity: 0.0, color: '#00F' ,'stroke-width': 1 ,linecap: 'round', linejoin: 'round'})
+        this.AddAnimation(line2, {attr: {'stroke-opacity': 1.0}}, 6000, 1000)
+
+        let angle_d = this.Content.path(
+            ['M',cx-50,cy,'L',cx-40,cy+10,'L',cx-30,cy,'L',cx-40,cy-10,'Z'].join(' ')
+        )
+        angle_d.attr({'opacity': 0.0, fill: '#5F5', 'fill-opacity': 0.7, stroke: '#5F5' ,'stroke-width': 1 ,linecap: 'round', linejoin: 'round'})
+        angle_d.back()
+        this.AddAnimation(angle_d, {attr: {'opacity': 1.0}}, 7000, 1000)
+
+        let pointA = new Anim_Point(this)
+        pointA.attr({"center": {x: cx + 25, y: cy + 75}, "text": "A", "angle": 90})
+        let pointB = new Anim_Point(this)
+        pointB.attr({"center": {x: cx - 80, y: cy - 30}, "text": "B", "angle": 90})
+        let pointM = new Anim_Point(this)
+        pointM.attr({"center": {x: cx, y: cy - 50}, "text": "M"})
+        
+        let compas = new Anim_Compas(this)
+        compas.attr({
+            "p1": {x: cx - 200, y: cy - 50},
+            "p2": {x: cx - 95, y: cy + 55},
+        })
+
+        compas.AddAnimation({
+                "p1": {x: cx - 80, y: cy - 30},
+                "p2": {x: cx, y: cy - 50}
+            }, 0, 1000 )
+        
+        compas.Rotate(90, 1000, 1000)
+        compas.Draw(45, 2000, 1000)
+
+        compas.AddAnimation({
+            "p1": {x: cx + 25, y: cy + 75},
+            "p2": {x: cx, y: cy - 50}
+        }, 3000, 1000)
+        
+        compas.Rotate(-60, 4000, 1000)
+        compas.Draw(-30, 5000, 1000)
+
+        compas.AddAnimation({
+                "p1": {x: cx + 125, y: cy + 75},
+                "p2": {x: cx + 100, y: cy - 50},
+                "arms": {opacity: 0.0},
+                "pen": {opacity: 0.0},
+                "head": {opacity: 0.0},
+            }, 6000, 1000 )
+    }
+}
+
+// Animation parallèle à l'equerre
+class Animation3 extends Animation_Data
+{
+
+    CreateObjects()
+    {
+        let cx = this.width / 2.0;
+        let cy = this.height / 2.0;
+
+        let line1 = this.Content.line(cx-145, cy - 95, cx + 95, cy + 145)
+        line1.stroke({color: '#00F' ,'stroke-width': 1 ,linecap: 'round', linejoin: 'round'})
+
+        let line2 = this.Content.line(cx-95, cy - 145, cx + 145, cy + 95)
+        line2.stroke({opacity: 0.0, color: '#00F' ,'stroke-width': 1 ,linecap: 'round', linejoin: 'round'})
+        this.AddAnimation(line2, {attr: {'stroke-opacity': 1.0}}, 4000, 1000)
+
+        let pointM = new Anim_Point(this)
+        pointM.attr({"center": {x: cx, y: cy - 50}, "text": "M"})
+        
+        let equerre = new Anim_Equerre(this);
+        equerre.obj.move(cx + 100, cy)
+        this.AddAnimation(equerre.obj, {transform: {'translateX': -150,'rotate': -45, 'ox': cx + 100, 'oy': cy}}, 0, 1000)
+        this.AddAnimation(equerre.obj, {transform: {'translateX': 50, 'translateY': -50}}, 2000, 1000)
+        this.AddAnimation(equerre.obj, {attr: {'opacity': 0.0},transform: {'translateX': 200}}, 5000, 1000)
+    
+        let regle = new Anim_Regle(this);
+        regle.obj.rotate(90, 0, 0).translate(50,50)
+        this.AddAnimation(regle.obj, {transform: {'translateX': cx - 20,'translateY': cy-200,'rotate': 45, 'ox': 50, 'oy': 50}}, 1000, 1000)
+        this.AddAnimation(regle.obj, {attr: {'opacity': 0.0},transform: {'translateX': -100}}, 3000, 1000)
+    
+    }
+}
+
+// Animation parallèle au compas
+class Animation4 extends Animation_Data
+{
+    CreateObjects()
+    {
+        let cx = this.width / 2.0;
+        let cy = this.height / 2.0;
+
+        let line1 = this.Content.line(cx-145, cy - 95, cx + 95, cy + 145)
+        line1.stroke({color: '#00F' ,'stroke-width': 1 ,linecap: 'round', linejoin: 'round'})
+
+        let line2 = this.Content.line(cx-95, cy - 145, cx + 145, cy + 95)
+        line2.stroke({opacity: 0.0, color: '#00F' ,'stroke-width': 1 ,linecap: 'round', linejoin: 'round'})
+        this.AddAnimation(line2, {attr: {'stroke-opacity': 1.0}}, 6000, 1000)
+
+        let pointA = new Anim_Point(this)
+        pointA.attr({"center": {x: cx + 25, y: cy + 75}, "text": "A", "angle": 90})
+        let pointB = new Anim_Point(this)
+        pointB.attr({"center": {x: cx - 80, y: cy - 30}, "text": "B", "angle": 90})
+        let pointM = new Anim_Point(this)
+        pointM.attr({"center": {x: cx, y: cy - 50}, "text": "M"})
+        
+        let compas = new Anim_Compas(this)
+        compas.attr({
+            "p1": {x: cx - 200, y: cy - 50},
+            "p2": {x: cx - 95, y: cy + 55},
+        })
+
+        compas.AddAnimation({
+                "p1": {x: cx - 80, y: cy - 30},
+                "p2": {x: cx, y: cy - 50}
+            }, 0, 1000 )
+        compas.AddAnimation({
+                "p1": {x: cx + 25, y: cy + 75},
+                "p2": {x: cx + 105, y: cy + 55}
+            }, 1000, 1000 )
+        
+        compas.Rotate(-15, 1000, 1000)
+        compas.Draw(25, 2000, 1000)
+
+        compas.AddAnimation({
+            "p1": {x: cx - 80, y: cy - 30},
+            "p2": {x: cx + 25, y: cy + 75}
+        }, 3000, 1000)
+        compas.AddAnimation({
+                "p1": {x: cx, y: cy - 50},
+                "p2": {x: cx + 105, y: cy + 55}
+            }, 4000, 1000 )
+        
+        compas.Rotate(-15, 4000, 1000)
+        compas.Draw(25, 5000, 1000)
+
+        compas.AddAnimation({
+                "p1": {x: cx - 200, y: cy - 50},
+                "p2": {x: cx - 95, y: cy + 55},
+                "arms": {opacity: 0.0},
+                "pen": {opacity: 0.0},
+                "head": {opacity: 0.0},
+            }, 6000, 1000 )
     }
 }

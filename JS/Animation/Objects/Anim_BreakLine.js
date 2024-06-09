@@ -1,3 +1,25 @@
+/*
+Paramètres
+X           => Position X (float)
+Y           => Position Y (float)
+Z           => Position Z (float)
+Opacity     => Opacity entre 0 et 1 (float)
+Angle       => Angle en degré (float)
+ZoomX       => X scale (float)
+ZoomY       => Y scale (float)
+Visibility  => boolean
+
+ColorR      => Couleur rouge entre 0 et 1 (float)
+ColorG      => Couleur vert entre 0 et 1 (float)
+ColorB      => Couleur bleu entre 0 et 1 (float)
+ColorA      => Couleur alpha entre 0 et 1 (float)
+LineWidth
+LinePartS
+LinePartE
+SX
+SY
+
+*/
 class Anim_BreakLine extends Anim_Object
 {
     startpoint;

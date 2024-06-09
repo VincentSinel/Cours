@@ -1,4 +1,4 @@
-
+document.write('<script src="/JS/Svg.js/svg.min.js" charset="utf-8"></script>')
 var Scripts = [
     "Animation_Data.js",
     "Objects/Anim_Object.js",
@@ -55,11 +55,12 @@ class Animation_Gestionnaire
     static MainLoop()
     {
         let now = Date.now();
-        let dt = (now - Animation_Gestionnaire.#TempsPrecedent) / 1000.0;
+        // let dt = (now - Animation_Gestionnaire.#TempsPrecedent) / 1000.0;
+        let dt = (now - Animation_Gestionnaire.#TempsPrecedent);
         Animation_Gestionnaire.#TotalTime = (now - Animation_Gestionnaire.#DepartTime) / 1000.0;
 
         Animation_Gestionnaire.Update(dt);
-        Animation_Gestionnaire.Draw();
+        // Animation_Gestionnaire.Draw();
 
         Animation_Gestionnaire.#TempsPrecedent = now;
         window.requestAnimationFrame(Animation_Gestionnaire.MainLoop);
@@ -82,7 +83,7 @@ class Animation_Gestionnaire
     static ResizeCanvas()
     {
         Object.values(Animation_Gestionnaire.Animations).forEach(animation => {
-            animation.ResizeCanvas();
+            animation.ResizeContent();
         });
     }
 

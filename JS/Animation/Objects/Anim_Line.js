@@ -32,7 +32,7 @@ class Anim_Line extends Anim_Object
         let ex = this.KeyFrameDataCurrent.Data["LineEX"]
         let ey = this.KeyFrameDataCurrent.Data["LineEY"]
         
-        if (ex != sx && ey != sy)
+        if (ex != sx || ey != sy)
         {
             Context.beginPath()
             Context.moveTo(sx,-sy)
