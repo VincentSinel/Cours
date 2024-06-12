@@ -12,6 +12,7 @@
     --Dviolet: #7B29C1;
 
 	--SectionPrincipale: #C00000;
+	--SectionPrincipale_Shadow: #600000;
 	--SectionSecondaire: #111111;
 	--Texte: #101010;
 	--BorderCase: #10101055;
@@ -64,6 +65,7 @@ table#TitleTable{
     margin: 0 auto;
     border: 1px solid black;
     border-collapse: collapse;
+    box-shadow: 2px 2px 5px #000;
 }
 
 img{
@@ -109,6 +111,7 @@ h1 {
     text-decoration: underline;
     margin-top: 50px;
     margin-left: 2rem;
+
 }
 h1::marker {
     display: list-item;

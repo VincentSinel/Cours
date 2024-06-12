@@ -117,6 +117,7 @@ header {
   text-align: center;
   transition: .25s all ease;
   width:max-content;
+  text-shadow: 0 1px 2px #000;
 }
 .blockmenu:hover{
   background-color: var(--PanelBackHover);
@@ -261,18 +262,36 @@ nav::-webkit-scrollbar-thumb {
   border: none;  /* creates padding around scroll thumb */
 }
 
-.chapitrebuttton{
-  background-color: var(--PanelBack);
+.classebutton,
+.chapitrebutton{
   transition-duration: 0.4s;
   cursor: pointer;
+  text-shadow: 0 1px 2px #000;
+  border-bottom: 1px solid #202020;
 }
-.chapitrebutton:hover{
+.classebutton{
+  background-color: var(--PanelBack);
+  border-top: 2px solid var(--HeaderBack);
+}
+.chapitrebutton{
+  background-color: var(--HeadMenuButton);
+  /* border-bottom: 1px solid var(--HeaderBack); */
+}
+
+
+.classebutton:hover{
   background-color: var(--PanelBackHover);
 }
-.chapitrebutton:active{
+.chapitrebutton:hover{
+  background-color: var(--HeadMenuButtonHover);
+}
+.classebutton:active{
   background-color: var(--PanelBackActive);
 }
-.chapitrebutttonflex{
+.chapitrebutton:active{
+  background-color: var(--HeadMenuButtonActive);
+}
+.chapitrebuttonflex{
   padding: 5px 10px;
   display: flex;
   flex-wrap: nowrap;
@@ -280,11 +299,11 @@ nav::-webkit-scrollbar-thumb {
   column-gap: 10px;
   row-gap: 0px;
 }
-.chapitrebutttonimg{
+.chapitrebuttonimg{
   width: 30px; 
   height: 30px;
 }
-.chapitrebutttonnumber{
+.chapitrebuttonnumber{
   font-family: var(--TexteFont);
   color: var(--PanelBackText);
   font-size: 14px;
@@ -292,7 +311,7 @@ nav::-webkit-scrollbar-thumb {
   line-height: 16.8px;
   margin: 0px;
 }
-.chapitrebutttonname{
+.chapitrebuttonname{
   font-family: var(--TexteFont);
   color: var(--PanelBackText);
   font-size: 13px;
@@ -305,7 +324,7 @@ nav::-webkit-scrollbar-thumb {
   display: flex;
   font-size: 20px !important;
 }
-.chapitrebutttonclass{
+.chapitrebuttonclass{
   font-family: var(--TexteFont);
   color: var(--PanelBackText);
   font-size: 20px;
@@ -318,6 +337,11 @@ nav::-webkit-scrollbar-thumb {
 }
 .selected{
   background-color: var(--PanelBackActive);
+}
+.classebutton.selected{
+  border-bottom: none;
+  border-left: 2px solid var(--HeaderBack);
+  border-right: 2px solid var(--HeaderBack);
 }
 .strike{
   text-decoration: line-through;
@@ -336,6 +360,7 @@ nav::-webkit-scrollbar-thumb {
     border-radius: 5px;
     padding: 2px;
     transition-duration: 0.4s;
+    
     /* display: none;MUST BE CHANGE WHEN PDF ADDED */
 }
 .PDFButton:hover

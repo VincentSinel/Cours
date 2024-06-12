@@ -562,22 +562,22 @@ function CreateDiv(parent, name, folder)
         }
         
         var b = document.createElement("div");
-        b.className += "chapitrebutttonflex"
+        b.className += "chapitrebuttonflex"
 
         var c = document.createElement("img");
-        c.className += "chapitrebutttonimg";
+        c.className += "chapitrebuttonimg";
         c.src = "/Images/Icones-0"+ element.icone + ".png"
         
         var d = document.createElement("div");
         var e = document.createElement("p");
-        e.className += "chapitrebutttonnumber"
+        e.className += "chapitrebuttonnumber"
         if (!element.ready)
         {
             e.className += " strike"
         }
         e.innerHTML = "Chapitre " + element.id;
         var f = document.createElement("p");
-        f.className += "chapitrebutttonname"
+        f.className += "chapitrebuttonname"
         f.innerHTML = element.nom;
         
         
