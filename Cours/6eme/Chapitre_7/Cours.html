@@ -13,10 +13,15 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script id="Animation" src="/JS/Animation/animation_holder.js"></script>
 
   <title>Chapitre 7 - Angles</title>
 
   <style>
+    .proportionnaltable td
+    {
+      width: 150px;
+    }
   </style>
 
 </head>
@@ -38,7 +43,123 @@
     Activité Introduction
   </p>
 
-  
+  <div class="flexobject">
+    <div style="flex: 1 1 4cm;">
+      En utilisant le rapporteur et une règle, on souhaite tracer le triangle ci-contre.
+      <ol>
+        <li>Trace un segment [AC] de 6cm.</li>
+        <li>Place le centre de ton rapporteur sur le point A et aligne le "zéro" avec le segment.
+          <ol type="a">
+            <li>En partant du zero aligné avec le segment, place une graduation à 61°</li>
+            <li>Retire ton rapporteur et trace la droite passant par A et la marque que tu vient de construire.</li>
+          </ol>
+        </li>
+        <li>Faire de même à partir du point C avec l'angle de 43°.</li>
+        <li>Placer le point B à l'intersection des deux droites.</li>
+      </ol>
+    </div>
+    <img src="Images/Triangle1.svg" style="max-width: 5cm;">
+  </div>
+  <div id="Animation1" class="animation center" width="480" height="360"></div>
+
+  <h1>Définitions :</h1>
+      <h2>Angles :</h2>
+          <div class="definition">
+            Un <span class="CRed">angle</span> est une partie du plan limitée par deux demi-droites de même origine.
+          </div>
+          <img src="Images/Angle1.svg" style="max-width: 7cm;">
+      <h2>Angles particuliers :</h2>
+          <table class="proportionnaltable">
+            <tr>
+              <th>Angle plat</th>
+              <th>Angle droit</th>
+              <th>Angle nul</th>
+            </tr>
+            <tr>
+              <td>
+                <img src="Images/Angle2.svg" style="max-width: 7cm;">
+              </td> 
+              <td>
+                <img src="Images/Angle3.svg" style="max-height: 3cm;">
+              </td> 
+              <td>
+                <img src="Images/Angle4.svg" style="max-width: 7cm;">
+              </td> 
+            </tr>
+            <tr>
+              <td>180°</td>
+              <td>90°</td>
+              <td>0°</td>
+            </tr>
+          </table>
+          <p class="remarque">Remarque :</p>
+          <ul><li>Dans chacun des cas, le sommet de l'angle est <span class="CRed">O</span> et les deux demi-droites qui forme l'angle sont [<span class="CRed">O</span>A) et [<span class="CRed">O</span>B).</li></ul>
+
+          <p>
+            Dans le cas générales, on classe les angles en deux catégories :
+          </p>
+          <table class="proportionnaltable">
+            <tr>
+              <th>Angle <span class="CBlue">Aigu</span></th>
+              <th>Angle <span class="CRed">Obtus</span></th>
+            </tr>
+            <tr>
+              <td style="width: 200px;"><img src="Images/Angle5.svg" style="max-height: 3.5cm;"></td>
+              <td style="width: 200px;"><img src="Images/Angle6.svg" style="max-height: 3.5cm;"></td>
+            </tr>
+            <tr>
+              <td>Angle de moins de 90°</td>
+              <td>Angle de plus de 90°</td>
+            </tr>
+          </table>
+      <h2>Notation :</h2>
+          <p>Il existe deux notation d'angle en fonction de la partie du plan que l'on souhaite nommer. Lorsque l'angle est plus petit ou égale à un angle plat et lorsque qu'il est plus grand.</p>
+          <table class="proportionnaltable">
+            <tr>
+              <th>
+                Angle inférieur à un demi-tour
+              </th>
+              <th>
+                Angle supérieur à un demi-tour
+              </th>
+            </tr>
+            <tr>
+              <td><img src="Images/Angle7.svg" style="max-height: 4cm;"></td>
+              <td><img src="Images/Angle8.svg" style="max-height: 4cm;"></td>
+            </tr>
+            <tr>
+              <td><img src="Images/Nom1.svg" style="max-width: 1cm;"></td>
+              <td><img src="Images/Nom2.svg" style="max-width: 1cm;"></td>
+            </tr>
+          </table>
+    <h1>Mesure et construction :</h1>
+        <h2>Mesure d'un angle :</h2>
+            <div class="definition">
+              Pour mesurer un angle, on utilise le <span class="CRed">degré</span> comme unité. Il se note avec le symbole <b>°</b>.
+            </div>
+            <p class="Remarque">Remarque :</p>
+            <ul><li>Pour mesurer un angle, on utilise un rapporteur.</li></ul>
+            <p>Lorsque l'on souhaite mesure un angle, on place le centre du rapporteur sur le sommet de l'angle ; On aligne l'un des 0° avec l'un des côté de l'angle et on mesure à partir de la position de la seconde demi-droite.</p>
+            <div class="flexobject">
+              <img src="Images/Rapporteur1.svg" style="flex: 1 1 4cm;max-width: 12cm;">
+              <img src="Images/Rapporteur2.svg" style="flex: 1 1 4cm;max-width: 12cm;">
+            </div>
+            <p>En fonction du 0° choisi, la mesure de l'angle se mesure avec les graduation à l'intérieur ou à l'extérieur du rapporteur.</p>
+        <h2>Construction d'un angle :</h2>
+            <div class="flexobject">
+              <div style="flex: 1 1 4cm;max-width: 12cm;">
+                <ol><li value="1">On place le rapporteur sur le sommet</li></ol>
+                <img src="Images/Construction1.svg" >
+              </div>
+              <div style="flex: 1 1 4cm;max-width: 10cm;">
+                <ol><li value="2">On aligne le rapporteur avec la demi-droite et on mesure 70°</li></ol>
+                <img src="Images/Construction2.svg">
+              </div>
+              <div>
+                <ol><li value="3">On trace la demi droite.</li></ol>
+                <img src="Images/Construction3.svg" style="flex: 1 1 4cm;max-width: 6cm;">
+              </div>
+            </div>
 
 </body>
 
