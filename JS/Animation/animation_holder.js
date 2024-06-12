@@ -1,17 +1,18 @@
 document.write('<script src="/JS/Svg.js/svg.min.js" charset="utf-8"></script>')
 var Scripts = [
     "Animation_Data.js",
-    "Objects/Anim_Object.js",
-    "Objects/Anim_Image.js",
+    // "Objects/Anim_Object.js",
+    // "Objects/Anim_Image.js",
     "Objects/Anim_Regle.js",
     "Objects/Anim_Equerre.js",
     "Objects/Anim_Rapporteur.js",
-    "Objects/Anim_Rectangle.js",
-    "Objects/Anim_BreakLine.js",
-    "Objects/Anim_Text.js",
-    "Objects/Anim_Line.js",
+    // "Objects/Anim_Rectangle.js",
+    // "Objects/Anim_BreakLine.js",
+    // "Objects/Anim_Text.js",
+    // "Objects/Anim_Line.js",
     "Objects/Anim_Compas.js",
-    "Objects/Anim_Point.js"
+    "Objects/Anim_Point.js",
+    "Objects/Anim_Crayon.js"
 ]
 for (let s = 0; s < Scripts.length; s++) 
 {
@@ -22,61 +23,29 @@ let link = document.createElement("link");
 link.rel = "stylesheet";
 link.href = "/CSS/Animation.css"
 document.head.appendChild(link);
+window.onload = () => {CreateAnimationObject()}
 
 class Animation_Gestionnaire
 {
 
     static Animations = {};
-    static #TotalTime = 0
-    static #DepartTime = 0
-    static #TempsPrecedent = 0;
-
-    static get TotalTime()
-    {
-        return Animation_Gestionnaire.#TotalTime
-    }
-    static get DepartTime()
-    {
-        return Animation_Gestionnaire.#DepartTime
-    }
-    static get TempsPrecedent()
-    {
-        return Animation_Gestionnaire.#TempsPrecedent
-    }
 
     static StartMainLoop()
     {
-        Animation_Gestionnaire.#DepartTime = Date.now();
-        Animation_Gestionnaire.#TempsPrecedent = Animation_Gestionnaire.#DepartTime;
         window.onresize = function() { Animation_Gestionnaire.ResizeCanvas()}
         window.requestAnimationFrame(Animation_Gestionnaire.MainLoop);
     }
 
     static MainLoop()
     {
-        let now = Date.now();
-        // let dt = (now - Animation_Gestionnaire.#TempsPrecedent) / 1000.0;
-        let dt = (now - Animation_Gestionnaire.#TempsPrecedent);
-        Animation_Gestionnaire.#TotalTime = (now - Animation_Gestionnaire.#DepartTime) / 1000.0;
-
-        Animation_Gestionnaire.Update(dt);
-        // Animation_Gestionnaire.Draw();
-
-        Animation_Gestionnaire.#TempsPrecedent = now;
+        Animation_Gestionnaire.Update();
         window.requestAnimationFrame(Animation_Gestionnaire.MainLoop);
     }
 
-    static Update(delta)
+    static Update()
     {
         Object.values(Animation_Gestionnaire.Animations).forEach(animation => {
-            animation.Update(delta);
-        });
-    }
-
-    static Draw()
-    {
-        Object.values(Animation_Gestionnaire.Animations).forEach(animation => {
-            animation.Draw();
+            animation.Update();
         });
     }
 

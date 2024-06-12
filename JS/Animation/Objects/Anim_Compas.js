@@ -1,30 +1,3 @@
-/*
-Paramètres
-X           => Position X (float)
-Y           => Position Y (float)
-Z           => Position Z (float)
-Opacity     => Opacity entre 0 et 1 (float)
-Angle       => Angle en degré (float)
-ZoomX       => X scale (float)
-ZoomY       => Y scale (float)
-Visibility  => boolean
-
-P1X         => Position X de la pointe
-P1Y         => Position Y de la pointe
-P2X         => Position X du crayon
-P2Y         => Position Y du crayon
-DAngle      => Surplus d'angle pour faire tourner le compas en degrés
-MinSize     => Taille minimal du compas
-MaxAngle    => Angle max d'ouverture du compas
-Size        =>
-Position    => 
-Draw        => Active ou desactive le dessin lors de la rotation (boolean)
-DrawColorR
-DrawColorG
-DrawColorB
-DrawColorA
-DrawSize
-*/
 class Anim_Compas
 {
     Parent;
