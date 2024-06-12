@@ -420,7 +420,7 @@ var ListeCours = {
             id: 7,
             nom: "Angles",
             icone: 2,
-            ready : false,
+            ready : true,
         },
         {
             id: 8,
