@@ -1239,7 +1239,7 @@ const tablesvg64 = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iM'+
 'S1saW5lam9pbjogcm91bmQ7IiANCiAgICBmaWxsPSJub25lIiBzdHJva2U9IiMwMDA'+
 'wMDAiIC8+DQo8L3N2Zz4='
 
-function printDiv(divName) 
+function printDiv() 
 {
 
   if (PlanSelected == null) return;

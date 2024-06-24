@@ -5,17 +5,17 @@
 
     --Back: #181818;
     --BackObject: #262626;
-	--BackActive: #37373D;
-	--BackHover: #2A2D2E;
-	--BackHoverMenu: #36363C;
-	--BackText: #DEDEE3;
-	--DBackText: #CFCFD3;
+    --BackActive: #37373D;
+    --BackHover: #2A2D2E;
+    --BackHoverMenu: #36363C;
+    --BackText: #DEDEE3;
+    --DBackText: #CFCFD3;
 
     --WBack: #353535;
-	--WBackActive: #53535B;
-	--WBackHover: #494D4F;
-	--WBackHoverMenu: #52525B;
-	--WBackText: #F9F9FF;
+    --WBackActive: #53535B;
+    --WBackHover: #494D4F;
+    --WBackHoverMenu: #52525B;
+    --WBackText: #F9F9FF;
 }
 
 body{

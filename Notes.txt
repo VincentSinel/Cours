@@ -19,3 +19,7 @@ b = 50
 
 f(-200) = -50
 f(90) = 90
+
+
+
+Taille carton loto : 15x22mm
