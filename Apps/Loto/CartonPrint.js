@@ -8,15 +8,18 @@ importScripts(
 const A4_w_coef = 595.28 / 210.0
 const A4_h_coef = 841.89 / 297.0
 
+var color = "";
+
 onmessage = function(e) {
 	CreatePDF(e.data);
 }
 
 function CreatePDF(data) 
 {
-	console.log(data)
 	postMessage({status: "Start", completion: 0, time: 0})
 	var cardRangeList = CheckPage(data.range, Object.keys(data.cardlist).length)
+	color = data.color
+	console.log(color)
 	PDFCreation(data.cardlist, cardRangeList)
 }
 
@@ -89,7 +92,7 @@ function PDFCreation(data, cardRangeList)
 			let dx = 10;
 			let dy = 10 + (cartonCount % 3) * (h + 1);
 
-			let color = "#50E991"
+			// let color = "#50E991"
 
 			doc.fontSize(8);
 			doc.font('Helvetica-Bold')

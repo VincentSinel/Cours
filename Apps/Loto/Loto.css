@@ -333,3 +333,28 @@ input[type=number]::-webkit-outer-spin-button {
 .infobulle-texte_hover{
 	opacity: 0;
 }
+
+.flex_color_list{
+	margin: 10px 0px;
+	display: flex;
+	gap: 2px;
+	align-items: center;
+}
+.flex_color_list button{
+	min-width: 20px;
+	min-height: 20px;
+	width: 20px;
+	height: 20px;
+	padding: 1.6px;
+	border-radius: 3px;
+}
+#Card_color{
+	width: 60px;
+}
+
+.color_selector{
+		width: 40px;
+		height: 20px;
+		padding: 1.6px;
+		cursor: pointer;
+}

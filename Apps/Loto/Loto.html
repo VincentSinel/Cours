@@ -188,12 +188,67 @@
 			<label id="PreviewInfo1">Carton n°</label>
 			<label id="PreviewInfo2" style="text-align: right;"></label>
 		</div>
+		<div class="flex_color_list">
+			<button class="iconbutton" onclick="ChangeColor('#e60049')">
+				<svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 20 20">
+					<rect x="0" y="0" width="20" height="20" rx="2" ry="2" fill="#e60049"/>
+				</svg>
+			</button>
+			<button class="iconbutton" onclick="ChangeColor('#0bb4ff')">
+				<svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 20 20">
+					<rect x="0" y="0" width="20" height="20" rx="2" ry="2" fill="#0bb4ff"/>
+				</svg>
+			</button>
+			<button class="iconbutton" onclick="ChangeColor('#50e991')">
+				<svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 20 20">
+					<rect x="0" y="0" width="20" height="20" rx="2" ry="2" fill="#50e991"/>
+				</svg>
+			</button>
+			<button class="iconbutton" onclick="ChangeColor('#e6d800')">
+				<svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 20 20">
+					<rect x="0" y="0" width="20" height="20" rx="2" ry="2" fill="#e6d800"/>
+				</svg>
+			</button>
+			<button class="iconbutton" onclick="ChangeColor('#9b19f5')">
+				<svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 20 20">
+					<rect x="0" y="0" width="20" height="20" rx="2" ry="2" fill="#9b19f5"/>
+				</svg>
+			</button>
+			<button class="iconbutton" onclick="ChangeColor('#ffa300')">
+				<svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 20 20">
+					<rect x="0" y="0" width="20" height="20" rx="2" ry="2" fill="#ffa300"/>
+				</svg>
+			</button>
+			<button class="iconbutton" onclick="ChangeColor('#dc0ab4')">
+				<svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 20 20">
+					<rect x="0" y="0" width="20" height="20" rx="2" ry="2" fill="#dc0ab4"/>
+				</svg>
+			</button>
+			<button class="iconbutton" onclick="ChangeColor('#b3d4ff')">
+				<svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 20 20">
+					<rect x="0" y="0" width="20" height="20" rx="2" ry="2" fill="#b3d4ff"/>
+				</svg>
+			</button>
+			<button class="iconbutton" onclick="ChangeColor('#00bfa0')">
+				<svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 20 20">
+					<rect x="0" y="0" width="20" height="20" rx="2" ry="2" fill="#00bfa0"/>
+				</svg>
+			</button>
+			<button class="iconbutton" onclick="ChangeColor('#f0cccc')">
+				<svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 20 20">
+					<rect x="0" y="0" width="20" height="20" rx="2" ry="2" fill="#f0cccc"/>
+				</svg>
+			</button>
+			<label style="margin-left: 10px; color: #F9F9FF;">#</label>
+			<input id="Card_color" class="card_select" type="text" oninput="ChangeColor('#' + this.value)" value="50e991">
+			<input id="Card_color_selector" class="iconbutton color_selector" type="color" oninput="ChangeColor(this.value)" value="#50e991">
+		</div>
 		<span style="margin-left: 5px;">Afficher le carton n° :</span>
-			<div class="number-input">
-				<button onclick="this.parentNode.querySelector('input[type=number]').stepDown();UpdatePreview()"></button>
-				<input id="CartonSelection" type="number" value="1" step="1" min="1" max="200000" onchange="UpdatePreview()">
-				<button onclick="this.parentNode.querySelector('input[type=number]').stepUp();UpdatePreview()" class="plus"></button>
-			</div>
+		<div class="number-input">
+			<button onclick="this.parentNode.querySelector('input[type=number]').stepDown();UpdatePreview()"></button>
+			<input id="CartonSelection" type="number" value="1" step="1" min="1" max="200000" onchange="UpdatePreview()">
+			<button onclick="this.parentNode.querySelector('input[type=number]').stepUp();UpdatePreview()" class="plus"></button>
+		</div>
 	</div>
 
 

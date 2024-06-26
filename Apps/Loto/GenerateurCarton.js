@@ -3,6 +3,7 @@ var worker_pdf = undefined
 var loaded_data = {};
 var filename = "ListeCartons.json"
 var gencount = 0
+var color = "#50e991"
 
 
 function Generate()
@@ -177,7 +178,7 @@ function PrintCarton()
 				worker_pdf = new Worker("CartonPrint.js");
 				worker_pdf.onmessage = function(event) { Printing_Update(event.data)};
 				
-				worker_pdf.postMessage({cardlist: loaded_data, range: range});
+				worker_pdf.postMessage({cardlist: loaded_data, range: range, color: color});
 			}
 			else
 			{
@@ -259,4 +260,15 @@ function ShowHelp(id) {
 	var img = document.getElementById(id)
 	if (img.style.display == "none") img.style.display = "block";
 	else img.style.display = "none";
+}
+
+function ChangeColor(newcolor)
+{
+	if (/^#[0-9A-F]{6}$/i.test(newcolor))
+	{
+		color = newcolor;
+		document.documentElement.style.setProperty("--CartonColor", newcolor)
+		document.getElementById("Card_color").value = newcolor.slice(1);
+		document.getElementById("Card_color_selector").value = newcolor;
+	}
 }
