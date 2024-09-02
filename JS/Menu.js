@@ -16,6 +16,12 @@ function Outils()
 	window.location.href = "/Generateurs/Formes.html";
 }
 
+function Documents()
+{
+	window.location = "/Documents/Recherche.html";
+	window.location.href = "/Documents/Recherche.html";
+}
+
 function Applications()
 {
 	window.location = "/Apps/AppContainer.html";

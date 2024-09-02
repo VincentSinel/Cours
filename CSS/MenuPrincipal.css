@@ -66,7 +66,7 @@ footer div{
     height: 60px;
 }
 .menucontainer p{
-    max-width: 400px;
+    max-width: 600px;
 }
 .blockmenu{
     width: 100%;
@@ -85,6 +85,9 @@ footer div{
     }
     .blockmenuapps span:before{
         content: "Applications";
+    }
+    .blockmenudocuments span:before{
+        content: "Documents";
     }
     .blockmenu{
         width: 100%;

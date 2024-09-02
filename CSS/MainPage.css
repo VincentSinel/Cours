@@ -139,6 +139,9 @@ header {
 .blockmenugenerateurs span::before{
 	content: "Outils";
 }
+.blockmenudocuments span:before{
+    content: "Documents";
+}
 .blockmenuapps span::before{
   content: "Applications";
 }
@@ -447,6 +450,9 @@ nav::-webkit-scrollbar-thumb {
   }
   .blockmenugenerateurs span:before{
     content: "✏️";
+  }
+  .blockmenudocuments span:before{
+      content: "📄";
   }
   .blockmenuapps span:before{
     content: "💿";

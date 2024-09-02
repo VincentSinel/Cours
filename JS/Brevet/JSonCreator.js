@@ -45,7 +45,7 @@ function End_data_load()
 	lines.forEach(line => {
 		if (line.length != 0)
 		{
-			line = line.substring(0, line.length - 2);
+			line = lineline.replace(/[ \t\r]+$/, '');
 			var a = document.createElement("li")
 			a.innerText = line
 			a.onclick = function() {

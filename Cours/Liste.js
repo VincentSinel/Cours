@@ -260,9 +260,9 @@ var ListeCours = {
     cinquieme: [
         {
             id: 1,
-            nom: "Priorités opératoires",
+            nom: "Nombres Relatifs (Partie 1)",
             icone: 1,
-            ready : false,
+            ready : true,
         },
         {
             id: 2,
@@ -272,7 +272,7 @@ var ListeCours = {
         },
         {
             id: 3,
-            nom: "Nombres Relatifs",
+            nom: "Priorités opératoires",
             icone: 1,
             ready : false,
         },
