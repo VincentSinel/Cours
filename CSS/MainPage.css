@@ -32,10 +32,22 @@
 	--thumbBG: #7C7C7F;
 }
 
-.titrepagecollege span::before{
-	content: "Collège Mme De Lafayette";
+.titrepagecollege_roger_vailland span::before{
+	content: "Collège Roger Vailland";
 }
-.titrepagedate span::before{
+.titrepagecollege_saint_exupery span::before{
+	content: "Collège Saint Exupéry";
+}
+.titrepagecollege_madame_de_lafayette span::before{
+	content: "Collège Madame de Lafayette";
+}
+.titrepagedate_roger_vailland span::before{
+	content: "2024-2025";
+}
+.titrepagedate_saint_exupery span::before{
+	content: "2024-2025";
+}
+.titrepagedate_madame_de_lafayette span::before{
 	content: "2018-2024";
 }
 
@@ -78,6 +90,9 @@ header {
 .nav-headertext{
   height: var(--HeaderBarHeight);
   width: var(--NavBarWidth);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .titrepageback{
   width: auto;
@@ -103,6 +118,7 @@ header {
   margin: 6px;
   gap: 6px;
 }
+.hovermenu_block,
 .blockmenu{
   align-items: center;
   background-color: var(--HeadMenuButton);
@@ -120,12 +136,15 @@ header {
   width:max-content;
   text-shadow: 0 1px 2px #000;
 }
+.hovermenu_block:hover,
 .blockmenu:hover{
   background-color: var(--PanelBackHover);
 }
+.hovermenu_block:active,
 .blockmenu:active{
   background-color: var(--HeadMenuButtonActive);
 }
+.hovermenu_block:before,
 .blockmenu span::before
 {
   padding-right: 10px;
@@ -475,4 +494,63 @@ nav::-webkit-scrollbar-thumb {
   .asideshow{
     left: 0px;
   }
+}
+
+.HoverMenu{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  background-color: var(--HeaderBack);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.hovermenu_block{
+  flex: 0 1 60px;
+  width: 350px;
+}
+.hovermenu_block span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  width: 100%;
+}
+.hovermenu_block span:after {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0px;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.hovermenu_block:hover {
+  width: 370px;
+}
+.hovermenu_block:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.iconbutton{
+  width: 24px;
+  height: 24px;
+  transition: 150ms;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: var(--HeadMenuButton);
+  color: #F9F9FF;
+}
+.iconbutton:hover{
+  background-color: #494D4F;
+}
+.iconbutton:active{
+  background-color: #53535B;
 }

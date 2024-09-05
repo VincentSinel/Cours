@@ -33,14 +33,25 @@
 
 </head>
 
-<body onload="CreateNavBar()">
+<body>
+
+  <div id="HoverMenu" class="HoverMenu">
+    <div class="hovermenu_block" onclick="SelectCollege('roger_vailland')"><span>Collège Roger Vailland</span></div>
+    <div class="hovermenu_block" onclick="SelectCollege('saint_exupery')"><span>Collège Antoine de Saint-Exupéry</span></div>
+    <div class="hovermenu_block" onclick="SelectCollege('madame_de_lafayette')"><span>Collège Madame de Lafayette</span></div>
+  </div>
 
   <div class="nav-header">
     <div class="nav-headertext">
       <div class="titrepageback">
         <p class="titrepage"> SINEL Vincent</p>
-        <p class="titrepagecollege"><span></span></p>
-        <p class="titrepagedate"><span></span></p>
+        <p id="titrepagecollege"><span></span></p>
+        <p id="titrepagedate"><span></span></p>
+      </div>
+      <div class="iconbutton" onclick="ShowCollegeSelect()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+            <path fill="currentColor" stroke="currentColor" d="M480.5-169q-130.65 0-221.33-90.38Q168.5-349.77 168.5-480q0-130.23 90.67-220.62Q349.85-791 480.5-791q68.5 0 130.5 28.25T716.5-681v-110h75v269h-269v-75h163q-31.53-55.53-86.22-87.27Q544.59-716 480.54-716q-98.54 0-167.79 68.87-69.25 68.87-69.25 167.25t69.13 167.13Q381.75-244 480.5-244q75.66 0 136.58-43Q678-330 702.5-401h79q-27 103-110.75 167.5T480.5-169Z"/>
+          </svg>
       </div>
     </div>
     <header>
@@ -233,16 +244,14 @@
     {
       let but = document.getElementById("PdfButton");
       but.setAttribute("style", "");
-      console.log("https://vsinel.fr" + path);
-      // return;
       var pageUrl = encodeURIComponent("https://vsinel.fr" + path);
       var opts = ['save-link=' + pageUrl, 'pageOrientation=portrait', 'pageSize=a4', 'pageMargin=2cm'];
       but.href = 'https://www.sejda.com/html-to-pdf?' + opts.join('&');
-      console.log(but.href );
     }
 
 
   </script>
+  <script id="ListeChapitres" async src="Liste_Chapitre.js"></script>
   <script id="ListeCours" async src="Liste.js"></script>
 </body>
 
