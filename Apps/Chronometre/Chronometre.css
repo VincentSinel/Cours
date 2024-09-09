@@ -197,11 +197,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .time{
-	font-size: 10vw;
+	font-size: 12vw;
 	color: var(--BackText);
 }
 .time_milli{
-	font-size: 8vw;
+	font-size: 10vw;
 	color: var(--WBackTextDisabled);
 }
 
