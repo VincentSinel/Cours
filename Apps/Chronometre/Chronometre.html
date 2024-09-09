@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">	
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+	<link rel="stylesheet" href="/CSS/MainPage.css"> 
+  <link rel="stylesheet" href="Chronometre.css"> 
+  <script src="Chronometre.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+  <title>Décompte</title>
+
+  <style>
+  </style>
+
+</head>
+
+<body>
+	<div id="maincontainer" class="maincontainer">
+	
+		<div id="time_menu" class="generation-option">
+			<span>Décompte : </span>
+			<div class="iconbutton iconline" onclick="Timer(30)">
+				<div class="flexline">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+						<path  fill="currentColor" d="M363-837v-75h234v75H363Zm79.5 433h75v-233h-75v233Zm37.72 314q-72.27 0-136.25-27.75Q280-145.5 232.26-193.32q-47.73-47.83-75.5-111.75Q129-369 129-441.14q0-72.13 27.76-135.98 27.77-63.85 75.5-111.61Q280-736.5 343.9-764.25 407.8-792 480-792q63.5 0 118 20.25t103 57.25l54-54 52.5 52.5-54 54q36.5 47.5 57 102.5T831-441q0 72.15-27.75 136.01-27.76 63.86-75.47 111.64-47.72 47.78-111.5 75.56Q552.5-90 480.22-90Zm-.11-75q114.39 0 195.14-80.86Q756-326.72 756-441.11t-80.86-195.14Q594.28-717 479.89-717t-195.14 80.86Q204-555.28 204-440.89t80.86 195.14Q365.72-165 480.11-165ZM480-441Z"/>
+					</svg>
+					<label class="button-text">30 s</label>
+				</div>
+			</div>
+			<div class="iconbutton iconline" onclick="Timer(60)">
+				<div class="flexline">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+						<path  fill="currentColor" d="M363-837v-75h234v75H363Zm79.5 433h75v-233h-75v233Zm37.72 314q-72.27 0-136.25-27.75Q280-145.5 232.26-193.32q-47.73-47.83-75.5-111.75Q129-369 129-441.14q0-72.13 27.76-135.98 27.77-63.85 75.5-111.61Q280-736.5 343.9-764.25 407.8-792 480-792q63.5 0 118 20.25t103 57.25l54-54 52.5 52.5-54 54q36.5 47.5 57 102.5T831-441q0 72.15-27.75 136.01-27.76 63.86-75.47 111.64-47.72 47.78-111.5 75.56Q552.5-90 480.22-90Zm-.11-75q114.39 0 195.14-80.86Q756-326.72 756-441.11t-80.86-195.14Q594.28-717 479.89-717t-195.14 80.86Q204-555.28 204-440.89t80.86 195.14Q365.72-165 480.11-165ZM480-441Z"/>
+					</svg>
+					<label class="button-text">1 min</label>
+				</div>
+			</div>
+			<div class="iconbutton iconline" onclick="Timer(120)">
+				<div class="flexline">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+						<path  fill="currentColor" d="M363-837v-75h234v75H363Zm79.5 433h75v-233h-75v233Zm37.72 314q-72.27 0-136.25-27.75Q280-145.5 232.26-193.32q-47.73-47.83-75.5-111.75Q129-369 129-441.14q0-72.13 27.76-135.98 27.77-63.85 75.5-111.61Q280-736.5 343.9-764.25 407.8-792 480-792q63.5 0 118 20.25t103 57.25l54-54 52.5 52.5-54 54q36.5 47.5 57 102.5T831-441q0 72.15-27.75 136.01-27.76 63.86-75.47 111.64-47.72 47.78-111.5 75.56Q552.5-90 480.22-90Zm-.11-75q114.39 0 195.14-80.86Q756-326.72 756-441.11t-80.86-195.14Q594.28-717 479.89-717t-195.14 80.86Q204-555.28 204-440.89t80.86 195.14Q365.72-165 480.11-165ZM480-441Z"/>
+					</svg>
+					<label class="button-text">2 min</label>
+				</div>
+			</div>
+			<div class="iconbutton iconline" onclick="Timer(180)">
+				<div class="flexline">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+						<path  fill="currentColor" d="M363-837v-75h234v75H363Zm79.5 433h75v-233h-75v233Zm37.72 314q-72.27 0-136.25-27.75Q280-145.5 232.26-193.32q-47.73-47.83-75.5-111.75Q129-369 129-441.14q0-72.13 27.76-135.98 27.77-63.85 75.5-111.61Q280-736.5 343.9-764.25 407.8-792 480-792q63.5 0 118 20.25t103 57.25l54-54 52.5 52.5-54 54q36.5 47.5 57 102.5T831-441q0 72.15-27.75 136.01-27.76 63.86-75.47 111.64-47.72 47.78-111.5 75.56Q552.5-90 480.22-90Zm-.11-75q114.39 0 195.14-80.86Q756-326.72 756-441.11t-80.86-195.14Q594.28-717 479.89-717t-195.14 80.86Q204-555.28 204-440.89t80.86 195.14Q365.72-165 480.11-165ZM480-441Z"/>
+					</svg>
+					<label class="button-text">3 min</label>
+				</div>
+			</div>
+			<div class="iconbutton iconline" onclick="Timer(240)">
+				<div class="flexline">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+						<path  fill="currentColor" d="M363-837v-75h234v75H363Zm79.5 433h75v-233h-75v233Zm37.72 314q-72.27 0-136.25-27.75Q280-145.5 232.26-193.32q-47.73-47.83-75.5-111.75Q129-369 129-441.14q0-72.13 27.76-135.98 27.77-63.85 75.5-111.61Q280-736.5 343.9-764.25 407.8-792 480-792q63.5 0 118 20.25t103 57.25l54-54 52.5 52.5-54 54q36.5 47.5 57 102.5T831-441q0 72.15-27.75 136.01-27.76 63.86-75.47 111.64-47.72 47.78-111.5 75.56Q552.5-90 480.22-90Zm-.11-75q114.39 0 195.14-80.86Q756-326.72 756-441.11t-80.86-195.14Q594.28-717 479.89-717t-195.14 80.86Q204-555.28 204-440.89t80.86 195.14Q365.72-165 480.11-165ZM480-441Z"/>
+					</svg>
+					<label class="button-text">4 min</label>
+				</div>
+			</div>
+			<div class="iconbutton iconline" onclick="Timer(300)">
+				<div class="flexline">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+						<path  fill="currentColor" d="M363-837v-75h234v75H363Zm79.5 433h75v-233h-75v233Zm37.72 314q-72.27 0-136.25-27.75Q280-145.5 232.26-193.32q-47.73-47.83-75.5-111.75Q129-369 129-441.14q0-72.13 27.76-135.98 27.77-63.85 75.5-111.61Q280-736.5 343.9-764.25 407.8-792 480-792q63.5 0 118 20.25t103 57.25l54-54 52.5 52.5-54 54q36.5 47.5 57 102.5T831-441q0 72.15-27.75 136.01-27.76 63.86-75.47 111.64-47.72 47.78-111.5 75.56Q552.5-90 480.22-90Zm-.11-75q114.39 0 195.14-80.86Q756-326.72 756-441.11t-80.86-195.14Q594.28-717 479.89-717t-195.14 80.86Q204-555.28 204-440.89t80.86 195.14Q365.72-165 480.11-165ZM480-441Z"/>
+					</svg>
+					<label class="button-text">5 min</label>
+				</div>
+			</div>
+			<div class="iconbutton iconline" onclick="Timer(600)">
+				<div class="flexline">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+						<path  fill="currentColor" d="M363-837v-75h234v75H363Zm79.5 433h75v-233h-75v233Zm37.72 314q-72.27 0-136.25-27.75Q280-145.5 232.26-193.32q-47.73-47.83-75.5-111.75Q129-369 129-441.14q0-72.13 27.76-135.98 27.77-63.85 75.5-111.61Q280-736.5 343.9-764.25 407.8-792 480-792q63.5 0 118 20.25t103 57.25l54-54 52.5 52.5-54 54q36.5 47.5 57 102.5T831-441q0 72.15-27.75 136.01-27.76 63.86-75.47 111.64-47.72 47.78-111.5 75.56Q552.5-90 480.22-90Zm-.11-75q114.39 0 195.14-80.86Q756-326.72 756-441.11t-80.86-195.14Q594.28-717 479.89-717t-195.14 80.86Q204-555.28 204-440.89t80.86 195.14Q365.72-165 480.11-165ZM480-441Z"/>
+					</svg>
+					<label class="button-text">10 min</label>
+				</div>
+			</div>
+			<div class="iconbutton iconline" onclick="Timer(900)">
+				<div class="flexline">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+						<path  fill="currentColor" d="M363-837v-75h234v75H363Zm79.5 433h75v-233h-75v233Zm37.72 314q-72.27 0-136.25-27.75Q280-145.5 232.26-193.32q-47.73-47.83-75.5-111.75Q129-369 129-441.14q0-72.13 27.76-135.98 27.77-63.85 75.5-111.61Q280-736.5 343.9-764.25 407.8-792 480-792q63.5 0 118 20.25t103 57.25l54-54 52.5 52.5-54 54q36.5 47.5 57 102.5T831-441q0 72.15-27.75 136.01-27.76 63.86-75.47 111.64-47.72 47.78-111.5 75.56Q552.5-90 480.22-90Zm-.11-75q114.39 0 195.14-80.86Q756-326.72 756-441.11t-80.86-195.14Q594.28-717 479.89-717t-195.14 80.86Q204-555.28 204-440.89t80.86 195.14Q365.72-165 480.11-165ZM480-441Z"/>
+					</svg>
+					<label class="button-text">15 min</label>
+				</div>
+			</div>
+			<span>Décompte personnalisé (seconde) : </span>
+			<div class="number-input">
+				<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+				<input id="customTime" type="number" value="90" step="5" min="0" max="200000">
+				<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+			</div>
+			<div class="iconbutton iconline" onclick="Timer(-1)">
+				<div class="flexline">
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+						<path  fill="currentColor" d="M363-837v-75h234v75H363Zm79.5 433h75v-233h-75v233Zm37.72 314q-72.27 0-136.25-27.75Q280-145.5 232.26-193.32q-47.73-47.83-75.5-111.75Q129-369 129-441.14q0-72.13 27.76-135.98 27.77-63.85 75.5-111.61Q280-736.5 343.9-764.25 407.8-792 480-792q63.5 0 118 20.25t103 57.25l54-54 52.5 52.5-54 54q36.5 47.5 57 102.5T831-441q0 72.15-27.75 136.01-27.76 63.86-75.47 111.64-47.72 47.78-111.5 75.56Q552.5-90 480.22-90Zm-.11-75q114.39 0 195.14-80.86Q756-326.72 756-441.11t-80.86-195.14Q594.28-717 479.89-717t-195.14 80.86Q204-555.28 204-440.89t80.86 195.14Q365.72-165 480.11-165ZM480-441Z"/>
+					</svg>
+					<label class="button-text">Valider</label>
+				</div>
+			</div>
+			<br>
+			<!-- <span>Chronométre : </span> -->
+			
+		</div>
+
+		<div class="main_view">
+			<div class="flexline" style="flex-direction: column;">
+				<div>
+					<span id="hour" class="time hidden">0</span>
+					<span id="hour-separator" class="seperator hidden">:</span>
+					<span id="minute" class="time">00</span>
+					<span class="seperator">:</span>
+					<span id="second" class="time">00</span>
+					<span class="seperator">:</span>
+					<span id="millisecond" class="time time_milli">000</span>
+				</div>
+				<div class="flexline" style="gap: 10px;">
+					<div class="iconbutton bigicon" onclick="Play_Pause()">
+						<svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" id="play"><path fill="currentColor" d="M327-211v-538l422 269-422 269Zm75-269Zm0 132 207-132-207-132v264Z"/></svg>
+						<svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" id="pause" style="display: none;"><path fill="currentColor" d="M522-208v-544h230v544H522Zm-314 0v-544h230v544H208Zm389-75h80v-394h-80v394Zm-314 0h80v-394h-80v394Zm0-394v394-394Zm314 0v394-394Z"/></svg>
+					</div>
+					<div class="iconbutton bigicon" onclick="Stop()">
+						<svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"><path fill="currentColor" d="M322-638v316-316Zm-75 391v-466h466v466H247Zm75-75h316v-316H322v316Z"/></svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

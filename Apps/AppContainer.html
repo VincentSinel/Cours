@@ -21,13 +21,14 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>Cours M.SINEL</title>
+  <title>Applications</title>
 
   <style>
     .buttonbrevet span::before{ content: "Annales du brevet"; }
     .buttonplandc span::before{ content: "Générateur de plan de classe"; }
     .buttonboulie span::before{ content: "Bouliers"; }
     .buttonloto span::before{ content: "Générateur carton de loto"; }
+    .buttondecompte span::before{ content: "Décompte"; }
     #noiframe{display: inline-block; margin-left: 45px; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: left; width: calc(100% - 45px);}
   </style>
 
@@ -48,7 +49,8 @@
 		<div class="blockmenu blockmenuprincipal" onclick="Menu()"><span></span></div>
 		<div class="blockmenu blockmenucours" onclick="Cours()"><span></span></div>
 		<div class="blockmenu blockmenugenerateurs" onclick="Outils()"><span></span></div>
-		<div class="blockmenu blockmenuapps" onclick="Annales_brevets()"><span></span></div>
+		<div class="blockmenu blockmenudocuments" onclick="Documents()"><span></span></div>
+		<div class="blockmenu blockmenuapps" onclick="Applications()"><span></span></div>
         <div class="blockmenu blockmenusecret" onclick="ShowConnection()"><span></span></div>
       </div>
     </header>
@@ -66,6 +68,7 @@
             <div class="blockmenu buttonplandc" onclick="OpenMenu('/Apps/Generateur_PlanClasse/Generateur_PlanClasse.html')"><span></span></div>
             <div class="blockmenu buttonboulie" onclick="OpenMenu('/Apps/Boulier/Boulier.html')"><span></span></div>
             <div class="blockmenu buttonloto" onclick="OpenMenu('/Apps/Loto/Loto.html')"><span></span></div>
+            <div class="blockmenu buttondecompte" onclick="OpenMenu('/Apps/Chronometre/Chronometre.html')"><span></span></div>
             <!-- <div class="blockmenu" onclick="OpenMenu()"><span></span></div>
             <div class="blockmenu" onclick="OpenMenu()"><span></span></div> -->
         </div>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.83 28.03">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1d1d1b;
+        font-size: 12px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        font-family: Bahnschrift, Bahnschrift;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-4 {
+        stroke: #74bd83;
+      }
+
+      .cls-4, .cls-5 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #74bd83;
+      }
+
+      .cls-2, .cls-3 {
+        font-size: 8px;
+      }
+
+      .cls-3 {
+        fill: #674695;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        stroke: #674695;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(21.51 10.26)"><tspan x="0" y="0" xml:space="preserve"> - 5,3</tspan></text>
+  <polyline class="cls-5" points="25.54 11.43 25.54 13.92 29.92 13.92 29.92 11.43"/>
+  <polyline class="cls-4" points="33.96 11.43 33.96 13.92 48.28 13.92 48.28 11.43"/>
+  <text class="cls-3" transform="translate(4.48 16.27)"><tspan x="0" y="0">Signe</tspan><tspan x="-4.48" y="9.6">négatif</tspan></text>
+  <text class="cls-2" transform="translate(49.82 16.27)"><tspan x="0" y="0">Distance</tspan><tspan x="0" y="9.6">à zé</tspan><tspan class="cls-6" x="14.65" y="9.6">r</tspan><tspan x="17.99" y="9.6">o</tspan></text>
+</svg>

@@ -1,0 +1,215 @@
+:root{
+	--TableWidth : 77px;
+	--TableHeight: calc(var(--TableWidth) * 41.0 / 44.0);
+	--TableFontSize: calc(var(--TableWidth) * 8.0 / 44.0);
+
+	--Back: #181818;
+	--BackObject: #262626;
+	--BackActive: #37373D;
+	--BackHover: #2A2D2E;
+	--BackHoverMenu: #36363C;
+	--BackText: #DEDEE3;
+	--DBackText: #CFCFD3;
+
+	--WBack: #353535;
+	--WBackActive: #53535B;
+	--WBackDisabled: #F9F9FF08;
+	--WBackHover: #494D4F;
+	--WBackHoverMenu: #52525B;
+	--WBackText: #F9F9FF;
+	--WBackTextDisabled: #F9F9FF55;
+
+	--CartonColor: #50e991;
+}
+
+body{
+	background-color: var(--PanelBackHoverMenu);
+}
+
+.maincontainer{
+	display: flex;
+	width: 100%;
+	min-height: 100%;
+	max-height: 100%;
+	transition: 0.5s;
+}
+
+p, span, div{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p, span{
+	color: var(--BackText);
+}
+
+button, input, select{
+	border: solid gray 1px;
+	border-radius: 5px;
+	background-color: var(--BackText);
+}
+button:focus,
+button:hover,
+input:focus,
+input:hover,
+select:focus,
+select:hover{
+	background-color: var(--WBackActive);
+}
+button:focus,
+select:focus,
+input:focus{
+	outline: solid var(--BluePanelHover) 1px;
+}
+
+.generation-option{
+	padding: 5px;
+	padding-left: 45px;
+	width: 320px;
+	line-height: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	left: 0px;
+	background-color: var(--PanelBack);
+	min-height: 100%;
+	max-height: 100%;
+	transition: 0.5s;
+}
+
+.hide-generation {
+	left: -275px;
+}
+
+.maincontainer-hide{
+	width: calc(100% + 275px);
+	margin-left: -275px;
+}
+
+.iconbutton{
+	width: 24px;
+	height: 24px;
+	transition: 150ms;
+	border-radius: 5px;
+	display: inline-block;
+	background-color: var(--HeadMenuButton);
+	color: var(--WBackText);;
+}
+.iconbutton:hover{
+	background-color: var(--WBackHover);
+}
+.iconbutton:active{
+	background-color: var(--WBackActive);
+}
+.iconline{
+	width: 100%;
+}
+
+.bigicon{
+	width: 32px;
+	height: 32px;
+}
+
+
+.flexline{
+	display: flex;
+	align-items: center;
+}
+
+.button-text{
+	-webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+	flex-basis: 100%; 
+	text-align: center;
+}
+
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.number-input {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+.number-input button {
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: relative;
+  flex: 1 ;
+	background-color: var(--HeadMenuButton);
+}
+
+.number-input button:before,
+.number-input button:after {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  width: 10px;
+	background-color: var(--WBackText);
+  height: 2px;
+  transform: translate(-50%, -50%);
+}
+.number-input button.plus:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-input input[type=number] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  flex: 3 1;
+  text-align: center;
+	height: 24px;
+	transition: 150ms;
+	display: inline-block;
+	background-color: var(--HeadMenuButton);
+	color: var(--WBackText);
+	margin: 0; 
+}
+
+.number-input button:hover,
+.number-input button:hover,
+.number-input input[type=number]:hover {
+	background-color: var(--WBackHover);
+}
+.number-input button:active,
+.number-input button:active,
+.number-input input[type=number]:active {
+	background-color: var(--WBackActive);
+}
+
+.main_view{
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--BackObject)
+}
+
+.time{
+	font-size: 10vw;
+	color: var(--BackText);
+}
+.time_milli{
+	font-size: 8vw;
+	color: var(--WBackTextDisabled);
+}
+
+.seperator {
+	font-size: 8vw;
+	color: var(--WBackHoverMenu);
+}
+
+.hidden{
+	display: none;
+}
