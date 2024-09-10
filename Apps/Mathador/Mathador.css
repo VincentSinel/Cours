@@ -1,0 +1,206 @@
+:root{
+	--TableWidth : 77px;
+	--TableHeight: calc(var(--TableWidth) * 41.0 / 44.0);
+	--TableFontSize: calc(var(--TableWidth) * 8.0 / 44.0);
+
+	--Back: #181818;
+	--BackObject: #262626;
+	--BackActive: #37373D;
+	--BackHover: #2A2D2E;
+	--BackHoverMenu: #36363C;
+	--BackText: #DEDEE3;
+	--DBackText: #CFCFD3;
+
+	--WBack: #353535;
+	--WBackActive: #53535B;
+	--WBackDisabled: #F9F9FF08;
+	--WBackHover: #494D4F;
+	--WBackHoverMenu: #52525B;
+	--WBackText: #F9F9FF;
+	--WBackTextDisabled: #F9F9FF55;
+
+	
+	--MBack: #3C295B;
+	--MBack2: #7030A0;
+	--MBack2Hover: #7C35B2;
+	--MBack2Active: #612A8C;
+	--MBack3: #D24C10;
+	--MBack3Hover: #E24D12;
+	--MBack3Active: #C1440F;
+
+	--CartonColor: #50e991;
+}
+
+body{
+	background-color: var(--PanelBackHoverMenu);
+}
+
+.maincontainer{
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%;
+	min-height: 100%;
+	max-height: 100%;
+}
+
+p, span, div{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p, span{
+	color: var(--BackText);
+}
+
+button, input, select{
+	border: solid gray 1px;
+	border-radius: 5px;
+	background-color: var(--BackText);
+}
+button:focus,
+button:hover,
+input:focus,
+input:hover,
+select:focus,
+select:hover{
+	background-color: var(--WBackActive);
+}
+button:focus,
+select:focus,
+input:focus{
+	outline: solid var(--BluePanelHover) 1px;
+}
+
+.config{
+	flex: 1 1 80%;
+	background-color: var(--MBack);
+	min-height: 100%;
+	max-height: 100%;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 10px;
+	position: relative;
+}
+
+.solutions{
+	width: 20%;
+	border-left: solid var(--BackHover) 10px;
+	padding: 10px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	min-height: 100%;
+	max-height: 100%;
+	transition-duration: 0.5s;
+}
+.solutions_hide{
+	width: 0;
+}
+
+.solutions_list{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	overflow-y: visible;
+	overflow-x: hidden;
+}
+
+.solution{
+	color: var(--BackText);
+	font-family: 'Courier New', Courier, monospace;
+}
+.solution div{
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.solution div:first-of-type{
+	font-weight: bold;
+}
+
+.flexline{
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: center;
+	gap: 5px;
+}
+
+.number_color1{
+	background: var(--MBack2);
+	color: var(--DBackText);
+	text-align: center;
+}
+.number_color1:hover,
+.number_color1:focus{
+	background: var(--MBack2Hover);
+}
+.number_color1:active{
+	background: var(--MBack2Active);
+}
+
+.number_color2{
+	background: var(--MBack3);
+	color: var(--DBackText);
+	text-align: center;
+}
+.number_color2:hover,
+.number_color2:focus{
+	background: var(--MBack3Hover);
+}
+.number_color2:active{
+	background: var(--MBack3Active);
+}
+.numberblock{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.numberblock input{
+	font-size: 40pt;
+	border: none;
+	border-radius: 0;
+	width: 75px;
+	height: 75px;
+}
+.numberblock input:hover,
+.numberblock input:active,
+.numberblock input:focus{
+	border: none;
+}
+
+
+.iconbutton{
+	width: 24px;
+	height: 24px;
+	transition: 150ms;
+	padding: 5px 10px;
+	color: var(--WBackText);;
+}
+
+.genbutton{
+	width: min-content;
+	font-weight: bold;
+}
+
+.button_listsolution{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	right: 0;
+	top: 0;
+	background-color: var(--Back);
+}
+.button_listsolution div{
+	height: fit-content;
+	font-size: 23pt;
+}
+
+.button_listsolution:hover{
+	background-color: var(--BackHover);
+}
+.button_listsolution:active{
+	background-color: var(--BackActive);
+}

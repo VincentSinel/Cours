@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">	
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+	<link rel="stylesheet" href="/CSS/MainPage.css"> 
+  <link rel="stylesheet" href="Mathador.css"> 
+  <script src="Mathador.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+  <title>Solveur Mathador</title>
+
+  <style>
+  </style>
+
+</head>
+
+<body>
+	<div id="maincontainer" class="maincontainer">
+	
+		<div class="config">
+
+			<div class="flexline">
+				<div class="numberblock">
+					<input id="number1" type="text" class="number_color1"></input>
+				</div>
+				<div class="numberblock">
+					<input id="number2" type="text" class="number_color1"></input>
+				</div>
+				<div class="numberblock">
+					<input id="number3" type="text" class="number_color1"></input>
+				</div>
+				<div class="numberblock">
+					<input id="number4" type="text" class="number_color1"></input>
+				</div>
+				<div class="numberblock">
+					<input id="number5" type="text" class="number_color1"></input>
+				</div>	
+			</div>
+			<div class="numberblock">
+				<input id="number_target" type="text" class="number_color2"></input>
+			</div>
+			<div class="flexline">
+				<div class="iconbutton genbutton unselectable number_color1" onclick="Aleatoire()">
+					<div class="flexline">
+						<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+							<path fill="currentColor" d="M305-248q23.75 0 40.38-16.63Q362-281.25 362-305q0-23.75-16.62-40.38Q328.75-362 305-362q-23.75 0-40.37 16.62Q248-328.75 248-305q0 23.75 16.63 40.37Q281.25-248 305-248Zm0-350q23.75 0 40.38-16.63Q362-631.25 362-655q0-23.75-16.62-40.38Q328.75-712 305-712q-23.75 0-40.37 16.62Q248-678.75 248-655q0 23.75 16.63 40.37Q281.25-598 305-598Zm175 175q23.75 0 40.38-16.63Q537-456.25 537-480q0-23.75-16.62-40.38Q503.75-537 480-537q-23.75 0-40.37 16.62Q423-503.75 423-480q0 23.75 16.63 40.37Q456.25-423 480-423Zm175 175q23.75 0 40.38-16.63Q712-281.25 712-305q0-23.75-16.62-40.38Q678.75-362 655-362q-23.75 0-40.37 16.62Q598-328.75 598-305q0 23.75 16.63 40.37Q631.25-248 655-248Zm0-350q23.75 0 40.38-16.63Q712-631.25 712-655q0-23.75-16.62-40.38Q678.75-712 655-712q-23.75 0-40.37 16.62Q598-678.75 598-655q0 23.75 16.63 40.37Q631.25-598 655-598ZM204-129q-30.94 0-52.97-22.03Q129-173.06 129-204v-552q0-30.94 22.03-52.97Q173.06-831 204-831h552q30.94 0 52.97 22.03Q831-786.94 831-756v552q0 30.94-22.03 52.97Q786.94-129 756-129H204Zm0-75h552v-552H204v552Zm0-552v552-552Z"/>
+						</svg>
+						<label class="button-text">Aléatoire</label>
+					</div>
+				</div>
+				<div class="iconbutton genbutton unselectable number_color2" onclick="Resoudre()">
+					<div class="flexline">
+						<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+							<path fill="currentColor" d="M480.03-95q-25.03 0-45.28-12T403-140h-2q-30.94 0-52.97-22.03Q326-184.06 326-215v-138q-59-38.5-93.5-100.5T198-588.78Q198-707 280-789t200-82q118 0 200 82t82 200q0 74.5-34.5 136T634-353v138q0 30.94-22.03 52.97Q589.94-140 559-140h-2q-11.5 21-31.72 33t-45.25 12ZM401-215h158v-36H401v36Zm0-75h158v-37H401v37Zm-8-112h59v-107l-87-87 40-40 75 75 75-75 40 40-87 87.1V-402h59q53.5-26 86.75-75.25T687-589q0-86.74-60.13-146.87Q566.74-796 480-796q-86.74 0-146.87 60.13Q273-675.74 273-589q0 62.5 33.25 111.75T393-402Zm87-159Zm0-38Z"/>
+						</svg>
+						<label class="button-text">Résoudre</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="button_listsolution number_color2 unselectable" onclick="HideSolutionPanel()">
+				<div>×</div>
+			</div>
+		</div>
+
+		<div id="list_solution_panel" class="solutions solutions_hide">
+			
+			<div>
+				<input id="list_solution_show" type="checkbox" style="width: auto;" unchecked oninput="RecreateList();">
+				<label for="list_solution_show" style="width: auto; color: var(--PanelBackText);">Afficher les solutions avec nombres négatifs</label>
+			</div><br>
+			<div id="list_solution" class="solutions_list">
+				<div class="solution" >
+					<div>Solution 1</div>
+					<div>4 + 5 = 9</div>
+					<div>9 - 2 = 7</div>
+					<div>7 * 2 = 14</div>
+					<div>56 / 14 = 4</div>
+				</div>
+				<div class="solution" >
+					<div>Solution 2</div>
+					<div>4 + 5 = 9</div>
+					<div>9 - 2 = 7</div>
+					<div>7 * 2 = 14</div>
+					<div>56 / 14 = 4</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+</body>
+<script>
+	Aleatoire()
+</script>
+</html>
