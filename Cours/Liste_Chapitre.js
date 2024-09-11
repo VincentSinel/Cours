@@ -494,7 +494,7 @@ var cinquieme_rogervailland = [
 	{
 		id: 1,
 		chapter: "Chapitre 1 (B1)",
-		nom: "Nombres Relatifs (Partie 1)",
+		nom: "Nombres Relatifs",
 		icone: 8,
 		ready : true,
 		page : "RogerVailland/Chapitre_1/Cours.html",
