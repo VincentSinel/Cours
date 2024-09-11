@@ -113,7 +113,11 @@ function CreateDiv(parent, name, folder)
         {
             e.className += " strike"
         }
-        e.innerHTML = "Chapitre " + element.id;
+        if (element.hasOwnProperty("chapter"))
+            e.innerHTML = element.chapter;
+        else
+            e.innerHTML = "Chapitre " + element.id;
+
         var f = document.createElement("p");
         f.className += "chapitrebuttonname"
         f.innerHTML = element.nom;
