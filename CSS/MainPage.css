@@ -366,6 +366,18 @@ nav::-webkit-scrollbar-thumb {
   border-left: 2px solid var(--HeaderBack);
   border-right: 2px solid var(--HeaderBack);
 }
+
+.deactivated img{
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.deactivated p{
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #ff000055;
+  color: var(--PanelBackTextDisabled);
+}
+
 .strike{
   text-decoration: line-through;
   text-decoration-thickness: 2px;

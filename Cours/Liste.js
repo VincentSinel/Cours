@@ -92,7 +92,11 @@ function CreateDiv(parent, name, folder)
         const element = list[i];
 
         var a = document.createElement("div");
-        a.className += "chapitrebutton"
+        a.classList.add("chapitrebutton")
+        if (!element.ready)
+        {
+            a.classList.add("deactivated")
+        }
         if (element.ready)
         {
             a.onclick = function() { 
@@ -104,15 +108,11 @@ function CreateDiv(parent, name, folder)
 
         var c = document.createElement("img");
         c.className += "chapitrebuttonimg";
-        c.src = "/Images/Icones-0"+ element.icone + ".png"
+        c.src = "/Images/Icone_Chapitres/Icones-"+ (element.icone.toString()).padStart(2, '0') + ".svg"
         
         var d = document.createElement("div");
         var e = document.createElement("p");
         e.className += "chapitrebuttonnumber"
-        if (!element.ready)
-        {
-            e.className += " strike"
-        }
         if (element.hasOwnProperty("chapter"))
             e.innerHTML = element.chapter;
         else

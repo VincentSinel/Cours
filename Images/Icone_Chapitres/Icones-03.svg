@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_3" data-name="Calque 3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke: #1ab0c2;
+      }
+
+      .cls-3 {
+        fill: rgba(29, 29, 27, .8);
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-width: 0px;
+      }
+
+      .cls-7 {
+        opacity: .8;
+      }
+
+      .cls-4, .cls-8 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        fill: url(#Dégradé_sans_nom_27);
+      }
+
+      .cls-6 {
+        fill: #1d1d1b;
+      }
+
+      .cls-8 {
+        font-family: AcuminConcept-Bold, 'Acumin Variable Concept';
+        font-size: 5px;
+        font-variation-settings: 'wght' 700, 'wdth' 100, 'slnt' 0;
+        font-weight: 700;
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_27" data-name="Dégradé sans nom 27" x1="4.39" y1="4.39" x2="25.61" y2="25.61" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2f5ea9"/>
+      <stop offset="1" stop-color="#3451a0"/>
+    </linearGradient>
+  </defs>
+  <circle class="cls-5" cx="15" cy="15" r="15"/>
+  <polygon class="cls-3" points="26.39 15.5 24.23 14.25 24.23 15 16 15 16 6.77 16.75 6.77 15.5 4.61 14.25 6.77 15 6.77 15 15 4.61 15 4.61 16 15 16 15 26.39 16 26.39 16 16 24.23 16 24.23 16.75 26.39 15.5"/>
+  <g>
+    <line class="cls-1" x1="4.11" y1="15" x2="24.1" y2="15"/>
+    <polygon class="cls-4" points="23.73 16.25 25.89 15 23.73 13.75 23.73 16.25"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="15" y1="25.89" x2="15" y2="5.9"/>
+    <polygon class="cls-4" points="16.25 6.27 15 4.11 13.75 6.27 16.25 6.27"/>
+  </g>
+  <path class="cls-2" d="m7.26,8.69c.25,2.32.95,12.66,3.27,12.55,3.29-.15,1.39-7.76,4.47-8.19,1.61-.22,3.24,5.99,4.7,5.91,1.16-.07,2.07-9.6,3.52-9.56"/>
+  <g class="cls-7">
+    <path class="cls-6" d="m18.32,4.43c.27.89.5,1.69.54,1.93h0c.06-.26.21-.84.52-1.93h.71l-.87,2.67c-.25.75-.45.97-1.08.97-.06,0-.21,0-.34-.02v-.58s.13.01.19.01c.26,0,.4-.09.49-.38l-.94-2.67h.77Z"/>
+  </g>
+  <g class="cls-7">
+    <path class="cls-6" d="m24.33,17.58c.27.49.38.68.46.81h0c.09-.16.25-.44.46-.81h.8l-.84,1.23.84,1.36h-.81c-.23-.44-.38-.72-.46-.87h0c-.07.14-.25.47-.46.87h-.78l.8-1.26-.8-1.33h.79Z"/>
+  </g>
+  <text class="cls-8" transform="translate(23.04 19.67)"><tspan x="0" y="0">x</tspan></text>
+  <text class="cls-8" transform="translate(17 6.51)"><tspan x="0" y="0">y</tspan></text>
+</svg>

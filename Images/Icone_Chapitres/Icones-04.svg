@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_4" data-name="Calque 4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-3 {
+        stroke-width: .68px;
+      }
+
+      .cls-1, .cls-4 {
+        fill: #c51718;
+      }
+
+      .cls-5 {
+        opacity: .8;
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2, .cls-4 {
+        stroke-width: .64px;
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-6, .cls-7, .cls-8 {
+        stroke-width: 0px;
+      }
+
+      .cls-7 {
+        fill: #1d1d1b;
+      }
+
+      .cls-8 {
+        fill: url(#Dégradé_sans_nom_6);
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_6" data-name="Dégradé sans nom 6" x1="4.39" y1="4.39" x2="25.61" y2="25.61" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ac388c"/>
+      <stop offset="1" stop-color="#9b2c87"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-8" d="m0,15C0,6.72,6.72,0,15,0s15,6.72,15,15-6.72,15-15,15S0,23.28,0,15"/>
+  <g class="cls-5">
+    <path class="cls-7" d="m17.39,12.71c.13-.13.2-.3.2-.48v-6.16c0-.18-.07-.36-.2-.48-.13-.13-.3-.2-.48-.2h-6.16c-.18,0-.35.07-.48.2l-3.42,3.42c-.13.13-.2.3-.2.48v6.16c0,.18.07.36.2.49.13.13.3.2.48.2h6.16c.18,0,.35-.07.48-.2l3.42-3.42Z"/>
+    <path class="cls-7" d="m23.76,15.19c-.12-.12-.28-.19-.45-.19h-5.74c-.17,0-.33.07-.45.19l-3.19,3.19c-.12.12-.19.28-.19.45v5.74c0,.17.07.33.19.45.12.12.28.19.45.19h5.74c.17,0,.33-.07.45-.19l3.19-3.19c.12-.12.19-.28.19-.45v-5.74c0-.17-.07-.33-.19-.45Z"/>
+  </g>
+  <g>
+    <g>
+      <path class="cls-1" d="m13.25,15.4c-.06.06-.15.1-.24.1h-6.16c-.09,0-.18-.04-.24-.1s-.1-.15-.1-.24v-6.16c0-.09.04-.18.1-.24l3.42-3.42c.06-.06.15-.1.24-.1h6.16c.09,0,.18.04.24.1s.1.15.1.24v6.16c0,.09-.04.18-.1.24l-3.42,3.42Z"/>
+      <line class="cls-3" x1="13.35" y1="8.67" x2="13.35" y2="15.3"/>
+      <line class="cls-3" x1="6.73" y1="8.67" x2="13.35" y2="8.67"/>
+      <line class="cls-3" x1="13.27" y1="8.78" x2="16.68" y2="5.36"/>
+    </g>
+    <circle class="cls-6" cx="9.93" cy="12.09" r=".71"/>
+    <circle class="cls-6" cx="11.84" cy="10.17" r=".71"/>
+    <circle class="cls-6" cx="8.01" cy="14" r=".71"/>
+    <ellipse class="cls-6" cx="10.28" cy="7.41" rx=".72" ry=".38"/>
+    <ellipse class="cls-6" cx="13.39" cy="6.36" rx=".72" ry=".38"/>
+    <ellipse class="cls-6" cx="15.09" cy="10.13" rx=".38" ry=".75"/>
+  </g>
+  <g>
+    <g>
+      <g>
+        <path class="cls-4" d="m19.86,24.32c-.06.06-.14.09-.23.09h-5.74c-.09,0-.17-.04-.23-.09s-.09-.14-.09-.23v-5.74c0-.09.04-.17.09-.23l3.19-3.19c.06-.06.14-.09.23-.09h5.74c.09,0,.17.04.23.09s.09.14.09.23v5.74c0,.09-.04.17-.09.23l-3.19,3.19Z"/>
+        <line class="cls-2" x1="19.96" y1="18.03" x2="19.96" y2="24.22"/>
+        <line class="cls-2" x1="13.78" y1="18.03" x2="19.96" y2="18.03"/>
+        <line class="cls-2" x1="19.88" y1="18.13" x2="23.07" y2="14.95"/>
+      </g>
+      <circle class="cls-6" cx="16.77" cy="21.22" r=".67"/>
+      <circle class="cls-6" cx="18.55" cy="19.43" r=".67"/>
+      <circle class="cls-6" cx="14.98" cy="23.01" r=".67"/>
+      <ellipse class="cls-6" cx="16.6" cy="16.86" rx=".67" ry=".35"/>
+      <ellipse class="cls-6" cx="19.22" cy="16.86" rx=".67" ry=".35"/>
+      <ellipse class="cls-6" cx="21.58" cy="19.4" rx=".35" ry=".7"/>
+    </g>
+    <circle class="cls-6" cx="18.55" cy="23.01" r=".67"/>
+    <circle class="cls-6" cx="14.98" cy="19.4" r=".67"/>
+    <ellipse class="cls-6" cx="22.2" cy="17.56" rx=".35" ry=".7"/>
+    <ellipse class="cls-6" cx="20.88" cy="21.55" rx=".35" ry=".7"/>
+    <ellipse class="cls-6" cx="20.35" cy="15.79" rx=".67" ry=".35"/>
+    <ellipse class="cls-6" cx="17.89" cy="15.79" rx=".67" ry=".35"/>
+  </g>
+</svg>
