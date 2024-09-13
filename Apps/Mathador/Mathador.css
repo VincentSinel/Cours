@@ -79,8 +79,18 @@ input:focus{
 	align-content: center;
 	justify-content: center;
 	flex-direction: column;
-	gap: 10px;
 	position: relative;
+	margin-left: 40px;
+}
+
+.content{
+	width: calc(70vw - 40px);
+	margin: auto;
+	align-content: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 10px;
+	display: flex;
 }
 
 .solutions{
@@ -156,11 +166,11 @@ input:focus{
 	align-items: center;
 }
 .numberblock input{
-	font-size: 40pt;
+	font-size: 8vw;
 	border: none;
 	border-radius: 0;
-	width: 75px;
-	height: 75px;
+	width: calc((70vw - 60px) / 5);
+	height: calc((70vw - 60px) / 5);
 }
 .numberblock input:hover,
 .numberblock input:active,
@@ -168,6 +178,16 @@ input:focus{
 	border: none;
 }
 
+.timer{
+	display: flex;
+	flex-direction: row; 
+	align-items: center;
+	justify-items: center;
+	overflow-y: hidden;
+	transition-duration: 0.2s;
+	transition: 0.2s;
+	height: 100%;
+}
 
 .iconbutton{
 	width: 24px;
@@ -203,4 +223,23 @@ input:focus{
 }
 .button_listsolution:active{
 	background-color: var(--BackActive);
+}
+
+
+.time{
+	font-size: 12vw;
+	color: var(--BackText);
+}
+.time_milli{
+	font-size: 10vw;
+	color: var(--WBackTextDisabled);
+}
+
+.seperator {
+	font-size: 8vw;
+	color: var(--WBackHoverMenu);
+}
+
+.hide {
+	height: 0%;
 }

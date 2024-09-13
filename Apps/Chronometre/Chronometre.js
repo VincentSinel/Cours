@@ -10,7 +10,7 @@ function Timer(time)
 	{
 		time = document.getElementById("customTime").value
 	}
-	target_time = Date.now() + time * 1000;
+	target_time = time * 1000;
 	if (time < 3600)
 	{
 		document.getElementById("hour").classList.add("hidden");
@@ -36,41 +36,42 @@ function Timer(time)
 }
 
 var target_time = 0;
-var current_time = 0;
+var last_update = 0;
 var current = "pause";
 
 function Running()
 {
-	console.log("running")
-	let remaining = target_time - Date.now();
+	target_time += last_update - Date.now()
 	let h, m, s, ms;
-	if (remaining <= 0)
+	if (target_time <= 0)
 	{
 		h = 0; m = 0; s = 0; ms = 0;
 	}
 	else
 	{
-		ms = remaining % 1000;
-		s = Math.floor(remaining / 1000) % 60;
-		m = Math.floor(remaining / 60000) % 60;
-		h = Math.floor(remaining / 3600000);
+		ms = target_time % 1000;
+		s = Math.floor(target_time / 1000) % 60;
+		m = Math.floor(target_time / 60000) % 60;
+		h = Math.floor(target_time / 3600000);
 	}
 	document.getElementById("hour").innerText = h.toString();
 	document.getElementById("minute").innerText = m.toString().padStart(2, "0");
 	document.getElementById("second").innerText = s.toString().padStart(2, "0");
 	document.getElementById("millisecond").innerText = ms.toString().padStart(3, "0");
-	if (remaining > 0 && current == "play")
+	last_update = Date.now();
+	if (target_time > 0 && current == "play")
 		window.requestAnimationFrame(Running);
 }
 
 
 function Play_Pause()
 {
-	if (current == "pause" && (target_time - Date.now()) > 0)
+	if (current == "pause" && target_time > 0)
 	{
 		document.getElementById("play").style.display = "none";
 		document.getElementById("pause").style.display = "";
 		document.getElementById("maincontainer").classList.add("maincontainer-hide");
+		last_update = Date.now();
 		window.requestAnimationFrame(Running);
 		current = "play"
 	}
