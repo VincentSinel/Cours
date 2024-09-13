@@ -232,16 +232,16 @@ input:focus{
 
 
 .time{
-	font-size: 10vw;
+	font-size: 10vmin;
 	color: var(--BackText);
 }
 .time_milli{
-	font-size: 8vw;
+	font-size: 8vmin;
 	color: var(--WBackTextDisabled);
 }
 
 .seperator {
-	font-size: 6vw;
+	font-size: 6vmin;
 	color: var(--WBackHoverMenu);
 }
 
