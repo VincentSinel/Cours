@@ -84,7 +84,7 @@ input:focus{
 }
 
 .content{
-	width: calc(70vw - 40px);
+	width: max(240px , calc(65% - 40px));
 	margin: auto;
 	align-content: center;
 	justify-content: center;
@@ -164,13 +164,16 @@ input:focus{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	aspect-ratio: 1 / 1;
+	width: calc((100% - 20px) / 5);
+	margin: auto;
 }
 .numberblock input{
 	font-size: 8vw;
 	border: none;
 	border-radius: 0;
-	width: calc((70vw - 60px) / 5);
-	height: calc((70vw - 60px) / 5);
+	width: 100%;
+	height: 100%;
 }
 .numberblock input:hover,
 .numberblock input:active,
@@ -186,6 +189,7 @@ input:focus{
 	overflow-y: hidden;
 	transition-duration: 0.2s;
 	transition: 0.2s;
+	width: 100%;
 	height: 100%;
 }
 
