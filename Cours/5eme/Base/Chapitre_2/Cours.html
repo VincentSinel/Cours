@@ -13,10 +13,24 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script id="Animation" src="/JS/Animation/animation_holder.js"></script>
+  <script src="JS/Transformation.js"></script>
 
-  <title>Chapitre 2 - Symétries centrale</title>
+  <title>Chapitre 2 - Symétries</title>
 
   <style>
+    #symetrieaxiale,
+    #symetriecentrale,
+    #translation,
+    #rotation,
+    #homothetie1,
+    #homothetie2,
+    #homothetie3
+    {
+      border: solid black 1px; 
+      width: fit-content;
+      display: inline-block;
+    }
   </style>
 
 </head>
@@ -29,7 +43,7 @@
         Chapitre 2
       </td>
       <td id="ChapitreNom">
-        - Symétries centrale
+        - Symétries
       </td>
     </tr>
   </table>
@@ -38,8 +52,184 @@
     Activité Introduction
   </p>
 
+
+  <div class="flexobject">
+    <div style="max-height: 10cm;">
+      <div style="text-align: center;"><b>Figure 1</b></div>
+      <img src="Images/Forme.svg">
+    </div>
+    <div style="flex: 1 1 6cm;">
+      <ol>
+        <li>
+          Voici une première figure.
+          <ol type="a">
+            <li>
+              Reproduire sur une feuille quadrillée cette figure.
+            </li> 
+            <li>Construire le point A' image du point A par la <b>symétrie</b> d'axe <i>(d)</i>.</li>
+            <li>En procédant de la même manière pour tous les sommets de la figure rose, construire son <b>symétrique</b> par rapport à l'axe <i>(d)</i>.</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div class="flexobject">
+    <div style="flex: 1 1 6cm;">
+      <ol start="2">
+        <li>
+          Voici une seconde figure.
+          <ol type="a">
+            <li>
+              Reproduire sur une feuille quadrillée cette figure.
+            </li> 
+            <li>Construire le point A' image du point A par la <b>symétrie</b> de <i>centre O</i>.</li>
+            <li>En procédant de la même manière pour tous les sommets de la figure rose, construire son <b>symétrique</b> par rapport au <i>centre O</i>.</li>
+            <li>Que peut-on dire du point O pour le segment [AA']</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+    <div style="max-height: 10cm;">
+      <div style="text-align: center;"><b>Figure 2</b></div>
+      <img src="Images/Forme2.svg">
+    </div>
+  </div>
+
+  <h1>Symétrie Axiale :</h1>
+    <h2>Définition et construction.</h2>
+      <div class="definition">
+        Dire que deux figures sont <span class="CRed">symétriques par rapport à une droite</span> signifie que, en effectuant un pliage le long de la droite, les figures se superposent.
+      </div>
+      <div id="symetrieaxiale"></div>
+      <p class="exemple">
+        Constructions :
+      </p>
+      <div class="flexobject">
+        <div style="flex: 1 1 500px;">
+          <div style="text-align: center;"><b>A la règle et l'équerre :</b></div>
+          <div id="Animation1" class="animation center" width="480" height="360"></div>
+        </div>
+        <div style="flex: 1 1 500px;">
+          <div style="text-align: center;"><b>Au compas :</b></div>
+          <div id="Animation2" class="animation center" width="480" height="360"></div>
+        </div>
+      </div>
+      <br><br>
+
+      <div class="definition">
+        <u><b>Propriétés</b></u><br>
+        Lors d'une symétrie axiale les longueurs, les alignements et les angles sont conservés.
+      </div>
+
+    <h2>Médiatrice :</h2>
+      <div class="definition">
+        La <span class="CRed">médiatrice</span> d'un segment est la droite perpendiculaire à ce segment et qui le coupe en son milieu.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <img src="Images/Mediatrice1.svg" style="max-height: 5cm;">
+
+      <br>
+      <br>
+
+      
+      <div class="definition">
+        <u><b>Propriétés</b></u><br>
+        <ul>
+          <li>Si un point est situé sur la médiatrice d'un segment, alors ce point est équidistant des extrémités de ce segment.</li>
+          <li>Si un point est équidistant des extrémités d'un segment, alors ce point appartient à la médiatrice de ce segment.</li>
+        </ul>
+      </div>
+
+      <p class="exemple">Exemple :</p>
+      <img src="Images/Mediatrice2.svg" style="max-height: 5cm;">
+    
+
+  <h1>Symétrie centrale :</h1>  
+    <h2>Définition et construction.</h2>
+      <div class="definition">
+        Dire que deux figures sont <span class="CRed">symétriques par rapport à un point</span> signifie que, en effectuant un demi-tour autour de ce point, les figures se superposent.
+      </div>
+      <div class="flexobject">
+        <div id="symetriecentrale"></div>
+        <div style="flex: 1 1 5cm;">
+          <ul>
+            <li>Le point O est appelé le centre de symétrie
+            </li>
+            <li>
+              La figure bleu est le symétrique de la figure rouge par rapport à O
+            </li>
+          </ul>
+        </div>
+      </div>
+      <br><br>
+      <div class="definition">
+        Dire que deux points M et M' sont symétriques par rapport à un point O signifie que le point O est le <b>milieu</b> du segment [MM'].
+      </div>
+
+      <div>
+        <div style="text-align: center;"><b>Construction a la règle et au compas :</b></div>
+        <div id="Animation3" class="animation center" width="480" height="360"></div>
+      </div>
+    <h2>Propriétés :</h2>
+      <div class="definition">
+        <b><u>Propriétés :</u></b><br>
+        <ul>
+          <li>Si trois points sont alignés, alors leurs symétriques par rapport à un point sont aussi alignés.</li>
+          <li>Si deux segments sont symétriques par rapport à un point, alors ils sont parallèles et de même longueur.</li>
+          <li>Si deux angles sont symétriques par rapport à un point, alors ils ont la même mesure.</li>
+          <li>Si deux figures sont symétriques par rapport à un point, alors elles ont le même périmètre et la même aire.</li>
+        </ul>
+      </div>
+
   
 
-</body>
+  <h1>Axe et centre de symétrie d'une figure.</h1>
+    <h2>Axe de symétrie :</h2>
+      <div class="definition">
+        On dit qu'une droite est un <span class="CRed">axe de symétrie</span> d'une figure lorsque la figure et son symétrique par rapport à cette droite sont confondus. 
+      </div>
+      <p class="exemple">Exemple :</p>
+      <div class="flexobject">
+        <img src="Images/Avion.svg" style="max-height: 6cm;">
+        <div style="flex: 1 1 5cm;">
+          Le droite <i>(d)</i> est un axe de symétrie de la figure.
+        </div>
+      </div>
 
+    <h2>Centre de symétrie :</h2>
+      <div class="definition">
+        On dit qu'un point est un <span class="CRed">centre de symétrie</span> d'une figure lorsque la figure et son symétrique par rapport à ce point sont confondus. 
+      </div>
+      <p class="exemple">Exemple :</p>
+      <div class="flexobject">
+        <img src="Images/YingYang.svg" style="max-height: 6cm;">
+        <div style="flex: 1 1 5cm;">
+          Le point O est un centre de symétrie de la figure.
+        </div>
+      </div>
+</body>
+<script>
+  let client = new XMLHttpRequest();
+  client.open('GET', 'Images/Lobster.svg');
+  client.onreadystatechange = function(state) {
+      if (client.readyState == 4)
+      {
+          lobster1img = client.responseText
+          if (lobster2img != "")
+              Init()
+      }
+  }
+  client.send();
+  let client2 = new XMLHttpRequest();
+  client2.open('GET', 'Images/Lobster2.svg');
+  client2.onreadystatechange = function(state) {
+      if (client2.readyState == 4)
+      {
+          lobster2img = client2.responseText
+          if (lobster1img != "")
+              Init()
+      }
+  }
+  client2.send();
+</script>
 </html>

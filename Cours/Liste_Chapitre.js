@@ -301,9 +301,9 @@ var cinquieme_base = [
 	},
 	{
 			id: 2,
-			nom: "Symétries centrale",
+			nom: "Symétries",
 			icone: 2,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_2/Cours.html"
 	},
 	{
@@ -329,9 +329,9 @@ var cinquieme_base = [
 	},
 	{
 			id: 6,
-			nom: "Triangles - Partie 1",
-			icone: 5,
-			ready : false,
+			nom: "Triangles - Inégalité triangulaire et construction",
+			icone: 2,
+			ready : true,
 			page : "Base/Chapitre_6/Cours.html"
 	},
 	{
@@ -371,7 +371,7 @@ var cinquieme_base = [
 	},
 	{
 			id: 12,
-			nom: "Triangles - Partie 2",
+			nom: "Triangles - Droites remarquables",
 			icone: 1,
 			ready : false,
 			page : "Base/Chapitre_12/Cours.html"
@@ -669,7 +669,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 9,
-		chapter: "Chapitre 2 (G2 Partie 1)",
+		chapter: "Chapitre 2.1 (G2 Partie 1)",
 		nom: "Activité Scratch (Niveau 1)",
 		icone: 13,
 		ready : false,
@@ -677,7 +677,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 13,
-		chapter: "Chapitre 2 (G2 Partie 2)",
+		chapter: "Chapitre 2.2 (G2 Partie 2)",
 		nom: "Activité Scratch (Niveaux 1 et 2)",
 		icone: 13,
 		ready : false,
@@ -685,7 +685,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 22,
-		chapter: "Chapitre 2 (G2 Partie 3)",
+		chapter: "Chapitre 2.3 (G2 Partie 3)",
 		nom: "Activité Scratch (Niveaux 1 et 2)",
 		icone: 13,
 		ready : false,
@@ -693,7 +693,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 27,
-		chapter: "Chapitre 2 (G2 Partie 4)",
+		chapter: "Chapitre 2.4 (G2 Partie 4)",
 		nom: "Activité Scratch (Niveaux 1 et 2)",
 		icone: 13,
 		ready : false,
@@ -709,7 +709,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 17,
-		chapter: "Chapitre 4 (G4 Partie 1)",
+		chapter: "Chapitre 4.1 (G4 Partie 1)",
 		nom: "Activité tableur",
 		icone: 13,
 		ready : false,
@@ -717,7 +717,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 35,
-		chapter: "Chapitre 4 (G4 Partie 1)",
+		chapter: "Chapitre 4.2 (G4 Partie 1)",
 		nom: "Activité tableur",
 		icone: 13,
 		ready : false,
