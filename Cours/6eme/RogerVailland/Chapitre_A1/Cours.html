@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>A1 - Entier et décimaux</title>
+
+  <style>
+    .citation {
+      background-color: #C6FFAC;
+      border-radius: 5px;
+      padding: 10px;
+      border: 5px ridge #34D15B;
+    }
+
+    .p-table {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(4, 30px);
+      align-content: center;
+      vertical-align: middle;
+      text-align: center;
+      border: solid 1px black;
+    }
+    .unit-0 {
+      grid-column: 1 / 4;
+      grid-row: 1;
+      background-color: #CB2F4C;
+      align-content: center;
+      border: solid 1px black;
+      color: white;
+    }
+    .unit-1 {
+      grid-column: 4 / 7;
+      grid-row: 1;
+      background-color: #E29B31;
+      align-content: center;
+      border: solid 1px black;
+      color: white;
+    }
+    .unit-2 {
+      grid-column: 7 / 10;
+      grid-row: 1;
+      column-span: 2;
+      background-color: #34D15B;
+      align-content: center;
+      border: solid 1px black;
+      color: white;
+    }
+    .unit-3 {
+      grid-column: 10 / 13;  
+      grid-row: 1;
+      background-color: #2189C7;
+      align-content: center;
+      border: solid 1px black;
+      color: white;
+    }
+    .line1 {
+      grid-row: 2;
+      align-content: center;
+      border: solid 1px black;
+    }
+    .line2 {
+      grid-row: 3;
+      align-content: center;
+      border: solid 1px black;
+      font-size: 8px;
+      font-weight: bold;
+    }
+    .line3 {
+      grid-row: 4;
+      align-content: center;
+      border: solid 1px black;
+    }
+    @media(max-width: 820px){
+      .line1{
+        writing-mode: vertical-rl;
+      }
+      .line2{
+        writing-mode: vertical-rl;
+      }
+      .p-table {
+        grid-template-rows: 70px 70px 70px 30px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        A1
+      </td>
+      <td id="ChapitreNom">
+        - Nombres entiers
+      </td>
+    </tr>
+  </table>
+
+  <p class="exemple">
+    Activité Introduction
+  </p>
+
+  <ol>
+    <li>
+      Ecrire en chiffres les deux nombres en gras :
+    </li>
+  </ol>
+  <div class="citation">
+    La Terre s'est formée il y a environ <b>quatre milliards cinq cents millions</b> d'années et on estime que les premiers êtres humains, les <i>Homo habilis</i>,
+    sont apparus il y a environ <b>deux millions trois cent mille</b> ans.
+  </div>
+  <ol start="2">
+    <li>
+      Ecrire en lettres les deux nombres en gras :
+    </li>
+  </ol>
+  <div class="citation">
+    La Terre est située à environ <b>150 000 000</b> de km du Soleil. Son diamètre est environ <b>12 742</b> km.
+  </div>
+
+  <h1>Nombres entiers :</h1>
+        <h2>Chiffres et nombres :</h2>
+            <div class="definition">
+              Le <b>système décimal</b> utilise dix <span class="CRed">chiffres</span> : <br>
+              $0,1,2,3,4,5,6,7,8,9$<br>
+              On peut écrire tous les nombres à l'aide de ces chiffres.
+            </div>
+            <p class="remarque">Remarque :</p>
+            <ul>
+              <li>Dans le système décimal, la position d'un chiffre détermine sa signification.</li>
+              <li>
+                On écris les nombres en regroupant les chiffres par paquet de 3 en commençant par l'unité. Ex : $12\ 047\ 249$
+              </li>
+            </ul>
+            <div class="p-table">
+              <div class="unit-0">Classe des Milliards</div>
+              <div class="unit-1">Classe des Millions</div>
+              <div class="unit-2">Classe des Milliers</div>
+              <div class="unit-3">Classe des Unités</div>
+              <div class="line1" style="background-color: #E14A49; grid-column: 1;">Centaines</div>
+              <div class="line1" style="background-color: #FF7463; grid-column: 2;">Dizaines</div>
+              <div class="line1" style="background-color: #FFB993; grid-column: 3;">Unités</div>
+              <div class="line1" style="background-color: #F2BA4D; grid-column: 4;">Centaines</div>
+              <div class="line1" style="background-color: #FFDF68; grid-column: 5;">Dizaines</div>
+              <div class="line1" style="background-color: #FFFF8F; grid-column: 6;">Unités</div>
+              <div class="line1" style="background-color: #5FF26F; grid-column: 7;">Centaines</div>
+              <div class="line1" style="background-color: #88FF87; grid-column: 8;">Dizaines</div>
+              <div class="line1" style="background-color: #C6FFAC; grid-column: 9;">Unités</div>
+              <div class="line1" style="background-color: #3CB3E3; grid-column: 10;">Centaines</div>
+              <div class="line1" style="background-color: #56DCFF; grid-column: 11;">Dizaines</div>
+              <div class="line1" style="background-color: #82FFFF; grid-column: 12;">Unités</div>
+              <div class="line2" style="grid-column: 1;">100 000 000 000</div>
+              <div class="line2" style="grid-column: 2;">10 000 000 000</div>
+              <div class="line2" style="grid-column: 3;">1 000 000 000</div>
+              <div class="line2" style="grid-column: 4;">100 000 000</div>
+              <div class="line2" style="grid-column: 5;">10 000 000</div>
+              <div class="line2" style="grid-column: 6;">1 000 000</div>
+              <div class="line2" style="grid-column: 7;">100 000</div>
+              <div class="line2" style="grid-column: 8;">10 000</div>
+              <div class="line2" style="grid-column: 9;">1 000</div>
+              <div class="line2" style="grid-column: 10;">100</div>
+              <div class="line2" style="grid-column: 11;">10</div>
+              <div class="line2" style="grid-column: 12;">1</div>
+              <div class="line3" style="grid-column: 1;"></div>
+              <div class="line3" style="grid-column: 2;"></div>
+              <div class="line3" style="grid-column: 3;">3</div>
+              <div class="line3" style="grid-column: 4;">7</div>
+              <div class="line3" style="grid-column: 5;">2</div>
+              <div class="line3" style="grid-column: 6;">3</div>
+              <div class="line3" style="grid-column: 7;">4</div>
+              <div class="line3" style="grid-column: 8;">9</div>
+              <div class="line3" style="grid-column: 9;">6</div>
+              <div class="line3" style="grid-column: 10;">0</div>
+              <div class="line3" style="grid-column: 11;">1</div>
+              <div class="line3" style="grid-column: 12;">8</div>
+          </div>
+          <p>
+            Le nombre :
+            <span style="color: #CB2F4C">3</span> 
+            <span style="color: #E29B31">723</span> 
+            <span style="color: #34D15B">496</span> 
+            <span style="color: #2189C7">017</span> 
+            est lu 
+            <span style="color: #CB2F4C">trois-milliards</span>-<span style="color: #E29B31">sept-cent-vingt-trois-millions</span>-<span style="color: #34D15B">quatre-cent-quatre-vingt-seize-mille</span>-<span style="color: #2189C7">dix-sept</span><br>
+            Le premier 7 correspond aux centaines de millions.<br>
+            Le 7 suivant correspond aux unités.
+          </p>
+        <h2>Décomposition :</h2>
+          <div class="definition">
+            Il est possible de décomposer un nombre pour mettre en évidence le rôle de chaque chiffre ou ensemble de chiffre.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <p>
+            On peut décomposer $5\ 713$ de la manière suivante :
+            <ul>
+              <li>$5\ 713=(\textcolor{#CB2F4C}{5}\times1\ 000)+(\textcolor{#E29B31}{7}\times100)+(\textcolor{#34D15B}{1}\times10)+\textcolor{#2189C7}{3}$<br>
+              On met en avant le chiffre des 
+              <span style="color: #CB2F4C">milliers</span>, 
+              <span style="color: #E29B31">centaines</span>,
+              <span style="color: #34D15B">dizaines</span>,
+              <span style="color: #2189C7">unités</span>.</li>
+              <li>$5\ 713=(\textcolor{#34D15B}{571}\times10)+3$<br>
+              571 est le nombre de <span style="color: #34D15B">dizaines</span>.</li>
+              <li>$5\ 713=(\textcolor{#E29B31}{57}\times100)+13$<br>
+                57 est le nombre de <span style="color: #E29B31">centaines</span>.</li>
+            </ul>
+          </p>
+</body>
+
+</html>

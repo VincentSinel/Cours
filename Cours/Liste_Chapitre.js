@@ -854,7 +854,7 @@ var sixieme_rogervailland = [
 		nom: "Consignes de début d'année",
 		icone: 14,
 		ready : true,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_Fo1/Cours.html",
 	},
 	{
 		id: 61,
@@ -862,7 +862,7 @@ var sixieme_rogervailland = [
 		nom: "Dictionnaire : les verbes d'actions en mathématiques",
 		icone: 14,
 		ready : false,
-		page : "RogerVailland/Chapitre_2/Cours.html",
+		page : "RogerVailland/Chapitre_Fo2/Cours.html",
 	},
 	{
 		id: 2,
@@ -870,7 +870,7 @@ var sixieme_rogervailland = [
 		nom: "Résoudre un problème",
 		icone: 14,
 		ready : true,
-		page : "RogerVailland/Chapitre_3/Cours.html",
+		page : "RogerVailland/Chapitre_Fo3/Cours.html",
 	},
 	{
 		id: 62,
@@ -879,7 +879,7 @@ var sixieme_rogervailland = [
 		download: "/Documents/Documents/Fiches/Tableau_sur_la_numeration.pdf",
 		icone: 14,
 		ready : true,
-		page : "RogerVailland/Chapitre_4/Cours.html",
+		page : "RogerVailland/Chapitre_Fo4/Cours.html",
 	},
 	{
 		id: 63,
@@ -888,7 +888,7 @@ var sixieme_rogervailland = [
 		download: "/Documents/Documents/Fiches/Tableaux conversions.pdf",
 		icone: 14,
 		ready : true,
-		page : "RogerVailland/Chapitre_5/Cours.html",
+		page : "RogerVailland/Chapitre_Fo5/Cours.html",
 	},
 	{
 		id: 22,
@@ -912,7 +912,7 @@ var sixieme_rogervailland = [
 		nom: "Les nombres entiers",
 		icone: 7,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_A1/Cours.html",
 	},
 	{
 		id: 9,
