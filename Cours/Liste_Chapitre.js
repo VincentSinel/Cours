@@ -885,6 +885,7 @@ var sixieme_rogervailland = [
 		id: 63,
 		chapter: "Chapitre 5 (Fo5)",
 		nom: "Tableaux de conversions",
+		download: "/Documents/Documents/Fiches/Tableaux conversions.pdf",
 		icone: 14,
 		ready : true,
 		page : "RogerVailland/Chapitre_5/Cours.html",
