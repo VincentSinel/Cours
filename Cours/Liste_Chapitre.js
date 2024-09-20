@@ -869,7 +869,7 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre 3 (Fo3)",
 		nom: "Résoudre un problème",
 		icone: 14,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_3/Cours.html",
 	},
 	{
