@@ -100,7 +100,7 @@ function CreateDiv(parent, name, folder)
         if (element.ready)
         {
             a.onclick = function() { 
-                clic('/Cours/' + folder + '/' + element.page, this); }
+                clic('/Cours/' + folder + '/' + element.page, this, element); }
         }
         
         var b = document.createElement("div");

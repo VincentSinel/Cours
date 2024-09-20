@@ -853,7 +853,7 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre 1 (Fo1)",
 		nom: "Consignes de début d'année",
 		icone: 14,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_1/Cours.html",
 	},
 	{
@@ -876,8 +876,9 @@ var sixieme_rogervailland = [
 		id: 62,
 		chapter: "Chapitre 4 (Fo4)",
 		nom: "Tableau sur la numération",
+		download: "/Documents/Documents/Fiches/Tableau_sur_la_numeration.pdf",
 		icone: 14,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_4/Cours.html",
 	},
 	{
@@ -885,8 +886,8 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre 5 (Fo5)",
 		nom: "Tableaux de conversions",
 		icone: 14,
-		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		ready : true,
+		page : "RogerVailland/Chapitre_5/Cours.html",
 	},
 	{
 		id: 22,

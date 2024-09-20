@@ -161,7 +161,7 @@
           
     }
 
-    function clic(path, a)
+    function clic(path, a, element)
     {
       let but = document.getElementById("PdfButton");
       but.setAttribute("style", "display: none;");
@@ -173,7 +173,7 @@
       lastselected.classList.add("selected")
       window.scrollTo(0, 0);
       menu.classList.remove("asideshow");
-      frame.addEventListener( "load", function() { SetPdfHref(path); });
+      frame.addEventListener( "load", function() { SetPdfHref(path, element); });
     }
 
     function CreatePDFButton()
@@ -240,13 +240,21 @@
 
     CreatePDFButton()
 
-    function SetPdfHref(path)
+    function SetPdfHref(path, element)
     {
       let but = document.getElementById("PdfButton");
       but.setAttribute("style", "");
-      var pageUrl = encodeURIComponent("https://vsinel.fr" + path);
-      var opts = ['save-link=' + pageUrl, 'pageOrientation=portrait', 'pageSize=a4', 'pageMargin=2cm'];
-      but.href = 'https://www.sejda.com/html-to-pdf?' + opts.join('&');
+      if (element.hasOwnProperty("download"))
+      {
+        console.log(element);
+        but.href = element.download;
+      }
+      else
+      {
+        var pageUrl = encodeURIComponent("https://vsinel.fr" + path);
+        var opts = ['save-link=' + pageUrl, 'pageOrientation=portrait', 'pageSize=a4', 'pageMargin=2cm'];
+        but.href = 'https://www.sejda.com/html-to-pdf?' + opts.join('&');
+      }
     }
 
 

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Fo4 - Tableau sur la numération</title>
+
+  <style>
+    .p-table {
+      display: grid;
+      grid-template-columns: repeat(17, 1fr);
+      grid-template-rows: repeat(10, 50px);
+      align-content: center;
+      vertical-align: middle;
+      text-align: center;
+      border: solid 1px black;
+    }
+    .unit-0 {
+      grid-column: 1 / 4;
+      grid-row: 1;
+      background-color: #CB2F4C;
+      align-content: center;
+      border: solid 1px black;
+      color: white;
+    }
+    .unit-1 {
+      grid-column: 4 / 7;
+      grid-row: 1;
+      background-color: #E29B31;
+      align-content: center;
+      border: solid 1px black;
+      color: white;
+    }
+    .unit-2 {
+      grid-column: 7 / 10;
+      grid-row: 1;
+      column-span: 2;
+      background-color: #34D15B;
+      align-content: center;
+      border: solid 1px black;
+      color: white;
+    }
+    .unit-3 {
+      grid-column: 10 / 15;  
+      grid-row: 1;
+      background-color: #2189C7;
+      align-content: center;
+      border: solid 1px black;
+      color: white;
+    }
+    .unit1-4 {
+      grid-column: 15 / 18;
+      grid-row: 1;
+      background-color: #7B29C1;
+      align-content: center;
+      border: solid 1px black;
+      color: white;
+    }
+    .line1 {
+      grid-row: 2;
+      align-content: center;
+      border: solid 1px black;
+    }
+    .line2 {
+      grid-row: 3;
+      align-content: center;
+      border: solid 1px black;
+      font-size: 8px;
+      font-weight: bold;
+    }
+    .line3 {
+      grid-row: 4;
+      align-content: center;
+      border: solid 1px black;
+    }
+    .line4{
+      grid-row: 5;
+      align-content: center;
+      border: solid 1px black;
+    }
+    .line5{
+      grid-row: 6;
+      align-content: center;
+      border: solid 1px black;
+    }
+    .line6{
+      grid-row: 7;
+      align-content: center;
+      border: solid 1px black;
+    }
+    .line7{
+      grid-row: 8;
+      align-content: center;
+      border: solid 1px black;
+    }
+    .line8{
+      grid-row: 9;
+      align-content: center;
+      border: solid 1px black;
+    }
+    .line9{
+      grid-row: 10;
+      align-content: center;
+      border: solid 1px black;
+    }
+    .line1_u {
+      grid-row: 2;
+      align-content: center;
+      border-color: black red black black;
+      border-width: 1px 3px 1px 1px;
+      border-style: solid;
+    }
+    .line2_u {
+      grid-row: 3;
+      align-content: center;
+      border-color: black red black black;
+      border-width: 1px 3px 1px 1px;
+      border-style: solid;
+      font-size: 8px;
+      font-weight: bold;
+    }
+    .line3_u {
+      grid-row: 4;
+      align-content: center;
+      border-color: black red black black;
+      border-width: 1px 3px 1px 1px;
+      border-style: solid;
+    }
+    .line1_v {
+      grid-row: 2;
+      align-content: center;
+      border-color: black black black red;
+      border-width: 1px 1px 1px 3px;
+      border-style: solid;
+    }
+    .line2_v {
+      grid-row: 3;
+      align-content: center;
+      border-color: black black black red;
+      border-width: 1px 1px 1px 3px;
+      border-style: solid;
+      font-size: 8px;
+      font-weight: bold;
+    }
+    .line3_v {
+      grid-row: 4;
+      align-content: center;
+      border-color: black black black red;
+      border-width: 1px 1px 1px 3px;
+      border-style: solid;
+    }
+  @media(max-width: 1130px){
+    .line1_u,
+    .line1_v,
+    .line1{
+      writing-mode: vertical-rl;
+    }
+    .line2_u,
+    .line2_v,
+    .line2{
+      writing-mode: vertical-rl;
+    }
+    .p-table {
+      grid-template-rows: 70px 90px 70px 50px 50px 50px 50px 50px 50px 50px;
+    }
+  }
+    
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Fo4
+      </td>
+      <td id="ChapitreNom">
+        - Tableau sur la numération
+      </td>
+    </tr>
+  </table>
+
+  <br>
+
+
+  <div class="p-table">
+    <div class="unit-0">Classe des Milliards</div>
+    <div class="unit-1">Classe des Millions</div>
+    <div class="unit-2">Classe des Milliers</div>
+    <div class="unit-3">Classe des Unités</div>
+    <div class="unit1-4">Classe des Millièmes</div>
+    <div class="line1" style="background-color: #E14A49; grid-column: 1;">Centaines</div>
+    <div class="line1" style="background-color: #FF7463; grid-column: 2;">Dizaines</div>
+    <div class="line1" style="background-color: #FFB993; grid-column: 3;">Unités</div>
+    <div class="line1" style="background-color: #F2BA4D; grid-column: 4;">Centaines</div>
+    <div class="line1" style="background-color: #FFDF68; grid-column: 5;">Dizaines</div>
+    <div class="line1" style="background-color: #FFFF8F; grid-column: 6;">Unités</div>
+    <div class="line1" style="background-color: #5FF26F; grid-column: 7;">Centaines</div>
+    <div class="line1" style="background-color: #88FF87; grid-column: 8;">Dizaines</div>
+    <div class="line1" style="background-color: #C6FFAC; grid-column: 9;">Unités</div>
+    <div class="line1" style="background-color: #3CB3E3; grid-column: 10;">Centaines</div>
+    <div class="line1" style="background-color: #56DCFF; grid-column: 11;">Dizaines</div>
+    <div class="line1_u" style="background-color: #82FFFF; grid-column: 12;">Unités</div>
+    <div class="line1_v" style="background-color: #ABDBFF; grid-column: 13;">Dixièmes</div>
+    <div class="line1" style="background-color: #D5B7FF; grid-column: 14;">Centièmes</div>
+    <div class="line1" style="background-color: #FF93FF; grid-column: 15;">Unités</div>
+    <div class="line1" style="background-color: #D261FD; grid-column: 16;">Dixièmes</div>
+    <div class="line1" style="background-color: #A546E0; grid-column: 17;">Centièmes</div>
+    <div class="line2" style="grid-column: 1;">100 000 000 000</div>
+    <div class="line2" style="grid-column: 2;">10 000 000 000</div>
+    <div class="line2" style="grid-column: 3;">1 000 000 000</div>
+    <div class="line2" style="grid-column: 4;">100 000 000</div>
+    <div class="line2" style="grid-column: 5;">10 000 000</div>
+    <div class="line2" style="grid-column: 6;">1 000 000</div>
+    <div class="line2" style="grid-column: 7;">100 000</div>
+    <div class="line2" style="grid-column: 8;">10 000</div>
+    <div class="line2" style="grid-column: 9;">1 000</div>
+    <div class="line2" style="grid-column: 10;">100</div>
+    <div class="line2" style="grid-column: 11;">10</div>
+    <div class="line2_u" style="grid-column: 12;">1</div>
+    <div class="line2_v" style="grid-column: 13;">0,1</div>
+    <div class="line2" style="grid-column: 14;">0,01</div>
+    <div class="line2" style="grid-column: 15;">0,00 1</div>
+    <div class="line2" style="grid-column: 16;">0,00 01</div>
+    <div class="line2" style="grid-column: 17;">0,00 001</div>
+    
+    <div class="line3" style="grid-column: 1;"></div>
+    <div class="line3" style="grid-column: 2;"></div>
+    <div class="line3" style="grid-column: 3;"></div>
+    <div class="line3" style="grid-column: 4;"></div>
+    <div class="line3" style="grid-column: 5;"></div>
+    <div class="line3" style="grid-column: 6;"></div>
+    <div class="line3" style="grid-column: 7;"></div>
+    <div class="line3" style="grid-column: 8;"></div>
+    <div class="line3" style="grid-column: 9;"></div>
+    <div class="line3" style="grid-column: 10;"></div>
+    <div class="line3" style="grid-column: 11;"></div>
+    <div class="line3" style="grid-column: 12; border-color: black red black black; border-width: 1px 3px 1px 1px; border-style: solid;"></div>
+    <div class="line3" style="grid-column: 13; border-color: black black black red; border-width: 1px 1px 1px 3px; border-style: solid;"></div>
+    <div class="line3" style="grid-column: 14;"></div>
+    <div class="line3" style="grid-column: 15;"></div>
+    <div class="line3" style="grid-column: 16;"></div>
+    <div class="line3" style="grid-column: 17;"></div>
+
+    <div class="line4" style="grid-column: 1;"></div>
+    <div class="line4" style="grid-column: 2;"></div>
+    <div class="line4" style="grid-column: 3;"></div>
+    <div class="line4" style="grid-column: 4;"></div>
+    <div class="line4" style="grid-column: 5;"></div>
+    <div class="line4" style="grid-column: 6;"></div>
+    <div class="line4" style="grid-column: 7;"></div>
+    <div class="line4" style="grid-column: 8;"></div>
+    <div class="line4" style="grid-column: 9;"></div>
+    <div class="line4" style="grid-column: 10;"></div>
+    <div class="line4" style="grid-column: 11;"></div>
+    <div class="line4" style="grid-column: 12; border-color: black red black black; border-width: 1px 3px 1px 1px; border-style: solid;"></div>
+    <div class="line4" style="grid-column: 13; border-color: black black black red; border-width: 1px 1px 1px 3px; border-style: solid;"></div>
+    <div class="line4" style="grid-column: 14;"></div>
+    <div class="line4" style="grid-column: 15;"></div>
+    <div class="line4" style="grid-column: 16;"></div>
+    <div class="line4" style="grid-column: 17;"></div>
+
+    <div class="line5" style="grid-column: 1;"></div>
+    <div class="line5" style="grid-column: 2;"></div>
+    <div class="line5" style="grid-column: 3;"></div>
+    <div class="line5" style="grid-column: 4;"></div>
+    <div class="line5" style="grid-column: 5;"></div>
+    <div class="line5" style="grid-column: 6;"></div>
+    <div class="line5" style="grid-column: 7;"></div>
+    <div class="line5" style="grid-column: 8;"></div>
+    <div class="line5" style="grid-column: 9;"></div>
+    <div class="line5" style="grid-column: 10;"></div>
+    <div class="line5" style="grid-column: 11;"></div>
+    <div class="line5" style="grid-column: 12; border-color: black red black black; border-width: 1px 3px 1px 1px; border-style: solid;"></div>
+    <div class="line5" style="grid-column: 13; border-color: black black black red; border-width: 1px 1px 1px 3px; border-style: solid;"></div>
+    <div class="line5" style="grid-column: 14;"></div>
+    <div class="line5" style="grid-column: 15;"></div>
+    <div class="line5" style="grid-column: 16;"></div>
+    <div class="line5" style="grid-column: 17;"></div>
+
+    <div class="line6" style="grid-column: 1;"></div>
+    <div class="line6" style="grid-column: 2;"></div>
+    <div class="line6" style="grid-column: 3;"></div>
+    <div class="line6" style="grid-column: 4;"></div>
+    <div class="line6" style="grid-column: 5;"></div>
+    <div class="line6" style="grid-column: 6;"></div>
+    <div class="line6" style="grid-column: 7;"></div>
+    <div class="line6" style="grid-column: 8;"></div>
+    <div class="line6" style="grid-column: 9;"></div>
+    <div class="line6" style="grid-column: 10;"></div>
+    <div class="line6" style="grid-column: 11;"></div>
+    <div class="line6" style="grid-column: 12; border-color: black red black black; border-width: 1px 3px 1px 1px; border-style: solid;"></div>
+    <div class="line6" style="grid-column: 13; border-color: black black black red; border-width: 1px 1px 1px 3px; border-style: solid;"></div>
+    <div class="line6" style="grid-column: 14;"></div>
+    <div class="line6" style="grid-column: 15;"></div>
+    <div class="line6" style="grid-column: 16;"></div>
+    <div class="line6" style="grid-column: 17;"></div>
+
+    <div class="line7" style="grid-column: 1;"></div>
+    <div class="line7" style="grid-column: 2;"></div>
+    <div class="line7" style="grid-column: 3;"></div>
+    <div class="line7" style="grid-column: 4;"></div>
+    <div class="line7" style="grid-column: 5;"></div>
+    <div class="line7" style="grid-column: 6;"></div>
+    <div class="line7" style="grid-column: 7;"></div>
+    <div class="line7" style="grid-column: 8;"></div>
+    <div class="line7" style="grid-column: 9;"></div>
+    <div class="line7" style="grid-column: 10;"></div>
+    <div class="line7" style="grid-column: 11;"></div>
+    <div class="line7" style="grid-column: 12; border-color: black red black black; border-width: 1px 3px 1px 1px; border-style: solid;"></div>
+    <div class="line7" style="grid-column: 13; border-color: black black black red; border-width: 1px 1px 1px 3px; border-style: solid;"></div>
+    <div class="line7" style="grid-column: 14;"></div>
+    <div class="line7" style="grid-column: 15;"></div>
+    <div class="line7" style="grid-column: 16;"></div>
+    <div class="line7" style="grid-column: 17;"></div>
+
+    <div class="line8" style="grid-column: 1;"></div>
+    <div class="line8" style="grid-column: 2;"></div>
+    <div class="line8" style="grid-column: 3;"></div>
+    <div class="line8" style="grid-column: 4;"></div>
+    <div class="line8" style="grid-column: 5;"></div>
+    <div class="line8" style="grid-column: 6;"></div>
+    <div class="line8" style="grid-column: 7;"></div>
+    <div class="line8" style="grid-column: 8;"></div>
+    <div class="line8" style="grid-column: 9;"></div>
+    <div class="line8" style="grid-column: 10;"></div>
+    <div class="line8" style="grid-column: 11;"></div>
+    <div class="line8" style="grid-column: 12; border-color: black red black black; border-width: 1px 3px 1px 1px; border-style: solid;"></div>
+    <div class="line8" style="grid-column: 13; border-color: black black black red; border-width: 1px 1px 1px 3px; border-style: solid;"></div>
+    <div class="line8" style="grid-column: 14;"></div>
+    <div class="line8" style="grid-column: 15;"></div>
+    <div class="line8" style="grid-column: 16;"></div>
+    <div class="line8" style="grid-column: 17;"></div>
+
+    <div class="line9" style="grid-column: 1;"></div>
+    <div class="line9" style="grid-column: 2;"></div>
+    <div class="line9" style="grid-column: 3;"></div>
+    <div class="line9" style="grid-column: 4;"></div>
+    <div class="line9" style="grid-column: 5;"></div>
+    <div class="line9" style="grid-column: 6;"></div>
+    <div class="line9" style="grid-column: 7;"></div>
+    <div class="line9" style="grid-column: 8;"></div>
+    <div class="line9" style="grid-column: 9;"></div>
+    <div class="line9" style="grid-column: 10;"></div>
+    <div class="line9" style="grid-column: 11;"></div>
+    <div class="line9" style="grid-column: 12; border-color: black red black black; border-width: 1px 3px 1px 1px; border-style: solid;"></div>
+    <div class="line9" style="grid-column: 13; border-color: black black black red; border-width: 1px 1px 1px 3px; border-style: solid;"></div>
+    <div class="line9" style="grid-column: 14;"></div>
+    <div class="line9" style="grid-column: 15;"></div>
+    <div class="line9" style="grid-column: 16;"></div>
+    <div class="line9" style="grid-column: 17;"></div>
+  </div>
+
+</body>
+</html>
