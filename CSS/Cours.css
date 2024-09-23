@@ -444,3 +444,9 @@ ol > li::marker {
     width: 100px;
     background-color: var(--TableHeader);
 }
+
+
+.u_lat{
+    display: inline-block;
+    border-bottom: solid 2px black;
+}

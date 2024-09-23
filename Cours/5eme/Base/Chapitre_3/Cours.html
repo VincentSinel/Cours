@@ -14,7 +14,7 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>Chapitre 3 - Nombres Relatifs</title>
+  <title>Chapitre 3 - Priorités opératoires</title>
 
   <style>
   </style>
@@ -29,7 +29,7 @@
         Chapitre 3
       </td>
       <td id="ChapitreNom">
-        - Nombres Relatifs (Partie 1)
+        - Priorités opératoires
       </td>
     </tr>
   </table>
@@ -38,8 +38,74 @@
     Activité Introduction
   </p>
 
-
-
+  <h1>Vocabulaire des opérations :</h1>
+    <div class="definition">
+      Le résultat d'une addition est appelé <span class="CRed">somme</span> Les éléments qui composent une addition sont appelés <span class="CRed">termes</span>.
+    </div>
+    <div class="definition">
+      Le résultat d'une soustraction est appelé <span class="CRed">différence</span>. Les éléments qui composent une soustraction sont appelés <span class="CRed">termes</span>.
+    </div>
+    <div class="definition">
+      Le résultat d'une multiplication est appelé <span class="CRed">produit</span> Les éléments qui composent une multiplication sont appelés <span class="CRed">facteurs</span>.
+    </div>
+    <div class="definition">
+      Le résultat d'une division est appelé <span class="CRed">quotient</span>.
+    </div>
+    <p class="exemple">Cas particulier de la division euclidienne :</p>
+    <p>La division euclidienne ne s'effectue qu'avec des nombres entiers.</p>
+    <img src="Images/Division euclidienne.svg" style="max-height: 4cm;">
+    <p>Avec <span class="CViolet">Reste</span> &#60; <span class="CRed">Diviseur</span></p>
+  <h1>Enchaînement d'opérations :</h1>
+    <h2>Calcul sans parenthèses</h2>
+      <div class="definition">
+        Pour calculer une suite d'additions et de soustractions sans parenthèses, on fait les opérations une par une dans l'ordre où elles sont écrites.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>$23-12+9=11+9=20$</p>
+      <div class="definition">
+        Pour calculer une suite multiplications et de divisions sans parenthèses, on fait les opérations une par une dans l'ordre où elles sont écrites.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>$27\div3\times9=9\times9=81$</p>
+      <div class="definition">
+        La multiplication et la division sont <b><u>prioritaires</u></b> par rapport à l'addition et à la soustraction.
+      </div>
+      <p class="exemple">Exemples :</p>
+      <ul>
+        <li>
+          <div>
+            $4\ + $ <div class="u_lat">$3\times7$</div>$=4+21=25$
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="u_lat">$36\div3$</div> $-$ <div class="u_lat">$5\times2$</div>$=12-10=2$
+          </div>
+        </li>
+      </ul>
+    <h2>Utilisation des parenthèses :</h2>
+      <div class="definition">
+        Dans une suite de calculs comprenant des parenthèses, on effectue d'abord les calculs entre parenthèses.
+      </div>
+      <p class="exemple">Exemples :</p>
+      <ul>
+        <li>
+          <div>
+            $25\ - $ <div class="u_lat">$(12+9)$</div> $=25-21=4$
+          </div>
+        </li>
+        <li>
+          <div>
+            $36\ -(2\times$<div class="u_lat">$(15-9)$</div>$) = 36\ -$ <div class="u_lat">$(2\times6)$</div> $=36-12=24$
+          </div>
+        </li>
+      </ul>
+    <h2>Calcul dans un quotient :</h2>
+      <div class="definition">
+        Lorsqu'on veut calculer un quotient, on commence par calculer le numérateur et le dénominateur avant d'effectuer le calcul du quotient.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>$\large{\frac{12+3}{9-4}=\frac{15}{5}}=3$</p>
   
 
 </body>

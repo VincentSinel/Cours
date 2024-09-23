@@ -310,7 +310,7 @@ var cinquieme_base = [
 			id: 3,
 			nom: "Priorités opératoires",
 			icone: 1,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_3/Cours.html"
 	},
 	{
