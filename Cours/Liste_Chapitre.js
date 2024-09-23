@@ -911,7 +911,7 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre 1 (A1)",
 		nom: "Les nombres entiers",
 		icone: 7,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_A1/Cours.html",
 	},
 	{
