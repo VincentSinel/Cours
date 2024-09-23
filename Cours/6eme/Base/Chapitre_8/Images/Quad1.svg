@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 143.62 125.84">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1d1d1b;
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 12px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(71 122.59)"><tspan x="0" y="0">C</tspan></text>
+  <polygon class="cls-2" points="10.48 67.76 43.49 13.75 131.52 36.24 73.63 108.96 10.48 67.76"/>
+  <text class="cls-1" transform="translate(40.54 10.26)"><tspan x="0" y="0">A</tspan></text>
+  <text class="cls-1" transform="translate(135.88 34.93)"><tspan x="0" y="0">B</tspan></text>
+  <text class="cls-1" transform="translate(0 74.59)"><tspan x="0" y="0">D</tspan></text>
+</svg>

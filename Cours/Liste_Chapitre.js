@@ -779,7 +779,7 @@ var sixieme_base = [
 			id: 8,
 			nom: "Polygones et quadrilatères particuliers",
 			icone: 2,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_8/Cours.html"
 	},
 	{
