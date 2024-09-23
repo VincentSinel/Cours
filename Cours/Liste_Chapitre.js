@@ -441,7 +441,7 @@ var cinquieme_rogervailland = [
 		nom: "Divisibilité",
 		icone: 7,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_A1/Cours.html",
 	},
 	{
 		id: 33,
@@ -449,7 +449,7 @@ var cinquieme_rogervailland = [
 		nom: "Division décimale",
 		icone: 7,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_A2/Cours.html",
 	},
 	{
 		id: 19,
@@ -457,7 +457,7 @@ var cinquieme_rogervailland = [
 		nom: "Nombres premiers",
 		icone: 7,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_A3/Cours.html",
 	},
 	{
 		id: 5,
@@ -497,7 +497,7 @@ var cinquieme_rogervailland = [
 		nom: "Nombres Relatifs",
 		icone: 8,
 		ready : true,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_B1/Cours.html",
 	},
 	{
 		id: 12,
@@ -593,7 +593,7 @@ var cinquieme_rogervailland = [
 		nom: "Généralité sur les triangles",
 		icone: 11,
 		ready : true,
-		page : "RogerVailland/Chapitre_2/Cours.html",
+		page : "RogerVailland/Chapitre_E1/Cours.html",
 	},
 	{
 		id: 15,
