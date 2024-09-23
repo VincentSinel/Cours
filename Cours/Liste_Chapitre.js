@@ -1111,8 +1111,8 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre 1 (E1)",
 		nom: "Droites",
 		icone: 11,
-		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		ready : true,
+		page : "RogerVailland/Chapitre_E1/Cours.html",
 	},
 	{
 		id: 15,

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>E1 - Droites</title>
+
+  <style>
+    .appartient div{
+      display: inline-block;
+      width: 8cm;
+    }
+    .appartient div:first-child{
+      display: inline-block;
+      width: 3cm;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        E1
+      </td>
+      <td id="ChapitreNom">
+        - Droites
+      </td>
+    </tr>
+  </table>
+
+  <p class="exemple">
+    Activité Introduction
+  </p>
+
+  <div class="flexobject">
+    <div style="flex: 1 2 10cm; max-width: 14cm;">
+      <img src="Images/TERRAIN_FOOTBALL.svg">
+    </div>
+    <div style="flex: 1 1 12cm;">
+      <p>
+        <ol>
+          <li>Les points A, B, C et D représentent les positions de quatre élèves sur le terrain de football.
+            <ol type="a">
+              <li>Un joueur E peut-il être aligné avec B et D ? Si oui, où est-il possible de le placer ? Placer le point E.</li>
+              <li>Un joueur F peut-il être aligné avec A et D ainsi qu'avec B et C ? Si oui, placer le joueur. On dit alors que (AD) et (BC) sont _______ en F.</li>
+              <li>Placer le joueur G aligné avec A et B ainsi qu'avec C et D.</li>
+            </ol>
+          </li>
+          <li>
+            Que signifie les notations suivantes :
+            <ol type="a">
+              <li>$[MN]$</li>
+              <li>$(MN)$</li>
+              <li>$(MN]$</li>
+              <li>$[MN)$</li>
+              <li>$MN$</li>
+            </ol>
+          </li>
+        </ol>
+      </p>
+    </div>
+  </div>
+
+  <h1>Vocabulaire :</h1>
+      <h2>Points et segments :</h2>
+        <div class="definition flexobject">
+          <div style="flex: 1 1 9cm;">
+            En géométrie, un point est représenté par une croix. On peut alors lui donner un nom en utilisant une lettre majuscule en batons.
+          </div>
+          <img src="Images/Point.svg" style="flex: 1 1 4cm; max-height: 1.5cm;">
+        </div>
+        <p class="remarque">Remarque :</p>
+        <p>Sur une figure, deux points <b>distincts</b> (c'est-à-dire qui ne sont pas confondus) ont une nom différents</p>
+        
+        <div class="definition flexobject">
+          <div style="flex: 1 1 9cm;">
+            Un <span class="CRed">segment</span> est composé de deux points relié entre eux en ligne droite.
+          </div>
+          <img src="Images/Segment.svg" style="flex: 1 1 4cm; max-height: 2cm;">
+        </div>
+        <p class="remarque">Remarque :</p>
+        <p>
+          <ul>
+            <li>Un segment se note avec des crochet : [BC]</li>
+            <li>Les points B et C sont les <b>extrémités</b> du segment</li>
+          </ul>
+        </p>
+    <h2>Droite et demi-droite :</h2>
+        <div class="definition flexobject">
+          <div style="flex: 1 1 9cm;">
+            Une <span class="CRed">droite</span> est une ligne <b>illimitée</b> qui se prolonge des deux côtés.
+          </div>
+          <img src="Images/Droite1.svg" style="flex: 1 1 4cm; max-height: 1cm;">
+        </div>
+        <p class="remarque">Remarque :</p>
+        <p>
+          <ul>
+            <li>Une droite se note avec des parenthèses : (MN)</li>
+            <li>Une droite a deux <b>directions</b> que l'on définit avec des lettres minuscules.</li>
+            <li>
+              Il existe plusieurs manière de définir une droite.
+              <ul>
+                <li style="min-height: 2cm;">
+                  <div class="flexobject" style="justify-content: flex-start;">
+                    <div style="flex: 0 1 6cm; max-width: 6cm;">
+                      A partir de deux points, on la note (MN).
+                    </div>
+                    <img src="Images/Droite1.svg" style="flex: 0 1 4cm; max-width: 6cm;">
+                  </div>
+                </li>
+                <li style="min-height: 2cm;">
+                  <div class="flexobject" style="justify-content: flex-start;">
+                    <div style="flex: 0 1 6cm; max-width: 6cm;">
+                      A partir d'un nom, ici $(d)$.
+                    </div>
+                    <img src="Images/Droite4.svg" style="flex: 0 1 4cm; max-width: 6cm;">
+                  </div>
+                </li>
+                <li style="min-height: 2cm;">
+                  <div class="flexobject" style="justify-content: flex-start;">
+                    <div style="flex: 0 1 6cm; max-width: 6cm;">
+                      A partir de deux <b>directions</b>, ici $(zp)$.
+                    </div>
+                    <img src="Images/Droite2.svg" style="flex: 0 1 4cm; max-width: 6cm;">
+                  </div>
+                </li>
+                <li style="min-height: 2cm;">
+                  <div class="flexobject" style="justify-content: flex-start;">
+                    <div style="flex: 0 1 6cm; max-width: 6cm;">
+                      A partir d'une <b>direction</b> et d'un point, ici $(wK)$.
+                    </div>
+                    <img src="Images/Droite3.svg" style="flex: 0 1 4cm; max-width: 6cm;">
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>Par deux points distincts passe une <b>unique</b> droite.</li>
+            <li>Lorsque trois points se trouvent sur la même droite, on dit qu'ils sont <b>alignés</b>.</li>
+          </ul>
+        </p>
+        
+        <div class="definition flexobject">
+          <div style="flex: 1 1 9cm;">
+            Une <span class="CRed">demi-droite</span> commence d'un point et se prolonge dans une seul direction.
+          </div>
+          <img src="Images/DemiDroite1.svg" style="flex: 1 1 4cm; max-height: 1cm;">
+        </div>
+        <p class="remarque">Remarque :</p>
+        <p>
+          <ul>
+            <li>Une demi-droite se note avec un crochet et une parenthèses : [GH) ou (HG]</li>
+            <li>Le point de départ est appelé <b>origine</b> de la demi-droite. Ici c'est G.</li>
+            <li>Le crochet "[" représente l'arrêt de la demi-droite et la parenthèse ")" sa continuité.</li>
+            <li>
+              Il existe plusieurs manière de définir une demi-droite.
+              <ul>
+                <li style="min-height: 2cm;">
+                  <div class="flexobject" style="justify-content: flex-start;">
+                    <div style="flex: 0 1 6cm; max-width: 6cm;">
+                      A partir de deux points, on la note $[GH)$.
+                    </div>
+                    <img src="Images/DemiDroite1.svg" style="flex: 0 1 4cm; max-width: 6cm;">
+                  </div>
+                </li>
+                <li style="min-height: 2cm;">
+                  <div class="flexobject" style="justify-content: flex-start;">
+                    <div style="flex: 0 1 6cm; max-width: 6cm;">
+                      A partir d'un point et d'une <b>direction</b> $[Ts)$.
+                    </div>
+                    <img src="Images/DemiDroite2.svg" style="flex: 0 1 4cm; max-width: 6cm;">
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </p>
+  <h1>Points particuliers :</h1>
+      <h2>Droite sécante :</h2>
+          <div class="definition">
+            Lorsque des droites ; segments ou demi-droites se coupent en un point on dit qu'elles sont <span class="CRed">sécantes</span>.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <div class="flexobject">
+            <img src="Images/Secantes.svg" style="flex: 1 1 4cm; max-width: 7cm;">
+            <div style="flex: 1 1 4cm">
+              Ici les droites $(AB)$ et $(CD)$ sont sécantes en E.
+            </div>
+          </div>
+          <p class="remarque">Remarque :</p>
+          <p>
+            Les points C, E et D sont <span class="CRed">alignés</span>.
+          </p>
+      <h2>Distance et milieu :</h2>
+          <div class="definition">
+            La <span class="CRed">distance</span> entre deux points est la longueur du plus court chemin entre ces deux points. C'est la longueur du segment qui joint ces deux points.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <div class="flexobject">
+            <img src="Images/Distance.svg" style="flex: 1 1 4cm; max-width: 7cm;">
+            <div style="flex: 1 1 4cm;">
+              La distance entre le point A et B est 2,5cm.<br>
+              On note la longeur : AB = 2,5cm
+            </div>
+          </div><br>
+          <div class="definition">
+            Le <span class="CRed">milieu</span> I d'un segment [RS] est le point tel que :<br>
+            <div class="flexobject">
+              <div class="flex: 1 1 5cm">
+                <ul>
+                  <li>I appartient au segment [RS]</li>
+                  <li>I est à égale distance des points A et B</li>
+                </ul>
+              </div>
+              <img src="Images/Milieu.svg" style="flex: 1 1 4cm; max-width: 4cm;">
+            </div>
+          </div>
+
+
+</body>
+
+</html>
