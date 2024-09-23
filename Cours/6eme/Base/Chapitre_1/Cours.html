@@ -210,6 +210,19 @@
         writing-mode: vertical-rl;
       }
     }
+    
+    .list_nombre{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .list_nombre table{
+      flex: 1 1 3cm;
+    }
+    .list_nombre tr{
+      border: solid 1px black;
+    }
   </style>
 
 </head>
@@ -336,6 +349,67 @@
                 57 est le nombre de <span style="color: #E29B31">centaines</span>.</li>
             </ul>
           </p>
+      <h1>Ecriture d'un nombre</h1>
+        <h2>Premiers nombres :</h2>
+          <div class="list_nombre">
+            <table><tr><td>0</td><td>zéro</td></tr></table>
+            <table><tr><td>1</td><td>un</td></tr></table>
+            <table><tr><td>2</td><td>deux</td></tr></table>
+            <table><tr><td>3</td><td>trois</td></tr></table>
+            <table><tr><td>4</td><td>quatre</td></tr></table>
+            <table><tr><td>5</td><td>cinq</td></tr></table>
+            <table><tr><td>6</td><td>six</td></tr></table>
+            <table><tr><td>7</td><td>sept</td></tr></table>
+            <table><tr><td>8</td><td>huit</td></tr></table>
+            <table><tr><td>9</td><td>neuf</td></tr></table>
+            <table><tr><td>10</td><td>dix</td></tr></table>
+            <table><tr><td>11</td><td>onze</td></tr></table>
+            <table><tr><td>12</td><td>douze</td></tr></table>
+            <table><tr><td>13</td><td>treize</td></tr></table>
+            <table><tr><td>14</td><td>quatorze</td></tr></table>
+            <table><tr><td>15</td><td>quinze</td></tr></table>
+            <table><tr><td>16</td><td>seize</td></tr></table>
+            <table><tr><td>17</td><td>dix-sept</td></tr></table>
+            <table><tr><td>18</td><td>dix-huit</td></tr></table>
+            <table><tr><td>19</td><td>dix-neuf</td></tr></table>
+            <table><tr><td>20</td><td>vingt</td></tr></table>
+            <table><tr><td>21</td><td>vingt-et-un</td></tr></table>
+            <table><tr><td>22</td><td>vingt-deux</td></tr></table>
+            <table><tr><td>23</td><td>vingt-trois</td></tr></table>
+          </div>
+
+        <h2>Nombres particuliers :</h2>
+          <div class="list_nombre">
+            <table><tr><td>100</td><td>cent</td></tr></table>
+            <table><tr><td>1 000</td><td>mille</td></tr></table>
+            <table><tr><td>1 000 000</td><td>million</td></tr></table>
+            <table><tr><td>1 000 000 000</td><td>milliard</td></tr></table>
+          </div>
+
+          <p class="remarque">Remarques :</p>
+          <ul>
+            <li>
+              million et milliard prennent un "s" lorsqu'on en a plusieurs :<br>
+              Un-milliard &nbsp; et &nbsp; trois-milliard<b>s</b><br>
+              Cinq-milliards-un-million &nbsp; et &nbsp; cinq-milliards-deux-cent-million<b>s</b>
+            </li>
+            <li>
+              mille est invariable, il ne prend <b>jamais</b> de s &nbsp; (milles correspond à une unité de longueur maritime)
+            </li>
+          </ul>
+        
+        <h2>Règles particulières pour le cent et le vingt :</h2>
+          <div class="definition">
+            Les mots <b>vingt</b> et <b>cent</b> prennent la marque du pluriel à trois conditions :
+            <ul>
+              <li>
+                Ils doivent être multipliés (<b>cinq-cent<u>s</u></b> = $5 \times 100$);
+              </li>
+              <li>
+                Ils doivent terminer le nombre (<b>quatre-vingt<u>s</u></b>, mais <b>quatre-vingt-sept</b>); 
+              </li>
+            </ul>
+          </div>
     <h1>Nombres décimaux :</h1>
         <h2>Fraction décimale :</h2>
           <div class="definition">
