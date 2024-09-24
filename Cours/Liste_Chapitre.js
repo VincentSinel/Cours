@@ -920,7 +920,7 @@ var sixieme_rogervailland = [
 		nom: "Les nombres décimaux",
 		icone: 7,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_A2/Cours.html",
 	},
 	{
 		id: 25,
@@ -928,7 +928,7 @@ var sixieme_rogervailland = [
 		nom: "Différentes écritures d'un nombre décimal",
 		icone: 7,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_A3/Cours.html",
 	},
 	{
 		id: 37,
@@ -936,7 +936,7 @@ var sixieme_rogervailland = [
 		nom: "Comparaison des nombres décimaux",
 		icone: 7,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_A4/Cours.html",
 	},
 	{
 		id: 5,
@@ -944,7 +944,7 @@ var sixieme_rogervailland = [
 		nom: "Fraction",
 		icone: 7,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_A5/Cours.html",
 	},
 	{
 		id: 17,
@@ -952,7 +952,7 @@ var sixieme_rogervailland = [
 		nom: "Manipuler les fractions",
 		icone: 7,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_A6/Cours.html",
 	},
 	{
 		id: 30,
@@ -960,7 +960,7 @@ var sixieme_rogervailland = [
 		nom: "Calculer avec des fractions",
 		icone: 7,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_A7/Cours.html",
 	},
 	{
 		id: 11,
@@ -968,7 +968,7 @@ var sixieme_rogervailland = [
 		nom: "Addition",
 		icone: 8,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_B1/Cours.html",
 	},
 	{
 		id: 20,
@@ -976,7 +976,7 @@ var sixieme_rogervailland = [
 		nom: "Soustraction",
 		icone: 8,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_B2/Cours.html",
 	},
 	{
 		id: 26,
@@ -984,7 +984,7 @@ var sixieme_rogervailland = [
 		nom: "Multiplication",
 		icone: 8,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_B3/Cours.html",
 	},
 	{
 		id: 8,
@@ -992,7 +992,7 @@ var sixieme_rogervailland = [
 		nom: "Division euclidienne",
 		icone: 8,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_B4/Cours.html",
 	},
 	{
 		id: 47,
@@ -1000,7 +1000,7 @@ var sixieme_rogervailland = [
 		nom: "Division décimale",
 		icone: 8,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_B5/Cours.html",
 	},
 	{
 		id: 14,
@@ -1008,7 +1008,7 @@ var sixieme_rogervailland = [
 		nom: "Reconnaître une situation de proportionnalité",
 		icone: 9,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_C1/Cours.html",
 	},
 	{
 		id: 39,
@@ -1016,7 +1016,7 @@ var sixieme_rogervailland = [
 		nom: "Utiliser les propriétés de la proportionnalité",
 		icone: 9,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_C2/Cours.html",
 	},
 	{
 		id: 44,
@@ -1024,7 +1024,7 @@ var sixieme_rogervailland = [
 		nom: "Utiliser les pourcentages",
 		icone: 9,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_C3/Cours.html",
 	},
 	{
 		id: 6,
@@ -1032,7 +1032,7 @@ var sixieme_rogervailland = [
 		nom: "Statistiques (Tableaux)",
 		icone: 9,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_C4-1/Cours.html",
 	},
 	{
 		id: 27,
@@ -1040,7 +1040,7 @@ var sixieme_rogervailland = [
 		nom: "Statistiques (Diagramme bâtons et graphique cartésien)",
 		icone: 9,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_C4-2/Cours.html",
 	},
 	{
 		id: 50,
@@ -1048,15 +1048,15 @@ var sixieme_rogervailland = [
 		nom: "Statistiques (Diagramme circulaire)",
 		icone: 9,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_C4-3/Cours.html",
 	},
 	{
 		id: 4,
 		chapter: "Chapitre 1 (D1)",
 		nom: "Se repérer dans le temps",
 		icone: 10,
-		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		ready : true,
+		page : "RogerVailland/Chapitre_D1/Cours.html",
 	},
 	{
 		id: 18,
@@ -1064,7 +1064,7 @@ var sixieme_rogervailland = [
 		nom: "Longueurs et masses",
 		icone: 10,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_D2/Cours.html",
 	},
 	{
 		id: 34,
@@ -1072,7 +1072,7 @@ var sixieme_rogervailland = [
 		nom: "Surfaces",
 		icone: 10,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_D3/Cours.html",
 	},
 	{
 		id: 45,
@@ -1080,7 +1080,7 @@ var sixieme_rogervailland = [
 		nom: "Volumes",
 		icone: 10,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_D4/Cours.html",
 	},
 	{
 		id: 19,
@@ -1088,7 +1088,7 @@ var sixieme_rogervailland = [
 		nom: "Formulaire (périmètres)",
 		icone: 10,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_D5-1/Cours.html",
 	},
 	{
 		id: 35,
@@ -1096,7 +1096,7 @@ var sixieme_rogervailland = [
 		nom: "Formulaire (aires)",
 		icone: 10,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_D5-2/Cours.html",
 	},
 	{
 		id: 49,
@@ -1104,7 +1104,7 @@ var sixieme_rogervailland = [
 		nom: "Formulaire (volume pavé droit)",
 		icone: 10,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_D5-3/Cours.html",
 	},
 	{
 		id: 3,
@@ -1120,7 +1120,7 @@ var sixieme_rogervailland = [
 		nom: "Notion de perpendiculaires et parallèles",
 		icone: 11,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_E2/Cours.html",
 	},
 	{
 		id: 23,
