@@ -845,6 +845,13 @@ var sixieme_base = [
 			ready : false,
 			page : "Base/Chapitre_17/Cours.html"
 	},
+	{
+		id: 18,
+		nom: "Se repérer dans le temps",
+		icone: 5,
+		ready : true,
+		page : "Base/Chapitre_18/Cours.html",
+	},
 ]
 
 var sixieme_rogervailland = [

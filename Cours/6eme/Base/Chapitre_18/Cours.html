@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Chapitre 18 - Se repérer dans le temps</title>
+
+  <style>
+    .table_seconde{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, auto);
+      align-content: center;
+      vertical-align: middle;
+      text-align: center;
+      border: solid 1px black;
+    }
+    .table_seconde div {
+      border: solid 1px black;
+    }
+    .ts_head{
+      background-color: #88FF87;
+    }
+    .ts_head2{
+      background-color: #C6FFAC;
+    }
+    .time_unit{
+      flex-direction: column;
+      border: solid 2px black;
+      padding: 5px;
+    }
+    .time_unit div:first-child{
+      font-weight: bold;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Chapitre 18
+      </td>
+      <td id="ChapitreNom">
+        - Se repérer dans le temps
+      </td>
+    </tr>
+  </table>
+
+  <p class="exemple">
+    Activité Introduction
+  </p>
+
+  
+  <div class="flexobject" style="flex-direction: row; flex-wrap: wrap;">
+    <div style="flex: 0 1 7cm; border: solid 2px black; padding: 5px;">
+      <div style="text-align: center; line-height: 0%;">
+        <p style="font-weight: bold;">Film 1</p>
+        <p>1h 35 min</p>
+      </div>
+      <a href="https://fr.vecteezy.com/vecteur-libre/affiche-cinema">
+        <img src="Images/Affiche1.svg" style="max-width: 7cm;">
+      </a>
+    </div>
+    <div style="flex: 0 1 7cm; border: solid 2px black; padding: 5px;">
+      <div style="text-align: center; line-height: 0%;">
+        <p style="font-weight: bold;">Film 2</p>
+        <p>93 min</p>
+      </div>
+      <a href="https://fr.vecteezy.com/vecteur-libre/affiche-cinema">
+        <img src="Images/Film2.jpg" style="max-width: 7cm;">
+      </a>
+    </div>
+    <div style="flex: 0 1 7cm; border: solid 2px black; padding: 5px;">
+      <div style="text-align: center; line-height: 0%;">
+        <p style="font-weight: bold;">Film 3</p>
+        <p>2h 35min</p>
+      </div>
+      <a href="https://fr.vecteezy.com/vecteur-libre/affiche-cinema">
+        <img src="Images/Affiche3.svg" style="max-width: 7cm;">
+      </a>
+    </div>
+    <div style="flex: 0 1 7cm; border: solid 2px black; padding: 5px;">
+      <div style="text-align: center; line-height: 0%;">
+        <p style="font-weight: bold;">Film 4</p>
+        <p>55 min</p>
+      </div>
+      <a href="https://fr.vecteezy.com/vecteur-libre/affiche-cinema">
+        <img src="Images/Film4.jpg" style="max-width: 7cm;">
+      </a>
+    </div>
+  </div>
+
+  <p>
+    Dans un cinéma sont proposé quatre film au spectateur.
+  </p>
+  <ol>
+    <li>
+      Convertir la durée, en minutes, de chacune de ces séances.
+    </li>
+    <li>
+      Aziz souhaite voir les films 2 et 4.
+      <ol type="a">
+        <li>
+          Combien de temps au total cela va-t-il prendre. Donner ce temps en minutes puis en heure et minutes.
+        </li>
+        <li>
+          Il arrive au cinéma à 18h45. A quelle heure va-t-il sortir ?
+        </li>
+      </ol>
+    </li>
+    <li>Jacque est lui allé voir un film de 20h45 à 22h20. Quel film a-t-il vu ?</li>
+  </ol>
+
+  <h1>Durée :</h1>
+    <div class="definition">
+      Une <span class="CRed">durée</span> est la mesure du temps entre deux instants. L'unité de durée couramment utilisée est la <b>seconde</b> (s).
+    </div>
+    <p class="exemple">Exemple :</p>
+    <p>
+      Temps à l'instant 1 : 17 seconde.<br>
+      Temps à l'instant 2 : 48 seconde.<br>
+      La durée entre ces deux instant est 48-17 = 31 secondes.
+    </p>
+    <p class="remarque">Remarques :</p>
+    <p>Il existe d'autre unité de durée.</p>
+    <div class="table_seconde">
+      <div class="ts_head2"><b>Seconde</b> (s)</div>
+      <div class="ts_head2">Dixième de <b>seconde</b></div>
+      <div class="ts_head2">Centième de <b>seconde</b></div>
+      <div class="ts_head2">Millième de <b>seconde</b> (ms)</div>
+      <div>1 s</div>
+      <div>0,1 s</div>
+      <div>0,01 s</div>
+      <div>0,001 s = 1ms</div>
+    </div>
+    <br>
+    <div class="flexobject">
+      <div class="flexobject time_unit">
+        <div>Minute</div>
+        <div>1 min = 60 s</div>
+      </div>
+      <div class="flexobject time_unit">
+        <div>Heure</div>
+        <div>1 h = 60 min = 3 600 s</div>
+      </div>
+      <div class="flexobject time_unit">
+        <div>Jour</div>
+        <div>1 jour = 24 h = 1 440 min = 86 400 s</div>
+      </div>
+      <div class="flexobject time_unit">
+        <div>Semaine</div>
+        <div>1 semaine = 7 jour</div>
+      </div>
+      <div class="flexobject time_unit">
+        <div>Mois</div>
+        <div>1 mois peut avoir 28, 29, 30 ou 31 jours</div>
+      </div>
+      <div class="flexobject time_unit">
+        <div>Année</div>
+        <div>1 an peut avoir 365 ou 366 jours</div>
+      </div>
+      <div class="flexobject time_unit">
+        <div>Siècle</div>
+        <div>1 siècle = 100 ans</div>
+      </div>
+      <div class="flexobject time_unit">
+        <div>Millénaire</div>
+        <div>1 millénaire = 10 siècles = 1 000 ans</div>
+      </div>
+    </div>
+  <h1>Calculs d'horaires :</h1>
+    <h2>Calcul d'une durée</h2>
+      <p>On peut calculer la durée entre deux instants.</p>
+      <p class="exemple">Exemple :</p>
+      <p>
+        Une séance de cinéma commence à 18h20 et se termine à 20h10. Combien de temps à durée la séance ?<br><br>
+        On regarde le temps nécessaire pour aller à l'heure suivante :<br>
+        18h20 + <b>40min</b> = 19h<br>
+        On calcul ensuite le temps restant pour atteindre le temps final :<br>
+        19h + <b>1h10</b> = 20h10<br>
+        On regroupe enfin les deux durées précédentes :<br>
+        1 h 10 min + 40 min = 1h50<br>
+        La séance à donc durée 1h50.
+      </p>
+    <h2>A partir d'un temps initial :</h2>
+      <p>
+        A partir d'un instant initial et d'une durée, on peut calculer l'instant final.
+      </p>
+      <p class="exemple">Exemple :</p>
+      <p>
+        Un train mets 1h56 pour aller de Paris à Lyon. Il part de Paris à 11h25. A quelle heure arrive-t-il ?<br><br>
+        On ajoute les heures et les minutes ensemble :<br>
+        <div class="flexobject">
+          <table style="text-align: right;">
+            <tr>
+              <td></td>
+              <td>11</td>
+              <td>h</td>
+              <td>25</td>
+            </tr>
+            <tr>
+              <td>+</td>
+              <td>1</td>
+              <td>h</td>
+              <td>56</td>
+            </tr>
+            <tr style="border-top: solid 2px black;">
+              <td></td>
+              <td>12</td>
+              <td>h</td>
+              <td>81</td>
+            </tr>
+          </table>
+          <div>
+            Le nombre de minutes dépasse 60 (1 heure) on peut donc convertir : 12 h 81 min = 12 h + 60 min + 21 min = 12 h + 1 h + 21 min = 13 h 21 min
+          </div>
+        </div>
+        Le train arrive donc à 13h21
+      </p>
+    <h2>A partir d'un temps final</h2>
+      <p>
+        A partir d'un instant final et d'une durée, on peut calculer l'instant initial.
+      </p>
+      <p class="exemple">Exemple :</p>
+      <p>
+        Une voiture mets 4h29 pour aller de Paris à Lyon. On souhaite arrivé à Lyon à 15h12. A quelle heure doit-on partir ?<br><br>
+        On doit ici faire une soustraction, on commence donc par convertir des heures en minutes pour pouvoir l'effectuer :<br>
+        15h12 = 14 h + 1 h + 12 min = 14 h + 60 min + 12 min = 14h72<br>
+        On effectue ensuite la soustraction :
+        <div class="flexobject">
+          <table style="text-align: right;">
+            <tr>
+              <td></td>
+              <td>14</td>
+              <td>h</td>
+              <td>72</td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>4</td>
+              <td>h</td>
+              <td>29</td>
+            </tr>
+            <tr style="border-top: solid 2px black;">
+              <td></td>
+              <td>10</td>
+              <td>h</td>
+              <td>43</td>
+            </tr>
+          </table>
+        </div>
+        La voiture doit donc partir à 10h43
+      </p>
+        
+</body>
+
+</html>
