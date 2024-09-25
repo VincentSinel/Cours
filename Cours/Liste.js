@@ -7,6 +7,8 @@ function SelectCollege(name)
 {
     College_Selected = name;
     document.getElementById("HoverMenu").style.display = "none";
+    document.getElementById("titrepagecollege").className = "";
+    document.getElementById("titrepagedate").className = "";
     document.getElementById("titrepagecollege").classList.add("titrepagecollege_" + name);
     document.getElementById("titrepagedate").classList.add("titrepagedate_" + name);
     CreateNavBar()
