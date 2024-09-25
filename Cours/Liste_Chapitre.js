@@ -786,7 +786,7 @@ var sixieme_base = [
 			id: 9,
 			nom: "Divisions",
 			icone: 1,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_9/Cours.html"
 	},
 	{
