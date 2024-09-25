@@ -465,7 +465,7 @@ var cinquieme_rogervailland = [
 		nom: "Généralité sur les fractions",
 		icone: 7,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_A4/Cours.html",
 	},
 	{
 		id: 14,
@@ -473,7 +473,7 @@ var cinquieme_rogervailland = [
 		nom: "Egalité de fraction",
 		icone: 7,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_A5/Cours.html",
 	},
 	{
 		id: 23,
@@ -481,7 +481,7 @@ var cinquieme_rogervailland = [
 		nom: "Addition et soustraction de fractions",
 		icone: 7,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_A6/Cours.html",
 	},
 	{
 		id: 29,
@@ -489,7 +489,7 @@ var cinquieme_rogervailland = [
 		nom: "Comparaison de fractions",
 		icone: 7,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_A7/Cours.html",
 	},
 	{
 		id: 1,
@@ -505,7 +505,7 @@ var cinquieme_rogervailland = [
 		nom: "Repérage et comparaison",
 		icone: 8,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_B2/Cours.html",
 	},
 	{
 		id: 26,
@@ -513,7 +513,7 @@ var cinquieme_rogervailland = [
 		nom: "Repérage dans le plan",
 		icone: 8,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_B3/Cours.html",
 	},
 	{
 		id: 18,
@@ -521,7 +521,7 @@ var cinquieme_rogervailland = [
 		nom: "Additions de relatifs",
 		icone: 8,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_B4/Cours.html",
 	},
 	{
 		id: 30,
@@ -529,15 +529,15 @@ var cinquieme_rogervailland = [
 		nom: "Soustraction de nombres relatifs",
 		icone: 8,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_B5/Cours.html",
 	},
 	{
 		id: 4,
 		chapter: "Chapitre 1 (C1)",
 		nom: "Priorités opératoires",
 		icone: 9,
-		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		ready : true,
+		page : "RogerVailland/Chapitre_C1/Cours.html",
 	},
 	{
 		id: 21,
@@ -545,7 +545,7 @@ var cinquieme_rogervailland = [
 		nom: "Expression littérale",
 		icone: 9,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_C2/Cours.html",
 	},
 	{
 		id: 34,
@@ -553,7 +553,7 @@ var cinquieme_rogervailland = [
 		nom: "Tester une égalité",
 		icone: 9,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_C3/Cours.html",
 	},
 	{
 		id: 7,
@@ -561,7 +561,7 @@ var cinquieme_rogervailland = [
 		nom: "Effectifs et fréquences",
 		icone: 10,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_D1/Cours.html",
 	},
 	{
 		id: 16,
@@ -569,7 +569,7 @@ var cinquieme_rogervailland = [
 		nom: "Représentations graphiques",
 		icone: 10,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_D2/Cours.html",
 	},
 	{
 		id: 31,
@@ -577,7 +577,7 @@ var cinquieme_rogervailland = [
 		nom: "Moyenne",
 		icone: 10,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_D3/Cours.html",
 	},
 	{
 		id: 25,
@@ -585,7 +585,7 @@ var cinquieme_rogervailland = [
 		nom: "Notion de probabilité",
 		icone: 10,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_D4/Cours.html",
 	},
 	{
 		id: 2,
@@ -601,7 +601,7 @@ var cinquieme_rogervailland = [
 		nom: "Angles d'un triangle",
 		icone: 11,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_E2/Cours.html",
 	},
 	{
 		id: 32,
@@ -609,7 +609,7 @@ var cinquieme_rogervailland = [
 		nom: "Droites remarquables du triangle",
 		icone: 11,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_E3/Cours.html",
 	},
 	{
 		id: 11,
@@ -617,7 +617,7 @@ var cinquieme_rogervailland = [
 		nom: "Caractérisation angulaire du parallélisme",
 		icone: 11,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_E4/Cours.html",
 	},
 	{
 		id: 24,
@@ -625,7 +625,7 @@ var cinquieme_rogervailland = [
 		nom: "Parallèlogramme",
 		icone: 11,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_E5/Cours.html",
 	},
 	{
 		id: 28,
@@ -633,7 +633,7 @@ var cinquieme_rogervailland = [
 		nom: "Prisme et cylindre",
 		icone: 11,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_E6/Cours.html",
 	},
 	{
 		id: 6,
@@ -641,7 +641,7 @@ var cinquieme_rogervailland = [
 		nom: "La symétrie centrale",
 		icone: 12,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_F1/Cours.html",
 	},
 	{
 		id: 20,
@@ -649,7 +649,7 @@ var cinquieme_rogervailland = [
 		nom: "Propriétés des symétries",
 		icone: 12,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_F2/Cours.html",
 	},
 	{
 		id: 36,
@@ -657,7 +657,7 @@ var cinquieme_rogervailland = [
 		nom: "Les échelles",
 		icone: 12,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_F3/Cours.html",
 	},
 	{
 		id: 8,
@@ -665,7 +665,7 @@ var cinquieme_rogervailland = [
 		nom: "Notion d'algorithme",
 		icone: 13,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_G1/Cours.html",
 	},
 	{
 		id: 9,
@@ -673,7 +673,7 @@ var cinquieme_rogervailland = [
 		nom: "Activité Scratch (Niveau 1)",
 		icone: 13,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_G2-1/Cours.html",
 	},
 	{
 		id: 13,
@@ -681,7 +681,7 @@ var cinquieme_rogervailland = [
 		nom: "Activité Scratch (Niveaux 1 et 2)",
 		icone: 13,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_G2-2/Cours.html",
 	},
 	{
 		id: 22,
@@ -689,7 +689,7 @@ var cinquieme_rogervailland = [
 		nom: "Activité Scratch (Niveaux 1 et 2)",
 		icone: 13,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_G2-3/Cours.html",
 	},
 	{
 		id: 27,
@@ -697,7 +697,7 @@ var cinquieme_rogervailland = [
 		nom: "Activité Scratch (Niveaux 1 et 2)",
 		icone: 13,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_G2-4/Cours.html",
 	},
 	{
 		id: 3,
@@ -705,7 +705,7 @@ var cinquieme_rogervailland = [
 		nom: "Activité Géogébra",
 		icone: 13,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_G3/Cours.html",
 	},
 	{
 		id: 17,
@@ -713,7 +713,7 @@ var cinquieme_rogervailland = [
 		nom: "Activité tableur",
 		icone: 13,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_G4-1/Cours.html",
 	},
 	{
 		id: 35,
@@ -721,7 +721,7 @@ var cinquieme_rogervailland = [
 		nom: "Activité tableur",
 		icone: 13,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_G4-2/Cours.html",
 	},
 ]
 
