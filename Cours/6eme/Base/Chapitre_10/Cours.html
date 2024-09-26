@@ -13,11 +13,15 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script id="Animation" src="/JS/Animation/animation_holder.js"></script>
 
   <title>Chapitre 10 - Triangles</title>
 
   <style>
-    
+    .tableintro td{
+      border: solid 2px black;
+      padding: 5px;
+    }
   </style>
 
 </head>
@@ -39,7 +43,108 @@
     Activité Introduction
   </p>
 
+  <img src="Images/Intro.svg" style="max-height: 9cm;">
+  <ol>
+    <li>Colorier en rouge les triangles ayant 3 côtés de même longueurs.</li>
+    <li>Colorier en vert les triangles ayant seulement 2 côtés de même longueurs.</li>
+    <li>Colorier en bleu les triangles ayant un angle droit.</li>
+    <li>Colorier en violet les triangles restants.</li>
+    <li>Associer chacun des termes suivants à la bonne couleur de triangle :<br>
+      <table class="tableintro">
+        <tr>
+          <td>Triangle isocèle</td>
+          <td>Triangle rectangle</td>
+          <td>Triangle quelconque</td>
+          <td>Triangle équilatéral</td>
+        </tr>
+      </table>
+    </li>
+  </ol>
 
+  <h1>Triangles :</h1>
+    <div class="definition">
+      Un <span class="CRed">triangle</span> est un <b>polygone</b> à trois côtés.
+    </div>
+    <h2>Triangle isocèle :</h2>
+      <div class="definition">
+        Un triangle <span class="CRed">isocèle</span> est un triangle qui a deux côtés de même longueur.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <div class="flexobject">
+        <img src="Images/Isocele1.svg" style="max-height: 4cm;">
+        <div style="flex: 1 1 5cm">
+          <ul>
+            <li>Le triangle ABC ci-contre est <b>isocèle</b> en A.</li>
+            <li>A est appelé <b>sommet principal</b> du triangle ABC.</li>
+            <li>Le segment $[BC]$ est la <span class="CRed">base</span> du triangle ABC.</li>
+          </ul>
+        </div>
+      </div><br>
+      <div class="definition">
+        <b><u>Propriété :</u></b><br>
+        Dans un triangle <b>isocèle</b> les angles à la base ont la même mesure et deux côtés ont la même longueur.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <img src="Images/Isocele2.svg" style="max-height: 4cm;">
+
+    <h2>Triangle équilatéral :</h2>
+      <div class="definition">
+        Un triangle <span class="CRed">équilatéral</span> est un triangle qui a trois côtés de même longueur. 
+      </div>
+      <div class="flexobject">
+        <img src="Images/Equilateral1.svg" style="max-height: 4cm;">
+        <div style="flex: 1 1 5cm;">
+          Le triangle DEF ci-contre est équilatéral.
+        </div>
+      </div>
+      <div class="definition">
+        <b><u>Propriété :</u></b><br>
+        Dans un triangle <b>équilatéral</b> tous les angles ont la même mesure et tous les côtés ont la même longueur. 
+      </div>
+      <p class="exemple">Exemple :</p>
+      <img src="Images/Equilateral2.svg" style="max-height: 4cm;">
+    <h2>Triangle rectangle :</h2>
+      <div class="definition">
+        Un triangle <span class="CRed">rectangle</span> est un triangle qui a deux côtés perpendiculaires.
+      </div>
+      <div class="flexobject">
+        <img src="Images/Rectangle.svg" style="max-height: 4cm;">
+        <div style="flex: 1 1 5cm;">
+          Le triangle GHI est <b>rectangle</b> en H.<br>
+          Le segment $[GI]$ est appelé <span class="CRed">hypoténuse</span> du triangle GHI. (C'est le côté le plus long d'un triangle <b>rectangle</b>)<br>
+        </div>
+      </div>
+
+  <h1>Constructions</h1>
+    <h2>Avec trois longueurs :</h2>
+      <p>
+        Construire un triangle ABC tel que AB = 8cm, AC = 6cm et BC = 4cm.
+      </p>
+      <div id="Animation1" class="animation center" width="480" height="360"></div>
+    
+    <h2>Avec deux longueurs et un angle :</h2>
+      <div class="flexobject">
+        <div style="flex: 1 1 5cm">
+          <p>
+            Construire un triangle ABC tel que AB = 8cm, AC = 5cm et $\widehat{BAC} = 30°$.
+          </p>
+          <div id="Animation2" class="animation center" width="480" height="360"></div>
+        </div>
+        <div style="flex: 1 1 5cm">
+          <p>
+            Construire un triangle ABC tel que AB = 8cm, BC = 6cm et $\widehat{BAC} = 30°$.
+          </p>
+          <div id="Animation3" class="animation center" width="480" height="360"></div>
+        </div>
+      </div>
+    
+    <h2>Avec une longueur et deux angles :</h2>
+      <p>
+        Construire un triangle ABC tel que AB = 8cm, $\widehat{BAC} = 30°$ et $\widehat{ABC} = 75°$.
+      </p>
+      <div id="Animation4" class="animation center" width="480" height="360"></div>
+  
+      
 
 </body>
 

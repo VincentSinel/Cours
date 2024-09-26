@@ -793,7 +793,7 @@ var sixieme_base = [
 			id: 10,
 			nom: "Triangles",
 			icone: 2,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_10/Cours.html"
 	},
 	{
