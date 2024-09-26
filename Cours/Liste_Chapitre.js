@@ -1117,6 +1117,7 @@ var sixieme_rogervailland = [
 		id: 3,
 		chapter: "Chapitre 1 (E1)",
 		nom: "Droites",
+		download: "/Cours/6eme/RogerVailland/Chapitre_E1/Cours.pdf",
 		icone: 11,
 		ready : true,
 		page : "RogerVailland/Chapitre_E1/Cours.html",
