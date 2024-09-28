@@ -800,7 +800,7 @@ var sixieme_base = [
 			id: 11,
 			nom: "Nombres en écritures fractionnaires",
 			icone: 1,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_11/Cours.html"
 	},
 	{
