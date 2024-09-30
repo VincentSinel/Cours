@@ -83,6 +83,7 @@
 				<option value="type2">Axe gradué</option>
 				<option value="type3">Quadrillage</option>
 				<option value="type4">Solide</option>
+				<option value="type5">Fractions</option>
 			</select>
 			<!-- <button class="regenerate" onclick="Regenerate()">Regénérer</button> -->
 			<p style="text-align: center;">Paramètres</p>
@@ -1272,18 +1273,56 @@
 						</div>
 					</div>
 				</div>
+				<!-- Paramètres Fraction -->
+				<div style="width: 100%;" id="param_fraction" class="hiddenparam">
+					<div class="formemenu show">
+						<span>Pramètres principaux</span>
+						<div class="formemenu_div">
+							<div>
+								<input id="frac_txt" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param(this.id);">
+								<label for="frac_txt" style="width: auto;">Générer le texte</label>
+							</div>
+							<div id="frac_txt_section" class="subsection">
+								<select id="frac_txt_type" oninput="Regenerate()">
+									<option value="0">Pourcentage</option>
+									<option value="1">Fraction</option>
+									<option value="2">Décimal</option>
+								</select>
+								<div class="flexparameters">
+									<label>Taille texte :</label>
+									<input id="frac_txt_size" type="number" value="24" step="2" oninput="Regenerate()">
+								</div>
+							</div>
+							<hr>
+							<div class="flexparameters">
+								<label>Epaisseur:</label>
+								<input id="frac_line_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+							</div>
+							<hr>
+							<div class="flexparameters">
+								<label>Couleur:</label>
+								<input id="frac_line_color" type="color" value="#000000" oninput="Regenerate()">
+							</div>
+							<hr>
+							<div class="flexparameters">
+								<label>Style de trait :</label>
+								<input id="frac_line_style" type="text" oninput="Regenerate();">
+							</div>
+						</div>
+					</div>
+				</div>
 				<!-- Parametres généraux -->
 				<div class="formemenu">
 					<span>Rendu final</span>
 					<div class="formemenu_div">
 						<div class="flexparameters">
 							<label>Largeur :</label>
-							<input id="gen_width" type="number" value="500" step="20" min="5" oninput="Regenerate()">
+							<input id="gen_width" type="number" value="500" step="20" min="20" oninput="Regenerate()">
 						</div>
 						<hr>
 						<div class="flexparameters">
 							<label>Hauteur :</label>
-							<input id="gen_height" type="number" value="500" step="20" min="5" oninput="Regenerate()">
+							<input id="gen_height" type="number" value="500" step="20" min="20" oninput="Regenerate()">
 						</div>
 						<hr>
 						<div class="flexparameters">
@@ -1319,6 +1358,9 @@
 			</div>
 			<hr style="margin-top: 2px; margin-bottom: 2px;">
 			<div id="object_solide" class="hiddenparam">
+			</div>
+			<div id="object_fraction" class="hiddenparam">
+				<button onclick="Add_section()" class="newobjecthalf">Ajouter une section</button>
 			</div>
 			<div id="object_list" class="panel rightpanel">
 				
@@ -1687,6 +1729,68 @@
 						</div>
 					</div> -->
 
+					<!-- <div id="secUID" class="formemenu show">
+						<span onclick="menu_click(document.getElementById('secUID'))">Section UID</span>
+						<div class="formemenu_div">
+							<label>Poid :</label><br>
+							<input id="secUID_pds" type="number" value="1" min="0" oninput="Regenerate()">
+							<label>Texte :</label><br>
+							<div class="subsection">
+								<select id="secUID_txt_type" oninput="Regenerate()">
+									<option value="0">Hérité</option>
+									<option value="1">Aucun</option>
+									<option value="2">Pourcentage</option>
+									<option value="3">Fraction</option>
+									<option value="4">Décimal</option>
+								</select>
+								<div class="flexparameters">
+									<label>Taille texte :</label>
+									<input id="secUID_txt_size" type="number" value="-1" step="2" oninput="Regenerate()">
+								</div>
+								<div class="flexparameters">
+									<label>Couleur :</label>
+									<input id="secUID_txt_color" type="color" oninput="Regenerate()">
+								</div>
+								<div class="flexparameters">
+									<label>Distance texte (%) :</label>
+									<input id="secUID_txt_dist" type="number" value="70" step="5" oninput="Regenerate()">
+								</div>
+							</div>
+							<div>
+								<input id="secUID_fill" type="checkbox" style="width: auto;" unchecked oninput="Regenerate(); show_hide_param(this.id);">
+								<label for="secUID_fill" style="width: auto;">Remplir la section</label>
+							</div>
+							<div id="secUID_fill_section" class="subsection hiddenparam">
+								<select id="secUID_fill_type" oninput="Regenerate()">
+									<option value="0">Uni</option>
+									<option value="1">Ligne horizontale</option>
+									<option value="2">Ligne verticale</option>
+									<option value="3">Ligne diagonale HG→BD</option>
+									<option value="4">Ligne diagonale BG→HD</option>
+									<option value="5">Points</option>
+									<option value="6">Quadrillage</option>
+									<option value="7">Quadrillage diagonal</option>
+									<option value="8">Damier</option>
+									<option value="9">Damier diagonal</option>
+								</select>
+								<div class="flexparameters">
+									<label>Taille forme :</label>
+									<input id="secUID_fill_size" type="number" value="12" step="2" oninput="Regenerate()">
+								</div>
+								<div class="flexparameters">
+									<label>Couleur :</label>
+									<input id="secUID_fill_color" type="color" oninput="Regenerate()">
+								</div>
+								<div class="flexparameters">
+									<label>Epaisseur :</label>
+									<input id="secUID_fill_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+								</div>
+							</div>
+							<button class="delete" onclick="Add_section(Get_Section({id: UID}));">Dupliquer</button>
+							<button class="delete" onclick="Remove_Global('secUID')">Supprimer</button>
+						</div>
+					</div> -->
+					
 			</div>
 		</div>
 
@@ -1754,10 +1858,12 @@
 			document.getElementById("param_axe").classList.add("hiddenparam")
 			document.getElementById("param_quadrillage").classList.add("hiddenparam")
 			document.getElementById("param_solide").classList.add("hiddenparam")
+			document.getElementById("param_fraction").classList.add("hiddenparam")
 			document.getElementById("object_repere").classList.add("hiddenparam")
 			document.getElementById("object_axe").classList.add("hiddenparam")
 			document.getElementById("object_quadrillage").classList.add("hiddenparam")
 			document.getElementById("object_solide").classList.add("hiddenparam")
+			document.getElementById("object_fraction").classList.add("hiddenparam")
 			let type = document.getElementById("gen_type").selectedIndex;
 			if (type == 0)
 			{
@@ -1778,6 +1884,11 @@
 			{
 				document.getElementById("param_solide").classList.remove("hiddenparam")
 				document.getElementById("object_solide").classList.remove("hiddenparam")
+			}
+			else if (type == 4)
+			{
+				document.getElementById("param_fraction").classList.remove("hiddenparam")
+				document.getElementById("object_fraction").classList.remove("hiddenparam")
 			}
 			ClearObject();
 			Regenerate()

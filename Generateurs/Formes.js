@@ -45,6 +45,8 @@ function Regenerate()
 		Draw_Quadrillage(data);
 	if (type == 3)
 		Draw_Solide(data);
+	if (type == 4)
+		Draw_Fraction(data);
 }
 
 function Draw_RepereGradue(data)
@@ -340,7 +342,30 @@ function Draw_Solide(data)
 	}
 }
 
+function Draw_Fraction(data)
+{
+	data["frac_txt"] = document.getElementById("frac_txt").checked;
+	data["frac_txt_type"] = document.getElementById("frac_txt_type").selectedIndex;
+	data["frac_txt_size"] = document.getElementById("frac_txt_size").valueAsNumber;
+	data["frac_line_stroke"] = document.getElementById("frac_line_stroke").valueAsNumber;
+	data["frac_line_color"] = document.getElementById("frac_line_color").value;
+	data["frac_line_style"] = document.getElementById("frac_line_style").value;
+	
+	let weight = 0;
+	let weight_list = [0];
+	data["objects"].forEach(obj => {
+		if (obj["type"] == "section")
+		{
+			weight += obj["weight"]
+			weight_list.push(weight)
+		}
+	})
+	data["frac_total_weight"] = weight;
+	data["frac_weight_list"] = weight_list;
 
+
+	Fraction(paper, data)
+}
 
 
 
@@ -591,6 +616,41 @@ function Draw_Solide(data)
 
 		return id;
 	}
+
+	function Add_section(clone = false)
+	{
+		let ids = []
+		objects.forEach(obj =>{
+			if(obj.type == "section")
+				ids.push(obj.id);
+		})
+		let id = 1;
+		while(ids.indexOf(id) >= 0)
+			id += 1;
+		objects.push(
+			{
+				type: "section",
+				id: id,
+				hover: false
+			}
+		)
+
+		let div = document.createElement("div");
+		div.id = "sec" + id.toString();
+		div.classList.add("formemenu")
+		// div.classList.add("show")
+
+		let htmlnode = '<span onclick="menu_click(document.getElementById(\'secUID\'))">Section UID</span><div class="formemenu_div"><label>Poids :</label><br><input id="secUID_pds" type="number" value="1" min="0" oninput="Regenerate()"><label>Texte :</label><br><div id="secUID_txt_section" class="subsection"><select id="secUID_txt_type" oninput="Regenerate()"><option value="0">Hérité</option><option value="1">Aucun</option><option value="2">Pourcentage</option><option value="3">Fraction</option><option value="4">Décimal</option></select><div class="flexparameters"><label>Taille texte :</label><input id="secUID_txt_size" type="number" value="-1" step="2" oninput="Regenerate()"></div><div class="flexparameters"><label>Couleur :</label><input id="secUID_txt_color" type="color" oninput="Regenerate()"></div><div class="flexparameters"><label>Distance texte (%) :</label><input id="secUID_txt_dist" type="number" value="70" step="5" oninput="Regenerate()"></div></div><div><input id="secUID_fill" type="checkbox" style="width: auto;" unchecked oninput="Regenerate(); show_hide_param(this.id);"><label for="secUID_fill" style="width: auto;">Remplir la section</label></div><div id="secUID_fill_section" class="subsection hiddenparam"><select id="secUID_fill_type" oninput="Regenerate()"><option value="0">Uni</option><option value="1">Ligne horizontale</option><option value="2">Ligne verticale</option><option value="3">Ligne diagonale HG→BD</option><option value="4">Ligne diagonale BG→HD</option><option value="5">Points</option><option value="6">Quadrillage</option><option value="7">Quadrillage diagonal</option><option value="8">Damier</option><option value="9">Damier diagonal</option></select><div class="flexparameters"><label>Taille forme :</label><input id="secUID_fill_size" type="number" value="20" step="2" oninput="Regenerate()"></div><div class="flexparameters"><label>Couleur :</label><input id="secUID_fill_color" type="color" value="#FF0000" oninput="Regenerate()"></div><div class="flexparameters"><label>Epaisseur :</label><input id="secUID_fill_stroke" type="number" value="6" step="1" min="1" oninput="Regenerate()"></div></div><button class="delete" onclick="let a = Get_Section({id: UID}); Set_Section(Add_section(a),a)">Dupliquer</button><button class="delete" onclick="RemoveSection(\'secUID\')">Supprimer</button></div>'
+
+		htmlnode = htmlnode.replaceAll("UID", id.toString());
+
+		div.innerHTML = htmlnode;
+		document.getElementById("object_list").appendChild(div);
+
+		Regenerate();
+
+		return id;
+	}
 }
 
 { // Suppression d'objet dans la liste latérale
@@ -602,58 +662,48 @@ function Draw_Solide(data)
 		Regenerate();
 	}
 
-	function RemoveCourbe(name)
+	function Remove_Global(name, type)
 	{
 		let element = document.getElementById(name);
 		element.parentNode.removeChild(element);
 		let id = parseInt(name.substring(3));
-		objects.splice(objects.findIndex(element => element.id == id && element.type == "courbe"), 1);
+		objects.splice(objects.findIndex(element => element.id == id && element.type == type), 1);
 		Regenerate();
+	}
+
+	function RemoveCourbe(name)
+	{
+		Remove_Global(name, "courbe")
 	}
 
 	function RemovePoint(name)
 	{
-		let element = document.getElementById(name);
-		element.parentNode.removeChild(element);
-		let id = parseInt(name.substring(3));
-		objects.splice(objects.findIndex(element => element.id == id && element.type == "point"), 1);
-		Regenerate();
+		Remove_Global(name, "point")
 	}
 
 	function RemovePolygone(name)
 	{
-		let element = document.getElementById(name);
-		element.parentNode.removeChild(element);
-		let id = parseInt(name.substring(3));
-		objects.splice(objects.findIndex(element => element.id == id && element.type == "polygone"), 1);
-		Regenerate();
+		Remove_Global(name, "polygone")
 	}
 
 	function RemoveCircle(name)
 	{
-		let element = document.getElementById(name);
-		element.parentNode.removeChild(element);
-		let id = parseInt(name.substring(3));
-		objects.splice(objects.findIndex(element => element.id == id && element.type == "circle"), 1);
-		Regenerate();
+		Remove_Global(name, "circle")
 	}
 
 	function RemoveSegment(name)
 	{
-		let element = document.getElementById(name);
-		element.parentNode.removeChild(element);
-		let id = parseInt(name.substring(3));
-		objects.splice(objects.findIndex(element => element.id == id && element.type == "segment"), 1);
-		Regenerate();
+		Remove_Global(name, "segment")
 	}
 
 	function RemoveTexte(name)
 	{
-		let element = document.getElementById(name);
-		element.parentNode.removeChild(element);
-		let id = parseInt(name.substring(3));
-		objects.splice(objects.findIndex(element => element.id == id && element.type == "texte"), 1);
-		Regenerate();
+		Remove_Global(name, "texte")
+	}
+
+	function RemoveSection(name)
+	{
+		Remove_Global(name, "section")
 	}
 
 }
@@ -663,6 +713,7 @@ function Draw_Solide(data)
 	function Get_Objects()
 	{
 		let data = [];
+		let index = 0;
 		objects.forEach(obj => {
 			try{
 				if (obj.type == "courbe")
@@ -677,10 +728,13 @@ function Draw_Solide(data)
 					data.push(Get_Segment(obj))
 				if (obj.type == "texte")
 					data.push(Get_Texte(obj))
+				if (obj.type == "section")
+					data.push(Get_Section(obj, index))
 			}
 			catch(e){
 				console.log(e)
 			}
+			index+=1;
 		});
 		return data;
 	}
@@ -798,6 +852,27 @@ function Draw_Solide(data)
 		return data;
 	}
 
+	function Get_Section(obj, index)
+	{
+		var name = "sec" + obj.id;
+		let data = {
+			"id": obj.id,
+			"index": index,
+			"type": "section",
+			"weight": document.getElementById(name + "_pds").valueAsNumber,
+			"txt_type": document.getElementById(name + "_txt_type").selectedIndex,
+			"txt_size": document.getElementById(name + "_txt_size").valueAsNumber,
+			"txt_color": document.getElementById(name + "_txt_color").value,
+			"txt_dist": document.getElementById(name + "_txt_dist").valueAsNumber,
+			"fill": document.getElementById(name + "_fill").checked,
+			"fill_type": document.getElementById(name + "_fill_type").selectedIndex,
+			"fill_size": document.getElementById(name + "_fill_size").valueAsNumber,
+			"fill_color": document.getElementById(name + "_fill_color").value,
+			"fill_stroke": document.getElementById(name + "_fill_stroke").valueAsNumber,
+		}
+		return data;
+	}
+
 }
 
 { // Assignation des données d'un objet
@@ -890,6 +965,24 @@ function Draw_Solide(data)
 		document.getElementById(name + "_angle").valueAsNumber = data["angle"];
 		document.getElementById(name + "_text_size").valueAsNumber = data["txt_size"];
 		document.getElementById(name + "_stroke_color").value = data["strokecolor"];
+		Regenerate();
+	}
+
+	function Set_Section(id, data)
+	{
+		var name = "sec" + id;
+		document.getElementById(name + "_pds").valueAsNumber =	data["weight"];
+		document.getElementById(name + "_txt_type").selectedIndex = data["txt_type"];
+		document.getElementById(name + "_txt_size").valueAsNumber = data["txt_size"];
+		document.getElementById(name + "_txt_color").value = data["txt_color"];
+		document.getElementById(name + "_txt_dist").valueAsNumber = data["txt_dist"];
+		document.getElementById(name + "_fill").checked = data["fill"];
+		if (data["fill"])
+			document.getElementById(name + "_fill_section").classList.remove("hiddenparam")
+		document.getElementById(name + "_fill_type").selectedIndex = data["fill_type"];
+		document.getElementById(name + "_fill_size").valueAsNumber = data["fill_size"];
+		document.getElementById(name + "_fill_color").value = data["fill_color"];
+		document.getElementById(name + "_fill_stroke").valueAsNumber = data["fill_stroke"];
 		Regenerate();
 	}
 
