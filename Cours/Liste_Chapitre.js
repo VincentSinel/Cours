@@ -950,7 +950,7 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre 5 (A5)",
 		nom: "Fraction",
 		icone: 7,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_A5/Cours.html",
 	},
 	{
