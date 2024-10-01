@@ -17,7 +17,43 @@
   <title>Chapitre 12 - Longueur et périmètres</title>
 
   <style>
-    
+    .longueur_grid{
+      display: grid;
+      text-align: center;
+      border: solid 1px black;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .longueur_grid div{
+      border: solid 1px black;
+    }
+    .BR{
+      background-color: #ffcc99;
+    }
+    .BG{
+      background-color: #99ff99;
+    }
+
+    .p-table {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: auto repeat(2, 30px);
+      align-content: center;
+      vertical-align: middle;
+      text-align: center;
+      border: solid 1px black;
+    }
+    .line_title2 {
+      background-color: #ccc0da;
+    }
+    .line_title2 {
+      font-size: 8pt;
+      font-weight: bold;
+    }
+    .p-table div{
+      border: solid 1px black;
+      align-content: center;
+      font-size: 12pt;
+    }
   </style>
 
 </head>
@@ -38,6 +74,132 @@
   <p class="exemple">
     Activité Introduction
   </p>
+  
+  <ol>
+    <li>Découper, dans une feuille épaisse, un disque de diamètre 4cm, puis placer un point M sur le bord du cercle.</li>
+    <li>
+      Construire un axe graduée de 15cm comme ci-dessous :<br>
+      <img src="Images/Axe.svg">
+
+    </li>
+    <li>
+      Placer le disque sur l'axe graduée en faisant correspondre le point M avec l'origine, puis faire tourner le disque le long de l'axe comme indiqué sur la figure ci-dessous.<br>
+      <img src="Images/Axe2.svg" style="max-height: 4.5cm;">
+      <ol type="a">
+        <li>
+          Noter l'abscisse du point M lorsque le disque fait un tour complet. A quelle longueur cette abscisse correspond-elle ?
+        </li>
+        <li>
+          Diviser la longueur du cercle par son diamètre, puis arrondir ce résultat au centième près.
+        </li>
+      </ol>
+    </li>
+    <li>
+      Refaire la même mesure et le même calcul avec un cercle de 3cm de diamètre.
+      <ol type="a">
+        <li>
+          Que constate-t-on ?
+        </li>
+        <li>
+          Que peut-on dire de la formule permettant de trouver le périmètre du cercle ?
+        </li>
+      </ol>
+    </li>
+  </ol>
+
+  <h1>Longueurs :</h1>
+    <div class="definition">
+      Dans le système métrique, l'unité usuelle de <b>longueur</b> est le <span class="CRed">mètre</span> noté « <span class="CRed">m</span> ».
+    </div>
+
+    <div class="longueur_grid">
+      <div style="grid-column: 1 / 3; font-weight: bold; font-size: 20px;">
+        Unités de longueur
+      </div>
+      <div class="CRed BR" style="font-weight: bold;">Multiples</div>
+      <div class="CGreen BG" style="font-weight: bold;">Sous-Multiples</div>
+      <div class="BR"><b>Décamètre</b><br>1 dam = 10 m</div>
+      <div class="BG"><b>Décimètre</b><br>1 dm = 0,1 m</div>
+      <div class="BR"><b>Hectomètre</b><br>1 hm = 10 dam = 100 m</div>
+      <div class="BG"><b>Centimètre</b><br>1 cm = 0,1 dm = 0,01 m</div>
+      <div class="BR"><b>Kilomètre</b><br>1 km = 10 hm = 100 dam = 1 000 m</div>
+      <div class="BG"><b>Millimètre</b><br>1 mm = 0,1 cm = 0,01 dm = 0,001 m</div>
+    </div>
+
+    <p>Tableau de conversion :</p>
+
+  <div class="p-table">
+    <div class="line_title2">Kilomètre<br><span style="font-size: 16pt;">km</span></div>
+    <div class="line_title2">Hectomètre<br><span style="font-size: 16pt;">hm</span></div>
+    <div class="line_title2">Decamètre<br><span style="font-size: 16pt;">dam</span></div>
+    <div class="line_title2">Mètre<br><span style="font-size: 16pt;">m</span></div>
+    <div class="line_title2">Décimètre<br><span style="font-size: 16pt;">dm</span></div>
+    <div class="line_title2">Centimètre<br><span style="font-size: 16pt;">cm</span></div>
+    <div class="line_title2">Millimètre<br><span style="font-size: 16pt;">mm</span></div>
+    <div></div><div>2</div><div>7</div><div>0</div><div>0</div><div></div><div></div>
+    <div></div><div></div><div>0,</div><div>0</div><div>0</div><div>5</div><div></div>
+  </div>
+  <table style="width: 100%; text-align: center;">
+    <tr>
+      <td>2,7 hm = 2 700 dm</td>
+      <td>5 cm = 0,005 dam</td>
+    </tr>
+  </table>
+
+  <h1>Périmètres :</h1>
+    <div class="definition">
+      Le <span class="CRed">périmètre</span> d'une figure plane est la <b>longueur</b> du contour de celle-ci. (On le note souvent $\mathscr{P}$) 
+    </div>
+    <h2>Polygone :</h2>
+      <div class="definition">
+        Le périmètre d'un polygone est égal à la somme de la longueur de tous ses côtés.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <div class="flexobject">
+        <div style="flex: 0 1 5cm">
+          Ici le polygone ABCDE a pour périmètre $\mathscr{P}=4+4,5+4+2,5+3=18 cm$ 
+        </div>
+        <img src="Images/Polygone.svg" style="max-height: 5cm;">
+      </div>
+      <p class="remarque">Cas particuliers</p>
+      <table class="borderfull2">
+        <tr style="background-color: #b6dde8;">
+          <td><b>Carré de côté c.</b><br>$\mathscr{P}=4\times c$</td>
+          <td><b>Rectangle de longueur L et largeur 𝓁.</b><br>$\mathscr{P}=2\times L+2\times \mathscr{l}=2\times(L+\mathscr{l})$</td>
+        </tr>
+        <tr>
+          <td><img src="Images/Carre.svg"></td>
+          <td><img src="Images/Rectangle.svg"></td>
+        </tr>
+      </table>
+      <br>
+      <div class="flexobject">
+        <img src="Images/Attention.svg" style="max-height: 4cm;">
+        <p style="flex: 1 1 5cm;">Attention, toutes les longueurs doivent être exprimés avec la même unité (ou sous unité).</p>
+      </div>
+    <h2>Cercle :</h2>
+      <div class="definition">
+        Le périmètre d'un cercle est égal au produit de son diamètre par le nombre <span class="CRed">π</span> (pi) 
+      </div>
+      <table class="borderfull2">
+        <tr style="background-color: #b6dde8;">
+          <td><b>Avec un diamètre D</b><br>$\mathscr{P}=D\times \pi$</td>
+          <td><b>Avec un rayon R</b><br>$\mathscr{P}=2\times R\times \pi$</td>
+        </tr>
+        <tr>
+          <td><img src="Images/Cercle2.svg" style="height: 4cm;"></td>
+          <td><img src="Images/Cercle1.svg" style="height: 4cm;"></td>
+        </tr>
+      </table>
+      <p class="exemple">Exemple :</p>
+      <p>
+        Le périmètre d'un cercle de diamètre 6cm est $\mathscr{P}=6\times \pi \approx 18,8 cm$.
+      </p>
+      <p class="remarque">Remarque :</p>
+      <ul>
+        <li>$\pi$ représente un nombre particulier. $\pi \approx 3,1415$.</li>
+        <li>Il existe la journée de PI le 14 mars (en anglais 03/14).</li>
+      </ul>
 
 
 

@@ -807,7 +807,7 @@ var sixieme_base = [
 			id: 12,
 			nom: "Longueur et périmètres",
 			icone: 6,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_12/Cours.html"
 	},
 	{

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 251.56 251.56">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #e30613;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-4 {
+        stroke-width: 3px;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-4 {
+        stroke: #1d71b8;
+      }
+
+      .cls-5 {
+        fill: #1d71b8;
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 25px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-3 {
+        stroke: #1d1d1b;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        stroke-dasharray: 0 0 8.94 8.94;
+      }
+    </style>
+  </defs>
+  <g>
+    <line class="cls-2" x1=".22" y1="125.78" x2="4.72" y2="125.78"/>
+    <line class="cls-4" x1="13.66" y1="125.78" x2="241.59" y2="125.78"/>
+    <line class="cls-2" x1="246.06" y1="125.78" x2="250.56" y2="125.78"/>
+  </g>
+  <circle class="cls-3" cx="125.78" cy="125.78" r="124.78"/>
+  <polygon class="cls-1" points="125.78 125.78 132.19 119.37 125.78 125.78 132.19 132.19 125.78 125.78 119.37 132.19 125.78 125.78 119.37 119.37 125.78 125.78"/>
+  <text class="cls-5" transform="translate(117.18 161.67)"><tspan x="0" y="0">D</tspan></text>
+</svg>
