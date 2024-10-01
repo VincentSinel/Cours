@@ -464,7 +464,7 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre 4 (A4)",
 		nom: "Généralité sur les fractions",
 		icone: 7,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_A4/Cours.html",
 	},
 	{
