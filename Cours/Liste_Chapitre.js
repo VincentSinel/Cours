@@ -903,7 +903,7 @@ var sixieme_rogervailland = [
 		nom: "Priorités opératoires",
 		icone: 14,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_Fo6-1/Cours.html",
 	},
 	{
 		id: 32,
@@ -911,7 +911,7 @@ var sixieme_rogervailland = [
 		nom: "Priorités opératoires",
 		icone: 14,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_Fo6-2/Cours.html",
 	},
 	{
 		id: 1,
@@ -1136,7 +1136,7 @@ var sixieme_rogervailland = [
 		nom: "Propriétés sur les perpendiculaires et parallèles",
 		icone: 11,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_E3/Cours.html",
 	},
 	{
 		id: 10,
@@ -1144,7 +1144,7 @@ var sixieme_rogervailland = [
 		nom: "Le cercle",
 		icone: 11,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_E4/Cours.html",
 	},
 	{
 		id: 33,
@@ -1152,7 +1152,7 @@ var sixieme_rogervailland = [
 		nom: "La médiatrice",
 		icone: 11,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_E5/Cours.html",
 	},
 	{
 		id: 28,
@@ -1160,7 +1160,7 @@ var sixieme_rogervailland = [
 		nom: "Les angles",
 		icone: 11,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_E6/Cours.html",
 	},
 	{
 		id: 38,
@@ -1168,7 +1168,7 @@ var sixieme_rogervailland = [
 		nom: "La symétrie",
 		icone: 11,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_E7/Cours.html",
 	},
 	{
 		id: 46,
@@ -1176,7 +1176,7 @@ var sixieme_rogervailland = [
 		nom: "Propriétés de la symétrie",
 		icone: 11,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_E8/Cours.html",
 	},
 	{
 		id: 51,
@@ -1184,7 +1184,7 @@ var sixieme_rogervailland = [
 		nom: "Axes de symétrie",
 		icone: 11,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_E9/Cours.html",
 	},
 	{
 		id: 41,
@@ -1192,7 +1192,7 @@ var sixieme_rogervailland = [
 		nom: "Triangles",
 		icone: 11,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_E10/Cours.html",
 	},
 	{
 		id: 48,
@@ -1200,7 +1200,7 @@ var sixieme_rogervailland = [
 		nom: "Reconnaître les volumes et patrons",
 		icone: 11,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_E11/Cours.html",
 	},
 	{
 		id: 16,
@@ -1208,7 +1208,7 @@ var sixieme_rogervailland = [
 		nom: "Tracer une perpendiculaire",
 		icone: 12,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_F1/Cours.html",
 	},
 	{
 		id: 24,
@@ -1216,7 +1216,7 @@ var sixieme_rogervailland = [
 		nom: "Tracer une parallèle",
 		icone: 12,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_F2/Cours.html",
 	},
 	{
 		id: 29,
@@ -1224,7 +1224,7 @@ var sixieme_rogervailland = [
 		nom: "Mesurer un angle",
 		icone: 12,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_F3/Cours.html",
 	},
 	{
 		id: 36,
@@ -1232,7 +1232,7 @@ var sixieme_rogervailland = [
 		nom: "Tracer un angle",
 		icone: 12,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_F4/Cours.html",
 	},
 	{
 		id: 12,
@@ -1240,7 +1240,7 @@ var sixieme_rogervailland = [
 		nom: "Tracer un triangle (Avec 3 longueurs)",
 		icone: 12,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_F5-1/Cours.html",
 	},
 	{
 		id: 42,
@@ -1248,7 +1248,7 @@ var sixieme_rogervailland = [
 		nom: "Tracer un triangle (Avec deux grandeurs)",
 		icone: 12,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_F5-2/Cours.html",
 	},
 	{
 		id: 7,
@@ -1256,7 +1256,7 @@ var sixieme_rogervailland = [
 		nom: "Lire une carte",
 		icone: 13,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_G1-1/Cours.html",
 	},
 	{
 		id: 21,
@@ -1264,7 +1264,7 @@ var sixieme_rogervailland = [
 		nom: "Décrire un déplacement",
 		icone: 13,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_G1-2/Cours.html",
 	},
 	{
 		id: 31,
@@ -1272,7 +1272,7 @@ var sixieme_rogervailland = [
 		nom: "Initiation à Scratch",
 		icone: 13,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_G2-1/Cours.html",
 	},
 	{
 		id: 40,
@@ -1280,7 +1280,7 @@ var sixieme_rogervailland = [
 		nom: "Scratch",
 		icone: 13,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_G2-2/Cours.html",
 	},
 	{
 		id: 52,
@@ -1288,7 +1288,7 @@ var sixieme_rogervailland = [
 		nom: "Scratch",
 		icone: 13,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_G2-3/Cours.html",
 	},
 	{
 		id: 13,
@@ -1296,7 +1296,7 @@ var sixieme_rogervailland = [
 		nom: "Prise en main géogébra",
 		icone: 13,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_G3-1/Cours.html",
 	},
 	{
 		id: 35,
@@ -1304,7 +1304,7 @@ var sixieme_rogervailland = [
 		nom: "Initiation Géogébra",
 		icone: 13,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_G3-2/Cours.html",
 	},
 	{
 		id: 43,
@@ -1312,7 +1312,7 @@ var sixieme_rogervailland = [
 		nom: "Initiation Géogébra",
 		icone: 13,
 		ready : false,
-		page : "RogerVailland/Chapitre_1/Cours.html",
+		page : "RogerVailland/Chapitre_G3-3/Cours.html",
 	},
 ]
 
