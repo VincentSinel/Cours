@@ -868,7 +868,7 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre 2 (Fo2)",
 		nom: "Dictionnaire : les verbes d'actions en mathématiques",
 		icone: 14,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_Fo2/Cours.html",
 	},
 	{
