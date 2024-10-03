@@ -814,7 +814,7 @@ var sixieme_base = [
 			id: 13,
 			nom: "Symétrie axiale",
 			icone: 2,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_13/Cours.html"
 	},
 	{

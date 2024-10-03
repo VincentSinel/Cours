@@ -13,11 +13,24 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script id="Animation" src="/JS/Animation/animation_holder.js"></script>
+  <script src="JS/Transformation.js"></script>
 
   <title>Chapitre 13 - Symétrie axiale</title>
 
   <style>
-    
+    #symetrieaxiale
+    {
+      border: solid black 1px; 
+      width: fit-content;
+      display: inline-block;
+    }
+    .intro div{
+      flex: 1 1 4cm; text-align: center;
+    }
+    .intro p{
+      padding: 10px;
+    }
   </style>
 
 </head>
@@ -39,8 +52,149 @@
     Activité Introduction
   </p>
 
+  <p>
+    Les figures ci-dessous représentent trois étapes successives permettant de construire, par pliage, le symétrique A' de A par rapport à la droite $(d)$.
+  </p>
+  <div class="flexobject intro">
+    <div>
+      <img src="Images/Intro1.svg" style="max-width: 8cm;">
+      <p>
+        Sur un papier uni, tracer une droite $(d)$ et placer un point A n'appartenant pas à la droite.
+      </p>
+    </div>
+    <div>
+      <img src="Images/Intro2.svg" style="max-width: 6.5cm;">
+      <p>
+        Plier la feuille selon la droite $(d)$ et marqué le point A' par transparence de A de l'autre côté de la page.
+      </p>
+    </div>
+    <div>
+      <img src="Images/Intro3.svg" style="max-width: 8cm;">
+      <p>
+        Déplier la feuille et tracer le segment [AA'].
+      </p>
+    </div>
+  </div>
+  <ol>
+    <li>Noter O le point d'intersection entre [AA'] et $(d)$. Quelle est la particularité de ce point vis-à-vis de [AA'] ?</li>
+    <li>Que peut-on dire de la droite (AA') et $(d)$</li>
+    <li>
+      Placer un point I sur la droite $(d)$ distinct de O.
+      <ol type="a">
+        <li>Mesurer [AI] et [A'I]. Que remarque-t-on ?</li>
+        <li>En déduire la nature du triangle AIA'.</li>
+      </ol>
+    </li>
+    <li>
+      Placer un point B n'appartenant pas à la droite $(d)$.
+      <ol type="a">
+        <li>En utilisant l'équerre et les propriétés vue précédement pour le segment [AA'], construire B' le symétrique du point B par rapport à la droite $(d)$.</li>
+        <li>Tracer [AB] et [A'B'].</li>
+        <li>Expliquer l'affirmation suitantes : <i>Une symétrie axiale correspond à ce que l'on retrouve dans un mirroir.</i></li>
+      </ol>
+    </li>
+  </ol>
 
+  <h1>Médiatrice :</h1>
+    <h2>Définition :</h2>
+      <div class="definition">
+        La <span class="CRed">médiatrice</span> d'un segment est la droite perpendiculaire à ce segment et qui le coupe en son milieu.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <img src="Images/Mediatrice1.svg" style="max-height: 5cm;">
+    <h2>Propriétés :</h2>
+      <div class="definition">
+        <u><b>Propriétés</b></u><br>
+        <ul>
+          <li>Si un point est situé sur la médiatrice d'un segment, alors ce point est équidistant des extrémités de ce segment.</li>
+          <li>Si un point est équidistant des extrémités d'un segment, alors ce point appartient à la médiatrice de ce segment.</li>
+        </ul>
+      </div>
+
+      <p class="exemple">Exemple :</p>
+      <img src="Images/Mediatrice2.svg" style="max-height: 5cm;">
+    <h2>Construction :</h2>
+      <p>Pour construire une médiatrice, on utilise le compas. .</p>
+      <div class="flexobject">
+        <div id="Animation4" class="animation center" width="480" height="360"></div>
+        <div style="flex: 1 1 8cm;">
+          On construit un <i>oeil de chat</i>.
+          <ul>
+            <li>On prend un écartement du compas plus grand que la moitié du segment.</li>
+            <li>On pointe sur A et on construit un arc de cercle.</li>
+            <li>On pointe sur B et on construit un arc de cercle avec le même écartement que précédement.</li>
+            <li>On relie les deux points d'intersections obtenus pour obtenir la <b>médiatrice</b>.</li>
+          </ul>
+        </div>
+      </div>
+  <h1>Symétrie axiale :</h1>
+    <h2>Définition :</h2>
+      <div class="definition">
+        Dire que deux figures sont <span class="CRed">symétriques par rapport à une droite</span> signifie que, en effectuant un pliage le long de la droite, les figures se superposent.
+      </div>
+      <div class="flexobject">
+        <div style="max-width: 8cm; margin-right: 1cm;">
+          <p class="exemple">Exemple :</p>
+          <div id="symetrieaxiale"></div>
+        </div>
+        <div style="flex: 1 1 6cm;">
+          <p class="remarque">Remarque :</p>
+          <ul>
+            <li>Dans une symétrie axiale, l'axe de symétrie est la médiatrice de tous les segments reliant un point et son image.</li>
+          </ul>
+        </div>
+      </div>
+      <br>
+      <div class="definition">
+        <u><b>Propriétés</b></u><br>
+        Lors d'une symétrie axiale les longueurs, les alignements et les angles sont conservés.
+      </div>
+    <h2>Constructions :</h2>
+      <div class="flexobject">
+        <div style="flex: 1 1 500px;">
+          <div style="text-align: center;"><b>A la règle et l'équerre :</b></div>
+          <div id="Animation1" class="animation center" width="480" height="360"></div>
+        </div>
+        <div style="flex: 1 1 500px;">
+          <div style="text-align: center;"><b>Au compas :</b></div>
+          <div id="Animation2" class="animation center" width="480" height="360"></div>
+        </div>
+      </div>
+    <h2>Axe de symétrie :</h2>
+      <div class="definition">
+        On dit qu'une droite est un <span class="CRed">axe de symétrie</span> d'une figure lorsque la figure et son symétrique par rapport à cette droite sont confondus. 
+      </div>
+      <p class="exemple">Exemple :</p>
+      <div class="flexobject">
+        <img src="Images/Avion.svg" style="max-height: 6cm;">
+        <div style="flex: 1 1 5cm;">
+          Le droite <i>(d)</i> est un axe de symétrie de la figure.
+        </div>
+      </div>
 
 </body>
-
+<script>
+  let client = new XMLHttpRequest();
+  client.open('GET', 'Images/Lobster.svg');
+  client.onreadystatechange = function(state) {
+      if (client.readyState == 4)
+      {
+          lobster1img = client.responseText
+          if (lobster2img != "")
+              Init()
+      }
+  }
+  client.send();
+  let client2 = new XMLHttpRequest();
+  client2.open('GET', 'Images/Lobster2.svg');
+  client2.onreadystatechange = function(state) {
+      if (client2.readyState == 4)
+      {
+          lobster2img = client2.responseText
+          if (lobster1img != "")
+              Init()
+      }
+  }
+  client2.send();
+</script>
 </html>
