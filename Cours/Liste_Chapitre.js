@@ -821,7 +821,7 @@ var sixieme_base = [
 			id: 14,
 			nom: "Aires de figures planes usuelles",
 			icone: 6,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_14/Cours.html"
 	},
 	{
