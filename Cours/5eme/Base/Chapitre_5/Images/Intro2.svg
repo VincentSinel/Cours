@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 171.55 63.3">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 12px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #1d1d1b;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        font-family: Bahnschrift, Bahnschrift;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-5, .cls-6 {
+        stroke-width: 0px;
+      }
+
+      .cls-5, .cls-4 {
+        fill: #e30613;
+      }
+
+      .cls-7 {
+        stroke: #e30613;
+      }
+
+      .cls-7, .cls-8 {
+        fill: none;
+      }
+
+      .cls-7, .cls-8, .cls-9 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        font-size: 27px;
+      }
+
+      .cls-8 {
+        stroke: #063;
+      }
+
+      .cls-3, .cls-6 {
+        fill: #063;
+      }
+
+      .cls-3, .cls-4 {
+        font-size: 18px;
+      }
+
+      .cls-9 {
+        fill: #cbbba0;
+        stroke: #1d1d1b;
+      }
+    </style>
+  </defs>
+  <rect class="cls-9" x=".5" y="18.77" width="37.28" height="25.79"/>
+  <rect class="cls-9" x="67.14" y="18.77" width="37.28" height="25.79"/>
+  <rect class="cls-9" x="133.78" y="18.77" width="37.28" height="25.79"/>
+  <g>
+    <line class="cls-8" x1="37.78" y1="37.45" x2="61.49" y2="37.45"/>
+    <polygon class="cls-6" points="67.14 37.45 59.18 40.7 61.07 37.45 59.18 34.2 67.14 37.45"/>
+  </g>
+  <g>
+    <line class="cls-8" x1="104.41" y1="37.45" x2="128.13" y2="37.45"/>
+    <polygon class="cls-6" points="133.78 37.45 125.82 40.7 127.71 37.45 125.82 34.2 133.78 37.45"/>
+  </g>
+  <g>
+    <line class="cls-7" x1="133.78" y1="25.87" x2="110.06" y2="25.87"/>
+    <polygon class="cls-5" points="104.41 25.87 112.37 22.62 110.49 25.87 112.37 29.13 104.41 25.87"/>
+  </g>
+  <g>
+    <line class="cls-7" x1="67.14" y1="25.87" x2="43.43" y2="25.87"/>
+    <polygon class="cls-5" points="37.78 25.87 45.74 22.62 43.85 25.87 45.74 29.13 37.78 25.87"/>
+  </g>
+  <text class="cls-2" transform="translate(12.41 38.99)"><tspan x="0" y="0">c</tspan></text>
+  <text class="cls-1" transform="translate(137.15 35.81)"><tspan x="0" y="0">21€60</tspan></text>
+  <text class="cls-3" transform="translate(42.86 58.43)"><tspan x="0" y="0">×8</tspan></text>
+  <text class="cls-3" transform="translate(102.12 58.43)"><tspan x="0" y="0">+4,8</tspan></text>
+  <text class="cls-4" transform="translate(102.56 15.39)"><tspan x="0" y="0">-4,8</tspan></text>
+  <text class="cls-4" transform="translate(43.05 15.39)"><tspan x="0" y="0">÷8</tspan></text>
+</svg>
