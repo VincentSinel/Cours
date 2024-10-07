@@ -1,13 +1,26 @@
-
-
+³
 «»
-
 × ÷
 
 🚧 🔑 🛑 ⚠️
 
+Espace :
+&#160;
+
 Espace non sécable :
 &#8239;
 
+< 
+&#60;
+
 <div class="flexparameters">
+</div>
+
+← ↑ → ↓ ↚ ↛ ↜ ↝ ↞ ↟
+
+
+
+<div class="accolade">
+	<div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div>
 </div>
