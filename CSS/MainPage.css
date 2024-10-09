@@ -492,6 +492,10 @@ a.deactivate{
   {
     top: calc(2 * var(--HeaderBarHeight) + 5px);
   }
+  .dropdown_download-content
+  {
+    top: calc(2 * var(--HeaderBarHeight) + 53px);
+  }
 	/* .menuprincipale{
 	} */
 	.openmenu{
@@ -528,6 +532,10 @@ a.deactivate{
   .DownloadButton
   {
     top: calc(2 * var(--HeaderBarHeight) + 5px);
+  }
+  .dropdown_download-content
+  {
+    top: calc(2 * var(--HeaderBarHeight) + 53px);
   }
   .secret_connect{
 	  top: calc(2 * var(--HeaderBarHeight) + 5px);
