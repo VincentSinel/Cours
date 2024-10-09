@@ -385,27 +385,80 @@ nav::-webkit-scrollbar-thumb {
 }
 /* FIN Navigation chapitres */
 
-.PDFButton
+.DownloadButton
 {
-    position: absolute;
-    top: 5px;
+    position: fixed;
+    top: calc(var(--HeaderBarHeight) + 5px);
     right: 20px;
     background: transparent;
     border: none;
     border-radius: 5px;
     padding: 2px;
     transition-duration: 0.4s;
-    
-    /* display: none;MUST BE CHANGE WHEN PDF ADDED */
 }
-.PDFButton:hover
+.DownloadButton:hover
 {
     background: #2196F388;
 }
-.PDFButton:active
+.DownloadButton:active
 {
     background: #2196F3FF;
     transition-duration: 0.1s;
+}
+
+.dropdown_download:hover .dropdown_download-content {
+  display: block;
+  max-height: calc(43px * 6);
+}
+.dropdown_download-content{
+  max-height: 0px;
+  overflow-y: hidden;
+  position: fixed;
+  border-radius: 5px;
+  background-color: var(--HeaderBack);
+  color: var(--PanelBackText);
+  top: calc(var(--HeaderBarHeight) + 53px);
+  right: 20px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  transition-duration: 0.4s;
+  width: 260px;
+}
+
+.flexparameters{
+  padding: 5px;
+	display: flex;
+	gap: 5px;
+	justify-content: space-between;
+	align-items: center;
+  transition-duration: 0.4s;
+}
+.dropdown_download-content a
+{
+  text-align: left;
+  color: var(--PanelBackText);
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: transparent;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  display: block;
+}
+.flexparameters:hover
+{
+    background-color: #2196F388;
+}
+.flexparameters:active
+{
+    background-color: #2196F3FF;
+    transition-duration: 0.1s;
+}
+a.deactivate{
+  display: none;
+  pointer-events: none;
+  text-decoration: line-through;
+  color: var(--PanelBackTextDisabled);
 }
 
 
@@ -435,6 +488,10 @@ nav::-webkit-scrollbar-thumb {
 	  top: calc(2 * var(--HeaderBarHeight));
     min-height: calc(100% - 2 * var(--HeaderBarHeight));
 	}
+  .DownloadButton
+  {
+    top: calc(2 * var(--HeaderBarHeight) + 5px);
+  }
 	/* .menuprincipale{
 	} */
 	.openmenu{
@@ -467,6 +524,10 @@ nav::-webkit-scrollbar-thumb {
     margin-left: 0;
     top: calc(2 * var(--HeaderBarHeight));
     min-height: calc(100% - 2 * var(--HeaderBarHeight));
+  }
+  .DownloadButton
+  {
+    top: calc(2 * var(--HeaderBarHeight) + 5px);
   }
   .secret_connect{
 	  top: calc(2 * var(--HeaderBarHeight) + 5px);

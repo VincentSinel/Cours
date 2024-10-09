@@ -1,5 +1,6 @@
 window.onload = function(){
 	ShowCollegeSelect()
+    SelectCollege("roger_vailland")
 }
 
 
@@ -18,8 +19,6 @@ function ShowCollegeSelect()
 {
     document.getElementById("HoverMenu").style.display = "flex";
 
-    let but = document.getElementById("PdfButton");
-    but.setAttribute("style", "display: none;");
     document.getElementById("noiframe").style.display = "block"
     frame.src = ""
     frame.style.height = 120 + 'px';
