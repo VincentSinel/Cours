@@ -1,6 +1,5 @@
 window.onload = function(){
 	ShowCollegeSelect()
-    SelectCollege("roger_vailland")
 }
 
 
