@@ -842,15 +842,15 @@ var sixieme_base = [
 			id: 17,
 			nom: "Priorités opératoires",
 			icone: 1,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_17/Cours.html"
 	},
 	{
-		id: 18,
-		nom: "Se repérer dans le temps",
-		icone: 5,
-		ready : true,
-		page : "Base/Chapitre_18/Cours.html",
+			id: 18,
+			nom: "Se repérer dans le temps",
+			icone: 5,
+			ready : true,
+			page : "Base/Chapitre_18/Cours.html",
 	},
 ]
 
