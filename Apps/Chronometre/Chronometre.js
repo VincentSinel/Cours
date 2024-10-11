@@ -38,6 +38,7 @@ function Timer(time)
 var target_time = 0;
 var last_update = 0;
 var current = "pause";
+var audio = new Audio('Bip.mp3');
 
 function Running()
 {
@@ -61,6 +62,11 @@ function Running()
 	last_update = Date.now();
 	if (target_time > 0 && current == "play")
 		window.requestAnimationFrame(Running);
+  else if (target_time <= 0)
+	{
+		if (document.getElementById("sound").checked)
+			audio.play();
+	}
 }
 
 
