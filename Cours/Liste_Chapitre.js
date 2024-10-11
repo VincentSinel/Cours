@@ -828,7 +828,7 @@ var sixieme_base = [
 			id: 15,
 			nom: "Proportionnalité et pourcentages",
 			icone: 1,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_15/Cours.html"
 	},
 	{
