@@ -1080,6 +1080,10 @@ var sixieme_rogervailland = [
 		id: 4,
 		chapter: "Chapitre 1 (D1)",
 		nom: "Se repérer dans le temps",
+		download: {
+			pdf: "/Cours/6eme/RogerVailland/Chapitre_D1/Documents/D1 - Se repérer dans le temps.pdf",
+			docx: "/Cours/6eme/RogerVailland/Chapitre_D1/Documents/D1 - Se repérer dans le temps.docx",
+		},
 		icone: 10,
 		ready : true,
 		page : "RogerVailland/Chapitre_D1/Cours.html",
@@ -1137,7 +1141,8 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre 1 (E1)",
 		nom: "Droites",
 		download: {
-			pdf: "/Cours/6eme/RogerVailland/Chapitre_E1/Cours.pdf",
+			pdf: "/Cours/6eme/RogerVailland/Chapitre_E1/Documents/Cours.pdf",
+			docx: "/Cours/6eme/RogerVailland/Chapitre_E1/Documents/Cours.docx",
 		},
 		icone: 11,
 		ready : true,
