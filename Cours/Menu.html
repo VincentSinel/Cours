@@ -56,12 +56,12 @@
     </div>
     <header>
       <div class="menuprincipale">
-		<div class="blockmenu blockmenuprincipal" onclick="Menu()"><span></span></div>
-		<div class="blockmenu blockmenucours" onclick="Cours()"><span></span></div>
-		<div class="blockmenu blockmenugenerateurs" onclick="Outils()"><span></span></div>
-		<div class="blockmenu blockmenudocuments" onclick="Documents()"><span></span></div>
-		<div class="blockmenu blockmenuapps" onclick="Applications()"><span></span></div>
-		<div class="blockmenu blockmenusecret" onclick="ShowConnection()"><span></span></div>
+		<div class="blockmenu blockmenuprincipal" title="Menu principal" onclick="Menu()"><span></span></div>
+		<div class="blockmenu blockmenucours" title="Cours" onclick="Cours()"><span></span></div>
+		<div class="blockmenu blockmenugenerateurs" title="Générateurs de formes" onclick="Outils()"><span></span></div>
+		<div class="blockmenu blockmenudocuments" title="Recherche de documents" onclick="Documents()"><span></span></div>
+		<div class="blockmenu blockmenuapps" title="Applications" onclick="Applications()"><span></span></div>
+		<div class="blockmenu blockmenusecret" title="???" onclick="ShowConnection()"><span></span></div>
       </div>
     </header>
   </div>
@@ -114,6 +114,19 @@
           </svg>
         </div>
         <div class="dropdown_download-content">
+          <a id="PdfDefault" class="unselectable">
+            <div class="flexparameters">
+              Générer le PDF <span style="font-size: 8pt;">(Rendu incertain)</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 213.51 262.5" width="27" height="33">
+                <path style="fill: #ff2116;" d="M27.11,0A27.16,27.16,0,0,0,0,27.12V235.38A27.15,27.15,0,0,0,27.11,262.5H186.36a27.15,27.15,0,0,0,27.11-27.12V64.13a22.38,22.38,0,0,0-1.75-9.89,27.38,27.38,0,0,0-5.36-7.76l0,0L166.82,7.69l-.07-.06a31,31,0,0,0-8.37-5.36,30.55,30.55,0,0,0-12-2.26H27.11Z"/>
+                <path style="fill: #f5f5f5;" d="M27.11,8.91H146.6a25.64,25.64,0,0,1,8.27,1.54,22.94,22.94,0,0,1,5.76,3.64l0,0,39.41,38.67a21.55,21.55,0,0,1,3.53,5.08,19.18,19.18,0,0,1,1,5.89,1.15,1.15,0,0,1,0,.19V235.38a18.06,18.06,0,0,1-18.2,18.21H27.11a18.07,18.07,0,0,1-18.2-18.21V27.12A18.07,18.07,0,0,1,27.11,8.91Z"/>
+                <path style="fill: #ff2116;" d="M148.1,109.4L148.1,126.8L65.4,126.8L65.4,109.4L49.5,109.4L49.5,142.7L164,142.7L164,109.4Z M107.1,119.6L138.8,64.6L123,64.6L123,39.2L91.2,39.2L91.2,64.6L75.4,64.6Z"/>
+                <path style="fill: #2c2c2c;" d="M63.73,184.67h10a26.93,26.93,0,0,1,7.74.92,9,9,0,0,1,5,4,13,13,0,0,1,2,7.39,13.41,13.41,0,0,1-1.64,6.83,9.66,9.66,0,0,1-4.45,4.12c-1.84.84-4.69,1.27-8.54,1.27H70.38v15.69H63.73Zm6.65,5.15v14h3.3q4.41,0,6.09-1.65t1.71-5.36a8.06,8.06,0,0,0-1.12-4.47,4.58,4.58,0,0,0-2.47-2.12,15.25,15.25,0,0,0-4.21-.42Z"/>
+                <path style="fill: #2c2c2c;" d="M93.55,184.67h9q6.55,0,10.48,2.33a14.43,14.43,0,0,1,5.94,6.92,24.78,24.78,0,0,1,2,10.18,28.35,28.35,0,0,1-1.82,10.51,16.68,16.68,0,0,1-5.54,7.42q-3.71,2.83-10.59,2.83H93.55ZM100.2,190v29.53H103q5.81,0,8.42-4T114,204.78Q114,190,103,190Z"/>
+                <path style="fill: #2c2c2c;" d="M127.43,184.67h22.32V190H134.09v12h12.54v5.33H134.09v17.52h-6.66Z"/>
+              </svg>
+            </div>
+          </a>
           <a id="PdfButton" class="unselectable">
             <div class="flexparameters">
               Télécharger le PDF complet
@@ -264,7 +277,12 @@
 
     function CreatePDFButton()
     {
+
       let but = document.getElementById("PdfButton");
+      but.target="_blank";
+      but.download="Cours complet.pdf"
+
+      but = document.getElementById("PdfDefault");
       but.target="_blank";
       but.download="Cours complet.pdf"
 
@@ -293,12 +311,15 @@
 
     function SetDownloadButton(path, element)
     {
+      let but_default = document.getElementById("PdfDefault");
       let but_pdf1 = document.getElementById("PdfButton");
       let but_pdf2 = document.getElementById("PdfButton2");
       let but_docx1 = document.getElementById("DocxButton");
       let but_docx2 = document.getElementById("DocxButton2");
       let but_odt1 = document.getElementById("OdtButton");
       let but_odt2 = document.getElementById("OdtButton2");
+      but_default.classList.add("deactivate")
+      but_pdf1.classList.add("deactivate")
       but_pdf2.classList.add("deactivate")
       but_docx1.classList.add("deactivate")
       but_docx2.classList.add("deactivate")
@@ -310,12 +331,16 @@
 
         // PDF complet
         if (list.hasOwnProperty("pdf"))
-        { but_pdf1.href = list.pdf;}
+        { 
+          but_pdf1.href = list.pdf;
+          but_pdf1.classList.remove("deactivate")
+        }
         else
         {
           var pageUrl = encodeURIComponent("https://vsinel.fr" + path);
           var opts = ['save-link=' + pageUrl, 'pageOrientation=portrait', 'pageSize=a4', 'pageMargin=2cm'];
-          but_pdf1.href = 'https://www.sejda.com/html-to-pdf?' + opts.join('&');
+          but_default.href = 'https://www.sejda.com/html-to-pdf?' + opts.join('&');
+          but_default.classList.remove("deactivate")
         }
 
         // PDF trou
@@ -353,6 +378,13 @@
           but_odt2.classList.remove("deactivate")
         }
         
+      }
+      else
+      {
+        var pageUrl = encodeURIComponent("https://vsinel.fr" + path);
+        var opts = ['save-link=' + pageUrl, 'pageOrientation=portrait', 'pageSize=a4', 'pageMargin=2cm'];
+        but_default.href = 'https://www.sejda.com/html-to-pdf?' + opts.join('&');
+        but_default.classList.remove("deactivate")
       }
     }
 
