@@ -859,6 +859,11 @@ var sixieme_rogervailland = [
 		id: 60,
 		chapter: "Chapitre 1 (Fo1)",
 		nom: "Consignes de début d'année",
+		download: {
+			pdf: "/Cours/6eme/RogerVailland/Chapitre_Fo1/Documents/Consignes de début d'année.pdf",
+			docx: "/Cours/6eme/RogerVailland/Chapitre_Fo1/Documents/Consignes de début d'année.docx",
+			odt: "/Cours/6eme/RogerVailland/Chapitre_Fo1/Documents/Consignes de début d'année.odt",
+		},
 		icone: 14,
 		ready : true,
 		page : "RogerVailland/Chapitre_Fo1/Cours.html",
@@ -921,6 +926,10 @@ var sixieme_rogervailland = [
 		id: 1,
 		chapter: "Chapitre 1 (A1)",
 		nom: "Les nombres entiers",
+		download: {
+			pdf: "/Cours/6eme/RogerVailland/Chapitre_A1/Documents/A1 - Nombres entiers.pdf",
+			docx: "/Cours/6eme/RogerVailland/Chapitre_A1/Documents/A1 - Nombres entiers.docx",
+		},
 		icone: 7,
 		ready : true,
 		page : "RogerVailland/Chapitre_A1/Cours.html",
