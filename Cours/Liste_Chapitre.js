@@ -835,7 +835,7 @@ var sixieme_base = [
 			id: 16,
 			nom: "Pavé droit",
 			icone: 2,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_16/Cours.html"
 	},
 	{

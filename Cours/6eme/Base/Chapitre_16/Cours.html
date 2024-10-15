@@ -17,7 +17,35 @@
   <title>Chapitre 16 - Pavé droit</title>
 
   <style>
-    
+    .p-table {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: auto auto repeat(2, 50px);
+      align-content: center;
+      vertical-align: middle;
+      text-align: center;
+      border: solid 1px black;
+    }
+    .line_title3 {
+      background-color: #3CB3E3;
+      font-size: 12pt;
+      font-weight: bold;
+    }
+    .line_title4 {
+      background-color: #88FF87;
+      font-size: 12pt;
+      font-weight: bold;
+    }
+
+    .p-table div{
+      border: solid 1px black;
+      align-content: center;
+    }
+
+    .p-table p {
+      font-size: 12pt;
+      font-weight: bold;
+    }
   </style>
 
 </head>
@@ -39,6 +67,179 @@
     Activité Introduction
   </p>
 
+  <p>Un polyèdres est un <b>solide</b> dont toutes les faces sont des polygones. En voici quatre :</p>
+  <table class="proportionnaltable">
+    <tr>
+      <th>Solide</th>
+      <td><b>Cube</b></td>
+      <td><b>Pyramide</b></td>
+      <td><b>Parallélépipède rectangle</b></td>
+      <td><b>Prisme droit</b></td>
+    </tr>
+    <tr>
+      <th>Représentation en perspective cavalière</th>
+      <td><img src="Images/Cube1.svg" style="max-width: 4cm;"></td>
+      <td><img src="Images/Pyramide1.svg" style="max-width: 4cm;"></td>
+      <td><img src="Images/Pave1.svg" style="max-width: 4cm;"></td>
+      <td><img src="Images/Prisme1.svg" style="max-width: 4cm;"></td>
+    </tr>
+    <tr>
+      <th>Patron</th>
+      <td><img src="Images/Cube2.svg" style="max-width: 4cm;"></td>
+      <td><img src="Images/Pyramide2.svg" style="max-width: 4cm;"></td>
+      <td><img src="Images/Pave2.svg" style="max-width: 4cm;"></td>
+      <td><img src="Images/Prisme2.svg" style="max-width: 4cm;"></td>
+    </tr>
+    <tr>
+      <th>Nombres de faces</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Nombres de sommets</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Nombres d'arêtes</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+  </table>
+  <ol>
+    <li>
+      Completer les trois dernières lignes du tableau.
+    </li>
+    <li>
+      On se concentre sur le cube et le parallélépipède rectangle.
+      <ol type="a">
+        <li>
+          Qu'ont-ils en commun ?
+        </li>
+        <li>
+          Quelle est la forme des faces d'un parallélépipède rectangle ?
+        </li>
+        <li>
+          Construire le patron d'un cube de côté 4cm.
+        </li>
+      </ol>
+    </li>
+  </ol>
+
+  <h1>Cube et parallélépipède rectangle :</h1>
+    <h2>Perspective cavalière :</h2>
+      <div class="definition">
+        La <span class="CRed">perspective cavalière</span> est une représentation plane d'un solide avec :
+        <ul>
+          <li>La face avant en vraie grandeur ;</li>
+          <li>Conservation des parallèlisme et des alignements ;</li>
+          <li>La profondeur représenté par des arêtes <b>obliques</b> et plus courte que la réalité ;</li>
+          <li>Les arêtes cachés en pointillés.</li>
+        </ul>
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>
+        La figure ci-dessous représente le parallélépipède rectangle ABCDEFGH en perspective cavalière.
+      </p>
+      <img src="Images/Perspective1.svg" style="max-height: 7cm;">
+    <h2>Parallélépipède rectangle :</h2>
+      <h3>Définition :</h3>
+        <div class="definition">
+          Un <span class="CRed">parallélépipède rectangle</span> (aussi appelé <span class="CRed">pavé droit</span>) est un solide composé de six faces rectangulaires.
+        </div>
+        <p class="exemple">Exemple :</p>
+        <p>ABCDEFGH est un pavé droit représenté en perspective cavalière.</p>
+        <img src="Images/Pave3.svg" style="max-height: 4cm;">
+        <p class="remarque">Remarques :</p>
+        <ul>
+          <li>Les points sont appelés <span class="CRed">sommets</span>. Par exemple le sommet D.</li>
+          <li>Les segments reliant deux sommets sur le bord du solide sont appelés <span class="CRed">arêtes</span>. Par exemple l'arêtes [BC].</li>
+          <li>Les polygones (ici rectangle) formé par les arêtes sont appelés <span class="CRed">faces</span>. Par exemple la face ABFE.</li>
+          <li>Les solides composés de faces polygonales sont appelés <b>polyèdres</b></li>
+        </ul>
+        <div class="definition">
+          Un <span class="CRed">cube</span> est un parallélépipède rectangle particulier dont toutes les faces sont des <b>carrés</b>.
+        </div>
+        <p class="exemple">Exemple :</p>
+        <img src="Images/Cube3.svg" style="max-height: 4cm;">
+        <p class="remarque">Remarque :</p>
+        <ul>
+          <li>Un cube a toutes ses arêtes de même longueur.</li>
+        </ul>
+      <h3>Patron :</h3>
+        <div class="definition">
+          Un patron est un dessin du plan permettant de construire un solide par découpage et pliage.
+        </div>
+        <p class="exemple">Exemple :</p>
+        <p>Le patron d'un cube est composé de six carré collé les uns aux autres.</p>
+        <img src="Images/Cube4.svg" style="max-height: 5cm;">
+        <p class="remarque">Remarque :</p>
+        <ul>
+          <li>Il est possible de créer plusieurs patron différents pour un même solide.</li>
+        </ul>
+  <h1>Volume :</h1>
+    <div class="definition">
+      Le <span class="CRed">volume</span> est une grandeur représentant la contenance d'un solide. Il existe deux unités usuelles utilisé, le <b>mètre cube</b> noté <b>m³</b> et le <b>litre</b> noté <b>L</b>.
+    </div>
+    <p class="remarque">Remarques :</p>
+    <ul>
+      <li>1 m³ c'est le volume d'un cube dont tous les côtés font 1 m.</li>
+      <li>1 L correspond à 1 dm³</li>
+      <li>En m³, pour passer d'une sous-unité à l'autre, on multiplie ou divise par 1 000.</li>
+    </ul>
+    <p>Tableau de conversion d'un volume</p>
+    <div class="p-table" style="grid-template-columns: repeat(21, 1fr);">
+      <div class="line_title4" style="grid-column: 1 / 4;">Kilomètre cube<br><span style="font-size: 20pt;">km³</span></div>
+      <div class="line_title4" style="grid-column: 4 / 7;">Hectomètre cube<br><span style="font-size: 20pt;">hm³</span></div>
+      <div class="line_title4" style="grid-column: 7 / 10;">Decamètre cube<br><span style="font-size: 20pt;">dam³</span></div>
+      <div class="line_title4" style="grid-column: 10 / 13;">Mètre cube<br><span style="font-size: 20pt;">m³</span></div>
+      <div class="line_title4" style="grid-column: 13 / 16;">Décimètre cube<br><span style="font-size: 20pt;">dm³</span></div>
+      <div class="line_title4" style="grid-column: 16 / 19;">Centimètre cube<br><span style="font-size: 20pt;">cm³</span></div>
+      <div class="line_title4" style="grid-column: 19 / 22;">Millimètre cube<br><span style="font-size: 20pt;">mm³</span></div>
+
+      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
+      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
+      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
+      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
+      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
+      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
+      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
+      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
+      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
+      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
+      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
+      <div class="line_title3">Kilolitre<br><span style="font-size: 20pt;">kL</span></div>
+      <div class="line_title3">Hectolitre<br><span style="font-size: 20pt;">hL</span></div>
+      <div class="line_title3">Decalitre<br><span style="font-size: 20pt;">daL</span></div>
+      <div class="line_title3">Litre<br><span style="font-size: 20pt;">L</span></div>
+      <div class="line_title3">Décilitre<br><span style="font-size: 20pt;">dL</span></div>
+      <div class="line_title3">Centilitre<br><span style="font-size: 20pt;">cL</span></div>
+      <div class="line_title3">Millilitre<br><span style="font-size: 20pt;">mL</span></div>
+      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
+      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
+      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
+      <div></div><div></div><div></div><div>4</div><div>2</div><div>6</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>5</div>
+    </div>
+    <p class="exemple">Exemples :</p>
+    <ul>
+      <li>426 hm³ = 426 000 000 000 dm³</li>
+      <li>5 mm³ = 0,00 000 5 L</li>
+    </ul>
+    <div class="definition">
+      <b><u>Propriété :</u></b><br>
+      Le volume $V$ d'un pavé droit, de dimension L, 𝓁 et <i>h</i>, est :<br>
+      $V=L\times 𝓁\times h$
+    </div>
+    <p class="exemple">Exemples :</p>
+    <p>Un pavé droit de 5 cm par 7 cm par 6 cm a pour volume $5\times7\times6 = 210 cm^3$</p>
+    <p>Un cube de 4 cm de côté a pour volume $4\times4\times4 = 64 cm^3$</p>
 
 
 </body>

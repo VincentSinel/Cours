@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 331.98 294.07">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #010101;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-1" points="124.67 .5 83.25 .5 53.96 29.79 53.96 71.21 83.25 100.5 124.67 100.5 153.96 71.21 153.96 29.79 124.67 .5"/>
+  <rect class="cls-1" x="83.25" y="100.5" width="41.37" height="93.07"/>
+  <rect class="cls-1" x="124.62" y="100.5" width="41.37" height="93.07"/>
+  <rect class="cls-1" x="165.99" y="100.5" width="41.37" height="93.07"/>
+  <rect class="cls-1" x="207.36" y="100.5" width="41.37" height="93.07"/>
+  <rect class="cls-1" x="41.87" y="100.5" width="41.37" height="93.07"/>
+  <rect class="cls-1" x=".5" y="100.5" width="41.37" height="93.07"/>
+  <rect class="cls-1" x="248.74" y="100.5" width="41.37" height="93.07"/>
+  <rect class="cls-1" x="290.11" y="100.5" width="41.37" height="93.07"/>
+  <polygon class="cls-1" points="124.64 193.57 83.22 193.57 53.93 222.86 53.93 264.28 83.22 293.57 124.64 293.57 153.93 264.28 153.93 222.86 124.64 193.57"/>
+</svg>
