@@ -434,6 +434,135 @@ var cinquieme_base = [
 	}
 ]
 
+var cinquieme_saintexupery = [
+	{
+			id: 1,
+			nom: "Nombres Relatifs - Comparaison et repérage",
+			icone: 1,
+			ready : true,
+			page : "Base/Chapitre_1/Cours.html",
+	},
+	{
+			id: 2,
+			nom: "Symétries",
+			icone: 2,
+			ready : true,
+			page : "Base/Chapitre_2/Cours.html"
+	},
+	{
+			id: 3,
+			nom: "Priorités opératoires",
+			icone: 1,
+			ready : true,
+			page : "Base/Chapitre_3/Cours.html"
+	},
+	{
+			id: 4,
+			nom: "Angles particuliers",
+			icone: 2,
+			ready : false,
+			page : "Base/Chapitre_4/Cours.html"
+	},
+	{
+			id: 5,
+			nom: "Calcul littéral (Partie 1)",
+			icone: 3,
+			ready : true,
+			page : "Base/Chapitre_5/Cours.html"
+	},
+	{
+			id: 6,
+			nom: "Angles d'un triangle",
+			icone: 2,
+			ready : false,
+			page : "Base/Chapitre_6/Cours.html"
+	},
+	{
+			id: 7,
+			nom: "Calcul littérales (Partie 2)",
+			icone: 3,
+			ready : false,
+			page : "Base/Chapitre_7/Cours.html"
+	},
+	{
+			id: 8,
+			nom: "Solide - Prisme",
+			icone: 2,
+			ready : false,
+			page : "Base/Chapitre_8/Cours.html"
+	},
+	{
+			id: 9,
+			nom: "Multiples et diviseurs",
+			icone: 1,
+			ready : false,
+			page : "Base/Chapitre_9/Cours.html"
+	},
+	{
+			id: 10,
+			nom: "Triangles - Longueurs et droites remarquables",
+			icone: 2,
+			ready : false,
+			page : "Base/Chapitre_10/Cours.html"
+	},
+	{
+			id: 11,
+			nom: "Fraction - Proportion et quotient",
+			icone: 1,
+			ready : false,
+			page : "Base/Chapitre_11/Cours.html"
+	},
+	{
+			id: 12,
+			nom: "Proportionnalité",
+			icone: 5,
+			ready : false,
+			page : "Base/Chapitre_12/Cours.html"
+	},
+	{
+			id: 13,
+			nom: "Statistiques",
+			icone: 5,
+			ready : false,
+			page : "Base/Chapitre_13/Cours.html"
+	},
+	{
+			id: 14,
+			nom: "Fraction - Comparaison,  somme et différence",
+			icone: 1,
+			ready : false,
+			page : "Base/Chapitre_14/Cours.html"
+	},
+	{
+			id: 15,
+			nom: "Parallélogrammes",
+			icone: 2,
+			ready : false,
+			page : "Base/Chapitre_15/Cours.html"
+	},
+	{
+			id: 16,
+			nom: "Nombres Relatifs - Additions et Soustractions",
+			icone: 1,
+			ready : false,
+			page : "Base/Chapitre_16/Cours.html"
+	},
+	{
+			id: 17,
+			nom: "Solides - Polyèdres, Cône et Sphère",
+			icone: 2,
+			ready : false,
+			page : "Base/Chapitre_17/Cours.html"
+	},
+	{
+			id: 18,
+			nom: "Probabilités",
+			icone: 4,
+			ready : false,
+			page : "Base/Chapitre_18/Cours.html"
+	},
+]
+
 var cinquieme_rogervailland = [
 	{
 		id: 10,
@@ -1352,7 +1481,7 @@ var ListeCours = {
 	},
 	cinquieme: {
 		"roger_vailland" : cinquieme_rogervailland,
-		"saint_exupery" : cinquieme_base,
+		"saint_exupery" : cinquieme_saintexupery,
 		"madame_de_lafayette" : cinquieme_base,
 	},
 	sixieme: {
