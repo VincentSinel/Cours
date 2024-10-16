@@ -908,19 +908,11 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 22,
-		chapter: "Chapitre 6.1 (Fo6 Partie 1)",
+		chapter: "Chapitre 6 (Fo6)",
 		nom: "Priorités opératoires",
 		icone: 14,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_Fo6-1/Cours.html",
-	},
-	{
-		id: 32,
-		chapter: "Chapitre 6.2 (Fo6 Partie 2)",
-		nom: "Priorités opératoires",
-		icone: 14,
-		ready : false,
-		page : "RogerVailland/Chapitre_Fo6-2/Cours.html",
 	},
 	{
 		id: 1,

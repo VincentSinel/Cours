@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Fo6 - Priorités opératoires</title>
+
+  <style>
+    
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Fo6
+      </td>
+      <td id="ChapitreNom">
+        - Priorités opératoires
+      </td>
+    </tr>
+  </table>
+  
+  <h1>Vocabulaire des opérations :</h1>
+
+
+  <table class="proportionnaltable">
+    <tr>
+      <th>Opération</th>
+      <th>Résultat</th>
+      <th>Nombres dans le calcul</th>
+    </tr>
+    <tr>
+      <td>Addition</td>
+      <td>Somme</td>
+      <td>Terme + Terme</td>
+    </tr>
+    <tr>
+      <td>Soustraction</td>
+      <td>Différence</td>
+      <td>Terme - Terme</td>
+    </tr>
+    <tr>
+      <td>Multiplication</td>
+      <td>Produit</td>
+      <td>Facteur × Facteur</td>
+    </tr>
+    <tr>
+      <td>Division</td>
+      <td>Quotient</td>
+      <td style="width: 200px;">Dividende ÷  Diviseur</td>
+    </tr>
+  </table>
+
+  <h1>Règles de priorités :</h1>
+    <div class="flexobject" style="gap: 20px;">
+      <div class="definition" style="flex: 1 1 8cm;">
+        <span class="CRed"><b><u>Régle n°1</u></b></span><br>
+        Pour calculer une suite d'<b>additions</b> et de <b>soustractions</b> sans parenthèses, on fait les opérations une par une <b>dans l'ordre</b> où elles sont écrites.
+      </div>
+      <div style="flex: 1 1 8cm;">
+        <p class="exemple" style="margin-top: 0;">Exemple :</p>
+        <p>$23-12+9=11+9=20$</p>
+      </div>
+    </div>
+    <div class="flexobject" style="gap: 20px;">
+      <div class="definition" style="flex: 1 1 8cm;">
+        <span class="CRed"><b><u>Régle n°2</u></b></span><br>
+        Pour calculer une suite <b>multiplications</b> et de <b>divisions</b> sans parenthèses, on fait les opérations une par une <b>dans l'ordre</b> où elles sont écrites.
+      </div>
+      <div style="flex: 1 1 8cm;">
+        <p class="exemple">Exemple :</p>
+        <p>$27\div3\times9=9\times9=81$</p>
+      </div>
+    </div>
+    <div class="flexobject" style="gap: 20px;">
+      <div class="definition" style="flex: 1 1 8cm;">
+        <span class="CRed"><b><u>Régle n°3</u></b></span><br>
+        La multiplication et la division sont <b><u>prioritaires</u></b> par rapport à l'addition et à la soustraction.
+      </div>
+      <div style="flex: 1 1 8cm;">
+        <p class="exemple">Exemples :</p>
+        <ul>
+          <li>
+            <div>
+              $4\ + $ <div class="u_lat">$3\times7$</div>$=4+21=25$
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="u_lat">$36\div3$</div> $-$ <div class="u_lat">$5\times2$</div>$=12-10=2$
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="flexobject" style="gap: 20px;">
+      <div class="definition" style="flex: 1 1 8cm;">
+        <span class="CRed"><b><u>Régle n°4</u></b></span><br>
+        Dans une suite de calculs comprenant des parenthèses, on effectue d'abord les calculs entre parenthèses.
+      </div>
+      <div style="flex: 1 1 8cm;">
+        <p class="exemple">Exemples :</p>
+        <ul>
+          <li>
+            <div>
+              $25\ - ($ <div class="u_lat">$12+9$</div> $)=25-21=4$
+            </div>
+          </li>
+          <li>
+            <div>
+              <div style="display: inline-block;">$36\ -(5 + 2\times($<div class="u_lat">$15-9$</div>$))$</div>
+              <div style="display: inline-block;">$= 36\ - (5 + $<div class="u_lat">$2\times6$</div>$)$</div>
+              <div style="display: inline-block;">$= 36-($<div class="u_lat">$5+12$</div>$)$</div>
+              $= 36-17=24$</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+        
+</body>
+
+</html>
