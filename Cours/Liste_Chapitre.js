@@ -912,7 +912,7 @@ var sixieme_rogervailland = [
 		nom: "Priorités opératoires",
 		icone: 14,
 		ready : true,
-		page : "RogerVailland/Chapitre_Fo6-1/Cours.html",
+		page : "RogerVailland/Chapitre_Fo6/Cours.html",
 	},
 	{
 		id: 1,
