@@ -315,7 +315,7 @@ var cinquieme_base = [
 	},
 	{
 			id: 4,
-			nom: "Algorithme",
+			nom: "Angles particuliers",
 			icone: 2,
 			ready : false,
 			page : "Base/Chapitre_4/Cours.html"
@@ -460,7 +460,7 @@ var cinquieme_saintexupery = [
 			id: 4,
 			nom: "Angles particuliers",
 			icone: 2,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_4/Cours.html"
 	},
 	{
