@@ -769,7 +769,7 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre 1 (F1)",
 		nom: "La symétrie centrale",
 		icone: 12,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_F1/Cours.html",
 	},
 	{

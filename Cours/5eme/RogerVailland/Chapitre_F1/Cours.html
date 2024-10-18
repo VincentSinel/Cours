@@ -13,10 +13,19 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script id="Animation" src="/JS/Animation/animation_holder.js"></script>
+  <script src="JS/Transformation.js"></script>
 
-  <title>E1 - Généralité sur les triangles</title>
+  <title>F1 - La symétrie centrale</title>
 
   <style>
+    #symetrieaxiale,
+    #symetriecentrale
+    {
+      border: solid black 1px; 
+      width: fit-content;
+      display: inline-block;
+    }
   </style>
 
 </head>
@@ -26,10 +35,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        E1
+        F1
       </td>
       <td id="ChapitreNom">
-        - Nombres Relatifs (Partie 1)
+        - La symétrie centrale
       </td>
     </tr>
   </table>
@@ -38,7 +47,76 @@
     Activité Introduction
   </p>
 
+  <div class="flexobject">
+    <div style="flex: 1 1 6cm;">
+      Voici une figure.
+      <ol type="a">
+        <li>
+          Reproduire sur une feuille quadrillée cette figure.
+        </li> 
+        <li>Construire le point A' image du point A par la <b>symétrie</b> de <i>centre O</i>.</li>
+        <li>En procédant de la même manière pour tous les sommets de la figure rose, construire son <b>symétrique</b> par rapport au <i>centre O</i>.</li>
+        <li>Que peut-on dire du point O pour le segment [AA']</li>
+      </ol>
+    </div>
+    <div style="max-height: 10cm;">
+      <div style="text-align: center;"><b>Figure 2</b></div>
+      <img src="Images/Forme2.svg">
+    </div>
+  </div>
+
+  <h1>Définition :</h1>  
+      <div class="definition">
+        Dire que deux figures sont <span class="CRed">symétriques par rapport à un point</span> signifie que, en effectuant un demi-tour autour de ce point, les figures se superposent.
+      </div>
+      <div class="flexobject">
+        <div id="symetriecentrale"></div>
+        <div style="flex: 1 1 5cm;">
+          <ul>
+            <li>Le point O est appelé le centre de symétrie
+            </li>
+            <li>
+              La figure bleu est le symétrique de la figure rouge par rapport à O
+            </li>
+          </ul>
+        </div>
+      </div>
+      <br><br>
+    <h1>Construction :</h1> 
+      <div class="definition">
+        Dire que deux points M et M' sont symétriques par rapport à un point O signifie que le point O est le <b>milieu</b> du segment [MM'].
+      </div>
+
+      <div>
+        <div style="text-align: center;"><b>Construction a la règle et au compas :</b></div>
+        <div id="Animation3" class="animation center" width="480" height="360"></div>
+      </div>
+
+
   
 </body>
-
+<script>
+  let client = new XMLHttpRequest();
+  client.open('GET', 'Images/Lobster.svg');
+  client.onreadystatechange = function(state) {
+      if (client.readyState == 4)
+      {
+          lobster1img = client.responseText
+          if (lobster2img != "")
+              Init()
+      }
+  }
+  client.send();
+  let client2 = new XMLHttpRequest();
+  client2.open('GET', 'Images/Lobster2.svg');
+  client2.onreadystatechange = function(state) {
+      if (client2.readyState == 4)
+      {
+          lobster2img = client2.responseText
+          if (lobster1img != "")
+              Init()
+      }
+  }
+  client2.send();
+</script>
 </html>
