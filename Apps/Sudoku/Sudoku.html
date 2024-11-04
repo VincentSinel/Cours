@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">	
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta http-equiv="content-language" content="fr">
+		<link rel="stylesheet" href="/CSS/MainPage.css"> 
+		<link rel="stylesheet" href="Sudoku.css"> 
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="sudoku_lib.js"></script>
+		<script src="MenuSudoku.js"></script>
+		<script src="Sudoku.js"></script>
+
+		<title>Générateur de sudoku</title>
+
+		<style>
+		</style>
+
+	</head>
+	<body>
+		<div class="main_content">
+			<div class="left_panel">
+				<label>Type de sudoku</label>
+				<div class="type_selector_holder">
+					
+					<div id="GenerateButton_Classique" class="iconbutton iconline iconbutton-selected" onclick="SelectMenu(0)">
+						<div class="flexline">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 160 160" >
+								<path d="M100,60v40H60V60H100 M110,50H50v60h60V50L110,50z" fill="currentColor"/>
+							</svg>
+							<div class="flexcolumn">
+								<label class="button-text">Classique</label>
+								<div id="progressionContainer" class="progression-bar hidden">
+									<div style="display: grid;">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 160 24">
+											<rect id="ProgressionRect_Classique" width="0" height="20" x="2" y="2" fill="currentColor"/>
+										</svg>
+										<label id="ProgressionLabel_Classique">0%</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="GenerateButton_Double" class="iconbutton iconline" onclick="SelectMenu(1)">
+						<div class="flexline">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 160 160" >
+								<path d="M90,50v10v10h10h10v40H70v-10V90H60H50V50H90 M100,40H40v60h20v20h60V60h-20V40L100,40z" fill="currentColor"/>
+							</svg>
+							<div class="flexcolumn">
+								<label class="button-text">Double</label>
+								<div id="progressionContainer" class="progression-bar hidden">
+									<div style="display: grid;">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 160 24">
+											<rect id="ProgressionRect_Double" width="0" height="20" x="2" y="2" fill="currentColor"/>
+										</svg>
+										<label id="ProgressionLabel_Double">0%</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="GenerateButton_Triple" class="iconbutton iconline" onclick="SelectMenu(2)">
+						<div class="flexline">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 160 160" >
+								<path d="M80,40v10v10h10h10v10v10h10h10v40H80v-10v-10H70H60V90V80H50H40V40H80 M90,30H30v60h20v20h20v20h60V70h-20V50H90V30L90,30z" fill="currentColor"/>
+							</svg>
+							<div class="flexcolumn">
+								<label class="button-text">Triple</label>
+								<div id="progressionContainer" class="progression-bar hidden">
+									<div style="display: grid;">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 160 24">
+											<rect id="ProgressionRect_Triple" width="0" height="20" x="2" y="2" fill="currentColor"/>
+										</svg>
+										<label id="ProgressionLabel_Triple">0%</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="GenerateButton_Quadruple" class="iconbutton iconline" onclick="SelectMenu(3)">
+						<div class="flexline">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 160 200" >
+								<polygon fill="none" stroke="currentColor" stroke-width="10" stroke-miterlimit="10" points="130,110 130,50 90,50 90,10 30,10 30,70 70,70 70,90 30,90 30,150 70,150 70,190 130,190 130,130 90,130 90,110 "/>
+							</svg>
+							<div class="flexcolumn">
+								<label class="button-text">Quadruple</label>
+								<div id="progressionContainer" class="progression-bar hidden">
+									<div style="display: grid;">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 160 24">
+											<rect id="ProgressionRect_Quadruple" width="0" height="20" x="2" y="2" fill="currentColor"/>
+										</svg>
+										<label id="ProgressionLabel_Quadruple">0%</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="GenerateButton_Samurai" class="iconbutton iconline" onclick="SelectMenu(4)">
+						<div class="flexline">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 160 160" >
+								<polygon fill="none" stroke="currentColor" stroke-width="10" stroke-miterlimit="10" points="150,70 150,10 90,10 90,50 70,50 70,10 10,10 10,70 50,70 50,90 10,90 10,150 70,150 70,110 90,110 90,150 150,150 150,90 110,90 110,70 "/>
+							</svg>
+							<div class="flexcolumn">
+								<label class="button-text">Samurai</label>
+								<div id="progressionContainer" class="progression-bar hidden">
+									<div style="display: grid;">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 160 24">
+											<rect id="ProgressionRect_Samurai" width="0" height="20" x="2" y="2" fill="currentColor"/>
+										</svg>
+										<label id="ProgressionLabel_Samurai">0%</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="GenerateButton_Cercle" class="iconbutton iconline" onclick="SelectMenu(5)">
+						<div class="flexline">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 160 160" >
+								<path fill="none" stroke="currentColor" stroke-width="10" stroke-miterlimit="10" d="M150,50h-40V10H50v40H10v60h40v40h60v-40h40V50zM90,70v20H70V70H90z"/>
+							</svg>
+							<div class="flexcolumn">
+								<label class="button-text">Cercle</label>
+								<div id="progressionContainer" class="progression-bar hidden">
+									<div style="display: grid;">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 160 24">
+											<rect id="ProgressionRect_Cercle" width="0" height="20" x="2" y="2" fill="currentColor"/>
+										</svg>
+										<label id="ProgressionLabel_Cercle">0%</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="GenerateButton_Tapis" class="iconbutton iconline" onclick="SelectMenu(6)">
+						<div class="flexline">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 160 160" >
+								<g>
+									<rect x="20" y="20" fill="none" stroke="currentColor" stroke-width="6" stroke-miterlimit="10" width="120" height="120"/>
+									<line fill="none" stroke="currentColor" stroke-width="6" stroke-miterlimit="10" x1="20" y1="120" x2="140" y2="120"/>
+									<line fill="none" stroke="currentColor" stroke-width="6" stroke-miterlimit="10" x1="20" y1="100" x2="140" y2="100"/>
+									<line fill="none" stroke="currentColor" stroke-width="6" stroke-miterlimit="10" x1="20" y1="80" x2="140" y2="80"/>
+									<line fill="none" stroke="currentColor" stroke-width="6" stroke-miterlimit="10" x1="20" y1="60" x2="140" y2="60"/>
+									<line fill="none" stroke="currentColor" stroke-width="6" stroke-miterlimit="10" x1="20" y1="40" x2="140" y2="40"/>
+									<line fill="none" stroke="currentColor" stroke-width="6" stroke-miterlimit="10" x1="120" y1="20" x2="120" y2="140"/>
+									<line fill="none" stroke="currentColor" stroke-width="6" stroke-miterlimit="10" x1="100" y1="20" x2="100" y2="140"/>
+									<line fill="none" stroke="currentColor" stroke-width="6" stroke-miterlimit="10" x1="80" y1="20" x2="80" y2="140"/>
+									<line fill="none" stroke="currentColor" stroke-width="6" stroke-miterlimit="10" x1="60" y1="20" x2="60" y2="140"/>
+									<line fill="none" stroke="currentColor" stroke-width="6" stroke-miterlimit="10" x1="40" y1="20" x2="40" y2="140"/>
+								</g>
+							</svg>
+							<div class="flexcolumn">
+								<label class="button-text">Tapis</label>
+								<div id="progressionContainer" class="progression-bar hidden">
+									<div style="display: grid;">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 160 24">
+											<rect id="ProgressionRect_Tapis" width="0" height="20" x="2" y="2" fill="currentColor"/>
+										</svg>
+										<label id="ProgressionLabel_Tapis">0%</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="GenerateButton_Custom" class="iconbutton iconline" onclick="SelectMenu(7)">
+						<div class="flexline">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 160 160" >
+								<polygon fill="none" stroke="currentColor" stroke-width="10" stroke-miterlimit="10" points="130,40 90,40 90,20 30,20 30,80 50,80 50,140 110,140 110,100 130,100 "/>
+							</svg>
+							<div class="flexcolumn">
+								<label class="button-text">Customisable</label>
+								<div id="progressionContainer" class="progression-bar hidden">
+									<div style="display: grid;">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 160 24">
+											<rect id="ProgressionRect_Custom" width="0" height="20" x="2" y="2" fill="currentColor"/>
+										</svg>
+										<label id="ProgressionLabel_Custom">0%</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	
+	
+				</div>
+
+				<select onchange="ChangeTypeSelection(this.selectedIndex)">
+					<option>4×4</option>
+					<option>6×6</option>
+					<option selected>9×9</option>
+					<option>12×12</option>
+					<option>16×16</option>
+				</select>
+				<div class="download_panel">
+					<div id="GenerateButton_Download" class="iconbutton iconline disabled" onclick="Download()">
+						<div class="flexline">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 -960 960 960" >
+								<path d="M480-325 288.5-516.5l52-53 102 102V-790h75v322.5l102-102 52 53L480-325ZM245-170q-30.94 0-52.97-22.03Q170-214.06 170-245v-117.5h75V-245h470v-117.5h75V-245q0 30.94-22.03 52.97Q745.94-170 715-170H245Z" fill="currentColor"/>
+							</svg>
+							<div class="flexcolumn">
+								<label class="button-text">Télécharger</label>
+								<div id="progressionContainer" class="progression-bar hidden">
+									<div style="display: grid;">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 160 24">
+											<rect id="ProgressionRect_Download" width="0" height="20" x="2" y="2" fill="currentColor"/>
+										</svg>
+										<label id="ProgressionLabel_Download">0%</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="center_panel">	
+
+				<div class="Config">
+					<div class="PreviewPanel">
+						<div class="PreviewSeletor">
+							<div class="number-input">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+								<input id="IndexSudoku" type="number" value="0" step="1" min="0" max="200000">
+								<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							</div>
+						</div>
+						<div class="PreviewData">
+							<div>
+								<table id="Preview" class="previewtable">
+								</table>
+							</div>
+							<div style="display: flex; align-items: center; justify-content: center;">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" style="shape-rendering: auto; display: block; background: transparent;" width="250" height="250" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g transform="rotate(0 50 50)">
+									<rect fill="#f9f9ff" height="4" width="4" ry="2" rx="2" y="41" x="48">
+										<animate repeatCount="indefinite" begin="-0.9s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity"></animate>
+									</rect>
+								</g><g transform="rotate(36 50 50)">
+									<rect fill="#f9f9ff" height="4" width="4" ry="2" rx="2" y="41" x="48">
+										<animate repeatCount="indefinite" begin="-0.8s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity"></animate>
+									</rect>
+								</g><g transform="rotate(72 50 50)">
+									<rect fill="#f9f9ff" height="4" width="4" ry="2" rx="2" y="41" x="48">
+										<animate repeatCount="indefinite" begin="-0.7s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity"></animate>
+									</rect>
+								</g><g transform="rotate(108 50 50)">
+									<rect fill="#f9f9ff" height="4" width="4" ry="2" rx="2" y="41" x="48">
+										<animate repeatCount="indefinite" begin="-0.6s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity"></animate>
+									</rect>
+								</g><g transform="rotate(144 50 50)">
+									<rect fill="#f9f9ff" height="4" width="4" ry="2" rx="2" y="41" x="48">
+										<animate repeatCount="indefinite" begin="-0.5s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity"></animate>
+									</rect>
+								</g><g transform="rotate(180 50 50)">
+									<rect fill="#f9f9ff" height="4" width="4" ry="2" rx="2" y="41" x="48">
+										<animate repeatCount="indefinite" begin="-0.4s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity"></animate>
+									</rect>
+								</g><g transform="rotate(216 50 50)">
+									<rect fill="#f9f9ff" height="4" width="4" ry="2" rx="2" y="41" x="48">
+										<animate repeatCount="indefinite" begin="-0.3s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity"></animate>
+									</rect>
+								</g><g transform="rotate(252 50 50)">
+									<rect fill="#f9f9ff" height="4" width="4" ry="2" rx="2" y="41" x="48">
+										<animate repeatCount="indefinite" begin="-0.2s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity"></animate>
+									</rect>
+								</g><g transform="rotate(288 50 50)">
+									<rect fill="#f9f9ff" height="4" width="4" ry="2" rx="2" y="41" x="48">
+										<animate repeatCount="indefinite" begin="-0.1s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity"></animate>
+									</rect>
+								</g><g transform="rotate(324 50 50)">
+									<rect fill="#f9f9ff" height="4" width="4" ry="2" rx="2" y="41" x="48">
+										<animate repeatCount="indefinite" begin="0s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity"></animate>
+									</rect>
+								</g><g></g></g></svg>
+							</div>
+						</div>
+					</div>
+					<div class="Config_Parameters">
+						<button onclick="Generate()">Generate</button>
+						<button onclick="StopGeneration()">Stop</button>
+						<button onclick="Draw()">Draw</button>
+						<button onclick="Test()">Test</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
