@@ -566,7 +566,7 @@ var cinquieme_saintexupery = [
 var cinquieme_rogervailland = [
 	{
 		id: 10,
-		chapter: "Chapitre 1 (A1)",
+		chapter: "Chapitre A1",
 		nom: "Divisibilité",
 		icone: 7,
 		ready : false,
@@ -574,7 +574,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 33,
-		chapter: "Chapitre 2 (A2)",
+		chapter: "Chapitre A2",
 		nom: "Division décimale",
 		icone: 7,
 		ready : false,
@@ -582,7 +582,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 19,
-		chapter: "Chapitre 3 (A3)",
+		chapter: "Chapitre A3",
 		nom: "Nombres premiers",
 		icone: 7,
 		ready : false,
@@ -590,7 +590,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 5,
-		chapter: "Chapitre 4 (A4)",
+		chapter: "Chapitre A4",
 		nom: "Généralité sur les fractions",
 		icone: 7,
 		ready : true,
@@ -598,7 +598,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 14,
-		chapter: "Chapitre 5 (A5)",
+		chapter: "Chapitre A5",
 		nom: "Egalité de fraction",
 		icone: 7,
 		ready : false,
@@ -606,7 +606,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 23,
-		chapter: "Chapitre 6 (A6)",
+		chapter: "Chapitre A6",
 		nom: "Addition et soustraction de fractions",
 		icone: 7,
 		ready : false,
@@ -614,7 +614,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 29,
-		chapter: "Chapitre 7 (A7)",
+		chapter: "Chapitre A7",
 		nom: "Comparaison de fractions",
 		icone: 7,
 		ready : false,
@@ -622,7 +622,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 1,
-		chapter: "Chapitre 1 (B1)",
+		chapter: "Chapitre B1",
 		nom: "Nombres Relatifs",
 		icone: 8,
 		ready : true,
@@ -630,7 +630,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 12,
-		chapter: "Chapitre 2 (B2)",
+		chapter: "Chapitre B2",
 		nom: "Repérage et comparaison",
 		icone: 8,
 		ready : false,
@@ -638,7 +638,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 26,
-		chapter: "Chapitre 3 (B3)",
+		chapter: "Chapitre B3",
 		nom: "Repérage dans le plan",
 		icone: 8,
 		ready : false,
@@ -646,7 +646,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 18,
-		chapter: "Chapitre 4 (B4)",
+		chapter: "Chapitre B4",
 		nom: "Additions de relatifs",
 		icone: 8,
 		ready : false,
@@ -654,7 +654,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 30,
-		chapter: "Chapitre 5 (B5)",
+		chapter: "Chapitre B5",
 		nom: "Soustraction de nombres relatifs",
 		icone: 8,
 		ready : false,
@@ -662,7 +662,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 4,
-		chapter: "Chapitre 1 (C1)",
+		chapter: "Chapitre C1",
 		nom: "Priorités opératoires",
 		icone: 9,
 		ready : true,
@@ -670,7 +670,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 21,
-		chapter: "Chapitre 2 (C2)",
+		chapter: "Chapitre C2",
 		nom: "Expression littérale",
 		icone: 9,
 		ready : false,
@@ -678,7 +678,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 34,
-		chapter: "Chapitre 3 (C3)",
+		chapter: "Chapitre C3",
 		nom: "Tester une égalité",
 		icone: 9,
 		ready : false,
@@ -686,7 +686,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 7,
-		chapter: "Chapitre 1 (D1)",
+		chapter: "Chapitre D1",
 		nom: "Effectifs et fréquences",
 		icone: 10,
 		ready : false,
@@ -694,7 +694,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 16,
-		chapter: "Chapitre 2 (D2)",
+		chapter: "Chapitre D2",
 		nom: "Représentations graphiques",
 		icone: 10,
 		ready : false,
@@ -702,7 +702,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 31,
-		chapter: "Chapitre 3 (D3)",
+		chapter: "Chapitre D3",
 		nom: "Moyenne",
 		icone: 10,
 		ready : false,
@@ -710,7 +710,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 25,
-		chapter: "Chapitre 4 (D4)",
+		chapter: "Chapitre D4",
 		nom: "Notion de probabilité",
 		icone: 10,
 		ready : false,
@@ -718,7 +718,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 2,
-		chapter: "Chapitre 1 (E1)",
+		chapter: "Chapitre E1",
 		nom: "Généralité sur les triangles",
 		icone: 11,
 		ready : true,
@@ -726,7 +726,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 15,
-		chapter: "Chapitre 2 (E2)",
+		chapter: "Chapitre E2",
 		nom: "Angles d'un triangle",
 		icone: 11,
 		ready : false,
@@ -734,7 +734,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 32,
-		chapter: "Chapitre 3 (E3)",
+		chapter: "Chapitre E3",
 		nom: "Droites remarquables du triangle",
 		icone: 11,
 		ready : false,
@@ -742,7 +742,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 11,
-		chapter: "Chapitre 4 (E4)",
+		chapter: "Chapitre E4",
 		nom: "Caractérisation angulaire du parallélisme",
 		icone: 11,
 		ready : false,
@@ -750,7 +750,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 24,
-		chapter: "Chapitre 5 (E5)",
+		chapter: "Chapitre E5",
 		nom: "Parallèlogramme",
 		icone: 11,
 		ready : false,
@@ -758,7 +758,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 28,
-		chapter: "Chapitre 6 (E6)",
+		chapter: "Chapitre E6",
 		nom: "Prisme et cylindre",
 		icone: 11,
 		ready : false,
@@ -766,7 +766,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 6,
-		chapter: "Chapitre 1 (F1)",
+		chapter: "Chapitre F1",
 		nom: "La symétrie centrale",
 		icone: 12,
 		ready : true,
@@ -774,7 +774,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 20,
-		chapter: "Chapitre 2 (F2)",
+		chapter: "Chapitre F2",
 		nom: "Propriétés des symétries",
 		icone: 12,
 		ready : false,
@@ -782,7 +782,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 36,
-		chapter: "Chapitre 3 (F3)",
+		chapter: "Chapitre F3",
 		nom: "Les échelles",
 		icone: 12,
 		ready : false,
@@ -790,7 +790,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 8,
-		chapter: "Chapitre 1 (G1)",
+		chapter: "Chapitre G1",
 		nom: "Notion d'algorithme",
 		icone: 13,
 		ready : false,
@@ -798,7 +798,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 9,
-		chapter: "Chapitre 2.1 (G2 Partie 1)",
+		chapter: "Chapitre G2 (Partie 1)",
 		nom: "Activité Scratch (Niveau 1)",
 		icone: 13,
 		ready : false,
@@ -806,7 +806,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 13,
-		chapter: "Chapitre 2.2 (G2 Partie 2)",
+		chapter: "Chapitre G2 (Partie 2)",
 		nom: "Activité Scratch (Niveaux 1 et 2)",
 		icone: 13,
 		ready : false,
@@ -814,7 +814,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 22,
-		chapter: "Chapitre 2.3 (G2 Partie 3)",
+		chapter: "Chapitre G2 (Partie 3)",
 		nom: "Activité Scratch (Niveaux 1 et 2)",
 		icone: 13,
 		ready : false,
@@ -822,7 +822,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 27,
-		chapter: "Chapitre 2.4 (G2 Partie 4)",
+		chapter: "Chapitre G2 (Partie 4)",
 		nom: "Activité Scratch (Niveaux 1 et 2)",
 		icone: 13,
 		ready : false,
@@ -830,7 +830,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 3,
-		chapter: "Chapitre 3 (G3)",
+		chapter: "Chapitre G3",
 		nom: "Activité Géogébra",
 		icone: 13,
 		ready : false,
@@ -838,7 +838,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 17,
-		chapter: "Chapitre 4.1 (G4 Partie 1)",
+		chapter: "Chapitre G4 (Partie 1)",
 		nom: "Activité tableur",
 		icone: 13,
 		ready : false,
@@ -846,7 +846,7 @@ var cinquieme_rogervailland = [
 	},
 	{
 		id: 35,
-		chapter: "Chapitre 4.2 (G4 Partie 1)",
+		chapter: "Chapitre G4 (Partie 2)",
 		nom: "Activité tableur",
 		icone: 13,
 		ready : false,
