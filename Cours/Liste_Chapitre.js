@@ -460,7 +460,7 @@ var cinquieme_saintexupery = [
 			id: 4,
 			nom: "Angles particuliers",
 			icone: 2,
-			ready : true,
+			ready : false,
 			page : "Base/Chapitre_4/Cours.html"
 	},
 	{
