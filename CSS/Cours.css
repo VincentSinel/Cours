@@ -165,6 +165,15 @@ h3::marker {
 }
 
 
+.subtitle{
+  font-size: 24pt;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  color: hsl(205, 100%, 25%);
+  text-decoration: underline;
+}
+
+
 
 @media only screen and (max-width:1024px) {
     h1 {
