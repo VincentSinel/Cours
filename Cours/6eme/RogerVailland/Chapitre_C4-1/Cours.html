@@ -14,10 +14,57 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>D1 - Se repérer dans le temps</title>
+  <title>C4 - Statistiques (Partie 1)</title>
 
   <style>
-    
+    .feuille{
+      background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(243,243,243,1) 100%);
+      border-radius: 5px;
+      border: solid 1px #b2b2b2;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      width: max-content;
+    }
+    .feuille tr,
+    .feuille td{
+      width: 60px;
+      text-align: center;
+    }
+    .feuille tr td:nth-child(1)
+    {
+      color: var(--Dred);
+    }
+    .feuille tr td:nth-child(3)
+    {
+      color: var(--Dviolet);
+    }
+    .FullTable td,
+    .FullTable th,
+    .tableau_simple td, 
+    .tableau_simple th,
+    .tableau_double td, 
+    .tableau_double th{
+      border: solid 1px black;
+      width: auto;
+      text-align: center;
+      min-width: 80px;
+    }
+
+    .FullTable th{
+      background-color: #c9a5e9;
+    }
+    .tableau_simple th{
+      background-color: #99da9c;
+    }
+    .tableau_double th{
+      background-color: #ec7b78;
+    }
+
+
+    table th.crossed
+    {
+      background-image: linear-gradient(to bottom left,  transparent calc(50% - 1px), black, transparent calc(50% + 1px)); 
+      min-width: 120px;
+    }
   </style>
 
 </head>
@@ -27,20 +74,339 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        D1
+        C4
       </td>
       <td id="ChapitreNom">
-        - Se repérer dans le temps
+        - Statistiques
       </td>
     </tr>
   </table>
+
+  <p class="subtitle">
+    Partie 1 : Organisation des données.
+  </p>
 
   <p class="exemple">
     Activité Introduction
   </p>
 
+  <p>
+    Un sondage a été organisé dans une classe de 6<sup>ème</sup>, avec deux questions :
+    <ul>
+      <li>Quel âge as-tu ?</li>
+      <li>Quel est ton sport favori ?</li>
+    </ul>
+    Voici les réponses (Les filles sont en bleu, les garçons en rouge).
+    <div class="flexobject" style="justify-content: center;">
+      <div class="feuille">
+        <table>
+          <tr>
+            <td style="color: var(--Dblue);">Lison</td>
+            <td>11 ans</td>
+            <td>Tennis</td>
+          </tr>
+          <tr>
+            <td>Simon</td>
+            <td>10 ans</td>
+            <td>Football</td>
+          </tr>
+          <tr>
+            <td>Yazid</td>
+            <td>12 ans</td>
+            <td>Rugby</td>
+          </tr>
+          <tr>
+            <td style="color: var(--Dblue);">Anaïs</td>
+            <td>11 ans</td>
+            <td>Football</td>
+          </tr>
+          <tr>
+            <td>Lucas</td>
+            <td>12 ans</td>
+            <td>Basket</td>
+          </tr>
+          <tr>
+            <td>Tarek</td>
+            <td>11 ans</td>
+            <td>Natation</td>
+          </tr>
+          <tr>
+            <td style="color: var(--Dblue);">Lina</td>
+            <td>12 ans</td>
+            <td>Basket</td>
+          </tr>
+          <tr>
+            <td style="color: var(--Dblue);">Léa</td>
+            <td>11 ans</td>
+            <td>Tennis</td>
+          </tr>
+        </table>
+      </div>
+      <div class="feuille">
+        <table>
+          <tr>
+            <td>Christophe</td>
+            <td>12 ans</td>
+            <td>Rugby</td>
+          </tr>
+          <tr>
+            <td style="color: var(--Dblue);">Nina</td>
+            <td>10 ans</td>
+            <td>Basket</td>
+          </tr>
+          <tr>
+            <td style="color: var(--Dblue);">Hélène</td>
+            <td>12 ans</td>
+            <td>Football</td>
+          </tr>
+          <tr>
+            <td style="color: var(--Dblue);">Assia</td>
+            <td>12 ans</td>
+            <td>Tennis</td>
+          </tr>
+          <tr>
+            <td>Elias</td>
+            <td>11 ans</td>
+            <td>Football</td>
+          </tr>
+          <tr>
+            <td>Hugo</td>
+            <td>13 ans</td>
+            <td>Tennis</td>
+          </tr>
+          <tr>
+            <td style="color: var(--Dblue);"  >Emma</td>
+            <td>10 ans</td>
+            <td>Natation</td>
+          </tr>
+          <tr>
+            <td>Basile</td>
+            <td>11 ans</td>
+            <td>Rugby</td>
+          </tr>
+        </table>
+      </div>
+      <div class="feuille">
+        <table>
+          <tr>
+            <td style="color: var(--Dblue);">Sirine</td>
+            <td>10 ans</td>
+            <td>Basket</td>
+          </tr>
+          <tr>
+            <td>Jules</td>
+            <td>13 ans</td>
+            <td>Football</td>
+          </tr>
+          <tr>
+            <td>Sami</td>
+            <td>11 ans</td>
+            <td>Rugby</td>
+          </tr>
+          <tr>
+            <td style="color: var(--Dblue);">Alice</td>
+            <td>12 ans</td>
+            <td>Natation</td>
+          </tr>
+          <tr>
+            <td>Rayan</td>
+            <td>12 ans</td>
+            <td>Tennis</td>
+          </tr>
+          <tr>
+            <td style="color: var(--Dblue);">Chimène</td>
+            <td>11 ans</td>
+            <td>Basket</td>
+          </tr>
+          <tr>
+            <td>Noam</td>
+            <td>12 ans</td>
+            <td>Natation</td>
+          </tr>
+          <tr>
+            <td style="color: var(--Dblue);">Lola</td>
+            <td>12 ans</td>
+            <td>Football</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <ol>
+      <li>
+        Reproduire et compléter les tableaux ci-dessous.<br>
+        <ol type="a">
+          <li>
+          <table class="FullTable">
+            <tr>
+              <th>Sports</th>
+              <td>Tennis</td>
+              <td>Football</td>
+              <td>Rugby</td>
+              <td>Basket</td>
+              <td>Natation</td>
+            </tr>
+            <tr>
+              <th>Nombre d'élèves</th>
+              <td>5</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+          </li><br>
+          <li>
+            <table class="FullTable">
+              <tr>
+                <th>Age</th>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+              </tr>
+              <tr>
+                <th>Nombre d'élèves</th>
+                <td>4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </li>
+        </ol>
+      </li>
+      <li>
+        Reproduire et compléter le tableau ci-dessous.
+        <table class="FullTable">
+          <tr>
+            <td style="border: none;"></td>
+            <td>Tennis</td>
+            <td>Football</td>
+            <td>Rugby</td>
+            <td>Basket</td>
+            <td>Natation</td>
+          </tr>
+          <tr>
+            <th>10 ans</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>11 ans</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>12 ans</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>13 ans</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </li>
+      <li>
+        Quels sont les avantages et les inconvénients de ce tableau comparés à celui de la question 1 ?
+      </li>
+    </ol>
+  </p>
 
-        
+  <h1>Tableaux :</h1>
+  
+  <div class="definition">
+    Les <span class="CRed">tableaux</span> permettent de rassembler un grand nombre de données et de les présenter de façon organisé. Il en existe deux types :
+    <ul>
+      <li>A simple entré</li>
+      <li>A double entrés</li>
+    </ul>
+  </div>
+  <p class="exemple">Exemples :</p>
+  <p>
+    Tableau à simple entrée (Population en 2013) :
+  </p>
+  <table class="tableau_simple">
+    <tr>
+      <th>Ville</th>
+      <td>Paris</td>
+      <td>Marseille</td>
+      <td>Lyon</td>
+      <td>Toulouse</td>
+    </tr>
+    <tr>
+      <th>Population</th>
+      <td>2 229 621</td>
+      <td>855 393</td>
+      <td>500 715</td>
+      <td>458 298</td>
+    </tr>
+  </table>
+
+  <p class="remarque">Remarque :</p>
+  <ul>
+    <li>Un tableau simple permet de représenter une information chiffré pour un seul type de valeur.</li>
+  </ul>
+
+  <p>Tableau à double entrée (Résultats des JO de 2016):</p>
+  <table class="tableau_double">
+    <tr>
+      <th class="crossed">
+        <div style="text-align: right;">
+          Médaille
+        </div>
+        <div style="text-align: left;">
+          Pays
+        </div>
+      </th>
+      <th>Or</th>
+      <th>Argent</th>
+      <th>Bronze</th>
+    </tr>
+    <tr>
+      <th>Russie</th>
+      <td>24</td>
+      <td>25</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <th>France</th>
+      <td>11</td>
+      <td>11</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>Chine</th>
+      <td>38</td>
+      <td>27</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>Etats-Unis</th>
+      <td>46</td>
+      <td>29</td>
+      <td>29</td>
+    </tr>
+  </table>
+
+  <p class="remarque">Remarque :</p>
+  <ul>
+    <li>Un tableau double permet de représenter une information chiffré pour deux type de valeur à la fois.</li>
+  </ul>
+
 </body>
 
 </html>

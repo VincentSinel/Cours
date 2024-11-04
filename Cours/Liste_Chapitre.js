@@ -986,7 +986,7 @@ var sixieme_base = [
 var sixieme_rogervailland = [
 	{
 		id: 60,
-		chapter: "Chapitre 1 (Fo1)",
+		chapter: "Chapitre Fo1",
 		nom: "Consignes de début d'année",
 		download: {
 			pdf: "/Cours/6eme/RogerVailland/Chapitre_Fo1/Documents/Consignes de début d'année.pdf",
@@ -999,7 +999,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 61,
-		chapter: "Chapitre 2 (Fo2)",
+		chapter: "Chapitre Fo2",
 		nom: "Dictionnaire : les verbes d'actions en mathématiques",
 		icone: 14,
 		ready : true,
@@ -1007,7 +1007,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 2,
-		chapter: "Chapitre 3 (Fo3)",
+		chapter: "Chapitre Fo3",
 		nom: "Résoudre un problème",
 		icone: 14,
 		ready : true,
@@ -1015,7 +1015,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 62,
-		chapter: "Chapitre 4 (Fo4)",
+		chapter: "Chapitre Fo4",
 		nom: "Tableau sur la numération",
 		download: {
 			pdf: "/Documents/Documents/Fiches/Tableau_sur_la_numeration.pdf",
@@ -1026,7 +1026,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 63,
-		chapter: "Chapitre 5 (Fo5)",
+		chapter: "Chapitre Fo5",
 		nom: "Tableaux de conversions",
 		download: {
 			pdf: "/Documents/Documents/Fiches/Tableaux conversions.pdf",
@@ -1037,7 +1037,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 22,
-		chapter: "Chapitre 6 (Fo6)",
+		chapter: "Chapitre Fo6",
 		nom: "Priorités opératoires",
 		icone: 14,
 		ready : true,
@@ -1045,7 +1045,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 1,
-		chapter: "Chapitre 1 (A1)",
+		chapter: "Chapitre A1",
 		nom: "Les nombres entiers",
 		download: {
 			pdf: "/Cours/6eme/RogerVailland/Chapitre_A1/Documents/A1 - Nombres entiers.pdf",
@@ -1057,7 +1057,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 9,
-		chapter: "Chapitre 2 (A2)",
+		chapter: "Chapitre A2",
 		nom: "Les nombres décimaux",
 		icone: 7,
 		ready : false,
@@ -1065,7 +1065,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 25,
-		chapter: "Chapitre 3 (A3)",
+		chapter: "Chapitre A3",
 		nom: "Différentes écritures d'un nombre décimal",
 		icone: 7,
 		ready : false,
@@ -1073,7 +1073,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 37,
-		chapter: "Chapitre 4 (A4)",
+		chapter: "Chapitre A4",
 		nom: "Comparaison des nombres décimaux",
 		icone: 7,
 		ready : false,
@@ -1081,7 +1081,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 5,
-		chapter: "Chapitre 5 (A5)",
+		chapter: "Chapitre A5",
 		nom: "Fraction",
 		download: {
 			pdf: "/Cours/6eme/RogerVailland/Chapitre_A5/Documents/A5 - Fraction (Complet).pdf",
@@ -1095,7 +1095,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 17,
-		chapter: "Chapitre 6 (A6)",
+		chapter: "Chapitre A6",
 		nom: "Manipuler les fractions",
 		icone: 7,
 		ready : false,
@@ -1103,7 +1103,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 30,
-		chapter: "Chapitre 7 (A7)",
+		chapter: "Chapitre A7",
 		nom: "Calculer avec des fractions",
 		icone: 7,
 		ready : false,
@@ -1111,7 +1111,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 11,
-		chapter: "Chapitre 1 (B1)",
+		chapter: "Chapitre B1",
 		nom: "Addition",
 		icone: 8,
 		ready : false,
@@ -1119,7 +1119,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 20,
-		chapter: "Chapitre 2 (B2)",
+		chapter: "Chapitre B2",
 		nom: "Soustraction",
 		icone: 8,
 		ready : false,
@@ -1127,7 +1127,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 26,
-		chapter: "Chapitre 3 (B3)",
+		chapter: "Chapitre B3",
 		nom: "Multiplication",
 		icone: 8,
 		ready : false,
@@ -1135,7 +1135,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 8,
-		chapter: "Chapitre 4 (B4)",
+		chapter: "Chapitre B4",
 		nom: "Division euclidienne",
 		icone: 8,
 		ready : false,
@@ -1143,7 +1143,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 47,
-		chapter: "Chapitre 5 (B5)",
+		chapter: "Chapitre B5",
 		nom: "Division décimale",
 		icone: 8,
 		ready : false,
@@ -1151,7 +1151,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 14,
-		chapter: "Chapitre 1 (C1)",
+		chapter: "Chapitre C1",
 		nom: "Reconnaître une situation de proportionnalité",
 		icone: 9,
 		ready : false,
@@ -1159,7 +1159,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 39,
-		chapter: "Chapitre 2 (C2)",
+		chapter: "Chapitre C2",
 		nom: "Utiliser les propriétés de la proportionnalité",
 		icone: 9,
 		ready : false,
@@ -1167,7 +1167,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 44,
-		chapter: "Chapitre 3 (C3)",
+		chapter: "Chapitre C3",
 		nom: "Utiliser les pourcentages",
 		icone: 9,
 		ready : false,
@@ -1175,15 +1175,21 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 6,
-		chapter: "Chapitre 4.1 (C4 Partie 1)",
+		chapter: "Chapitre C4 (Partie 1)",
 		nom: "Statistiques (Tableaux)",
+		download: {
+			pdf: "/Cours/6eme/RogerVailland/Chapitre_C4-1/Documents/C4 - Statistiques (Partie 1) (Complet).pdf",
+			docx: "/Cours/6eme/RogerVailland/Chapitre_C4-1/Documents/C4 - Statistiques (Partie 1) (Complet).docx",
+			pdf_trou: "/Cours/6eme/RogerVailland/Chapitre_C4-1/Documents/C4 - Statistiques (Partie 1) (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_C4-1/Documents/C4 - Statistiques (Partie 1) (A trou).docx",
+		},
 		icone: 9,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_C4-1/Cours.html",
 	},
 	{
 		id: 27,
-		chapter: "Chapitre 4.2 (C4 Partie 2)",
+		chapter: "Chapitre C4 (Partie 2)",
 		nom: "Statistiques (Diagramme bâtons et graphique cartésien)",
 		icone: 9,
 		ready : false,
@@ -1191,7 +1197,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 50,
-		chapter: "Chapitre 4.3 (C4 Partie 3)",
+		chapter: "Chapitre C4 (Partie 3)",
 		nom: "Statistiques (Diagramme circulaire)",
 		icone: 9,
 		ready : false,
@@ -1199,7 +1205,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 4,
-		chapter: "Chapitre 1 (D1)",
+		chapter: "Chapitre D1",
 		nom: "Se repérer dans le temps",
 		download: {
 			pdf: "/Cours/6eme/RogerVailland/Chapitre_D1/Documents/D1 - Se repérer dans le temps.pdf",
@@ -1211,7 +1217,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 18,
-		chapter: "Chapitre 2 (D2)",
+		chapter: "Chapitre D2",
 		nom: "Longueurs et masses",
 		icone: 10,
 		ready : false,
@@ -1219,7 +1225,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 34,
-		chapter: "Chapitre 3 (D3)",
+		chapter: "Chapitre D3",
 		nom: "Surfaces",
 		icone: 10,
 		ready : false,
@@ -1227,7 +1233,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 45,
-		chapter: "Chapitre 4 (D4)",
+		chapter: "Chapitre D4",
 		nom: "Volumes",
 		icone: 10,
 		ready : false,
@@ -1235,7 +1241,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 19,
-		chapter: "Chapitre 5.1 (D5 Partie 1)",
+		chapter: "Chapitre D5 (Partie 1)",
 		nom: "Formulaire (périmètres)",
 		icone: 10,
 		ready : false,
@@ -1243,7 +1249,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 35,
-		chapter: "Chapitre 5.2 (D5 Partie 2)",
+		chapter: "Chapitre D5 (Partie 2)",
 		nom: "Formulaire (aires)",
 		icone: 10,
 		ready : false,
@@ -1251,7 +1257,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 49,
-		chapter: "Chapitre 5.3 (D5 Partie 3)",
+		chapter: "Chapitre D5 (Partie 3)",
 		nom: "Formulaire (volume pavé droit)",
 		icone: 10,
 		ready : false,
@@ -1259,7 +1265,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 3,
-		chapter: "Chapitre 1 (E1)",
+		chapter: "Chapitre E1",
 		nom: "Droites",
 		download: {
 			pdf: "/Cours/6eme/RogerVailland/Chapitre_E1/Documents/Cours.pdf",
@@ -1271,7 +1277,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 15,
-		chapter: "Chapitre 2 (E2)",
+		chapter: "Chapitre E2",
 		nom: "Notion de perpendiculaires et parallèles",
 		icone: 11,
 		ready : false,
@@ -1279,7 +1285,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 23,
-		chapter: "Chapitre 3 (E3)",
+		chapter: "Chapitre E3",
 		nom: "Propriétés sur les perpendiculaires et parallèles",
 		icone: 11,
 		ready : false,
@@ -1287,7 +1293,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 10,
-		chapter: "Chapitre 4 (E4)",
+		chapter: "Chapitre E4",
 		nom: "Le cercle",
 		icone: 11,
 		ready : false,
@@ -1295,7 +1301,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 33,
-		chapter: "Chapitre 5 (E5)",
+		chapter: "Chapitre E5",
 		nom: "La médiatrice",
 		icone: 11,
 		ready : false,
@@ -1303,7 +1309,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 28,
-		chapter: "Chapitre 6 (E6)",
+		chapter: "Chapitre E6",
 		nom: "Les angles",
 		icone: 11,
 		ready : false,
@@ -1311,7 +1317,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 38,
-		chapter: "Chapitre 7 (E7)",
+		chapter: "Chapitre E7",
 		nom: "La symétrie",
 		icone: 11,
 		ready : false,
@@ -1319,7 +1325,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 46,
-		chapter: "Chapitre 8 (E8)",
+		chapter: "Chapitre E8",
 		nom: "Propriétés de la symétrie",
 		icone: 11,
 		ready : false,
@@ -1327,7 +1333,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 51,
-		chapter: "Chapitre 9 (E9)",
+		chapter: "Chapitre E9",
 		nom: "Axes de symétrie",
 		icone: 11,
 		ready : false,
@@ -1335,7 +1341,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 41,
-		chapter: "Chapitre 10 (E10)",
+		chapter: "Chapitre E10",
 		nom: "Triangles",
 		icone: 11,
 		ready : false,
@@ -1343,7 +1349,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 48,
-		chapter: "Chapitre 11 (E11)",
+		chapter: "Chapitre E11",
 		nom: "Reconnaître les volumes et patrons",
 		icone: 11,
 		ready : false,
@@ -1351,7 +1357,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 16,
-		chapter: "Chapitre 1 (F1)",
+		chapter: "Chapitre F1",
 		nom: "Tracer une perpendiculaire",
 		icone: 12,
 		ready : false,
@@ -1359,7 +1365,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 24,
-		chapter: "Chapitre 2 (F2)",
+		chapter: "Chapitre F2",
 		nom: "Tracer une parallèle",
 		icone: 12,
 		ready : false,
@@ -1367,7 +1373,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 29,
-		chapter: "Chapitre 3 (F3)",
+		chapter: "Chapitre F3",
 		nom: "Mesurer un angle",
 		icone: 12,
 		ready : false,
@@ -1375,7 +1381,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 36,
-		chapter: "Chapitre 4 (F4)",
+		chapter: "Chapitre F4",
 		nom: "Tracer un angle",
 		icone: 12,
 		ready : false,
@@ -1383,7 +1389,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 12,
-		chapter: "Chapitre 5.1 (F5 Partie 1)",
+		chapter: "Chapitre F5 (Partie 1)",
 		nom: "Tracer un triangle (Avec 3 longueurs)",
 		icone: 12,
 		ready : false,
@@ -1391,7 +1397,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 42,
-		chapter: "Chapitre 5.2 (F5 Partie 2)",
+		chapter: "Chapitre F5 (Partie 2)",
 		nom: "Tracer un triangle (Avec deux grandeurs)",
 		icone: 12,
 		ready : false,
@@ -1399,7 +1405,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 7,
-		chapter: "Chapitre 1.1 (G1 Partie 1)",
+		chapter: "Chapitre G1 (Partie 1)",
 		nom: "Lire une carte",
 		icone: 13,
 		ready : false,
@@ -1407,7 +1413,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 21,
-		chapter: "Chapitre 1.2 (G1 Partie 2)",
+		chapter: "Chapitre G1 (Partie 2)",
 		nom: "Décrire un déplacement",
 		icone: 13,
 		ready : false,
@@ -1415,7 +1421,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 31,
-		chapter: "Chapitre 2.1 (G2 Partie 1)",
+		chapter: "Chapitre G2 (Partie 1)",
 		nom: "Initiation à Scratch",
 		icone: 13,
 		ready : false,
@@ -1423,7 +1429,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 40,
-		chapter: "Chapitre 2.2 (G2 Partie 2)",
+		chapter: "Chapitre G2 (Partie 2)",
 		nom: "Scratch",
 		icone: 13,
 		ready : false,
@@ -1431,7 +1437,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 52,
-		chapter: "Chapitre 2.3 (G2 Partie 3)",
+		chapter: "Chapitre G2 (Partie 3)",
 		nom: "Scratch",
 		icone: 13,
 		ready : false,
@@ -1439,7 +1445,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 13,
-		chapter: "Chapitre 3.1 (G3 Partie 1)",
+		chapter: "Chapitre G3 (Partie 1)",
 		nom: "Prise en main géogébra",
 		icone: 13,
 		ready : false,
@@ -1447,7 +1453,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 35,
-		chapter: "Chapitre 3.2 (G3 Partie 2)",
+		chapter: "Chapitre G3 (Partie 2)",
 		nom: "Initiation Géogébra",
 		icone: 13,
 		ready : false,
@@ -1455,7 +1461,7 @@ var sixieme_rogervailland = [
 	},
 	{
 		id: 43,
-		chapter: "Chapitre 3.3 (G3 Partie 3)",
+		chapter: "Chapitre G3 (Partie 3)",
 		nom: "Initiation Géogébra",
 		icone: 13,
 		ready : false,

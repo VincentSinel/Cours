@@ -1,7 +1,161 @@
-window.onload = function(){
-	ShowCollegeSelect()
+function toggleMenu()
+{
+    let menu = document.getElementById("menu");
+    menu.classList.toggle("asideshow");
 }
 
+// Selecting the iframe element
+var frame = document.getElementById("Iframe");
+var lastselected = null;
+
+var SelectedChapter = null
+    
+frame.onload = function() { ReajustIframe() }
+window.onload = function(){ ShowCollegeSelect(); CreatePDFButton() }
+window.onresize = function() { ReajustIframe() }
+
+function ReajustIframe()
+{
+    if (frame.contentWindow.document.documentURI == "about:blank") return;
+    frame.style.height = frame.contentWindow.document.body.scrollHeight + 120 + 'px';
+}
+
+function ClicChapter(path, a, element)
+{
+    SelectedChapter = element;
+    document.getElementById("noiframe").style.display = "none"
+    frame.src = path
+    if (lastselected != null)
+        lastselected.classList.remove("selected")
+    lastselected = a
+    lastselected.classList.add("selected")
+    window.scrollTo(0, 0);
+    menu.classList.remove("asideshow");
+    frame.addEventListener( "load", function() {
+        SetDownloadButton(path, element);
+        SetTitle(element)
+    });
+}
+
+function SetTitle(chapter)
+{
+    if (chapter.hasOwnProperty("chapter"))
+        frame.contentDocument.getElementById("ChapitreNumero").innerHTML = chapter.chapter;
+    else
+        frame.contentDocument.getElementById("ChapitreNumero").innerHTML = "Chapitre " + chapter.id.toString();
+    frame.contentDocument.getElementById("ChapitreNom").innerHTML = "- " + chapter.nom;
+}
+
+function CreatePDFButton()
+{
+
+    let but = document.getElementById("PdfButton");
+    but.target="_blank";
+    but.download="Cours complet.pdf"
+
+    but = document.getElementById("PdfDefault");
+    but.target="_blank";
+    but.download="Cours complet.pdf"
+
+    but = document.getElementById("PdfButton2");
+    but.target="_blank";
+    but.download="Cours a trou.pdf"
+
+    but = document.getElementById("DocxButton");
+    but.target="_blank";
+    but.download="Cours complet.docx"
+
+    but = document.getElementById("DocxButton2");
+    but.target="_blank";
+    but.download="Cours a trou.docx"
+
+    but = document.getElementById("OdtButton");
+    but.target="_blank";
+    but.download="Cours complet.odt"
+
+    but = document.getElementById("OdtButton2");
+    but.target="_blank";
+    but.download="Cours a trou.odt"
+}
+
+function SetDownloadButton(path, element)
+{
+    let but_default = document.getElementById("PdfDefault");
+    let but_pdf1 = document.getElementById("PdfButton");
+    let but_pdf2 = document.getElementById("PdfButton2");
+    let but_docx1 = document.getElementById("DocxButton");
+    let but_docx2 = document.getElementById("DocxButton2");
+    let but_odt1 = document.getElementById("OdtButton");
+    let but_odt2 = document.getElementById("OdtButton2");
+    but_default.classList.add("deactivate")
+    but_pdf1.classList.add("deactivate")
+    but_pdf2.classList.add("deactivate")
+    but_docx1.classList.add("deactivate")
+    but_docx2.classList.add("deactivate")
+    but_odt1.classList.add("deactivate")
+    but_odt2.classList.add("deactivate")
+    if (element.hasOwnProperty("download"))
+    {
+    let list = element.download;
+
+    // PDF complet
+    if (list.hasOwnProperty("pdf"))
+    { 
+        but_pdf1.href = list.pdf;
+        but_pdf1.classList.remove("deactivate")
+    }
+    else
+    {
+        var pageUrl = encodeURIComponent("https://vsinel.fr" + path);
+        var opts = ['save-link=' + pageUrl, 'pageOrientation=portrait', 'pageSize=a4', 'pageMargin=2cm'];
+        but_default.href = 'https://www.sejda.com/html-to-pdf?' + opts.join('&');
+        but_default.classList.remove("deactivate")
+    }
+
+    // PDF trou
+    if (list.hasOwnProperty("pdf_trou"))
+    { 
+        but_pdf2.href = list.pdf_trou;
+        but_pdf2.classList.remove("deactivate")
+    }
+    
+    // DOCX complet
+    if (list.hasOwnProperty("docx"))
+    { 
+        but_docx1.href = list.docx;
+        but_docx1.classList.remove("deactivate")
+    }
+
+    // DOCX trou
+    if (list.hasOwnProperty("docx_trou"))
+    { 
+        but_docx2.href = list.docx_trou;
+        but_docx2.classList.remove("deactivate")
+    }
+    
+    // ODT complet
+    if (list.hasOwnProperty("odt"))
+    { 
+        but_odt1.href = list.odt;
+        but_odt1.classList.remove("deactivate")
+    }
+
+    // ODT trou
+    if (list.hasOwnProperty("odt_trou"))
+    { 
+        but_odt2.href = list.odt_trou;
+        but_odt2.classList.remove("deactivate")
+    }
+    
+    }
+    else
+    {
+    var pageUrl = encodeURIComponent("https://vsinel.fr" + path);
+    var opts = ['save-link=' + pageUrl, 'pageOrientation=portrait', 'pageSize=a4', 'pageMargin=2cm'];
+    but_default.href = 'https://www.sejda.com/html-to-pdf?' + opts.join('&');
+    but_default.classList.remove("deactivate")
+    }
+}
 
 function SelectCollege(name)
 {
@@ -59,7 +213,6 @@ function SelectClasse(id)
     });
 }
 
-
 function CreateNavBar()
 {
     // var v = document.getElementById("Cours3emePM");
@@ -100,7 +253,7 @@ function CreateDiv(parent, name, folder)
         if (element.ready)
         {
             a.onclick = function() { 
-                clic('/Cours/' + folder + '/' + element.page, this, element); }
+                ClicChapter('/Cours/' + folder + '/' + element.page, this, element); }
         }
         
         var b = document.createElement("div");
@@ -131,3 +284,5 @@ function CreateDiv(parent, name, folder)
         parent.appendChild(a);
     }
 }
+
+
