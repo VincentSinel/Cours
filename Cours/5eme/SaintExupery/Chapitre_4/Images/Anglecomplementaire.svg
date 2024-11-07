@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.93 45.85">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1d1d1b;
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 12px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-2 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-linecap: round;
+      }
+
+      .cls-4 {
+        fill: #b5d1ef;
+      }
+
+      .cls-4, .cls-5, .cls-6 {
+        stroke-width: 0px;
+      }
+
+      .cls-5 {
+        fill: #e7d900;
+      }
+
+      .cls-3 {
+        stroke-linejoin: round;
+      }
+
+      .cls-6 {
+        fill: #74bd83;
+      }
+    </style>
+  </defs>
+  <rect class="cls-6" x="37.3" y="29.37" width="4.15" height="4.15" transform="translate(-10.83 27.12) rotate(-33.69)"/>
+  <path class="cls-5" d="m32.99,25.84c-2.7,1.85-4.47,4.96-4.47,8.48h10.28l-5.81-8.48Z"/>
+  <path class="cls-4" d="m49.07,34.32c0-2.15-.66-4.14-1.79-5.79l-8.49,5.79h10.28Z"/>
+  <polyline class="cls-3" points="15.82 .5 38.74 34.32 81.43 5.39"/>
+  <line class="cls-3" x1=".5" y1="34.32" x2="77.1" y2="34.32"/>
+  <text class="cls-1" transform="translate(14.22 28.71) scale(.58)"><tspan x="0" y="0">54°</tspan></text>
+  <text class="cls-1" transform="translate(55.46 30.15) scale(.58)"><tspan x="0" y="0">36°</tspan></text>
+  <line class="cls-2" x1="5.86" y1="32.56" x2="5.86" y2="36.39"/>
+  <line class="cls-2" x1="70.71" y1="32.4" x2="70.71" y2="36.23"/>
+  <line class="cls-2" x1="23.16" y1="7.82" x2="19.97" y2="9.94"/>
+  <line class="cls-2" x1="72.84" y1="13.58" x2="70.71" y2="10.39"/>
+  <text class="cls-1" transform="translate(3.1 43.96) scale(.58)"><tspan x="0" y="0">A</tspan></text>
+  <text class="cls-1" transform="translate(23.93 6.91) scale(.58)"><tspan x="0" y="0">B</tspan></text>
+  <text class="cls-1" transform="translate(65.73 8.35) scale(.58)"><tspan x="0" y="0">C</tspan></text>
+  <text class="cls-1" transform="translate(68.78 43.77) scale(.58)"><tspan x="0" y="0">D</tspan></text>
+  <text class="cls-1" transform="translate(36.4 42.99) scale(.58)"><tspan x="0" y="0">O</tspan></text>
+</svg>

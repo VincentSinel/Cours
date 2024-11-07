@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148.75 123.38">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #e30613;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-3 {
+        stroke-linecap: round;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        fill: #1d1d1b;
+        font-family: Cambria-BoldItalic, Cambria;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        stroke: #009fe3;
+      }
+
+      .cls-3 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-5 {
+        fill: #009fe3;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path class="cls-2" d="m85.1,40.46l-6.41,14.17c-5.12-2.32-8.68-7.47-8.68-13.46"/>
+  <g>
+    <path class="cls-2" d="m68.8,77.43l6.41-14.17c5.12,2.32,8.68,7.47,8.68,13.46"/>
+    <circle class="cls-5" cx="81.77" cy="69.02" r="1.84"/>
+  </g>
+  <line class="cls-3" x1="18.58" y1="41.05" x2="146.13" y2="41.05"/>
+  <line class="cls-3" x1="10.24" y1="76.99" x2="147.75" y2="76.99"/>
+  <line class="cls-1" x1="99.26" y1="10.36" x2="48.6" y2="122.38"/>
+  <text class="cls-4" transform="translate(10.61 34)"><tspan x="0" y="0">(d</tspan></text>
+  <text class="cls-4" transform="translate(22.2 37.99) scale(.58)"><tspan x="0" y="0">1</tspan></text>
+  <text class="cls-4" transform="translate(26.21 34)"><tspan x="0" y="0">)</tspan></text>
+  <text class="cls-4" transform="translate(0 69.68)"><tspan x="0" y="0">(d</tspan></text>
+  <text class="cls-4" transform="translate(11.6 73.68) scale(.58)"><tspan x="0" y="0">2</tspan></text>
+  <text class="cls-4" transform="translate(15.6 69.68)"><tspan x="0" y="0">)</tspan></text>
+  <text class="cls-4" transform="translate(102.89 10)"><tspan x="0" y="0">(d)</tspan></text>
+  <circle class="cls-5" cx="72.23" cy="48.95" r="1.84"/>
+</svg>
