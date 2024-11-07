@@ -315,7 +315,7 @@ var cinquieme_base = [
 	},
 	{
 			id: 4,
-			nom: "Angles particuliers",
+			nom: "Algorithmes",
 			icone: 2,
 			ready : false,
 			page : "Base/Chapitre_4/Cours.html"
@@ -460,8 +460,8 @@ var cinquieme_saintexupery = [
 			id: 4,
 			nom: "Angles particuliers",
 			icone: 2,
-			ready : false,
-			page : "Base/Chapitre_4/Cours.html"
+			ready : true,
+			page : "SaintExupery/Chapitre_4/Cours.html"
 	},
 	{
 			id: 5,
@@ -1137,8 +1137,14 @@ var sixieme_rogervailland = [
 		id: 8,
 		chapter: "Chapitre B4",
 		nom: "Division euclidienne",
+		download: {
+			pdf: "/Cours/6eme/RogerVailland/Chapitre_B4/Documents/B4 - Division euclidienne (Complet).pdf",
+			docx: "/Cours/6eme/RogerVailland/Chapitre_B4/Documents/B4 - Division euclidienne (Complet).docx",
+			pdf_trou: "/Cours/6eme/RogerVailland/Chapitre_B4/Documents/B4 - Division euclidienne (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_B4/Documents/B4 - Division euclidienne (A trou).docx",
+		},
 		icone: 8,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_B4/Cours.html",
 	},
 	{
