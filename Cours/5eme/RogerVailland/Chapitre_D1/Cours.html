@@ -14,9 +14,22 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>E1 - Généralité sur les triangles</title>
+  <title>D1 - Effectifs et fréquences</title>
 
   <style>
+    .list-note div{
+      border-radius: 5px;
+      border: solid 1px #039be5;
+      background-color: aliceblue;
+      padding: 2px 5px;
+      column-gap: 5px;
+      min-width: 30px;
+      text-align: center;
+    }
+    .list-note{
+      align-items: center;
+      justify-items: center;
+    }
   </style>
 
 </head>
@@ -26,10 +39,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        E1
+        D1
       </td>
       <td id="ChapitreNom">
-        - Nombres Relatifs (Partie 1)
+        - Effectifs et fréquences
       </td>
     </tr>
   </table>
@@ -38,6 +51,131 @@
     Activité Introduction
   </p>
 
+  <p>
+    Voici les notes obtenus par une classe de 5<sup>ème</sup> en anglais :<br>
+    <div class="flexobject list-note">
+      <div>3</div><div>4</div><div>5</div><div>1</div><div>1</div>
+      <div>4</div><div>4</div><div>4</div><div>2</div><div>4</div>
+      <div>2</div><div>5</div><div>1</div><div>1</div><div>5</div>
+      <div>5</div><div>3</div><div>3</div><div>4</div><div>3</div>
+      <div>3</div><div>2</div><div>1</div><div>1</div><div>4</div>
+    </div>
+  </p>
+  <ol>
+    <li>
+      Completer le tableau de valeur ci-dessous :<br>
+      <table class="proportionnaltable">
+        <tr>
+          <th>Note</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <th>Total</th>
+        </tr>
+        <tr>
+          <th>Nombre d'élèves</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </li>
+    <li>
+      Combien d'élève ont obtenus une note de 4 ? Cette valeur s'appel l'effectif de 4.
+    </li>
+    <li>
+      Quel est l'<b>effectif</b> de la valeur 1 ? L'<b>effectif total</b> ?
+    </li>
+    <li>
+      La fréquence d'apparition d'une valeur est obtenue en divisant son effectif par l'effectif total.
+      <ol type="a">
+        <li>Quelle est la fréquence de la valeur 4 ? Ecrire cette valeur en pourcentage.</li>
+        <li>Compléter le tableau suivant :<br>
+          <table class="proportionnaltable">
+            <tr>
+              <th>Note</th>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+              <th>Total</th>
+            </tr>
+            <tr>
+              <th>Nombre d'élèves</th>
+              <td>6</td>
+              <td>2</td>
+              <td>5</td>
+              <td>7</td>
+              <td>4</td>
+              <td>25</td>
+            </tr>
+            <tr>
+              <th>Fréquence</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0,28<br>=<br>28%</td>
+              <td></td>
+              <td>1</td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          Compléter la phrase suivante :<br>
+          «<i>Il y a ....% d'élève qui ont obtenu 3 au contrôle</i>»
+        </li>
+      </ol>
+    </li>
+  </ol>
+  
+  <h1>Vocabulaire :</h1>
+    <p>
+      On étudie la taille des sardines pêchés lors d'un concours, voici la liste des tailles obtenues en cm :
+    </p>
+    <div class="flexobject list-note">
+      <div>7 cm</div><div>13 cm</div><div>10 cm</div><div>14 cm</div><div>14 cm</div><div>15 cm</div><div>7 cm</div><div>10 cm</div><div>15 cm</div><div>10 cm</div><div>13 cm</div><div>20 cm</div><div>9 cm</div><div>9 cm</div><div>13 cm</div><div>14 cm</div><div>15 cm</div><div>14 cm</div><div>7 cm</div><div>10 cm</div>
+    </div>
+    <br><br>
+    <div class="definition">
+      <ul>
+        <li>
+          L'ensemble de ces tailles est appelé <span class="CRed"><b>population</b></span> de la série.
+        </li>
+        <li>
+          Le <span class="CRed"><b>caractère</b></span> étudié est la taille en cm.
+        </li>
+        <li>
+          Les <span class="CRed"><b>valeurs</b></span> du caractère sont 7 ; 9 ; 10 ; 13 ; 14 ; 15 et 20.
+        </li>
+        <li>
+          L'<span class="CRed"><b>effectif</b></span> d'une valeur est le nombre de fois ou celle-ci apparaît, par exemple l'effectif de la valeur 10 est 4. (La taille 10 cm a été compté 4 fois)
+        </li>
+        <li>
+          L'<span class="CRed"><b>effectif total</b></span> est 20. (Il y a 20 tailles au total donc 20 poissons)
+        </li>
+      </ul>
+    </div>
+  <h1>Fréquence :</h1>
+    <div class="definition">
+      La <span class="CRed">fréquence</span> d'une valeur est le quotient de l'effectif de cette valeur par l'effectif total.<br>
+      $Fréquence = \frac{Effectif\thinspace de\thinspace\thinspace la\thinspace valeur}{Effectif\thinspace total}$
+    </div>
+    <p class="exemple">Exemple :</p>
+    <p>Dans l'exemple précèdent il y a 20 taille de poissons au total. 
+      La fréquence de la valeur 10 est donc de $\frac{4}{20}=\frac{1}{5}=0.2=20\%$</p>
+    <p class="remarque">Remarques :</p>
+    <ul>
+      <li>Une <b>fréquence</b> représente le <i>taux d'apparition</i> d'une valeur.</li>
+      <li>On exprime habituellement une <b>fréquence</b> en <b>pourcentage</b>.</li>
+      <li>Une <b>fréquence</b> est un nombre compris entre 0 et 1.</li>
+      <li>La somme des <b>fréquence</b> de chaque valeur d'une série est toujours égale à 1.</li>
+    </ul>
   
 </body>
 

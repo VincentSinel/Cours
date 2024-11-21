@@ -689,7 +689,7 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre D1",
 		nom: "Effectifs et fréquences",
 		icone: 10,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_D1/Cours.html",
 	},
 	{
