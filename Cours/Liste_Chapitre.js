@@ -1058,9 +1058,15 @@ var sixieme_rogervailland = [
 	{
 		id: 9,
 		chapter: "Chapitre A2",
-		nom: "Les nombres décimaux",
+		nom: "Nombres décimaux",
 		icone: 7,
-		ready : false,
+		download: {
+			pdf: "/Cours/6eme/RogerVailland/Chapitre_A2/Documents/A2 - Nombres décimaux (Complet).pdf",
+			docx: "/Cours/6eme/RogerVailland/Chapitre_A2/Documents/A2 - Nombres décimaux (Complet).docx",
+			pdf_trou: "/Cours/6eme/RogerVailland/Chapitre_A2/Documents/A2 - Nombres décimaux (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_A2/Documents/A2 - Nombres décimaux (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_A2/Cours.html",
 	},
 	{
