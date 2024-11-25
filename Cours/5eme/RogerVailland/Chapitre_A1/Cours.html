@@ -14,9 +14,15 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>E1 - Généralité sur les triangles</title>
+  <title>A1 - Divisibilité</title>
 
   <style>
+    .under1{
+      text-decoration: underline solid 3px var(--Cgreen);
+    }
+    .under2{
+      text-decoration: underline solid 3px var(--Cviolet);
+    }
   </style>
 
 </head>
@@ -26,10 +32,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        E1
+        A1
       </td>
       <td id="ChapitreNom">
-        - Nombres Relatifs (Partie 1)
+        - Divisibilité
       </td>
     </tr>
   </table>
@@ -37,6 +43,109 @@
   <p class="exemple">
     Activité Introduction
   </p>
+  <ol>
+    <li>Poser la division 326 ÷ 5.</li>
+    <li>326 est-il dans la table de 5 ? Pourquoi ?</li>
+    <li>Comment sait-on qu'un nombre est dans la table de 5 ?</li>
+    <li>
+      Compléter le <i>critère de divisibilité</i> suivant :<br>
+      «<i>Un nombres est divisible par 5 si son chiffre des unités est ..... ou .....</i>»
+    </li>
+    <li>Connais-tu le critère de divisibilité par 3 ?</li>
+  </ol>
+
+  <h1>Définition :</h1>
+      <div class="definition">
+        Une <b>division euclidienne</b> est une division ou l'on ne parle que d'entier. Elle fait intervenir quatre nombres : le <span class="CBlue"><b>dividende</b></span>, le <span class="CRed"><b>diviseur</b></span>, le <span class="CGreen"><b>quotient</b></span> et le <span class="CViolet"><b>reste</b></span>
+      </div>
+      <img src="Images/Division euclidienne.svg" style="max-height: 4cm;">
+      <p>Avec <span class="CViolet"><b>Reste</b></span> &#60; <span class="CRed"><b>Diviseur</b></span></p>
+
+      <div class="definition">
+        Lorsque le reste de la division euclidienne est <b>nul</b> on dit alors que le <b>dividende</b> est un <span class="CRed">multiple</span> du <b>diviseur</b>. On dit aussi que le <b>dividende</b> est <span class="CRed">divisible</span> par le <b>diviseur</b>.
+      </div>
+      <p class="exemple">Exemples :</p>
+      <ul>
+        <li>$36 = 3\times12 + 0$ donc 36 est un multiple de 3 (et de 12).</li>
+        <li>$42 = 6\times7 + 0$ donc 42 est divisible par 6 (et par 7).</li>
+      </ul>
+  <h1>Critères de divisibilités :</h1>
+      <div class="definition">
+        Un nombre est <b>divisible par 2</b> lorsque son chiffre des unités est 0, 2, 4, 6 ou 8.
+      </div>
+      <div class="definition">
+        Un nombre est <b>divisible par 5</b> lorsque son chiffre des unités est 0 ou 5.
+      </div>
+      <div class="definition">
+        Un nombre est <b>divisible par 10</b> lorsque son chiffre des unités est 0.
+      </div>
+      <p class="remarque">Démonstration :</p>
+      <p>
+        <i>
+          Pour n'importe quel nombre, on peut le décomposer de la manière suivante :<br>
+          <table>
+            <tr>
+              <td><b>Nombre</b></td>
+              <td>= <b>Nombre de dizaine</b> × 10 + <b>Unité</b></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= <b>Nombre de dizaine</b> × 5 × 2 + <b>Unité</b>.</td>
+            </tr>
+          </table><br>
+          Le résultat de <b>Nombre de dizaine × 5 × 2</b> est toujours dans la table de 2 ; 5 ou 10 donc le nombre de départ n'est divisible par 2 ; 5 ou 10 que si l'<b>unité</b> est divisible par 2 ; 5 ou 10
+        </i>
+      </p>
+      <p class="exemple">Exemple :</p>
+      <p>240 est divisible par 2, 5 et 10.</p>
+      <div class="definition">
+        Un nombre est <b>divisible par 3</b> lorsque la somme de ses chiffres est divisible par 3.
+      </div>
+      <div class="definition">
+        Un nombre est <b>divisible par 9</b> lorsque la somme de ses chiffres est divisible par 9.
+      </div>
+      <p class="remarque">Démonstration :</p>
+      <p>
+        <i>
+          Pour n'importe quel nombre à trois chiffre <b>cdu</b>, on peut le décomposer de la manière suivante : <br>
+          <table>
+            <tr>
+              <td><b>cdu</b></td>
+              <td>= <b>c</b> × 100 + <b>d</b> × 10 + <b>u</b></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= <b>c</b> × (99 + <span class="CRed">1</span>) + <b>d</b> × (9 + <span class="CRed">1</span>) + <b>u</b></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= <b>c</b> × 99 + <span class="CRed"><b>c</b></span> + <b>d</b> × 9 + <span class="CRed"><b>d</b></span> + <b>u</b></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= <span class="CBlue">9</span> × <b>c</b> × 11  + <span class="CBlue">9</span> × <b>d</b> + <span class="CRed"><b>c</b></span> + <span class="CRed"><b>d</b></span> + <b>u</b></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= <span class="CBlue">9</span> × (<b>c</b> × 11 + <b>d</b>) + (<b>c</b> + <b>d</b> + <b>u</b>)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= <span class="under1"> 9 × (<b>c</b> × 11 + <b>d</b>)</span> + <span class="under2">(<b>c</b> + <b>d</b> + <b>u</b>)</span></td>
+            </tr>
+          </table><br>
+          La partie <span class="CGreen">9 × (<b>c</b> × 11 + <b>d</b>)</span> est toujours dans la table de 9 (et donc de 3) donc le nombre est divisible par 9 (ou 3) si la partie <span class="CViolet">(<b>c</b> + <b>d</b> + <b>u</b>)</span> l'est.<br>
+          En procédant de la même manière, on peut étendre cette démonstration à un nombre de plus de 3 chiffres.
+        </i>
+      </p>
+      <p class="exemple">Exemples :</p>
+      <ul>
+        <li>7 293 138 → $7+2+9+3+1+3+8 = 33$ qui est divisible par 3 ($3\times11$) donc 7 293 138 est divisible par 3.</li>
+        <li>240 111 → $2+4+0+1+1+1=9$ qui est divisible par 9 et 3 donc 240 111 est divisible par 9 et 3.</li>
+      </ul>
+      <p class="remarque">Remarque :</p>
+      <ul><li>Un nombre divisible par 9 est toujours divisible par 3.</li></ul>
+
 
   
 </body>

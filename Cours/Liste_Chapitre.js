@@ -569,7 +569,7 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre A1",
 		nom: "Divisibilité",
 		icone: 7,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_A1/Cours.html",
 	},
 	{
