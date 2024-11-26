@@ -1,0 +1,74 @@
+:root{
+	--TableWidth : 77px;
+	--TableHeight: calc(var(--TableWidth) * 41.0 / 44.0);
+	--TableFontSize: calc(var(--TableWidth) * 8.0 / 44.0);
+
+	--Back: #181818;
+	--BackObject: #262626;
+	--BackActive: #37373D;
+	--BackHover: #2A2D2E;
+	--BackHoverMenu: #36363C;
+	--BackText: #DEDEE3;
+	--BackTextHover: #fff;
+	--DBackText: #CFCFD3;
+
+	--WBack: #353535;
+	--WBackActive: #53535B;
+	--WBackDisabled: #F9F9FF08;
+	--WBackHover: #494D4F;
+	--WBackHoverMenu: #52525B;
+	--WBackText: #F9F9FF;
+	--WBackTextDisabled: #F9F9FF55;
+}
+
+body{
+	background-color: var(--PanelBackHoverMenu);
+}
+
+.list_link{
+	display: flex;
+	flex-direction: column;
+	padding-left: 45px;
+}
+
+.link{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;	
+	color: var(--BackText);
+	border: solid var(--WBackActive) 1px;
+	border-radius: 5px;
+	background-color: var(--Back);
+	margin: 5px;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.link img{
+	flex: 0 1 100px;
+	max-width: 100px;
+}
+
+.link div{
+	flex: 1 1 5cm;
+}
+
+.link a{
+	text-decoration: none;
+}
+
+.link_link{
+	font-size: 24pt;
+	text-decoration: none;
+	transition: 0.2s;
+}
+.link_link:link{
+	color: var(--BluePanelHover);
+}
+.link_link:hover{
+	color: var(--BluePanel);
+}
+.link_link:visited,
+.link_link:active{
+	color: var(--BluePanelActive);
+}
