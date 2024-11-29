@@ -18,7 +18,7 @@
 </head>
 
 <body>
-	<div id="maincontainer" class="maincontainer">
+	<div id="maincontainer" class="maincontainer solutions_hide">
 	
 		<div class="config">
 
@@ -70,13 +70,15 @@
 				</div>
 			</div>
 
-			<div class="button_listsolution number_color2 unselectable" onclick="HideSolutionPanel()">
-				<div>×</div>
-			</div>
 		</div>
 
-		<div id="list_solution_panel" class="solutions solutions_hide">
-			
+		<div class="block"></div>
+
+
+		<div class="button_listsolution number_color2 unselectable" onclick="HideSolutionPanel()">
+			<div>×</div>
+		</div>
+		<div id="list_solution_panel" class="solutions">
 			<div>
 				<input id="list_solution_show" type="checkbox" style="width: auto;" unchecked oninput="RecreateList();">
 				<label for="list_solution_show" style="width: auto; color: var(--PanelBackText);">Afficher les solutions avec nombres négatifs</label>

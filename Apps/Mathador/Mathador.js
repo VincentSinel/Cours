@@ -45,7 +45,7 @@ function Resoudre()
 
 	RecreateList();
 
-	var panel = document.getElementById("list_solution_panel")
+	var panel = document.getElementById("maincontainer")
 	panel.classList.remove("solutions_hide");
 
 	document.getElementById("timer").classList.add("hide")
@@ -94,7 +94,7 @@ function RecreateList()
 
 function HideSolutionPanel()
 {
-	var panel = document.getElementById("list_solution_panel")
+	var panel = document.getElementById("maincontainer")
 	panel.classList.add("solutions_hide");
 }
 
