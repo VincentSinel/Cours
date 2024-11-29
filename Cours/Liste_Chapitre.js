@@ -479,10 +479,10 @@ var cinquieme_saintexupery = [
 	},
 	{
 			id: 7,
-			nom: "Calcul littérales (Partie 2)",
+			nom: "Distributivité simple",
 			icone: 3,
-			ready : false,
-			page : "Base/Chapitre_7/Cours.html"
+			ready : true,
+			page : "SaintExupery/Chapitre_7/Cours.html"
 	},
 	{
 			id: 8,

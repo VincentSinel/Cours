@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Chapitre 7 - Distributivité simple</title>
+
+  <style>
+    .behindobj{
+      z-index: -1; 
+      left: 0; 
+      position: absolute;
+    }
+    .behindparent{
+      display: inline;
+      position: relative;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Chapitre 7
+      </td>
+      <td id="ChapitreNom">
+        - Distributivité simple
+      </td>
+    </tr>
+  </table>
+
+  <p class="exemple">
+    Activité Introduction
+  </p>
+
+  <div class="flexobject">
+    <div style="max-width: 13cm;">
+      <p>Yazid et Sarah veulent acheter 2 tartelettes et 2 cannettes de soda. Voici leurs visions de l'achat.
+        <ol>
+          <li>Leurs visions représentent-elles le même achat ?
+          </li>
+          <li>
+            Compléter l'égalité suivante :<br>
+            $2\times ... + 2\times ... = 2\times (... + ...)$
+          </li>
+          <li>
+            Comparer les deux côté de l'égalité. Dire pour l'un et l'autre s'il s'agit d'une somme ou d'un produit.
+          </li>
+        </ol>
+      </p>
+    </div>
+    <img src="Images/Act Intro.svg" style="max-width: 10cm;">
+  </div>
+
+  <h1>Définition :</h1>
+    <div class="definition">
+      La distributivité $k\times(m+n)=k\times m+k\times n$ 
+      permet d'écrire un produit entre un nombre et une somme comme une somme de deux produits.<br><br>
+      <table class="center">
+        <tr>
+          <td colspan="2"></td>
+          <td colspan="4" class="CRed">Développement</td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td colspan="2"></td>
+          <td colspan="4"><img height="20px" src="Images/Fleche.svg"></td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td style="text-align: right;"><spawn class="DRed">$k$</spawn></td>
+          <td>$\times($</td>
+          <td><spawn class="DBlue">$m+n$</spawn></td>
+          <td>$)$</td>
+          <td style="width: 2cm;">=</td>
+          <td>$\textcolor{#C00000}{k}\times \textcolor{#0070C0}{m}$</td>
+          <td>$+$</td>
+          <td>$\textcolor{#C00000}{k}\times \textcolor{#0070C0}{n}$</td>
+        </tr>
+        <tr style="line-height: 9px;">
+          <td colspan="4"><img height="9px" width="135px" src="Images/Accolade_200.svg"></td><td></td>
+          <td colspan="3"><img height="9px" width="130px" src="Images/Accolade_200.svg"></td>
+        </tr>
+        <tr>
+          <td colspan="4" class="CGreen">produit</td><td></td>
+          <td colspan="3" class="CGreen">somme</td>
+        </tr>
+        <tr>
+          <td colspan="2"></td>
+          <td colspan="4"><img height="20px" style="transform: scaleX(-1)" src="Images/Fleche.svg"></td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td colspan="2"></td>
+          <td colspan="4" class="CRed">Factorisation</td>
+          <td colspan="2"></td>
+        </tr>
+      </table>
+    </div>
+    <p class="remarque">Remarque :</p>
+    <p>La distributivité permet de passer d'une somme à un produit et inversement.<br>
+      On l'utilise de manière logique dans les calculs comme : $101\times42 = 100\times42 + 1\times42 = 4200 + 42 = 4242$ </p>
+  <h1>Distributivité :</h1>
+      <h2>Développement :</h2>
+          <div class="definition">
+            Lorsque l'on passe d'un produit à une somme, on <span class="DRed">développe</span>.<br>
+            <table class="center">
+              <tr>
+                <td>
+                  $\textcolor{#C00000}{k}\times(\textcolor{#0070C0}{m+n})$</td>
+                <td style="width: 2cm;">=</td>
+                <td>$\textcolor{#C00000}{k}\times \textcolor{#0070C0}{m}+
+                  \textcolor{#C00000}{k}\times \textcolor{#0070C0}{n}$</td>
+              </tr>
+              <tr style="line-height: 9px;">
+                <td colspan="3">
+                  <img height="20px" src="Images/Fleche.svg">
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" class="DRed">Développement</td>
+              </tr>
+            </table>
+          </div>
+          <p class="exemple">Exemples :</p>
+          <p>On multiplie chaque terme dans la parenthèse par le facteur se trouvant devant.</p>
+          <div class="flexobject" style="row-gap: 30px;">
+            <div class="behindparent">
+              <p style="display: inline; margin-left: 3px;">
+                 $\textcolor{#ED1C24}{2x}(3x+5)$ $=
+                 \textcolor{#ED1C24}{2x}\times3x + \textcolor{#ED1C24}{2x}\times5$ $=
+                 6x^2+10x$
+              </p>
+              <img class="behindobj" style="top: -15px; " height="40px" src="Images/Developpement.svg">
+            </div>
+            
+            <div class="behindparent">
+              <p style="display: inline; margin-left: 3px;">
+                $\textcolor{#ED1C24}{-3x}(-2x+7)$ $=
+                \textcolor{#ED1C24}{-3x}\times(-2x) + \textcolor{#ED1C24}{(-3x)}\times7 $ $=
+                6x^2-21x$
+              </p>
+              <img class="behindobj" style="top: -15px; " height="40px" src="Images/Developpement2.svg">
+            </div>
+            
+            <div class="behindparent">
+              <p style="display: inline; margin-left: 3px;">
+                $\textcolor{#ED1C24}{-2x}(-8x^2+5x -4)$ $=
+                \textcolor{#ED1C24}{-2x}\times(-8x^2) + \textcolor{#ED1C24}{(-2x)}\times5x - \textcolor{#ED1C24}{(-2x)}\times4 $ $=
+                16x^3-10x^2+8x$
+              </p>
+              <img class="behindobj" style="top: -15px; " height="40px" src="Images/Developpement3.svg">
+            </div>
+          </div>
+          <p class="remarque">Remarque :</p>
+          <p>Le cas de figure suivant peut se présenter, on prend alors l'<b>opposé</b> de chacun des termes entre parenthèses :<br>
+          <ul>
+            <li>$-(3x-7) = -3x + 7$</li>
+            <li>$-(-5x^2+4x-1,5) = 5x^2 - 4x+1,5$</li>
+          </ul>
+          </p>
+      <h2>Factorisation :</h2>
+          <div class="definition">
+            Lorsque l'on passe d'une somme à un produit, on <span class="DRed">factorise</span>.<br>
+            <table class="center">
+              <tr>
+                <td>
+                  $\textcolor{#C00000}{k}\times(\textcolor{#0070C0}{m+n})$</td>
+                <td style="width: 2cm;">=</td>
+                <td>$\textcolor{#C00000}{k}\times \textcolor{#0070C0}{m}+
+                  \textcolor{#C00000}{k}\times \textcolor{#0070C0}{n}$</td>
+              </tr>
+              <tr style="line-height: 9px;">
+                <td colspan="3">
+                  <img style="transform: scaleX(-1)" height="20px" src="Images/Fleche.svg">
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" class="DRed">Factorisation</td>
+              </tr>
+            </table>
+          </div>
+          <p class="exemple">Exemples :</p>
+          <p>
+            <ul>
+              <li>
+                $8x+12 = \textcolor{#ED1C24}{4}\times2x + \textcolor{#ED1C24}{4}\times3 = \textcolor{#ED1C24}{4}(2x+3)$
+              </li>
+              <li>
+                $3x^2+5x = \textcolor{#ED1C24}{x}\times3x + \textcolor{#ED1C24}{x}\times5 = \textcolor{#ED1C24}{x}(3x+5)$
+              </li>
+              <li>
+                $-24x^2-12x = \textcolor{#ED1C24}{-12x}\times2x + \textcolor{#ED1C24}{(-12x)}\times1$ $= \textcolor{#ED1C24}{-12x}(2x+1)$
+              </li>
+            </ul>
+          </p>
+          <p class="remarque">Remarque :</p>
+          <p>Il existe une infinité de factorisations possibles car on peut factoriser par n'importe quel nombre.<br>
+          <p>Prenons $24x + 16$, il est possible de le factoriser comme suit :</p>
+            <ul>
+            <li>$\textcolor{#ED1C24}{8}(3x+2)$</li>
+            <li>$\textcolor{#ED1C24}{4}(6x+4)$</li>
+            <li>$\textcolor{#ED1C24}{2}(12x+8)$</li>
+            <li>$\textcolor{#ED1C24}{5}(4,8x+3,2)$</li>
+            <li>$\textcolor{#ED1C24}{7}(\frac{24}{7}x+\frac{16}{7})$</li>
+            <li>$\textcolor{#ED1C24}{23}(\frac{24}{23}x+\frac{16}{23})$</li>
+            <li>$\textcolor{#ED1C24}{16}(\frac{3}{2}x+1)$</li>
+            <li>...</li>
+          </ul>
+          </p>
+</body>
+
+</html>
