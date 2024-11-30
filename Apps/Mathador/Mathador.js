@@ -60,7 +60,7 @@ function DrawResult(negatif)
 	parent.innerHTML = "";
 	parent.appendChild(div);
 	var id = 0;
-	results.forEach(result => {
+	results.solutions.forEach(result => {
 		var local_div = document.createElement("div");
 		local_div.classList.add("solution");
 		let titre = document.createElement("div");
@@ -80,8 +80,35 @@ function DrawResult(negatif)
 	}
 	else
 	{
-		div.innerText = "Aucun coup mathador possible.";
-		return;
+		if (!negatif && results.best.pos.point > 0)
+		{
+			div.innerText = "Aucun coup mathador possible.";
+			var local_div = document.createElement("div");
+			local_div.classList.add("solution");
+			let titre = document.createElement("div");
+			titre.innerText = "Meilleur solution :";
+			local_div.appendChild(titre);
+			CreateSolutionDiv(results.best.pos.solution, local_div, negatif);
+			parent.appendChild(local_div);
+		}
+		else if (negatif && (results.best.pos.point > 0 || results.best.neg.point > 0))
+		{
+			div.innerText = "Aucun coup mathador possible.";
+			var local_div = document.createElement("div");
+			local_div.classList.add("solution");
+			let titre = document.createElement("div");
+			titre.innerText = "Meilleur solution :";
+			local_div.appendChild(titre);
+			if (results.best.pos.point > results.best.neg.point)
+				CreateSolutionDiv(results.best.pos.solution, local_div, negatif);
+			else
+				CreateSolutionDiv(results.best.neg.solution, local_div, negatif);
+			parent.appendChild(local_div);
+		}
+		else
+		{
+			div.innerText = "Aucun coup mathador possible ni aucune solution.";
+		}
 	}
 }
 
@@ -109,14 +136,28 @@ function CreateSolutionDiv(solution, parent, negatif)
 		{
 			if (a < 0 || b < 0) return false;
 		}
-		if (solution[i][1] == 0) 
-			div.innerText = a.toString() + " + " + b.toString() + " = " + (a + b).toString();
-		if (solution[i][1] == 1) 
-			div.innerText = a.toString() + " - " + b.toString() + " = " + (a - b).toString();
-		if (solution[i][1] == 2) 
-			div.innerText = a.toString() + " × " + b.toString() + " = " + (a * b).toString();
-		if (solution[i][1] == 3) 
-			div.innerText = a.toString() + " ÷ " + b.toString() + " = " + (a / b).toString();
+		let result = 0;
+		div.innerText = a.toString() + " ";
+		let black = document.createElement("b");
+		if (solution[i][1] == 0) {
+			black.innerText = " + ";
+			result = (a + b).toString();}
+		if (solution[i][1] == 1) {
+			black.innerText = " - "
+			result = (a - b).toString();}
+		if (solution[i][1] == 2) {
+			black.innerText = " × "
+			result = (a * b).toString();}
+		if (solution[i][1] == 3) {
+			black.innerText = " ÷ "
+			result = (a / b).toString();}
+
+		div.appendChild(black);
+		if (b < 0)
+			div.innerHTML += "(" +  b.toString() + ") = " + result
+		else
+			div.innerHTML += b.toString() + " = " + result
+
 		parent.appendChild(div)
 	}
 	return true;
@@ -134,10 +175,12 @@ function Solutions()
 	var cible = parseInt(document.getElementById("number_target").value);
 
 	var solutions = [];
+	var best_solution = {pos: {point: 0, solution: null}, neg: {point: 0, solution: null}}
+	var skip = false;
 	var usable0 = structuredClone(V);
-	for (let i =0; i < 5; i++)
+	for (let i = 0; i < 5; i++)
 	{
-		var solution = [[null,null,null],[null,null,null],[null,null,null]]
+		var solution = [[null,null,null],[null,null,null],[null,null,null],[null,null,null]]
 		var select1 = usable0[i];
 		var usable1 = structuredClone(usable0);
 		usable1.splice(i, 1);
@@ -158,7 +201,7 @@ function Solutions()
 				
 				for(let op2 = 0; op2 < 4; op2++)
 				{
-					if (op2 == op1) continue;
+					if (skip && op2 == op1) continue; // Saute les opération identiques
 
 					for (let k = 0; k < usable2.length; k++) 
 					{
@@ -181,7 +224,7 @@ function Solutions()
 							
 							for(let op3 = 0; op3 < 4; op3++)
 							{
-								if (op3 == op1 || op3 == op2) continue;
+								if (skip && (op3 == op1 || op3 == op2)) continue; // Saute les opération identiques
 			
 								for (let m = 0; m < usable4.length; m++) 
 								{
@@ -204,7 +247,7 @@ function Solutions()
 										
 										for(let op4 = 0; op4 < 4; op4++)
 										{
-											if (op4 == op1 || op4 == op2 || op4 == op3) continue;
+											if (skip && (op4 == op1 || op4 == op2 || op4 == op3)) continue; // Saute les opération identiques
 						
 											for (let o = 0; o < usable6.length; o++) 
 											{
@@ -226,7 +269,33 @@ function Solutions()
 													if (op4 == 3) usable8.push(select7 / select8)
 													
 													if (usable8[0] == cible)
-														solutions.push(structuredClone(solution))
+													{
+														if (op1 == op2 || op1 == op3 || op1 == op4 || op2 == op3 || op2 == op4 || op3 == op4)
+														{
+															var point = GetPoint(solution)
+															if (point.positive)
+															{
+																if (best_solution.pos.point < point.point)
+																{
+																	best_solution.pos.point = point.point
+																	best_solution.pos.solution = structuredClone(solution)
+																}
+															}
+															else
+															{
+																if (best_solution.neg.point < point.point)
+																{
+																	best_solution.neg.point = point.point
+																	best_solution.neg.solution = structuredClone(solution)
+																}
+															}
+														}
+														else
+														{
+															solutions.push(structuredClone(solution))
+															skip = true; // Supprime le test de toutes les possibilité quand un mathador est trouvé
+														}
+													}
 												}
 											}
 										}
@@ -239,7 +308,24 @@ function Solutions()
 			}
 		}
 	}
-	return Unique(solutions)
+	return {solutions: Unique(solutions), best: best_solution}
+}
+
+
+function GetPoint(solution)
+{
+	var positive = true
+	var point = 0;
+	for (var i = 0; i < 4; i++)
+	{
+		if (solution[i][0] < 0 || solution[i][2] < 0) positive = false;
+		var op = solution[i][1]
+		if (op == 0) point += 1;
+		if (op == 1) point += 2;
+		if (op == 2) point += 1;
+		if (op == 3) point += 3;
+	}
+	return {point: point, positive: positive};
 }
 
 function Unique(solutions)
