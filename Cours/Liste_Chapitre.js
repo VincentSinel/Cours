@@ -474,8 +474,8 @@ var cinquieme_saintexupery = [
 			id: 6,
 			nom: "Angles d'un triangle",
 			icone: 2,
-			ready : false,
-			page : "Base/Chapitre_6/Cours.html"
+			ready : true,
+			page : "SaintExupery/Chapitre_6/Cours.html"
 	},
 	{
 			id: 7,

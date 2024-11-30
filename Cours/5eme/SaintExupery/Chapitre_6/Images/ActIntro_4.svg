@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 91.29 62.73">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        fill: #1d1d1b;
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 12px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-6 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-7 {
+        fill: #f6a117;
+      }
+
+      .cls-7, .cls-8, .cls-9 {
+        stroke-width: 0px;
+      }
+
+      .cls-10 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-2, .cls-11, .cls-3 {
+        stroke-width: 2px;
+      }
+
+      .cls-2, .cls-11, .cls-3, .cls-4 {
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-12 {
+        filter: url(#drop-shadow-2);
+      }
+
+      .cls-8 {
+        fill: #b44090;
+      }
+
+      .cls-13 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-9 {
+        fill: #74bd83;
+      }
+
+      .cls-11 {
+        fill: none;
+      }
+
+      .cls-3 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-14 {
+        mask: url(#mask);
+      }
+    </style>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="2"/>
+      <feGaussianBlur result="blur" stdDeviation="1"/>
+      <feFlood flood-color="#1d1d1b" flood-opacity=".75"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <mask id="mask" x="-4.12" y="-4.22" width="103.44" height="60.96" maskUnits="userSpaceOnUse">
+      <rect class="cls-4" x="5.06" y="5.06" width="80" height="42.23"/>
+    </mask>
+    <filter id="drop-shadow-2" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="2"/>
+      <feGaussianBlur result="blur-2" stdDeviation="2"/>
+      <feFlood flood-color="#1d1d1b" flood-opacity=".75"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clippath">
+      <polygon class="cls-2" points="85.06 47.29 58.41 42.67 85.06 5.06 85.06 47.29"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <polygon class="cls-2" points="5.06 5.06 40.64 19.69 85.06 5.06 5.06 5.06"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <polygon class="cls-2" points="5.06 47.29 20.54 42.67 5.06 5.06 5.06 47.29"/>
+    </clipPath>
+  </defs>
+  <rect class="cls-3" x="5.06" y="5.06" width="80" height="42.23"/>
+  <g class="cls-14">
+    <g>
+      <line class="cls-11" x1="85.06" y1="47.29" x2="5.06" y2="47.29"/>
+      <g class="cls-12">
+        <g>
+          <polygon class="cls-1" points="85.06 47.29 58.41 42.67 85.06 5.06 85.06 47.29"/>
+          <g class="cls-13">
+            <ellipse class="cls-7" cx="58.41" cy="42.67" rx="8.09" ry="11.42"/>
+          </g>
+          <polygon class="cls-11" points="85.06 47.29 58.41 42.67 85.06 5.06 85.06 47.29"/>
+        </g>
+        <g>
+          <polygon class="cls-1" points="5.06 5.06 40.64 19.69 85.06 5.06 5.06 5.06"/>
+          <g class="cls-10">
+            <circle class="cls-8" cx="40.64" cy="19.69" r="6.06"/>
+          </g>
+          <polygon class="cls-11" points="5.06 5.06 40.64 19.69 85.06 5.06 5.06 5.06"/>
+        </g>
+        <g>
+          <polygon class="cls-1" points="5.06 47.29 20.54 42.67 5.06 5.06 5.06 47.29"/>
+          <g class="cls-6">
+            <ellipse class="cls-9" cx="20.54" cy="42.67" rx="5.68" ry="7.57"/>
+          </g>
+          <polygon class="cls-11" points="5.06 47.29 20.54 42.67 5.06 5.06 5.06 47.29"/>
+        </g>
+      </g>
+      <line class="cls-4" x1="40.64" y1="44.33" x2="40.64" y2="47.29"/>
+    </g>
+  </g>
+  <text class="cls-5" transform="translate(35.97 59.48)"><tspan x="0" y="0">M</tspan></text>
+</svg>
