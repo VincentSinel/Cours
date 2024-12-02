@@ -14,16 +14,23 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>E1 - Droites</title>
+  <title>E4 - le Cercle</title>
 
   <style>
-    .appartient div{
-      display: inline-block;
-      width: 8cm;
+    .fleche{
+      position: relative; 
+      width: 210px; 
+      height: 100px;
     }
-    .appartient div:first-child{
-      display: inline-block;
-      width: 3cm;
+    .fleche img{
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .fleche p{
+      padding: 3px 20px 19px 0px;
+      text-align: center;
     }
   </style>
 
@@ -34,10 +41,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        E1
+        E4
       </td>
       <td id="ChapitreNom">
-        - Droites
+        - le Cercle
       </td>
     </tr>
   </table>
@@ -46,8 +53,86 @@
     Activité Introduction
   </p>
 
+  <ol>
+    <li>Construire un cercle de centre O et de rayon 2,5cm. Placer un point A sur ce cercle.</li>
+    <li>Placer B le point d'intersection de la droite (AO) et du cercle.</li>
+    <li>
+      Placer un point C du cercle distinct de A et B.
+    </li>
+    <li>Compléter :<br>
+    <i>[AB] est un ............... du cercle</i><br>
+    <i>[OC] est un ............... du cercle</i></li>
+  </ol>
+  <h1>Cercle :</h1>
+      <div class="definition">
+        Un <span class="CRed">cercle</span> de <span class="CRed">centre</span> O est formé de tous les points à une même distance du point O.<br>
+        Cette distance est appelée le <span class="CRed">rayon</span> du cercle.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <img src="Images/Cercle1.svg" style="max-width: 5cm;"><br><br>
+  <h1>Vocabulaire :</h1>
+      <div class="definition">
+        <ul>
+          <li>Une <span class="CRed">corde</span> est un segment dont les deux extrémités appartiennent au cercle.</li>
+          <li>Un <span class="CRed">diamètre</span> est une corde particulière qui passe par le centre du cercle.</li>
+          <li><b><u><i>LE</i></u></b> <span class="CRed">diamètre</span> d'un cercle est la longueur commune à tous les diamètres.</li>
+          <li>Un <span class="CRed">arc de cercle</span> est une partie du cercle délimité par deux points.</li>
+        </ul>
+      </div>
+      <p class="exemple">Exemple :</p>
+      <img src="Images/Cercle2.svg" style="max-width: 5cm;">
+      <p class="remarque">Remarque :</p>
+      <ul><li>Il existe une infinité de diamètre.</li></ul>
+  <h1>Propriétés :</h1>
+          <div class="definition">
+            Tous les points d'un cercle de centre O sont à la même distance du point O.
+          </div>
 
+          <div class="flexobject">
+            <div style="flex: 1 1 4cm; max-width: 6cm;">
+              <img src="Images/Cercle4.svg">
+              <div style="text-align: center;">
+                <b>On sait que</b> les points M et N sont sur le cercle.
+              </div>
+            </div>
+            <div class="fleche">
+              <image src="Images/Flêche1.svg"></image>
+              <p>D'après la propriété précédente </p>
+            </div>
+            <div style="flex: 1 1 4cm; max-width: 6cm;">
+              <img src="Images/Cercle5.svg" >
+              <div style="text-align: center;">
+                OM = ON
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <div class="definition">
+            Deux points situés à la même distance d'un point O appartient au un même cercle de centre O.
+          </div>
+
+          <div class="flexobject">
+            <div style="flex: 1 1 4cm; max-width: 6cm;">
+              <img src="Images/Cercle6.svg">
+              <div style="text-align: center;">
+                <b>On sait que</b> OM = ON.
+              </div>
+            </div>
+            <div class="fleche">
+              <image src="Images/Flêche1.svg"></image>
+              <p>D'après la propriété précédente </p>
+            </div>
+            <div style="flex: 1 1 4cm; max-width: 6cm;">
+              <img src="Images/Cercle4.svg" >
+              <div style="text-align: center;">
+                M et N appartiennent au même cercle de centre O.
+              </div>
+            </div>
+          </div>
+          <br>
 
 </body>
 
 </html>
+

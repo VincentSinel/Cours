@@ -1307,8 +1307,14 @@ var sixieme_rogervailland = [
 		id: 10,
 		chapter: "Chapitre E4",
 		nom: "Le cercle",
+		download: {
+			pdf: "/Cours/6eme/RogerVailland/Chapitre_E4/Documents/E4 - Le cercle (Complet).pdf",
+			docx: "/Cours/6eme/RogerVailland/Chapitre_E4/Documents/E4 - Le cercle (Complet).docx",
+			pdf_trou: "/Cours/6eme/RogerVailland/Chapitre_E4/Documents/E4 - Le cercle (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_E4/Documents/E4 - Le cercle (A trou).docx",
+		},
 		icone: 11,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_E4/Cours.html",
 	},
 	{
