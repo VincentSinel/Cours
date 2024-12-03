@@ -25,6 +25,47 @@
     --AccoladeSize: 7px;
     --AccoladeWeight: 3px;
 
+    --Color_Marron1 : #442C40;
+    --Color_Marron2 : #734B5E;
+    --Color_Marron3 : #B36E64;
+    --Color_Marron4 : #D3957A;
+    --Color_Marron5 : #F6C59D;
+    --Color_Red1 : #A91648;
+    --Color_Red2 : #CB2F4C;
+    --Color_Red3 : #E14A49;
+    --Color_Red4 : #FF7463;
+    --Color_Red5 : #FFB993;
+    --Color_Orange1 : #D13832;
+    --Color_Orange2 : #E45832;
+    --Color_Orange3 : #F77943;
+    --Color_Orange4 : #FFA561;
+    --Color_Orange5 : #FFD99E;
+    --Color_Yellow1 : #CD682C;
+    --Color_Yellow2 : #E29B31;
+    --Color_Yellow3 : #F2BA4D;
+    --Color_Yellow4 : #FFDF68;
+    --Color_Yellow5 : #FFFF8F;
+    --Color_Green1 : #159D56;
+    --Color_Green2 : #34D15B;
+    --Color_Green3 : #5FF26F;
+    --Color_Green4 : #88FF87;
+    --Color_Green5 : #C6FFAC;
+    --Color_Blue1 : #0D64AB;
+    --Color_Blue2 : #2189C7;
+    --Color_Blue3 : #3CB3E3;
+    --Color_Blue4 : #56DCFF;
+    --Color_Blue5 : #82FFFF;
+    --Color_Purple1 : #6314A5;
+    --Color_Purple2 : #7B29C1;
+    --Color_Purple3 : #A546E0;
+    --Color_Purple4 : #D261FD;
+    --Color_Purple5 : #FF93FF;
+    --Color_BlueGray1 : #1A2750;
+    --Color_BlueGray2 : #364E6A;
+    --Color_BlueGray3 : #678B9C;
+    --Color_BlueGray4 : #A1CED4;
+    --Color_BlueGray5 : #E6FCFC;
+
 }
 
 .CRed { color: var(--Cred);}
