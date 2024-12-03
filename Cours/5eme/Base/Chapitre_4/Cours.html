@@ -14,9 +14,18 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>Chapitre 4 - Angles particuliers</title>
+  <title>Chapitre 4 - Algorithme</title>
 
   <style>
+    .recette{
+      border-radius: 20px;
+      padding: 10px;
+      background-color: var(--Color_Orange5);
+      max-width: 12cm;
+    }
+    .recette .flexobject{
+      gap: 0px;
+    }
   </style>
 
 </head>
@@ -29,7 +38,7 @@
         Chapitre 4
       </td>
       <td id="ChapitreNom">
-        - Angles particuliers
+        - Algorithme
       </td>
     </tr>
   </table>
@@ -38,152 +47,145 @@
     Activité Introduction
   </p>
 
+  <div style="border-radius: 1cm; overflow: hidden; width: fit-content; border: solid 2px gray;">
+    <img src="Images/Map.png" style="max-height: 8cm;">
+  </div>
   <div class="flexobject">
     <div style="flex: 1 1 4cm;">
-      En utilisant le rapporteur et une règle, on souhaite tracer le triangle ci-contre.
-      <ol>
-        <li>Trace un segment [AC] de 6cm.</li>
-        <li>Place le centre de ton rapporteur sur le point A et aligne le "zéro" avec le segment.
-          <ol type="a">
-            <li>En partant du zero aligné avec le segment, place une graduation à 61°</li>
-            <li>Retire ton rapporteur et trace la droite passant par A et la marque que tu vient de construire.</li>
-          </ol>
-        </li>
-        <li>Faire de même à partir du point C avec l'angle de 43°.</li>
-        <li>Placer le point B à l'intersection des deux droites.</li>
-      </ol>
+      Emile se promène dans les rues de Paris. Il se trouve à la sortie du métro Odéon et se rend à pied à la cathédrale Notre-Dame de Paris. Il utilise son GPS en mode piéton. Il fait des pas d'un mètre environ. Parmi les programmes suivants, lequel correspond à celui utilisé par le GPS d'Emile pour rejoindre la cathédrale ?<br>
+      <br>
+      <i><b>GPS</b> est le sigle de <b>G</b>lobal <b>P</b>ositioning <b>S</b>ystem, qui signifie « système de localisation mondial ».</i><br><br>
+      <div class="flexobject">
+        <div style="flex: 1 1 4cm; max-width: 4cm;">
+          Programme 1
+          <img src="Images/Programme1.svg">  
+        </div>
+        <div style="flex: 1 1 4cm; max-width: 4cm;">
+          Programme 2
+          <img src="Images/Programme3.svg">  
+        </div>
+        <div style="flex: 1 1 4cm; max-width: 4cm;">
+          Programme 3
+          <img src="Images/Programme2.svg">  
+        </div>
+      </div>
     </div>
-    <img src="Images/Triangle1.svg" style="max-width: 5cm;">
   </div>
-  <div id="Animation1" class="animation center" width="480" height="360"></div>
 
-  <h1>Définitions :</h1>
-      <h2>Angles :</h2>
+  <h1>Algorithme :</h1>
+      <h2>Dans la vie courante :</h2>
           <div class="definition">
-            Un <span class="CRed">angle</span> est une partie du plan limitée par deux demi-droites de même origine.
+            Un <span class="CRed">algorithme</span> est une liste ordonnée d'instructions très simples permettant de résoudre un problème. 
           </div>
-          <img src="Images/Angle1.svg" style="max-width: 7cm;">
-      <h2>Angles particuliers :</h2>
-          <table class="proportionnaltable">
-            <tr>
-              <th>Angle plat</th>
-              <th>Angle droit</th>
-              <th>Angle nul</th>
-            </tr>
-            <tr>
-              <td>
-                <img src="Images/Angle2.svg" style="max-width: 7cm;">
-              </td> 
-              <td>
-                <img src="Images/Angle3.svg" style="max-height: 3cm;">
-              </td> 
-              <td>
-                <img src="Images/Angle4.svg" style="max-width: 7cm;">
-              </td> 
-            </tr>
-            <tr>
-              <td>180°</td>
-              <td>90°</td>
-              <td>0°</td>
-            </tr>
-          </table>
-          <p class="remarque">Remarque :</p>
-          <ul><li>Dans chacun des cas, le sommet de l'angle est <span class="CRed">O</span> et les deux demi-droites qui forme l'angle sont [<span class="CRed">O</span>A) et [<span class="CRed">O</span>B).</li></ul>
-
-          <p>
-            Dans le cas générales, on classe les angles en deux catégories :
-          </p>
-          <table class="proportionnaltable">
-            <tr>
-              <th>Angle <span class="CBlue">Aigu</span></th>
-              <th>Angle <span class="CRed">Obtus</span></th>
-            </tr>
-            <tr>
-              <td style="width: 200px;"><img src="Images/Angle5.svg" style="max-height: 3.5cm;"></td>
-              <td style="width: 200px;"><img src="Images/Angle6.svg" style="max-height: 3.5cm;"></td>
-            </tr>
-            <tr>
-              <td>Angle de moins de 90°</td>
-              <td>Angle de plus de 90°</td>
-            </tr>
-          </table>
-      <h2>Notation :</h2>
-          <p>Il existe deux notation d'angle en fonction de la partie du plan que l'on souhaite nommer. Lorsque l'angle est plus petit ou égale à un angle plat et lorsque qu'il est plus grand.</p>
-          <table class="proportionnaltable">
-            <tr>
-              <th>
-                Angle inférieur à un demi-tour
-              </th>
-              <th>
-                Angle supérieur à un demi-tour
-              </th>
-            </tr>
-            <tr>
-              <td><img src="Images/Angle7.svg" style="max-height: 4cm;"></td>
-              <td><img src="Images/Angle8.svg" style="max-height: 4cm;"></td>
-            </tr>
-            <tr>
-              <td><img src="Images/Nom1.svg" style="max-width: 1cm;"></td>
-              <td><img src="Images/Nom2.svg" style="max-width: 1cm;"></td>
-            </tr>
-          </table>
-    <h1>Couple d'angles :</h1>
-        <h2>Droites sécantes :</h2>
-          <p>
-            
-          </p>
-          <div class="definition">
-            Deux droites sécantes forment 4 angles.
-            Deux angles n'ayant que le sommet en commun, parmis les quatres, sont dits <span class="CRed">opposés par le sommets</span>. Il sont alors de même mesure.
-          </div>
-          <div class="flexobject">
-            <img src="Images/Secantes.svg" style="max-height: 3cm;">
-            <div style="flex: 1 1 5cm">
-              <p class="exemple">Exemples :</p>
-              <p>
-                $\widehat{AOB}$ et $\widehat{MON}$ sont <b>opposés par le sommets</b>.<br>
-                $\widehat{AOM}$ et $\widehat{BON}$ sont <b>opposés par le sommets</b>.
-              </p>
+          <p class="exemple">Exemple :</p>
+          <div class="recette">
+            <div style="font-size: 14pt; text-align: center;">
+              <b>Recette du fondant au chocolat.</b>
+            </div>
+            <div class="flexobject">
+              <img src="Images/FondantChocolat.png" style="max-width: 5cm;">
+              <div style="flex: 1 1 5cm">
+                <b>Ingrédients</b><br>
+                <ul>
+                  <li><b>Chocolat noir :</b> 200g</li>
+                  <li><b>Oeufs :</b> 3</li>
+                  <li><b>Farine :</b> 50g</li>
+                  <li><b>Sucre en poudre :</b> 100g</li>
+                  <li><b>Beurre :</b> 100g</li>
+                </ul>
+              </div>
+            </div><br>
+            <div>
+              <b>Préparation</b><br>
+              <ol>
+                <li>Préchauffez votre four Th.6 (180°C).</li>
+                <li>Dans une casserole faire fondre le chocolat et le beurre coupé en morceaux à feu très doux.</li>
+                <li>Dans un saladier, ajoutez le sucre, les oeufs, la farine et le chocolat. Mélangez bien.</li>
+                <li>Beurrez et farinez votre moule et versez la pâte à gâteau.</li>
+                <li>Faites cuire au four environ 20 minutes.</li>
+                <li>Laissez-le refroidir puis démoulez-le.</li>
+              </ol>
             </div>
           </div>
+          <p>
+            On retrouve aussi des formes d'algorithme dans les mode d'emploi d'appareil ménager.
+          </p>
+      <h2>Composition d'un algorithme :</h2>
+        <div class="definition">
+          Un algorithme se décompose en trois grandes parties :
+          <ul>
+            <li>Un première partie d'<span class="CRed">initialisation</span> qui permet de définir les informations dont on a besoin au départ (aussi appelé les <span class="CRed">conditions initiales</span>)</li>
+            <li>Une seconde partie de traitement des données qui est composé d'une succession d'instruction à appliquer. C'est le coeur de l'algorithme.</li>
+            <li>Une troisième partie appelée sortie. C'est la réponse (visuel, textuel, sonore, etc...) que nous renvoie l'algorithme, le résultat recherché.</li>
+          </ul>
+        </div>
+        <p class="exemple">Exemple :</p>
+        <p>
+          Dans la recette du fondant au chocolat :
+          <ul>
+            <li>L'initialisation est la partie qui donne les ingrédients nécessaires à la recette.</li>
+            <li>Le traitement des données est suivi de la préparation de la recette.</li>
+            <li>Le rendu (ou la sortie) est le gâteau une fois terminé.</li>
+          </ul>
+        </p>
+        <p class="remarque">Remarques :</p>
+        <ul>
+          <li>Un algorithme peut-être traduit, grâce à un langage de programmation, en un programme pour l'exécuter sur un ordinateur. Dans la suite un <b>programme</b> désignera donc un algorithme retranscrit pour un ordinateur. </li>
+          <li>La programmation au collège est basé sur le programme <b>Scratch</b> qui sera la base des exemples.</li>
+        </ul>
+        
+      <h1>Les différents outils :</h1>
+        <h2>Déclenchements :</h2>
           <div class="definition">
-            Des angles dont la somme des mesures est égale à 180° sont dits <span class="CRed">complémentaires.</span>
+            Pour démarrer un programme, il faut un point d'entrée, d'un déclenchement. Cela peut-être l'appui sur le drapeau dans scratch, l'appui sur une touche, etc...
           </div>
           <p class="exemple">Exemples :</p>
-          <p>
-            Dans l'exemple précédent :<br>
-            $\widehat{AOB}$ et $\widehat{AOM}$ sont <b>complémentaires</b>.
-          </p>
-        <h2>Angles correspondant :</h2>
-          
-    <h1>Mesure et construction :</h1>
-        <h2>Mesure d'un angle :</h2>
-            <div class="definition">
-              Pour mesurer un angle, on utilise le <span class="CRed">degré</span> comme unité. Il se note avec le symbole <b>°</b>.
-            </div>
-            <p class="Remarque">Remarque :</p>
-            <ul><li>Pour mesurer un angle, on utilise un rapporteur.</li></ul>
-            <p>Lorsque l'on souhaite mesure un angle, on place le centre du rapporteur sur le sommet de l'angle ; On aligne l'un des 0° avec l'un des côté de l'angle et on mesure à partir de la position de la seconde demi-droite.</p>
-            <div class="flexobject">
-              <img src="Images/Rapporteur1.svg" style="flex: 1 1 4cm;max-width: 12cm;">
-              <img src="Images/Rapporteur2.svg" style="flex: 1 1 4cm;max-width: 12cm;">
-            </div>
-            <p>En fonction du 0° choisi, la mesure de l'angle se mesure avec les graduation à l'intérieur ou à l'extérieur du rapporteur.</p>
-        <h2>Construction d'un angle :</h2>
-            <div class="flexobject">
-              <div style="flex: 1 1 4cm;max-width: 12cm;">
-                <ol><li value="1">On place le rapporteur sur le sommet</li></ol>
-                <img src="Images/Construction1.svg" >
-              </div>
-              <div style="flex: 1 1 4cm;max-width: 10cm;">
-                <ol><li value="2">On aligne le rapporteur avec la demi-droite et on mesure 70°</li></ol>
-                <img src="Images/Construction2.svg">
-              </div>
-              <div>
-                <ol><li value="3">On trace la demi droite.</li></ol>
-                <img src="Images/Construction3.svg" style="flex: 1 1 4cm;max-width: 6cm;">
-              </div>
-            </div>
+          <div class="flexobject">
+            <img src="Images/Init1.svg" style="max-height: 2cm;">
+            <img src="Images/Init2.svg" style="max-height: 2cm;">
+            <img src="Images/Init3.svg" style="max-height: 2cm;">
+            <img src="Images/Init4.svg" style="max-height: 2cm;">
+          </div>
+          <p class="remarque">Remarque :</p>
+          <ul>
+            <li>Il est possible de lancer plusieurs programmes à la fois et donc plusieurs déclenchements en même temps</li>
+          </ul>
+        <h2>Boucles :</h2>
+          <div class="definition">
+            Les blocs boucles permettent de répéter un groupe d'action. Il en existe plusieurs sortes :
+            <ul>
+              <li>A répétitions fixe (on connaît le nombre de répétitions)</li>
+              <li>A répétitions conditionnelles (on ne sait pas à l'avance combien de fois va s'effectuer la boucle)</li>
+              <li>A répétitions infinies (la boucle ne s'arrête pas)</li>
+            </ul>
+          </div>
+          <p class="exemple">Exemples :</p>
+          <div class="flexobject">
+            <img src="Images/Boucle1.svg" style="max-height: 2cm;">
+            <img src="Images/Boucle2.svg" style="max-height: 2cm;">
+            <img src="Images/Boucle3.svg" style="max-height: 2cm;">
+          </div>
+        <h2>Conditions :</h2>
+          <div class="definition">
+            Les conditions permettent d'effectuer certaines actions avec des conditions définies. 
+          </div>
+          <p class="exemple">Exemples :</p>
+          <div class="flexobject">
+            <img src="Images/Condition1.svg" style="max-height: 2cm;">
+            <img src="Images/Condition2.svg" style="max-height: 3.2cm;">
+            <img src="Images/Condition3.svg" style="max-height: 3.5cm;">
+          </div>
+        <h2>Variables :</h2>
+        <div class="definition">
+          Un <span class="CRed">variable</span> est une « case mémoire » dans laquelle on stocke une information pour pouvoir la réutiliser ensuite. On peut la modifier, extraire et utiliser sa valeur. 
+        </div>
+        <p class="remarque">Remarques :</p>
+        <ul>
+          <li>Une variable peut contenir tout type d'information pas uniquement des nombres. Elle peut par exemple contenir du texte.</li>
+          <li>Une variable ne se réinitialise pas lors de l'arrêt d'un programme scratch il faut les réinitialiser nous-même.</li>
+        </ul>
+        <p class="exemple">Un exemple complet de programme :</p>
+        <img src="Images/Exemple.svg" style="max-height: 10cm;">
     
 </body>
 

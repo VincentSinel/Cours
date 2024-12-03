@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-2.5 -3 298.35 77.5"><style xmlns="http://www.w3.org/1999/xhtml">
+    .blocklyText {
+        fill: #FFFFFF;
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 12pt;
+        font-weight: 500;
+    }
+    .blocklyNonEditableText&gt;text, .blocklyEditableText&gt;text {
+        fill: #575E75;
+    }
+    .blocklyDropdownText {
+        fill: #FFFFFF !important;
+    }
+    </style><g data-id=";D^.uO^qygf(@[Z08/=?" class="blocklyDraggable blocklySelected" data-shapes="hat" data-category="control" transform="translate(0,16) scale(1)"><path class="blocklyPath blocklyBlockBackground" stroke="#CF8B17" fill="#FFAB19" fill-opacity="1" d="m 0,0 c 25,-22 71,-22 96,0 H 289.3333435058594 a 4,4 0 0,1 4,4 v 40  a 4,4 0 0,1 -4,4 H 48   c -2,0 -3,1 -4,2 l -4,4 c -1,1 -2,2 -4,2 h -12 c -2,0 -3,-1 -4,-2 l -4,-4 c -1,-1 -2,-2 -4,-2 H 4 a 4,4 0 0,1 -4,-4 z"/><text class="blocklyText" y="2" text-anchor="middle" dominant-baseline="middle" dy="0" x="138.6666717529297" transform="translate(8, 24) ">quand je commence comme un clone</text></g></svg>

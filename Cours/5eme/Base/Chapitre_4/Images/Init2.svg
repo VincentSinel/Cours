@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-2.5 -3 253.38 77.5"><style xmlns="http://www.w3.org/1999/xhtml">
+    .blocklyText {
+        fill: #FFFFFF;
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 12pt;
+        font-weight: 500;
+    }
+    .blocklyNonEditableText&gt;text, .blocklyEditableText&gt;text {
+        fill: #575E75;
+    }
+    .blocklyDropdownText {
+        fill: #FFFFFF !important;
+    }
+    </style><g data-id=":O^COuZpncu)]j/ii$Rq" class="blocklyDraggable blocklySelected" data-shapes="hat" data-category="events" transform="translate(0,16) scale(1)"><path class="blocklyPath blocklyBlockBackground" stroke="#CC9900" fill="#FFBF00" fill-opacity="1" d="m 0,0 c 25,-22 71,-22 96,0 H 244.36666870117188 a 4,4 0 0,1 4,4 v 40  a 4,4 0 0,1 -4,4 H 48   c -2,0 -3,1 -4,2 l -4,4 c -1,1 -2,2 -4,2 h -12 c -2,0 -3,-1 -4,-2 l -4,-4 c -1,-1 -2,-2 -4,-2 H 4 a 4,4 0 0,1 -4,-4 z"/><text class="blocklyText" y="2" text-anchor="middle" dominant-baseline="middle" dy="0" x="54.266666412353516" transform="translate(8, 24) ">quand je reçois</text><g data-argument-type="variable" class="blocklyEditableText" style="cursor: default;" transform="translate(124.53333282470703, 8) "><rect rx="4" ry="4" x="0" y="0" width="115.83333587646484" height="32" stroke="#CC9900" fill="#FFBF00" class="blocklyBlockBackground" fill-opacity="1"/><text class="blocklyText blocklyDropdownText" x="47.91666793823242" y="18" dominant-baseline="middle" dy="0" text-anchor="middle">message1</text><image height="12px" width="12px" xlink:href="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMi43MSIgaGVpZ2h0PSI4Ljc5IiB2aWV3Qm94PSIwIDAgMTIuNzEgOC43OSI+PHRpdGxlPmRyb3Bkb3duLWFycm93PC90aXRsZT48ZyBvcGFjaXR5PSIwLjEiPjxwYXRoIGQ9Ik0xMi43MSwyLjQ0QTIuNDEsMi40MSwwLDAsMSwxMiw0LjE2TDguMDgsOC4wOGEyLjQ1LDIuNDUsMCwwLDEtMy40NSwwTDAuNzIsNC4xNkEyLjQyLDIuNDIsMCwwLDEsMCwyLjQ0LDIuNDgsMi40OCwwLDAsMSwuNzEuNzFDMSwwLjQ3LDEuNDMsMCw2LjM2LDBTMTEuNzUsMC40NiwxMiwuNzFBMi40NCwyLjQ0LDAsMCwxLDEyLjcxLDIuNDRaIiBmaWxsPSIjMjMxZjIwIi8+PC9nPjxwYXRoIGQ9Ik02LjM2LDcuNzlhMS40MywxLjQzLDAsMCwxLTEtLjQyTDEuNDIsMy40NWExLjQ0LDEuNDQsMCwwLDEsMC0yYzAuNTYtLjU2LDkuMzEtMC41Niw5Ljg3LDBhMS40NCwxLjQ0LDAsMCwxLDAsMkw3LjM3LDcuMzdBMS40MywxLjQzLDAsMCwxLDYuMzYsNy43OVoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=" xmlns:xlink="http://www.w3.org/1999/xlink" transform="translate(91.83333587646484,11)"/></g></g></svg>

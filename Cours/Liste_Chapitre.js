@@ -317,7 +317,7 @@ var cinquieme_base = [
 			id: 4,
 			nom: "Algorithmes",
 			icone: 2,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_4/Cours.html"
 	},
 	{
