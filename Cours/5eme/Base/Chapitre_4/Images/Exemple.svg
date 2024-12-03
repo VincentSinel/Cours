@@ -188,20 +188,20 @@
     <polygon points="9 0 -1 4 0 0 -1 -4 9 0"/>
 </g>
 <line fill="none" stroke="#A546E0" stroke-width="4" stroke-miterlimit="10" x1="170" y1="30" x2="700" y2="30"/>
-<text font-family="Helvetica" x="720" y="30" fill="#A546E0" dominant-baseline="middle" text-anchor="left" font-weight="bold" font-size="20">Déclenchement</text>
+<text font-family="Helvetica , sans-serif" x="720" y="30" fill="#A546E0" dominant-baseline="middle" text-anchor="left" font-weight="bold" font-size="20">Déclenchement</text>
 <g transform="translate(700, 110) scale(2)" fill="#3CB3E3">
     <polygon points="9 0 -1 4 0 0 -1 -4 9 0"/>
 </g>
 <line fill="none" stroke="#3CB3E3" stroke-width="4" stroke-miterlimit="10" x1="315" y1="110" x2="700" y2="110"/>
-<text font-family="Helvetica" x="720" y="110" fill="#3CB3E3" dominant-baseline="middle" text-anchor="left" font-weight="bold" font-size="20">Initialisation</text>
+<text font-family="Helvetica , sans-serif" x="720" y="110" fill="#3CB3E3" dominant-baseline="middle" text-anchor="left" font-weight="bold" font-size="20">Initialisation</text>
 <g transform="translate(700, 319) scale(2)" fill="#5FF26F">
     <polygon points="9 0 -1 4 0 0 -1 -4 9 0"/>
 </g>
 <line fill="none" stroke="#5FF26F" stroke-width="4" stroke-miterlimit="10" x1="405" y1="319" x2="700" y2="319"/>
-<text font-family="Helvetica" x="720" y="319" fill="#5FF26F" dominant-baseline="middle" text-anchor="left" font-weight="bold" font-size="20">Traitement des données</text>
+<text font-family="Helvetica , sans-serif" x="720" y="319" fill="#5FF26F" dominant-baseline="middle" text-anchor="left" font-weight="bold" font-size="20">Traitement des données</text>
 <g transform="translate(700, 512) scale(2)" fill="#E14A49">
     <polygon points="9 0 -1 4 0 0 -1 -4 9 0"/>
 </g>
 <line fill="none" stroke="#E14A49" stroke-width="4" stroke-miterlimit="10" x1="683" y1="512" x2="700" y2="512"/>
-<text font-family="Helvetica" x="720" y="512" fill="#E14A49" dominant-baseline="middle" text-anchor="left" font-weight="bold" font-size="20">Sortie</text>
+<text font-family="Helvetica , sans-serif" x="720" y="512" fill="#E14A49" dominant-baseline="middle" text-anchor="left" font-weight="bold" font-size="20">Sortie</text>
 </svg>
