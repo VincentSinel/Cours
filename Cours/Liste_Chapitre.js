@@ -745,7 +745,13 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre E4",
 		nom: "Caractérisation angulaire du parallélisme",
 		icone: 11,
-		ready : false,
+		download: {
+			pdf: "/Cours/5eme/RogerVailland/Chapitre_E4/Documents/E4 - Caractérisation angulaire du parallélisme (Complet).pdf",
+			docx: "/Cours/5eme/RogerVailland/Chapitre_E4/Documents/E4 - Caractérisation angulaire du parallélisme (Complet).docx",
+			pdf_trou: "/Cours/5eme/RogerVailland/Chapitre_E4/Documents/E4 - Caractérisation angulaire du parallélisme (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_E4/Documents/E4 - Caractérisation angulaire du parallélisme (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_E4/Cours.html",
 	},
 	{
