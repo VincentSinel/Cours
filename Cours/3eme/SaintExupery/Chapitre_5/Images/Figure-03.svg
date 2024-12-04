@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 147.34 75.66">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1d1d1b;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 12px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #e62e31;
+      }
+    </style>
+  </defs>
+  <line class="cls-3" x1="1.56" y1="30.09" x2="147.26" y2="52.56"/>
+  <line class="cls-3" x1=".2" y1="64.47" x2="144.2" y2="3.41"/>
+  <line class="cls-3" x1="120.99" y1="10.49" x2="123.97" y2="14.75"/>
+  <line class="cls-3" x1="103.29" y1="42.21" x2="101.76" y2="49.11"/>
+  <line class="cls-3" x1="15" y1="54.29" x2="18.96" y2="60.42"/>
+  <line class="cls-3" x1="137.79" y1="47.53" x2="136.26" y2="54.43"/>
+  <text class="cls-1" transform="translate(56.49 35.16)"><tspan x="0" y="0">A</tspan></text>
+  <text class="cls-1" transform="translate(16.98 72.41)"><tspan x="0" y="0">B</tspan></text>
+  <text class="cls-1" transform="translate(131.54 63.89)"><tspan x="0" y="0">C</tspan></text>
+  <text class="cls-1" transform="translate(96.04 60.33)"><tspan x="0" y="0">M</tspan></text>
+  <text class="cls-1" transform="translate(112.34 10.26)"><tspan x="0" y="0">N</tspan></text>
+  <text class="cls-2" transform="translate(62.2 50.98) rotate(8.77)"><tspan x="0" y="0">2,5 cm</tspan></text>
+  <text class="cls-2" transform="translate(74.41 30.48) rotate(-22.98)"><tspan x="0" y="0">1,5 cm</tspan></text>
+  <text class="cls-2" transform="translate(31.44 61.95) rotate(-22.98)"><tspan x="0" y="0">9 cm</tspan></text>
+  <text class="cls-2" transform="translate(102.53 41.32) rotate(8.77)"><tspan x="0" y="0">12,5 cm</tspan></text>
+</svg>

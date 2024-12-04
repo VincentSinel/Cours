@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <script src="/JS/Svg.js/svg.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+  <script src="JS/Homothetie.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Chapitre 5 - Théorème de Thalès</title>
+
+  <style>
+    #graphiqueintro
+    {
+      border: solid black 1px;
+      width: fit-content;
+    }
+    .tableaud{
+      display: grid;
+      width: calc(2 * 200px);
+      grid-template-columns: repeat(2, 200px);
+      grid-auto-rows: minmax(30px, auto);
+      border: 1px solid black;
+    }
+    .tableaud div{
+      border: 1px solid black;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Chapitre 5
+      </td>
+      <td id="ChapitreNom">
+        - Théorème de Thalès
+      </td>
+    </tr>
+  </table>
+
+  <p class="exemple">
+    Activité Introduction
+  </p>
+  
+  <p>Effectuer la construction suivante :</p>
+  <ol>
+    <li>Construire un triangle ABC quelconque.</li>
+    <li>Construire l'image de ABC par l'homothétie de centre A de rapport 1,5.</li>
+    <li>Que vaut :
+      <ol type="a">
+        <li>$\frac{AB}{AM}$</li>
+        <li>$\frac{AC}{AN}$</li>
+        <li>$\frac{BC}{MN}$</li>
+      </ol>
+      Que remarque-t-on ?
+    </li>
+    <li>Que peut-on dire des droite BC et MN ?</li>
+    <li>Que peut-on dire des points A ; B et M ?</li>
+    <li>Que peut-on dire des points A ; C et N ?</li>
+  </ol>
+
+  <div class="flexobject">
+    <div>
+      <div class="flexobject" style="align-items: center; gap: 10px;">
+        <span>Rapport :</span>
+        <input id="graphiqueintro_range" type="range" min="-0.5" max="2.0" step="0.01" value="1.5">
+        <span id="graphiqueintro_range_value"></span>
+      </div>
+      <div id="graphiqueintro"></div>
+    </div>
+    <div class="flexobject" style="flex: 1 1 100px;">
+      <div id="frac1" class="frac">$\frac{AB}{AM}$</div>
+      <div id="frac2" class="frac">$\frac{AC}{AN}$</div>
+      <div id="frac3" class="frac">$\frac{BC}{MN}$</div>
+    </div>
+  </div>
+
+  <h1>Théorème de Thalès :</h1>
+      <h2>Théorème :</h2>
+        <div class="definition">
+          <b>Théorème de Thalès :</b><br>
+          <b>Si</b>, dans un triangle ABC, ou M est un point de (AB) 
+          et N un point de (AC), les droites (BC) et (MN) sont parallèles, 
+          <b>alors</b> on a l'égalité des rapports suivants :<br>
+          <span class="frac">
+            $\frac{AB}{AM}=\frac{AC}{AN}=\frac{BC}{MN}$
+          </span>
+        </div>
+        <div class="flexobject">
+          <img src="Images/Triangle 1.svg" style="max-width: 7cm;">
+          <div style="flex: 1 1 9cm;">
+            <p class="remarque">Remarque :</p>
+            <p><ul>
+              <li>Cela s'apparente à une homothétie de ABC de centre A d'un rapport 
+                quelconque. Les rapports de longueurs sont alors tous égaux au rapport
+              de l'homothétie.</li>
+              <li>Les triangles ABC et AMN sont <b>semblables</b>.</li>
+            </ul></p>
+          </div>
+        </div>
+      <h2>Les différents cas de figure :</h2>
+        <div class="flexobject">
+          <img src="Images/Triangle 2.svg" style="max-width: 7cm;">
+          <img src="Images/Triangle 3.svg" style="max-width: 7cm;">
+          <img src="Images/Triangle 4.svg" style="max-width: 7cm;">
+        </div>
+  <h1>Calcul d'une longueur manquante :</h1>
+      <h2>(Rappels) Egalité des produits en croix :</h2>
+        <div class="definition">
+          Dans une égalité de quotient, on a égalité des produits en croix :<br>
+          <b>Si</b> <span class="frac">$\frac{a}{b} = \frac{c}{d}$</span>, <b>alors</b> $a\times d = b \times c$
+        </div>
+        <p>On utilise cela dans la règle de 3 :</p>
+        <p>
+          <span class="frac">$\frac{5}{8}=\frac{7}{?}$</span> → $?=8\times 7 \div 5 = 11,2$
+        </p>
+      <h2>Application :</h2>
+        <div class="flexobject">
+          <img src="Images/Exemple 1.svg" style="max-width: 7cm;">
+          <div style="flex: 1 1 7cm;">
+            <p>Dans la figure ci-contre, les droites (BC)  et (AD) sont parallèles. 
+              On peut donc utiliser le théorème de Thalès pour calculer la longueur BC.
+            </p>
+            <p>D'après le théorème de Thalès on a :</p>
+            <p><span class="frac">
+              $\frac{EA}{EB}=\frac{ED}{EC}=\frac{AD}{BC}$
+            </span></p>
+            <p>
+              Soit <span class="frac">$\frac{EA}{EB}=\frac{4}{5}=\frac{3,5}{BC}$</span> et
+              en utilisant l'égalité des produits en croix, $BC = \frac{5\times3,5}{4}=4,375cm$
+            </p>
+          </div>
+        </div>
+        <h1>Réciproque du théorème de Thalès :</h1>
+        <div class="definition">
+          Soit (BM) et (CN) deux droites sécantes en A.<br>
+          <div class="flexobject" style="gap: 5px;">
+            <span class="CRed" style="font-size: 24px;">SI</span>
+            <span>$\frac{A\textcolor{#039be5}{M}}{A\textcolor{#e53935}{B}}=\frac{A\textcolor{#039be5}{N}}{A\textcolor{#e53935}{C}}$</span>
+            <span style="min-width: 1cm; text-align: center;">et</span>
+            <div style="flex: 1 1 5cm;">
+              Les points A ; <span class="CRed">B</span> ; <span class="CBlue">M</span> et les
+              points A ; <span class="CRed">C</span> ; <span class="CBlue">N</span> sont aligné
+              <b><i><u>dans le même ordre</u></i></b>
+            </div>
+            <span class="CRed" style="font-size: 24px;">ALORS</span>
+            <span>Les droites (<span class="CRed">BC</span>) et (<span class="CBlue">MN</span>) sont parallèles.</span>
+          </div>
+        </div>
+    
+        <div class="tableaud">
+          <div style="grid-column: 1; grid-row: 1; background-color: lightgray;"><b>Ordre des points A ; <span class="CRed">B</span> ; <span class="CBlue">M</span></b></div>
+          <div style="grid-column: 2; grid-row: 1; background-color: lightgray;"><b>Ordre des points A ; <span class="CRed">C</span> ; <span class="CBlue">N</span></b></div>
+          <div style="grid-column: 1 / 3; grid-row: 2; border: none;"><img src="Images/Fleche.svg" style="max-height: 10px; vertical-align: middle;"></div>
+          <div style="grid-column: 1 / 3; grid-row: 3; border: none;"><img src="Images/Fleche.svg" style="max-height: 10px; vertical-align: middle;"></div>
+          <div style="grid-column: 1 / 3; grid-row: 4; border: none;"><img src="Images/Fleche.svg" style="max-height: 10px; vertical-align: middle;"></div>
+          <div style="grid-column: 1; grid-row: 2">A puis <span class="CRed">B</span> puis <span class="CBlue">M</span></div>
+          <div style="grid-column: 1; grid-row: 3"><span class="CRed">B</span> puis <span class="CBlue">M</span> puis A</div>
+          <div style="grid-column: 1; grid-row: 4"><span class="CBlue">M</span> puis A puis <span class="CRed">B</span></div>
+          <div style="grid-column: 2; grid-row: 2">A puis <span class="CRed">C</span> puis <span class="CBlue">N</span></div>
+          <div style="grid-column: 2; grid-row: 3"><span class="CRed">C</span> puis <span class="CBlue">N</span> puis A</div>
+          <div style="grid-column: 2; grid-row: 4"><span class="CBlue">N</span> puis A puis <span class="CRed">C</span></div>
+        </div>
+    
+        <p class="exemple">Exemples :</p>
+        <div class="flexobject">
+          <img src="Images/Configuration-01.svg" style="max-width: 7cm;">
+          <p>
+            Ici les points sont bien aligné dans le même ordre.
+          </p>
+        </div>
+        <div class="flexobject">
+          <img src="Images/Configuration-02.svg" style="max-width: 7cm;">
+          <p>
+            Ici les points ne sont pas aligné dans le même ordre.
+          </p>
+        </div>
+      
+  <h1>Réciproque du théorème de thalès :</h1>
+      <h2>Montrer que deux droites sont parallèles :</h2>
+        <div class="flexobject">
+          <img src="Images/Figure-01.svg" style="max-width: 3cm;">
+          <p>
+            Les droites (BN) et (CM) sont sécantes en A.<br>
+            On a $\frac{AB}{AN}=\frac{10,5}{22,5}=\frac{7}{15}$ et $\frac{AC}{AM}=\frac{7}{15}$ donc
+            $\frac{AB}{AN}=\frac{AC}{AM}$. De plus les points A;B;N et A;C;M sont aligné dans cette ordre.<br>
+            Donc d'après la réciproque du théorème de Thalès on peut affirmer que (BC) et (MN) sont parallèles.
+          </p>
+        </div>
+
+      <h2>Montrer que deux droites ne sont sont parallèles :</h2>
+        <div class="flexobject">
+          <img src="Images/Figure-02.svg" style="max-width: 3cm;">
+          <p>
+            Les droites (BN) et (CM) sont sécantes en A.<br>
+            On a $\frac{AB}{AN}=\frac{7,2}{4,5}=1,6$ et $\frac{AC}{AM}=\frac{6}{4}=1,5$ donc
+            $\frac{AB}{AN}\neq\frac{AC}{AM}$.<br>
+            Donc d'après la réciproque du théorème de Thalès on peut affirmer que (BC) et (MN) ne sont pas parallèles.
+          </p>
+        </div>
+        <p>⚠️ ATTENTION : Sans figure, il peut y avoir des cas qui ne fonctionne pas.</p>
+        <p>
+          Soit (BN) et (CM) deux droites sécantes en A tel que :<br>
+          <ul>
+            <li>AB = 9 cm</li>
+            <li>AC = 15 cm</li>
+            <li>AN = 1,5 cm</li>
+            <li>AM = 2,5 cm</li>
+          </ul>
+          Plusieurs cas de figures sont possible :
+        </p>
+        <div class="flexobject">
+          <img src="Images/Figure-03.svg" style="max-width: 5cm;">
+          <img src="Images/Figure-04.svg" style="max-width: 5cm;">
+        </div>
+        <p>
+          Dans le premier cas, les points ne sont pas aligné dans le même ordre.
+        </p>
+</body>
+
+</html>
