@@ -183,7 +183,7 @@ var troisième_saintexupery = [
 		chapter: "Chapitre 6",
 		nom: "Double distributivité",
 		icone: 1,
-		ready : false,
+		ready : true,
 		page : "Base/Chapitre_6/Cours.html"
 	},
 	{

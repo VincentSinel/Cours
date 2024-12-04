@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Chapitre 6 - Double distributivité</title>
+
+  <style>
+    .behindobj{
+      z-index: -1; 
+      left: 0; 
+      position: absolute;
+    }
+    .behindparent{
+      display: inline;
+      position: relative;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Chapitre 6
+      </td>
+      <td id="ChapitreNom">
+        - Double distributivité
+      </td>
+    </tr>
+  </table>
+
+  <p class="exemple">
+		Activité Introduction
+	</p>
+	<p>
+		Effectuer le développement suivant :<br>
+		$A(5x+8)$<br>
+		On peut développer de la même manière :<br>
+		$(3x+2)(5x+8)$<br>
+		$(3x+2)$ joue alors de le rôle de $A$.<br>
+		Développer $5x(3x+2) + 8(3x+2)$ et montrer que l'on obtient bien $15x^2+34x+16$<br>
+		Ce calcul s'appel une double distributivité car on effectue une distributivité simple deux fois.
+	</p>
+	<h1>Développement et factorisation simple :</h1>
+		<div class="definition">
+			La distributivité $k\times(m+n) = k\times m + k\times n$ permet d'écrire un produit 
+			entre un nombre et une somme comme une somme de deux produits. 
+            <table class="center">
+				<tr>
+				  	<td colspan="3" class="DRed">Factorisation</td>
+				</tr>
+				<tr style="line-height: 9px;">
+					<td colspan="3">
+						<img style="transform: scaleX(-1)" height="20px" src="Images/Fleche.svg">
+					</td>
+				</tr>
+				<tr>
+					<td>$\textcolor{#C00000}{k}\times(\textcolor{#0070C0}{m+n})$</td>
+					<td style="width: 2cm;">=</td>
+					<td>$\textcolor{#C00000}{k}\times \textcolor{#0070C0}{m}+
+					\textcolor{#C00000}{k}\times \textcolor{#0070C0}{n}$</td>
+				</tr>
+				<tr style="line-height: 9px;">
+					<td colspan="3">
+					<img height="20px" src="Images/Fleche.svg">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" class="DRed">Développement</td>
+				</tr>
+            </table>
+			<span class="CRed">Développer</span> une expression c'est transformer un produit en somme. 
+			Dans l'autre sens on dit que l'on <span class="CRed">factorise</span> une expression. 
+			Le facteur k est alors appelé <span class="CRed">facteur commun</span>. 
+		</div>
+		<p class="exemple">Exemples :</p>
+		<p>Développement : On multiplie chaque terme dans la parenthèse par le facteur se trouvant devant.</p>
+		<div class="behindparent">
+			<p style="display: inline; margin-left: 3px;">
+				$\textcolor{#ED1C24}{2x}(3x+5)$ $=
+				\textcolor{#ED1C24}{2x}\times3x + \textcolor{#ED1C24}{2x}\times5$ $=
+				6x^2+10x$
+			</p>
+			<img class="behindobj" style="top: -15px; " height="40px" src="Images/Developpement.svg">
+		</div>
+		<p>Factorisation : On trouve un facteur commun à chaque terme.</p>
+		<p>
+			$8x+12 = \textcolor{#ED1C24}{4}\times2x + \textcolor{#ED1C24}{4}\times3 = \textcolor{#ED1C24}{4}(2x+3)$
+		</p>
+		<p class="remarque">Remarques :</p>
+			<ul>
+				<li>
+					Le cas de figure suivant peut se présenter, on prend alors l'<b>opposé</b> de chacun des termes entre parenthèses :<br>
+					$-(3x-7) = -3x + 7$
+				</li>
+				<li>
+					Lorsque l'on regroupe des termes d'une même famille, on dit que l'on réduit.
+				</li>
+			</ul>
+        </p>
+	<h1>Double distributivité :</h1>
+			<div class="definition">
+				<p>
+					La distributivité s'applique aussi lorsque l'on multiplie deux expressions entre parenthèses:<br>
+					$(\textcolor{#C00000}{k}+\textcolor{#C00000}{l})\times(\textcolor{#0070C0}{m}+\textcolor{#0070C0}{n})
+					= \textcolor{#C00000}{k}\times(\textcolor{#0070C0}{m}+\textcolor{#0070C0}{n})+
+					\textcolor{#C00000}{l}\times(\textcolor{#0070C0}{m}+\textcolor{#0070C0}{n})$ $
+					= \textcolor{#C00000}{k}\times\textcolor{#0070C0}{m} + \textcolor{#C00000}{k}\times\textcolor{#0070C0}{n} + 
+					\textcolor{#C00000}{l}\times\textcolor{#0070C0}{m} + \textcolor{#C00000}{l}\times\textcolor{#0070C0}{n}$<br>
+				</p>
+				
+				<div class="behindparent">
+					<p style="display: inline; margin-left: 3px;">
+						$(\ \textcolor{#C00000}{k}\ +\ \textcolor{#C00000}{l}\ )\times(\textcolor{#0070C0}{m}+\textcolor{#0070C0}{n})$
+					</p>
+					<img class="behindobj" style="top: -15px; left: 4px;" height="60px" src="Images/Developpement2.svg">
+				</div>
+				<div style="height: 20px;"></div>
+			</div>
+			<p class="exemple">Exemple :</p>
+			<div class="behindparent">
+				<p style="position: relative; display: inline; margin-left: 3px; top: 6px;line-height: 40px;">
+					$(\ x \ +\ 2\ )\times(2x+7)$ $=x\times2x+x\times7+2\times2x+2\times7$ $=2x^2+7x+4x+14=2x^2+22x+14$
+				</p>
+				<img class="behindobj" style="top: -12px; left: 5px;" height="70px" width="165px" src="Images/Developpement2.svg">
+			</div>
+			<p>
+				Il est plus facile de prendre le nombre avec son signe dans 
+				les calculs, cela permet de ne faire ques des addition et limite les erreurs de signes.<br>
+				<span style="line-height: 40px;">
+					$(-3x+8)(5x-3)$ $=(-3x)\times5x+(-3x)\times(-3)+8\times5x+8\times(-3)$ $=-15x^2+9x+40x-24=-15x^2+49x-24$
+				</span>
+			</p>
+	<h1>Equations produit nul :</h1>
+		<h2>Rappels :</h2>
+			<div class="definition">
+				Une <span class="CRed">équation</span> est une <b>égalité</b> comportant un ou plusieurs nombres inconnus désignés par des lettres.
+				On les nomment <span class="CRed">les inconnues</span> de l'équation.
+			</div>
+			<p>Résoudre une équation, c'est trouver la ou les valeurs que doivent prendre les inconnues pour que l'égalité soit vraie.<br>
+			On peut pour cela effectuer différents calcul sur les expressions de part et d'autre du signe "=" en veillant à effectuer le même calcul sur les membres de droites et de gauches simultanément.</p>
+			<p class="exemple">Exemple de résolution :</p>
+			<table>
+				<tr>
+					<td style="text-align: right;">$3x$</td>
+					<td>$-6$</td>
+					<td style="text-align: center; width: 20px;">=</td>
+					<td>$-5x$</td>
+					<td>$+4,4$</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>$\textcolor{#009900}{+6}$</td>
+					<td></td>
+					<td></td>
+					<td>$\textcolor{#009900}{+6}$</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">$3x$</td>
+					<td></td>
+					<td style="text-align: center; width: 20px;">=</td>
+					<td>$-5x$</td>
+					<td>$+10,4$</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">$\textcolor{#009900}{+5x}$</td>
+					<td></td>
+					<td></td>
+					<td>$\textcolor{#009900}{+5x}$</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">$8x$</td>
+					<td></td>
+					<td style="text-align: center; width: 20px;">=</td>
+					<td></td>
+					<td>$+10,4$</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">$\textcolor{#C00000}{\div8}$</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>$\textcolor{#C00000}{\div8}$</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">$x$</td>
+					<td></td>
+					<td style="text-align: center; width: 20px;">=</td>
+					<td></td>
+					<td>$1,3$</td>
+				</tr>
+			</table>
+		<h2>Equation produit nul générale :</h2>
+			<div class="definition">
+				<b>Propriété :</b><br>
+				Dire qu'un produit est nul signifie que l'un de ses facteurs est nul.
+			</div>
+			<p class="exemple">Exemple :</p>
+			<p>Quelque soit $a$ et $b$ deux nombres, Si $a\times b=0$ alors $a = 0$ ou $b = 0$.</p>
+			<p>Pour résoudre l'équation $(5x+1)(3-2x)=0$, on utilise la propriété précédente.<br>
+				Ici $5x+1=0$ ou $3-2x=0$, cette équation a donc 2 solutions :</p>
+			<div class="flexobject" style="gap: 2cm;justify-content: space-around; max-width: 12cm;">
+				<div style="max-width: 5cm;"><table>
+					<tr>
+						<td style="text-align: right;">$5x$</td>
+						<td>$+1$</td>
+						<td style="text-align: center; width: 20px;">=</td>
+						<td>$0$</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>$\textcolor{#009900}{-1}$</td>
+						<td></td>
+						<td>$\textcolor{#009900}{-1}$</td>
+					</tr>
+					<tr>
+						<td style="text-align: right;">$5x$</td>
+						<td></td>
+						<td style="text-align: center; width: 20px;">=</td>
+						<td>$-1$</td>
+					</tr>
+					<tr>
+						<td style="text-align: right;">$\textcolor{#C00000}{\div5}$</td>
+						<td></td>
+						<td></td>
+						<td>$\textcolor{#C00000}{\div5}$</td>
+					</tr>
+					<tr>
+						<td style="text-align: right;">$x$</td>
+						<td></td>
+						<td style="text-align: center; width: 20px;">=</td>
+						<td>$-0,2$</td>
+					</tr>
+				</table></div>
+				<div style="max-width: 5cm;  "><table>
+					<tr>
+						<td style="text-align: right;">$3$</td>
+						<td>$-2x$</td>
+						<td style="text-align: center; width: 20px;">=</td>
+						<td>$0$</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>$\textcolor{#009900}{+2x}$</td>
+						<td></td>
+						<td>$\textcolor{#009900}{+2x}$</td>
+					</tr>
+					<tr>
+						<td style="text-align: right;">$3$</td>
+						<td></td>
+						<td style="text-align: center; width: 20px;">=</td>
+						<td>$2x$</td>
+					</tr>
+					<tr>
+						<td style="text-align: right;">$\textcolor{#C00000}{\div2}$</td>
+						<td></td>
+						<td></td>
+						<td>$\textcolor{#C00000}{\div2}$</td>
+					</tr>
+					<tr>
+						<td style="text-align: right;">$1,5$</td>
+						<td></td>
+						<td style="text-align: center; width: 20px;">=</td>
+						<td>$x$</td>
+					</tr>
+				</table></div>
+			</div>
+			<p>L'équation $(5x+1)(3-2x)=0$ a deux solutions : -0,2 et 1,5.</p>
+
+
+</body>
+
+</html>
