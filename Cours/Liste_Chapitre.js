@@ -176,7 +176,7 @@ var troisième_saintexupery = [
 		nom: "Théorème de Thalès",
 		icone: 2,
 		ready : true,
-		page : "Base/Chapitre_8/Cours.html"
+		page : "SaintExupery/Chapitre_5/Cours.html"
 	},
 	{
 		id: 6,
@@ -184,7 +184,7 @@ var troisième_saintexupery = [
 		nom: "Double distributivité",
 		icone: 1,
 		ready : true,
-		page : "Base/Chapitre_6/Cours.html"
+		page : "SaintExupery/Chapitre_6/Cours.html"
 	},
 	{
 		id: 7,
@@ -199,16 +199,16 @@ var troisième_saintexupery = [
 		chapter: "Chapitre 8",
 		nom: "Statistiques",
 		icone: 5,
-		ready : false,
-		page : "Base/Chapitre_7/Cours.html"
+		ready : true,
+		page : "SaintExupery/Chapitre_8/Cours.html"
 	},
 	{
 		id: 9,
 		chapter: "Chapitre 9",
 		nom: "Trigonométrie",
 		icone: 2,
-		ready : false,
-		page : "Base/Chapitre_10/Cours.html"
+		ready : true,
+		page : "SaintExupery/Chapitre_9/Cours.html"
 	},
 	{
 		id: 10,
@@ -238,8 +238,8 @@ var troisième_saintexupery = [
 		id: 13,
 		nom: "Sphère et boules",
 		icone: 2,
-		ready : false,
-		page : "Base/Chapitre_13/Cours.html"
+		ready : true,
+		page : "SaintExupery/Chapitre_13/Cours.html"
 	},
 	{
 		id: 14,
@@ -247,7 +247,7 @@ var troisième_saintexupery = [
 		nom: "Grandeurs composées et Ratios",
 		icone: 1,
 		ready : false,
-		page : "Base/Chapitre_19/Cours.html"
+		page : "SaintExupery/Chapitre_14/Cours.html"
 	},
 	{
 		id: 15,
@@ -263,7 +263,7 @@ var troisième_saintexupery = [
 		nom: "Calcul littérale",
 		icone: 1,
 		ready : false,
-		page : "Base/Chapitre_9/Cours.html"
+		page : "SaintExupery/Chapitre_16/Cours.html"
 	},
 	{
 		id: 17,
@@ -271,36 +271,8 @@ var troisième_saintexupery = [
 		nom: "Triangles semblables",
 		icone: 2,
 		ready : false,
-		page : "Base/Chapitre_18/Cours.html"
+		page : "SaintExupery/Chapitre_17/Cours.html"
 	},
-	// {
-	// 	id: 11,
-	// 	nom: "Médiane et étendu",
-	// 	icone: 5,
-	// 	ready : true,
-	// 	page : "Base/Chapitre_11/Cours.html"
-	// },
-	// {
-	// 	id: 14,
-	// 	nom: "Trigonométrie Calcul d'angle",
-	// 	icone: 2,
-	// 	ready : true,
-	// 	page : "Base/Chapitre_14/Cours.html"
-	// },
-	// {
-	// 	id: 15,
-	// 	nom: "Reciproque de Thalès",
-	// 	icone: 2,
-	// 	ready : true,
-	// 	page : "Base/Chapitre_15/Cours.html"
-	// },
-	// {
-	// 	id: 16,
-	// 	nom: "Equations produit nul",
-	// 	icone: 1,
-	// 	ready : true,
-	// 	page : "Base/Chapitre_16/Cours.html"
-	// }
 ]
 
 var quatrieme_base = [
