@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <script src="/JS/Svg.js/svg.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+  <script src="/JS/Diagrammes/Diagramme_Holder.js"></script> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Chapitre 8 - Statistiques</title>
+
+  <style>
+    .listenoix td{
+      border: solid black 1px;
+      min-width: 30px;
+      text-align: center;
+    }
+    .tablediv{
+      gap: 0px;
+      width: fit-content;
+    }
+    .tablediv div{
+      border: solid var(--TableBorder) 1px;
+    }
+    .tablediv div div{
+      border: solid var(--TableBorder) 1px;
+      min-width: 2cm;
+      min-height: 0.7cm;
+      padding: 0px 5px;
+      text-align: center;
+    }
+    .tablediv div:nth-child(odd) div{
+      background-color: var(--TableOdd);
+    }
+    .tablediv div:nth-child(1) div{
+      text-align: left;
+      font-weight: bold;
+      background-color: var(--TableHeader);
+    }
+    .valeur{
+      column-gap: 5px;
+    }
+    .valeur div{
+      max-width: 30px;
+      min-width: 30px;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Chapitre 8
+      </td>
+      <td id="ChapitreNom">
+        - Statistiques
+      </td>
+    </tr>
+  </table>
+
+  <p class="exemple">
+    Activité Introduction
+  </p>
+
+  Un Producteur de noix trie un échantillon de 50 noix, selon leur calibre, en mm.
+  <table class="listenoix">
+    <tr>
+      <td>28</td> <td>30</td> <td>34</td> <td>35</td> <td>30</td>
+      <td>36</td> <td>33</td> <td>37</td> <td>28</td> <td>31</td>
+    </tr>
+    <tr>
+      <td>32</td> <td>37</td> <td>29</td> <td>36</td> <td>37</td>
+      <td>36</td> <td>35</td> <td>31</td> <td>35</td> <td>37</td>
+    </tr>
+    <tr>
+      <td>36</td> <td>31</td> <td>31</td> <td>36</td> <td>35</td>
+      <td>37</td> <td>36</td> <td>32</td> <td>37</td> <td>35</td>
+    </tr>
+    <tr>
+      <td>30</td> <td>34</td> <td>36</td> <td>30</td> <td>37</td>
+      <td>33</td> <td>31</td> <td>34</td> <td>30</td> <td>37</td>
+    </tr>
+    <tr>
+      <td>33</td> <td>32</td> <td>31</td> <td>33</td> <td>34</td>
+      <td>31</td> <td>29</td> <td>36</td> <td>37</td> <td>35</td>
+    </tr>
+  </table>
+
+  <ol>
+    <li>Combien de fois apparait le nombre 36 ? Quel est sa fréquence d'apparition ?</li>
+  </ol>
+    
+  Pour représenter ces résultats dans un diagramme, on les regroupe en 5 <b>classes</b> :
+  <div class="flexobject tablediv">
+
+    <div>
+      <div>Calibre</div>
+      <div>Effectif</div>
+      <div>Fréquence</div>
+    </div>
+    <div>
+      <div>$28\le x &lt; 30$</div>
+      <div></div>
+      <div></div>
+    </div>
+    <div>
+      <div>$30\le x &lt; 32$</div>
+      <div></div>
+      <div></div>
+    </div>
+    <div>
+      <div>$32\le x &lt; 34$</div>
+      <div></div>
+      <div></div>
+    </div>
+    <div>
+      <div>$34\le x &lt; 36$</div>
+      <div></div>
+      <div></div>
+    </div>
+    <div>
+      <div>$36\le x &lt; 38$</div>
+      <div></div>
+      <div></div>
+    </div>
+    <div>
+      <div>Total</div>
+      <div></div>
+      <div></div>
+    </div>
+
+  </div>
+  <ol start="2">
+    <li>
+      Completer ce tableau.
+    </li>
+    <li>
+      Quelle est la moyenne de cette série de valeur ?
+    </li>
+    <li>Quelle est l'amplitude de ces classes ?</li>
+    <li>Completer :<br>
+      « ___ noix ont un calibre ________ entre 30mm (___________) et 32mm (____________). »
+    </li>
+    <li>
+      De la même manière que l'effectif de la première classe, représenter dans le diagramme suivants les effectifs de l'ensemble des valeurs.
+    </li>
+  </ol>
+  <div id="diagintro"></div>
+
+  <h1>Effectifs et fréquences :</h1>
+    <h2>Effectifs :</h2>
+      <div class="definition">
+        L'<span class="CRed">effectif</span> d'une valeur est le nombre de fois ou celle-ci apparait dans la série de valeur.<br>
+        L'<span class="CRed">effectif total</span> est le nombre total de valeur d'une série.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>
+        On étudie la couleur préféré de 10 personnes, voici les résultats : <br>
+        <span class="CRed">Rouge</span> - <span class="CGreen">Vert</span> - <span class="CBlue">Bleu</span> - 
+        <span class="CGreen">Vert</span> - <span class="CViolet">Violet</span> - <span class="CYellow">Jaune</span> - 
+        <span class="CBlue">Bleu</span> - <span class="CRed">Rouge</span> - <span class="CGreen">Vert</span> - 
+        <span class="CViolet">Violet</span><br>
+        L'effectif de la valeur "<span class="CGreen">Vert</span>" est 3.<br>
+        L'effectif total est 10.
+      </p>
+    <h2>Fréquence :</h2>
+      <div class="definition">
+        La <span class="CRed">fréquence</span> d'une valeur est égale à :<br>
+        <span class="frac">
+          $\frac{\text{effectif de la valeur}}{\text{effectif total}}$
+        </span>
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>Dans la liste de valeur précédente, la fréquence d'apparition de la 
+        valeur "<span class="CGreen">Vert</span>" est de $\frac{3}{10}=0,3=30\% $</p>
+      <div class="definition">
+        <b>Propriétés :</b><br>
+        La fréquence d'une valeur est toujours comprise entre 0 et 1.<br>
+        La somme de toutes les fréquences est égale à 1. 
+      </div>
+  <h1>Outils statistiques :</h1>
+    <h2>Moyenne :</h2>
+        <div class="definition">
+          La <span class="CRed">moyenne</span> d’une série de valeurs est égale à la somme de toutes 
+          les valeurs de la série, divisée par l’effectif total de la série.<br>
+          $Moyenne = \frac{Somme\thinspace de\thinspace toutes\thinspace les\thinspace valeurs}{Effectif\thinspace total}$
+        </div>
+        <p class="exemple">Exemple :</p>
+        <p>On a relevé les notes des 7 derniers contrôles de Pierre : </p>
+        <div class="flexobject valeur">
+          <div>7</div>
+          <div>17</div>
+          <div>15</div>
+          <div>16</div>
+          <div>12</div>
+          <div>14</div>
+          <div>10</div>
+        </div>
+        <p>On peut alors calculer sa moyenne :</p>
+        $Moyenne = \frac{7+17+15+16+12+14+10}{7}=13$
+        <p>
+          <b>Interprétation :</b><br>
+          Si pierre avait eu la même note à tous les contrôle il aurait eu 13 à chaque fois.
+        </p>
+        <p>
+          Sur l'exemple précédent :
+          <table class="proportionnaltable">
+            <tr>
+              <th>Note<br>(valeur)</th>
+              <td>7</td>
+              <td>9</td>
+              <td>10</td>
+              <td>13</td>
+              <td>14</td>
+              <td>15</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <th>Effectif</th>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>3</td>
+              <td>4</td>
+              <td>3</td>
+              <td>1</td>
+            </tr>
+          </table>
+          <br>
+          $Moyenne = \frac{7\times3+9\times2+10\times4+13\times3+14\times4+15\times3+20\times1}{20}$ $=11.95$
+        </p>
+        <p class="remarque">Remarque :</p>
+        <ul>
+          <li>La moyenne est très sensible au valeurs extrême.</li>
+          <li>Lorsque l'on calcul la moyenne avec des effectifs, on parle de <span class="CRed">moyenne pondérée</span>.</li>
+        </ul>
+    <h2>Médiane :</h2>
+        <div class="definition">
+          La <span class="CRed">médiane</span> d’une série de valeurs est une valeur telle qu’il y a :
+          <ul>
+            <li>Au moins 50% des valeurs inférieures ou égales à cette médiane</li>
+            <li>Au moins 50% des valeurs supérieurs ou égales à cette médiane.</li>
+          </ul>
+        </div>
+        <p class="exemple">Exemple 1 :</p>
+        <p>On reprend les notes de Pierre :</p>
+        <div class="flexobject valeur">
+          <div>7</div>
+          <div>17</div>
+          <div>15</div>
+          <div>16</div>
+          <div>12</div>
+          <div>14</div>
+          <div>10</div>
+        </div>
+        <p>On les classe tous d’abord par ordre croissant pour identifier la médiane:</p>
+        <div class="flexobject valeur">
+          <div>7</div>
+          <div>10</div>
+          <div>12</div>
+          <div class="CRRound">14</div>
+          <div>15</div>
+          <div>16</div>
+          <div>17</div>
+        </div>
+        <p>La médiane est une valeur de la série car l’effectif des notes est impair.</p>
+        <p class="exemple">Exemple 2 :</p>
+        <p>Au contrôle suivant Pierre obtient 15 :</p>
+        <div class="flexobject valeur">
+          <div>7</div>
+          <div>17</div>
+          <div>15</div>
+          <div>16</div>
+          <div>12</div>
+          <div>14</div>
+          <div>10</div>
+          <div>15</div>
+        </div>
+        <p>On ré-identifie la médiane:</p>
+        <table style="text-align: center;">
+          <tr>
+            <td>
+              <div class="flexobject valeur" style="column-gap: 5px;">
+                <div><span class="CBlue">1<sup>er</sup></span></div>
+                <div><span class="CBlue">...</span></div>
+                <div><span class="CBlue">...</span></div>
+                <div><span class="CBlue">4<sup>ème</sup></span></div>
+              </div>
+            </td>
+            <td></td>
+            <td>
+              <div class="flexobject valeur" style="column-gap: 5px;">
+                <div><span class="CBlue">5<sup>ème</sup></span></div>
+                <div><span class="CBlue">...</span></div>
+                <div><span class="CBlue">...</span></div>
+                <div><span class="CBlue">8<sup>ème</sup></span></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="CRRound-bottom flexobject valeur" style="column-gap: 5px;">
+                <div>7</div>
+                <div>10</div>
+                <div>12</div>
+                <div>14</div>
+              </div>
+            </td>
+            <td>
+              <span class="CRed">|</span>
+            </td>
+            <td>
+              <div class="CRRound-bottom flexobject valeur" style="column-gap: 5px;">
+                <div>15</div>
+                <div>15</div>
+                <div>16</div>
+                <div>17</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>4 valeurs</td>
+            <td><span class="CRed">Médiane</span></td>
+            <td>4 valeurs</td>
+          </tr>
+        </table>
+        <p>
+          La médiane ici n’est plus une valeur de la série car l’effectif des notes est Pair.
+          La médiane de ces notes est une note comprise entre la 4<sup>ème</sup> et 5<sup>ème</sup> valeur. En générale on prend la moitié soit 14,5 ici ($\frac{14 + 15}{2}=14,5$).</p>
+        </p>
+        <p class="exemple">Exemple 3 :</p>
+        <table class="proportionnaltable">
+          <tr>
+            <th>Valeur</th>
+            <td>3</td>
+            <td>8</td>
+            <td>12</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <th>Effectif</th>
+            <td>32</td>
+            <td>57</td>
+            <td>28</td>
+            <td>64</td>
+          </tr>
+        </table>
+        <p>Pour trouver la médiane dans ce cas, on utilise les effectifs cumulés. <br>On les obtient en ajoutant l'effectif d'une valeur avec le total précédent, cela nous permet de connaitre la position des valeurs.<br>Ici on obtient :</p>
+        <table class="proportionnaltable">
+          <tr>
+            <th>Valeur</th>
+            <td>3</td>
+            <td>8</td>
+            <td>12</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <th>Effectif</th>
+            <td>32</td>
+            <td>57</td>
+            <td>28</td>
+            <td>64</td>
+          </tr>
+          <tr>
+            <th>Effectif<br>cumulé</th>
+            <td>32</td>
+            <td>89</td>
+            <td>117</td>
+            <td>181</td>
+          </tr>
+          <tr class="tableprop">
+            <td></td>
+            <td>1<sup>er</sup>&#8239;─&#8239;32<sup>ème</sup>;</td>
+            <td>33<sup>ème</sup>&#8239;─&#8239;89<sup>ème</sup>;</td>
+            <td>90<sup>ème</sup>&#8239;─&#8239;117<sup>ème</sup>;</td>
+            <td>118<sup>ème</sup>&#8239;─&#8239;181<sup>ème</sup></td>
+          </tr>
+        </table>
+        <p>
+          On connait donc les intervalles de position de valeur. On maintenant la valeur médiane.<br>Le nombre de valeur étant impair, la médiane fait partie de la liste de valeur. On a donc la médiane au centre et deux paquets de valeur de même taille avant et après. Il faut donc répartir $181 - 1 = 180$ valeurs de part et d'autre de la médiane donc 90 valeurs de chaque côté.
+        </p>
+        <table style="text-align: center;">
+          <tr>
+            <td>
+              <div class="CRRound-bottom flexobject valeur" style="column-gap: 5px;">
+                <div><span class="CBlue">1<sup>er</sup></span></div>
+                <div><span class="CBlue">...</span></div>
+                <div><span class="CBlue">...</span></div>
+                <div><span class="CBlue">80<sup>ème</sup></span></div>
+              </div>
+            </td>
+            <td>
+              <div class="CRRound CBlue">81<sup>ème</sup></div>
+            </td>
+            <td>
+              <div class="CRRound-bottom flexobject valeur" style="column-gap: 5px;">
+                <div><span class="CBlue">82<sup>ème</sup></span></div>
+                <div><span class="CBlue">...</span></div>
+                <div><span class="CBlue">...</span></div>
+                <div><span class="CBlue">161<sup>ème</sup></span></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>80 valeurs</td>
+            <td><span class="CRed">Médiane</span></td>
+            <td>80 valeurs</td>
+          </tr>
+        </table>
+        <p>
+          On cherche donc la 81<sup>ème</sup> valeur dans le tableau. Si on se référe aux intervalles indiqués sous les effectifs cumulés, nous sommes donc entre la 33<sup>ème</sup> et la 89<sup>ème</sup> valeurs, donc la 81<sup>ème</sup> est un 8.<br>
+          <b>La médiane est donc 8.</b>
+        </p>
+        <p class="exemple">Exemple 4 (Rédaction plus optimale) :</p>
+        <p>On rempli directement le tableau.</p>
+        <table class="proportionnaltable">
+          <tr>
+            <th>Valeur</th>
+            <td>26</td>
+            <td>34</td>
+            <td>96</td>
+          </tr>
+          <tr>
+            <th>Effectif</th>
+            <td>36</td>
+            <td>22</td>
+            <td>58</td>
+          </tr>
+          <tr>
+            <th>Effectif<br>cumulé</th>
+            <td>36</td>
+            <td>58</td>
+            <td>116</td>
+          </tr>
+          <tr class="tableprop">
+            <td></td>
+            <td>1<sup>er</sup>&#8239;─&#8239;36<sup>ème</sup>;</td>
+            <td>37<sup>ème</sup>&#8239;─&#8239;58<sup>ème</sup>;</td>
+            <td>59<sup>ème</sup>&#8239;─&#8239;116<sup>ème</sup></td>
+          </tr>
+        </table>
+        <p>Le nombre de valeur est pair donc la médiane est entre deux valeurs de la série. On fait des paquets de $116\div2=58$ valeurs :</p>
+        <table style="text-align: center;">
+          <tr>
+            <td>
+              <div class="CRRound-bottom flexobject valeur" style="column-gap: 5px;">
+                <div><span class="CBlue">1<sup>er</sup></span></div>
+                <div><span class="CBlue">...</span></div>
+                <div><span class="CBlue">...</span></div>
+                <div><span class="CBlue">58<sup>ème</sup></span></div>
+              </div>
+            </td>
+            <td>
+              <span class="CRed">|</span>
+            </td>
+            <td>
+              <div class="CRRound-bottom flexobject valeur" style="column-gap: 5px;">
+                <div><span class="CBlue">59<sup>ème</sup></span></div>
+                <div><span class="CBlue">...</span></div>
+                <div><span class="CBlue">...</span></div>
+                <div><span class="CBlue">116<sup>ème</sup></span></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>58 valeurs</td>
+            <td><span class="CRed">Médiane</span></td>
+            <td>58 valeurs</td>
+          </tr>
+        </table>
+        <p>
+          On cherche donc la 58<sup>ème</sup> valeur et la 59<sup>ème</sup>.
+          Ici grace aux intervalles on obtient :
+          <ul>
+            <li>La 58<sup>ème</sup> valeur est un 34</li>
+            <li>La 59<sup>ème</sup> valeur est un 96</li>
+          </ul>
+          <b>La médiane est donc $\frac{34 + 96}{2} = 65$</b>
+        </p>
+        <p class="remarque">Remarque :</p>
+        <ul>
+          <li>La médiane est la valeur centrale d'une série. Cela signifie que la moitié des valeurs sont inférieur et la moitié des valeurs sont supérieur à la médiane.</li>
+        </ul>
+    <h2>Etendu :</h2>
+      <div class="definition">
+        L' <span class="CRed">étendu</span> d’une série de valeurs est la différence entre la valeur maximal et la valeur minimal :<br>
+        $Etendue = valeur\thinspace max - valeur\thinspace min$
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>On reprend les notes de Pierre :</p>
+      <div class="flexobject valeur">
+        <div>7</div>
+        <div>17</div>
+        <div>15</div>
+        <div>16</div>
+        <div>12</div>
+        <div>14</div>
+        <div>10</div>
+      </div>
+      <p>L'étendue est ici 17-7 = 10</p>
+      <p>
+        <b>Interprétation :</b><br>
+        L'écart entre la plus grande et la plus petite valeur est 10.
+      </p>
+  <h1>Histogramme :</h1>
+    <h2>Classes :</h2>
+      <p>
+        Lorsque l'on étudie une série de valeur, on se retrouve souvent avec un grand 
+        nombre de valeur différente. Lorsque l'on regroupe ces données dans un tableau de valeur,
+        il est alors plus pratique d'utiliser des <b>classes</b> de valeur, pour limiter la 
+        taille du tableau.
+      </p>
+      <p class="exemple">Exemple :</p>
+      <p>Voici la taille en centimètre des élèves d'une classe de 28 élèves :</p>
+      <table class="listenoix">
+        <tr>
+          <td>155</td> <td>151</td> <td>153</td> <td>148</td> <td>155</td>
+          <td>153</td> <td>148</td>
+        </tr>
+        <tr>
+          <td>156</td> <td>147</td> <td>145</td> <td>156</td> <td>154</td>
+          <td>156</td> <td>149</td>
+        </tr>
+        <tr>
+          <td>149</td> <td>148</td> <td>152</td> <td>156</td> <td>153</td>
+          <td>148</td> <td>148</td>
+        </tr>
+        <tr> 
+          <td>152</td> <td>151</td> <td>153</td> <td>153</td> <td>155</td>
+          <td>152</td> <td>150</td>
+        </tr>
+      </table>
+      <p>
+        Pour étudier ces valeurs, on les regroupe en 3 classes de valeurs :
+      </p>
+      <div class="flexobject tablediv">
+
+        <div>
+          <div>Taille (cm)</div>
+          <div>Effectif</div>
+        </div>
+        <div>
+          <div>$145\le x &lt; 150$</div>
+          <div>9</div>
+        </div>
+        <div>
+          <div>$150\le x &lt; 155$</div>
+          <div>12</div>
+        </div>
+        <div>
+          <div>$155\le x &lt; 160$</div>
+          <div>7</div>
+        </div>
+    
+      </div>
+      <p class="remarque">Remarque :</p>
+      <p>L'<span class="CRed">amplitude</span> d'une classe est la différence entre la plus grande et la plus petite valeur.<br>
+      Dans l'exemple précédent, l'amplitude de chaque classe est identique et vaut 5.</p>
+
+    <h2>Histogramme :</h2>
+      <div class="definition">
+        Un <span class="CRed">histogramme</span> est un diagramme permettant de représenter une série de données regroupées en <b>classes</b>.<br>
+        Chaque classe est représenter par un rectangle dont la largeur représente l'intervalle de la classe et la hauteur l'effectif.
+      </div>
+      <p class="exemple">Exemples :</p>
+      <div class="flexobject">
+        <div>
+          <p>Avec les valeurs de l'exemple précédent :</p>
+          <div id="diagexemple1"></div>
+        </div>
+        <div>
+          <p>On demande à des élèves de 3<sup>ème</sup> combien de SMS ils envoient par jour.</p>
+          <div id="diagexemple2"></div>
+        </div>
+      </div>
+
+
+
+</body>
+
+</html>
