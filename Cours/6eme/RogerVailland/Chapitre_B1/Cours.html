@@ -14,10 +14,37 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>D1 - Se repérer dans le temps</title>
+  <title>B1 - Addition</title>
 
   <style>
-    
+    .addition td{
+      min-width: 20px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .addition tr:first-child{
+      writing-mode: vertical-rl;
+    }
+    .addition tr:first-child td{
+      vertical-align: top;
+    }
+    .addition tr:last-child{
+      border-top: solid 2px black;
+    }
+    .retenu{
+      min-height: 20px;
+      max-height: 20px;
+      min-width: 20px;
+      max-width: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8pt;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+      border-radius: 50%;
+      border: solid 1px black;
+    }
   </style>
 
 </head>
@@ -27,19 +54,120 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        D1
+        B1
       </td>
       <td id="ChapitreNom">
-        - Se repérer dans le temps
+        - Addition
       </td>
     </tr>
   </table>
+  
+  <h1>Addition posée :</h1>
+    <div class="definition">
+      Le résultat d'une addition est appelé <span class="CRed">somme</span>.<br>
+      Les nombres qui composent une addition sont appelés les <span class="CRed">termes</span>.  
+    </div>
 
-  <p class="exemple">
-    Activité Introduction
-  </p>
-
-
+    <p>
+      Pour poser une addition en colonne, on aligne les nombres selon le range de leurs chiffres. On commence ensuite l'addition par la droite et on remonte petit à petit en prenant en compte les éventuelles retenues. 
+    </p>
+    <p class="exemple">Exemples :</p>
+    <div class="flexobject">
+      <div>
+        <p>Avec des entiers</p>
+        <table class="addition">
+          <tr>
+            <th></th>
+            <td>Chiffre des centaine</td>
+            <td>Chiffre des dizaine</td>
+            <td>Chiffre des unités</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><div class="retenu">+1</div></td>
+            <td><div class="retenu">+1</div></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>1</td>
+            <td>4</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <th>+</th>
+            <td></td>
+            <td>8</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>2</td>
+            <td>3</td>
+            <td>2</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <p>Avec des nombres décimaux</p>
+        <table class="addition">
+          <tr>
+            <th></th>
+            <td>Chiffre des dizaine</td>
+            <td>Chiffre des unités</td>
+            <td style="min-width: auto;"></td>
+            <td>Chiffre des dixième</td>
+            <td>Chiffre des centième</td>
+            <td>Chiffre des millième</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><div class="retenu">+1</div></td>
+            <td></td>
+            <td style="min-width: auto;"></td>
+            <td><div class="retenu">+1</div></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>8</td>
+            <td>3</td>
+            <td style="min-width: auto;">,</td>
+            <td>0</td>
+            <td>4</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <th>+</th>
+            <td></td>
+            <td>7</td>
+            <td style="min-width: auto;">,</td>
+            <td>8</td>
+            <td>8</td>
+            <td><span class="CBlue">0</span></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>9</td>
+            <td>0</td>
+            <td style="min-width: auto;">,</td>
+            <td>9</td>
+            <td>2</td>
+            <td>9</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  <h1>Commutativité de l'addition :</h1>
+    <div class="definition">
+      Une addition est dite <span class="CRed">commutative</span>, cela signifie que l'on peut intervertir les termes sans changer le résultat.
+    </div>
+    <p class="exemple">Exemple :</p>
+    <ul>
+      <li>5 + 8 = 8 + 5</li>
+      <li>3,478 + 142,3 = 142,3 + 3,478</li>
+    </ul>
         
 </body>
 

@@ -1259,8 +1259,14 @@ var sixieme_rogervailland = [
 		id: 11,
 		chapter: "Chapitre B1",
 		nom: "Addition",
+		download: {
+			pdf: "/Cours/6eme/RogerVailland/Chapitre_B1/Documents/B1 - Addition (Complet).pdf",
+			docx: "/Cours/6eme/RogerVailland/Chapitre_B1/Documents/B1 - Addition (Complet).docx",
+			pdf_trou: "/Cours/6eme/RogerVailland/Chapitre_B1/Documents/B1 - Addition (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_B1/Documents/B1 - Addition (A trou).docx",
+		},
 		icone: 8,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_B1/Cours.html",
 	},
 	{
