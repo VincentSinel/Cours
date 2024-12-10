@@ -767,7 +767,13 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre B2",
 		nom: "Repérage et comparaison",
 		icone: 8,
-		ready : false,
+		download: {
+			pdf: "/Cours/5eme/RogerVailland/Chapitre_B2/Documents/B2 - Repérage et comparaison (Complet).pdf",
+			docx: "/Cours/5eme/RogerVailland/Chapitre_B2/Documents/B2 - Repérage et comparaison (Complet).docx",
+			pdf_trou: "/Cours/5eme/RogerVailland/Chapitre_B2/Documents/B2 - Repérage et comparaison (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_B2/Documents/B2 - Repérage et comparaison (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_B2/Cours.html",
 	},
 	{
