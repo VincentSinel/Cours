@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152.19 123.38">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #e30613;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        fill: #1d1d1b;
+        font-family: Cambria-BoldItalic, Cambria;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-4 {
+        fill: #f6a117;
+      }
+
+      .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke-width: 0px;
+      }
+
+      .cls-5 {
+        fill: #44ace2;
+      }
+
+      .cls-6 {
+        fill: #b44090;
+      }
+
+      .cls-7 {
+        fill: #74bd83;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-5" d="m78.82,57.13c-4.58-2.07-7.77-6.69-7.77-12.04,0-.24,0-.47.02-.71l13.16.78-5.41,11.97Z"/>
+    <path class="cls-5" d="m64.45,88.91c-4.37-1.98-7.47-6.27-7.75-11.31l13.19-.73-5.45,12.04Z"/>
+  </g>
+  <g>
+    <path class="cls-6" d="m93.62,45.28c-.31,4.85-4.34,8.69-9.27,8.69-1.36,0-2.66-.29-3.83-.82l3.81-8.41,9.29.55Z"/>
+    <path class="cls-6" d="m66.05,85.61c1.23.56,2.6.87,4.04.87,5.42,0,9.81-4.39,9.81-9.81,0-.18,0-.36-.01-.55l-9.79.55-4.04,8.94Z"/>
+  </g>
+  <g>
+    <path class="cls-4" d="m97.45,45.94c.02-.28.03-.56.03-.85,0-5.36-3.19-9.97-7.77-12.04l-5.48,12.11,13.22.78Z"/>
+    <path class="cls-4" d="m83.09,76.13c-.28-5.04-3.38-9.33-7.75-11.31l-5.45,12.04,13.19-.73Z"/>
+  </g>
+  <g>
+    <path class="cls-7" d="m90.86,30.5c-1.95-.88-4.12-1.38-6.4-1.38-8.3,0-15.08,6.51-15.51,14.7l15.47.91,6.44-14.24Z"/>
+    <path class="cls-7" d="m75.94,62.7c-1.94-.88-4.09-1.37-6.35-1.37-8.51,0-15.41,6.9-15.41,15.41,0,.29,0,.57.02.86l15.38-.86,6.35-14.04Z"/>
+  </g>
+  <line class="cls-2" x1="19.29" y1="41.34" x2="146.85" y2="48.85"/>
+  <line class="cls-2" x1="13.68" y1="80" x2="151.19" y2="72.34"/>
+  <line class="cls-1" x1="99.98" y1="10.36" x2="49.32" y2="122.38"/>
+  <text class="cls-3" transform="translate(11.32 33.99)"><tspan x="0" y="0">(d</tspan></text>
+  <text class="cls-3" transform="translate(22.92 37.99) scale(.58)"><tspan x="0" y="0">1</tspan></text>
+  <text class="cls-3" transform="translate(26.93 33.99)"><tspan x="0" y="0">)</tspan></text>
+  <text class="cls-3" transform="translate(0 71.45)"><tspan x="0" y="0">(d</tspan></text>
+  <text class="cls-3" transform="translate(11.6 75.45) scale(.58)"><tspan x="0" y="0">2</tspan></text>
+  <text class="cls-3" transform="translate(15.6 71.45)"><tspan x="0" y="0">)</tspan></text>
+  <text class="cls-3" transform="translate(103.6 10)"><tspan x="0" y="0">(d)</tspan></text>
+</svg>
