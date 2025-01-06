@@ -620,9 +620,9 @@ var cinquieme_saintexupery = [
 	},
 	{
 			id: 8,
-			nom: "Le prisme",
+			nom: "Prismes et cylindres",
 			icone: 2,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_8/Cours.html"
 	},
 	{
