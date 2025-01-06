@@ -479,7 +479,7 @@ var cinquieme_base = [
 			id: 8,
 			nom: "Nombres Premiers",
 			icone: 1,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_8/Cours.html"
 	},
 	{
@@ -636,8 +636,8 @@ var cinquieme_saintexupery = [
 			id: 10,
 			nom: "Multiples et diviseurs",
 			icone: 1,
-			ready : false,
-			page : "Base/Chapitre_9/Cours.html"
+			ready : true,
+			page : "Base/Chapitre_8/Cours.html"
 	},
 	{
 			id: 11,

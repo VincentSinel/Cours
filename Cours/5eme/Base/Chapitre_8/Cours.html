@@ -17,6 +17,25 @@
   <title>Chapitre 8 - Nombres Premiers</title>
 
   <style>
+    .decomposition{
+      text-align: right;
+    }
+    .decomposition tr th:nth-child(1)
+    {
+      border-right: solid 2px black;
+      padding-right: 5px;
+    }
+    .decomposition tr th:nth-child(2)
+    {
+      padding-left: 15px;
+      color: red
+    }
+    .decomposition tr th:nth-child(3)
+    {
+      min-width: 30px;
+      text-align: left;
+      color: gray;
+    }
   </style>
 
 </head>
@@ -37,8 +56,124 @@
   <p class="exemple">
     Activité Introduction
   </p>
+  <ol>
+    <li>Poser la division 326 ÷ 5.</li>
+    <li>326 est-il dans la table de 5 ? Pourquoi ?</li>
+    <li>
+      320 est-il dans la table de 5 ?<br>
+      Compléter : <i>« ... est divisible par ... »</i>
+    </li>
+    <li>Trouver tous les diviseurs de 24.</li>
+    <li>Trouver tous les diviseurs de 13. Que remarques-tu ?</li>
+  </ol>
 
-  
+  <h1>Définitions :</h1>
+      <div class="definition">
+        Une <b>division euclidienne</b> est une division ou l'on ne parle que d'entier. Elle fait intervenir quatre nombres : le <span class="CBlue"><b>dividende</b></span>, le <span class="CRed"><b>diviseur</b></span>, le <span class="CGreen"><b>quotient</b></span> et le <span class="CViolet"><b>reste</b></span>
+      </div>
+      <img src="Images/Division euclidienne.svg" style="max-height: 4cm;">
+      <p>Avec <span class="CViolet"><b>Reste</b></span> &#60; <span class="CRed"><b>Diviseur</b></span></p>
+
+      <div class="definition">
+        Lorsque le reste de la division euclidienne est <b>nul</b> on dit alors que le <b>dividende</b> est un <span class="CRed">multiple</span> du <b>diviseur</b>. On dit aussi que le <b>dividende</b> est <span class="CRed">divisible</span> par le <b>diviseur</b>.
+      </div>
+      <p class="exemple">Exemples :</p>
+      <ul>
+        <li>$36 = 3\times12 + 0$ donc 36 est un multiple de 3 (et de 12).</li>
+        <li>$42 = 6\times7 + 0$ donc 42 est divisible par 6 (et par 7).</li>
+      </ul>
+      <p class="remarque">Remarques :</p>
+      <ul>
+        <li>Tous les nombres non nul sont <b>divisibles</b> par 1 et eux-même.</li>
+        <li>0 est un <b>multiple</b> de tous les nombres.</li>
+        <li>0 est <b>divisible</b> par tous les nombres non nul.</li>
+      </ul>
+  <h1>Nombres premiers :</h1>
+      <div class="definition">
+        Un <span class="DRed">nombre premier</span> est un nombre qui possède exactement deux diviseurs, 1 et lui-même.
+      </div>
+
+      <p class="remarque">Remarques :</p>
+      <ul>
+        <li>Le nombre 1 n’est pas un nombre premier !</li>
+        <li>Il existe un nombre infini de nombres premiers.</li>
+      </ul>
+      <p class="exemple">Exemples :</p>
+      <p>
+        Le nombre 11 est premier car 11 n’est divisible que par 1 et 11.<br>
+        Le nombre 12 n’est pas premier car il est divisible par 1, 2, 3, 4, 6 et 12.
+      </p>
+      <p style="font-style: italic;"> Les nombres premiers compris entre 1 et 50 sont :</p>
+
+      <div style="display: flex; gap: 5px;">
+        <div>
+          ❤️
+        </div>
+        <div style="border: 2px solid var(--Dred); padding: 0 5px;">
+          2 ; 3 ; 5 ; 7 ; 11 ; 13 ; 17 ; 19 
+        </div>
+        <div style="border: 2px solid transparent;">
+          ; 23 ; 29 ; 31 ; 37 ; 41 ; 43 ; 47
+        </div>
+      </div>
+  <h1>Décomposition :</h1>  
+      <div class="definition">
+        Décomposer un nombre en <span class="CRed">produit de facteurs premiers</span>, 
+        c'est l'écrire sous forme d'une multiplication de nombres premiers.
+      </div>
+      <p class="exemple">Exemple :</p>
+
+      <div class="flexobject">
+        <div>
+          Méthode 1
+          <table class="decomposition">
+            <tr>
+              <th>360</th>
+              <th>2</th>
+              <th>$\times$180</th>
+            </tr>
+            <tr>
+              <th>180</th>
+              <th>2</th>
+              <th>$\times$90</th>
+            </tr>
+            <tr>
+              <th>90</th>
+              <th>2</th>
+              <th>$\times$45</th>
+            </tr>
+            <tr>
+              <th>45</th>
+              <th>3</th>
+              <th>$\times$15</th>
+            </tr>
+            <tr>
+              <th>15</th>
+              <th>3</th>
+              <th>$\times$5</th>
+            </tr>
+            <tr>
+              <th>5</th>
+              <th>5</th>
+              <th>$\times$1</th>
+            </tr>
+            <tr>
+              <th>1</th>
+            </tr>
+          </table>
+        </div>
+        <div>
+          Méthode 2
+          <p>
+            $360 = 36\times10 = 6\times6\times2\times5$ $= 2\times3\times2\times3\times2\times5$<br>
+            $360 = 2\times2\times2\times3\times3\times5$
+          </p>
+        </div>
+      </div>
+
+      <p>
+        La décomposition en produit de facteurs premiers permet de trouver rapidement dans quelle table se trouve un nombre.
+      </p>  
 
 </body>
 
