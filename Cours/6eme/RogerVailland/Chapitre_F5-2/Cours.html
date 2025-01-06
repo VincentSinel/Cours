@@ -13,8 +13,9 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script id="Animation" src="/JS/Animation/animation_holder.js"></script>
 
-  <title>E1 - Droites</title>
+  <title>F5 (Partie 22) - Tracer un triangle (Avec deux grandeurs)</title>
 
   <style>
     .appartient div{
@@ -34,17 +35,60 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        E1
+        F5 (Partie 2)
       </td>
       <td id="ChapitreNom">
-        - Droites
+        - Tracer un triangle (Avec deux grandeurs)
       </td>
     </tr>
   </table>
 
-  <p class="exemple">
-    Activité Introduction
-  </p>
+  <h1>Avec deux longueurs et un angle :</h1>
+    <p>
+      Pour construire un triangle à partir de deux longueurs et un angle, il y deux cas possible :
+      <ul>
+        <li>Ont connait les mesures des deux côté de l'angle.</li>
+        <li>Ont connait la mesure d'un des deux côté de l'angle.</li>
+      </ul>
+      Dans tous les cas, il faut :
+      <ol>
+        <li>Tracer le côté de longueur connu de l'angle.</li>
+        <li>Tracer la demi-droite formant l'angle donné avec le côté précédent.</li>
+        <li>Reporter la seconde longueur connu.</li>
+        <li>Le troisième sommet est alors le point d'intersection entre la demi-droite et l'arc de cercle.</li>
+      </ol>
+    </p>
+    <p class="exemple">Exemples :</p>
+    <div class="flexobject">
+      <div style="flex: 1 1 5cm">
+        <p>
+          Construire un triangle ABC tel que AB = 8cm, AC = 5cm et $\widehat{BAC} = 30°$.
+        </p>
+        <div id="Animation2" class="animation center" width="480" height="360"></div>
+      </div>
+      <div style="flex: 1 1 5cm">
+        <p>
+          Construire un triangle ABC tel que AB = 8cm, BC = 6cm et $\widehat{BAC} = 30°$.
+        </p>
+        <div id="Animation3" class="animation center" width="480" height="360"></div>
+      </div>
+    </div>
+
+  <h1>Avec une longueur et deux angles :</h1>
+    <p>
+      Pour construire un triangle connaissant la longueur d'un côté et deux angles, il faut connaitre les deux angles aux extrémités du côté connu. Si ce n'est pas le cas, il faut calculer l'angle manquant en utilisant la propriété des triangles : <i>La sommet des angles d'un triangle est égale à 180°</i>.
+      <ol>
+        <li>Construire le côté connu</li>
+        <li>Construire la demi-droite formant l'un des angle connu avec le côté précédent.</li>
+        <li>Construire la demi-droite formant l'autre angle connu avec le côté précédent.</li>
+        <li>Le troisième sommet est alors le point d'intersection entre les deux demi-droites.</li>
+      </ol>
+    </p>
+    <p class="exemple">Exemple :</p>
+    <p>
+      Construire un triangle ABC tel que AB = 8cm, $\widehat{BAC} = 30°$ et $\widehat{ABC} = 75°$.
+    </p>
+    <div id="Animation4" class="animation center" width="480" height="360"></div>
 
 
 

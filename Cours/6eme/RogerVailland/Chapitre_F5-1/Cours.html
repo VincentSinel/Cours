@@ -13,8 +13,9 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script id="Animation" src="/JS/Animation/animation_holder.js"></script>
 
-  <title>E1 - Droites</title>
+  <title>F5 (Partie 1) - Tracer un triangle (Avec 3 longueurs)</title>
 
   <style>
     .appartient div{
@@ -34,17 +35,29 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        E1
+        F5 (Partie 1)
       </td>
       <td id="ChapitreNom">
-        - Droites
+        - Tracer un triangle (Avec 3 longueurs)
       </td>
     </tr>
   </table>
 
-  <p class="exemple">
-    Activité Introduction
+  <h1>Construction d'un triangle avec 3 longueurs :</h1>
+  <p>
+    Pour tracer un triangle à partir de 3 longueurs données, il faut utiliser une règle et un compas.
+    <ol>
+      <li>On trace un des côté du triangle à la règle</li>
+      <li>On construit un arc de cercle de rayon la longueur du second côté en prenant pour centre l'une des extrémités du premier côté.</li>
+      <li>On construit un arc de cercle de rayon la longueur du troisième côté en prenant pour centre l'autre extrémité du premier côté.</li>
+      <li>Le troisième sommet du triangle est alors l'un des points d'intersection des deux arc de cercle</li>
+    </ol>
   </p>
+  <p class="exemple">Exemple :</p>
+  <p>
+    Construire un triangle ABC tel que AB = 8cm, AC = 6cm et BC = 4cm.
+  </p>
+  <div id="Animation1" class="animation center" width="480" height="360"></div>
 
 
 
