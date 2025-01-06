@@ -620,7 +620,7 @@ var cinquieme_saintexupery = [
 	},
 	{
 			id: 8,
-			nom: "Solide - Prisme",
+			nom: "Le prisme",
 			icone: 2,
 			ready : false,
 			page : "Base/Chapitre_8/Cours.html"
@@ -735,7 +735,13 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre A5",
 		nom: "Egalité de fraction",
 		icone: 7,
-		ready : false,
+		download: {
+			pdf: "/Cours/5eme/RogerVailland/Chapitre_A5/Documents/A5 - Egalité de fraction (Complet).pdf",
+			docx: "/Cours/5eme/RogerVailland/Chapitre_A5/Documents/A5 - Egalité de fraction (Complet).docx",
+			pdf_trou: "/Cours/5eme/RogerVailland/Chapitre_A5/Documents/A5 - Egalité de fraction (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_A5/Documents/A5 - Egalité de fraction (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_A5/Cours.html",
 	},
 	{
@@ -1562,7 +1568,7 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre F5 (Partie 1)",
 		nom: "Tracer un triangle (Avec 3 longueurs)",
 		icone: 12,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_F5-1/Cours.html",
 	},
 	{
@@ -1570,7 +1576,7 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre F5 (Partie 2)",
 		nom: "Tracer un triangle (Avec deux grandeurs)",
 		icone: 12,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_F5-2/Cours.html",
 	},
 	{
