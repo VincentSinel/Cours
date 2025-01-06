@@ -542,7 +542,7 @@ var cinquieme_base = [
 			id: 17,
 			nom: "Angles",
 			icone: 5,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_17/Cours.html"
 	},
 	{
@@ -556,7 +556,7 @@ var cinquieme_base = [
 			id: 19,
 			nom: "Solide",
 			icone: 4,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_19/Cours.html"
 	},
 	{
@@ -623,63 +623,63 @@ var cinquieme_saintexupery = [
 			nom: "Prismes et cylindres",
 			icone: 2,
 			ready : true,
-			page : "Base/Chapitre_8/Cours.html"
+			page : "SaintExupery/Chapitre_8/Cours.html"
 	},
 	{
 			id: 9,
+			nom: "Nombres Relatifs - Additions et Soustractions",
+			icone: 1,
+			ready : false,
+			page : "Base/Chapitre_16/Cours.html"
+	},
+	{
+			id: 10,
 			nom: "Multiples et diviseurs",
 			icone: 1,
 			ready : false,
 			page : "Base/Chapitre_9/Cours.html"
 	},
 	{
-			id: 10,
+			id: 11,
 			nom: "Triangles - Longueurs et droites remarquables",
 			icone: 2,
 			ready : false,
 			page : "Base/Chapitre_10/Cours.html"
 	},
 	{
-			id: 11,
+			id: 12,
 			nom: "Fraction - Proportion et quotient",
 			icone: 1,
 			ready : false,
 			page : "Base/Chapitre_11/Cours.html"
 	},
 	{
-			id: 12,
+			id: 13,
 			nom: "Proportionnalité",
 			icone: 5,
 			ready : false,
 			page : "Base/Chapitre_12/Cours.html"
 	},
 	{
-			id: 13,
+			id: 14,
 			nom: "Statistiques",
 			icone: 5,
 			ready : false,
 			page : "Base/Chapitre_13/Cours.html"
 	},
 	{
-			id: 14,
+			id: 15,
 			nom: "Fraction - Comparaison,  somme et différence",
 			icone: 1,
 			ready : false,
 			page : "Base/Chapitre_14/Cours.html"
 	},
 	{
-			id: 15,
+			id: 16,
 			nom: "Parallélogrammes",
 			icone: 2,
 			ready : false,
 			page : "Base/Chapitre_15/Cours.html"
-	},
-	{
-			id: 16,
-			nom: "Nombres Relatifs - Additions et Soustractions",
-			icone: 1,
-			ready : false,
-			page : "Base/Chapitre_16/Cours.html"
 	},
 	{
 			id: 17,

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 249.09 241.85">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(68, 172, 226, .4);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-6 {
+        fill: #fff;
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 28.35px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-2 {
+        fill: #87306c;
+      }
+
+      .cls-7 {
+        stroke: #b2b2b2;
+        stroke-dasharray: 0 0 14 8;
+      }
+
+      .cls-7, .cls-8 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        fill: rgba(103, 70, 149, .3);
+      }
+
+      .cls-4 {
+        fill: #b44090;
+      }
+
+      .cls-8 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-5 {
+        fill: #c366a6;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-2" points="55.02 151 1 240.85 248.09 212.46 55.02 151"/>
+  <polygon class="cls-5" points="248.09 62.46 55.02 1 55.02 151 248.09 212.46 248.09 62.46"/>
+  <polygon class="cls-4" points="55.02 1 1 90.85 1 240.85 55.02 151 55.02 1"/>
+  <path class="cls-7" d="m55.02,1v150"/>
+  <path class="cls-7" d="m55.02,151l193.07,61.46"/>
+  <path class="cls-7" d="m1,240.85l54.02-89.85"/>
+  <polygon class="cls-3" points="248.09 62.46 1 90.85 1 240.85 248.09 212.46 248.09 62.46"/>
+  <polygon class="cls-1" points="55.02 1 1 90.85 248.09 62.46 55.02 1"/>
+  <path class="cls-8" d="m248.09,62.46L1,90.85"/>
+  <path class="cls-8" d="m248.09,212.46L1,240.85"/>
+  <path class="cls-8" d="m248.09,62.46v150"/>
+  <path class="cls-8" d="m1,90.85L55.02,1"/>
+  <path class="cls-8" d="m1,90.85v150"/>
+  <path class="cls-8" d="m55.02,1l193.07,61.46"/>
+  <text class="cls-6" transform="translate(118.24 120.92)"><tspan x="0" y="0">Faces</tspan></text>
+</svg>

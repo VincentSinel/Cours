@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 249.09 241.85">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #74bd83;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        stroke-dasharray: 0 0 14 8;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-3 {
+        stroke: #32b29a;
+      }
+
+      .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-4, .cls-5 {
+        fill: #74bd83;
+      }
+
+      .cls-5 {
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 28.35px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <path class="cls-2" d="m55.02,1v150"/>
+  <path class="cls-2" d="m55.02,151l193.07,61.46"/>
+  <g>
+    <line class="cls-1" x1="132.67" y1="103.72" x2="135.7" y2="40.96"/>
+    <polygon class="cls-4" points="136.24 29.68 141.97 45.89 135.66 41.8 128.98 45.26 136.24 29.68"/>
+  </g>
+  <path class="cls-2" d="m1,240.85l54.02-89.85"/>
+  <g>
+    <line class="cls-1" x1="101.26" y1="104.74" x2="38.98" y2="56.74"/>
+    <polygon class="cls-4" points="30.03 49.85 46.61 54.41 39.65 57.26 38.67 64.72 30.03 49.85"/>
+  </g>
+  <path class="cls-3" d="m248.09,62.46L1,90.85"/>
+  <path class="cls-3" d="m248.09,212.46L1,240.85"/>
+  <path class="cls-3" d="m248.09,62.46v150"/>
+  <path class="cls-3" d="m1,90.85L55.02,1"/>
+  <path class="cls-3" d="m1,90.85v150"/>
+  <path class="cls-3" d="m55.02,1l193.07,61.46"/>
+  <text class="cls-5" transform="translate(90.45 131.38)"><tspan x="0" y="0">A</tspan><tspan class="cls-6" x="18.35" y="0">r</tspan><tspan x="30.17" y="0">êtes</tspan></text>
+  <g>
+    <line class="cls-1" x1="116.33" y1="106.19" x2="113.16" y2="91.73"/>
+    <polygon class="cls-4" points="110.74 80.7 120.5 94.85 113.34 92.55 107.79 97.64 110.74 80.7"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="88.5" y1="108.58" x2="67.64" y2="102.18"/>
+    <polygon class="cls-4" points="56.84 98.87 73.96 97.32 68.44 102.43 70.15 109.76 56.84 98.87"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="82.62" y1="129.25" x2="14.83" y2="149.06"/>
+    <polygon class="cls-4" points="3.99 152.23 17.44 141.52 15.64 148.83 21.09 154.01 3.99 152.23"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="113.53" y1="137.46" x2="41.59" y2="187.64"/>
+    <polygon class="cls-4" points="32.33 194.1 41.66 179.66 42.29 187.16 49.1 190.33 32.33 194.1"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="123.48" y1="137.46" x2="104.9" y2="215.67"/>
+    <polygon class="cls-4" points="102.28 226.66 99.64 209.66 105.09 214.84 112.29 212.67 102.28 226.66"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="143.14" y1="136.4" x2="147.03" y2="166.05"/>
+    <polygon class="cls-4" points="148.5 177.25 139.98 162.31 146.92 165.21 152.87 160.62 148.5 177.25"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="178.37" y1="127.72" x2="234.22" y2="126.45"/>
+    <polygon class="cls-4" points="245.52 126.19 229.75 133.05 233.38 126.46 229.46 120.05 245.52 126.19"/>
+  </g>
+</svg>
