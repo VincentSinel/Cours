@@ -500,7 +500,7 @@ var cinquieme_base = [
 			id: 11,
 			nom: "Additions et Soustractions de Nombres Relatifs",
 			icone: 2,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_11/Cours.html"
 	},
 	{
@@ -627,10 +627,10 @@ var cinquieme_saintexupery = [
 	},
 	{
 			id: 9,
-			nom: "Nombres Relatifs - Additions et Soustractions",
+			nom: "Additions et Soustractions de nombres relatifs",
 			icone: 1,
-			ready : false,
-			page : "Base/Chapitre_16/Cours.html"
+			ready : true,
+			page : "Base/Chapitre_11/Cours.html"
 	},
 	{
 			id: 10,
