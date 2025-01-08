@@ -1324,7 +1324,13 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre C1",
 		nom: "Reconnaître une situation de proportionnalité",
 		icone: 9,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_C1/Documents/C1 - Reconnaitre une situation de proportionnalité (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_C1/Documents/C1 - Reconnaitre une situation de proportionnalité (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_C1/Documents/C1 - Reconnaitre une situation de proportionnalité (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_C1/Documents/C1 - Reconnaitre une situation de proportionnalité (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_C1/Cours.html",
 	},
 	{
