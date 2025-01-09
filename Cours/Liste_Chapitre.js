@@ -643,8 +643,8 @@ var cinquieme_saintexupery = [
 			id: 11,
 			nom: "Triangles - Longueurs et droites remarquables",
 			icone: 2,
-			ready : false,
-			page : "Base/Chapitre_10/Cours.html"
+			ready : true,
+			page : "SaintExupery/Chapitre_11/Cours.html"
 	},
 	{
 			id: 12,

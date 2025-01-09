@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Chapitre 11 - Triangles - Longueurs et droites remarquables</title>
+
+  <style>
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Chapitre 11
+      </td>
+      <td id="ChapitreNom">
+        - Triangles - Longueurs et droites remarquables
+      </td>
+    </tr>
+  </table>
+
+  <p class="exemple">
+    Activité Introduction
+  </p>
+
+	<p>On prend un spaghetti (ou une bande fine de papier)</p>
+	<ol>
+		<li>On casse en trois morceaux le spaghetti. Peut-on former un triangle avec les trois morceaux obtenus ?</li>
+		<li>Comment casser un spaghetti en trois tel que :
+			<ol type="a">
+				<li>Il ne soit pas constructible ?</li>
+				<li>Il soit constructible ?</li>
+			</ol>
+		</li>
+		<li>Quel lien peut-on faire entre la taille des morceaux et la constructibilité du triangle ?</li>
+	</ol>
+
+  <h1>Propriétés du triangle :</h1>
+		<h2>Constructibilité du triangle :</h2>
+			<div class="definition">
+				<b>Propriété :</b><br>
+				Pour pouvoir construire un triangle à partir de trois longueur données il faut vérifier que la longueur du coté le plus long est inférieur ou égal à la somme des longueurs des deux autres cotés
+			</div>
+			<p class="exemple">Exemples :</p>
+			<p>
+				Le triplet 11 cm ; 5cm et 9cm permet de construire un triangle car 5 + 9 = 14 et 14 > 11.<br>
+				Le triplet 17cm ; 3cm et 10 cm ne permet pas de construire un triangle car 3 + 10 = 13 et 13 < 17.
+			</p>
+		<h2>Inégalité triangulaire :</h2>
+			<div class="definition">
+				<b>Propriété :</b><br>
+				Dans un triangle la longueur d'un côté est toujours inférieur à la somme des longueurs des deux autres côté.
+			</div>
+			<div class="flexobject">
+				<div style="flex: 1 1 6cm; max-width: 12cm;">
+					La ligne droite est toujours le plus court.<br>
+					Le chemin en trait plein est plus court que celui en pointillé.
+				</div>
+				<img src="Images/Schema1.svg" style="max-height: 6cm;">
+			</div>
+			<p class="exemple">Exemple :</p>
+			<div class="flexobject">
+				<div>
+					Dans le triangle ci-contre :
+					<ul>
+						<li>$\textcolor{#039be5}{a} \leq \textcolor{#e53935}{b} + \textcolor{#dedc00}{c}$</li>
+						<li>$\textcolor{#e53935}{b} \leq \textcolor{#039be5}{a} + \textcolor{#dedc00}{c}$</li>
+						<li>$\textcolor{#dedc00}{c} \leq \textcolor{#039be5}{a} + \textcolor{#e53935}{b}$</li>
+					</ul>
+				</div>
+				<img src="Images/Triangle1.svg" style="max-height: 4cm;">
+			</div>
+	<h1>Médiatrice :</h1>
+		<h2>Rappel :</h2>
+			<div class="definition">
+				La <span class="CRed">médiatrice</span> d'un segment est la droite perpendiculaire à ce segment et qui le coupe en son milieu.<br><br>
+				<u><b>Propriétés</b></u><br>
+				<ul>
+					<li>Si un point est situé sur la médiatrice d'un segment, alors ce point est équidistant des extrémités de ce segment.</li>
+					<li>Si un point est équidistant des extrémités d'un segment, alors ce point appartient à la médiatrice de ce segment.</li>
+				</ul>
+			</div>
+			<p class="exemple">Exemple :</p>
+			<div class="flexobject">
+				<img src="Images/Mediatrice1.svg" style="max-height: 5cm;">
+				<img src="Images/Mediatrice2.svg" style="max-height: 5cm;">
+			</div>
+		<h2>Dans le triangle :</h2>
+			<div class="definition">
+				<b><u>Propriété :</u></b><br>
+				Les médiatrices d'un triangle sont <span class="CRed">concourante</span> (elles se croisent en un même point).
+			</div>
+			<p class="exemple">Exemples :</p>
+			<div class="flexobject">
+				<img src="Images/Mediatrice4.svg" style="max-height: 5cm;">
+				<img src="Images/Mediatrice3.svg" style="max-height: 5cm;">
+			</div>
+			<p class="remarque">Remarques :</p>
+			<ul>
+				<li>Ce point est à égale distance des sommets du triangle.</li>
+				<li>
+					C'est le centre du <span class="CRed">cercle circonscrit</span> au triangle :
+					<div class="flexobject">
+						<img src="Images/Cercle2.svg" style="max-height: 5cm;">
+						<img src="Images/Cercle1.svg" style="max-height: 5cm;">
+					</div>
+				</li>
+			</ul>
+	<h1>Hauteurs :</h1>
+			<h2>Définition :</h2>
+				<div class="definition">
+						Une <span class="CRed">hauteur</span> d'un triangle est une droite qui passe par un sommet de ce triangle et qui est <b>perpendiculaire</b> au côté opposé à ce sommet.
+				</div>
+				<p class="exemple">Exemples :</p>
+				<div class="flexobject">
+					<img src="Images/Hauteur1.svg" style="max-height: 5cm;">
+					<img src="Images/Hauteur2.svg" style="max-height: 5cm;">
+				</div>
+				<p class="remarque">Remarque :</p>
+				<ul>
+					<li>Une hauteur peut-être en dehors du triangle.</li>
+					<li>Dans chacun des exemples précédents, le point H est appelé <span class="CRed">pied de la hauteur</span> issue de M.</li>
+				</ul>
+			<h2>Propriété :</h2>
+				<div class="definition">
+					<b><u>Propriété :</u></b><br>
+					Les hauteurs d'un triangle sont <span class="CRed">concourante</span> (elles se croisent en un même point nommé <span class="CRed">orthocentre </span> du cercle).
+				</div>
+				<p class="exemple">Exemples :</p>
+				<div class="flexobject">
+					<img src="Images/Ortho1.svg" style="max-height: 5cm;">
+					<img src="Images/Ortho2.svg" style="max-height: 5cm;">
+				</div>
+			<h2>Aire du triangle :</h2>
+      <table class="borderfull2">
+				<tr style="background-color: #b6dde8;">
+					<td><b>Dans un triangle quelconque</b><br><br>
+						<span class="formule">$\mathscr{A}=\frac{Base\times Hauteur}{2}$</span></td>
+          <td><b>Dans un triangle rectangle</b><br><br>
+						<span class="formule">$\mathscr{A}=\frac{a\times b}{2}$</span></td>
+        </tr>
+        <tr>
+          <td><img src="Images/Triangle2.svg" style="max-height: 4cm;"></td>
+          <td><img src="Images/Triangle3.svg" style="max-height: 4cm;"></td>
+        </tr>
+      </table>
+      <p class="exemple">Exemples :</p>
+      <ul>
+				<li></li>
+				<li>
+					L'aire d'un triangle rectangle dont les côtés de l'angle droit mesurent 6cm et 8cm est $\mathscr{A}=\frac{6\times8}{2}=\frac{48}{2}=24 cm²$.
+				</li>
+      </p>
+</body>
+
+</html>
