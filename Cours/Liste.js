@@ -76,6 +76,10 @@ function CreatePDFButton()
     but = document.getElementById("OdtButton2");
     but.target="_blank";
     but.download="Cours a trou.odt"
+
+    but = document.getElementById("XlsxButton");
+    but.target="_blank";
+    but.download="Fichier excel.xlsx"
 }
 
 function SetDownloadButton(path, element)
@@ -87,6 +91,7 @@ function SetDownloadButton(path, element)
     let but_docx2 = document.getElementById("DocxButton2");
     let but_odt1 = document.getElementById("OdtButton");
     let but_odt2 = document.getElementById("OdtButton2");
+    let but_xlsx = document.getElementById("XlsxButton");
     but_default.classList.add("deactivate")
     but_pdf1.classList.add("deactivate")
     but_pdf2.classList.add("deactivate")
@@ -94,58 +99,66 @@ function SetDownloadButton(path, element)
     but_docx2.classList.add("deactivate")
     but_odt1.classList.add("deactivate")
     but_odt2.classList.add("deactivate")
+    but_xlsx.classList.add("deactivate")
     if (element.hasOwnProperty("download"))
     {
-    let list = element.download;
+        let list = element.download;
 
-    // PDF complet
-    if (list.hasOwnProperty("pdf"))
-    { 
-        but_pdf1.href = list.pdf;
-        but_pdf1.classList.remove("deactivate")
-    }
-    else
-    {
-        var pageUrl = encodeURIComponent("https://vsinel.fr" + path);
-        var opts = ['save-link=' + pageUrl, 'pageOrientation=portrait', 'pageSize=a4', 'pageMargin=2cm'];
-        but_default.href = 'https://www.sejda.com/html-to-pdf?' + opts.join('&');
-        but_default.classList.remove("deactivate")
-    }
+        // PDF complet
+        if (list.hasOwnProperty("pdf"))
+        { 
+            but_pdf1.href = list.pdf;
+            but_pdf1.classList.remove("deactivate")
+        }
+        else
+        {
+            var pageUrl = encodeURIComponent("https://vsinel.fr" + path);
+            var opts = ['save-link=' + pageUrl, 'pageOrientation=portrait', 'pageSize=a4', 'pageMargin=2cm'];
+            but_default.href = 'https://www.sejda.com/html-to-pdf?' + opts.join('&');
+            but_default.classList.remove("deactivate")
+        }
 
-    // PDF trou
-    if (list.hasOwnProperty("pdf_trou"))
-    { 
-        but_pdf2.href = list.pdf_trou;
-        but_pdf2.classList.remove("deactivate")
-    }
-    
-    // DOCX complet
-    if (list.hasOwnProperty("docx"))
-    { 
-        but_docx1.href = list.docx;
-        but_docx1.classList.remove("deactivate")
-    }
+        // PDF trou
+        if (list.hasOwnProperty("pdf_trou"))
+        { 
+            but_pdf2.href = list.pdf_trou;
+            but_pdf2.classList.remove("deactivate")
+        }
+        
+        // DOCX complet
+        if (list.hasOwnProperty("docx"))
+        { 
+            but_docx1.href = list.docx;
+            but_docx1.classList.remove("deactivate")
+        }
 
-    // DOCX trou
-    if (list.hasOwnProperty("docx_trou"))
-    { 
-        but_docx2.href = list.docx_trou;
-        but_docx2.classList.remove("deactivate")
-    }
-    
-    // ODT complet
-    if (list.hasOwnProperty("odt"))
-    { 
-        but_odt1.href = list.odt;
-        but_odt1.classList.remove("deactivate")
-    }
+        // DOCX trou
+        if (list.hasOwnProperty("docx_trou"))
+        { 
+            but_docx2.href = list.docx_trou;
+            but_docx2.classList.remove("deactivate")
+        }
+        
+        // ODT complet
+        if (list.hasOwnProperty("odt"))
+        { 
+            but_odt1.href = list.odt;
+            but_odt1.classList.remove("deactivate")
+        }
 
-    // ODT trou
-    if (list.hasOwnProperty("odt_trou"))
-    { 
-        but_odt2.href = list.odt_trou;
-        but_odt2.classList.remove("deactivate")
-    }
+        // ODT trou
+        if (list.hasOwnProperty("odt_trou"))
+        { 
+            but_odt2.href = list.odt_trou;
+            but_odt2.classList.remove("deactivate")
+        }
+
+        // XLSX
+        if (list.hasOwnProperty("xlsx"))
+        {
+            but_xlsx.href = list.xlsx;
+            but_xlsx.classList.remove("deactivate")
+        }
     
     }
     else
