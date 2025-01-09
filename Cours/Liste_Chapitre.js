@@ -1201,6 +1201,10 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre Fo6",
 		nom: "Priorités opératoires",
 		icone: 14,
+		download: {
+			pdf: "/Cours/6eme/RogerVailland/Chapitre_Fo6/Documents/Fo6 - Priorités opératoires.pdf",
+			docx: "/Cours/6eme/RogerVailland/Chapitre_Fo6/Documents/Fo6 - Priorités opératoires.docx",
+		},
 		ready : true,
 		page : "RogerVailland/Chapitre_Fo6/Cours.html",
 	},
