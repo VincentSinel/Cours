@@ -1587,6 +1587,10 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre F5 (Partie 1)",
 		nom: "Tracer un triangle (Avec 3 longueurs)",
 		icone: 12,
+		download: {
+			pdf: "/Cours/6eme/RogerVailland/Chapitre_F5-1/Documents/F5 - Tracer un triangle (Partie 1).pdf",
+			docx: "/Cours/6eme/RogerVailland/Chapitre_F5-1/Documents/F5 - Tracer un triangle (Partie 1).docx",
+		},
 		ready : true,
 		page : "RogerVailland/Chapitre_F5-1/Cours.html",
 	},
