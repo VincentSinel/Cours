@@ -875,8 +875,14 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre E2",
 		nom: "Angles d'un triangle",
 		icone: 11,
-		ready : false,
-		page : "RogerVailland/Chapitre_E2/Cours.html",
+		download: {
+			pdf: "/Cours/5eme/RogerVailland/Chapitre_E2/Documents/E2 - Angles d'un triangle (Complet).pdf",
+			docx: "/Cours/5eme/RogerVailland/Chapitre_E2/Documents/E2 - Angles d'un triangle (Complet).docx",
+			pdf_trou: "/Cours/5eme/RogerVailland/Chapitre_E2/Documents/E2 - Angles d'un triangle (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_E2/Documents/E2 - Angles d'un triangle (A trou).docx",
+		},
+		ready : true,
+		page : "saintexupery/Chapitre_6/Cours.html",
 	},
 	{
 		id: 32,
