@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230.06 225.21">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #e30613;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill: none;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2, .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-3, .cls-4, .cls-6, .cls-7 {
+        stroke-linejoin: round;
+      }
+
+      .cls-8, .cls-9 {
+        isolation: isolate;
+      }
+
+      .cls-9, .cls-10 {
+        fill: #1d1d1b;
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 19px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-7 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-2, .cls-5 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-11 {
+        fill: #3aaa35;
+        stroke-width: 0px;
+      }
+
+      .cls-5 {
+        stroke-dasharray: 0 0 0 0 0 0 7.16 7.16;
+      }
+
+      .cls-6 {
+        stroke: red;
+      }
+
+      .cls-7 {
+        stroke-dasharray: 0 0 6.36 6.36;
+      }
+    </style>
+  </defs>
+  <rect class="cls-11" x="105.18" y="74.23" width="13.02" height="13.02" transform="translate(-24.73 61.14) rotate(-27.68)"/>
+  <rect class="cls-11" x="188.54" y="113.26" width="13.02" height="13.02"/>
+  <polygon class="cls-3" points="188.54 29.77 17.27 126.28 144.59 126.28 188.54 29.77"/>
+  <line class="cls-1" x1="188.54" y1="1" x2="188.54" y2="224.21"/>
+  <g class="cls-8">
+    <text class="cls-9" transform="translate(193.02 30.66)"><tspan x="0" y="0">M</tspan></text>
+  </g>
+  <g class="cls-8">
+    <text class="cls-9" transform="translate(0 139.11)"><tspan x="0" y="0">P</tspan></text>
+  </g>
+  <g class="cls-8">
+    <text class="cls-9" transform="translate(139.66 154.35)"><tspan x="0" y="0">N</tspan></text>
+  </g>
+  <g>
+    <line class="cls-2" x1="144.59" y1="126.28" x2="148.09" y2="126.28"/>
+    <line class="cls-5" x1="155.25" y1="126.28" x2="208.93" y2="126.28"/>
+    <line class="cls-2" x1="212.51" y1="126.28" x2="216.01" y2="126.28"/>
+  </g>
+  <line class="cls-6" x1="97.58" y1="42.13" x2="194.09" y2="213.4"/>
+  <rect class="cls-11" x="112.85" y="158.94" width="13.02" height="13.02" transform="translate(-81.19 202.85) rotate(-64.76)"/>
+  <line class="cls-6" x1="229.06" y1="222.7" x2="15.7" y2="125.53"/>
+  <text class="cls-10" transform="translate(192.31 203.74)"><tspan x="0" y="0">O</tspan></text>
+  <g>
+    <line class="cls-4" x1="113.19" y1="195.5" x2="114.43" y2="192.77"/>
+    <line class="cls-7" x1="117.06" y1="186.97" x2="142.04" y2="131.91"/>
+    <line class="cls-4" x1="143.35" y1="129.01" x2="144.59" y2="126.28"/>
+  </g>
+</svg>

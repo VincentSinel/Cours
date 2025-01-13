@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 269.73 264.19">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1, .cls-3 {
+        stroke: #e30613;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5 {
+        fill: #008d36;
+        stroke-width: 0px;
+      }
+
+      .cls-6 {
+        fill: #1d1d1b;
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 19px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-2 {
+        stroke: #1d1d1b;
+        stroke-linejoin: round;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        stroke: #009fe3;
+      }
+    </style>
+  </defs>
+  <rect class="cls-5" x="30.84" y="173.86" width="8.37" height="8.37" transform="translate(-61.91 24.65) rotate(-21.16)"/>
+  <rect class="cls-5" x="112.68" y="177.41" width="9.59" height="9.59" transform="translate(-98.45 201.64) rotate(-62.33)"/>
+  <rect class="cls-5" x="137.64" y="221.7" width="9.32" height="9.32"/>
+  <polygon class="cls-2" points="7.25 120.04 29.55 175.53 51.85 231.02 137.64 231.02 223.42 231.02 115.34 175.53 7.25 120.04"/>
+  <line class="cls-1" x1="137.64" y1="110.25" x2="137.64" y2="250.42"/>
+  <polyline class="cls-3" points="1 187 29.55 175.53 152.75 126.02"/>
+  <polyline class="cls-1" points="150.26 107.49 115.34 175.53 97.69 209.9"/>
+  <text class="cls-6" transform="translate(143.55 148.7)"><tspan x="0" y="0">M</tspan></text>
+  <circle class="cls-4" cx="137.64" cy="132.09" r="131.09"/>
+</svg>

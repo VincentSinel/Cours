@@ -507,7 +507,7 @@ var cinquieme_base = [
 			id: 12,
 			nom: "Triangles - Droites remarquables",
 			icone: 1,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_12/Cours.html"
 	},
 	{
