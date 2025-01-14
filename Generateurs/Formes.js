@@ -69,6 +69,7 @@ function Draw_RepereGradue(data)
 	data["ver_text_offset"] = document.getElementById("ver_text_offset").valueAsNumber;
 	data["line_pry_stroke"] = document.getElementById("line_pry_stroke").valueAsNumber;
 	data["line_pry_color"] = document.getElementById("line_pry_color").value;
+	data["line_pry_style"] = document.getElementById("line_pry_style").value;
 	data["line_pry_pin_size"] = document.getElementById("line_pry_pin_size").valueAsNumber;
 	data["line_pry_arrow"] = document.getElementById("line_pry_arrow").valueAsNumber;
 	data["line_pry_grid"] = document.getElementById("line_pry_grid").checked;
@@ -76,6 +77,7 @@ function Draw_RepereGradue(data)
 	data["line_pry_grid_color"] = document.getElementById("line_pry_grid_color").value;
 	data["line_sec_stroke"] = document.getElementById("line_sec_stroke").valueAsNumber;
 	data["line_sec_color"] = document.getElementById("line_sec_color").value;
+	data["line_sec_style"] = document.getElementById("line_sec_style").value;
 	data["line_sec_pin_size"] = document.getElementById("line_sec_pin_size").valueAsNumber;
 	data["line_sec_grid"] = document.getElementById("line_sec_grid").checked;
 	data["line_sec_grid_stroke"] = document.getElementById("line_sec_grid_stroke").valueAsNumber;

@@ -927,29 +927,31 @@ function RepereGradue(paper, data)
     let hor_pas = data["hor_pas"];
     let hor_text = data["hor_text"];
     let hor_text_pos = data["hor_text_pos"];
-	let hor_text_size = data["hor_text_size"];
-	let hor_text_offset = data["hor_text_offset"];
-	let ver_pri_nbr = data["ver_pri_nbr"];
-	let ver_sec_nbr = data["ver_sec_nbr"];
-	let ver_start = data["ver_start"];
-	let ver_pas = data["ver_pas"];
-	let ver_text = data["ver_text"];
-	let ver_text_pos = data["ver_text_pos"];
-	let ver_text_size = data["ver_text_size"];
-	let ver_text_offset = data["ver_text_offset"];
-	let line_pry_stroke = data["line_pry_stroke"];
-	let line_pry_color = data["line_pry_color"];
-	let line_pry_pin_size = data["line_pry_pin_size"];
-	let line_pry_arrow = data["line_pry_arrow"];
-	let line_pry_grid = data["line_pry_grid"];
-	let line_pry_grid_stroke = data["line_pry_grid_stroke"];
-	let line_pry_grid_color = data["line_pry_grid_color"];
-	let line_sec_stroke = data["line_sec_stroke"];
-	let line_sec_color = data["line_sec_color"];
-	let line_sec_pin_size = data["line_sec_pin_size"];
-	let line_sec_grid = data["line_sec_grid"];
-	let line_sec_grid_stroke = data["line_sec_grid_stroke"];
-	let line_sec_grid_color = data["line_sec_grid_color"];
+		let hor_text_size = data["hor_text_size"];
+		let hor_text_offset = data["hor_text_offset"];
+		let ver_pri_nbr = data["ver_pri_nbr"];
+		let ver_sec_nbr = data["ver_sec_nbr"];
+		let ver_start = data["ver_start"];
+		let ver_pas = data["ver_pas"];
+		let ver_text = data["ver_text"];
+		let ver_text_pos = data["ver_text_pos"];
+		let ver_text_size = data["ver_text_size"];
+		let ver_text_offset = data["ver_text_offset"];
+		let line_pry_stroke = data["line_pry_stroke"];
+		let line_pry_color = data["line_pry_color"];
+		let line_pry_style = data["line_pry_style"];
+		let line_pry_pin_size = data["line_pry_pin_size"];
+		let line_pry_arrow = data["line_pry_arrow"];
+		let line_pry_grid = data["line_pry_grid"];
+		let line_pry_grid_stroke = data["line_pry_grid_stroke"];
+		let line_pry_grid_color = data["line_pry_grid_color"];
+		let line_sec_stroke = data["line_sec_stroke"];
+		let line_sec_color = data["line_sec_color"];
+		let line_sec_style = data["line_sec_style"];
+		let line_sec_pin_size = data["line_sec_pin_size"];
+		let line_sec_grid = data["line_sec_grid"];
+		let line_sec_grid_stroke = data["line_sec_grid_stroke"];
+		let line_sec_grid_color = data["line_sec_grid_color"];
 	
 	let w = Canvas_width - Gen_Margin * 2 - line_pry_arrow - 10;
 	let h = Canvas_height - Gen_Margin * 2 - line_pry_arrow - 10;
@@ -1000,7 +1002,8 @@ function RepereGradue(paper, data)
 					stroke: line_pry_grid_color,
 					"stroke-width": line_pry_grid_stroke,
 					"stroke-linecap": "round",
-					"stroke-linejoin": "round"
+					"stroke-linejoin": "round",
+					"stroke-dasharray": line_pry_style,
 				}
 			)
 		}
@@ -1014,7 +1017,8 @@ function RepereGradue(paper, data)
 					stroke: line_pry_grid_color,
 					"stroke-width": line_pry_grid_stroke,
 					"stroke-linecap": "round",
-					"stroke-linejoin": "round"
+					"stroke-linejoin": "round",
+					"stroke-dasharray": line_pry_style,
 				}
 			)
 		}
@@ -1034,7 +1038,8 @@ function RepereGradue(paper, data)
 						stroke: line_sec_grid_color,
 						"stroke-width": line_sec_grid_stroke,
 						"stroke-linecap": "round",
-						"stroke-linejoin": "round"
+						"stroke-linejoin": "round",
+						"stroke-dasharray": line_sec_style,
 					}
 				)
 			}
@@ -1051,7 +1056,8 @@ function RepereGradue(paper, data)
 						stroke: line_sec_grid_color,
 						"stroke-width": line_sec_grid_stroke,
 						"stroke-linecap": "round",
-						"stroke-linejoin": "round"
+						"stroke-linejoin": "round",
+						"stroke-dasharray": line_sec_style,
 					}
 				)
 			}
