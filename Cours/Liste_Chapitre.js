@@ -486,7 +486,7 @@ var cinquieme_base = [
 			id: 9,
 			nom: "Fractions et Proportions",
 			icone: 3,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_9/Cours.html"
 	},
 	{
