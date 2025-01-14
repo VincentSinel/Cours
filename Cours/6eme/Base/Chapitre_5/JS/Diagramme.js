@@ -21,7 +21,7 @@ function CreateDiagrammes()
         "element_id": "circulaire1",
         "width": 400,
         "height": 300,
-        "title": "Effectif en fonction du calibre",
+        "title": "Population en fonction du continent",
         "effectifs": [4722635000, 1426736000, 1037140000, 743556000, 45039000],
         "etiquettes": ["Asie", "Afrique", "Amérique", "Europe", "Océanie"]
     }
