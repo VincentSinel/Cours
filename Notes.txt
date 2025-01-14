@@ -1,3 +1,11 @@
+1 -> Calcul
+2 -> Géométrie
+3 -> Calcul littéral
+4 -> Probabilités
+5 -> Statistiques
+6 -> Grandeur et mesures
+
+
 R = rayon vertical
 C = rayon horizontal
 S = hauteur sommet

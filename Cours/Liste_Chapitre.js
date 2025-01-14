@@ -450,14 +450,14 @@ var cinquieme_base = [
 	{
 			id: 4,
 			nom: "Algorithmes",
-			icone: 2,
+			icone: 5,
 			ready : true,
 			page : "Base/Chapitre_4/Cours.html"
 	},
 	{
 			id: 5,
 			nom: "Introduction au calcul littéral",
-			icone: 1,
+			icone: 3,
 			ready : true,
 			page : "Base/Chapitre_5/Cours.html"
 	},
@@ -471,7 +471,7 @@ var cinquieme_base = [
 	{
 			id: 7,
 			nom: "Statistiques",
-			icone: 2,
+			icone: 5,
 			ready : true,
 			page : "Base/Chapitre_7/Cours.html"
 	},
@@ -485,35 +485,35 @@ var cinquieme_base = [
 	{
 			id: 9,
 			nom: "Fractions et Proportions",
-			icone: 3,
+			icone: 1,
 			ready : true,
 			page : "Base/Chapitre_9/Cours.html"
 	},
 	{
 			id: 10,
 			nom: "Tableaux de Proportionnalité",
-			icone: 2,
+			icone: 5,
 			ready : true,
 			page : "Base/Chapitre_10/Cours.html"
 	},
 	{
 			id: 11,
 			nom: "Additions et Soustractions de Nombres Relatifs",
-			icone: 2,
+			icone: 1,
 			ready : true,
 			page : "Base/Chapitre_11/Cours.html"
 	},
 	{
 			id: 12,
 			nom: "Triangles - Droites remarquables",
-			icone: 1,
+			icone: 2,
 			ready : true,
 			page : "Base/Chapitre_12/Cours.html"
 	},
 	{
 			id: 13,
 			nom: "Probabilités",
-			icone: 3,
+			icone: 4,
 			ready : true,
 			page : "Base/Chapitre_13/Cours.html"
 	},
@@ -527,7 +527,7 @@ var cinquieme_base = [
 	{
 			id: 15,
 			nom: "Egalité et Réduction d'Expressions Littérales",
-			icone: 2,
+			icone: 3,
 			ready : false,
 			page : "Base/Chapitre_15/Cours.html"
 	},
@@ -541,7 +541,7 @@ var cinquieme_base = [
 	{
 			id: 17,
 			nom: "Angles",
-			icone: 5,
+			icone: 2,
 			ready : true,
 			page : "Base/Chapitre_17/Cours.html"
 	},
@@ -555,14 +555,14 @@ var cinquieme_base = [
 	{
 			id: 19,
 			nom: "Solide",
-			icone: 4,
+			icone: 2,
 			ready : true,
 			page : "Base/Chapitre_19/Cours.html"
 	},
 	{
 			id: 20,
 			nom: "Parallélogrammes",
-			icone: 3,
+			icone: 2,
 			ready : false,
 			page : "Base/Chapitre_20/Cours.html"
 	}
