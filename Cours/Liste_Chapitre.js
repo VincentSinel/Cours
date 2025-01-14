@@ -493,7 +493,7 @@ var cinquieme_base = [
 			id: 10,
 			nom: "Tableaux de Proportionnalité",
 			icone: 2,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_10/Cours.html"
 	},
 	{

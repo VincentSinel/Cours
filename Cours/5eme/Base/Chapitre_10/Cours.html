@@ -17,6 +17,13 @@
   <title>Chapitre 10 - Tableaux de Proportionnalité</title>
 
   <style>
+    .tableau_prop{
+      display: flex;
+      align-items: center;
+    }
+    .samewidth td{
+      width: 50px;
+    }
   </style>
 
 </head>
@@ -38,6 +45,195 @@
     Activité Introduction
   </p>
 
+  <div>
+    <div class="flexobject">
+      <div style="flex: 1 1 5cm; max-width: 10cm;">
+        Romain a trouvé un petit boulot pour les vacances, payé à l'heure.<br>
+        Il travaille une première fois 5 heures et gagne 47€.<br>
+        Il travaille ensuite 3 heures et gagne 28,2€.
+      </div>
+      <img src="Images/Intro1.png" style="max-height: 4cm; border-radius: 0.5cm; box-shadow: 2px 2px 5px #000;">
+    </div>
+    <ol>
+      <li>
+        Il effectue ensuite une journée de travail de 8 heures. Combien sera-t-il payé ce jour-là ?
+      </li>
+      <li>
+        Enfin il fait une session de 4 heures. Combien est-t-il payé ?
+      </li>
+      <li>
+        Le salaire minimum horaire est d'environ 9€23. Romain gagne-t-il plus que le salaire minimum ?
+      </li>
+      <li>
+        Combien gagnera-t-il pour une semaine de travail de 35 heures ?
+      </li>
+    </ol>
+  </div>
+
+  <h1>Proportionnalité :</h1>
+    <h2>Définition :</h2>
+      <div class="definition">
+        Deux grandeurs sont <span class="CRed">proportionnelles</span> si les valeurs de l'une s'obtiennent en multipliant les valeurs de l'autre par un même nombre non nul appelé <span class="CRed">coefficient de proportionnalité</span>.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>
+        Une voiture roule à 80km/h, la distance parcourue est alors proportionnelle au temps de trajet :
+      </p>
+      <table style="text-align: center;">
+        <tr>
+          <td></td>
+          <td>× 80</td>
+        </tr>
+        <tr>
+          <td>2h de trajet</td>
+          <td style="padding: 0px 10px;">────►</td>
+          <td>160 km parcouru</td>
+        </tr>
+        <tr style="height: 0.5cm;"></tr>
+        <tr>
+          <td></td>
+          <td>× 80</td>
+        </tr>
+        <tr>
+          <td>5h de trajet</td>
+          <td>────►</td>
+          <td>400 km parcouru</td>
+        </tr>
+      </table>
+      <p>
+        Le tableau de proportionnalité permet de représenter cette proportionnalité.
+      </p>
+      <div class="tableau_prop">
+        <table class="proportionnaltable">
+          <tr>
+            <th>Temps de trajet (h)</th>
+            <td>1</td>
+            <td>2</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th>Distance parcourue (km)</th>
+            <td>80</td>
+            <td>160</td>
+            <td>400</td>
+          </tr>
+        </table>
+        <img src="Images/Coef1.png" style="max-height: 50px;">
+      </div>
+    <h2>Vérification :</h2>
+      <p>
+        Pour vérifier qu'un tableau est bien proportionnel, il faut vérifier que le coefficient multiplicateur de chaque colonne est bien le même.
+      </p>
+      <p class="exemple">Exemple :</p>
+      <table class="proportionnaltable">
+        <tr>
+          <th>Nombre de pas</th>
+          <td>3</td>
+          <td>5</td>
+          <td>10</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <th>Distance (m)</th>
+          <td>1,8</td>
+          <td>2,8</td>
+          <td>6</td>
+          <td>18</td>
+        </tr>
+      </table>
+      <div class="flexobject">
+        <span class="frac">$\frac{1,8}{3}=0,6$</span>
+        <span class="frac">$\frac{2,8}{5}=\textcolor{#e53935}{0,56}$</span>
+        <span class="frac">$\frac{6}{10}=0,6$</span>
+        <span class="frac">$\frac{18}{30}=0,6$</span>
+      </div>
+      <p>
+        L'un des coefficient est différent donc le tableau n'est pas proportionnel.
+      </p>
+  <h1>Calcul d'une quatrième proportionnelle :</h1>
+    <h2>Linéarité :</h2>
+      <div class="definition">
+        Pour calculer une quatrième proportionnelle, on peut utiliser :<br>
+        <ul>
+          <li>L'addition de quantité (ou de colonne)</li>
+          <li>La multiplication de quantité  par un nombre non nul</li>
+        </ul>
+      </div>
+      <p class="exemple">Exemple :</p>
+      Un robinet fuit et la quantité d'eau perdue est proportionnelle au temps qui passe :
+      <table class="proportionnaltable samewidth">
+        <tr>
+          <th>Temps (h)</th>
+          <td>2</td>
+          <td>6</td>
+          <td>7</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <th>Quantité d'eau (L)</th>
+          <td>5</td>
+          <td>?</td>
+          <td>17,5</td>
+          <td>?</td>
+        </tr>
+      </table>
+      <ul>
+        <li>
+          La quantité d'eau perdue en 6h peut être obtenu en multipliant la quantité perdue en 2h par 3 (2 × 3 = 6) : $5\times3=15L$
+        </li>
+        <li>
+          Pour obtenir la quantité d'eau perdu en 9h, on peut ajouter la quantité perdu en 2h et 7h (2 + 7 = 9) : $5 + 17,5 = 22,5 L$
+        </li>
+      </ul>
+    <h2>Passage par l'unité :</h2>
+      <div class="definition">
+        Pour calculer une quatrième proportionnelle, on peut effectuer un passage par l'unité.
+      </div>
+      <p class="exemple">Exemple :</p>
+      Le prix d'une quantité de pomme est proportionnel a la masse de pomme :
+      <table class="proportionnaltable samewidth">
+        <tr>
+          <th>Quantité de pomme (kg)</th>
+          <td>2</td>
+          <td class="CRed"><b>1</b></td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <th>Prix (€)</th>
+          <td>2,8</td>
+          <td class="CRed"><b>1,4</b></td>
+          <td>?</td>
+        </tr>
+      </table>
+      <p>
+        Le prix de 5 kg de pomme peut-être obtenue en passant par le prix de 1kg (passage à l'unité).<br>
+        1kg de pomme coûte $2,8 \div 2 = 1,40$€.<br>
+        5kg de pomme coûte donc $1,40\times5=7$€
+      </p>
+    <h2>Coefficient de proportionnalité :</h2>
+      <div class="definition">
+        Pour calculer une quatrième proportionnelle, on peut calculer le coefficient de proportionnalité.
+      </div>
+      <p class="exemple">Exemple :</p>
+      Le prix du carburant est proportionnel à son volume :
+      <div class="tableau_prop">
+        <table class="proportionnaltable samewidth">
+          <tr>
+            <th>Volume (L)</th>
+            <td>18</td>
+            <td>53</td>
+          </tr>
+          <tr>
+            <th>Prix (€)</th>
+            <td>29,52</td>
+            <td>?</td>
+          </tr>
+        </table>
+        <img src="Images/Coef2.png" style="max-height: 50px;">
+      </div>
+      Pour calculer le coefficient de proportionnalité, on divise une valeur de la ligne du bas par la quantité correspondante dans la ligne du haut.<br>
+      Ici $29,52\div18 = 1,64$.<br>
+      On peut alors trouver le prix de 53 L de carburant : $53\times1,64=86,92$€
   
 
 </body>
