@@ -514,7 +514,7 @@ var cinquieme_base = [
 			id: 13,
 			nom: "Probabilités",
 			icone: 3,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_13/Cours.html"
 	},
 	{
