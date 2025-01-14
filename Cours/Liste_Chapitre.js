@@ -472,7 +472,7 @@ var cinquieme_base = [
 			id: 7,
 			nom: "Statistiques",
 			icone: 2,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_7/Cours.html"
 	},
 	{
