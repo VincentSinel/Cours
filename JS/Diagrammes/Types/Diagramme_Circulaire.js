@@ -91,7 +91,7 @@ class Diagramme_Circulaire
             let c = this.colors[i % this.colors.length];
 			let rect = this.draw.rect(this.legende_square_size, this.legende_square_size)
             rect.move(sx, sy + sdy + dy * i)
-            rect.fill(c + this.transparency)
+            rect.fill({color: c, opacity: this.transparency})
             rect.stroke({color: c, width: this.stroke_width})
 			if (this.etiquettes.length > i)
 			{
