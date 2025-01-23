@@ -12,9 +12,11 @@ class Diagramme_Baton
     margin_right = 10; // Marge en dehors du diagramme
     bar = 5; // nombre de barre de valeur (axe horitontal)
     max_eff = 8; // effectif maximum (axe verticale)
+    pas = -1; // pas de la grille et des graduation verticales
     stroke_width = 1; // epaisseur du tracé
     graduation_size = 6; // taille des graduation
     bar_width = 50; // largeur d'une barre en pourcentage de la place disponible
+    show_value_bar = false; // afficher la valeur en haut des barres
     text_size = 12; // taille du texte
     title = ""; // titre du diagramme
     Haxe_name = ""; // Nom de l'axe horizontal
@@ -24,9 +26,9 @@ class Diagramme_Baton
 	
     // etiquettes des différentes barre
 	etiquettes = ["valeur 1","valeur 2","valeur 3","valeur 4","valeur 5"]; 
-	etiq_offset_x = 0;
+	etiq_offset_x = 0; 
 	etiq_offset_y = 0;
-	etiq_offset_angle = 0;
+	etiq_offset_angle = 0; // Angle en degrés par rapport au centre du texte
     // effectifs des différentes barres
 	effectifs = [5,3,4,7,2];
     // transparence des barres
@@ -45,6 +47,7 @@ class Diagramme_Baton
         if (config.hasOwnProperty("height")) this.Canvas_height = config["height"];
         if (config.hasOwnProperty("bar")) this.bar = config["bar"];
         if (config.hasOwnProperty("max_eff")) this.max_eff = config["max_eff"];
+        if (config.hasOwnProperty("pas")) this.pas = config["pas"];
         if (config.hasOwnProperty("title")) this.title = config["title"];
         if (config.hasOwnProperty("Haxe_name")) this.Haxe_name = config["Haxe_name"];
         if (config.hasOwnProperty("Vaxe_name")) this.Vaxe_name = config["Vaxe_name"];
@@ -62,6 +65,7 @@ class Diagramme_Baton
         if (config.hasOwnProperty("stroke_width")) this.stroke_width = config["stroke_width"];
         if (config.hasOwnProperty("grid_width")) this.grid_width = config["grid_width"];
         if (config.hasOwnProperty("transparency")) this.transparency = config["transparency"];
+        if (config.hasOwnProperty("show_value_bar")) this.show_value_bar = config["show_value_bar"];
         let e = document.getElementById(this.element_id);
         e.style.border = "solid black 1px";
         e.style.width = "fit-content"
@@ -109,7 +113,11 @@ class Diagramme_Baton
     {
 		let grid_style = {width: this.grid_width, color: this.grid_color};
         let dy = h / this.max_eff;
-        let pass = Math.max(1, Math.floor(this.lineh / Math.abs(dy) / 2));
+        let pass = 1;
+        if (this.pas == -1)
+            pass = Math.max(1, Math.floor(this.lineh / Math.abs(dy) / 2));
+        else
+            pass = this.pas
         for (let i = 1; i <= this.max_eff; i++) {
             if (i % pass != 0) continue;
             let y = sy + i * dy;
@@ -122,7 +130,14 @@ class Diagramme_Baton
     Draw_Axes(sx, sy, w, h)
     {
 		var stroke_style = {width: this.stroke_width, color: "black"};
+        let dy = h / this.max_eff;
+        let pass = 1
+        if (this.pas == -1)
+            pass = Math.max(1, Math.floor(this.lineh / Math.abs(dy)));
+        else
+            pass = this.pas
         for (let i = 0; i <= this.max_eff; i++) {
+            if (i % pass != 0) continue;
             let dy = sy + i * h / this.max_eff;
             this.draw.line(sx - this.graduation_size / 2.0, dy, sx + this.graduation_size / 2.0, dy)
             .stroke(stroke_style);
@@ -135,18 +150,23 @@ class Diagramme_Baton
 
     Draw_Text(sx, sy, w, h)
     {
-		var text_style = { fill: 'black', family: 'Bahnschrift', size: this.text_size, anchor:'middle' }
+		var text_style = { fill: 'black', family: 'Bahnschrift', size: this.text_size, anchor:'end' }
         let dy = h / this.max_eff;
-        let pass = Math.max(1, Math.floor(this.lineh / Math.abs(dy)));
+        let pass = 1
+        if (this.pas == -1)
+            pass = Math.max(1, Math.floor(this.lineh / Math.abs(dy)));
+        else
+            pass = this.pas
         for (let i = 0; i <= this.max_eff; i++) {
             if (i % pass == 0)
             {
                 let y = sy + i * dy;
                 let text = this.draw.text(i.toString())
-                text.move(sx - this.lineh / 2.0 - this.graduation_size / 2.0, y - this.lineh / 2.0)
+                text.move(sx - this.graduation_size / 2.0, y - this.lineh / 2.0)
                 text.font(text_style)
             }
         }
+        text_style.anchor = 'middle'
         for (let i = 0; i < this.etiquettes.length; i++) {
             let dx = sx + (i + 0.5) * w / (this.bar);
 			dx += this.etiq_offset_x;
@@ -154,6 +174,16 @@ class Diagramme_Baton
             text.move(dx, sy + this.graduation_size / 2.0 + this.etiq_offset_y)
             text.font(text_style)
 			text.rotate(-this.etiq_offset_angle)
+
+            if (this.show_value_bar)
+            {
+                //TODO
+                let ty = dy * this.effectifs[i]
+                let text = this.draw.text(this.effectifs[i].toString())
+                text.move(dx, sy - this.graduation_size / 2.0 - this.text_size + ty)
+                text.font(text_style)
+                text.rotate(-this.etiq_offset_angle)
+            }
 		}
     }
 
