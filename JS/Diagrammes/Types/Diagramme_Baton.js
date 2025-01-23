@@ -32,7 +32,7 @@ class Diagramme_Baton
     // effectifs des différentes barres
 	effectifs = [5,3,4,7,2];
     // transparence des barres
-	transparency = "AA"; 
+	transparency = 0.7; 
 	//Couleur des barres
 	colors = ["#e60049", "#0bb4ff", "#50e991", "#e6d800", "#9b19f5", "#ffa300", "#dc0ab4", "#b3d4ff", "#00bfa0", "#f0cccc"];
 
@@ -200,7 +200,7 @@ class Diagramme_Baton
 
             let rect = this.draw.rect( (dx - 1) * this.bar_width / 100.0, Math.abs(dy* this.effectifs[i])-0.5)
             rect.move(sx + dx * i+0.5 + offset_x, sy + dy * this.effectifs[i])
-            rect.fill(c + this.transparency)
+            rect.fill({color: c, opacity: this.transparency})
             rect.stroke({color: c, width: this.grid_width})
         }
     }

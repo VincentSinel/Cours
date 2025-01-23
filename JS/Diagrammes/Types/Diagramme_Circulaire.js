@@ -23,7 +23,7 @@ class Diagramme_Circulaire
     // effectifs des différentes sections
 	effectifs = [5,3,4,40,2];
     // transparence des sections
-	transparency = "AA"; 
+	transparency = 0.8; 
 	//Couleur des sections
 	colors = ["#e60049", "#0bb4ff", "#50e991", "#e6d800", "#9b19f5", "#ffa300", "#dc0ab4", "#b3d4ff", "#00bfa0", "#f0cccc"];
 
@@ -132,7 +132,7 @@ class Diagramme_Circulaire
 			txt += xe.toString()+" "+ye.toString()
 			txt += "z";
 			let path = this.draw.path(txt)
-            path.fill(c + this.transparency)
+            path.fill({color: c, opacity: this.transparency})
             path.stroke({color: c, width: this.stroke_width})
 			da += a;
         }

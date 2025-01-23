@@ -23,7 +23,7 @@ class Histogramme
     grid = true;
     grid_color = "#75FFFF"
     effectifs = [5,3,4,7,2];
-    transparency = "AA";
+    transparency = 0.8;
     colors = ["#e60049", "#0bb4ff", "#50e991", "#e6d800", "#9b19f5", "#ffa300", "#dc0ab4", "#b3d4ff", "#00bfa0", "#f0cccc"];
 
     constructor(config)
@@ -164,7 +164,7 @@ class Histogramme
             
             let rect = this.draw.rect( dx - 1, Math.abs(dy* this.effectifs[i])-0.5)
             rect.move(sx + dx * i+0.5, sy + dy * this.effectifs[i])
-            rect.fill(c + this.transparency)
+            rect.fill({color: c, opacity: this.transparency})
             rect.stroke({color: c, width: this.grid_width})
         }
     }
