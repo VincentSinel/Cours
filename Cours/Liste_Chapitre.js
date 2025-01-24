@@ -843,7 +843,13 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre D2",
 		nom: "Représentations graphiques",
 		icone: 10,
-		ready : false,
+		download: {
+			pdf: "/Cours/5eme/RogerVailland/Chapitre_D2/Documents/D2 - Représentations graphiques (Complet).pdf",
+			docx: "/Cours/5eme/RogerVailland/Chapitre_D2/Documents/D2 - Représentations graphiques (Complet).docx",
+			pdf_trou: "/Cours/5eme/RogerVailland/Chapitre_D2/Documents/D2 - Représentations graphiques (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_D2/Documents/D2 - Représentations graphiques (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_D2/Cours.html",
 	},
 	{

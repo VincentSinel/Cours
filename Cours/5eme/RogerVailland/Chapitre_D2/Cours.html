@@ -6,6 +6,10 @@
   <meta http-equiv="content-language" content="fr">
   <link rel="stylesheet" href="/CSS/Cours.css"> 
 
+  <script src="/JS/Svg.js/svg.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+	<script src="/JS/Diagrammes/Diagramme_Holder.js"></script> 
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
     MathJax = {
@@ -14,7 +18,7 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>E1 - Généralité sur les triangles</title>
+  <title>D2 - Représentations graphiques</title>
 
   <style>
   </style>
@@ -26,10 +30,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        E1
+        D2
       </td>
       <td id="ChapitreNom">
-        - Nombres Relatifs (Partie 1)
+        - Représentations graphiques
       </td>
     </tr>
   </table>
@@ -37,6 +41,86 @@
   <p class="exemple">
     Activité Introduction
   </p>
+  
+  <p>
+    Ce diagramme à barres représente la puissance électrique en mégawatt (MW) produite par de nouvelles éoliennes chaque année en France.
+  </p>
+
+  <div id="baton2" style="flex: 1 1 5cm;"></div>
+  
+  <ol>
+    <li>En quelle année la puissance produite par les nouvelles éoliennes a-t-elle été de 822 MW ?</li>
+    <li>Quelle a été la puissance produite par les éoliennes installées en 2014 ?</li>
+    <li>En quelle année la puissance produite a-t-elle été la plus grande ?</li>
+  </ol>
+
+  <h1>Diagramme en barres - Diagramme à bâtons :</h1>
+    <div class="definition">
+      Un <span class="CRed">diagramme en barres</span> (ou en bâtons) est composé de barre de même largeur et de hauteur proportionnelle aux effectifs qu'ils représentent.
+    </div>
+    <p class="exemple">Exemple :</p>
+    <div class="flexobject">
+      <table class="proportionnaltable">
+        <tr>
+          <th style="width: 200px;">Nombre de frères ou soeurs</th>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>plus de 3</td>
+        </tr>
+        <tr>
+          <th>Effectif</th>
+          <td>5</td>
+          <td>9</td>
+          <td>10</td>
+          <td>3</td>
+          <td>2</td>
+        </tr>
+      </table>
+      <div id="baton1" style="flex: 1 1 5cm;"></div>
+    </div>
+<h1>Diagramme circulaire :</h1>
+    <div class="definition">
+      Un <span class="CRed">diagramme en circulaires</span> est composé d'un disque découpé en secteurs dont l'angle est proportionnel à l'effectif qu'il représente.
+    </div>
+    <p class="exemple">Exemple :</p>
+    <div class="flexobject">
+      <div style="flex: 1 1 5cm;">
+        Diagramme circulaire de la population mondiale par continent en 2022.<br>
+        Ici on peut voir que c'est l'Asie qui regroupe la plus grande partie de la population mondiale.
+        <table class="proportionnaltable">
+          <tr>
+            <th>Continent</th>
+            <td>Asie</td>
+            <td>Afrique</td>
+            <td>Amérique</td>
+            <td>Europe</td>
+            <td>Océanie</td>
+            <th>Total</th>
+          </tr>
+          <tr>
+            <th>Population</th>
+            <td>4&#8239;722&#8239;635&#8239;000</td>
+            <td>1&#8239;426&#8239;736&#8239;000</td>
+            <td>1&#8239;037&#8239;140&#8239;000</td>
+            <td>743&#8239;556&#8239;000</td>
+            <td>45&#8239;039&#8239;000</td>
+            <td>7&#8239;975&#8239;106&#8239;000</td>
+          </tr>
+          <tr>
+            <th>Angle (°)</th>
+            <td>213°</td>
+            <td>64°</td>
+            <td>47°</td>
+            <td>34°</td>
+            <td>2°</td>
+            <td><b>360°</b></td>
+          </tr>
+        </table>
+      </div>
+      <div id="circulaire1" style="flex: 1 1 5cm;"></div>
+    </div>
 
   
 </body>
