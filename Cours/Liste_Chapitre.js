@@ -1475,8 +1475,8 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre E1",
 		nom: "Droites",
 		download: {
-			pdf: "/Cours/6eme/RogerVailland/Chapitre_E1/Documents/Cours.pdf",
-			docx: "/Cours/6eme/RogerVailland/Chapitre_E1/Documents/Cours.docx",
+			pdf: "/Cours/6eme/RogerVailland/Chapitre_E1/Documents/E1 - Droites (Complet).pdf",
+			docx: "/Cours/6eme/RogerVailland/Chapitre_E1/Documents/E1 - Droites (Complet).docx",
 		},
 		icone: 11,
 		ready : true,
