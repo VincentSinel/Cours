@@ -100,7 +100,7 @@ class Diagramme_Baton
         text1.move(ex1, sy + this.graduation_size / 2.0 + this.lineh)
         text1.font({ fill: 'black', family: 'Bahnschrift', size: this.text_size, anchor:'end' })
         let text2 = this.draw.text(this.Vaxe_name)
-        text2.move(this.margin_up, this.margin_up + this.lineh - this.lineh /4)
+        text2.move(this.margin_left, this.margin_up + this.lineh - this.lineh /4)
         text2.font({ fill: 'black', family: 'Bahnschrift', size: this.text_size, anchor:'start' })
         let text3 = this.draw.text(this.title)
         text3.move(this.margin_left + w / 2, this.margin_up - this.lineh /4)
@@ -177,12 +177,10 @@ class Diagramme_Baton
 
             if (this.show_value_bar)
             {
-                //TODO
                 let ty = dy * this.effectifs[i]
                 let text = this.draw.text(this.effectifs[i].toString())
                 text.move(dx, sy - this.graduation_size / 2.0 - this.text_size + ty)
                 text.font(text_style)
-                text.rotate(-this.etiq_offset_angle)
             }
 		}
     }
