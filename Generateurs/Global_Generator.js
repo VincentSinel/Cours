@@ -2941,6 +2941,491 @@ function Fraction(paper, data)
 		txtstyle: {exist: frac_txt, type: frac_txt_type, size: frac_txt_size}});
 }
 
+function Diagramme_Baton(paper, data)
+{
+	let Canvas_width = data["Canvas_width"];
+	let Canvas_height = data["Canvas_height"];
+	let Gen_Margin = data["Gen_Margin"];
+	let objects = data["objects"];
+
+	let margin_up = 10;
+	let margin_down = 10;
+	let margin_left = 10;
+	let margin_right = 10;
+	let max_eff = data["diag_baton_maxeff"];
+	let pas = data["diag_baton_pas"];
+	let etiquettes = data["bar_names"]; 
+	let effectifs = data["bar_effectifs"];
+	let colors = data["bar_colors"];
+	let bar = etiquettes.length;
+	let stroke_width = data["diag_baton_stroke"];
+	let graduation_size = data["diag_baton_grad_size"];
+	let bar_width = data["diag_baton_bar_width"];
+	let show_value_bar = data["diag_baton_bar_value"];
+	let text_size = data["diag_baton_txt_size"];
+	let title = data["diag_baton_title"];
+	let Haxe_name = data["diag_baton_haxe_name"];
+	let Vaxe_name = data["diag_baton_vaxe_name"];
+	let grid = data["diag_baton_grid"];
+	let grid_color = data["diag_baton_gridcolor"]
+	let etiq_offset_x = data["diag_baton_offset_x"]; 
+	let etiq_offset_y = data["diag_baton_offset_y"];
+	let etiq_offset_angle = data["diag_baton_offset_angle"];
+	let transparency = data["diag_baton_fill_opacity"]; 
+
+	
+	function draw_text(text, x, y, anchor = 'middle', angle = 0)
+	{
+		let element = paper.text( x, y, text);
+		element.attr(
+			{
+				fill: "white",
+				stroke: "white",
+				"stroke-width": 5,
+				"font-size": text_size,
+				"text-anchor": anchor,
+				"font-weight": "bold"
+			})
+		element.rotate(angle)
+		element = paper.text( x, y, text);
+		element.attr(
+			{
+				fill: "black",
+				"font-size": text_size,
+				"text-anchor": anchor,
+			})
+		element.rotate(angle)
+	}
+	
+	paper.setSize(Canvas_width, Canvas_height);
+	paper.clear();
+
+	let dw = Canvas_width - margin_left - margin_right - Gen_Margin * 2;
+	let dh = Canvas_height - margin_up - margin_down - Gen_Margin * 2;
+
+	let lineh = Math.floor(text_size * 96.0/72.0);
+
+	let sx = lineh + margin_left + Gen_Margin;
+	let sy = margin_up + dh - lineh + Gen_Margin;
+
+	let ex1 = dw + margin_left + Gen_Margin;
+	let ey2 = margin_up + lineh * 2 + Gen_Margin;
+
+	let w = ex1 - sx
+	let h = ey2 - sy
+	if (grid)
+	{
+		let dy = h / max_eff;
+		let pass = 1;
+		if (pas == -1)
+				pass = Math.max(1, Math.floor(lineh / Math.abs(dy) / 2));
+		else
+				pass = pas
+		for (let i = 1; i <= max_eff; i++) 
+		{
+			if (i % pass != 0) continue;
+			let y = sy + i * dy;
+
+			let element = draw_line(paper,sx, y, sx + w, y);
+			element.attr(
+				{
+					stroke: grid_color,
+					"stroke-width": stroke_width,
+					"stroke-linecap": "round",
+					"stroke-linejoin": "round",
+				})
+		}
+	}
+
+	{ // Draw diagramme
+		let dx = w / (bar);
+		let dy = h / max_eff;
+		let offset_x = (dx - 1) * (1.0 - bar_width / 100.0) / 2.0
+		for (let i = 0; i < effectifs.length; i++) {
+				if (effectifs[i] == 0) continue;
+
+				let c = colors[i % colors.length];
+
+
+				let rect = paper.rect(
+					sx + dx * i+0.5 + offset_x, 
+					sy + dy * effectifs[i], 
+					(dx - 1) * bar_width / 100.0, 
+					Math.abs(dy* effectifs[i])-0.5);
+				rect.attr({
+					fill: c,
+					"fill-opacity": transparency,
+					stroke: c,
+					"stroke-width": stroke_width,
+					"stroke-linecap": "round",
+					"stroke-linejoin": "round",
+				})
+		}
+	}
+
+	{ // Draw axes
+		var stroke_style = {
+			stroke: "black",
+			"stroke-width": stroke_width,
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round",
+		};
+		let dy = h / max_eff;
+		let pass = 1
+		if (pas == -1)
+				pass = Math.max(1, Math.floor(lineh / Math.abs(dy)));
+		else
+				pass = pas
+		for (let i = 0; i <= max_eff; i++) {
+				if (i % pass != 0) continue;
+				let dy = sy + i * h / max_eff;
+				
+				let element = draw_line(paper,sx - graduation_size / 2.0, dy, sx + graduation_size / 2.0, dy);
+				element.attr(stroke_style)
+		}
+		let element = draw_line(paper,sx, sy, sx + w, sy);
+		element.attr(stroke_style)
+		element = draw_line(paper,sx, sy, sx, sy + h);
+		element.attr(stroke_style)
+	}
+
+	{ // Draw Text
+		let dy = h / max_eff;
+		let pass = 1
+		if (pas == -1)
+				pass = Math.max(1, Math.floor(lineh / Math.abs(dy)));
+		else
+				pass = pas
+		for (let i = 0; i <= max_eff; i++) {
+				if (i % pass == 0)
+				{
+						let y = sy + i * dy;
+						draw_text(i.toString(), sx - graduation_size / 2.0 - 2, y - lineh / 2.0 + lineh / 2, 'end')
+				}
+		}
+		for (let i = 0; i < etiquettes.length; i++) 
+		{
+			let dx = sx + (i + 0.5) * w / (bar);
+			dx += etiq_offset_x;
+			draw_text(etiquettes[i], dx, sy + (graduation_size + lineh) / 2.0 + etiq_offset_y, 'middle', -etiq_offset_angle)
+
+			if (show_value_bar)
+			{
+					let ty = dy * effectifs[i]
+					draw_text(effectifs[i].toString(), dx, sy - graduation_size / 2.0 - lineh + ty)
+			}
+		}
+	}
+
+			
+	draw_text(Haxe_name, ex1, sy + graduation_size / 2.0 + lineh, 'end')
+	draw_text(Vaxe_name, margin_left + Gen_Margin, margin_up + lineh - lineh /4 + Gen_Margin, 'start')
+	draw_text(title, margin_left + w / 2 + Gen_Margin, margin_up - lineh /4 + Gen_Margin, 'middle')
+}
+
+function Diagramme_Cartesien(paper, data)
+{
+	let Canvas_width = data["Canvas_width"];
+	let Canvas_height = data["Canvas_height"];
+	let Gen_Margin = data["Gen_Margin"];
+	let objects = data["objects"];
+
+	let margin_up = 10;
+	let margin_down = 10;
+	let margin_left = 10;
+	let margin_right = 10;
+	var Hstart = data["diag_carte_Xstart"]
+	var Hpas = data["diag_carte_Xpas"]
+	var Hsection = data["diag_carte_Xsec"]
+	var Hsubsection = data["diag_carte_Xsubsec"]
+	var Vstart = data["diag_carte_Ystart"]
+	var Vpas = data["diag_carte_Ypas"]
+	var Vsection = data["diag_carte_Ysec"]
+	var Vsubsection = data["diag_carte_Ysubsec"]
+  var grid = data["diag_carte_grid"]
+  var grid_color = data["diag_carte_gridcolor"]
+  var grid_color_second = data["diag_carte_gridcolor"]
+  var text_size = data["diag_carte_txt_size"]
+  var title = data["diag_carte_title"]
+  var Haxe_name = data["diag_carte_haxe_name"]
+  var Vaxe_name = data["diag_carte_vaxe_name"]
+  var stroke_width = data["diag_carte_stroke"]
+	var grid_width = data["diag_carte_grid_width"]
+  var graduation_size = data["diag_carte_grad_size"]
+  var point_size = data["diag_carte_point_size"]
+	var stroke_color = data["diag_carte_strokecolor"]
+	var points = data["points"]
+
+	function draw_text(text, x, y, anchor = 'middle', angle = 0)
+	{
+		let element = paper.text( x, y, text);
+		element.attr(
+			{
+				fill: "white",
+				stroke: "white",
+				"stroke-width": 5,
+				"font-size": text_size,
+				"text-anchor": anchor,
+				"font-weight": "bold"
+			})
+		element.rotate(angle)
+		element = paper.text( x, y, text);
+		element.attr(
+			{
+				fill: "black",
+				"font-size": text_size,
+				"text-anchor": anchor,
+			})
+		element.rotate(angle)
+	}
+	
+	paper.setSize(Canvas_width, Canvas_height);
+	paper.clear(); 
+
+	let dw = Canvas_width - margin_left - margin_right - Gen_Margin * 2;
+	let dh = Canvas_height - margin_up - margin_down - Gen_Margin * 2;
+
+	let lineh = Math.floor(text_size * 96.0/72.0);
+
+	let sx = lineh + margin_left + Gen_Margin;
+	let sy = margin_up + dh - lineh + Gen_Margin;
+
+	let ex1 = dw + margin_left + Gen_Margin;
+	let ey2 = margin_up + lineh * 2 + Gen_Margin;
+
+	let w = ex1 - sx
+	let h = ey2 - sy
+
+	if (grid)
+	{
+		let grid_style = { stroke: grid_color, "stroke-width": grid_width, "stroke-linecap": "round", "stroke-linejoin": "round",}
+		let grid_style2 = { stroke: grid_color, "stroke-width": grid_width, "stroke-opacity": 0.5, "stroke-linecap": "round", "stroke-linejoin": "round",}
+		
+		let dx = w / (Hsection * Hsubsection);
+		let dy = h / (Vsection * Vsubsection);
+		for (let i = 1; i <= Hsection * Hsubsection; i++)
+		{
+			let x = sx + i * dx;
+			if (i % Hsubsection == 0)
+				draw_line(paper, x, sy, x, sy + h).attr(grid_style);
+			else
+				draw_line(paper, x, sy, x, sy + h).attr(grid_style2);
+		}
+		for (let i = 1; i <= Vsection * Vsubsection; i++) 
+		{
+			let y = sy + i * dy;
+			if (i % Vsubsection == 0)
+				draw_line(paper, sx, y, sx + w, y).attr(grid_style);
+			else
+				draw_line(paper, sx, y, sx + w, y).attr(grid_style2);
+		}
+	}
+
+	{ // Draw diagramme
+		let _dx = w / (Hsection * Hpas);
+		let _dy = h / (Vsection * Vpas);
+
+		if (points.length == 0) return;
+
+		let stroke_style = { stroke: stroke_color, "stroke-width": stroke_width, "stroke-linecap": "round", "stroke-linejoin": "round",}
+
+		let ox; let oy;
+    for (let i = 0; i < points.length; i++) 
+		{
+			let x = sx + _dx * (points[i][0] - Hstart);
+			let y = sy + _dy * (points[i][1] - Vstart);
+			
+			draw_line(paper, x - point_size / 2.0, y, x + point_size / 2.0, y).attr(stroke_style);
+			draw_line(paper, x, y - point_size / 2.0, x, y + point_size / 2.0).attr(stroke_style);
+			
+			if (i > 0)
+				draw_line(paper, ox, oy, x, y).attr(stroke_style);
+
+			ox = x; oy = y;
+		}
+	}
+
+	{ // Draw axes
+		
+		let stroke_style = { stroke: "black", "stroke-width": stroke_width, "stroke-linecap": "round", "stroke-linejoin": "round",}
+		let _dx = w / Hsection;
+		let _dy = h / Vsection;
+		for (let i = 0; i <= Hsection; i++)
+		{
+				let x = sx + i * _dx;
+				draw_line(paper, x, sy - graduation_size / 2.0, x, sy + graduation_size / 2.0).attr(stroke_style);
+		}
+		for (let i = 0; i <= Vsection; i++) {
+				let y = sy + i * _dy;
+				draw_line(paper, sx - graduation_size / 2.0, y, sx + graduation_size / 2.0, y).attr(stroke_style);
+		}
+		draw_line(paper, sx, sy, sx + w, sy).attr(stroke_style);
+		draw_line(paper, sx, sy, sx, sy + h).attr(stroke_style);
+	}
+
+	{ // Draw Text
+		var text_style = { fill: 'black', family: 'Bahnschrift', size: this.text_size, anchor:'middle' }
+		let _dx = w / Hsection;
+		let _dy = h / Vsection;
+		let pass = Math.max(1, Math.floor(lineh / Math.abs(_dy)));
+		for (let i = 0; i <= Hsection; i++) {
+				let x = sx + i * _dx;
+				draw_text((Hstart + Hpas * i).toString(), x, sy + graduation_size / 2.0 + lineh / 2, 'middle')
+		}
+		for (let i = 0; i <= Vsection; i++) {
+				if (i % pass == 0)
+				{
+						let y = sy + i * _dy;
+						draw_text((Vstart + Vpas * i).toString(), sx - graduation_size / 2.0 - 2, y, 'end')
+				}
+		}
+	}
+			
+	draw_text(Haxe_name, ex1, sy + graduation_size / 2.0 + lineh, 'end')
+	draw_text(Vaxe_name, margin_left + Gen_Margin, margin_up + lineh - lineh /4 + Gen_Margin, 'start')
+	draw_text(title, margin_left + w / 2 + Gen_Margin, margin_up - lineh /4 + Gen_Margin, 'middle')
+}
+
+function Diagramme_Circulaire(paper, data)
+{
+	let Canvas_width = data["Canvas_width"];
+	let Canvas_height = data["Canvas_height"];
+	let Gen_Margin = data["Gen_Margin"];
+	let objects = data["objects"];
+
+	let margin_up = 10; // Marge en dehors du diagramme
+  let margin_down = 10; // Marge en dehors du diagramme
+  let margin_left = 10; // Marge en dehors du diagramme
+  let margin_right = 10; // Marge en dehors du diagramme
+  let diag_width = data["diag_circu_width"];
+  let diag_angle = data["diag_circu_offset"];
+  let legende_space = data["diag_circu_legende_space"];
+  let legende_square_size = data["diag_circu_legende_size"];
+  let stroke_width = data["diag_circu_stroke"];
+  let text_size = data["diag_circu_txt_size"];
+	let transparency = data["diag_circu_fill_opacity"];
+  let title = data["diag_circu_title"];
+
+	let etiquettes = data["sec_names"];
+	let effectifs = data["sec_effectifs"];
+	let colors = data["sec_colors"];
+
+	
+	function draw_text(text, x, y, anchor = 'middle', angle = 0)
+	{
+		let element = paper.text( x, y, text);
+		element.attr(
+			{
+				fill: "white",
+				stroke: "white",
+				"stroke-width": 5,
+				"font-size": text_size,
+				"text-anchor": anchor,
+				"font-weight": "bold"
+			})
+		element.rotate(angle)
+		element = paper.text( x, y, text);
+		element.attr(
+			{
+				fill: "black",
+				"font-size": text_size,
+				"text-anchor": anchor,
+			})
+		element.rotate(angle)
+	}
+	
+	paper.setSize(Canvas_width, Canvas_height);
+	paper.clear();
+
+	let dw = Canvas_width - margin_left - margin_right - Gen_Margin * 2;
+	let dh = Canvas_height - margin_up - margin_down - Gen_Margin * 2;
+
+	let lineh = Math.floor(text_size * 96.0/72.0);
+
+	let sx = margin_left + Gen_Margin;
+	let sy = margin_up + lineh + Gen_Margin;
+
+	let w = (dw - legende_space) * diag_width / 100.0;
+	let h = dh - lineh;
+
+	let tw = (dw - legende_space) * (1.0 - diag_width / 100.0);
+	let tsx = margin_left + w + legende_space;
+
+	{
+		let radius = Math.min(w / 2.0, h / 2.0);
+		let effectif_total = 0.0;
+		for (let i = 0; i < effectifs.length; i++) {
+			effectif_total += effectifs[i];
+    }
+		let da = diag_angle;
+		let cx = sx + w / 2.0
+		let cy = sy + h / 2.0
+		if (effectifs.length > 1)
+		{
+			let startpos = "M"+ cx.toString() + " " + cy.toString() + "L"
+			for (let i = 0; i < effectifs.length; i++) 
+			{
+				if (effectifs[i] == 0) continue;
+				let a = 360.0 * effectifs[i] / effectif_total;
+				let c = colors[i % colors.length];
+	
+				let xs = cx + radius * Math.cos(da / 180.0 * Math.PI);
+				let ys = cy + radius * Math.sin(da / 180.0 * Math.PI);
+	
+				let xe = cx + radius * Math.cos((da + a) / 180.0 * Math.PI);
+				let ye = cy + radius * Math.sin((da + a) / 180.0 * Math.PI);
+	
+				let txt = startpos + xs.toString()+" "+ys.toString();
+				let big = "0"
+				if (a > 180.0) big = "1"
+				txt += "A"+radius.toString()+" "+radius.toString() + " 0 " + big + " 1 "
+				txt += xe.toString()+" "+ye.toString()
+				txt += "z";
+				
+				let path = paper.path(txt);
+				path.attr({"fill": c, "fill-opacity": transparency, "stroke": c, "stroke-width": stroke_width})
+				da += a;
+			}
+		}
+		else
+		{
+			paper.ellipse(cx, cy, radius, radius).attr({"fill": colors[0], "fill-opacity": transparency, "stroke": colors[0], "stroke-width": stroke_width});
+		}
+	}
+
+	{
+    let dy = h / effectifs.length;
+		let sdy = (dy - legende_square_size) / 2.0;
+    for (let i = 0; i < effectifs.length; i++) 
+		{
+      let c = colors[i % colors.length];
+			let rect = paper.rect(
+				tsx, sy + sdy + dy * i,
+				legende_square_size, legende_square_size);
+			rect.attr({
+				fill: c,
+				"fill-opacity": transparency,
+				stroke: c,
+				"stroke-width": stroke_width,
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+			})
+			if (etiquettes.length > i)
+			{
+				let y = sy + (i + 0.5) * dy;
+				draw_text(etiquettes[i], tsx + legende_square_size + 5, y, 'start')
+			}
+    }
+	}
+
+	draw_text(title, margin_left + dw / 2 + Gen_Margin, margin_up - lineh /4 + Gen_Margin, 'middle')
+}
+
+function Diagramme_Histogramme(paper, data)
+{
+	
+}
+
 }
 
 { //TOOLS

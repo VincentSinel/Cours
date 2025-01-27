@@ -5,11 +5,17 @@ var Canvas_height = 500;
 var Gen_Margin = 5;
 var Gen_font = "Arial";
 var paper = null;
+var colors = ["#e60049", "#0bb4ff", "#50e991", "#e6d800", "#9b19f5", "#ffa300", "#dc0ab4", "#b3d4ff", "#00bfa0", "#f0cccc"]
 var objects = [
 ];
 window.onload = function(){
 	paper = Raphael("preview", Canvas_width, Canvas_height);
+
+	document.getElementById("gen_type").selectedIndex = 5;
+	document.getElementById("diag_type").selectedIndex = 2;
+
 	menu_solid_changed()
+	menu_diag_changed()
 	menu_changed()
 	Regenerate()
 }
@@ -47,6 +53,8 @@ function Regenerate()
 		Draw_Solide(data);
 	if (type == 4)
 		Draw_Fraction(data);
+	if (type == 5)
+		Draw_Diagramme(data);
 }
 
 function Draw_RepereGradue(data)
@@ -369,7 +377,313 @@ function Draw_Fraction(data)
 	Fraction(paper, data)
 }
 
+function Draw_Diagramme(data)
+{
+	let type = document.getElementById("diag_type").selectedIndex;
+	if(type == 0) // Diagramme baton
+	{
+		data["diag_baton_maxeff"] = document.getElementById("diag_baton_maxeff").valueAsNumber;
+		data["diag_baton_pas"] = document.getElementById("diag_baton_pas").valueAsNumber;
 
+		let bar_names = [];
+		let bar_effectifs = [];
+		let bar_colors = [];
+
+		var barres = document.getElementById("diag_baton_listbarre");
+		let list = barres.getElementsByTagName("div")
+		for (var i = 0; i < list.length; i++) 
+		{
+			if (list[i].id != "")
+			{
+				bar_names.push(document.getElementById(list[i].id + "_name").value)
+				bar_effectifs.push(document.getElementById(list[i].id + "_eff").valueAsNumber)
+				bar_colors.push(document.getElementById(list[i].id + "_color").value)
+			}
+		}
+		data["bar_names"] = bar_names;
+		data["bar_effectifs"] = bar_effectifs;
+		data["bar_colors"] = bar_colors;
+
+		data["diag_baton_stroke"] = document.getElementById("diag_baton_stroke").valueAsNumber;
+		data["diag_baton_grid"] = document.getElementById("diag_baton_grid").checked;
+		data["diag_baton_gridcolor"] = document.getElementById("diag_baton_gridcolor").value;
+		data["diag_baton_bar_width"] = document.getElementById("diag_baton_bar_width").valueAsNumber;
+		data["diag_baton_grad_size"] = document.getElementById("diag_baton_grad_size").valueAsNumber;
+		data["diag_baton_fill_opacity"] = document.getElementById("diag_baton_fill_opacity").valueAsNumber;
+		data["diag_baton_title"] = document.getElementById("diag_baton_title").value;
+		data["diag_baton_haxe_name"] = document.getElementById("diag_baton_haxe_name").value;
+		data["diag_baton_vaxe_name"] = document.getElementById("diag_baton_vaxe_name").value;
+		data["diag_baton_txt_size"] = document.getElementById("diag_baton_txt_size").valueAsNumber;
+		data["diag_baton_bar_value"] = document.getElementById("diag_baton_bar_value").checked;
+		data["diag_baton_offset_x"] = document.getElementById("diag_baton_offset_x").valueAsNumber;
+		data["diag_baton_offset_y"] = document.getElementById("diag_baton_offset_y").valueAsNumber;
+		data["diag_baton_offset_angle"] = document.getElementById("diag_baton_offset_angle").valueAsNumber;
+
+		Diagramme_Baton(paper, data);
+		return;
+	}
+	else if (type == 1) // Diagramme cartesien
+	{
+		data["diag_carte_Xstart"] = document.getElementById("diag_carte_Xstart").valueAsNumber;
+		data["diag_carte_Xpas"] = document.getElementById("diag_carte_Xpas").valueAsNumber;
+		data["diag_carte_Xsec"] = document.getElementById("diag_carte_Xsec").valueAsNumber;
+		data["diag_carte_Xsubsec"] = document.getElementById("diag_carte_Xsubsec").valueAsNumber;
+		data["diag_carte_Ystart"] = document.getElementById("diag_carte_Ystart").valueAsNumber;
+		data["diag_carte_Ypas"] = document.getElementById("diag_carte_Ypas").valueAsNumber;
+		data["diag_carte_Ysec"] = document.getElementById("diag_carte_Ysec").valueAsNumber;
+		data["diag_carte_Ysubsec"] = document.getElementById("diag_carte_Ysubsec").valueAsNumber;
+
+		let points = [];
+
+		var barres = document.getElementById("diag_carte_listpoint");
+		let list = barres.getElementsByTagName("div")
+		for (var i = 0; i < list.length; i++) 
+		{
+			if (list[i].id != "")
+			{
+				points.push([
+					document.getElementById(list[i].id + "_x").valueAsNumber,
+					document.getElementById(list[i].id + "_y").valueAsNumber])
+			}
+		}
+		data["points"] = points;
+
+		data["diag_carte_stroke"] = document.getElementById("diag_carte_stroke").valueAsNumber;
+		data["diag_carte_point_size"] = document.getElementById("diag_carte_point_size").valueAsNumber;
+		data["diag_carte_grad_size"] = document.getElementById("diag_carte_grad_size").valueAsNumber;
+		data["diag_carte_strokecolor"] = document.getElementById("diag_carte_strokecolor").value;
+		data["diag_carte_grid"] = document.getElementById("diag_carte_grid").checked;
+		data["diag_carte_grid_width"] = document.getElementById("diag_carte_grid_width").valueAsNumber;
+		data["diag_carte_gridcolor"] = document.getElementById("diag_carte_gridcolor").value;
+		data["diag_carte_title"] = document.getElementById("diag_carte_title").value;
+		data["diag_carte_haxe_name"] = document.getElementById("diag_carte_haxe_name").value;
+		data["diag_carte_vaxe_name"] = document.getElementById("diag_carte_vaxe_name").value;
+		data["diag_carte_txt_size"] = document.getElementById("diag_carte_txt_size").valueAsNumber;
+
+		Diagramme_Cartesien(paper, data);
+		return;
+	}
+	else if (type == 2) // Diagramme circulaire
+	{
+		let sec_names = [];
+		let sec_effectifs = [];
+		let sec_colors = [];
+
+		var sections = document.getElementById("diag_circu_listsection");
+		let list = sections.getElementsByTagName("div")
+		for (var i = 0; i < list.length; i++) 
+		{
+			if (list[i].id != "")
+			{
+				sec_names.push(document.getElementById(list[i].id + "_name").value)
+				sec_effectifs.push(document.getElementById(list[i].id + "_eff").valueAsNumber)
+				sec_colors.push(document.getElementById(list[i].id + "_color").value)
+			}
+		}
+		data["sec_names"] = sec_names;
+		data["sec_effectifs"] = sec_effectifs;
+		data["sec_colors"] = sec_colors;
+
+		data["diag_circu_stroke"] = document.getElementById("diag_circu_stroke").valueAsNumber;
+		data["diag_circu_width"] = document.getElementById("diag_circu_width").valueAsNumber;
+		data["diag_circu_offset"] = document.getElementById("diag_circu_offset").valueAsNumber;
+		data["diag_circu_legende_space"] = document.getElementById("diag_circu_legende_space").valueAsNumber;
+		data["diag_circu_legende_size"] = document.getElementById("diag_circu_legende_size").valueAsNumber;
+		data["diag_circu_fill_opacity"] = document.getElementById("diag_circu_fill_opacity").valueAsNumber;
+		data["diag_circu_title"] = document.getElementById("diag_circu_title").value;
+		data["diag_circu_txt_size"] = document.getElementById("diag_circu_txt_size").valueAsNumber;
+
+		Diagramme_Circulaire(paper, data);
+		return;
+	}
+	else if (type == 3) // Histogramme
+	{
+		data["sol_pyrami_L"] = document.getElementById("sol_pyrami_L").valueAsNumber;
+		data["sol_pyrami_H"] = document.getElementById("sol_pyrami_H").valueAsNumber;
+		data["sol_pyrami_P"] = document.getElementById("sol_pyrami_P").valueAsNumber;
+		data["sol_pyrami_F"] = document.getElementById("sol_pyrami_F").valueAsNumber;
+		data["sol_pyrami_A"] = document.getElementById("sol_pyrami_A").valueAsNumber;
+		data["sol_pyrami_line_stroke"] = document.getElementById("sol_pyrami_line_stroke").valueAsNumber;
+		data["sol_pyrami_line_color"] = document.getElementById("sol_pyrami_line_color").value;
+		data["sol_pyrami_show_hide"] = document.getElementById("sol_pyrami_show_hide").checked;
+		data["sol_pyrami_hide_style"] = document.getElementById("sol_pyrami_hide_style").value;
+		data["sol_pyrami_hide_color"] = document.getElementById("sol_pyrami_hide_color").value;
+		data["sol_pyrami_hide_stroke"] = document.getElementById("sol_pyrami_hide_stroke").value;
+		data["sol_pyrami_fill"] = document.getElementById("sol_pyrami_fill").checked;
+		data["sol_pyrami_fill_shadow"] = document.getElementById("sol_pyrami_fill_shadow").checked;
+		data["sol_pyrami_fill_color"] = document.getElementById("sol_pyrami_fill_color").value;
+		data["sol_pyrami_fill_color_alpha"] = document.getElementById("sol_pyrami_fill_color_alpha").value;
+		data["sol_pyrami_fill_base"] = document.getElementById("sol_pyrami_fill_base").checked;
+		data["sol_pyrami_base_full"] = document.getElementById("sol_pyrami_base_full").checked;
+		data["sol_pyrami_base_stroke"] = document.getElementById("sol_pyrami_base_stroke").value;
+		data["sol_pyrami_base_color"] = document.getElementById("sol_pyrami_base_color").value;
+		data["sol_pyrami_base_style"] = document.getElementById("sol_pyrami_base_style").value;
+		data["sol_pyrami_h"] = document.getElementById("sol_pyrami_h").checked;
+		data["sol_pyrami_h_stroke"] = document.getElementById("sol_pyrami_h_stroke").value;
+		data["sol_pyrami_h_color"] = document.getElementById("sol_pyrami_h_color").value;
+		data["sol_pyrami_h_style"] = document.getElementById("sol_pyrami_h_style").value;
+		data["sol_pyrami_ag"] = document.getElementById("sol_pyrami_ag").checked;
+		data["sol_pyrami_ag_stroke"] = document.getElementById("sol_pyrami_ag_stroke").value;
+		data["sol_pyrami_ag_full"] = document.getElementById("sol_pyrami_ag_full").checked;
+		data["sol_pyrami_ag_color"] = document.getElementById("sol_pyrami_ag_color").value;
+		data["sol_pyrami_ag_style"] = document.getElementById("sol_pyrami_ag_style").value;
+		
+		Diagramme_Histogramme(paper, data);
+		return;
+	}
+}
+
+
+function Add_Diag_Element()
+{
+	let type = document.getElementById("diag_type").selectedIndex;
+	if(type == 0) // Diagramme baton
+	{
+		var barres = document.getElementById("diag_baton_listbarre");
+		
+		let ids = []
+		let list = barres.getElementsByTagName("div")
+		for (var i = 0; i < list.length; i++) {
+			ids.push(list[i].id);
+		}
+		if ((ids.length / 5 + 1) > 50) return; // Limit max bar count to 50
+		let id = 1;
+		while(ids.indexOf("diag_baton_barre" + id.toString()) >= 0)
+			id += 1;
+	
+		let div = document.createElement("div");
+		div.id = "diag_baton_barre" + id.toString();
+		div.classList.add("formemenu");
+	
+		let htmlnode = '<span>Barre UID :</span><div class="formemenu_div"><div class="flexparameters"><label>Nom :</label><input id="diag_baton_barreGID_name" type="text" value="" oninput="Regenerate()"></div><hr><div class="flexparameters"><label>Effectif :</label><input id="diag_baton_barreGID_eff" type="number" value="0" step="1" min="0" oninput="Regenerate()"></div><hr><div class="flexparameters"><label>Couleur :</label><input id="diag_baton_barreGID_color" type="color" value="COLOR" oninput="Regenerate()"></div><hr><button class="diag_baton_barreGID_delete" onclick="Remove_Diag_Element(GID)" style="color: red">supprimer</button></div>'
+	
+		htmlnode = htmlnode.replaceAll("COLOR", colors[(id - 1) % colors.length]);
+		htmlnode = htmlnode.replaceAll("UID", (ids.length / 5 + 1).toString());
+		htmlnode = htmlnode.replaceAll("GID", id.toString());
+	
+		div.innerHTML = htmlnode;
+		barres.appendChild(div);
+	
+		div.children[0].onclick = function(){menu_click(div)};
+	}
+	else if (type == 1)
+	{
+		var points = document.getElementById("diag_carte_listpoint");
+		
+		let ids = []
+		let list = points.getElementsByTagName("div")
+		for (var i = 0; i < list.length; i++) {
+			ids.push(list[i].id);
+		}
+		if ((ids.length / 5 + 1) > 50) return; // Limit max bar count to 50
+		let id = 1;
+		while(ids.indexOf("diag_carte_point" + id.toString()) >= 0)
+			id += 1;
+	
+		let div = document.createElement("div");
+		div.id = "diag_carte_point" + id.toString();
+		div.classList.add("formemenu");
+	
+		let htmlnode = '<span>Point UID :</span><div class="formemenu_div"><label>Position :</label><div class="flexparameters"><label>(</label><input class="input_coord" id="diag_carte_pointGID_x" type="number" value="0" oninput="Regenerate()"><label>;</label><input class="input_coord" id="diag_carte_pointGID_y" type="number" value="0" oninput="Regenerate()"><label>)</label></div><hr><button class="diag_baton_GID_delete" onclick="Remove_Diag_Element(UID)" style="color: red">supprimer</button>'
+	
+		htmlnode = htmlnode.replaceAll("UID", (ids.length / 3 + 1).toString());
+		htmlnode = htmlnode.replaceAll("GID", id.toString());
+	
+		div.innerHTML = htmlnode;
+		points.appendChild(div);
+	
+		div.children[0].onclick = function(){menu_click(div)};
+	}
+	else if (type == 2) // Diagramme baton
+	{
+		var barres = document.getElementById("diag_circu_listsection");
+		
+		let ids = []
+		let list = barres.getElementsByTagName("div")
+		for (var i = 0; i < list.length; i++) {
+			ids.push(list[i].id);
+		}
+		if ((ids.length / 5 + 1) > 50) return; // Limit max bar count to 50
+		let id = 1;
+		while(ids.indexOf("diag_circu_section" + id.toString()) >= 0)
+			id += 1;
+	
+		let div = document.createElement("div");
+		div.id = "diag_circu_section" + id.toString();
+		div.classList.add("formemenu");
+	
+		let htmlnode = '<span>Section UID :</span><div class="formemenu_div"><div class="flexparameters"><label>Nom :</label><input id="diag_circu_sectionGID_name" type="text" value="" oninput="Regenerate()"></div><hr><div class="flexparameters"><label>Effectif :</label><input id="diag_circu_sectionGID_eff" type="number" value="1" step="1" min="0" oninput="Regenerate()"></div><hr><div class="flexparameters"><label>Couleur :</label><input id="diag_circu_sectionGID_color" type="color" value="COLOR" oninput="Regenerate()"></div><hr><button class="diag_circu_sectionGID_delete" onclick="Remove_Diag_Element(GID)" style="color: red">supprimer</button></div>'
+	
+		htmlnode = htmlnode.replaceAll("COLOR", colors[(id - 1) % colors.length]);
+		htmlnode = htmlnode.replaceAll("UID", (ids.length / 5 + 1).toString());
+		htmlnode = htmlnode.replaceAll("GID", id.toString());
+	
+		div.innerHTML = htmlnode;
+		barres.appendChild(div);
+	
+		div.children[0].onclick = function(){menu_click(div)};
+	}
+
+	Regenerate();
+}
+
+function Remove_Diag_Element(id)
+{
+	let type = document.getElementById("diag_type").selectedIndex;
+	if(type == 0) // Diagramme baton
+	{
+		let element = document.getElementById("diag_baton_barre" + id);
+		element.parentNode.removeChild(element);
+
+		var barres = document.getElementById("diag_baton_listbarre");
+		let list = barres.getElementsByTagName("div")
+		let rename_id = 1;
+		for (var i = 0; i < list.length; i++) 
+		{
+			if (list[i].id != "")
+			{
+				list[i].children[0].innerHTML = "Barre " + rename_id.toString() + " :"
+				rename_id++;
+			}
+		}
+	}
+	else if (type == 1)
+	{
+		let element = document.getElementById("diag_carte_point" + id);
+		element.parentNode.removeChild(element);
+
+		var points = document.getElementById("diag_carte_listpoint");
+		let list = points.getElementsByTagName("div")
+		let rename_id = 1;
+		for (var i = 0; i < list.length; i++) 
+		{
+			if (list[i].id != "")
+			{
+				list[i].children[0].innerHTML = "Point " + rename_id.toString() + " :"
+				rename_id++;
+			}
+		}
+	}
+	else if (type == 2) // Diagramme baton
+	{
+		let element = document.getElementById("diag_circu_section" + id);
+		element.parentNode.removeChild(element);
+
+		var barres = document.getElementById("diag_circu_listsection");
+		let list = barres.getElementsByTagName("div")
+		let rename_id = 1;
+		for (var i = 0; i < list.length; i++) 
+		{
+			if (list[i].id != "")
+			{
+				list[i].children[0].innerHTML = "Section " + rename_id.toString() + " :"
+				rename_id++;
+			}
+		}
+	}
+
+	Regenerate();
+}
 
 { // Ajout d'objet dans la liste latérale
 

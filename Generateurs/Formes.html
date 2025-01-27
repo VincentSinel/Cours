@@ -84,6 +84,7 @@
 				<option value="type3">Quadrillage</option>
 				<option value="type4">Solide</option>
 				<option value="type5">Fractions</option>
+				<option value="type6">Diagrammes</option>
 			</select>
 			<!-- <button class="regenerate" onclick="Regenerate()">Regénérer</button> -->
 			<p style="text-align: center;">Paramètres</p>
@@ -1321,6 +1322,374 @@
 						</div>
 					</div>
 				</div>
+				<!-- Paramètres diagramme -->
+				<div style="width: 100%;" id="param_diagramme" class="hiddenparam">
+					<select id="diag_type" oninput="menu_diag_changed()">
+						<option value="type1">Diagramme bâton</option>
+						<option value="type2">Diagramme cartésien</option>
+						<option value="type3">Diagramme circulaire</option>
+						<!-- <option value="type4">Histogramme</option> -->
+					</select>
+					<!-- Parametres diagramme bâton -->
+					<div id="diag_baton_param" class=""> <!--hiddenparam-->
+						<div class="formemenu show">
+							<span>Principaux</span>
+							<div class="formemenu_div">
+								<div class="flexparameters">
+									<label>Effectif maximal :</label>
+									<input id="diag_baton_maxeff" type="number" value="8" step="1" min="0" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Pas de la grille :</label>
+									<input id="diag_baton_pas" type="number" value="-1" step="1" min="-1" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="formemenu show">
+									<span>Barres :</span>
+									<div class="formemenu_div">
+										<div id="diag_baton_listbarre" class="panel">
+											<div id="diag_baton_barre1" class="formemenu show" >
+												<span>Barre 1 :</span>
+												<div class="formemenu_div">
+													<div class="flexparameters">
+														<label>Nom :</label>
+														<input id="diag_baton_barre1_name" type="text" value="" oninput="Regenerate()">
+													</div>
+													<hr>
+													<div class="flexparameters">
+														<label>Effectif :</label>
+														<input id="diag_baton_barre1_eff" type="number" value="0" step="1" min="0" oninput="Regenerate()">
+													</div>
+													<hr>
+													<div class="flexparameters">
+														<label>Couleur :</label>
+														<input id="diag_baton_barre1_color" type="color" value="#e60049" oninput="Regenerate()">
+													</div>
+													<hr>
+													<button class="diag_baton_1_delete" onclick="Remove_Diag_Element(1)" style="color: red">
+														supprimer
+													</button>
+												</div>
+											</div>
+										</div>
+										<button onclick="Add_Diag_Element()">Ajouter une barre</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="formemenu show">
+							<span>Style</span>
+							<div class="formemenu_div">
+								<div class="flexparameters">
+									<label>Epaisseur des traits :</label>
+									<input id="diag_baton_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Couleur de la grille :</label>
+									<input id="diag_baton_gridcolor" type="color" value="#75FFFF" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Afficher la grille :</label>
+									<input id="diag_baton_grid" type="checkbox" style="width: auto;" oninput="Regenerate();">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Largeur des barres :</label>
+									<input id="diag_baton_bar_width" type="number" value="50" step="1" min="1" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Taille des graduations :</label>
+									<input id="diag_baton_grad_size" type="number" value="6" step="1" min="1" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Opacité :</label>
+									<input id="diag_baton_fill_opacity" type="number" value="0.7" step="0.1" min="0" max="1" oninput="Regenerate()">
+								</div>
+							</div>
+						</div>
+						<div class="formemenu show">
+							<span>Textes</span>
+							<div class="formemenu_div">
+								<div class="flexparameters">
+									<label>Titre :</label>
+									<input id="diag_baton_title" type="text" value="" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Axe horizontal :</label>
+									<input id="diag_baton_haxe_name" type="text" value="" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Axe vertical :</label>
+									<input id="diag_baton_vaxe_name" type="text" value="Effectifs" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Taille des textes :</label>
+									<input id="diag_baton_txt_size" type="number" value="12" step="1" min="1" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Afficher valeur des barres:</label>
+									<input id="diag_baton_bar_value" type="checkbox" style="width: auto;" oninput="Regenerate();">
+								</div>
+								<hr>
+								<div class="flexparameters" style="flex-direction: column;">
+									<label>Offset des etiquettes des barres:</label><br>
+									<div  class="coord">
+										<label>(</label>
+										<input id="diag_baton_offset_x" type="number" value="0" oninput="Regenerate()">
+										<label>;</label>
+										<input id="diag_baton_offset_y" type="number" value="0" oninput="Regenerate()">
+										<label>)</label>
+									</div>
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Angle étiquettes :</label>
+									<input id="diag_baton_offset_angle" type="number" value="0" step="5" min="0" oninput="Regenerate()">
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Parametres diagramme cartesien -->
+					<div id="diag_carte_param" class="hiddenparam">
+						<div class="formemenu show">
+							<span>Principaux</span>
+							<div class="formemenu_div">
+								<div class="formemenu">
+									<span>Axe horizontal:</span>
+									<div class="formemenu_div">
+										<div class="flexparameters">
+											<label>Debut :</label>
+											<input id="diag_carte_Xstart" type="number" value="0" step="1" min="0" oninput="Regenerate()">
+										</div>
+										<hr>
+										<div class="flexparameters">
+											<label>Pas :</label>
+											<input id="diag_carte_Xpas" type="number" value="1" step="1" min="1" oninput="Regenerate()">
+										</div>
+										<hr>
+										<div class="flexparameters">
+											<label>Section :</label>
+											<input id="diag_carte_Xsec" type="number" value="3" step="1" min="0" oninput="Regenerate()">
+										</div>
+										<hr>
+										<div class="flexparameters">
+											<label>Subsection :</label>
+											<input id="diag_carte_Xsubsec" type="number" value="5" step="1" min="0" oninput="Regenerate()">
+										</div>
+									</div>
+								</div>
+								<hr>
+								<div class="formemenu">
+									<span>Axe vertical:</span>
+									<div class="formemenu_div">
+										<div class="flexparameters">
+											<label>Debut :</label>
+											<input id="diag_carte_Ystart" type="number" value="0" step="1" min="0" oninput="Regenerate()">
+										</div>
+										<hr>
+										<div class="flexparameters">
+											<label>Pas :</label>
+											<input id="diag_carte_Ypas" type="number" value="1" step="1" min="1" oninput="Regenerate()">
+										</div>
+										<hr>
+										<div class="flexparameters">
+											<label>Section :</label>
+											<input id="diag_carte_Ysec" type="number" value="5" step="1" min="0" oninput="Regenerate()">
+										</div>
+										<hr>
+										<div class="flexparameters">
+											<label>Subsection :</label>
+											<input id="diag_carte_Ysubsec" type="number" value="5" step="1" min="0" oninput="Regenerate()">
+										</div>
+									</div>
+								</div>
+								<hr>
+								<div class="formemenu">
+									<span>Points :</span>
+									<div class="formemenu_div">
+										<div id="diag_carte_listpoint" class="panel">
+											<div id="diag_carte_point1" class="formemenu show" >
+												<span>Point 1 :</span>
+												<div class="formemenu_div">
+													<label>Position :</label>
+													<div class="flexparameters">
+														<label>(</label>
+														<input class="input_coord" id="diag_carte_point1_x" type="number" value="0" oninput="Regenerate()">
+														<label>;</label>
+														<input class="input_coord" id="diag_carte_point1_y" type="number" value="0" oninput="Regenerate()">
+														<label>)</label>
+													</div>
+													<hr>
+													<button class="diag_baton_1_delete" onclick="Remove_Diag_Element(1)" style="color: red">
+														supprimer
+													</button>
+												</div>
+											</div>
+										</div>
+										<button onclick="Add_Diag_Element()">Ajouter un point</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="formemenu">
+							<span>Style</span>
+							<div class="formemenu_div">
+								<div class="flexparameters">
+									<label>Epaisseur des traits :</label>
+									<input id="diag_carte_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Taille des points :</label>
+									<input id="diag_carte_point_size" type="number" value="10" step="1" min="1" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Taille des graduations :</label>
+									<input id="diag_carte_grad_size" type="number" value="6" step="1" min="1" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Couleur des traits :</label>
+									<input id="diag_carte_strokecolor" type="color" value="#dc0ab4" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Afficher la grille :</label>
+									<input id="diag_carte_grid" type="checkbox" style="width: auto;" oninput="Regenerate();">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Epaisseur de la grille :</label>
+									<input id="diag_carte_grid_width" type="number" value="1" step="1" min="1" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Couleur de la grille :</label>
+									<input id="diag_carte_gridcolor" type="color" value="#75FFFF" oninput="Regenerate()">
+								</div>
+							</div>
+						</div>
+						<div class="formemenu">
+							<span>Textes</span>
+							<div class="formemenu_div">
+								<div class="flexparameters">
+									<label>Titre :</label>
+									<input id="diag_carte_title" type="text" value="" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Axe horizontal :</label>
+									<input id="diag_carte_haxe_name" type="text" value="" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Axe vertical :</label>
+									<input id="diag_carte_vaxe_name" type="text" value="Effectifs" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Taille des textes :</label>
+									<input id="diag_carte_txt_size" type="number" value="12" step="1" min="1" oninput="Regenerate()">
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Parametres diagramme circulaire -->
+					<div id="diag_circu_param" class="hiddenparam">
+						<div class="formemenu show">
+							<span>Sections</span>
+							<div class="formemenu_div">
+								<div id="diag_circu_listsection" class="panel">
+									<div id="diag_circu_section1" class="formemenu show" >
+										<span>Section 1 :</span>
+										<div class="formemenu_div">
+											<div class="flexparameters">
+												<label>Nom :</label>
+												<input id="diag_circu_section1_name" type="text" value="" oninput="Regenerate()">
+											</div>
+											<hr>
+											<div class="flexparameters">
+												<label>Effectif :</label>
+												<input id="diag_circu_section1_eff" type="number" value="0" step="1" min="0" oninput="Regenerate()">
+											</div>
+											<hr>
+											<div class="flexparameters">
+												<label>Couleur :</label>
+												<input id="diag_circu_section1_color" type="color" value="#e60049" oninput="Regenerate()">
+											</div>
+											<hr>
+											<button class="diag_circu_section1_delete" onclick="Remove_Diag_Element(1)" style="color: red">
+												supprimer
+											</button>
+										</div>
+									</div>
+								</div>
+								<button onclick="Add_Diag_Element()">Ajouter une section</button>
+							</div>
+						</div>
+						<div class="formemenu show">
+							<span>Style</span>
+							<div class="formemenu_div">
+								<div class="flexparameters">
+									<label>Epaisseur des traits :</label>
+									<input id="diag_circu_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Occupation du diagramme :</label>
+									<input id="diag_circu_width" type="number" value="75" step="1" min="1" max="100" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Offset d'angle :</label>
+									<input id="diag_circu_offset" type="number" value="1" step="1" min="1" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Espace legende :</label>
+									<input id="diag_circu_legende_space" type="number" value="10" step="1" min="1" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Taille des carré de legende :</label>
+									<input id="diag_circu_legende_size" type="number" value="10" step="1" min="1" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Opacité :</label>
+									<input id="diag_circu_fill_opacity" type="number" value="0.7" step="0.1" min="0" max="1" oninput="Regenerate()">
+								</div>
+							</div>
+						</div>
+						<div class="formemenu show">
+							<span>Textes</span>
+							<div class="formemenu_div">
+								<div class="flexparameters">
+									<label>Titre :</label>
+									<input id="diag_circu_title" type="text" value="" oninput="Regenerate()">
+								</div>
+								<hr>
+								<div class="flexparameters">
+									<label>Taille des textes :</label>
+									<input id="diag_circu_txt_size" type="number" value="12" step="1" min="1" oninput="Regenerate()">
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Parametres histogramme -->
+					<div id="diag_histo_param" class="hiddenparam">
+					</div>
+				</div>
 				<!-- Parametres généraux -->
 				<div class="formemenu">
 					<span>Rendu final</span>
@@ -1366,12 +1735,14 @@
 				<button onclick="Add_segment()" class="newobjecthalf">Ajouter un segment</button>
 				<button onclick="Add_texte()" class="newobjecthalf">Ajouter un texte</button>
 			</div>
-			<hr style="margin-top: 2px; margin-bottom: 2px;">
 			<div id="object_solide" class="hiddenparam">
 			</div>
 			<div id="object_fraction" class="hiddenparam">
 				<button onclick="Add_section()" class="newobjecthalf">Ajouter une section</button>
 			</div>
+			<div id="object_diagramme" class="hiddenparam">
+			</div>
+			<hr style="margin-top: 2px; margin-bottom: 2px;">
 			<div id="object_list" class="panel rightpanel">
 				
 					<!-- <div id="seg1" class="formemenu show">
@@ -1861,6 +2232,27 @@
 			Regenerate();
 		}
 
+		function menu_diag_changed()
+		{
+			let elements = [];
+			elements.push(document.getElementById("diag_baton_param"))
+			elements.push(document.getElementById("diag_carte_param"))
+			elements.push(document.getElementById("diag_circu_param"))
+			elements.push(document.getElementById("diag_histo_param"))
+			let type = document.getElementById("diag_type").selectedIndex;
+
+			for (let i = 0; i < elements.length; i++) {
+				if (type == i)
+					elements[i].classList.remove("hiddenparam");
+				else
+					elements[i].classList.add("hiddenparam");
+				
+			}
+
+			ClearObject();
+			Regenerate();
+		}
+
 		function menu_changed()
 		{
 			objects = [];
@@ -1869,11 +2261,13 @@
 			document.getElementById("param_quadrillage").classList.add("hiddenparam")
 			document.getElementById("param_solide").classList.add("hiddenparam")
 			document.getElementById("param_fraction").classList.add("hiddenparam")
+			document.getElementById("param_diagramme").classList.add("hiddenparam")
 			document.getElementById("object_repere").classList.add("hiddenparam")
 			document.getElementById("object_axe").classList.add("hiddenparam")
 			document.getElementById("object_quadrillage").classList.add("hiddenparam")
 			document.getElementById("object_solide").classList.add("hiddenparam")
 			document.getElementById("object_fraction").classList.add("hiddenparam")
+			document.getElementById("object_diagramme").classList.add("hiddenparam")
 			let type = document.getElementById("gen_type").selectedIndex;
 			if (type == 0)
 			{
@@ -1900,8 +2294,16 @@
 				document.getElementById("param_fraction").classList.remove("hiddenparam")
 				document.getElementById("object_fraction").classList.remove("hiddenparam")
 			}
+			else if (type == 5)
+			{
+				document.getElementById("param_diagramme").classList.remove("hiddenparam")
+				document.getElementById("object_diagramme").classList.remove("hiddenparam")
+			}
 			ClearObject();
 			Regenerate()
 		}
+
+
+
 	</script>
 </html>
