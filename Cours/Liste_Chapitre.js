@@ -795,6 +795,12 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre B4",
 		nom: "Additions de relatifs",
 		icone: 8,
+		download: {
+			pdf: "/Cours/5eme/RogerVailland/Chapitre_B4/Documents/B4 - Additions de relatifs (Complet).pdf",
+			docx: "/Cours/5eme/RogerVailland/Chapitre_B4/Documents/B4 - Additions de relatifs (Complet).docx",
+			pdf_trou: "/Cours/5eme/RogerVailland/Chapitre_B4/Documents/B4 - Additions de relatifs (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_B4/Documents/B4 - Additions de relatifs (A trou).docx",
+		},
 		ready : false,
 		page : "RogerVailland/Chapitre_B4/Cours.html",
 	},
@@ -1481,7 +1487,13 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre E2",
 		nom: "Notion de perpendiculaires et parallèles",
 		icone: 11,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_E2/Documents/E2 - Notion de perpendiculaires et parallèles (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_E2/Documents/E2 - Notion de perpendiculaires et parallèles (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_E2/Documents/E2 - Notion de perpendiculaires et parallèles (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_E2/Documents/E2 - Notion de perpendiculaires et parallèles (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_E2/Cours.html",
 	},
 	{
