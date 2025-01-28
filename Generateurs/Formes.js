@@ -11,8 +11,8 @@ var objects = [
 window.onload = function(){
 	paper = Raphael("preview", Canvas_width, Canvas_height);
 
-	document.getElementById("gen_type").selectedIndex = 5;
-	document.getElementById("diag_type").selectedIndex = 2;
+	// document.getElementById("gen_type").selectedIndex = 5;
+	// document.getElementById("diag_type").selectedIndex = 2;
 
 	menu_solid_changed()
 	menu_diag_changed()
