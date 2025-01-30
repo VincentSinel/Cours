@@ -521,7 +521,7 @@ var cinquieme_base = [
 			id: 14,
 			nom: "Fraction, Somme et Différence",
 			icone: 1,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_14/Cours.html"
 	},
 	{
@@ -1287,7 +1287,13 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre A6",
 		nom: "Manipuler les fractions",
 		icone: 7,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_A6/Documents/A6 - Manipuler les fractions (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_A6/Documents/A6 - Manipuler les fractions (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_A6/Documents/A6 - Manipuler les fractions (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_A6/Documents/A6 - Manipuler les fractions (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_A6/Cours.html",
 	},
 	{
