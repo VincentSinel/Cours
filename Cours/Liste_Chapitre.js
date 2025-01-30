@@ -801,7 +801,7 @@ var cinquieme_rogervailland = [
 			pdf_trou: "/Cours/5eme/RogerVailland/Chapitre_B4/Documents/B4 - Additions de relatifs (A trou).pdf",
 			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_B4/Documents/B4 - Additions de relatifs (A trou).docx",
 		},
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_B4/Cours.html",
 	},
 	{
