@@ -1433,7 +1433,13 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre D2",
 		nom: "Longueurs et masses",
 		icone: 10,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_D2/Documents/D2 - Longueurs et masses (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_D2/Documents/D2 - Longueurs et masses (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_D2/Documents/D2 - Longueurs et masses (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_D2/Documents/D2 - Longueurs et masses (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_D2/Cours.html",
 	},
 	{
