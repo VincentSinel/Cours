@@ -17,6 +17,43 @@
   <title>A1 - Entier et décimaux</title>
 
   <style>
+    .longueur_grid{
+      display: grid;
+      text-align: center;
+      border: solid 1px black;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .longueur_grid div{
+      border: solid 1px black;
+    }
+    .BR{
+      background-color: #ffcc99;
+    }
+    .BG{
+      background-color: #99ff99;
+    }
+
+    .p-table {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: auto repeat(2, 30px);
+      align-content: center;
+      vertical-align: middle;
+      text-align: center;
+      border: solid 1px black;
+    }
+    .line_title2 {
+      background-color: #ccc0da;
+    }
+    .line_title2 {
+      font-size: 8pt;
+      font-weight: bold;
+    }
+    .p-table div{
+      border: solid 1px black;
+      align-content: center;
+      font-size: 12pt;
+    }
   </style>
 
 </head>
@@ -26,10 +63,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        A1
+        D2
       </td>
       <td id="ChapitreNom">
-        - Nombres entiers
+        - Longueurs et masses
       </td>
     </tr>
   </table>
@@ -37,8 +74,186 @@
   <p class="exemple">
     Activité Introduction
   </p>
+  
+  <ol>
+    <li>Découper, dans une feuille épaisse, un disque de diamètre 4cm, puis placer un point M sur le bord du cercle.</li>
+    <li>
+      Construire un axe graduée de 15cm comme ci-dessous :<br>
+      <img src="Images/Axe.svg">
 
+    </li>
+    <li>
+      Placer le disque sur l'axe graduée en faisant correspondre le point M avec l'origine, puis faire tourner le disque le long de l'axe comme indiqué sur la figure ci-dessous.<br>
+      <img src="Images/Axe2.svg" style="max-height: 4.5cm;">
+      <ol type="a">
+        <li>
+          Noter l'abscisse du point M lorsque le disque fait un tour complet. A quelle longueur cette abscisse correspond-elle ?
+        </li>
+        <li>
+          Diviser la longueur du cercle par son diamètre, puis arrondir ce résultat au centième près.
+        </li>
+      </ol>
+    </li>
+    <li>
+      Refaire la même mesure et le même calcul avec un cercle de 3cm de diamètre.
+      <ol type="a">
+        <li>
+          Que constate-t-on ?
+        </li>
+        <li>
+          Que peut-on dire de la formule permettant de trouver le périmètre du cercle ?
+        </li>
+      </ol>
+    </li>
+  </ol>
 
+  <h1>Grandeurs et mesure :</h1>
+    <div class="definition">
+      Une <span class="CRed">grandeur</span> est la caractéristique chimique, physique ou biologique d'une substance, d'un corps, d'un phénomène.
+    </div>
+    <p class="exemple">Exemples :</p>
+    <div class="flexobject">
+      <ul>
+        <li>Longueur</li>
+        <li>Masse</li>
+        <li>Temps</li>
+      </ul>
+      <ul>
+        <li>Volume</li>
+        <li>Angles</li>
+        <li>Superficie</li>
+      </ul>
+      <ul>
+        <li>Température</li>
+        <li>Prix</li>
+        <li>Etc...</li>
+      </ul>
+    </div>
+
+    <div class="definition">
+      Pour chaque grandeur, on a défini une <span class="CRed">unité</span> (un étalon) à partir duquel on <span class="CRed">mesure</span> en regardant combien de fois on peut reporter cet unité.
+    </div>
+    <p class="exemple">Exemples :</p>
+    <ul>
+      <li>Pour la longueur, on utilise le <b>mètre</b> comme unité.</li>
+      <li>Pour la masse, on utilise le <b>gramme</b> comme unité.</li>
+      <li>Pour les angles, on utilise le <b>degré</b> comme unité.</li>
+      <li>Pour la volume, on utilise le <b>mètre cube</b> comme unité ou le <b>litre</b>.</li>
+    </ul>
+    <p class="remarque">Remarque :</p>
+    <ul>
+      <li>En fonction du pays, certaine unité change. En Angleterre par exemple, l'unité de masse est le <b>pound</b> (1 lb = 0,453 592 37 kilogramme).</li>
+      <li>Pour chaque unité, on définit des sous-unités en utilisant des préfixe (kilo, hecto, déca, déci, centi, milli)</li>
+    </ul>
+  <h1>Longueurs :</h1>
+    <h2>Définition :</h2>
+      <div class="definition">
+        Dans le système international, l'unité de longueur est le <span class="CRed">mètre</span> noté «<b><span class="CRed">m</span></b>».
+      </div>
+
+      <div class="longueur_grid">
+        <div style="grid-column: 1 / 3; font-weight: bold; font-size: 20px;">
+          Unités de longueur
+        </div>
+        <div class="CRed BR" style="font-weight: bold;">Multiples</div>
+        <div class="CGreen BG" style="font-weight: bold;">Sous-Multiples</div>
+        <div class="BR"><b>Décamètre</b><br>1 dam = 10 m</div>
+        <div class="BG"><b>Décimètre</b><br>1 dm = 0,1 m</div>
+        <div class="BR"><b>Hectomètre</b><br>1 hm = 10 dam = 100 m</div>
+        <div class="BG"><b>Centimètre</b><br>1 cm = 0,1 dm = 0,01 m</div>
+        <div class="BR"><b>Kilomètre</b><br>1 km = 10 hm = 100 dam = 1 000 m</div>
+        <div class="BG"><b>Millimètre</b><br>1 mm = 0,1 cm = 0,01 dm = 0,001 m</div>
+      </div>
+  
+      <p>Tableau de conversion :</p>
+  
+      <div class="p-table">
+        <div class="line_title2">Kilomètre<br><span style="font-size: 16pt;">km</span></div>
+        <div class="line_title2">Hectomètre<br><span style="font-size: 16pt;">hm</span></div>
+        <div class="line_title2">Decamètre<br><span style="font-size: 16pt;">dam</span></div>
+        <div class="line_title2">Mètre<br><span style="font-size: 16pt;">m</span></div>
+        <div class="line_title2">Décimètre<br><span style="font-size: 16pt;">dm</span></div>
+        <div class="line_title2">Centimètre<br><span style="font-size: 16pt;">cm</span></div>
+        <div class="line_title2">Millimètre<br><span style="font-size: 16pt;">mm</span></div>
+        <div></div><div>2</div><div>7</div><div>0</div><div>0</div><div></div><div></div>
+        <div></div><div></div><div>0,</div><div>0</div><div>0</div><div>5</div><div></div>
+      </div>
+      <table style="width: 100%; text-align: center;">
+        <tr>
+          <td>2,7 hm = 2 700 dm</td>
+          <td>5 cm = 0,005 dam</td>
+        </tr>
+      </table>
+    <h2>Périmètres :</h2>
+      <div class="definition">
+        Le <span class="CRed">périmètre</span> d'une figure plane est la <b>longueur</b> du contour de celle-ci. (On le note souvent $\mathscr{P}$) 
+      </div>
+      <div class="flexobject">
+        <img src="Images/Attention.svg" style="max-height: 4cm;">
+        <p style="flex: 1 1 5cm;">Attention, toutes les longueurs doivent être exprimés avec la même unité (ou sous unité).</p>
+      </div>
+      <h3>Polygone :</h3>
+        <div class="definition">
+          Le périmètre d'un polygone est égal à la somme de la longueur de tous ses côtés.
+        </div>
+        <p class="exemple">Exemple :</p>
+        <div class="flexobject">
+          <div style="flex: 0 1 5cm">
+            Ici le polygone ABCDE a pour périmètre $\mathscr{P}=4+4,5+4+2,5+3=18 cm$ 
+          </div>
+          <img src="Images/Polygone.svg" style="max-height: 5cm;">
+        </div>
+      <h3>Cercle :</h3>
+        <div class="definition">
+          Le périmètre d'un cercle est égal au produit de son diamètre par le nombre <span class="CRed">π</span> (pi) 
+        </div>
+        <p class="exemple">Exemple :</p>
+        <p>
+          Le périmètre d'un cercle de diamètre 6cm est $\mathscr{P}=6\times \pi \approx 18,8 cm$.
+        </p>
+        <p class="remarque">Remarque :</p>
+        <ul>
+          <li>$\pi$ représente un nombre particulier. $\pi \approx 3,1415$.</li>
+          <li>Il existe la journée de PI le 14 mars (en anglais 03/14).</li>
+        </ul>
+  <h1>Masses :</h1>
+    <div class="definition">
+      Dans le système international, l'unité de masses est le <span class="CRed">gramme</span> noté «<b><span class="CRed">g</span></b>».
+    </div>
+
+    <div class="longueur_grid">
+      <div style="grid-column: 1 / 3; font-weight: bold; font-size: 20px;">
+        Unités de masses
+      </div>
+      <div class="CRed BR" style="font-weight: bold;">Multiples</div>
+      <div class="CGreen BG" style="font-weight: bold;">Sous-Multiples</div>
+      <div class="BR"><b>Décagramme</b><br>1 dag = 10 g</div>
+      <div class="BG"><b>Décigramme</b><br>1 dg = 0,1 g</div>
+      <div class="BR"><b>Hectogramme</b><br>1 hg = 10 dag = 100 g</div>
+      <div class="BG"><b>Centigramme</b><br>1 cg = 0,1 dg = 0,01 g</div>
+      <div class="BR"><b>Kilogramme</b><br>1 kg = 10 hg = 100 dag = 1 000 g</div>
+      <div class="BG"><b>Milligramme</b><br>1 mg = 0,1 cg = 0,01 dg = 0,001 g</div>
+    </div>
+
+    <p>Tableau de conversion :</p>
+
+    <div class="p-table">
+      <div class="line_title2">Kilogramme<br><span style="font-size: 16pt;">kg</span></div>
+      <div class="line_title2">Hectogramme<br><span style="font-size: 16pt;">hg</span></div>
+      <div class="line_title2">Decagramme<br><span style="font-size: 16pt;">dag</span></div>
+      <div class="line_title2">Gramme<br><span style="font-size: 16pt;">g</span></div>
+      <div class="line_title2">Décigramme<br><span style="font-size: 16pt;">dg</span></div>
+      <div class="line_title2">Centigramme<br><span style="font-size: 16pt;">cg</span></div>
+      <div class="line_title2">Milligramme<br><span style="font-size: 16pt;">mg</span></div>
+      <div></div><div>2</div><div>7</div><div>0</div><div>0</div><div></div><div></div>
+      <div></div><div></div><div>0,</div><div>0</div><div>0</div><div>5</div><div></div>
+    </div>
+    <table style="width: 100%; text-align: center;">
+      <tr>
+        <td>2,7 hg = 2 700 dg</td>
+        <td>5 cg = 0,005 dag</td>
+      </tr>
+    </table>
         
 </body>
 
