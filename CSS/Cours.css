@@ -248,6 +248,24 @@ table, th, td, tr {
     border-collapse: collapse;
 }
 
+.external_link {
+    font-size: 14pt;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: var(--Color_Purple3);
+    border: solid 1px var(--Color_Purple1);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.external_link:hover{
+    background-color: var(--Color_Purple5);
+    border: solid 1px var(--Color_Purple3);
+    color: var(--Color_Purple2);
+    transition: 0.5s;
+}
+
 .borderfull td, 
 .borderfull th{
     padding: 5px;
