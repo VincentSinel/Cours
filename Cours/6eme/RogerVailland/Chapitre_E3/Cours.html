@@ -14,17 +14,9 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>E1 - Droites</title>
+  <title>E3 - Propriétés sur les perpendiculaires et parallèles</title>
 
   <style>
-    .appartient div{
-      display: inline-block;
-      width: 8cm;
-    }
-    .appartient div:first-child{
-      display: inline-block;
-      width: 3cm;
-    }
   </style>
 
 </head>
@@ -34,10 +26,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        E1
+        E3
       </td>
       <td id="ChapitreNom">
-        - Droites
+        - Propriétés sur les perpendiculaires et parallèles
       </td>
     </tr>
   </table>
@@ -46,6 +38,89 @@
     Activité Introduction
   </p>
 
+  <div class="flexobject">
+    <div>
+      <ol>
+        <li>
+          Effectuer le programme de construction ci-contre
+        </li>
+        <li>
+          On sait que $(d) \perp (d_1)$ et que $(d) \perp (d_2)$.<br>
+          Que penser de la position de $(d_1)$ par rapport à $(d_2)$ ?
+        </li>
+        <li>
+          On sait que $(d_3) \parallel (d_2)$ et que $(d_2) \parallel (d_1)$.<br>
+          Que penser de la position de $(d_3)$ par rapport à $(d_1)$ ?
+        </li>
+        <li>
+          On sait que $(d) \perp (d_2)$ et que $(d_3) \parallel (d_2)$.<br>
+          Que penser de la position de $(d_3)$ par rapport à $(d)$ ?
+        </li>
+      </ol>
+
+    </div>
+    <div style="background-color: var(--Color_Green5); border-radius: 0.5cm; border: solid 2px var(--Color_Green1); max-width: 10cm;">
+      <div style="width: 100%; text-align: center;">
+        <span style="color: var(--Color_Green2);"><b>Programme de construction</b></span>
+      </div>
+      <ul>
+        <li>
+          Tracer une droite $(d_1)$ sur papier uni.
+        </li>
+        <li>
+          Tracer une droite $(d)$ perpendiculaire à $(d_1)$, puis une droite $(d_2)$ perpendiculaires à $(d)$.
+        </li>
+        <li>Tracer une droite $(d_3)$ parallèle à $(d_2)$.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h1>Parallèles :</h1>
+          <div class="definition">
+            <i><b>Propriété 1 :</b></i><br>
+            <b>Si</b> deux droites sont parallèles à une même troisième droite, <b>alors</b> ces droites sont parallèles entre elles.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <div class="flexobject">
+            <b>SI</b>
+            <div style="flex: 1 1 6cm; max-width: 10cm;" class="flexobject">
+              <div class="flexobject" style="flex-direction: column;">
+                $\textcolor{#43a047}{(d_1)}\parallel\textcolor{#7C4DA5}{(d_3)}$ <u>et</u> $\textcolor{#e53935}{(d_2)}\parallel\textcolor{#7C4DA5}{(d_3)}$
+              </div> <b>ALORS</b> $\textcolor{#43a047}{(d_1)}\parallel\textcolor{#e53935}{(d_2)}$
+            </div>
+            <img src="Images/Propriete1.svg" style="flex: 1 1 3cm; max-width: 6cm; padding-bottom: 10px;">
+          </div>
+          <div class="definition">
+            <i><b>Propriété 2 :</b></i><br>
+            <b>Si</b> deux droites sont perpendiculaires à une même troisième droite, <b>alors</b> ces droites sont parallèles entre elles.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <div class="flexobject">
+            <b>SI</b>
+            <div style="flex: 1 1 6cm; max-width: 10cm;" class="flexobject">
+              <div class="flexobject" style="flex-direction: column;">
+                $\textcolor{#43a047}{(d_1)}\perp\textcolor{#7C4DA5}{(d_3)}$ <u>et</u> $\textcolor{#e53935}{(d_2)}\perp\textcolor{#7C4DA5}{(d_3)}$
+              </div>
+              <b>ALORS</b> $\textcolor{#43a047}{(d_1)}\parallel\textcolor{#e53935}{(d_2)}$
+            </div>
+            <img src="Images/Propriete2.svg" style="flex: 1 1 3cm; max-width: 6cm;">
+          </div>
+  <h1>Perpendiculaires :</h1>
+          <div class="definition">
+            <i><b>Propriété 3 :</b></i><br>
+            <b>Si</b> deux droites sont parallèles et que l'une d'elle est perpendiculaire à une troisième droite, <b>alors</b> cette troisième droite est aussi perpendiculaire à l'autre.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <div class="flexobject">
+            <b>SI</b>
+            <div style="flex: 1 1 6cm; max-width: 10cm;" class="flexobject">
+              <div class="flexobject" style="flex-direction: column;">
+                $\textcolor{#43a047}{(d_1)}\parallel\textcolor{#e53935}{(d_2)}$ <u>et</u> $\textcolor{#43a047}{(d_1)}\perp\textcolor{#7C4DA5}{(d_3)}$
+              </div>
+              <b>ALORS</b> $\textcolor{#e53935}{(d_2)}\perp\textcolor{#7C4DA5}{(d_3)}$
+            </div>
+            <img src="Images/Propriete3.svg" style="flex: 1 1 3cm; max-width: 6cm;">
+          </div>
 
 
 </body>

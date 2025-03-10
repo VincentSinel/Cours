@@ -1525,7 +1525,13 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre E3",
 		nom: "Propriétés sur les perpendiculaires et parallèles",
 		icone: 11,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_E3/Documents/E3 - Propriétés sur les perpendiculaires et parallèles (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_E3/Documents/E3 - Propriétés sur les perpendiculaires et parallèles (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_E3/Documents/E3 - Propriétés sur les perpendiculaires et parallèles (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_E3/Documents/E3 - Propriétés sur les perpendiculaires et parallèles (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_E3/Cours.html",
 	},
 	{
