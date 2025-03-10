@@ -14,10 +14,25 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>D1 - Se repérer dans le temps</title>
+  <title>B2 - Soustraction</title>
 
   <style>
-    
+    .soustraction td{
+      min-width: 20px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 16pt;
+    }
+    .soustraction tr:last-child{
+      border-top: solid 2px black;
+    }
+    .retenu{
+      color: red;
+      font-size: 10pt;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+      font-variant-position: sub;
+    }
   </style>
 
 </head>
@@ -27,10 +42,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        D1
+        B2
       </td>
       <td id="ChapitreNom">
-        - Se repérer dans le temps
+        - Soustraction
       </td>
     </tr>
   </table>
@@ -39,7 +54,96 @@
     Activité Introduction
   </p>
 
+  <p>
+    Manon va s'élancer d'un avion pour effectuer un saut en parachute.<br>
+    Son altimètre indique 3,25 km d'altitude. Elle effectue une chute libre de 1,7 km avant d'ouvrir son parachute.<br>
+    À quelle altitude l'a-t-elle ouvert (Poser la soustraction) ?
+  </p>
 
+  <h1>Définition :</h1>
+    <div class="definition">
+      Le résultat d'une soustraction est appelé <b><span class="CRed">différence</span></b>.<br>
+      Les nombres qui composent une soustraction sont appelés les <span class="CRed"><b>termes</b></span>. 
+    </div>
+    <p class="remarque">Remarque :</p>
+    <ul>
+      <li>On soustrait toujours le plus petit des deux termes au plus grand, donc <b>on ne peut pas modifier l'ordre des termes d'une soustraction</b>.</li>
+    </ul>
+  <h1>Soustraction posée :</h1>
+    <p>
+      Pour poser une soustraction en colonne, on aligne les nombres selon le rang de leurs chiffres. On commence ensuite la soustraction par la droite et on remonte petit à petit. Lorsqu'une soustraction n'est pas possible (que l'on soustrait plus que disponible), on prend une dizaine supplémentaire et on indique que l'on soustrait 1 de plus au rang suivant.
+    </p>
+    <p class="exemple">Exemples :</p>
+    <div class="flexobject">
+      <div class="flexobject">
+        <div>
+          <p><b>Avec des entiers</b></p>
+          <table class="soustraction">
+            <tr>
+              <th></th>
+              <td>1</td>
+              <td><span class="retenu">1</span>4</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <th>-</th>
+              <td><span class="retenu">+1</span></td>
+              <td>8</td>
+              <td>6</td>
+            </tr>
+            <tr>
+  
+            </tr>
+            <tr>
+              <th></th>
+              <td>0</td>
+              <td>6</td>
+              <td>2</td>
+            </tr>
+          </table>
+        </div>
+        <div style="max-width: 5cm;">
+          Ici on ne peut pas retirer 8 à 4. On prend donc <span class="CRed">1</span>4 et on ajoute <span class="CRed">1</span> dans la soustraction au rang des centaines.
+        </div>
+      </div>
+      <div class="flexobject">
+        <div>
+          <p><b>Avec des nombres décimaux</b></p>
+          <table class="soustraction">
+            <tr>
+              <th></th>
+              <td>8</td>
+              <td><span class="retenu">1</span>3</td>
+              <td style="min-width: auto;">,</td>
+              <td><span class="retenu">1</span>0</td>
+              <td>4</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <th>-</th>
+              <td><span class="retenu">+1</span></td>
+              <td>7<span class="retenu">+1</span></td>
+              <td style="min-width: auto;">,</td>
+              <td>6</td>
+              <td>3</td>
+              <td><span class="CBlue">0</span></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>7</td>
+              <td>5</td>
+              <td style="min-width: auto;">,</td>
+              <td>9</td>
+              <td>1</td>
+              <td>9</td>
+            </tr>
+          </table>
+        </div>
+        <div style="max-width: 5cm;">
+          On aligne correctement les chiffres de même rang et on effectue la soustraction comme avec des entiers.
+        </div>
+      </div>
+    </div>
         
 </body>
 

@@ -1329,7 +1329,13 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre B2",
 		nom: "Soustraction",
 		icone: 8,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_B2/Documents/B2 - Soustraction (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_B2/Documents/B2 - Soustraction (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_B2/Documents/B2 - Soustraction (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_B2/Documents/B2 - Soustraction (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_B2/Cours.html",
 	},
 	{
