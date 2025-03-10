@@ -13,10 +13,31 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script id="Animation" src="/JS/Animation/animation_holder.js"></script>
 
-  <title>E1 - Généralité sur les triangles</title>
+  <title>A3 - Nombres premiers</title>
 
   <style>
+    #Animation1 { width: max-content;}
+    .decomposition{
+      text-align: right;
+    }
+    .decomposition tr th:nth-child(1)
+    {
+      border-right: solid 2px black;
+      padding-right: 5px;
+    }
+    .decomposition tr th:nth-child(2)
+    {
+      padding-left: 15px;
+      color: red
+    }
+    .decomposition tr th:nth-child(3)
+    {
+      min-width: 30px;
+      text-align: left;
+      color: gray;
+    }
   </style>
 
 </head>
@@ -26,10 +47,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        E1
+        A3
       </td>
       <td id="ChapitreNom">
-        - Nombres Relatifs (Partie 1)
+        - Nombres premiers
       </td>
     </tr>
   </table>
@@ -38,7 +59,163 @@
     Activité Introduction
   </p>
 
-  
+  <p> 
+    Jean a confectionné des truffes au chocolat. Il souhaite les disposer de telle sorte qu'elles puissent former un rectangle une fois rangées, sans espace vide.
+  </p>
+  <ol>
+    <li> Jean a confectionné 20 truffes.<br>
+      <ol type="a">
+        <li>Représenter, par un schéma, une façon de disposer ces truffes.</li>
+        <li>Existe-t-il d’autre façons de les ranger ? Si oui, combien ?</li>
+      </ol>
+    </li>
+    
+    <li> Sa sœur passe dans la cuisine et mange une truffe !<br>
+      <ol type="a">
+        <li>Reprendre les questions précédentes.</li>
+        <li>Quelle remarque peut-on faire à propos des rangements de Jean ?</li>
+      </ol>
+    </li>
+
+    <li> Quand la seule façon de disposer $n$ truffes est de les mettre en une ligne, on dit que le nombre $n$ est un nombre premier.<br>
+      A l'aide du tableau suivant trouve les nombres premiers. (Utilise un crayon à papier pour barrer les nombres qui ne le sont pas).<br>
+
+      <p style="font-size: 16pt;"><u><i>Crible d'Erathostène :</i></u></p>
+      <div id="Animation1" class="animation center" width="480" height="360"></div>
+    </li>
+  </ol>
+
+  <h1>Nombres premiers :</h1>
+      <div class="definition">
+        Un <span class="DRed">nombre premier</span> est un nombre qui possède exactement deux diviseurs, 1 et lui-même.
+      </div>
+
+      <p class="remarque">Remarques :</p>
+      <ul>
+        <li>Le nombre 1 n’est pas un nombre premier !</li>
+        <li>Il existe un nombre infini de nombres premiers.</li>
+      </ul>
+      <p class="exemple">Exemples :</p>
+      <p>
+        Le nombre 11 est premier car 11 n’est divisible que par 1 et 11.<br>
+        Le nombre 12 n’est pas premier car il est divisible par 1, 2, 3, 4, 6 et 12.
+      </p>
+      <p style="font-style: italic;"> Les nombres premiers compris entre 1 et 50 sont :</p>
+
+      <div style="display: flex; gap: 5px;">
+        <div>
+          ❤️
+        </div>
+        <div style="border: 2px solid var(--Dred); padding: 0 5px;">
+          2 ; 3 ; 5 ; 7 ; 11 ; 13 ; 17 ; 19 
+        </div>
+        <div style="border: 2px solid transparent;">
+          ; 23 ; 29 ; 31 ; 37 ; 41 ; 43 ; 47
+        </div>
+      </div>
+  <h1>Décomposition :</h1>  
+      <div class="definition">
+        Décomposer un nombre en <span class="CRed">produit de facteurs premiers</span>, 
+        c'est l'écrire sous forme d'une multiplication de nombres premiers.
+      </div>
+      <p class="exemple">Exemple :</p>
+
+      <div class="flexobject">
+        <div>
+          Méthode 1
+          <table class="decomposition">
+            <tr>
+              <th>360</th>
+              <th>2</th>
+              <th>$\times$180</th>
+            </tr>
+            <tr>
+              <th>180</th>
+              <th>2</th>
+              <th>$\times$90</th>
+            </tr>
+            <tr>
+              <th>90</th>
+              <th>2</th>
+              <th>$\times$45</th>
+            </tr>
+            <tr>
+              <th>45</th>
+              <th>3</th>
+              <th>$\times$15</th>
+            </tr>
+            <tr>
+              <th>15</th>
+              <th>3</th>
+              <th>$\times$5</th>
+            </tr>
+            <tr>
+              <th>5</th>
+              <th>5</th>
+              <th>$\times$1</th>
+            </tr>
+            <tr>
+              <th>1</th>
+            </tr>
+          </table>
+        </div>
+        <div>
+          Méthode 2
+          <b>
+            <table class="center">
+              <tr>
+                <td>360&#8239;=</td>
+                <td colspan="7">36</td>
+                <td>$\times$</td>
+                <td colspan="3">10</td>
+              </tr>
+              <tr style="height: 0.2cm;">
+                <td></td>
+                <td colspan="7"><img src="Images/Accolade1.svg" style="height: 0.3cm;transform: rotate(180deg);"></td>
+                <td></td>
+                <td colspan="3"><img src="Images/Accolade2.svg" style="height: 0.3cm;transform: rotate(180deg);"></td>
+              </tr>
+              <tr>
+                <td>360&#8239;=</td>
+                <td colspan="3">6</td>
+                <td>$\times$</td>
+                <td colspan="3">6</td>
+                <td>$\times$</td>
+                <td>2</td>
+                <td>$\times$</td>
+                <td>5</td>
+              </tr>
+              <tr style="height: 0.2cm;">
+                <td></td>
+                <td colspan="3"><img src="Images/Accolade2.svg" style="height: 0.3cm;transform: rotate(180deg);"></td>
+                <td></td>
+                <td colspan="3"><img src="Images/Accolade2.svg" style="height: 0.3cm;transform: rotate(180deg);"></td>
+              </tr>
+              <tr>
+                <td>360&#8239;=</td>
+                <td>2</td>
+                <td>$\times$</td>
+                <td>3</td>
+                <td>$\times$</td>
+                <td>2</td>
+                <td>$\times$</td>
+                <td>3</td>
+                <td>$\times$</td>
+                <td>2</td>
+                <td>$\times$</td>
+                <td>5</td>
+              </tr>
+            </table>
+          </b>
+          <p>
+            Donc $360 = 2\times 2\times 2\times 3\times 3\times 5$
+          </p>
+        </div>
+      </div>
+
+      <p>
+        La décomposition en produit de facteurs premiers permet de trouver rapidement dans quelle table se trouve un nombre.
+      </p>  
 </body>
 
 </html>

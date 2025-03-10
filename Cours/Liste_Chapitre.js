@@ -719,7 +719,13 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre A3",
 		nom: "Nombres premiers",
 		icone: 7,
-		ready : false,
+		download: {
+			pdf: "/Cours/5eme/RogerVailland/Chapitre_A3/Documents/A3 - Nombres premiers (Complet).pdf",
+			docx: "/Cours/5eme/RogerVailland/Chapitre_A3/Documents/A3 - Nombres premiers (Complet).docx",
+			pdf_trou: "/Cours/5eme/RogerVailland/Chapitre_A3/Documents/A3 - Nombres premiers (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_A3/Documents/A3 - Nombres premiers (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_A3/Cours.html",
 	},
 	{
