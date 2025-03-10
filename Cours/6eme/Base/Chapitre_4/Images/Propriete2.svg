@@ -18,8 +18,8 @@
 <text transform="matrix(1 0 0 1 92.2128 16.6651)" class="st3 st1 st2">(d</text>
 <text transform="matrix(0.583 0 0 0.583 110.9433 23.3253)" class="st3 st1 st2">2</text>
 <text transform="matrix(1 0 0 1 117.3993 16.6651)" class="st3 st1 st2">)</text>
-<rect x="69.5" y="50.1" transform="matrix(0.7493 0.6622 -0.6622 0.7493 56.7151 -36.2159)" width="13.3" height="13.3"/>
-<rect x="137.5" y="110.6" transform="matrix(0.7493 0.6622 -0.6622 0.7493 113.8246 -66.1003)" width="13.3" height="13.3"/>
+<rect x="69.5" y="50.1" fill="#FFA561" stroke="#D13832" transform="matrix(0.7493 0.6622 -0.6622 0.7493 56.7151 -36.2159)" width="13.3" height="13.3"/>
+<rect x="137.5" y="110.6" fill="#FFA561" stroke="#D13832" transform="matrix(0.7493 0.6622 -0.6622 0.7493 113.8246 -66.1003)" width="13.3" height="13.3"/>
 <text transform="matrix(1 0 0 1 13.8793 25.9911)" class="st4 st1 st2">(d</text>
 <text transform="matrix(0.583 0 0 0.583 32.6098 32.6513)" class="st4 st1 st2">3</text>
 <text transform="matrix(1 0 0 1 39.0659 25.9911)" class="st4 st1 st2">)</text>

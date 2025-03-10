@@ -18,7 +18,7 @@
 <text transform="matrix(1 0 0 1 -6.103516e-05 82.1251)" class="st3 st1 st2">(d</text>
 <text transform="matrix(0.583 0 0 0.583 18.7304 88.7852)" class="st3 st1 st2">2</text>
 <text transform="matrix(1 0 0 1 25.1865 82.1251)" class="st3 st1 st2">)</text>
-<rect x="101.2" y="32.9" transform="matrix(0.619 -0.7854 0.7854 0.619 10.0335 99.8132)" width="13.3" height="13.3"/>
+<rect x="101.2" y="32.9" fill="#FFA561" stroke="#D13832" transform="matrix(0.619 -0.7854 0.7854 0.619 10.0335 99.8132)" width="13.3" height="13.3"/>
 <text transform="matrix(1 0 0 1 23.7942 153.1675)" class="st4 st1 st2">(d</text>
 <text transform="matrix(0.583 0 0 0.583 42.5246 159.8277)" class="st4 st1 st2">3</text>
 <text transform="matrix(1 0 0 1 48.9807 153.1675)" class="st4 st1 st2">)</text>
