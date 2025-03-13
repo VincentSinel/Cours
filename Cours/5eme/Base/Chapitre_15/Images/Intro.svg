@@ -1,0 +1,96 @@
+<svg height="260" version="1.1" width="700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.400024px; top: -0.199997px;">
+<desc>
+Created with Raphaël 2.3.0</desc>
+<defs>
+</defs>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="#00ff80AA" stroke="#000000" d="M50,50L130,50L130,130L170,130L170,170L50,170Z" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="#ffff00AA" stroke="#000000" d="M250.00000000000003,50L290,50L290,130L330,130L330,170L290,170L290,210L250.00000000000003,210L250.00000000000003,170L210,170L210,130L250.00000000000003,130Z" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="#ff00ffAA" stroke="#000000" d="M370,50L490.00000000000006,50L490.00000000000006,170L370,170Z" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="#00ffffAA" stroke="#000000" d="M530,90L570,90L570,170L610,170L610,130L650,130L650,210L530,210Z" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M10,10L10,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M50,10L50,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M90,10L90,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M130,10L130,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M170,10L170,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M210,10L210,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M250,10L250,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M290,10L290,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M330,10L330,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M370,10L370,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M410,10L410,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M450,10L450,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M490,10L490,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M530,10L530,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M570,10L570,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M610,10L610,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M650,10L650,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M690,10L690,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M10,10L690,10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M10,50L690,50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M10,90L690,90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M10,130L690,130" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M10,170L690,170" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M10,210L690,210" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="none" stroke="#000000" d="M10,250L690,250" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<text style="text-anchor: middle; font-family: &quot;Arial&quot;; font-size: 32px; font-weight: bold;" x="90" y="130" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="32px" stroke="#ffffff" fill="#ffffff" stroke-width="5" font-weight="bold" transform="matrix(1,0,0,1,0,0)">
+<tspan dy="11.200002670288086">
+1</tspan>
+</text>
+<text style="text-anchor: middle; font-family: &quot;Arial&quot;; font-size: 32px;" x="90" y="130" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="32px" stroke="none" fill="#000000" transform="matrix(1,0,0,1,0,0)">
+<tspan dy="11.200002670288086">
+1</tspan>
+</text>
+<text style="text-anchor: middle; font-family: &quot;Arial&quot;; font-size: 34px; font-weight: bold;" x="270" y="130" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="34px" stroke="#ffffff" fill="#ffffff" stroke-width="5" font-weight="bold" transform="matrix(1,0,0,1,0,0)">
+<tspan dy="11.60000228881836">
+2</tspan>
+</text>
+<text style="text-anchor: middle; font-family: &quot;Arial&quot;; font-size: 34px;" x="270" y="130" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="34px" stroke="none" fill="#000000" transform="matrix(1,0,0,1,0,0)">
+<tspan dy="11.60000228881836">
+2</tspan>
+</text>
+<text style="text-anchor: middle; font-family: &quot;Arial&quot;; font-size: 36px; font-weight: bold;" x="430" y="110" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="36px" stroke="#ffffff" fill="#ffffff" stroke-width="5" font-weight="bold" transform="matrix(1,0,0,1,0,0)">
+<tspan dy="12.400003433227539">
+3</tspan>
+</text>
+<text style="text-anchor: middle; font-family: &quot;Arial&quot;; font-size: 36px;" x="430" y="110" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="36px" stroke="none" fill="#000000" transform="matrix(1,0,0,1,0,0)">
+<tspan dy="12.400003433227539">
+3</tspan>
+</text>
+<text style="text-anchor: middle; font-family: &quot;Arial&quot;; font-size: 36px; font-weight: bold;" x="590" y="190" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="36px" stroke="#ffffff" fill="#ffffff" stroke-width="5" font-weight="bold" transform="matrix(1,0,0,1,0,0)">
+<tspan dy="12.400003433227539">
+4</tspan>
+</text>
+<text style="text-anchor: middle; font-family: &quot;Arial&quot;; font-size: 36px;" x="590" y="190" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="36px" stroke="none" fill="#000000" transform="matrix(1,0,0,1,0,0)">
+<tspan dy="12.400003433227539">
+4</tspan>
+</text>
+</svg>

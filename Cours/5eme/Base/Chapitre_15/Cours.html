@@ -17,6 +17,43 @@
   <title>Chapitre 15 - Aires</title>
 
   <style>
+    .longueur_grid{
+      display: grid;
+      text-align: center;
+      border: solid 1px black;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .longueur_grid div{
+      border: solid 1px black;
+    }
+    .BR{
+      background-color: #ffcc99;
+    }
+    .BG{
+      background-color: #99ff99;
+    }
+
+    .p-table {
+      display: grid;
+      grid-template-columns: repeat(14, 1fr);
+      grid-template-rows: auto auto repeat(2, 30px);
+      align-content: center;
+      vertical-align: middle;
+      text-align: center;
+      border: solid 1px black;
+    }
+    .line_title2 {
+      background-color: #ccc0da;
+    }
+    .line_title2 {
+      font-size: 8pt;
+      font-weight: bold;
+    }
+    .p-table div{
+      border: solid 1px black;
+      align-content: center;
+      font-size: 12pt;
+    }
   </style>
 
 </head>
@@ -38,7 +75,111 @@
     Activité Introduction
   </p>
 
-  
+  <img src="Images/Intro.svg">
+  <ol>
+    <li>
+      Reproduire sur ton cahier les figure 1 et 3.
+      <ol type="a">
+        <li>Calculer le périmétre et l'aire des deux figures</li>
+        <li>Comparer les périmètres puis les aires</li>
+        <li>Que dire de l'affirmation : <i>"Plus le périmètre d'une figure est grand, plus l'aire est grande"</i></li>
+      </ol>
+    </li>
+    <li>
+      Reproduire les figures 2 et 4 et reprendre les questions précédentes.
+    </li>
+  </ol>
+
+  <h1>Aires :</h1>
+    <div class="definition">
+      L'<span class="CRed">aire</span> d'une figure est la mesure de sa surface.
+    </div>
+
+    <div class="longueur_grid">
+      <div style="grid-column: 1 / 3; font-weight: bold; font-size: 20px;">
+        Unités d'aire
+      </div>
+      <div class="CRed BR" style="font-weight: bold;">Multiples</div>
+      <div class="CGreen BG" style="font-weight: bold;">Sous-Multiples</div>
+      <div class="BR"><b>Décamètre carré</b><br>1 dam² = 100 m²</div>
+      <div class="BG"><b>Décimètre carré</b><br>1 dm² = 0,01 m²</div>
+      <div class="BR"><b>Hectomètre carré</b><br>1 hm² = 100 dam² = 10 000 m²</div>
+      <div class="BG"><b>Centimètre carré</b><br>1 cm² = 0,01 dm² = 0,00 01 m²</div>
+      <div class="BR"><b>Kilomètre carré</b><br>1 km² = 100 hm² = 10 000 dam² = 10 000 000 m²</div>
+      <div class="BG"><b>Millimètre carré</b><br>1 mm² = 0,01 cm² = 0,00 01 dm² = 0,00 000 1 m²</div>
+    </div>
+
+    <p>Tableau de conversion :</p>
+
+  <div class="p-table">
+    <div style="grid-column: 1 / 3;" class="line_title2">Kilomètre carré<br><span style="font-size: 16pt;">km²</span></div>
+    <div style="grid-column: 3 / 5;" class="line_title2">Hectomètre carré<br><span style="font-size: 16pt;">hm²</span></div>
+    <div style="grid-column: 5 / 7;" class="line_title2">Decamètre carré<br><span style="font-size: 16pt;">dam²</span></div>
+    <div style="grid-column: 7 / 9;" class="line_title2">Mètre carré<br><span style="font-size: 16pt;">m²</span></div>
+    <div style="grid-column: 9 / 11;" class="line_title2">Décimètre carré<br><span style="font-size: 16pt;">dm²</span></div>
+    <div style="grid-column: 11 / 13;" class="line_title2">Centimètre carré<br><span style="font-size: 16pt;">cm²</span></div>
+    <div style="grid-column: 13 / 15;" class="line_title2">Millimètre carré<br><span style="font-size: 16pt;">mm²</span></div>
+    <div class="line_title2">-</div><div class="line_title2">-</div><div class="line_title2">-</div><div class="line_title2">Hectare<br><span style="font-size: 16pt;">ha</span></div><div class="line_title2">-</div><div class="line_title2">Are<br><span style="font-size: 16pt;">a</span></div><div class="line_title2">-</div><div class="line_title2">Centiare<br><span style="font-size: 16pt;">ca</span></div><div class="line_title2">-</div><div class="line_title2">-</div><div class="line_title2">-</div><div class="line_title2">-</div><div class="line_title2">-</div><div class="line_title2">-</div>
+    <div></div><div></div><div></div><div>2</div><div>7</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div>0,</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>5</div><div></div><div></div>
+  </div>
+  <table style="width: 100%; text-align: center;">
+    <tr>
+      <td>2,7 hm² = 2 700 000 dm²</td>
+      <td>5 cm² = 0,00 000 5 dam²</td>
+    </tr>
+  </table>
+
+  <h1>Aires de figures usuels :</h1>
+    <div class="flexobject">
+      <img src="Images/Attention.svg" style="max-height: 4cm;">
+      <p style="flex: 1 1 5cm;">Attention, toutes les longueurs doivent être exprimés avec la même unité (ou sous unité).</p>
+    </div>
+    <h2>Rectangle et carré :</h2>
+      <table class="borderfull2">
+        <tr style="background-color: #b6dde8;">
+          <td><b>Carré de côté c.</b><br>$\mathscr{A}=c\times c=c²$</td>
+          <td><b>Rectangle de longueur L et largeur 𝓁.</b><br>$\mathscr{A}=L\times \mathscr{l}$</td>
+        </tr>
+        <tr>
+          <td><img src="Images/Carre.svg" style="max-height: 4cm;"></td>
+          <td><img src="Images/Rectangle.svg" style="max-height: 4cm;"></td>
+        </tr>
+      </table>
+      <p class="exemple">Exemple :</p>
+      <p>
+        L'aire d'un carré de côté 6cm est $\mathscr{A}=6\times6 = 36 cm²$.
+      </p>
+    <h2>Triangle :</h2>
+      <table class="borderfull2">
+        <tr style="background-color: #b6dde8;">
+          <td><b>Dans un triangle rectangle</b><br>$\mathscr{A}=\frac{a\times b}{2}$</td>
+          <td><b>Dans un triangle quelconque</b><br>$\mathscr{A}=\frac{Base\times Hauteur}{2}$</td>
+        </tr>
+        <tr>
+          <td><img src="Images/Triangle1.svg" style="max-height: 4cm;"></td>
+          <td><img src="Images/Triangle2.svg" style="max-height: 4cm;"></td>
+        </tr>
+      </table>
+      <p class="exemple">Exemple :</p>
+      <p>
+        L'aire d'un triangle rectangle dont les côtés de l'angle droit mesurent 6cm et 8cm est $\mathscr{A}=\frac{6\times8}{2}=\frac{48}{2}=24 cm²$.
+      </p>
+    <h2>Cercle :</h2>
+      <table class="borderfull2">
+        <tr style="background-color: #b6dde8;">
+          <td><b>Avec un rayon R</b><br>$\mathscr{A}=\pi \times r²$</td>
+          <td><b>Avec un diamètre D</td>
+        </tr>
+        <tr>
+          <td><img src="Images/Cercle1.svg" style="max-height: 5cm;"></td>
+          <td>Il faut calculer le rayon (en divisant par 2) et utiliser la formule précédente.</td>
+        </tr>
+      </table>
+      <p class="exemple">Exemple :</p>
+      <p>
+        L'aire d'un cercle de rayon 5cm est $\mathscr{A}=\pi\times5²=25\pi \approx 78,5 cm²$.
+      </p>
 
 </body>
 
