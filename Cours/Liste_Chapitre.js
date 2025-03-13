@@ -528,7 +528,7 @@ var cinquieme_base = [
 			id: 15,
 			nom: "Aires",
 			icone: 6,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_15/Cours.html"
 	},
 	{
