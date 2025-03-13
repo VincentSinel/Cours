@@ -13,8 +13,9 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script id="Animation" src="/JS/Animation/animation_holder.js"></script>
 
-  <title>Chapitre 16 - Aires</title>
+  <title>Chapitre 16 - Angles</title>
 
   <style>
   </style>
@@ -29,16 +30,245 @@
         Chapitre 16
       </td>
       <td id="ChapitreNom">
-        - Aires
+        - Angles
       </td>
     </tr>
   </table>
-
+  
   <p class="exemple">
     Activité Introduction
   </p>
 
-  
+  <div class="flexobject">
+    <div style="flex: 1 1 4cm;">
+      En utilisant le rapporteur et une règle, on souhaite tracer le triangle ci-contre.
+      <ol>
+        <li>Trace un segment [AC] de 6cm.</li>
+        <li>Place le centre de ton rapporteur sur le point A et aligne le "zéro" avec le segment.
+          <ol type="a">
+            <li>En partant du zero aligné avec le segment, place une graduation à 61°</li>
+            <li>Retire ton rapporteur et trace la droite passant par A et la marque que tu vient de construire.</li>
+          </ol>
+        </li>
+        <li>Faire de même à partir du point C avec l'angle de 43°.</li>
+        <li>Placer le point B à l'intersection des deux droites.</li>
+      </ol>
+    </div>
+    <img src="Images/Triangle1.svg" style="max-width: 5cm;">
+  </div>
+  <div id="Animation1" class="animation center" width="480" height="360"></div>
+
+  <h1>Définitions :</h1>
+      <h2>Angles :</h2>
+          <div class="definition">
+            Un <span class="CRed">angle</span> est une partie du plan limitée par deux demi-droites de même origine.
+          </div>
+          <img src="Images/Angle1.svg" style="max-width: 7cm;">
+      <h2>Angles particuliers :</h2>
+          <table class="proportionnaltable">
+            <tr>
+              <th>Angle plat</th>
+              <th>Angle droit</th>
+              <th>Angle nul</th>
+            </tr>
+            <tr>
+              <td>
+                <img src="Images/Angle2.svg" style="max-width: 7cm;">
+              </td> 
+              <td>
+                <img src="Images/Angle3.svg" style="max-height: 3cm;">
+              </td> 
+              <td>
+                <img src="Images/Angle4.svg" style="max-width: 7cm;">
+              </td> 
+            </tr>
+            <tr>
+              <td>180°</td>
+              <td>90°</td>
+              <td>0°</td>
+            </tr>
+          </table>
+          <p class="remarque">Remarque :</p>
+          <ul><li>Dans chacun des cas, le sommet de l'angle est <span class="CRed">O</span> et les deux demi-droites qui forme l'angle sont [<span class="CRed">O</span>A) et [<span class="CRed">O</span>B).</li></ul>
+
+          <p>
+            Dans le cas générales, on classe les angles en deux catégories :
+          </p>
+          <table class="proportionnaltable">
+            <tr>
+              <th>Angle <span class="CBlue">Aigu</span></th>
+              <th>Angle <span class="CRed">Obtus</span></th>
+            </tr>
+            <tr>
+              <td style="width: 200px;"><img src="Images/Angle5.svg" style="max-height: 3.5cm;"></td>
+              <td style="width: 200px;"><img src="Images/Angle6.svg" style="max-height: 3.5cm;"></td>
+            </tr>
+            <tr>
+              <td>Angle de moins de 90°</td>
+              <td>Angle de plus de 90°</td>
+            </tr>
+          </table>
+      <h2>Notation :</h2>
+          <p>Il existe deux notation d'angle en fonction de la partie du plan que l'on souhaite nommer. Lorsque l'angle est plus petit ou égale à un angle plat et lorsque qu'il est plus grand.</p>
+          <table class="proportionnaltable">
+            <tr>
+              <th>
+                Angle inférieur à un demi-tour
+              </th>
+              <th>
+                Angle supérieur à un demi-tour
+              </th>
+            </tr>
+            <tr>
+              <td><img src="Images/Angle7.svg" style="max-height: 4cm;"></td>
+              <td><img src="Images/Angle8.svg" style="max-height: 4cm;"></td>
+            </tr>
+            <tr>
+              <td><img src="Images/Nom1.svg" style="max-width: 1cm;"></td>
+              <td><img src="Images/Nom2.svg" style="max-width: 1cm;"></td>
+            </tr>
+          </table>
+    <h1>Couple d'angles :</h1>
+        <h2>Droites sécantes :</h2>
+          <p>
+            
+          </p>
+          <div class="definition">
+            Deux droites sécantes forment 4 angles.
+            Deux angles n'ayant que le sommet en commun, parmis les quatre, sont dits <span class="CRed">opposés par le sommets</span>. Il sont alors de même mesure.
+          </div>
+          <div class="flexobject">
+            <img src="Images/Secantes.svg" style="max-height: 4cm;">
+            <div style="flex: 1 1 5cm">
+              <p class="exemple">Exemples :</p>
+              <p>
+                $\widehat{AOB}$ et $\widehat{MON}$ sont <b>opposés par le sommets</b>.<br>
+                $\widehat{AOM}$ et $\widehat{BON}$ sont <b>opposés par le sommets</b>.
+              </p>
+            </div>
+          </div>
+          <div class="definition" style="margin-top: 10px;">
+            Des angles dont la somme des mesures est égale à 180° sont dits <span class="CRed">complémentaires.</span>
+          </div>
+          <p class="exemple">Exemples :</p>
+          <div class="flexobject">
+            <img src="Images/Anglecomplementaire.svg" style="max-height: 3cm;">
+            <div style="flex: 1 1 5cm">
+              $\widehat{AOB}$ , $\widehat{BOC}$ et $\widehat{COD}$ sont <b>complémentaires</b> car $\widehat{AOB} + \widehat{BOC} + \widehat{COD} =  54 + 90 + 36 = 180°$
+            </div>
+          </div>
+        <h2>Droites parallèles :</h2>
+          <div class="flexobject">
+            <img src="Images/Angles_1.svg" style="max-height: 4cm;">
+            <div style="flex: 1 1 5cm;">
+              On part d'une situation ou deux droites sont coupées par une sécante.<br>
+              On peut alors identifier trois type de couple d'angles :<br>
+              <b><ul>
+                <li>Les angles alternes-internes</li>
+                <li>Les angles alternes-externes</li>
+                <li>Les angles correspondants</li>
+              </ul></b>
+            </div>
+          </div>
+          <p>On peut alors identifier trois type de couple d'angles.</p>
+          <h3>Angles alternes-internes :</h3>
+            <div class="flexobject" style="text-align: center;">
+              <div style="flex: 1 1 5cm;">
+                <div style="margin-bottom: 10px;">
+                  Les angles sont de part et d'autre de la sécante et entre les deux droites. 
+                </div>
+                <img src="Images/Angles_5.svg" style="max-height: 4cm;">
+              </div>
+              <div style="flex: 1 1 5cm;">
+                <div style="margin-bottom: 10px;">
+                  On peut trouver deux couples d'angles <b>alternes-internes</b>. 
+                </div>
+                <img src="Images/Angles_6.svg" style="max-height: 4cm;">
+              </div>
+              <div style="flex: 1 1 5cm;">
+                <div style="margin-bottom: 10px;">
+                  Lorsque les droites $(d_1)$ et $(d_2)$ sont parallèles, deux angles <b>alternes-internes</b> sont de même mesure. 
+                </div>
+                <img src="Images/Angles_7.svg" style="max-height: 4cm;">
+              </div>
+            </div>
+          
+          <h3>Angles alternes-externes :</h3>
+            <div class="flexobject" style="text-align: center;">
+              <div style="flex: 1 1 5cm;">
+                <div style="margin-bottom: 10px;">
+                  Les angles sont de part et d'autre de la sécante et à l'extérieur des deux droites. 
+                </div>
+                <img src="Images/Angles_8.svg" style="max-height: 4cm;">
+              </div>
+              <div style="flex: 1 1 5cm;">
+                <div style="margin-bottom: 10px;">
+                  On peut trouver deux couples d'angles <b>alternes-externes</b>. 
+                </div>
+                <img src="Images/Angles_9.svg" style="max-height: 4cm;">
+              </div>
+              <div style="flex: 1 1 5cm;">
+                <div style="margin-bottom: 10px;">
+                  Lorsque les droites $(d_1)$ et $(d_2)$ sont parallèles, deux angles <b>alternes-externes</b> sont de même mesure. 
+                </div>
+                <img src="Images/Angles_10.svg" style="max-height: 4cm;">
+              </div>
+            </div>
+          
+          <h3>Angles correspondants :</h3>
+            <div class="flexobject" style="text-align: center;">
+              <div style="flex: 1 1 5cm;">
+                <div style="margin-bottom: 10px;">
+                  Les angles sont du même côté de la sécante et un à l'intérieur et l'autre à l'extérieur des deux droites. 
+                </div>
+                <img src="Images/Angles_2.svg" style="max-height: 4cm;">
+              </div>
+              <div style="flex: 1 1 5cm;">
+                <div style="margin-bottom: 10px;">
+                  On peut trouver quatre couples d'angles <b>correspondants</b>. 
+                </div>
+                <img src="Images/Angles_3.svg" style="max-height: 4cm;">
+              </div>
+              <div style="flex: 1 1 5cm;">
+                <div style="margin-bottom: 10px;">
+                  Lorsque les droites $(d_1)$ et $(d_2)$ sont parallèles, deux angles <b>correspondants</b> sont de même mesure. 
+                </div>
+                <img src="Images/Angles_4.svg" style="max-height: 4cm;">
+              </div>
+            </div>
+          
+    <h1>Mesure et construction :</h1>
+        <h2>Mesure d'un angle :</h2>
+            <div class="definition">
+              Pour mesurer un angle, on utilise le <span class="CRed">degré</span> comme unité. Il se note avec le symbole <b>°</b>.
+            </div>
+            <p class="Remarque">Remarque :</p>
+            <ul><li>Pour mesurer un angle, on utilise un rapporteur.</li></ul>
+            <p>Lorsque l'on souhaite mesure un angle, on place le centre du rapporteur sur le sommet de l'angle ; On aligne l'un des 0° avec l'un des côté de l'angle et on mesure à partir de la position de la seconde demi-droite.</p>
+            <div class="flexobject">
+              <img src="Images/Rapporteur1.svg" style="flex: 1 1 4cm; max-width: 12cm;">
+              <img src="Images/Rapporteur2.svg" style="flex: 1 1 4cm; max-width: 12cm;">
+            </div>
+            <p>En fonction du 0° choisi, la mesure de l'angle se mesure avec les graduation à l'intérieur ou à l'extérieur du rapporteur.</p>
+        <h2>Construction d'un angle :</h2>
+            <div class="flexobject">
+              <div style="flex: 1 1 4cm;max-width: 12cm;">
+                <ol><li value="1">On place le rapporteur sur le sommet</li></ol>
+                <img src="Images/Construction1.svg" >
+              </div>
+              <div style="flex: 1 1 4cm;max-width: 10cm;">
+                <ol><li value="2">On aligne le rapporteur avec la demi-droite et on mesure 70°</li></ol>
+                <img src="Images/Construction2.svg">
+              </div>
+              <div>
+                <ol><li value="3">On trace la demi droite.</li></ol>
+                <img src="Images/Construction3.svg" style="flex: 1 1 4cm;max-width: 6cm;">
+              </div>
+            </div>
+            <div style="text-align: center; border: solid 3px black; border-radius: 10px;width: fit-content; background-color: #FFFF8F33;">
+              Construction d'un angle de 61° :
+              <div id="Animation2" class="animation" width="480" height="360"></div>
+            </div>
 
 </body>
 

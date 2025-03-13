@@ -526,45 +526,38 @@ var cinquieme_base = [
 	},
 	{
 			id: 15,
-			nom: "Egalité et Réduction d'Expressions Littérales",
-			icone: 3,
+			nom: "Aires",
+			icone: 6,
 			ready : false,
 			page : "Base/Chapitre_15/Cours.html"
 	},
 	{
 			id: 16,
-			nom: "Aires",
-			icone: 6,
-			ready : false,
+			nom: "Angles",
+			icone: 2,
+			ready : true,
 			page : "Base/Chapitre_16/Cours.html"
 	},
 	{
 			id: 17,
-			nom: "Angles",
-			icone: 2,
+			nom: "Proportionnalité, échelles et pourcentage",
+			icone: 5,
 			ready : true,
 			page : "Base/Chapitre_17/Cours.html"
 	},
 	{
 			id: 18,
-			nom: "Proportionnalité, échelles et pourcentage",
-			icone: 5,
+			nom: "Solide",
+			icone: 2,
 			ready : true,
 			page : "Base/Chapitre_18/Cours.html"
 	},
 	{
 			id: 19,
-			nom: "Solide",
-			icone: 2,
-			ready : true,
-			page : "Base/Chapitre_19/Cours.html"
-	},
-	{
-			id: 20,
 			nom: "Parallélogrammes",
 			icone: 2,
 			ready : false,
-			page : "Base/Chapitre_20/Cours.html"
+			page : "Base/Chapitre_19/Cours.html"
 	}
 ]
 
