@@ -14,9 +14,16 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>Chapitre 18 - Proportionnalité, Pourcentage et Produit en Croix</title>
+  <title>Chapitre 18 - Proportionnalité, échelles et pourcentage</title>
 
   <style>
+    .tableau_prop{
+      display: flex;
+      align-items: center;
+    }
+    .samewidth td{
+      width: 50px;
+    }
   </style>
 
 </head>
@@ -29,7 +36,7 @@
         Chapitre 18
       </td>
       <td id="ChapitreNom">
-        - Proportionnalité, Pourcentage et Produit en Croix
+        - Proportionnalité, échelles et pourcentage
       </td>
     </tr>
   </table>
@@ -37,6 +44,72 @@
   <p class="exemple">
     Activité Introduction
   </p>
+
+  <div class="flexobject">
+    <div>
+      Louis a pris des vacances en suisse autour du lac Léman.
+      <ol>
+        <li>
+          En utilisant l'échelle de la carte, vérifier que la distance à vol d'oiseau entre Genève et Lausanne est d'environ 50 km.
+        </li>
+        <li>
+          Déterminer la distance à vol d'oiseau entre Lausanne et Thonon-les-bains ?
+        </li>
+      </ol>
+    </div>
+    <img src="Images/Act intro.png" style="border-radius: 0.5cm;">
+  </div>
+
+  <h1>Echelles :</h1>
+    <div class="definition">
+      Sur un plan dit « <i>à l'échelle</i> », les longueurs sont proportionnelles aux longueurs réelles.<br>
+      Le coefficient de proportionnalité obtenu en divisant les longueurs sur la carte par les longueurs réelles, toutes exprimées dans <b>la même unité</b>, s'appelle l'<span class="CRed">échelle</span> du plan.<br>
+      Echelle = <span class="formule">$\frac{Taille\ plan}{Taille\ réel}$</span>
+    </div>
+    <div class="flexobject">
+      <div style="max-width: 10cm;">
+        <p class="exemple">Exemple :</p>
+        <p>
+          Sur le plan de coulommiers ci-contre, l'échelle est indiqué en bas à droite.<br>
+          <span class="formule">$\frac{1}{30\ 000}$</span><br>
+          Cela signifie que 1 cm sur le plan correspond à 30&#8239;000 cm dans la réalité soit 300m.
+        </p>
+      </div>
+      <img src="Images/Plan_coulommiers.png" style="border-radius: 1cm;">
+    </div>
+  <h1>Pourcentage :</h1>
+    <div class="definition">
+      Un <span class="CRed">pourcentage</span> est une proportion par rapport à 100.  $\textcolor{#e53935}{t} \% = \frac{ \textcolor{#e53935}{t} }{100}$
+    </div>
+    <p class="exemple">Exemple :</p>
+    <div>
+      L'eau de la Mer Noir contient 2% de sel. Cela signifie que :
+      <ul>
+        <li>La proportion de sel dans l'eau est de $\frac{4}{100}$.</li>
+        <li>100kg d'eau contient 4kg de sel.</li>
+        <li>La masse d'eau et de sel sont proportionnel avec un coefficient de proportionnalité de $4\%=\frac{4}{100}= 0,04$</li>
+      </ul>
+    </div>
+    <div class="tableau_prop">
+      <table class="proportionnaltable samewidth">
+        <tr>
+          <th>Masse d'eau (kg)</th>
+          <td>100</td>
+          <td>360</td>
+        </tr>
+        <tr>
+          <th>Masse de sel (kg)</th>
+          <td>4</td>
+          <td>?</td>
+        </tr>
+      </table>
+      <img src="Images/Coef3.png" style="max-height: 50px;">
+    </div>
+    <p>
+      Pour calculer la quantité de sel dans 360kg, on multiplie : $360\times 4\% = 360 \times 0,04 = 14,4 kg$
+    </p>
+    <p class="remarque">Remarque :</p>
+    <ul><li>Le symbole % est un opérateur.</li></ul>
 
   
 
