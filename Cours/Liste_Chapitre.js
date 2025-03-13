@@ -547,9 +547,9 @@ var cinquieme_base = [
 	},
 	{
 			id: 18,
-			nom: "Proportionnalité, Pourcentage et Produit en Croix",
+			nom: "Proportionnalité, échelles et pourcentage",
 			icone: 5,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_18/Cours.html"
 	},
 	{
@@ -650,15 +650,15 @@ var cinquieme_saintexupery = [
 			id: 12,
 			nom: "Fraction - Proportion et quotient",
 			icone: 1,
-			ready : false,
-			page : "Base/Chapitre_11/Cours.html"
+			ready : true,
+			page : "saintexupery/Chapitre_12/Cours.html"
 	},
 	{
 			id: 13,
 			nom: "Proportionnalité",
 			icone: 5,
-			ready : false,
-			page : "Base/Chapitre_12/Cours.html"
+			ready : true,
+			page : "saintexupery/Chapitre_13/Cours.html"
 	},
 	{
 			id: 14,
