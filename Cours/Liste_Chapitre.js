@@ -1606,7 +1606,7 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre F1",
 		nom: "Tracer une perpendiculaire",
 		icone: 12,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_F1/Cours.html",
 	},
 	{
@@ -1614,7 +1614,7 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre F2",
 		nom: "Tracer une parallèle",
 		icone: 12,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_F2/Cours.html",
 	},
 	{
