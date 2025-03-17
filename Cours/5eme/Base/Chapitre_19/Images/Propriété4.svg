@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113.62 44.95">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #e5064a;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-6 {
+        fill: #674695;
+      }
+
+      .cls-2 {
+        stroke: #674695;
+        stroke-width: .5px;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-3 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-4 {
+        stroke: #f6a117;
+      }
+
+      .cls-6 {
+        stroke-width: 0px;
+      }
+
+      .cls-5 {
+        stroke: #44ace2;
+      }
+    </style>
+  </defs>
+  <line class="cls-5" x1="20.17" y1="2.86" x2="113.62" y2="2.86"/>
+  <line class="cls-5" y1="42.09" x2="93.45" y2="42.09"/>
+  <line class="cls-3" x1="42.11" y1="2.86" x2="17.29" y2="42.09"/>
+  <line class="cls-3" x1="95.49" y1="2.86" x2="70.67" y2="42.09"/>
+  <line class="cls-1" x1="108.71" y1="19.47" x2="105.28" y2="26.46"/>
+  <line class="cls-1" x1="111.25" y1="19.47" x2="107.82" y2="26.46"/>
+  <g>
+    <path class="cls-2" d="m105.12,18c-1.71-2.98-2.61-8.75-2.37-12.31"/>
+    <polygon class="cls-6" points="103.62 6.5 102.74 6 101.78 6.29 102.95 4.21 103.62 6.5"/>
+  </g>
+  <g>
+    <path class="cls-2" d="m102.72,25.6c-2.3,1.09-9.95,8.66-11.72,13.17"/>
+    <polygon class="cls-6" points="90.32 37.85 91.11 38.48 92.11 38.34 90.63 40.21 90.32 37.85"/>
+  </g>
+  <circle class="cls-4" cx="46.72" cy="42.09" r="2.36"/>
+  <circle class="cls-4" cx="66.89" cy="2.86" r="2.36"/>
+</svg>

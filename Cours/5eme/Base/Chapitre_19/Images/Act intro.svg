@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.93 80.18">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #e7d900;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-3 {
+        stroke: #e5064a;
+      }
+
+      .cls-4 {
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 8px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-4, .cls-5 {
+        fill: #1d1d1b;
+      }
+
+      .cls-5 {
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g>
+    <line class="cls-2" x1="3.08" y1="13.16" x2="80.78" y2="71.03"/>
+    <rect class="cls-5" x="-.17" y="12.66" width="6.5" height="1" transform="translate(-9.32 7.77) rotate(-53.33)"/>
+    <rect class="cls-5" x="77.53" y="70.53" width="6.5" height="1" transform="translate(-24.44 93.4) rotate(-53.32)"/>
+  </g>
+  <g>
+    <line class="cls-2" x1="67.96" y1="27.07" x2="15.9" y2="57.13"/>
+    <rect class="cls-5" x="67.46" y="23.82" width="1" height="6.5" transform="translate(-4.43 37.61) rotate(-30)"/>
+    <rect class="cls-5" x="15.4" y="53.88" width="1" height="6.5" transform="translate(-26.44 15.6) rotate(-30)"/>
+  </g>
+  <text class="cls-4" transform="translate(0 6.84)"><tspan x="0" y="0">A</tspan></text>
+  <text class="cls-4" transform="translate(82.99 78.01)"><tspan x="0" y="0">C</tspan></text>
+  <text class="cls-4" transform="translate(6.45 63.2)"><tspan x="0" y="0">B</tspan></text>
+  <text class="cls-4" transform="translate(68.37 23.03)"><tspan x="0" y="0">D</tspan></text>
+  <g>
+    <line class="cls-3" x1="50.73" y1="31.29" x2="55.71" y2="38.44"/>
+    <line class="cls-3" x1="53.22" y1="31.29" x2="58.2" y2="38.44"/>
+  </g>
+  <circle class="cls-1" cx="21.95" cy="27.22" r="2.36"/>
+  <g>
+    <line class="cls-3" x1="24.71" y1="46.31" x2="29.69" y2="53.46"/>
+    <line class="cls-3" x1="27.2" y1="46.31" x2="32.18" y2="53.46"/>
+  </g>
+  <circle class="cls-1" cx="61.56" cy="56.71" r="2.36"/>
+</svg>

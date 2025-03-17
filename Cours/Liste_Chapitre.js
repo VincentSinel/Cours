@@ -556,7 +556,7 @@ var cinquieme_base = [
 			id: 19,
 			nom: "Parallélogrammes",
 			icone: 2,
-			ready : false,
+			ready : true,
 			page : "Base/Chapitre_19/Cours.html"
 	}
 ]

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104.91 50.06">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #e7d900;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke: #74bd83;
+      }
+
+      .cls-3 {
+        stroke: #674695;
+      }
+
+      .cls-4 {
+        stroke: #e5064a;
+      }
+    </style>
+  </defs>
+  <line class="cls-3" x1=".5" y1="45.99" x2="30.88" y2="4.07"/>
+  <line class="cls-2" x1="74.03" y1="45.99" x2=".5" y2="45.99"/>
+  <line class="cls-3" x1="104.41" y1="4.07" x2="74.03" y2="45.99"/>
+  <line class="cls-2" x1="30.88" y1="4.07" x2="104.41" y2="4.07"/>
+  <g>
+    <line class="cls-4" x1="31.94" y1="42.41" x2="36.91" y2="49.56"/>
+    <line class="cls-4" x1="34.43" y1="42.41" x2="39.4" y2="49.56"/>
+  </g>
+  <g>
+    <line class="cls-4" x1="63.91" y1=".5" x2="68.89" y2="7.65"/>
+    <line class="cls-4" x1="66.4" y1=".5" x2="71.38" y2="7.65"/>
+  </g>
+  <circle class="cls-1" cx="15.69" cy="25.03" r="2.36"/>
+  <circle class="cls-1" cx="89.22" cy="25.03" r="2.36"/>
+</svg>
