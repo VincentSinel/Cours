@@ -946,7 +946,13 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre F2",
 		nom: "Propriétés des symétries",
 		icone: 12,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/5eme/RogerVailland/Chapitre_F2/Documents/F2 - Propriétés de la symétrie (Complet).pdf",
+			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_F2/Documents/F2 - Propriétés de la symétrie (Complet).docx",
+			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_F2/Documents/F2 - Propriétés de la symétrie (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_F2/Documents/F2 - Propriétés de la symétrie (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_F2/Cours.html",
 	},
 	{

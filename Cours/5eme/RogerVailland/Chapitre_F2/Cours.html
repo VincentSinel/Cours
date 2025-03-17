@@ -13,10 +13,19 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script id="Animation" src="/JS/Animation/animation_holder.js"></script>
+  <script src="JS/Transformation.js"></script>
 
-  <title>E1 - Généralité sur les triangles</title>
+  <title>F2 - Propriétés des symétries</title>
 
   <style>
+    #symetrieaxiale,
+    #symetriecentrale
+    {
+      border: solid black 1px; 
+      width: fit-content;
+      display: inline-block;
+    }
   </style>
 
 </head>
@@ -26,10 +35,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        E1
+        F2
       </td>
       <td id="ChapitreNom">
-        - Nombres Relatifs (Partie 1)
+        - Propriétés des symétries
       </td>
     </tr>
   </table>
@@ -37,8 +46,78 @@
   <p class="exemple">
     Activité Introduction
   </p>
+  <p>
+    Dans chacun des cas tracé les axes de symétrie et placer le centre de symétrie si possible.
+  </p>
+  <img src="Images/Act intro.svg" style="max-width: 19cm;">
 
+  <h1>Propriétés :</h1>
+    <h2>Symétrie axiale :</h2>
+      <div class="definition">
+        <u><b>Propriétés</b></u><br>
+        Lors d'une symétrie axiale les longueurs, les alignements et les angles sont conservés.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <div id="symetrieaxiale"></div>
+    <h2>Symétrie centrale :</h2>
+      <div class="definition">
+        <b><u>Propriétés :</u></b><br>
+        <ul>
+          <li>Si trois points sont alignés, alors leurs symétriques par rapport à un point sont aussi alignés.</li>
+          <li>Si deux segments sont symétriques par rapport à un point, alors ils sont parallèles et de même longueur.</li>
+          <li>Si deux angles sont symétriques par rapport à un point, alors ils ont la même mesure.</li>
+          <li>Si deux figures sont symétriques par rapport à un point, alors elles ont le même périmètre et la même aire.</li>
+        </ul>
+      </div>
+      <p class="exemple">Exemple :</p>
+      <div id="symetriecentrale"></div>
+  <h1>Axe et centre de symétrie d'une figure :</h1>
+      <h2>Axe de symétrie :</h2>
+        <div class="definition">
+          On dit qu'une droite est un <span class="CRed">axe de symétrie</span> d'une figure lorsque la figure et son symétrique par rapport à cette droite sont confondus. 
+        </div>
+        <p class="exemple">Exemple :</p>
+        <div class="flexobject">
+          <img src="Images/Avion.svg" style="max-height: 6cm;">
+          <div style="flex: 1 1 5cm;">
+            Le droite <i>(d)</i> est un axe de symétrie de la figure.
+          </div>
+        </div>
   
+      <h2>Centre de symétrie :</h2>
+        <div class="definition">
+          On dit qu'un point est un <span class="CRed">centre de symétrie</span> d'une figure lorsque la figure et son symétrique par rapport à ce point sont confondus. 
+        </div>
+        <p class="exemple">Exemple :</p>
+        <div class="flexobject">
+          <img src="Images/YingYang.svg" style="max-height: 6cm;">
+          <div style="flex: 1 1 5cm;">
+            Le point O est un centre de symétrie de la figure.
+          </div>
+        </div>
 </body>
-
+<script>
+  let client = new XMLHttpRequest();
+  client.open('GET', 'Images/Lobster.svg');
+  client.onreadystatechange = function(state) {
+      if (client.readyState == 4)
+      {
+          lobster1img = client.responseText
+          if (lobster2img != "")
+              Init()
+      }
+  }
+  client.send();
+  let client2 = new XMLHttpRequest();
+  client2.open('GET', 'Images/Lobster2.svg');
+  client2.onreadystatechange = function(state) {
+      if (client2.readyState == 4)
+      {
+          lobster2img = client2.responseText
+          if (lobster1img != "")
+              Init()
+      }
+  }
+  client2.send();
+</script>
 </html>
