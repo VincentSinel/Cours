@@ -14,9 +14,42 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>A1 - Entier et décimaux</title>
+  <title>A3 - Différentes écritures d'un nombre décimal</title>
 
   <style>
+    .nombre_croisee
+    {
+      border-collapse: collapse;
+      text-align: center;
+    }
+    .nombre_croisee th
+    {
+      font-style: bold;
+      width: 1cm;
+      height: 1cm;
+    }
+    .nombre_croisee td
+    {
+      width: 1cm;
+      height: 1cm;
+      border: solid 1px black;
+    }
+    .gris{
+      background-color: gray;
+    }
+    .defi li + li {
+      margin-top: 0.5cm;
+    }
+    .defi{
+      box-shadow: 0px 0px 10px black;
+      border-radius: 10px;
+      padding: 5px;
+      background-color: var(--Color_BlueGray5);
+    }
+    .defi li{
+      padding-left: 1em;
+      flex: 450px 1 1;
+    }
   </style>
 
 </head>
@@ -26,10 +59,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        A1
+        A3
       </td>
       <td id="ChapitreNom">
-        - Nombres entiers
+        - Différentes écritures d'un nombre décimal
       </td>
     </tr>
   </table>
@@ -37,6 +70,132 @@
   <p class="exemple">
     Activité Introduction
   </p>
+
+  <p>
+    Compléter la grille à l'aide des nombres que tu trouveras grâce aux définitions qui se trouvent à côté.<br>
+    <i>Attention ! tu ne peux pas écrire de chiffre dans une case grise.</i>
+  </p>
+  <div class="flexobject">
+    <table class="nombre_croisee">
+      <tr>
+        <th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th>
+      </tr>
+      <tr>
+        <th>I</th><td></td><td></td><td></td><td class="gris"></td><td></td>
+      </tr>
+      <tr>
+        <th>II</th><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <th>III</th><td></td><td class="gris"></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <th>IV</th><td></td><td></td><td></td><td></td><td class="gris"></td>
+      </tr>
+      <tr>
+        <th>V</th><td class="gris"></td><td></td><td></td><td></td><td></td>
+      </tr>
+    </table>
+    <div class="defi">
+      <b><i><u>Horizontalement</u> (en ligne) :</i></b><br>
+      <ol type="I">
+        <li>
+          <u><i>1<sup>er</sup> nombre :</i></u> La partie entière de 328,54.<br>
+          <u><i>2<sup>ème</sup> nombre :</i></u> Le chiffre des centièmes de 634,152.
+        </li>
+        <li>
+          Son chiffre des dizaines est le triple de celui des unités.
+        </li>
+        <li>
+          <u><i>1<sup>er</sup> nombre :</i></u> Le chiffre des dixièmes de 34.<br>
+          <u><i>2<sup>ème</sup> nombre :</i></u> 199-21.
+        </li>
+        <li>
+          Nombre entier compris entre 8 000 et 9 000.
+        </li>
+        <li>
+          Quarante-deux centaines.
+        </li>
+      </ol>
+    </div>
+    <div class="defi">
+      <b><i><u>Verticalement</u> (en colonne) :</i></b><br>
+      <ol type="A">
+        <li>
+          (3 x 1 000) + (5 x 100) + (8 x 1).
+        </li>
+        <li>
+          <u><i>1<sup>er</sup> nombre :</i></u> Le nombre de dixièmes dans 2,6.<br>
+          <u><i>2<sup>ème</sup> nombre :</i></u> La partie entière de $\frac{2\ 498}{100}$.
+        </li>
+        <li>
+          Quatre-vingt-six milliers et cent deux unités.
+        </li>
+        <li>
+          En additionnant tous les chiffres de ce nombre, on trouve 20.
+        </li>
+        <li>
+          <u><i>1<sup>er</sup> nombre :</i></u> 5 centaines + 3 dizaines + 8 unités.<br>
+          <u><i>2<sup>ème</sup> nombre :</i></u> Nombre entier qui précède 1.
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <h1>Ecriture fractionnaire :</h1>
+    <div class="definition">
+      Un nombre décimal peut s'écrire comme fraction décimal. Il suffit de prendre le dénominateur correspondant au rang du dernier chiffre après la virgule.
+    </div>
+    <p class="exemple">Exemples :</p>
+    <div class="flexobject">
+      <div>
+        Dans 35,2<b>5</b> le dernier chiffre est le chiffre des <b>centièmes</b>.<br>
+        On utilise donc 100 comme dénominateur pour la fraction décimal.<br>
+        <ul>
+          <li>$35,25 = \frac{3\ 525}{100}$</li>
+        </ul>
+      </div>
+      <div>
+        Dans 102,02<b>7</b> le dernier chiffre est le chiffre des <b>millièmes</b>.<br>
+        On utilise donc 1 000 comme dénominateur pour la fraction décimal.<br>
+        <ul>
+          <li>$102,027 = \frac{102\ 027}{1\ 000}$</li>
+        </ul>
+      </div>
+    </div>
+  <h1>Partie entière et partie décimale :</h1>
+    <div class="definition">
+      On peut décomposer un nombre décimal en séparent sa <span class="CGreen"><b>partie entière</b></span> et sa <span class="CViolet"><b>partie décimal</b></span>.
+    </div>
+    <p class="exemple">Exemple :</p>
+    <ul>
+      <li>
+        $35,25 = \textcolor{#43a047}{35} + \textcolor{#7C4DA5}{0,25} = \textcolor{#43a047}{35} + \textcolor{#7C4DA5}{\frac{25}{100}}$
+      </li>
+      <li>
+        $102,027 = \textcolor{#43a047}{102} + \textcolor{#7C4DA5}{0,027} = \textcolor{#43a047}{102} + \textcolor{#7C4DA5}{\frac{27}{1\ 000}}$
+      </li>
+    </ul>
+  <h1>Autres décompositions :</h1>
+    <p>Il existe de très nombreuses autre décomposition. Voici quelques exemples, dans tous les cas, il faudra suivre la consigne pour effectuer la bonne décomposition dans les exercices :</p>
+    <ul>
+      <li>
+        <b>Décomposition additive :</b><br>
+        <ul>
+          <li>$35,25 = 30 + 5 + 0,2 + 0,05$</li>
+          <li>$35,25 = 30 + 5 + \frac{2}{10} + \frac{5}{100}$</li>
+        </ul>
+      </li>
+      <li>
+        <b>Décomposition multiplicative :</b><br>
+        <ul>
+          <li>$35,25 = (3\times 10) + 5 + (2\times 0,1) + (5\times 0,01)$</li>
+          <li>$35,25 = (3\times 10) + 5 + (2\times \frac{1}{10}) + (5\times \frac{1}{100})$</li>
+        </ul>
+      </li>
+    </ul>
+    
+    
 
 
         

@@ -1259,9 +1259,9 @@ var sixieme_rogervailland = [
 		nom: "Nombres décimaux",
 		icone: 7,
 		download: {
-			pdf: "/Cours/6eme/RogerVailland/Chapitre_A2/Documents/A2 - Nombres décimaux (Complet).pdf",
-			docx: "/Cours/6eme/RogerVailland/Chapitre_A2/Documents/A2 - Nombres décimaux (Complet).docx",
-			pdf_trou: "/Cours/6eme/RogerVailland/Chapitre_A2/Documents/A2 - Nombres décimaux (A trou).pdf",
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_A2/Documents/A2 - Nombres décimaux (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_A2/Documents/A2 - Nombres décimaux (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_A2/Documents/A2 - Nombres décimaux (A trou).pdf",
 			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_A2/Documents/A2 - Nombres décimaux (A trou).docx",
 		},
 		ready : true,
@@ -1272,7 +1272,13 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre A3",
 		nom: "Différentes écritures d'un nombre décimal",
 		icone: 7,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_A3/Documents/A3 - Différentes écritures d'un nombre décimal (Complet).pdf",
+			docx:		 	 "/Cours/6eme/RogerVailland/Chapitre_A3/Documents/A3 - Différentes écritures d'un nombre décimal (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_A3/Documents/A3 - Différentes écritures d'un nombre décimal (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_A3/Documents/A3 - Différentes écritures d'un nombre décimal (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_A3/Cours.html",
 	},
 	{
