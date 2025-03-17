@@ -671,8 +671,8 @@ var cinquieme_saintexupery = [
 			id: 16,
 			nom: "Parallélogrammes",
 			icone: 2,
-			ready : false,
-			page : "Base/Chapitre_15/Cours.html"
+			ready : true,
+			page : "Base/Chapitre_19/Cours.html"
 	},
 	{
 			id: 17,
@@ -685,8 +685,8 @@ var cinquieme_saintexupery = [
 			id: 18,
 			nom: "Probabilités",
 			icone: 4,
-			ready : false,
-			page : "Base/Chapitre_18/Cours.html"
+			ready : true,
+			page : "Base/Chapitre_13/Cours.html"
 	},
 ]
 
