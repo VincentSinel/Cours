@@ -14,9 +14,22 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>E1 - Généralité sur les triangles</title>
+  <title>C2 - Expression littérale</title>
 
   <style>
+    .programme{
+      background-color: var(--Color_Green5); 
+      border-radius: 0.5cm; 
+      border: solid 2px var(--Color_Green1);
+      padding-right: 12px;
+    }
+    .programme div {
+      width: 100%;
+      text-align: center;
+    }
+    .programme span{
+      color: var(--Color_Green2);
+    }
   </style>
 
 </head>
@@ -26,10 +39,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        E1
+        C2
       </td>
       <td id="ChapitreNom">
-        - Nombres Relatifs (Partie 1)
+        - Expression littérale
       </td>
     </tr>
   </table>
@@ -37,6 +50,149 @@
   <p class="exemple">
     Activité Introduction
   </p>
+
+  <div class="flexobject">
+    <img src="Images/Intro1.svg" style="max-width: 6cm;">
+    <div style="flex: 1 1 5cm">
+      <p>Yazid fait l'achat de ses fournitures scolaires. Il a acheté 4 stylos valant 1€20 pièces. Il a aussi acheté 8 cahiers dont il ne se souvient plus le prix.</p>
+      <ol>
+        <li>En prenant pour le prix d'un cahier 2€ 30, écrire une expressions permettant de calculer le montant payé et le calculer.</li>
+        <li>En prenant pour le prix d'un cahier 1€ 90, écrire une expressions permettant de calculer le montant payé et le calculer.</li>
+        <li>En notant <i>"c"</i> le prix d'un cahier, écrire une formule en une expression permettant de calculer le prix payé.</li>
+        <li>Yazid se rappelle avoir payé 21€60. Quel est le prix d'un cahier ? (Utiliser le schéma ci-dessous)<br>
+          <img src="Images/Intro2.svg" style="max-height: 2cm;"
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <h1>Expressions littérales :</h1>
+    <h2>Définition :</h2>
+      <div class="definition">
+        Une <span class="CRed">expression littérale</span> est une expression (un calcul) qui fait intervenir une ou plusieurs lettres.
+      </div>
+      <p class="exemple">Exemples :</p>
+      <ul>
+        <li>$c\times c$</li>
+        <li>$L\times 𝓁$</li>
+        <li>$2\times L + 2\times 𝓁$</li>
+      </ul>
+      <div class="definition">
+        Dans une <b>expression littérale</b> les lettres sont appelées des <span class="CRed">variables</span>. Une variable représente un nombre dont la valeur peut changer (varier).
+      </div>
+      <p class="remarque">Remarques :</p>
+      <ul>
+        <li>
+          Les nombres seul sont appelés des <span class="CRed">constante</span>.<br>
+          <b>Ex : $\textcolor{#43a047}{4} + \textcolor{#039be5}{5\times a}$</b><br><span class="CGreen">Constante</span>&#160;&#160;&#160; <span class="CBlue">Variable</span>
+        </li>
+        <li>Dans une expressions, une variable si elle apparait plusieurs fois, représente le même nombre.</li>
+        <li>Lorsque l'on effectue le calcul en remplaçant la variable par une valeur on dit que l'on <b>évalue</b> l'expression en cette valeur.</li>
+      </ul>
+    <h2>Programme de calcul :</h2>
+      <p>
+        On utilise les expressions littérales pour traduire un programme de calcul en une seul expressions. Cela permet d'étudier le programme avec d'autre outils.
+      </p>
+      <p class="exemple">Exemples :</p>
+      <div class="flexobject">
+        <div class="flexobject">
+          <div class="programme">
+            <div>
+              <span><b>Programme 1</b></span>
+            </div>
+            <ul>
+              <li>Choisir un nombre.</li>
+              <li>Ajouter 5.</li>
+              <li>Multiplier par 6.</li>
+            </ul>
+          </div>
+          <div>
+            <div>
+              <span><b>Programme 1</b></span>
+            </div>
+            <ul>
+              <li>$x$</li>
+              <li>$x+5$</li>
+              <li>$(x+5)\times 6$</li>
+            </ul>
+            <p>
+              Donc le programme 1 correspond à $(x+5)\times 6$
+            </p>
+          </div>
+        </div>
+        <div class="flexobject">
+          <div class="programme">
+            <div>
+              <span><b>Programme 2</b></span>
+            </div>
+            <ul>
+              <li>Choisir un nombre.</li>
+              <li>Prendre son carré.</li>
+              <li>Ajouter le nombre de départ.</li>
+            </ul>
+          </div>
+          <div>
+            <div>
+              <span><b>Programme 2</b></span>
+            </div>
+            <ul>
+              <li>$x$</li>
+              <li>$x^2$</li>
+              <li>$x^2+x$</li>
+            </ul>
+            <p>
+              Donc le programme 2 correspond à $x^2+x$
+            </p>
+          </div>
+        </div>
+      </div>
+  <h1>Réduction :</h1>
+    <h2>Conventions d'écritures :</h2>
+      <div class="definition">
+        Il existe des conventions de simplification d'expression. On peut sous-entendre le signe multiplier entre :
+        <ul>
+          <li>Un nombre et une lettre : $3 \textcolor{#e53935}{\times} a = 3a$</li>
+          <li>Deux lettres : $a\textcolor{#e53935}{\times} b = ab$</li>
+          <li>Une lettre (ou un chiffre) et une parenthèse : $a\textcolor{#e53935}{\times} (2 + b) = a(2+b)$</li>
+          <li>Entre deux parenthèse : $(a + 2)\textcolor{#e53935}{\times}(b + 3)=(a+2)(b+3)$</li>
+        </ul>
+      </div>
+    <h2>Réduction :</h2>
+      <div class="definition">
+        <span class="CRed">Réduire</span> une expression littérale, c'est l'écrire avec <span class="CRed">le moins de termes</span> ou symbole possibles.
+      </div>
+      <div class="flexobject">
+        <div>
+          <p class="DRed">Famille des constante.</p>
+          <p class="DGreen">Famille des $x$.</p>
+          <p class="DBlue">Famille des $x^2$.</p>
+          <p class="DViolet">Famille des $x^3$.</p>
+        </div>
+        <div class="floating" style="height: 90px;">
+          <div class="DGRound" style="margin-left: 10px; margin-top: 0px">$5x$</div>
+          <div class="DGRound" style="margin-left: 40px; margin-top: 30px">$-3x$</div>
+          <div class="DGRound" style="margin-left: 90px; margin-top: 60px">$x$</div>
+          <div class="DRRound" style="margin-left: 0px; margin-top: 60px">$7$</div>
+          <div class="DRRound" style="margin-left: 47px; margin-top: 0px">$-2$</div>
+          <div class="DRRound" style="margin-left: 90px; margin-top: 30px">$4$</div>
+          <div class="DBRound" style="margin-left: 30px; margin-top: 60px">$6x^2$</div>
+          <div class="DBRound" style="margin-left: 0px; margin-top: 30px">$2x^2$</div>
+          <div class="DBRound" style="margin-left: 110px; margin-top: 30px">$-3x^2$</div>
+          <div class="DVRound" style="margin-left: 80px; margin-top: 0px">$-5x^3$</div>
+        </div>
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>
+        <div class="DGRound">$3x$</div> &nbsp;<div class="DBRound">$+2x^2$</div> &nbsp;
+        <div class="DRRound">$+8$</div>  &nbsp;<div class="DGRound">$-2x$</div> &nbsp;
+        <div class="DRRound">$-5$</div>  &nbsp;<div class="DBRound">$+7x^2$</div> &nbsp;
+        <div class="DGRound">$+7x$</div> 
+        = <div class="DBRound">$9x^2$</div> &nbsp;<div class="DGRound">$+8x$</div> &nbsp;<div class="DRRound">$+3$</div>
+      </p>
+      <p><div></div>On regroupe les termes d'une même familles ensemble. Ici <div class="DBRound">les $x^2$</div> , <div class="DGRound">les $x$</div> et <div class="DRRound">les constantes</div>.</p>
+      <p class="remarque">Remarque :</p>
+      <p><b>On ne peut pas ajouter deux éléments de famille différentes</b> : </p>
+      Par exemple $8x + 3 ≠ 11x$ ou encore $2x^2 + 3x ≠ 5x$.
 
   
 </body>

@@ -824,7 +824,13 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre C2",
 		nom: "Expression littérale",
 		icone: 9,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/5eme/RogerVailland/Chapitre_C2/Documents/C2 - Expression littérale (Complet).pdf",
+			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_C2/Documents/C2 - Expression littérale (Complet).docx",
+			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_C2/Documents/C2 - Expression littérale (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_C2/Documents/C2 - Expression littérale (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_C2/Cours.html",
 	},
 	{
