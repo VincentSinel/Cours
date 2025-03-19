@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <script src="/JS/Svg.js/svg.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+	<script src="/JS/Diagrammes/Diagramme_Holder.js"></script> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Chapitre 7 - Statistiques</title>
+
+  <style>
+    .tableprop td{
+      border: none;
+      border-right: solid 2px transparent;
+      color: var(--Cred);
+      padding: 3px 0px;
+      font-size: 10pt;
+    }
+    .valeur{
+      column-gap: 5px;
+    }
+    .valeur div{
+      /* max-width: 30px; */
+      min-width: 30px;
+      text-align: center;
+    }
+    .listenoix td{
+      border: solid black 1px;
+      min-width: 30px;
+      text-align: center;
+    }
+    .tablediv{
+      gap: 0px;
+      /* border-bottom: solid var(--TableBorder) 1px;
+      border-left: solid var(--TableBorder) 1px; */
+      width: fit-content;
+    }
+    .tablediv div{
+      border: solid var(--TableBorder) 1px;
+      /* border-left: solid var(--TableBorder) 1px; */
+    }
+    .tablediv div div{
+      border: solid var(--TableBorder) 1px;
+      /* border-top: solid var(--TableBorder) 1px;
+      border-right: solid var(--TableBorder) 1px; */
+      min-width: 2cm;
+      min-height: 0.7cm;
+      padding: 0px 5px;
+      text-align: center;
+    }
+    .tablediv div:nth-child(odd) div{
+      background-color: var(--TableOdd);
+    }
+    .tablediv div:nth-child(1) div{
+      text-align: left;
+      font-weight: bold;
+      background-color: var(--TableHeader);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Chapitre 7
+      </td>
+      <td id="ChapitreNom">
+        - Statistiques
+      </td>
+    </tr>
+  </table>
+
+  <p class="exemple">
+    Activité Introduction
+  </p>
+
+  Un Producteur de noix trie un échantillon de 50 noix, selon leur calibre, en mm.
+  <table class="listenoix">
+    <tr>
+      <td>28</td> <td>30</td> <td>34</td> <td>35</td> <td>30</td>
+      <td>36</td> <td>33</td> <td>37</td> <td>28</td> <td>31</td>
+    </tr>
+    <tr>
+      <td>32</td> <td>37</td> <td>29</td> <td>36</td> <td>37</td>
+      <td>36</td> <td>35</td> <td>31</td> <td>35</td> <td>37</td>
+    </tr>
+    <tr>
+      <td>36</td> <td>31</td> <td>31</td> <td>36</td> <td>35</td>
+      <td>37</td> <td>36</td> <td>32</td> <td>37</td> <td>35</td>
+    </tr>
+    <tr>
+      <td>30</td> <td>34</td> <td>36</td> <td>30</td> <td>37</td>
+      <td>33</td> <td>31</td> <td>34</td> <td>30</td> <td>37</td>
+    </tr>
+    <tr>
+      <td>33</td> <td>32</td> <td>31</td> <td>33</td> <td>34</td>
+      <td>31</td> <td>29</td> <td>36</td> <td>37</td> <td>35</td>
+    </tr>
+  </table>
+
+  <ol>
+    <li>Combien de fois apparait le nombre 36 ? Quel est sa fréquence d'apparition ?</li>
+  </ol>
+    
+  Pour représenter ces résultats dans un diagramme, on les regroupe en 5 <b>classes</b> :
+  <div class="flexobject tablediv">
+
+    <div>
+      <div>Calibre</div>
+      <div>Effectif</div>
+      <div>Fréquence</div>
+    </div>
+    <div>
+      <div>$28\le x &lt; 30$</div>
+      <div></div>
+      <div></div>
+    </div>
+    <div>
+      <div>$30\le x &lt; 32$</div>
+      <div></div>
+      <div></div>
+    </div>
+    <div>
+      <div>$32\le x &lt; 34$</div>
+      <div></div>
+      <div></div>
+    </div>
+    <div>
+      <div>$34\le x &lt; 36$</div>
+      <div></div>
+      <div></div>
+    </div>
+    <div>
+      <div>$36\le x &lt; 38$</div>
+      <div></div>
+      <div></div>
+    </div>
+    <div>
+      <div>Total</div>
+      <div></div>
+      <div></div>
+    </div>
+
+  </div>
+  <ol start="2">
+    <li>
+    
+      Completer ce tableau.
+    </li>
+    <li>Quelle est l'amplitude de ces classes ?</li>
+    <li>Completer :<br>
+      « ___ noix ont un calibre ________ entre 30mm (___________) et 32mm (____________). »
+    </li>
+    <li>
+      De la même manière que l'effectif de la première classe, représenter dans le diagramme suivants les effectifs de l'ensemble des valeurs.
+    </li>
+  </ol>
+  <div id="diagintro"></div>
+
+  <h1>Vocabulaire :</h1>
+      <h2>Série de valeurs :</h2>
+          <p>
+            On étudie les résultats d'une classe à un contrôle, voici les notes obtenues :<br>
+            <div class="flexobject valeur">
+              <div>7</div>
+              <div>13</div>
+              <div>10</div>
+              <div>14</div>
+              <div>14</div>
+              <div>15</div>
+              <div>7</div>
+              <div>10</div>
+              <div>15</div>
+              <div>10</div>
+              <div>13</div>
+              <div>20</div>
+              <div>9</div>
+              <div>9</div>
+              <div>13</div>
+              <div>14</div>
+              <div>15</div>
+              <div>14</div>
+              <div>7</div>
+              <div>10</div>
+            </div>
+            L'ensemble de ces notes est appelé <span class="CRed">population</span> de la série.<br>
+            Le <span class="CRed">caractère</span> étudié est le résultats en point.<br>
+            Les <span class="CRed">valeurs</span> du caractère sont 7 ; 9 ; 10 ; 13 ; 14 ; 15 et 20.<br>
+            L'<span class="CRed">effectif</span> d'une valeur est le nombre de fois ou celle-ci apparaît, par exemple l'effectif de la valeur 10 est 4.<br>
+            L'<span class="CRed">effectif total</span> est 20.
+          </p>
+
+          <table class="proportionnaltable">
+            <tr>
+              <th>Note<br>(valeur)</th>
+              <td>7</td>
+              <td>9</td>
+              <td>10</td>
+              <td>13</td>
+              <td>14</td>
+              <td>15</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <th>Effectif</th>
+              <td>3</td>
+              <td>2</td>
+              <td>4</td>
+              <td>3</td>
+              <td>4</td>
+              <td>3</td>
+              <td>1</td>
+            </tr>
+          </table>
+      <h2>Fréquence :</h2>
+          <div class="definition">
+            La <span class="CRed">fréquence</span> d'une valeur est le quotient de l'effectif de cette valeur par l'effectif total.<br>
+            $Fréquence = \frac{Effectif\thinspace de\thinspace\thinspace la\thinspace valeur}{Effectif\thinspace total}$
+          </div>
+          <p class="exemple">Exemple :</p>
+          <p>Dans l'exemple précèdent il y a 20 notes au total. 
+            La fréquence de la valeur 10 est donc de $\frac{4}{20}=\frac{1}{5}=0.2=20\%$</p>
+  <h1>Représentation des données :</h1>
+      <h2>Diagramme en barres :</h2>
+          <div class="definition">
+            Un <span class="CRed">diagramme en barres</span> (ou en bâtons) est composé de barre de même largeur et de hauteur proportionnelle aux effectifs qu'ils représentent.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <div class="flexobject">
+            <table class="proportionnaltable">
+              <tr>
+                <th style="width: 200px;">Nombre de frères ou soeurs</th>
+                <td>0</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>plus de 3</td>
+              </tr>
+              <tr>
+                <th>Effectif</th>
+                <td>5</td>
+                <td>9</td>
+                <td>10</td>
+                <td>3</td>
+                <td>2</td>
+              </tr>
+            </table>
+            <div id="baton1" style="flex: 1 1 5cm;"></div>
+          </div>
+          <p class="remarque">Remarque :</p>
+          <ul><li>Ce type de diagramme permet de représenter un tableau à simple entrée</li></ul>
+      <h2>Diagramme circulaire :</h2>
+          <div class="definition">
+            Un <span class="CRed">diagramme en circulaires</span> est composé d'un disque découpé en secteurs dont l'angle est proportionnel à l'effectif qu'il représente.
+          </div>
+          <div class="flexobject">
+            <div style="flex: 1 1 5cm;">
+              Diagramme circulaire de la population mondiale par continent en 2022.<br>
+              Ici on peut voir que c'est l'Asie qui regroupe la plus grande partie de la population mondiale.
+              <table class="proportionnaltable">
+                <tr>
+                  <th>Continent</th>
+                  <td>Asie</td>
+                  <td>Afrique</td>
+                  <td>Amérique</td>
+                  <td>Europe</td>
+                  <td>Océanie</td>
+                </tr>
+                <tr>
+                  <th>Population</th>
+                  <td>4&#8239;722&#8239;635&#8239;000</td>
+                  <td>1&#8239;426&#8239;736&#8239;000</td>
+                  <td>1&#8239;037&#8239;140&#8239;000</td>
+                  <td>743&#8239;556&#8239;000</td>
+                  <td>45&#8239;039&#8239;000</td>
+                </tr>
+              </table>
+            </div>
+            <div id="circulaire1" style="flex: 1 1 5cm;"></div>
+          </div>
+          <p class="remarque">Remarque :</p>
+          <ul><li>Ce type de diagramme permet de représenter un tableau à simple entrée</li></ul>
+      <h2>Histogramme :</h2>
+          <h3>Classes :</h3>
+        <p>
+          Lorsque l'on étudie une série de valeur, on se retrouve souvent avec un grand 
+          nombre de valeur différente. Lorsque l'on regroupe ces données dans un tableau de valeur,
+          il est alors plus pratique d'utiliser des <b>classes</b> de valeur, pour limiter la 
+          taille du tableau.
+        </p>
+        <p class="exemple">Exemple :</p>
+        <p>Voici la taille en centimètre des élèves d'une classe de 28 élèves :</p>
+        <table class="listenoix">
+          <tr>
+            <td>155</td> <td>151</td> <td>153</td> <td>148</td> <td>155</td>
+            <td>153</td> <td>148</td>
+          </tr>
+          <tr>
+            <td>156</td> <td>147</td> <td>145</td> <td>156</td> <td>154</td>
+            <td>156</td> <td>149</td>
+          </tr>
+          <tr>
+            <td>149</td> <td>148</td> <td>152</td> <td>156</td> <td>153</td>
+            <td>148</td> <td>148</td>
+          </tr>
+          <tr> 
+            <td>152</td> <td>151</td> <td>153</td> <td>153</td> <td>155</td>
+            <td>152</td> <td>150</td>
+          </tr>
+        </table>
+        <p>
+          Pour étudier ces valeurs, on les regroupe en 3 classes de valeurs :
+        </p>
+        <div class="flexobject tablediv">
+
+          <div>
+            <div>Taille (cm)</div>
+            <div>Effectif</div>
+          </div>
+          <div>
+            <div>$145\le x &lt; 150$</div>
+            <div>9</div>
+          </div>
+          <div>
+            <div>$150\le x &lt; 155$</div>
+            <div>12</div>
+          </div>
+          <div>
+            <div>$155\le x &lt; 160$</div>
+            <div>7</div>
+          </div>
+      
+        </div>
+        <p class="remarque">Remarque :</p>
+        <p>L'<span class="CRed">amplitude</span> d'une classe est la différence entre la plus grande et la plus petite valeur.<br>
+        Dans l'exemple précédent, l'amplitude de chaque classe est identique et vaut 5.</p>
+
+      <h3>Histogramme :</h3>
+        <div class="definition">
+          Un <span class="CRed">histogramme</span> est un diagramme permettant de représenter une série de données regroupées en <b>classes</b>.<br>
+          Chaque classe est représenter par un rectangle dont la largeur représente l'intervalle de la classe et la hauteur l'effectif.
+        </div>
+        <p class="exemple">Exemples :</p>
+        <div class="flexobject">
+          <div>
+            <p>Avec les valeurs de l'exemple précédent :</p>
+            <div id="diagexemple1"></div>
+          </div>
+          <div>
+            <p>On demande à des élèves de 3<sup>ème</sup> combien de SMS ils envoient par jour.</p>
+            <div id="diagexemple2"></div>
+          </div>
+        </div>
+
+</body>
+
+</html>

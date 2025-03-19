@@ -657,15 +657,15 @@ var cinquieme_saintexupery = [
 			id: 14,
 			nom: "Statistiques",
 			icone: 5,
-			ready : false,
-			page : "Base/Chapitre_13/Cours.html"
+			ready : true,
+			page : "saintexupery/Chapitre_14/Cours.html"
 	},
 	{
 			id: 15,
 			nom: "Fraction - Comparaison,  somme et différence",
 			icone: 1,
 			ready : false,
-			page : "Base/Chapitre_14/Cours.html"
+			page : "saintexupery/Chapitre_15/Cours.html"
 	},
 	{
 			id: 16,
@@ -679,7 +679,7 @@ var cinquieme_saintexupery = [
 			nom: "Solides - Polyèdres, Cône et Sphère",
 			icone: 2,
 			ready : false,
-			page : "Base/Chapitre_17/Cours.html"
+			page : "saintexupery/Chapitre_17/Cours.html"
 	},
 	{
 			id: 18,
