@@ -662,9 +662,9 @@ var cinquieme_saintexupery = [
 	},
 	{
 			id: 15,
-			nom: "Fraction - Comparaison,  somme et différence",
+			nom: "Fraction - Comparaison, somme et différence",
 			icone: 1,
-			ready : false,
+			ready : true,
 			page : "saintexupery/Chapitre_15/Cours.html"
 	},
 	{
