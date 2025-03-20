@@ -678,7 +678,7 @@ var cinquieme_saintexupery = [
 			id: 17,
 			nom: "Solides - Polyèdres, Cône et Sphère",
 			icone: 2,
-			ready : false,
+			ready : true,
 			page : "saintexupery/Chapitre_17/Cours.html"
 	},
 	{

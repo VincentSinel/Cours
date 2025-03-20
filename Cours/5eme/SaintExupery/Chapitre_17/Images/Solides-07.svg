@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4cm" height="4cm" viewBox="0 0 113.38 113.38">
+  <title>Solides</title>
+  <g>
+    <polyline points="6.46 45.28 84.1 45.28 84.1 90.92" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2"/>
+    <polygon points="106.92 68.1 106.92 22.46 29.28 22.46 6.46 45.28 6.46 90.92 84.1 90.92 106.92 68.1" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2"/>
+    <polyline points="106.92 68.1 29.28 68.1 29.28 22.46" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2" stroke-dasharray="3.76 2.15"/>
+    <line x1="6.46" y1="90.92" x2="29.28" y2="68.1" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2" stroke-dasharray="3.76 2.15"/>
+    <line x1="84.1" y1="45.28" x2="106.92" y2="22.46" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Chapitre 17 - Solides - Polyèdres, Cône et Sphère</title>
+
+  <style>
+    .formulevol{
+      min-width: 380px;
+      text-align: center;
+    }
+    .formulevol div{
+      min-width: 380px;
+      text-align: center;
+      font-size: 16pt;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Chapitre 17
+      </td>
+      <td id="ChapitreNom">
+        - Solides - Polyèdres, Cône et Sphère
+      </td>
+    </tr>
+  </table>
+
+  <p class="exemple">
+    Activité Introduction
+  </p>
+  <p>Donner le nom de chacun des solides suivants :</p>
+  <div class="flexobject">
+    <img src="Images/Solides-01.svg"/>
+    <img src="Images/Solides-02.svg"/>
+    <img src="Images/Solides-03.svg"/>
+    <img src="Images/Solides-04.svg"/>
+    <img src="Images/Solides-05.svg"/>
+    <img src="Images/Solides-06.svg"/>
+    <img src="Images/Solides-07.svg"/>
+  </div>
+  <h1>Représentation de solide dans l'espace :</h1>
+      <h2>Pyramides :</h2>
+            <div class="definition">
+              Une <span class="CRed">pyramide</span> est un solide possédant une base polygonale et des 
+              faces latérales triangulaires qui se rejoignent en un même sommet.
+            </div>
+            <div class="flexobject">
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Solides-01.svg"/>
+              </div>
+              <div>
+                <label><b>Patron :</b></label><br>
+                <img src="Images/Patrons-01.svg"/>
+              </div>
+              <img src="Images/Pyramide1.svg"/>
+            </div>
+            <p class="remarque">Remarque :</p>
+            <ul>
+              <li>La base hachurée dans le patron peut-être un polygone quelconque</li>
+              <li>Un polygone qui a tous ses côtés de même longueur et tous ses angles de même mesure et dit régulier.</li>
+            </ul>
+            <div class="definition">
+              Une pyramide est <span class="CRed">régulière</span> si sa base est un polygone régulier et 
+              l'ensemble de toutes ces faces latérales sont des triangles isocèles identiques.
+            </div>
+      <h2>Cônes de révolution :</h2>
+            <div class="definition">
+              Un <span class="CRed">cône de révolution</span> est composé d'un disque formants la base. 
+              La surface latérale lorsqu'elle est dépliée est un arc de disque dont l'arc de cercle à 
+              la même longueur que le périmètre du disque.
+            </div>
+            <div class="flexobject">
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Solides-02.svg"/>
+              </div>
+              <div>
+                <label><b>Patron :</b></label><br>
+                <img src="Images/Patrons-02.svg"/>
+              </div>
+              <img src="Images/Cone1.svg"/>
+              <img src="Images/Gif Cone de revolution.agif" style="max-width: 4cm;"/>
+            </div>
+
+            <iframe src="Images/Pyramide 3D.html" style="border: solid 1px; max-width: 485px; max-height: 365px;" allowtransparency="true" width="100%" height="365.75" frameborder="0" scrolling="no" allowfullscreen></iframe>
+  
+      <h2>Sphère et boule :</h2>
+        <h3>Sphère :</h3>
+          <div class="definition">
+            Une <span class="CRed">Sphère</span> de centre O et
+            de rayon <span class="CBlue">$r$</span> est l'ensemble
+            des points M de l'espace tel que $OM=\textcolor{#039be5}{r}$.
+          </div>
+
+          <p class="exemple">Exemple :</p>
+          <div class="flexobject">
+            <img src="Images/Boule1.svg" style="max-width: 5cm;">
+            <div style="flex: 1 1 7cm;">
+              <p class="remarque">Remarque :</p>
+              <ul>
+                <li>Une sphère est une surface (on parle d'aire de la phère)</li>
+                <li>Le contenue de la sphère (le volume qu'elle délimite) est
+                  appelé une <b>boule</b>.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="definition">
+            L'aire d'une sphère de rayon <span class="CBlue">$r$</span> est obtenu ainsi :<br>
+            <span class="formule">$A=4\pi \textcolor{#039be5}{r}²$</span>
+          </div>
+
+          <p class="exemple">Exemple :</p>
+          <p>
+            Une sphère de rayon 5cm a pour Aire $4\times\pi\times5²=100\pi \approx 314,2cm²$
+          </p>
+      <h3>Boule :</h3>
+          <div class="definition">
+            Une <span class="CRed">Boule</span> de centre O et
+            de rayon <span class="CBlue">$r$</span> est l'ensemble
+            des points M de l'espace tel que $OM\leq\textcolor{#039be5}{r}$.
+          </div>
+
+          <p class="remarque">Remarque :</p>
+          <ul>
+            <li>Une boule est un solide et contient un volume.</li>
+          </ul>
+
+          <div class="definition">
+            Le volume d'une boule de rayon <span class="CBlue">$r$</span> est obtenu ainsi :<br>
+            <span class="formule"> $V=\frac{4}{3}\pi \textcolor{#039be5}{r}^3$</span>
+          </div>
+
+          <div class="flexobject">
+            <img src="Images/Volumes-06.svg">
+            <div style="flex: 1 1 7cm;">
+              <p class="exemple">Exemple :</p>
+              <p>
+                Une sphère de rayon 5cm a pour Aire 
+                <span class="formule">$\frac{4}{3}\times\pi\times5^3=\frac{500}{3}\pi \approx 523,6cm^3$</span>
+              </p>
+            </div>
+          </div>
+      <h2>Autre solide :</h2>
+          <div class="flexobject">
+            <div style="flex: 4cm 0 1; text-align: center;">
+              <p>Octaèdre :</p>
+              <img src="Images/Octaedre.svg" style="max-width: 4cm;">
+            </div>
+            <div style="flex: 4cm 0 1; text-align: center;">
+              <p>Icosaèdre :</p>
+              <img src="Images/Icosaedre.svg" style="max-width: 4cm;">
+            </div>
+            <div style="flex: 4cm 0 1; text-align: center;">
+              <p>Dodécaèdre :</p>
+              <img src="Images/Dodecaedre.svg" style="max-width: 4cm;">
+            </div>
+          </div>
+    <h1>Volume :</h1>
+      <h2>Pavé droit :</h2>
+            <div class="flexobject">
+              <div class="formulevol">
+                <p><b>Formule :</b></p>
+                <div class="definition">
+                  $V = Longueur \times Largeur \times Hauteur$
+                </div>
+              </div>
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Volumes-07.svg"/>
+              </div>
+              <div style="max-width: 6cm;">
+                <label><b>Exemple :</b></label><br>
+                <p>
+                  Un pavé droit de dimension 5cm par 3cm par 7cm a pour volume : $V = 5\times3\times7=105\thinspace cm^3$
+                </p>
+              </div>
+            </div>
+        <h2>Cube :</h2>
+            <div class="flexobject">
+              <div class="formulevol">
+                <p><b>Formule :</b></p>
+                <div class="definition">
+                  $V = côté \thinspace^3$
+                </div>
+              </div>
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Volumes-05.svg"/>
+              </div>
+              <div style="max-width: 6cm;">
+                <label><b>Exemple :</b></label><br>
+                <p>
+                  Un cube de côté 4cm a pour volume : $V = 4^3 = 64\thinspace cm^3$
+                </p>
+              </div>
+            </div>
+        <h2>Cylindre :</h2>
+            <div class="flexobject">
+              <div class="formulevol">
+                <p><b>Formule :</b></p>
+                <div class="definition">
+                  $V = \pi \times rayon^2 \times hauteur $
+                </div>
+              </div>
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Volumes-03.svg"/>
+              </div>
+              <div style="max-width: 6cm;">
+                <label><b>Exemple :</b></label><br>
+                <p>
+                  Un cylindre de rayon 3cm et de hauteur 6cm a pour volume : $V = \pi \times 3^2 \times 6 \approx  169,4\thinspace cm^3$
+                </p>
+              </div>
+            </div>
+        <h2>Prisme :</h2>
+            <div class="flexobject">
+              <div class="formulevol">
+                <p><b>Formule :</b></p>
+                <div class="definition">
+                  $V = Aire_{Base} \times hauteur $
+                </div>
+              </div>
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Volumes-04.svg"/>
+              </div>
+              <div style="max-width: 6cm;">
+                <label><b>Exemple :</b></label><br>
+                <p>
+                  Un prisme dont la base a une aire de 12cm² et de hauteur 6cm a pour volume : $V = 12 \times 6 = 82\thinspace cm^3$
+                </p>
+              </div>
+            </div>
+        <h2>Pyramide :</h2>
+            <div class="flexobject">
+              <div class="formulevol">
+                <p><b>Formule :</b></p>
+                <div class="definition">
+                  $V = \frac{Aire_{Base} \times hauteur}{3} $
+                </div>
+              </div>
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Volumes-01.svg"/>
+              </div>
+              <div style="max-width: 6cm;">
+                <label><b>Exemple :</b></label><br>
+                <p>
+                  Une pyramide de base carré de 5cm de côté et de hauteur 6cm a pour volume : $V = \frac{5\times5 \times 6}{3} = \frac{150}{3} = 50\thinspace cm^3$
+                </p>
+              </div>
+            </div>
+        <h2>Cône :</h2>
+            <div class="flexobject">
+              <div class="formulevol">
+                <p><b>Formule :</b></p>
+                <div class="definition">
+                  $V = \frac{\pi \times rayon^2 \times hauteur}{3} $
+                </div>
+              </div>
+              <div>
+                <label><b>Perspective :</b></label><br>
+                <img src="Images/Volumes-02.svg"/>
+              </div>
+              <div style="max-width: 6cm;">
+                <label><b>Exemple :</b></label><br>
+                <p>
+                  Un cone de rayon 3cm de côté et de hauteur 2cm a pour volume : $V = \frac{\pi \times 3^2 \times 2}{3} = \frac{18\pi}{3} \approx 18,8\thinspace cm^3$
+                </p>
+              </div>
+            </div>
+</body>
+
+</html>

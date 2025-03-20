@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4cm" height="4cm" viewBox="0 0 113.38 113.39">
+  <title>Patrons</title>
+  <g>
+    <rect x="13.27" y="27.52" width="19.25" height="59.25" fill="none" stroke="#231f20" stroke-linejoin="round" stroke-width="2"/>
+    <rect x="32.52" y="27.52" width="32.25" height="59.25" fill="none" stroke="#231f20" stroke-linejoin="round" stroke-width="2"/>
+    <rect x="64.77" y="27.52" width="38.25" height="59.25" fill="none" stroke="#231f20" stroke-linejoin="round" stroke-width="2"/>
+    <polyline points="32.52 27.41 31.39 8.19 64.77 27.52" fill="none" stroke="#231f20" stroke-linejoin="round" stroke-width="2"/>
+    <polyline points="32.52 86.88 31.39 106.09 64.77 86.77" fill="none" stroke="#231f20" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>
