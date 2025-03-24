@@ -6,6 +6,10 @@
   <meta http-equiv="content-language" content="fr">
   <link rel="stylesheet" href="/CSS/Cours.css"> 
 
+  <script src="/JS/Svg.js/svg.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+	<script src="/JS/Diagrammes/Diagramme_Holder.js"></script> 
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
     MathJax = {
@@ -14,10 +18,24 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>D1 - Se repérer dans le temps</title>
+  <title>C4 (Partie 3) - Statistiques (Diagramme circulaire)</title>
 
   <style>
-    
+    .FullTable td,
+    .FullTable th,
+    .tableau_simple td, 
+    .tableau_simple th,
+    .tableau_double td, 
+    .tableau_double th{
+      border: solid 1px black;
+      width: auto;
+      text-align: center;
+      min-width: 80px;
+    }
+
+    .FullTable th{
+      background-color: #c9a5e9;
+    }
   </style>
 
 </head>
@@ -27,18 +45,95 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        D1
+        C4 (Partie 3)
       </td>
       <td id="ChapitreNom">
-        - Se repérer dans le temps
+        - Statistiques (Diagramme circulaire)
       </td>
     </tr>
   </table>
+
+  <p class="subtitle">
+    Partie 3 : Représentations des données 2.
+  </p>
 
   <p class="exemple">
     Activité Introduction
   </p>
 
+  <p>En réutilisant le tableau de l'activité d'introduction de la première partie, compléter le diagramme en circulaire représentant le nombre d'élèves pour chaque âge.</p>
+  <div class="flexobject">
+    <table class="FullTable">
+      <tr>
+        <th>Age</th>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <th>Total</th>
+      </tr>
+      <tr>
+        <th>Nombre d'élèves</th>
+        <td>4</td>
+        <td>8</td>
+        <td>10</td>
+        <td>2</td>
+        <td>24</td>
+      </tr>
+      <tr>
+        <th>Angle (en °)</th>
+        <td>60</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>360</td>
+      </tr>
+    </table>
+    <div id="Diagramme1"></div>
+  </div>
+
+  <h1>Diagramme circulaire :</h1>
+          <div class="definition">
+            Dans un diagramme circulaire, la taille des sections est proportionnelle à la quantité représentée.
+          </div>
+          <div class="flexobject">
+            <div id="circulaire1" style="flex: 0 1 5cm;"></div>
+            <div style="flex: 1 1 5cm;">
+              Diagramme circulaire de la population mondiale par continent en 2022.<br>
+              Ici on peut voir que c'est l'Asie qui regroupe la plus grande partie de la population mondiale.
+              <table class="proportionnaltable">
+                <tr>
+                  <th>Continent</th>
+                  <td>Asie</td>
+                  <td>Afrique</td>
+                  <td>Amérique</td>
+                  <td>Europe</td>
+                  <td>Océanie</td>
+                  <th>Total</th>
+                </tr>
+                <tr>
+                  <th>Population</th>
+                  <td>4&#8239;722&#8239;635&#8239;000</td>
+                  <td>1&#8239;426&#8239;736&#8239;000</td>
+                  <td>1&#8239;037&#8239;140&#8239;000</td>
+                  <td>743&#8239;556&#8239;000</td>
+                  <td>45&#8239;039&#8239;000</td>
+                  <td>7&#8239;975&#8239;106&#8239;000</td>
+                </tr>
+                <tr>
+                  <th>Angle (°)</th>
+                  <td>213°</td>
+                  <td>64°</td>
+                  <td>47°</td>
+                  <td>34°</td>
+                  <td>2°</td>
+                  <td><b>360°</b></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <p class="remarque">Remarque :</p>
+          <ul><li>Ce type de diagramme permet de représenter un tableau à simple entrée</li></ul>
 
         
 </body>

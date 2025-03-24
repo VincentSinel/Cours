@@ -1452,7 +1452,13 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre C4 (Partie 3)",
 		nom: "Statistiques (Diagramme circulaire)",
 		icone: 9,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_C4-3/Documents/C4 - Statistiques (Partie 3) (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_C4-3/Documents/C4 - Statistiques (Partie 3) (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_C4-3/Documents/C4 - Statistiques (Partie 3) (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_C4-3/Documents/C4 - Statistiques (Partie 3) (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_C4-3/Cours.html",
 	},
 	{
