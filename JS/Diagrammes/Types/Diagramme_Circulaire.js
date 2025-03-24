@@ -17,6 +17,7 @@ class Diagramme_Circulaire
     stroke_width = 1; // epaisseur du tracé
     text_size = 12; // taille du texte
     title = ""; // titre du diagramme
+    border = false;
 	
     // etiquettes des différentes sections
 	etiquettes = ["valeur 1","valeur 2","valeur 3","valeur 4","valeur 5"];
@@ -47,6 +48,7 @@ class Diagramme_Circulaire
         if (config.hasOwnProperty("legende_square_size")) this.legende_square_size = config["legende_square_size"];
         if (config.hasOwnProperty("stroke_width")) this.stroke_width = config["stroke_width"];
         if (config.hasOwnProperty("transparency")) this.transparency = config["transparency"];
+        if (config.hasOwnProperty("border")) this.border = config["border"];
         let e = document.getElementById(this.element_id);
         e.style.border = "solid black 1px";
         e.style.width = "fit-content"
@@ -135,6 +137,13 @@ class Diagramme_Circulaire
             path.fill({color: c, opacity: this.transparency})
             path.stroke({color: c, width: this.stroke_width})
 			da += a;
+        }
+        if (this.border)
+        {
+            let el = this.draw.ellipse(radius * 2, radius * 2);
+            el.move(cx - radius, cy - radius);
+            el.fill({opacity: 0})
+            el.stroke({color: 'black', width: this.stroke_width})
         }
     }
 }
