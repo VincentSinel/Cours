@@ -1358,7 +1358,13 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre B3",
 		nom: "Multiplication",
 		icone: 8,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_B3/Documents/B3 - Multiplication (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_B3/Documents/B3 - Multiplication (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_B3/Documents/B3 - Multiplication (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_B3/Documents/B3 - Multiplication (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_B3/Cours.html",
 	},
 	{

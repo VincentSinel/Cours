@@ -14,10 +14,27 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>D1 - Se repérer dans le temps</title>
+  <title>B3 - Multiplication</title>
 
   <style>
-    
+    .intro_box{
+      padding: 5px;
+      text-align: center;
+      border-radius: 5px;
+      border: solid 2px black;
+    }
+    .multiplication{
+      text-align: center;
+    }
+    .multiplication th{
+      padding-right: 20px;
+    }
+    .multiplication_tr td{
+      border-top: solid 2px black;
+    }
+    .multiplication td{
+      padding: 5px;
+    }
   </style>
 
 </head>
@@ -27,10 +44,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        D1
+        B3
       </td>
       <td id="ChapitreNom">
-        - Se repérer dans le temps
+        - Multiplication
       </td>
     </tr>
   </table>
@@ -39,7 +56,133 @@
     Activité Introduction
   </p>
 
+  <ol>
+    <li>
+      Un professeur demande à ces élèves d'effectuer le calcul suivant : $4,86\times 14$.
+      <ol type="a">
+        <li>En utilisant un ordre de grandeur, donner un resultat approximatif de cette multiplication.</li>
+        <li>
+          Voici les résultats des élèves de la classe. A partir de ton ordre de grandeur, donne la réponse exacte.
+          <div class="flexobject">
+            <div style="background-color: var(--Color_Yellow5); border-color: var(--Color_Yellow2);" class="intro_box">
+              Yasmine<br>
+              <b>6,804</b>
+            </div>
+            <div style="background-color: var(--Color_Green5); border-color: var(--Color_Green2);" class="intro_box">
+              Louis<br>
+              <b>68,04</b>
+            </div>
+            <div style="background-color: var(--Color_Purple5); border-color: var(--Color_Purple2);" class="intro_box">
+              Amid<br>
+              <b>680,4</b>
+            </div>
+            <div style="background-color: var(--Color_Red5); border-color: var(--Color_Red2);" class="intro_box">
+              Lily<br>
+              <b>6 804</b>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </li>
+    <li>
+      Calculer :
+      <ol type="a">
+        <li>
+          <ol type="i">
+            <li>$8,492 \times 10$</li>
+            <li>$8,492 \times 100$</li>
+            <li>$8,492 \times 1\ 000$</li>
+          </ol>
+        </li>
+        <li>
+          <ol type="i">
+            <li>$72 \times 10$</li>
+            <li>$426 \times 100$</li>
+            <li>$705 \times 1\ 000$</li>
+          </ol>
+        </li>
+        <li>
+          <ol type="i">
+            <li>$65 \times 0,1$</li>
+            <li>$873 \times 0,01$</li>
+            <li>$8\ 492 \times 0,001$</li>
+          </ol>
+        </li>
+        <li>Comment peut-on effectuer plus facilement ce type de multiplication de tête ?</li>
+      </ol>
+    </li>
+  </ol>
 
+  <h1>Définition :</h1>
+      <div class="definition">
+        Le résultat de la <b>multiplication</b> est appelé le <span class="CRed">produit</span>.
+        Les nombres qui composent une multiplication sont appelés les <span class="CRed">facteurs</span>.
+      </div>
+
+      <p>
+        Pour poser une multiplication, il n'est pas nécessaire d'aligner les chiffres selon leur rang.<br>
+        <span class="CGreen">On multiplie tous les chiffres du premiers par chacun des chiffre du second en commençant par la droite</span>. On écrit chaque résultats les uns à la suite des autre <span class="CRed">en décalant à chaque fois d'un rangs</span>. On effectue ensuite une addition pour obtenir le produit. On place ensuite la virgule <span class="CBlue">en fonction du nombre de chiffres après la virgule dans les facteurs</span>.
+      </p>
+
+      <table class="multiplication"> <!-- 702,5 x 47,3-->
+        <tr>
+          <th></th><td></td><td></td><td></td><td>7</td><td>0</td><td>2,</td><td class="CBlue">5</td>
+        </tr>
+        <tr>
+          <th></th><td>×</td><td></td><td></td><td></td><td>4</td><td>7,</td><td class="CBlue">3</td>
+        </tr>
+        <tr class="multiplication_tr">
+          <th class="CGreen">$3\times 7\ 025=$</th>
+          <td></td><td></td><td>2</td><td>1</td><td>0</td><td>7</td><td>5</td>
+        </tr>
+        <tr>
+          <th class="CGreen">$7\times 7\ 025=$</th>
+          <td></td><td>4</td><td>9</td><td>1</td><td>7</td><td>5</td><td class="CRed"><b>●</b></td>
+        </tr>
+        <tr>
+          <th class="CGreen">$4\times 7\ 025=$</th>
+          <td>2</td><td>8</td><td>2</td><td>0</td><td>0</td><td class="CRed"><b>●</b></td><td class="CRed"><b>●</b></td>
+        </tr>
+        <tr class="multiplication_tr">
+          <th></th><td>3</td><td>3</td><td>3</td><td>2</td><td>8,</td><td class="CBlue">2</td><td class="CBlue">5</td>
+        </tr>
+      </table>
+
+      <div class="definition">
+        Une multiplication est dite <span class="CRed">commutative</span>, cela signifie que l'on peut intervertir les termes sans changer le résultat.<br>
+      </div>
+      <p class="exemple">Exemples :</p>
+      <ul>
+        <li>$5 \times 8 = 8 \times 5$</li>
+        <li>$325,4\times46,8=46,8\times325,4$</li>
+      </ul>
+
+  <h1>Calculs astucieux :</h1>
+      <div class="definition">
+        Lorsque l'on multiplie par <b>10 ; 100 ; 1 000 ; ...</b> on décale la virgule d'<b>un, deux, trois, ...</b> rang vers la <b>droite</b>.<br>
+        Lorsque l'on multiplie par <b>0,1 ; 0,01 ; 0,001 ; ...</b> on décale la virgule d'<b>un, deux, trois, ...</b> rang vers la <b>gauche</b>.
+      </div>
+      <p class="exemple">Exemples :</p>
+      <ul>
+        <li>$8,492 \times 10 = 84,92$</li>
+        <li>$8,492 \times 100 = 849,2$</li>
+        <li>$8,492 \times 1\ 000 = 8\ 492$</li>
+        <li>$72 \times 10 = 720$</li>
+        <li>$426 \times 100 = 42\ 600$</li>
+        <li>$705 \times 1\ 000 = 705\ 000$</li>
+        <li>$873 \times 0,1 = 87,3$</li>
+        <li>$873 \times 0,01 = 8,73$</li>
+        <li>$873 \times 0,001 = 0,873$</li>
+      </ul>
+
+      <div class="definition">
+        Dans une suite de multiplication, on peut effectuer les calculs dans l'ordre que l'on veut. On peut donc regrouper les multiplication astucieusement pour faciliter le calcul.
+      </div>
+      <p class="exemple">Exemples :</p>
+      <ul>
+        <li>$4\times34\times25 = 4\times25\times34=100\times34=3\ 400$</li>
+        <li>$0,1\times58\times2\times5 = 2\times5\times0,1\times58=10\times0,1\times58=1\times 58=58$</li>
+      </ul>
         
 </body>
 
