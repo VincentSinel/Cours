@@ -1424,9 +1424,9 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre C4 (Partie 1)",
 		nom: "Statistiques (Tableaux)",
 		download: {
-			pdf: "/Cours/6eme/RogerVailland/Chapitre_C4-1/Documents/C4 - Statistiques (Partie 1) (Complet).pdf",
-			docx: "/Cours/6eme/RogerVailland/Chapitre_C4-1/Documents/C4 - Statistiques (Partie 1) (Complet).docx",
-			pdf_trou: "/Cours/6eme/RogerVailland/Chapitre_C4-1/Documents/C4 - Statistiques (Partie 1) (A trou).pdf",
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_C4-1/Documents/C4 - Statistiques (Partie 1) (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_C4-1/Documents/C4 - Statistiques (Partie 1) (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_C4-1/Documents/C4 - Statistiques (Partie 1) (A trou).pdf",
 			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_C4-1/Documents/C4 - Statistiques (Partie 1) (A trou).docx",
 		},
 		icone: 9,
@@ -1438,7 +1438,13 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre C4 (Partie 2)",
 		nom: "Statistiques (Diagramme bâtons et graphique cartésien)",
 		icone: 9,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_C4-2/Documents/C4 - Statistiques (Partie 2) (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_C4-2/Documents/C4 - Statistiques (Partie 2) (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_C4-2/Documents/C4 - Statistiques (Partie 2) (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_C4-2/Documents/C4 - Statistiques (Partie 2) (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_C4-2/Cours.html",
 	},
 	{

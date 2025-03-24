@@ -6,6 +6,10 @@
   <meta http-equiv="content-language" content="fr">
   <link rel="stylesheet" href="/CSS/Cours.css"> 
 
+  <script src="/JS/Svg.js/svg.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+	<script src="/JS/Diagrammes/Diagramme_Holder.js"></script> 
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
     MathJax = {
@@ -14,10 +18,24 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>D1 - Se repérer dans le temps</title>
+  <title>C4 (Partie 2) - Statistiques (Diagramme bâtons et graphique cartésien)</title>
 
   <style>
-    
+    .FullTable td,
+    .FullTable th,
+    .tableau_simple td, 
+    .tableau_simple th,
+    .tableau_double td, 
+    .tableau_double th{
+      border: solid 1px black;
+      width: auto;
+      text-align: center;
+      min-width: 80px;
+    }
+
+    .FullTable th{
+      background-color: #c9a5e9;
+    }
   </style>
 
 </head>
@@ -27,17 +45,155 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        D1
+        C4 (Partie 2)
       </td>
       <td id="ChapitreNom">
-        - Se repérer dans le temps
+        - Statistiques (Diagramme bâtons et graphique cartésien)
       </td>
     </tr>
   </table>
 
+  <p class="subtitle">
+    Partie 2 : Représentations des données 1.
+  </p>
+
   <p class="exemple">
     Activité Introduction
   </p>
+
+  <ol>
+    <li>
+      <p>En réutilisant le tableau de l'activité d'introduction de la première partie, compléter le diagramme en bâtons représentant le nombre d'élèves pratiquant chaque sport.</p>
+      <div class="flexobject">
+        <table class="FullTable">
+          <tr>
+            <th>Sports</th>
+            <td>Tennis</td>
+            <td>Football</td>
+            <td>Rugby</td>
+            <td>Basket</td>
+            <td>Natation</td>
+          </tr>
+          <tr>
+            <th>Nombre d'élèves</th>
+            <td>5</td>
+            <td>6</td>
+            <td>4</td>
+            <td>5</td>
+            <td>4</td>
+          </tr>
+        </table>
+        <div id="Diagramme1"></div>
+      </div>
+    </li>
+    <li>
+      <p>Compléter le diagramme cartésien représentant le tableau ci-dessous.</p>
+      <table class="FullTable">
+        <tr>
+          <th>Horaire (en h)</th>
+          <td>0</td><td>2</td><td>4</td><td>6</td><td>8</td><td>10</td><td>12</td><td>14</td><td>16</td><td>18</td><td>20</td><td>22</td><td>24</td>
+        </tr>
+        <tr>
+          <th>Température (en °C)</th>
+          <td>4,5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>9</td>
+          <td>12</td>
+          <td>14</td>
+          <td>16</td>
+          <td>16</td>
+          <td>14</td>
+          <td>9</td>
+          <td>7,5</td>
+          <td>6</td>
+          <td>5,5</td>
+        </tr>
+      </table><br>
+      <div id="Diagramme2"></div>
+    </li>
+  </ol>
+
+  <h1>Diagramme bâtons :</h1>
+    <div class="definition">
+      Dans un diagramme en bâtons, la hauteur des batôns est proportionnelle à la quantité représentée.
+    </div>
+    <div class="flexobject">
+      <div id="baton1" style="flex: 0 1 5cm;"></div>
+      <div style="flex: 1 1 5cm;">
+        Diagramme en bâtons de la répartition de la population de la france et des pays voisin en 2018.
+        <table class="proportionnaltable">
+          <tr>
+            <th>Pays</th>
+            <td>Allemagne</td>
+            <td>Belgique</td>
+            <td>Espagne</td>
+            <td>France</td>
+            <td>Italie</td>
+            <td>Luxembourg</td>
+            <td>Royaume-Uni</td>
+            <td>Suisse</td>
+          </tr>
+          <tr>
+            <th>Population<br>(en million)</th>
+            <td>84</td>
+            <td>11</td>
+            <td>47</td>
+            <td>67</td>
+            <td>60</td>
+            <td>1</td>
+            <td>67</td>
+            <td>9</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <p class="remarque">Remarque :</p>
+    <ul><li>Ce type de diagramme permet de représenter un tableau à simple entrée</li></ul>
+  <h1>Diagramme cartésien :</h1>
+    <div class="definition">
+      Dans un diagramme cartésien, on représente les valeur par des points relier entre eux. La position des points est définie par deux grandeur qui évolue entre-elles.
+    </div>
+    <div class="flexobject">
+      <div id="cartesien1" style="flex: 0 1 5cm;"></div>
+      <div style="flex: 1 1 5cm;">
+        Diagramme cartésien montrant l'évolution de la vitesse d'Usain Bolt en fonction de la distance parcourue en 2009 sur 100 m.<br>
+        On peut lire par exemple que à 30 m, sa vitesse était de 11 m/s.
+        <table class="proportionnaltable">
+          <tr>
+            <th>Distance (m)</th>
+            <td>0</td>
+            <td>10</td>
+            <td>20</td>
+            <td>30</td>
+            <td>40</td>
+            <td>50</td>
+            <td>60</td>
+            <td>70</td>
+            <td>80</td>
+            <td>90</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <th>Vitesse<br>(en m/s)</th>
+            <td>0</td>
+            <td>5,4</td>
+            <td>9,8</td>
+            <td>11</td>
+            <td>11,5</td>
+            <td>11,8</td>
+            <td>12,2</td>
+            <td>12,2</td>
+            <td>12,2</td>
+            <td>12</td>
+            <td>11,1</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <p class="remarque">Remarque :</p>
+    <ul><li>On utilise souvent ce type de diagramme pour représenter l'évolution d'une grandeur en fonction du temps.</li></ul>
+
 
 
         
