@@ -734,6 +734,10 @@ var cinquieme_rogervailland = [
 		nom: "Généralité sur les fractions",
 		icone: 7,
 		download: {
+			pdf: 			 "/Cours/5eme/RogerVailland/Chapitre_A4/Documents/A4 - Généralité sur les fractions (Complet).pdf",
+			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_A4/Documents/A4 - Généralité sur les fractions (Complet).docx",
+			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_A4/Documents/A4 - Généralité sur les fractions (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_A4/Documents/A4 - Généralité sur les fractions (A trou).docx",
 			exo:			 "/Cours/5eme/RogerVailland/Chapitre_A4/Documents/A4 - Fiche d'exercices.pdf",
 		},
 		ready : true,
