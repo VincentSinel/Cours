@@ -80,6 +80,10 @@ function CreatePDFButton()
     but = document.getElementById("XlsxButton");
     but.target="_blank";
     but.download="Fichier excel.xlsx"
+
+    but = document.getElementById("PdfButtonExo");
+    but.target="_blank";
+    but.download="Exercices.pdf"
 }
 
 function SetDownloadButton(path, element)
@@ -92,6 +96,7 @@ function SetDownloadButton(path, element)
     let but_odt1 = document.getElementById("OdtButton");
     let but_odt2 = document.getElementById("OdtButton2");
     let but_xlsx = document.getElementById("XlsxButton");
+    let but_exo = document.getElementById("PdfButtonExo");
     but_default.classList.add("deactivate")
     but_pdf1.classList.add("deactivate")
     but_pdf2.classList.add("deactivate")
@@ -100,6 +105,7 @@ function SetDownloadButton(path, element)
     but_odt1.classList.add("deactivate")
     but_odt2.classList.add("deactivate")
     but_xlsx.classList.add("deactivate")
+    but_exo.classList.add("deactivate")
     if (element.hasOwnProperty("download"))
     {
         let list = element.download;
@@ -158,6 +164,13 @@ function SetDownloadButton(path, element)
         {
             but_xlsx.href = list.xlsx;
             but_xlsx.classList.remove("deactivate")
+        }
+
+        // Exercices
+        if (list.hasOwnProperty("exo"))
+        {
+            but_exo.href = list.exo;
+            but_exo.classList.remove("deactivate")
         }
     
     }
