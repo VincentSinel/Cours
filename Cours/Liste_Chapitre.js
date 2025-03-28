@@ -783,8 +783,14 @@ var cinquieme_rogervailland = [
 	{
 		id: 1,
 		chapter: "Chapitre B1",
-		nom: "Nombres Relatifs",
+		nom: "Nombres relatifs",
 		icone: 8,
+		download: {
+			pdf: 			 "/Cours/5eme/RogerVailland/Chapitre_B1/Documents/B1 - Nombres relatifs (Complet).pdf",
+			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_B1/Documents/B1 - Nombres relatifs (Complet).docx",
+			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_B1/Documents/B1 - Nombres relatifs (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_B1/Documents/B1 - Nombres relatifs (A trou).docx",
+		},
 		ready : true,
 		page : "RogerVailland/Chapitre_B1/Cours.html",
 	},
@@ -839,6 +845,12 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre C1",
 		nom: "Priorités opératoires",
 		icone: 9,
+		download: {
+			pdf: 			 "/Cours/5eme/RogerVailland/Chapitre_C1/Documents/C1 - Priorités opératoires (Complet).pdf",
+			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_C1/Documents/C1 - Priorités opératoires (Complet).docx",
+			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_C1/Documents/C1 - Priorités opératoires (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_C1/Documents/C1 - Priorités opératoires (A trou).docx",
+		},
 		ready : true,
 		page : "RogerVailland/Chapitre_C1/Cours.html",
 	},
