@@ -1670,7 +1670,13 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre E6",
 		nom: "Les angles",
 		icone: 11,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_E6/Documents/E6 - Les angles (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_E6/Documents/E6 - Les angles (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_E6/Documents/E6 - Les angles (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_E6/Documents/E6 - Les angles (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_E6/Cours.html",
 	},
 	{
@@ -1734,7 +1740,11 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre F3",
 		nom: "Mesurer un angle",
 		icone: 12,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_F3/Documents/F3 - Mesurer un angle (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_F3/Documents/F3 - Mesurer un angle (Complet).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_F3/Cours.html",
 	},
 	{
@@ -1742,7 +1752,11 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre F4",
 		nom: "Tracer un angle",
 		icone: 12,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_F4/Documents/F4 - Tracer un angle (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_F4/Documents/F4 - Tracer un angle (Complet).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_F4/Cours.html",
 	},
 	{
