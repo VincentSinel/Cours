@@ -975,10 +975,16 @@ var cinquieme_rogervailland = [
 	{
 		id: 24,
 		chapter: "Chapitre E5",
-		nom: "Parallèlogramme",
+		nom: "Parallélogramme",
 		icone: 11,
-		ready : false,
-		page : "RogerVailland/Chapitre_E5/Cours.html",
+		download: {
+			pdf: 			 "/Cours/5eme/RogerVailland/Chapitre_E5/Documents/E5 - Parallélogramme (Complet).pdf",
+			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_E5/Documents/E5 - Parallélogramme (Complet).docx",
+			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_E5/Documents/E5 - Parallélogramme (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_E5/Documents/E5 - Parallélogramme (A trou).docx",
+		},
+		ready : true,
+		page : "Base/Chapitre_19/Cours.html",
 	},
 	{
 		id: 28,
