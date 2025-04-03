@@ -1724,6 +1724,10 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre F1",
 		nom: "Tracer une perpendiculaire",
 		icone: 12,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_F1/Documents/F1 - Tracer une perpendiculaire (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_F1/Documents/F1 - Tracer une perpendiculaire (Complet).docx",
+		},
 		ready : true,
 		page : "RogerVailland/Chapitre_F1/Cours.html",
 	},
@@ -1732,6 +1736,10 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre F2",
 		nom: "Tracer une parallèle",
 		icone: 12,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_F2/Documents/F2 - Tracer une parallèle.pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_F2/Documents/F2 - Tracer une parallèle.docx",
+		},
 		ready : true,
 		page : "RogerVailland/Chapitre_F2/Cours.html",
 	},
