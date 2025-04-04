@@ -14,7 +14,7 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>E1 - Généralité sur les triangles</title>
+  <title>D4 - Notion de probabilité</title>
 
   <style>
   </style>
@@ -26,10 +26,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        E1
+        D4
       </td>
       <td id="ChapitreNom">
-        - Nombres Relatifs (Partie 1)
+        - Notion de probabilité
       </td>
     </tr>
   </table>
@@ -37,6 +37,125 @@
   <p class="exemple">
     Activité Introduction
   </p>
+
+  <ol>
+    <li>
+      <b>Jeu de Pile ou Face.</b><br>
+      <p>On dispose d'une pièce de 1€ sans défaut. On effectue l'expérience suivante : on effectue un lancer à pile ou face (On suppose que la pièce ne peut pas tomber sur la tranche).</p>
+      <div class="flexobject">
+        <div style="flex: 1 1 5cm">
+          <ol type="a">
+            <li>Combien de résultats peut-on obtenir ?<br>
+              <i>Ses différents résultat sont appelés <b>issues</b> de l'expérience.</i></li>
+            <li>Peut-on prévoir l'issue de l'expérience ?</li>
+            <li>Y a-t-il plus de chance d'obtenir Pile ou Face ?</li>
+            <li>Compléter la phrase suivante :<br>
+            <i>«Il y a une chance sur ……. d'obtenir Pile et …… chance sur …… d'obtenir Face»</i></li>
+          </ol>
+          <p>La probabilité d'une issue est un nombre compris entre 0 et 1 qui représente la chance qu'a cette issue de se produire.</p>
+          <ol type="a" start="5">
+            <li>Quelle est selon toi la probabilité d'obtenir Pile ?</li>
+          </ol>
+        </div>
+        <div style="flex: 0 1 6cm;" class="flexobject">
+          <img src="Images/Piece_Face.svg" style="max-width: 3cm;">
+          <img src="Images/Piece_Pile.svg" style="max-width: 3cm;">
+        </div>
+      </div>
+    </li><br>
+    <li>
+      <b>Tirage.</b><br>
+      <p>Dans un sac opaque se trouve 4 boules de même forme mais de couleur différentes : rouge, verte, bleue, jaune. On en tire une au hasard.</p>
+      <div class="flexobject">
+        <div type="flex: 1 1 5cm">
+          <ol type="a">
+            <li>Quelles sont les issues de cette expérience aléatoire ?</li>
+            <li>Quelle est la probabilité de tirer une boule rouge ?</li>
+          </ol>
+        </div>
+        <img style="max-width: 3cm;" src="Images/Sac.svg">
+      </div>
+    </li>
+  </ol>
+
+  <h1>Vocabulaires :</h1>
+			<div class="definition">
+				Une <span class="CRed">expérience aléatoire</span> est une expérience dont on connait tous les 
+				résultats possibles sans pouvoir déterminer de manière certaine lequel va se produire.<br>
+				Chaque résultat possible est appelé une <span class="CRed">issue</span>.
+			</div>
+			<p class="exemple">Exemple :</p>
+			<ul>
+				<li>Lancer de dé</li>
+				<li>Lancer de pièce</li>
+				<li>Loterie, Loto</li>
+			</ul>
+      <div class="definition">
+				Un <span class="CRed">événement</span> est constitué d'un ensemble d'issues 
+				(zéro, une ou plusieurs). Il <b>peut</b> ou <b>ne peut pas</b> être <u>réalisé</u>.
+			</div>
+			<p class="exemple">Exemple :</p>
+			<p>
+				« Obtenir 6 », « Faire Pile » ...<br>
+				Très souvent on l'associe à une lettre pour faciliter sa manipulation :
+			</p>
+			<div class="flexobject">
+				<img src="Images/De10.webp" style="max-height: 2cm;">
+				<div>
+					On étudie un lancé de dé à 10 face.<br>
+					Soit A l'événement « Obtenir 6 ».
+				</div>
+			</div>
+	<h1>Calcul de probabilité :</h1>
+			<div class="definition">
+				La <span class="CRed">probabilité</span> d'une issue représente la chance 
+				qu'elle apparaisse lors d'une expérience aléatoire.
+			</div>
+			<div class="flexobject">
+				<img src="Images/Cube.svg" style="max-width: 2cm;">
+				<div>
+					<p class="exemple">Exemple :</p>
+					<p>
+						On a une chance sur 6 d'obtenir 3. On dit que la probabilité d'obtenir 3 
+						est de $\frac{1}{6}\ \approx 0,13$. 
+					</p>
+				</div>
+			</div>
+			<div class="definition">
+				<b>Propriétés :</b><br>
+				<ul>
+					<li>
+						La probabilité d'une issue est un nombre compris entre 0 et 1.
+					</li>
+					<li>
+						La somme des probabilités de toutes les issues d'une expérience aléatoires est égale à 1.
+					</li>
+				</ul>
+			</div>
+			<div class="flexobject">
+				<img src="Images/Cube.svg" style="max-width: 2cm;">
+				<div>
+					<p class="exemple">Exemple :</p>
+					<p>
+						Chaque face a une probabilité de $\frac{1}{6}$ d'être obtenue.<br>
+						On a donc la somme des probabilités :<br>
+						$\frac{1}{6}+\frac{1}{6}+\frac{1}{6}+\frac{1}{6}+\frac{1}{6}+\frac{1}{6}=\ \frac{6\times1}{6}=1$.
+					</p>
+				</div>
+			</div>
+			<div class="definition">
+				<b>Si</b> dans une expérience aléatoire, <b>toutes les issues ont la même probabilité</b> d'apparaitre, 
+				<b>alors</b> on parle de situation d'<span class="CRed">équiprobabilité</span>.
+			</div>
+			<div class="flexobject">
+				<img src="Images/Cube.svg" style="max-width: 2cm;">
+				<div style="flex: 1 1 5cm">
+					<p class="exemple">Exemple :</p>
+					<p>
+            Lors du lancer d'un dé non truqué, chaque face a autant de chance d'être obtenue, nous sommes donc dans une situation d'équiprobabilité.
+					</p>
+				</div>
+			</div>
 
   
 </body>

@@ -918,7 +918,13 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre D4",
 		nom: "Notion de probabilité",
 		icone: 10,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/5eme/RogerVailland/Chapitre_D4/Documents/D4 - Notion de probabilité (Complet).pdf",
+			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_D4/Documents/D4 - Notion de probabilité (Complet).docx",
+			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_D4/Documents/D4 - Notion de probabilité (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_D4/Documents/D4 - Notion de probabilité (A trou).docx",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_D4/Cours.html",
 	},
 	{

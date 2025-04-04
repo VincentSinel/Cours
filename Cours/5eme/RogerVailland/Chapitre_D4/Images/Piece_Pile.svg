@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 227.77 227.77">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f39200;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #f9b233;
+      }
+
+      .cls-4 {
+        font-family: PTSerif-Italic, 'PT Serif';
+        font-size: 31.68px;
+        font-style: italic;
+      }
+
+      .cls-4, .cls-5 {
+        fill: #1d1d1b;
+      }
+
+      .cls-3 {
+        fill: #b2b2b2;
+      }
+
+      .cls-6 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="113.89" cy="113.89" r="113.39"/>
+  <circle class="cls-2" cx="113.89" cy="113.89" r="107.63"/>
+  <circle class="cls-3" cx="113.89" cy="113.89" r="80.68"/>
+  <path class="cls-5" d="m101.99,43.74c-1.92-.12-13.44,6.6-21.24,9.12-7.8,2.52-21.6,4.08-21.12,5.88s17.64-.12,18.72,3.84.36,6-.36,9.36c-.72,3.36-15.48,61.08-16.92,65.4-1.44,4.32-8.64,13.44-17.76,13.8-9.12.36-7.32,1.08-7.32,4.68h64.2s2.28-3.6-.24-3.84c-2.52-.24-14.52-1.32-17.64-6.48s-2.64-8.52-1.68-12.6,22.22-83.65,23.04-87.24c.52-2.27-1.68-1.92-1.68-1.92Z"/>
+  <text class="cls-4" transform="translate(129.82 133.38) scale(1.06 1)"><tspan x="0" y="0">EU</tspan><tspan class="cls-6" x="39.22" y="0">R</tspan><tspan class="cls-7" x="58.1" y="0">O</tspan></text>
+</svg>
