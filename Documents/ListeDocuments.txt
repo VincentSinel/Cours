@@ -1,3 +1,10 @@
 Documents\Table Multiplication 20.pdf 
 Documents\Fiches\Automatismes fiche eleves.pdf 
 Documents\Fiches\Grille Mathador.pdf 
+Documents\Fiches\Tableau conversion Aire.pdf 
+Documents\Fiches\Tableau conversion Longueur.pdf 
+Documents\Fiches\Tableau conversion Masse.pdf 
+Documents\Fiches\Tableau conversion Volume.pdf 
+Documents\Fiches\Tableaux conversions.pdf 
+Documents\Fiches\Tableau_sur_la_numeration.pdf 
+Documents\Pythagore\Jeu_Pythagore.zip 

@@ -8,3 +8,15 @@ FOR /R . %%F IN (*.pdf) DO (
   ECHO !p:%r%=! >> ListeDocuments.txt
   ENDLOCAL
 ) 
+FOR /R . %%F IN (*.docx) DO (
+  SET "p=%%F"
+  SETLOCAL EnableDelayedExpansion
+  ECHO !p:%r%=! >> ListeDocuments.txt
+  ENDLOCAL
+) 
+FOR /R . %%F IN (*.zip) DO (
+  SET "p=%%F"
+  SETLOCAL EnableDelayedExpansion
+  ECHO !p:%r%=! >> ListeDocuments.txt
+  ENDLOCAL
+) 

@@ -178,6 +178,16 @@ function CreateHTML(id)
 		div3.appendChild(div6);
 	}
 
+	if (doc.path.endsWith('.zip'))
+	{
+		let svg4 = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"viewBox="0 0 27 33" width="27" height="33"><style type="text/css">.lines{fill:none;stroke:#2C2C2C;stroke-width:0.75;stroke-miterlimit:10;}</style><path fill="#F6A117" d="M3.5,0C1.6,0,0.1,1.5,0.1,3.4v26.2c0,1.9,1.5,3.4,3.4,3.4h20c1.9,0,3.4-1.5,3.4-3.4V8.1c0-0.4-0.1-0.9-0.2-1.2c-0.2-0.4-0.4-0.7-0.7-1l0,0L21,1l0,0c-0.3-0.3-0.7-0.5-1.1-0.7C19.5,0.1,19,0,18.5,0H3.5L3.5,0z"/><path fill="#F5F5F5" d="M3.5,1.1h15c0.4,0,0.7,0.1,1,0.2s0.5,0.3,0.7,0.5l0,0l5,4.9c0.2,0.2,0.3,0.4,0.4,0.6s0.1,0.5,0.1,0.7l0,0v21.6c0,1.3-1,2.3-2.3,2.3l0,0h-20c-1.3,0-2.3-1-2.3-2.3l0,0V3.4C1.2,2.2,2.2,1.1,3.5,1.1L3.5,1.1z"/><path fill="#F6A117" d="M18.7,13.8V16H8.3v-2.2h-2V18h14.4v-4.2H18.7z M13.5,15l4-6.9h-2V4.9h-4v3.2h-2L13.5,15z"/><g><path fill="#2C2C2C" d="M8.2,20h4.1v0.5L9,24.6h3.4v0.6H8.2v-0.5l3.3-4.1H8.2V20z"/><path fill="#2C2C2C" d="M13.4,20h0.7v5.2h-0.7V20z"/><path fill="#2C2C2C" d="M15.5,20h1.6c0.6,0,1,0.1,1.3,0.4c0.3,0.3,0.4,0.7,0.4,1.2c0,0.5-0.1,0.9-0.4,1.2s-0.7,0.4-1.3,0.4h-0.9v2.1h-0.7V20z M16.3,20.6v2h0.9c0.3,0,0.6-0.1,0.8-0.3s0.3-0.4,0.3-0.7c0-0.3-0.1-0.6-0.3-0.7c-0.2-0.2-0.4-0.3-0.8-0.3H16.3z"/></g><g><path class="lines" d="M17,30.1h-1.7v-3.3H17c0.9,0,1.7,0.7,1.7,1.7v0C18.6,29.4,17.9,30.1,17,30.1z"/><line class="lines" x1="8.4" y1="28.4" x2="15.3" y2="28.4"/><line class="lines" x1="9.4" y1="27.3" x2="9.4" y2="29.6"/><line class="lines" x1="10.9" y1="27.3" x2="10.9" y2="29.6"/><line class="lines" x1="12.3" y1="27.3" x2="12.3" y2="29.6"/><line class="lines" x1="13.8" y1="27.3" x2="13.8" y2="29.6"/><rect x="16.3" y="27.7" fill="#F6A117" width="0.8" height="1.5"/></g></svg>'
+	
+		let div7 = document.createElement("div");
+		div7.onclick = function() { Download(doc.path, 'ZIP') };
+		div7.innerHTML = svg4;
+		div3.appendChild(div7);
+	}
+
 	return div
 }
 
@@ -219,5 +229,8 @@ function TagClick(tag)
 
 function Download(filename, type)
 {
-
+	var a = document.createElement("a");
+    a.href = filename;
+    a.download = filename;
+    a.click()
 }
