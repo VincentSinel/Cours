@@ -127,7 +127,9 @@ function SetDownloadButton(path, element)
         // PDF trou
         if (list.hasOwnProperty("pdf_trou"))
         { 
+            
             but_pdf2.href = list.pdf_trou;
+            but_pdf2.download= list.pdf_trou.substr(list.pdf_trou.lastIndexOf("/") + 1);
             but_pdf2.classList.remove("deactivate")
         }
         
@@ -135,6 +137,7 @@ function SetDownloadButton(path, element)
         if (list.hasOwnProperty("docx"))
         { 
             but_docx1.href = list.docx;
+            but_docx1.download= list.docx.substr(list.docx.lastIndexOf("/") + 1);
             but_docx1.classList.remove("deactivate")
         }
 
@@ -142,6 +145,7 @@ function SetDownloadButton(path, element)
         if (list.hasOwnProperty("docx_trou"))
         { 
             but_docx2.href = list.docx_trou;
+            but_docx2.download= list.docx_trou.substr(list.docx_trou.lastIndexOf("/") + 1);
             but_docx2.classList.remove("deactivate")
         }
         
@@ -149,6 +153,7 @@ function SetDownloadButton(path, element)
         if (list.hasOwnProperty("odt"))
         { 
             but_odt1.href = list.odt;
+            but_odt1.download= list.odt.substr(list.odt.lastIndexOf("/") + 1);
             but_odt1.classList.remove("deactivate")
         }
 
@@ -156,6 +161,7 @@ function SetDownloadButton(path, element)
         if (list.hasOwnProperty("odt_trou"))
         { 
             but_odt2.href = list.odt_trou;
+            but_odt2.download= list.odt_trou.substr(list.odt_trou.lastIndexOf("/") + 1);
             but_odt2.classList.remove("deactivate")
         }
 
@@ -163,6 +169,7 @@ function SetDownloadButton(path, element)
         if (list.hasOwnProperty("xlsx"))
         {
             but_xlsx.href = list.xlsx;
+            but_xlsx.download= list.xlsx.substr(list.xlsx.lastIndexOf("/") + 1);
             but_xlsx.classList.remove("deactivate")
         }
 
@@ -170,6 +177,7 @@ function SetDownloadButton(path, element)
         if (list.hasOwnProperty("exo"))
         {
             but_exo.href = list.exo;
+            but_exo.download= list.exo.substr(list.exo.lastIndexOf("/") + 1);
             but_exo.classList.remove("deactivate")
         }
     
