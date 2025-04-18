@@ -1008,7 +1008,14 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre E6",
 		nom: "Prisme et cylindre",
 		icone: 11,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/5eme/RogerVailland/Chapitre_E6/Documents/E6 - Prisme et cylindre (Complet).pdf",
+			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_E6/Documents/E6 - Prisme et cylindre (Complet).docx",
+			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_E6/Documents/E6 - Prisme et cylindre (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_E6/Documents/E6 - Prisme et cylindre (A trou).docx",
+			// exo:			 "/Cours/5eme/RogerVailland/Chapitre_E6/Documents/E6 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_E6/Cours.html",
 	},
 	{
