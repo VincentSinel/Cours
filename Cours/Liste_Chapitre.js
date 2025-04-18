@@ -815,7 +815,14 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre B3",
 		nom: "Repérage dans le plan",
 		icone: 8,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/5eme/RogerVailland/Chapitre_B3/Documents/B3 - Repérage dans le plan (Complet).pdf",
+			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_B3/Documents/B3 - Repérage dans le plan (Complet).docx",
+			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_B3/Documents/B3 - Repérage dans le plan (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_B3/Documents/B3 - Repérage dans le plan (A trou).docx",
+			// exo:			 "/Cours/5eme/RogerVailland/Chapitre_B3/Documents/B3 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_B3/Cours.html",
 	},
 	{
@@ -865,6 +872,7 @@ var cinquieme_rogervailland = [
 			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_C2/Documents/C2 - Expression littérale (Complet).docx",
 			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_C2/Documents/C2 - Expression littérale (A trou).pdf",
 			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_C2/Documents/C2 - Expression littérale (A trou).docx",
+			exo:			 "/Cours/5eme/RogerVailland/Chapitre_C2/Documents/C2 - Fiche d'exercices.pdf",
 		},
 		ready : true,
 		page : "RogerVailland/Chapitre_C2/Cours.html",
@@ -1041,6 +1049,7 @@ var cinquieme_rogervailland = [
 		ready : false,
 		page : "RogerVailland/Chapitre_F3/Cours.html",
 	},
+	
 	// {
 	// 	id: 8,
 	// 	chapter: "Chapitre G1",
