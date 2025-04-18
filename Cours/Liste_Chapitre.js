@@ -710,7 +710,7 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre A2",
 		nom: "Division décimale",
 		icone: 7,
-		ready : false,
+		ready : true,
 		page : "RogerVailland/Chapitre_A2/Cours.html",
 	},
 	{
