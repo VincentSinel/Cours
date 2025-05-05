@@ -1414,7 +1414,14 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre A7",
 		nom: "Calculer avec des fractions",
 		icone: 7,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_A7/Documents/A7 - Calculer avec des fractions (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_A7/Documents/A7 - Calculer avec des fractions (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_A7/Documents/A7 - Calculer avec des fractions (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_A7/Documents/A7 - Calculer avec des fractions (A trou).docx",
+			exo: 			 "/Cours/6eme/RogerVailland/Chapitre_A7/Documents/A7 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_A7/Cours.html",
 	},
 	{
@@ -1694,7 +1701,14 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre E5",
 		nom: "La médiatrice",
 		icone: 11,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_E5/Documents/E5 - La médiatrice (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_E5/Documents/E5 - La médiatrice (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_E5/Documents/E5 - La médiatrice (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_E5/Documents/E5 - La médiatrice (A trou).docx",
+			exo: 			 "/Cours/6eme/RogerVailland/Chapitre_E5/Documents/E5 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_E5/Cours.html",
 	},
 	{

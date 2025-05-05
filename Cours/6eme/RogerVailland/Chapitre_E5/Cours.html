@@ -13,8 +13,10 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script id="Animation" src="/JS/Animation/animation_holder.js"></script>
+  <script src="JS/Transformation.js"></script>
 
-  <title>E1 - Droites</title>
+  <title>E5 - La médiatrice</title>
 
   <style>
     .appartient div{
@@ -34,10 +36,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        E1
+        E5
       </td>
       <td id="ChapitreNom">
-        - Droites
+        - La médiatrice
       </td>
     </tr>
   </table>
@@ -46,7 +48,63 @@
     Activité Introduction
   </p>
 
+  On cherche à construire la figure ci-dessous à l'aide d'un compas et d'une règle.
+  <div class="flexobject">
+    <img src="Images/Figure.svg" style="max-height: 8cm;">
+    <div style="flex: 6cm 1 1">
+      <ol>
+        <li>Tracer un segment [AB] de longueur 5cm</li>
+        <li>
+          <ol type="a">
+            <li>Tracer un cercle de centre A de rayon 3 cm (ne pas trop appuyer pour pouvoir l'effacer ensuite).</li>
+            <li>Tracer un cercle de centre B de rayon 3 cm (ne pas trop appuyer pour pouvoir l'effacer ensuite).</li>
+            <li>Marquer les deux points d'intersection des deux cercles et effacer les cercles</li>
+          </ol>
+        </li>
+        <li>Faire de même avec des cercle de rayon 3,5 cm, de 4 cm, 4,5 cm et 5 cm.</li>
+        <li>Relier tous les points marqués précédemment.
+          <ol type="a">
+            <li>Que remarque-t-on ?</li>
+            <li>Relier les sommets du segments [AB] à chaque points d'intersections.</li>
+          </ol>
+        </li>
+        <li>Colorier la figure obtenue.</li>
+      </ol>
+      Que peut-on dire du segment reliant les deux points d'intersection des cercles vis à vis du segment [AB] ?<br>
+    </div>
+  </div>
 
+  <h1>Définition :</h1>
+    <div class="definition">
+      La <span class="CRed">médiatrice</span> d'un segment est la droite perpendiculaire à ce segment et qui le coupe en son milieu.
+    </div>
+    <p class="exemple">Exemple :</p>
+    <img src="Images/Mediatrice1.svg" style="max-height: 5cm;">
+  <h1>Propriétés :</h1>
+    <div class="definition">
+      <u><b>Propriétés</b></u><br>
+      <ul>
+        <li>Si un point est situé sur la médiatrice d'un segment, alors ce point est équidistant des extrémités de ce segment.</li>
+        <li>Si un point est équidistant des extrémités d'un segment, alors ce point appartient à la médiatrice de ce segment.</li>
+      </ul>
+    </div>
+
+    <p class="exemple">Exemple :</p>
+    <img src="Images/Mediatrice2.svg" style="max-height: 5cm;">
+  <h1>Construction :</h1>
+    <p>Pour construire une médiatrice, on utilise le compas. .</p>
+    <div class="flexobject">
+      <div id="Animation4" class="animation center" width="480" height="360"></div>
+      <div style="flex: 1 1 8cm;">
+        On construit un <i>"œil de chat"</i>.
+        <ul>
+          <li>On prend un écartement du compas plus grand que la moitié du segment.</li>
+          <li>On pointe sur A et on construit un arc de cercle.</li>
+          <li>On pointe sur B et on construit un arc de cercle avec le même écartement que précédemment.</li>
+          <li>On relie les deux points d'intersections obtenus pour obtenir la <b>médiatrice</b>.</li>
+        </ul>
+      </div>
+    </div>
 
 </body>
 

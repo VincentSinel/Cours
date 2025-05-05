@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 246.54 170.33">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 12px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #1d1d1b;
+      }
+
+      .cls-3 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+        stroke: #1d1d1b;
+      }
+
+      .cls-4 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g>
+    <line class="cls-3" x1="123.27" y1="13.69" x2="123.27" y2="155.42"/>
+    <rect class="cls-2" x="120.02" y="13.19" width="6.5" height="1"/>
+    <rect class="cls-2" x="120.02" y="154.92" width="6.5" height="1"/>
+  </g>
+  <line class="cls-3" x1=".5" y1="84.56" x2="246.04" y2="84.56"/>
+  <polygon class="cls-4" points="123.27 155.42 76.26 84.56 123.27 13.69 170.29 84.56 123.27 155.42"/>
+  <polygon class="cls-4" points="123.27 13.69 192.7 84.56 123.27 155.42 53.84 84.56 123.27 13.69"/>
+  <polygon class="cls-4" points="211.78 84.56 123.27 155.42 34.76 84.56 123.27 13.69 211.78 84.56"/>
+  <polygon class="cls-4" points="229.35 84.56 123.27 155.42 17.19 84.56 123.27 13.69 229.35 84.56"/>
+  <polygon class="cls-4" points="246.04 84.56 123.27 155.42 .5 84.56 123.27 13.69 246.04 84.56"/>
+  <text class="cls-1" transform="translate(119.39 10.26)"><tspan x="0" y="0">A</tspan></text>
+  <text class="cls-1" transform="translate(119.4 167.09)"><tspan x="0" y="0">B</tspan></text>
+</svg>
