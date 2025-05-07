@@ -1836,6 +1836,11 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre F5 (Partie 2)",
 		nom: "Tracer un triangle (Avec deux grandeurs)",
 		icone: 12,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_F5-2/Documents/F5 - Tracer un triangle (Partie 2).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_F5-2/Documents/F5 - Tracer un triangle (Partie 2).docx",
+			exo: 			 "/Cours/6eme/RogerVailland/Chapitre_F5-1/Documents/F5 - Fiche d'exercices.pdf",
+		},
 		ready : true,
 		page : "RogerVailland/Chapitre_F5-2/Cours.html",
 	},
