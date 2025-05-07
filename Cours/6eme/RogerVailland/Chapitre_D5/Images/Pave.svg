@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 364.99 231.83">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-family: Bahnschrift, Bahnschrift;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        font-size: 28px;
+      }
+
+      .cls-4 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-6, .cls-5, .cls-7 {
+        stroke: #44ace2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-6, .cls-7 {
+        fill: #44ace2;
+      }
+
+      .cls-8, .cls-2 {
+        isolation: isolate;
+      }
+
+      .cls-9, .cls-10, .cls-11 {
+        stroke-width: 0px;
+      }
+
+      .cls-10 {
+		fill: rgb(68, 172, 226);
+		fill-opacity: 0.7;
+      }
+
+      .cls-7 {
+        stroke-dasharray: 0 0 14 8;
+      }
+
+      .cls-2 {
+        fill: #1d1d1b;
+      }
+
+      .cls-11 {
+        fill: rgb(181, 209, 239);
+		fill-opacity: 0.5;
+      }
+
+      .cls-3 {
+        font-family: CambriaMath, 'Cambria Math';
+      }
+    </style>
+  </defs>
+  <polygon class="cls-11" points="1 64.6 1 194.6 64.6 131 334.6 131 334.6 1 64.6 1 1 64.6"/>
+  <path class="cls-10" d="m1,194.6l63.6-63.6h270c2.7,0-63.6,63.6-63.6,63.6H1Z"/>
+  <path class="cls-7" d="m64.6,131V1"/>
+  <path class="cls-7" d="m64.6,131h270"/>
+  <path class="cls-7" d="m64.6,131L1,194.6"/>
+  <path class="cls-5" d="m1,64.6L64.6,1"/>
+  <path class="cls-6" d="m1,64.6h270"/>
+  <path class="cls-6" d="m1,64.6v130"/>
+  <path class="cls-6" d="m334.6,1H64.6"/>
+  <path class="cls-6" d="m334.6,1l-63.6,63.6"/>
+  <path class="cls-6" d="m334.6,1v130"/>
+  <path class="cls-6" d="m271,194.6H1"/>
+  <path class="cls-6" d="m271,194.6l63.6-63.6"/>
+  <path class="cls-6" d="m271,194.6V64.6"/>
+  <g class="cls-8">
+    <text class="cls-2" transform="translate(127.97 226.72)"><tspan x="0" y="0">L</tspan></text>
+  </g>
+  <text class="cls-3" transform="translate(319.06 180.9)"><tspan x="0" y="0">𝓁</tspan></text>
+  <text class="cls-1" transform="translate(349.34 78.52)"><tspan x="0" y="0">h</tspan></text>
+  <g>
+    <line class="cls-4" x1="6.97" y1="202.38" x2="265.03" y2="202.38"/>
+    <polygon class="cls-9" points="9.78 206.08 8.21 202.38 9.78 198.68 1 202.38 9.78 206.08"/>
+    <polygon class="cls-9" points="262.22 206.08 263.79 202.38 262.22 198.68 271 202.38 262.22 206.08"/>
+  </g>
+  <g>
+    <line class="cls-4" x1="282.02" y1="195.25" x2="335.51" y2="138.3"/>
+    <polygon class="cls-9" points="286.65 195.74 282.87 194.35 281.25 190.67 277.94 199.6 286.65 195.74"/>
+    <polygon class="cls-9" points="336.29 142.89 334.67 139.21 330.89 137.82 339.6 133.95 336.29 142.89"/>
+  </g>
+  <g>
+    <line class="cls-4" x1="342.62" y1="6.97" x2="342.62" y2="125.03"/>
+    <polygon class="cls-9" points="338.91 9.78 342.62 8.21 346.32 9.78 342.62 1 338.91 9.78"/>
+    <polygon class="cls-9" points="338.91 122.22 342.62 123.79 346.32 122.22 342.62 131 338.91 122.22"/>
+  </g>
+</svg>
