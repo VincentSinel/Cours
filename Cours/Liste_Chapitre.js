@@ -1626,22 +1626,6 @@ var sixieme_rogervailland = [
 		ready : true,
 		page : "RogerVailland/Chapitre_D5/Cours.html",
 	},
-	// {
-	// 	id: 35,
-	// 	chapter: "Chapitre D5 (Partie 2)",
-	// 	nom: "Formulaire (aires)",
-	// 	icone: 10,
-	// 	ready : false,
-	// 	page : "RogerVailland/Chapitre_D5-2/Cours.html",
-	// },
-	// {
-	// 	id: 49,
-	// 	chapter: "Chapitre D5 (Partie 3)",
-	// 	nom: "Formulaire (volume pavé droit)",
-	// 	icone: 10,
-	// 	ready : false,
-	// 	page : "RogerVailland/Chapitre_D5-3/Cours.html",
-	// },
 	{
 		id: 3,
 		chapter: "Chapitre E1",
@@ -1850,6 +1834,8 @@ var sixieme_rogervailland = [
 		ready : true,
 		page : "RogerVailland/Chapitre_F5-2/Cours.html",
 	},
+]
+{
 	// {
 	// 	id: 7,
 	// 	chapter: "Chapitre G1 (Partie 1)",
@@ -1914,7 +1900,7 @@ var sixieme_rogervailland = [
 	// 	ready : false,
 	// 	page : "RogerVailland/Chapitre_G3-3/Cours.html",
 	// },
-]
+}
 
 var ListeCours = {
 	troisiemePM: {
