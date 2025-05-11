@@ -455,7 +455,7 @@ var cinquieme_base = [
 			ready : true,
 			page : "Base/Chapitre_4/Cours.html"
 	},
-	{
+{
 			id: 5,
 			nom: "Introduction au calcul littéral",
 			icone: 3,
