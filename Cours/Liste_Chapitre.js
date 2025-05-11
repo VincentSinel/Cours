@@ -221,10 +221,10 @@ var troisième_saintexupery = [
 	{
 		id: 11,
 		chapter: "Chapitre 11",
-		nom: "Repérage dans l'espace",
+		nom: "Sphère et boules",
 		icone: 2,
 		ready : true,
-		page : "Base/Chapitre_20/Cours.html"
+		page : "SaintExupery/Chapitre_13/Cours.html"
 	},
 	{
 		id: 12,
@@ -236,10 +236,11 @@ var troisième_saintexupery = [
 	},
 	{
 		id: 13,
-		nom: "Sphère et boules",
+		chapter: "Chapitre 13",
+		nom: "Repérage dans l'espace",
 		icone: 2,
 		ready : true,
-		page : "SaintExupery/Chapitre_13/Cours.html"
+		page : "Base/Chapitre_20/Cours.html"
 	},
 	{
 		id: 14,
@@ -257,17 +258,17 @@ var troisième_saintexupery = [
 		ready : true,
 		page : "Base/Chapitre_18/Cours.html"
 	},
+	// {
+	// 	id: 16,
+	// 	chapter: "Chapitre 16",
+	// 	nom: "Calcul littérale",
+	// 	icone: 1,
+	// 	ready : false,
+	// 	page : "SaintExupery/Chapitre_16/Cours.html"
+	// },
 	{
 		id: 16,
 		chapter: "Chapitre 16",
-		nom: "Calcul littérale",
-		icone: 1,
-		ready : false,
-		page : "SaintExupery/Chapitre_16/Cours.html"
-	},
-	{
-		id: 17,
-		chapter: "Chapitre 17",
 		nom: "Triangles semblables",
 		icone: 2,
 		ready : false,
