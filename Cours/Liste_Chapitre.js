@@ -1377,8 +1377,15 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre A4",
 		nom: "Comparaison des nombres décimaux",
 		icone: 7,
-		ready : false,
-		page : "RogerVailland/Chapitre_A4/Cours.html",
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_A4/Documents/A4 - Comparaison des nombres décimaux (Complet).pdf",
+			docx:		 	 "/Cours/6eme/RogerVailland/Chapitre_A4/Documents/A4 - Comparaison des nombres décimaux (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_A4/Documents/A4 - Comparaison des nombres décimaux (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_A4/Documents/A4 - Comparaison des nombres décimaux (A trou).docx",
+			exo: 			 "/Cours/6eme/RogerVailland/Chapitre_A4/Documents/A4 - Fiche d'exercices.pdf",
+		},
+		ready : true,
+		page : "Base/Chapitre_3/Cours.html",
 	},
 	{
 		id: 5,
