@@ -14,10 +14,16 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>D1 - Se repérer dans le temps</title>
+  <title>B5 - Division décimale</title>
 
   <style>
-    
+    .division td{
+      padding: 0px 3px;
+      border-collapse: collapse;
+    }
+    .virgule{
+      padding: 0px 0px !important;
+    }
   </style>
 
 </head>
@@ -27,10 +33,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        D1
+        B5
       </td>
       <td id="ChapitreNom">
-        - Se repérer dans le temps
+        - Division décimale
       </td>
     </tr>
   </table>
@@ -38,6 +44,344 @@
   <p class="exemple">
     Activité Introduction
   </p>
+
+  <div class="flexobject">
+    <div>
+      <table class="division" style="text-align: right;">
+            <tr>
+              <td></td>
+              <td>7</td>
+              <td style="border-right: solid 2px black;">3</td>
+              <td style="border-bottom: solid 2px black;">5</td>
+              <td style="border-bottom: solid 2px black;"></td>
+            </tr>
+            <tr>
+              <td style="border-bottom: solid 2px black;">-</td>
+              <td style="border-bottom: solid 2px black;">5</td>
+              <td style="border-right: solid 2px black;">↓</td>
+              <td>1</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>2</td>
+              <td style="border-right: solid 2px black;">3</td>
+            </tr>
+            <tr>
+              <td style="border-bottom: solid 2px black;">-</td>
+              <td style="border-bottom: solid 2px black;">2</td>
+              <td style="border-bottom: solid 2px black; border-right: solid 2px black;">0</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td style="border-right: solid 2px black;">3</td>
+            </tr>
+          </table>
+    </div>
+    <div style="flex: 5cm 1 1">
+      Cinq amis mangent au restaurant et désirent partager équitablement la note de 73 €.
+      <ol>
+        <li>Comment peuvent-ils interpréter les résultats de la division posée ci-contre ?</li>
+        <li>
+          On cherche le prix exact, si possible, que chacun doit payer.
+          <ol type="a">
+            <li>Combien de dixièmes d'euro y a-t-il dans 3 € ?</li>
+            <li>
+              Combien chacun des amis doit-il payer de dixièmes d'euros ?<br>
+              Combien en reste-t-il à répartir ? Recopier et compléter la division posée.
+            </li>
+            <li>Indiquer la part exacte que chacun des amis doit payer.</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <h1>Définition :</h1>
+    <div class="definition">
+      Une <span class="CRed">division décimale</span> est la recherche d'un <span class="CGreen">quotient</span> (qui peut être décimal) tel que :<br>
+      <span class="CRed">$dividende$</span> $=$ <span class="CBlue">$diviseur$</span>$\times$<span class="CGreen">$quotient$</span>
+    </div>
+    <p class="exemple">Exemple :</p>
+    <div class="flexobject">
+        <div style="flex: 0 1 3cm;">
+          <table class="division" style="text-align: right;">
+            <tr>
+              <td></td>
+              <td>3</td>
+              <td>2</td>
+              <td>,</td>
+              <td style="border-right: solid 2px black;">0</td>
+              <td style="border-bottom: solid 2px black;">5</td>
+              <td style="border-bottom: solid 2px black;"></td>
+              <td style="border-bottom: solid 2px black;"></td>
+            </tr>
+            <tr>
+              <td style="border-bottom: solid 2px black;">-</td>
+              <td style="border-bottom: solid 2px black;">3</td>
+              <td style="border-bottom: solid 2px black;">0</td>
+              <td></td>
+              <td style="border-right: solid 2px black;">↓</td>
+              <td>6</td>
+              <td>,</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>2</td>
+              <td></td>
+              <td style="border-right: solid 2px black;">0</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td style="border-bottom: solid 2px black;">-</td>
+              <td style="border-bottom: solid 2px black;">2</td>
+              <td style="border-bottom: solid 2px black;"></td>
+              <td style="border-right: solid 2px black; border-bottom: solid 2px black;">0</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td style="border-right: solid 2px black;">0</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <div style="flex: 8cm 1 1; flex-wrap: nowrap;" class="flexobject">
+          <div style="flex: 3cm 0 1">
+            <table class="division" style="text-align: right;">
+              <tr>
+                <td></td>
+                <td class="CRed">5</td>
+                <td class="virgule">,</td>
+                <td class="CBlue">4</td>
+                <td class="CGreen" style="border-right: solid 2px black;">8</td>
+                <td style="border-bottom: solid 2px black;">4</td>
+                <td style="border-bottom: solid 2px black;"></td>
+                <td style="border-bottom: solid 2px black;"></td>
+                <td style="border-bottom: solid 2px black;"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: solid 2px black;">-</td>
+                <td style="border-bottom: solid 2px black;">4</td>
+                <td class="virgule"></td>
+                <td></td>
+                <td style="border-right: solid 2px black;"></td>
+                <td class="CRed">1</td>
+                <td>,</td>
+                <td class="CBlue">3</td>
+                <td class="CGreen">7</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="CBlue">1</td>
+                <td class="virgule"></td>
+                <td class="CBlue">4</td>
+                <td style="border-right: solid 2px black;"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: solid 2px black;">-</td>
+                <td style="border-bottom: solid 2px black;">1</td>
+                <td class="virgule" style="border-bottom: solid 2px black;"></td>
+                <td style="border-bottom: solid 2px black;">2</td>
+                <td style="border-bottom: solid 2px transparent; border-right: solid 2px black;"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td class="virgule"></td>
+                <td class="CGreen">2</td>
+                <td class="CGreen" style="border-right: solid 2px black;">8</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td class="virgule" style="border-bottom: solid 2px black;">-</td>
+                <td style="border-bottom: solid 2px black;">2</td>
+                <td style="border-bottom: solid 2px black; border-right: solid 2px black;">8</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td class="virgule"></td>
+                <td></td>
+                <td style="border-right: solid 2px black;">0</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <div style="flex: 5cm 1 1;">
+            On effectue la division normalement en ajoutant des zéros au dividende si la division n'est pas encore terminée.<br>
+            On ajoute la virgule au quotient au même rang que le dividende.<br>
+            Lorsque le reste est nul, la division est terminée.
+          </div>
+        </div>
+    </div>
+    <p class="remarque">Remarque :</p>
+    <ul>
+      <li>Certaines divisions ne s'arrêtent  pas, on s'arrête donc lorsque l'un des reste dans la partie décimal est identique à l'un des précédents.</li>
+    </ul>
+    <div class="flexobject">
+      <div style="flex: 3cm 0 1;">
+        <table class="division" style="text-align: right;">
+          <tr>
+            <td></td>
+            <td>7</td>
+            <td class="virgule">,</td>
+            <td>0</td>
+            <td>0</td>
+            <td style="border-right: solid 2px black;">0</td>
+            <td style="border-bottom: solid 2px black;">6</td>
+            <td style="border-bottom: solid 2px black;"></td>
+            <td style="border-bottom: solid 2px black;"></td>
+            <td style="border-bottom: solid 2px black;"></td>
+            <td style="border-bottom: solid 2px black;"></td>
+          </tr>
+          <tr>
+            <td style="border-bottom: solid 2px black;">-</td>
+            <td style="border-bottom: solid 2px black;">6</td>
+            <td class="virgule"></td>
+            <td style="border-bottom: solid 2px transparent;"></td>
+            <td></td>
+            <td style="border-right: solid 2px black;"></td>
+            <td>1</td>
+            <td>,</td>
+            <td>1</td>
+            <td>6</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>1</td>
+            <td class="virgule"></td>
+            <td>0</td>
+            <td></td>
+            <td style="border-right: solid 2px black;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="border-bottom: solid 2px black;">-</td>
+            <td style="border-bottom: solid 2px black;"></td>
+            <td class="virgule" style="border-bottom: solid 2px black;"></td>
+            <td style="border-bottom: solid 2px black;">6</td>
+            <td style="border-bottom: solid 2px transparent;"></td>
+            <td style="border-right: solid 2px"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td class="virgule" ></td>
+            <td class="CRed"><b>4</b></td>
+            <td class="CRed"><b>0</b></td>
+            <td style="border-right: solid 2px black;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td style="border-bottom: solid 2px black;">-</td>
+            <td class="virgule" style="border-bottom: solid 2px black;"></td>
+            <td style="border-bottom: solid 2px black;">3</td>
+            <td style="border-bottom: solid 2px black;">6</td>
+            <td style="border-right: solid 2px black; border-bottom: solid 2px transparent;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td class="virgule" ></td>
+            <td></td>
+            <td class="CRed"><b>4</b></td>
+            <td class="CRed" style="border-right: solid 2px black;"><b>0</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td class="virgule"></td>
+            <td style="border-bottom: solid 2px black;">-</td>
+            <td style="border-bottom: solid 2px black;">3</td>
+            <td style="border-bottom: solid 2px black; border-right: solid 2px black;">6</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td class="virgule" ></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: solid 2px black;">4</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <div style="flex: 5cm 1 1;">
+        Ici la division ne se termine jamais car le reste est identique deux fois de suite.<br>
+        Le quotient de 7 par 6 n'est donc pas un nombre décimal.
+      </div>
+    </div>
+  <h1>Divisions particulières :</h1>
+    <div class="definition">
+      Il existe des divisions particulières :
+      <ul>
+        <li>Division par 1 : le quotient est égal au dividende.</li>
+        <li>Division par 10 : on déplace la virgule d'un rang vers la gauche.</li>
+        <li>Division par 100 : on déplace la virgule de deux rangs vers la gauche.</li>
+        <li>Division par 1 000 : on déplace la virgule de trois rangs vers la gauche.</li>
+        <li>...</li>
+      </ul>
+    </div>
+    <p class="exemple">Exemples :</p>
+    <ul>
+      <li>$54,7 \div 10 = 5,47$</li>
+      <li>$54,7 \div 100 = 0,547$</li>
+    </ul>
+    <p class="remarque">Remarque :</p>
+    <ul>
+      <li>De manière générale dans ce type de division, on déplace la virgule d'autant de rang qu'il y a de zéro.</li>
+    </ul>
+    
 
 
         

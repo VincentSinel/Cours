@@ -1496,7 +1496,14 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre B5",
 		nom: "Division décimale",
 		icone: 8,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_B5/Documents/B5 - Division décimale (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_B5/Documents/B5 - Division décimale (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_B5/Documents/B5 - Division décimale (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_B5/Documents/B5 - Division décimale (A trou).docx",
+			exo: 			 "/Cours/6eme/RogerVailland/Chapitre_B5/Documents/B5 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_B5/Cours.html",
 	},
 	{
