@@ -1526,7 +1526,14 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre C2",
 		nom: "Utiliser les propriétés de la proportionnalité",
 		icone: 9,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_C2/Documents/C2 - Utiliser les propriétés de la proportionnalité (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_C2/Documents/C2 - Utiliser les propriétés de la proportionnalité (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_C2/Documents/C2 - Utiliser les propriétés de la proportionnalité (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_C2/Documents/C2 - Utiliser les propriétés de la proportionnalité (A trou).docx",
+			exo: 			 "/Cours/6eme/RogerVailland/Chapitre_C2/Documents/C2 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_C2/Cours.html",
 	},
 	{
