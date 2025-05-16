@@ -1736,7 +1736,14 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre E7",
 		nom: "La symétrie",
 		icone: 11,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_E7/Documents/E7 - La symétrie (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_E7/Documents/E7 - La symétrie (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_E7/Documents/E7 - La symétrie (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_E7/Documents/E7 - La symétrie (A trou).docx",
+			exo: 			 "/Cours/6eme/RogerVailland/Chapitre_E7/Documents/E7 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_E7/Cours.html",
 	},
 	{

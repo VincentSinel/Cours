@@ -13,8 +13,10 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script id="Animation" src="/JS/Animation/animation_holder.js"></script>
+  <script src="JS/Transformation.js"></script>
 
-  <title>E1 - Droites</title>
+  <title>E7 - La symétrie</title>
 
   <style>
     .appartient div{
@@ -34,10 +36,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        E1
+        E7
       </td>
       <td id="ChapitreNom">
-        - Droites
+        - La symétrie
       </td>
     </tr>
   </table>
@@ -46,8 +48,100 @@
     Activité Introduction
   </p>
 
+  <p>
+    Les figures ci-dessous représentent trois étapes successives permettant de construire, par pliage, le symétrique A' de A par rapport à la droite $(d)$.
+  </p>
+  <div class="flexobject intro">
+    <div>
+      <img src="Images/Intro1.svg" style="max-width: 8cm;">
+      <p>
+        Sur un papier uni, tracer une droite $(d)$ et placer un point A n'appartenant pas à la droite.
+      </p>
+    </div>
+    <div>
+      <img src="Images/Intro2.svg" style="max-width: 6.5cm;">
+      <p>
+        Plier la feuille selon la droite $(d)$ et marqué le point A' par transparence de A de l'autre côté de la page.
+      </p>
+    </div>
+    <div>
+      <img src="Images/Intro3.svg" style="max-width: 8cm;">
+      <p>
+        Déplier la feuille et tracer le segment [AA'].
+      </p>
+    </div>
+  </div>
+  <ol>
+    <li>Noter O le point d'intersection entre [AA'] et $(d)$. Quelle est la particularité de ce point vis-à-vis de [AA'] ?</li>
+    <li>Que peut-on dire de la droite (AA') et $(d)$ ?</li>
+    <li>
+      Placer un point I sur la droite $(d)$ distinct de O.
+      <ol type="a">
+        <li>Mesurer [AI] et [A'I]. Que remarque-t-on ?</li>
+        <li>En déduire la nature du triangle AIA'.</li>
+      </ol>
+    </li>
+    <li>
+      Placer un point B n'appartenant pas à la droite $(d)$.
+      <ol type="a">
+        <li>En utilisant l'équerre et les propriétés vue précédemment pour le segment [AA'], construire B' le symétrique du point B par rapport à la droite $(d)$.</li>
+        <li>Tracer [AB] et [A'B'].</li>
+        <li>Expliquer l'affirmation suivantes : <i>Une symétrie axiale correspond à ce que l'on retrouve dans un miroir.</i></li>
+      </ol>
+    </li>
+  </ol>
 
+  <h1>Définition :</h1>
+      <div class="definition">
+        Dire que deux figures sont <span class="CRed">symétriques par rapport à une droite</span> signifie que, en effectuant un pliage le long de la droite, les figures se superposent.
+      </div>
+      <div class="flexobject">
+        <div style="max-width: 8cm; margin-right: 1cm;">
+          <p class="exemple">Exemple :</p>
+          <div id="symetrieaxiale"></div>
+        </div>
+        <div style="flex: 1 1 6cm;">
+          <p class="remarque">Remarque :</p>
+          <ul>
+            <li>Dans une symétrie axiale, l'axe de symétrie est la médiatrice de tous les segments reliant un point et son image.</li>
+          </ul>
+        </div>
+      </div>
+  <h1>Constructions :</h1>
+      <div class="flexobject">
+        <div style="flex: 1 1 500px;">
+          <div style="text-align: center;"><b>A la règle et l'équerre :</b></div>
+          <div id="Animation1" class="animation center" width="480" height="360"></div>
+        </div>
+        <div style="flex: 1 1 500px;">
+          <div style="text-align: center;"><b>Au compas :</b></div>
+          <div id="Animation2" class="animation center" width="480" height="360"></div>
+        </div>
+      </div>
 
 </body>
-
+<script>
+  let client = new XMLHttpRequest();
+  client.open('GET', 'Images/Lobster.svg');
+  client.onreadystatechange = function(state) {
+      if (client.readyState == 4)
+      {
+          lobster1img = client.responseText
+          if (lobster2img != "")
+              Init()
+      }
+  }
+  client.send();
+  let client2 = new XMLHttpRequest();
+  client2.open('GET', 'Images/Lobster2.svg');
+  client2.onreadystatechange = function(state) {
+      if (client2.readyState == 4)
+      {
+          lobster2img = client2.responseText
+          if (lobster1img != "")
+              Init()
+      }
+  }
+  client2.send();
+</script>
 </html>
