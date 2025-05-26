@@ -821,7 +821,7 @@ var cinquieme_rogervailland = [
 			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_B3/Documents/B3 - Repérage dans le plan (Complet).docx",
 			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_B3/Documents/B3 - Repérage dans le plan (A trou).pdf",
 			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_B3/Documents/B3 - Repérage dans le plan (A trou).docx",
-			// exo:			 "/Cours/5eme/RogerVailland/Chapitre_B3/Documents/B3 - Fiche d'exercices.pdf",
+			exo:			 "/Cours/5eme/RogerVailland/Chapitre_B3/Documents/B3 - Fiche d'exercices.pdf",
 		},
 		ready : true,
 		page : "RogerVailland/Chapitre_B3/Cours.html",
