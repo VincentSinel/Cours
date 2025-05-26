@@ -1774,7 +1774,14 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre E10",
 		nom: "Triangles",
 		icone: 11,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_E10/Documents/E10 - Triangles (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_E10/Documents/E10 - Triangles (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_E10/Documents/E10 - Triangles (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_E10/Documents/E10 - Triangles (A trou).docx",
+			exo: 			 "/Cours/6eme/RogerVailland/Chapitre_E10/Documents/E10 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_E10/Cours.html",
 	},
 	{
