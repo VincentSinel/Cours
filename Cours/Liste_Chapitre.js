@@ -775,7 +775,7 @@ var cinquieme_rogervailland = [
 		page : "RogerVailland/Chapitre_A6/Cours.html",
 	},
 	{
-		id: 29,
+		id: 29, // Fait par les collègues
 		chapter: "Chapitre A7",
 		nom: "Comparaison de fractions",
 		icone: 7,
@@ -1014,7 +1014,7 @@ var cinquieme_rogervailland = [
 			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_E6/Documents/E6 - Prisme et cylindre (Complet).docx",
 			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_E6/Documents/E6 - Prisme et cylindre (A trou).pdf",
 			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_E6/Documents/E6 - Prisme et cylindre (A trou).docx",
-			// exo:			 "/Cours/5eme/RogerVailland/Chapitre_E6/Documents/E6 - Fiche d'exercices.pdf",
+			exo:			 "/Cours/5eme/RogerVailland/Chapitre_E6/Documents/E6 - Fiche d'exercices.pdf",
 		},
 		ready : true,
 		page : "RogerVailland/Chapitre_E6/Cours.html",
@@ -1619,7 +1619,7 @@ var sixieme_rogervailland = [
 		page : "RogerVailland/Chapitre_D2/Cours.html",
 	},
 	{
-		id: 34,
+		id: 34, // Fait par les collègues
 		chapter: "Chapitre D3",
 		nom: "Surfaces",
 		icone: 10,
