@@ -122,6 +122,10 @@ var troisieme_base = [
 		id: 18,
 		nom: "Probabilités",
 		icone: 4,
+		download: {
+			pdf: 			 "/Cours/3eme/Base/Chapitre_18/Documents/Chapitre 18 - Probabilités (Complet).pdf",
+			docx:		 	 "/Cours/3eme/Base/Chapitre_18/Documents/Chapitre 18 - Probabilités (Complet).docx",
+		},
 		ready : true,
 		page : "Base/Chapitre_18/Cours.html"
 	},
@@ -255,6 +259,10 @@ var troisième_saintexupery = [
 		chapter: "Chapitre 15",
 		nom: "Probabilités",
 		icone: 4,
+		download: {
+			pdf: 			 "/Cours/3eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Probabilités (Complet).pdf",
+			docx:		 	 "/Cours/3eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Probabilités (Complet).docx",
+		},
 		ready : true,
 		page : "Base/Chapitre_18/Cours.html"
 	},
@@ -844,9 +852,16 @@ var cinquieme_rogervailland = [
 	{
 		id: 30,
 		chapter: "Chapitre B5",
-		nom: "Soustraction de nombres relatifs",
+		nom: "Soustraction de relatifs",
 		icone: 8,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/5eme/RogerVailland/Chapitre_B5/Documents/B5 - Soustraction de relatifs (Complet).pdf",
+			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_B5/Documents/B5 - Soustraction de relatifs (Complet).docx",
+			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_B5/Documents/B5 - Soustraction de relatifs (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_B5/Documents/B5 - Soustraction de relatifs (A trou).docx",
+			exo:			 "/Cours/5eme/RogerVailland/Chapitre_B5/Documents/B5 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_B5/Cours.html",
 	},
 	{
