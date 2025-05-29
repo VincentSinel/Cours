@@ -783,11 +783,18 @@ var cinquieme_rogervailland = [
 		page : "RogerVailland/Chapitre_A6/Cours.html",
 	},
 	{
-		id: 29, // Fait par les collègues
+		id: 29,
 		chapter: "Chapitre A7",
 		nom: "Comparaison de fractions",
 		icone: 7,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/5eme/RogerVailland/Chapitre_A7/Documents/A7 - Comparaison de fractions (Complet).pdf",
+			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_A7/Documents/A7 - Comparaison de fractions (Complet).docx",
+			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_A7/Documents/A7 - Comparaison de fractions (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_A7/Documents/A7 - Comparaison de fractions (A trou).docx",
+			exo:			 "/Cours/5eme/RogerVailland/Chapitre_A7/Documents/A7 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_A7/Cours.html",
 	},
 	{
