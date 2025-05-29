@@ -942,7 +942,14 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre D3",
 		nom: "Moyenne",
 		icone: 10,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/5eme/RogerVailland/Chapitre_D3/Documents/D3 - Moyenne (Complet).pdf",
+			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_D3/Documents/D3 - Moyenne (Complet).docx",
+			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_D3/Documents/D3 - Moyenne (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_D3/Documents/D3 - Moyenne (A trou).docx",
+			exo:			 "/Cours/5eme/RogerVailland/Chapitre_D3/Documents/D3 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_D3/Cours.html",
 	},
 	{
