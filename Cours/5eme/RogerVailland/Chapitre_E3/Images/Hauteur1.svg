@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.79 160.3">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #e30613;
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        fill: #1d1d1b;
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 19px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-4 {
+        fill: #3aaa35;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        stroke: #1d1d1b;
+      }
+    </style>
+  </defs>
+  <rect class="cls-4" x="114.54" y="113.26" width="13.02" height="13.02"/>
+  <polygon class="cls-2" points="114.54 29.77 17.27 126.28 176.59 126.28 114.54 29.77"/>
+  <line class="cls-1" x1="114.54" y1="1" x2="114.54" y2="159.3"/>
+  <text class="cls-3" transform="translate(117.35 144.15)"><tspan x="0" y="0">H</tspan></text>
+  <text class="cls-3" transform="translate(119.02 30.66)"><tspan x="0" y="0">M</tspan></text>
+  <text class="cls-3" transform="translate(0 139.11)"><tspan x="0" y="0">P</tspan></text>
+  <text class="cls-3" transform="translate(179.49 139.11)"><tspan x="0" y="0">N</tspan></text>
+</svg>

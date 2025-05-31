@@ -1000,7 +1000,14 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre E3",
 		nom: "Droites remarquables du triangle",
 		icone: 11,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/5eme/RogerVailland/Chapitre_E3/Documents/E3 - Droites remarquables du triangle (Complet).pdf",
+			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_E3/Documents/E3 - Droites remarquables du triangle (Complet).docx",
+			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_E3/Documents/E3 - Droites remarquables du triangle (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_E3/Documents/E3 - Droites remarquables du triangle (A trou).docx",
+			exo:			 "/Cours/5eme/RogerVailland/Chapitre_E3/Documents/E3 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_E3/Cours.html",
 	},
 	{
