@@ -1097,7 +1097,14 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre F3",
 		nom: "Les échelles",
 		icone: 12,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/5eme/RogerVailland/Chapitre_F3/Documents/F3 - Les échelles (Complet).pdf",
+			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_F3/Documents/F3 - Les échelles (Complet).docx",
+			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_F3/Documents/F3 - Les échelles (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_F3/Documents/F3 - Les échelles (A trou).docx",
+			exo:			 "/Cours/5eme/RogerVailland/Chapitre_F3/Documents/F3 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_F3/Cours.html",
 	},
 	
