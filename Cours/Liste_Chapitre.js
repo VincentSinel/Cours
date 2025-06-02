@@ -998,6 +998,7 @@ var cinquieme_rogervailland = [
 			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_E2/Documents/E2 - Angles d'un triangle (Complet).docx",
 			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_E2/Documents/E2 - Angles d'un triangle (A trou).pdf",
 			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_E2/Documents/E2 - Angles d'un triangle (A trou).docx",
+			exo:			 "/Cours/5eme/RogerVailland/Chapitre_E2/Documents/E2 - Fiche d'exercices.pdf",
 		},
 		ready : true,
 		page : "saintexupery/Chapitre_6/Cours.html",
