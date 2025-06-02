@@ -905,7 +905,14 @@ var cinquieme_rogervailland = [
 		chapter: "Chapitre C3",
 		nom: "Tester une égalité",
 		icone: 9,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/5eme/RogerVailland/Chapitre_C3/Documents/C3 - Tester une égalité (Complet).pdf",
+			docx: 		 "/Cours/5eme/RogerVailland/Chapitre_C3/Documents/C3 - Tester une égalité (Complet).docx",
+			pdf_trou:  "/Cours/5eme/RogerVailland/Chapitre_C3/Documents/C3 - Tester une égalité (A trou).pdf",
+			docx_trou: "/Cours/5eme/RogerVailland/Chapitre_C3/Documents/C3 - Tester une égalité (A trou).docx",
+			exo:			 "/Cours/5eme/RogerVailland/Chapitre_C3/Documents/C3 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_C3/Cours.html",
 	},
 	{
