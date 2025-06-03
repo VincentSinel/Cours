@@ -1592,7 +1592,14 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre C3",
 		nom: "Utiliser les pourcentages",
 		icone: 9,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_C3/Documents/C3 - Utiliser les pourcentages (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_C3/Documents/C3 - Utiliser les pourcentages (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_C3/Documents/C3 - Utiliser les pourcentages (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_C3/Documents/C3 - Utiliser les pourcentages (A trou).docx",
+			exo: 			 "/Cours/6eme/RogerVailland/Chapitre_C3/Documents/C3 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_C3/Cours.html",
 	},
 	{
