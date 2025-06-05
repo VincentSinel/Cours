@@ -1689,7 +1689,14 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre D4",
 		nom: "Volumes",
 		icone: 10,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_D4/Documents/D4 - Volumes (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_D4/Documents/D4 - Volumes (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_D4/Documents/D4 - Volumes (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_D4/Documents/D4 - Volumes (A trou).docx",
+			exo: 			 "/Cours/6eme/RogerVailland/Chapitre_D4/Documents/D4 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_D4/Cours.html",
 	},
 	{
