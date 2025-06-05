@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.5 80.5">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-3 {
+        stroke-width: .9px;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-5 {
+        fill: #1d1d1b;
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 8.5px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-2 {
+        stroke: #9d9d9c;
+      }
+
+      .cls-2, .cls-4 {
+        stroke-width: .5px;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #74bd83;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-3" points="20.25 20.25 30.25 20.25 30.25 30.25 50.25 30.25 50.25 10.25 70.25 10.25 70.25 60.25 60.25 60.25 60.25 70.25 10.25 70.25 10.25 60.25 40.25 60.25 40.25 50.25 10.25 50.25 10.25 30.25 20.25 30.25 20.25 20.25"/>
+  <g>
+    <rect class="cls-2" x=".25" y=".25" width="80" height="80"/>
+    <line class="cls-2" x1=".25" y1="70.25" x2="80.25" y2="70.25"/>
+    <line class="cls-2" x1=".25" y1="60.25" x2="80.25" y2="60.25"/>
+    <line class="cls-2" x1=".25" y1="50.25" x2="80.25" y2="50.25"/>
+    <line class="cls-2" x1=".25" y1="40.25" x2="80.25" y2="40.25"/>
+    <line class="cls-2" x1=".25" y1="30.25" x2="80.25" y2="30.25"/>
+    <line class="cls-2" x1=".25" y1="20.25" x2="80.25" y2="20.25"/>
+    <line class="cls-2" x1=".25" y1="10.25" x2="80.25" y2="10.25"/>
+    <line class="cls-2" x1="70.25" y1=".25" x2="70.25" y2="80.25"/>
+    <line class="cls-2" x1="60.25" y1=".25" x2="60.25" y2="80.25"/>
+    <line class="cls-2" x1="50.25" y1=".25" x2="50.25" y2="80.25"/>
+    <line class="cls-2" x1="40.25" y1=".25" x2="40.25" y2="80.25"/>
+    <line class="cls-2" x1="30.25" y1=".25" x2="30.25" y2="80.25"/>
+    <line class="cls-2" x1="20.25" y1=".25" x2="20.25" y2="80.25"/>
+    <line class="cls-2" x1="10.25" y1=".25" x2="10.25" y2="80.25"/>
+  </g>
+  <polygon class="cls-1" points="20.25 20.25 30.25 20.25 30.25 30.25 50.25 30.25 50.25 10.25 70.25 10.25 70.25 60.25 60.25 60.25 60.25 70.25 10.25 70.25 10.25 60.25 40.25 60.25 40.25 50.25 10.25 50.25 10.25 30.25 20.25 30.25 20.25 20.25"/>
+  <rect class="cls-4" x=".25" y="10.25" width="10" height="10"/>
+  <text class="cls-5" transform="translate(1.17 8.74)"><tspan x="0" y="0">Unité</tspan></text>
+</svg>

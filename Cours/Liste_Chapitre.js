@@ -1677,11 +1677,18 @@ var sixieme_rogervailland = [
 		page : "RogerVailland/Chapitre_D2/Cours.html",
 	},
 	{
-		id: 34, // Fait par les collègues
+		id: 34,
 		chapter: "Chapitre D3",
 		nom: "Surfaces",
 		icone: 10,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_D3/Documents/D3 - Surfaces (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_D3/Documents/D3 - Surfaces (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_D3/Documents/D3 - Surfaces (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_D3/Documents/D3 - Surfaces (A trou).docx",
+			exo: 			 "/Cours/6eme/RogerVailland/Chapitre_D3/Documents/D3 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_D3/Cours.html",
 	},
 	{
