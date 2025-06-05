@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 217.01 160.3">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #e30613;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2, .cls-4 {
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-3 {
+        stroke-linejoin: round;
+      }
+
+      .cls-5 {
+        fill: #1d1d1b;
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 19px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-2, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-6 {
+        fill: #3aaa35;
+        stroke-width: 0px;
+      }
+
+      .cls-4 {
+        stroke-dasharray: 0 0 7.16 7.16;
+      }
+    </style>
+  </defs>
+  <rect class="cls-6" x="188.54" y="113.26" width="13.02" height="13.02"/>
+  <polygon class="cls-3" points="188.54 29.77 17.27 126.28 144.59 126.28 188.54 29.77"/>
+  <line class="cls-1" x1="188.54" y1="1" x2="188.54" y2="159.3"/>
+  <text class="cls-5" transform="translate(197.69 144.15)"><tspan x="0" y="0">H</tspan></text>
+  <text class="cls-5" transform="translate(193.02 30.66)"><tspan x="0" y="0">M</tspan></text>
+  <text class="cls-5" transform="translate(0 139.11)"><tspan x="0" y="0">P</tspan></text>
+  <text class="cls-5" transform="translate(140 143.36)"><tspan x="0" y="0">N</tspan></text>
+  <g>
+    <line class="cls-2" x1="144.59" y1="126.28" x2="148.09" y2="126.28"/>
+    <line class="cls-4" x1="155.25" y1="126.28" x2="208.93" y2="126.28"/>
+    <line class="cls-2" x1="212.51" y1="126.28" x2="216.01" y2="126.28"/>
+  </g>
+</svg>

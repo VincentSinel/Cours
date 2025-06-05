@@ -59,7 +59,7 @@ function CreatePDFButton()
 
     but = document.getElementById("PdfButton2");
     but.target="_blank";
-    but.download="Cours a trou.pdf"
+    but.download="Cours à trous.pdf"
 
     but = document.getElementById("DocxButton");
     but.target="_blank";
@@ -67,7 +67,7 @@ function CreatePDFButton()
 
     but = document.getElementById("DocxButton2");
     but.target="_blank";
-    but.download="Cours a trou.docx"
+    but.download="Cours à trous.docx"
 
     but = document.getElementById("OdtButton");
     but.target="_blank";
@@ -75,7 +75,7 @@ function CreatePDFButton()
 
     but = document.getElementById("OdtButton2");
     but.target="_blank";
-    but.download="Cours a trou.odt"
+    but.download="Cours à trous.odt"
 
     but = document.getElementById("XlsxButton");
     but.target="_blank";

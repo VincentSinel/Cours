@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.7 122.33">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #e30613;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 20px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-4, .cls-5 {
+        fill: #1d1d1b;
+      }
+
+      .cls-2 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-6 {
+        fill: #95c11f;
+      }
+
+      .cls-6, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        stroke: #3aaa35;
+      }
+    </style>
+  </defs>
+  <rect class="cls-6" x="73.89" y="59.86" width="11.74" height="11.74" transform="translate(29.54 -24.6) rotate(21.44)"/>
+  <g>
+    <line class="cls-2" x1="6.06" y1="43.1" x2="138.23" y2="95"/>
+    <rect class="cls-5" x="-.44" y="42.1" width="13" height="2" transform="translate(-36.27 32.98) rotate(-68.56)"/>
+    <rect class="cls-5" x="131.73" y="94" width="13" height="2" transform="translate(-.72 188.94) rotate(-68.56)"/>
+  </g>
+  <line class="cls-1" x1="98.87" y1="1" x2="51.61" y2="121.33"/>
+  <line class="cls-3" x1="34.06" y1="47.51" x2="40.99" y2="63.4"/>
+  <line class="cls-3" x1="106.27" y1="75.86" x2="113.2" y2="91.75"/>
+  <text class="cls-4" transform="translate(0 34.4)"><tspan x="0" y="0">A</tspan></text>
+  <text class="cls-4" transform="translate(131.79 85.9)"><tspan x="0" y="0">B</tspan></text>
+</svg>

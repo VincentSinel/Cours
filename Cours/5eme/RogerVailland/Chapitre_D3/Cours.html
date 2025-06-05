@@ -14,7 +14,7 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>E1 - Généralité sur les triangles</title>
+  <title>D3 - Moyenne</title>
 
   <style>
   </style>
@@ -26,10 +26,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        E1
+        D3
       </td>
       <td id="ChapitreNom">
-        - Nombres Relatifs (Partie 1)
+        - Moyenne
       </td>
     </tr>
   </table>
@@ -38,6 +38,136 @@
     Activité Introduction
   </p>
 
+  <ol>
+    <li>
+      On dispose de 4 seaux contenant chacun un nombre de balle différent.<br>
+      <img src="Images/Seaux.svg" style="max-height: 4cm;">
+      <ol type="a">
+        <li>Combien de balle au total y-a-t-il dans les 4 seaux ?</li>
+        <li>On souhaite répartir ces balles équitablement, combien de balle doit-on mettre dans chaque seau ?</li>
+      </ol>
+    </li>
+    <li>
+      On dispose désormais de 25 seaux dont le nombre de balle est donné dans ce tableau :<br>
+      <table class="proportionnaltable">
+        <tr>
+          <th>Nombre de balles</th>
+          <td>1</td>
+          <td>2</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td>10</td>
+          <td>12</td>
+          <th>Total</th>
+        </tr>
+        <tr>
+          <th>Nombres de seaux</th>
+          <td>3</td>
+          <td>2</td>
+          <td>5</td>
+          <td>4</td>
+          <td>3</td>
+          <td>5</td>
+          <td>3</td>
+          <td>25</td>
+        </tr>
+      </table>
+      <ol type="a">
+        <li>Combien de balle au total y-a-t-il dans les 25 seaux ?</li>
+        <li>On souhaite répartir ces balles équitablement, combien de balle doit-on mettre dans chaque seau ?</li>
+      </ol>
+    </li>
+  </ol>
+
+  <h1>Moyenne simple :</h1>
+          <div class="definition">
+            La <span class="CRed">moyenne</span> d'une série de valeurs est égale à la somme de toutes 
+            les valeurs de la série, divisée par l'effectif total de la série.<br>
+            $Moyenne = \frac{Somme\thinspace de\thinspace toutes\thinspace les\thinspace valeurs}{Effectif\thinspace total}$
+          </div>
+          <p class="exemple">Exemple :</p>
+          <p>On a relevé les notes des 7 derniers contrôles de Pierre : </p>
+          <div class="flexobject valeur">
+            <div>7</div>
+            <div>17</div>
+            <div>15</div>
+            <div>16</div>
+            <div>12</div>
+            <div>14</div>
+            <div>10</div>
+          </div>
+          <p>On peut alors calculer sa moyenne :</p>
+          $Moyenne = \frac{7+17+15+16+12+14+10}{7}=13$
+          <p>
+            <b>Interprétation :</b><br>
+            Si pierre avait eu la même note à tous les contrôle il aurait eu 13 à chaque fois.
+          </p>
+          <p class="remarque">Remarque :</p>
+          <ul>
+            <li>La moyenne est très sensible au valeurs extrême.</li>
+          </ul>
+  <h1>Moyenne pondérée :</h1>
+          <p>
+            On étudie les résultats d'une classe à un contrôle, voici les notes obtenues :<br>
+            <div class="flexobject valeur">
+              <div>7</div>
+              <div>13</div>
+              <div>10</div>
+              <div>14</div>
+              <div>14</div>
+              <div>15</div>
+              <div>7</div>
+              <div>10</div>
+              <div>15</div>
+              <div>10</div>
+              <div>13</div>
+              <div>20</div>
+              <div>9</div>
+              <div>9</div>
+              <div>13</div>
+              <div>14</div>
+              <div>15</div>
+              <div>14</div>
+              <div>7</div>
+              <div>10</div>
+            </div>
+          <p>
+            On range alors ces notes dans le tableau suivant :
+            <table class="proportionnaltable">
+              <tr>
+                <th>Note<br>(valeur)</th>
+                <td>7</td>
+                <td>9</td>
+                <td>10</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>20</td>
+                <th>Total</th>
+              </tr>
+              <tr>
+                <th>Effectif</th>
+                <td>3</td>
+                <td>2</td>
+                <td>4</td>
+                <td>3</td>
+                <td>4</td>
+                <td>3</td>
+                <td>1</td>
+                <td>20</td>
+              </tr>
+            </table>
+            <br>
+            <p>Pour calculer la moyenne on calcul la somme des valeurs en prenant en compte leurs effectifs.<br>
+            La valeur 7 apparait par exemple 3 fois donc on prend 7×3.<br>
+            Enfin, on divise par l'effectif total, ici 20.</p>
+            $Moyenne = \frac{7\times3+9\times2+10\times4+13\times3+14\times4+15\times3+20\times1}{20}$ $=11.95$
+          </p>
+          <p class="remarque">Remarque :</p>
+          <ul>
+            <li>Lorsque l'on calcul la moyenne avec des effectifs, on parle de <span class="CRed">moyenne pondérée</span>.</li>
+          </ul>
   
 </body>
 

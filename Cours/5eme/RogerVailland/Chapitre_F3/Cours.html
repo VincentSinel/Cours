@@ -14,7 +14,7 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>E1 - Généralité sur les triangles</title>
+  <title>F3 - Les échelles</title>
 
   <style>
   </style>
@@ -26,10 +26,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        E1
+        F3
       </td>
       <td id="ChapitreNom">
-        - Nombres Relatifs (Partie 1)
+        - Les échelles
       </td>
     </tr>
   </table>
@@ -37,6 +37,88 @@
   <p class="exemple">
     Activité Introduction
   </p>
+
+  <div class="flexobject">
+    <div>
+      Louis a pris des vacances en suisse autour du lac Léman.
+      <ol>
+        <li>
+          En utilisant la longueur donnée sur de la carte, vérifier que la distance à vol d'oiseau entre Genève et Lausanne est d'environ 50 km.
+        </li>
+        <li>
+          Déterminer la distance à vol d'oiseau entre Lausanne et Thonon-les-Bains.
+        </li>
+        <li>
+          Déterminer la distance à vol d'oiseau correspondant à 1 cm sur cette carte.
+        </li>
+      </ol>
+    </div>
+    <img src="Images/Act intro.png" style="border-radius: 0.5cm;">
+  </div>
+
+
+  <h1>Echelles :</h1>
+    <div class="definition">
+      Sur un plan dit « <i>à l'échelle</i> », les longueurs sont proportionnelles aux longueurs réelles.<br>
+      Le coefficient de proportionnalité obtenu en divisant les longueurs sur la carte par les longueurs réelles, toutes exprimées dans <b>la même unité</b>, s'appelle l'<span class="CRed">échelle</span> du plan.<br>
+      Echelle = <span class="formule">$\frac{Taille\ plan}{Taille\ réel}$</span>
+    </div>
+    <div class="flexobject">
+      <div style="max-width: 10cm;">
+        <p class="exemple">Exemple :</p>
+        <p>
+          Sur le plan de la région ci-contre, l'échelle est indiqué en haut à gauche.<br>
+          <span class="formule">$\frac{1}{250\ 000}$</span><br>
+          Cela signifie que 1 cm sur le plan correspond à 250&#8239;000 cm dans la réalité soit 2,5 km.
+        </p>
+      </div>
+      <img src="Images/Echelle.png" style="border-radius: 1cm;">
+    </div>
+  <h1>Exemples :</h1>
+  <div class="flexobject">
+    <img src="Images/Carte_France1.svg" style="width: 107.89mm;">
+    <div style="flex: 6cm 1 1;">
+      <h2>Calcul d'une échelle :</h2>
+      <p class="exemple"><u>En utilisant une indication sur la carte :</u></p>
+      <p>
+        Sur la carte de France ci-contre, on peut déterminer l'échelle à partir de l'indication présente en bas de la carte.<br>
+        En mesurant à la règle, on peut en déduire que 1cm correspond à 100 km dans la réalité.<br>
+        L'échelle est donc de <span class="formule">$\frac{1}{10\ 000\ 000}$</span>.<br>
+      </p>
+  
+      <p class="exemple"><u>En utilisant une distance réelle :</u></p>
+      <p>
+        La distance réel entre Clermont-Ferrand et Lyon est d'environ 130 km.<br>
+        La distance entre ces deux villes sur la carte est de 1,3cm.<br>
+        L'échelle est donc de <span class="formule">$\frac{1,3}{13\ 000\ 000}=\frac{1}{10\ 000\ 000}$</span>.<br>
+      </p>
+    </div>
+  </div><br>
+  <div class="flexobject">
+    <img src="Images/Carte_France2.svg" style="width: 107.89mm;">
+    <div style="flex: 6cm 1 1;">
+      <h2>Calcul d'une longueur :</h2>
+      <p>
+        Sur la carte de France ci-contre, l'échelle est <span class="formule">$\frac{1}{10\ 000\ 000}$</span>. Or $10\ 000\ 000\ cm = 100\ km$<br>
+        La distance sur la carte entre Paris et Marseille est d'environ 6,4 cm. On peut donc en déduire la distance réelle entre ces deux villes.<br>
+        <table class="proportionnaltable">
+          <tr>
+            <th>Distance sur le plan</th>
+            <td>1</td>
+            <td>6,4</td>
+          </tr>
+          <tr>
+            <th>Distance réelle (km)</th>
+            <td>100</td>
+            <td class="CRed">640</td>
+          </tr>
+        </table>
+        La distance réelle entre Paris et Marseille est donc d'environ 640 km.
+      </p>
+    </div>
+  </div>
+
+
 
   
 </body>

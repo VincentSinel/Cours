@@ -13,11 +13,35 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script id="Animation" src="/JS/Animation/animation_holder.js"></script>
 
-  <title>D1 - Se repérer dans le temps</title>
+  <title>C2 - Utiliser les propriétés de la proportionnalité</title>
 
   <style>
-    
+    .tableau_prop{
+      display: flex;
+      align-items: center;
+    }
+    .samewidth td{
+      width: 50px;
+    }
+    .samewidth th{
+      width: auto;
+    }
+
+    .tableaud{
+      display: grid;
+      width: calc(5 * 80px);
+      grid-template-columns: repeat(6, 80px);
+      grid-auto-rows: minmax(30px, auto);
+      border-top: 2px solid var(--TableBorder);
+      border-left: 2px solid var(--TableBorder);
+    }
+    .tableaud_div{
+      border-right: 2px solid var(--TableBorder);
+      border-bottom: 2px solid var(--TableBorder);
+      text-align: center;
+    }
   </style>
 
 </head>
@@ -27,10 +51,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        D1
+        C2
       </td>
       <td id="ChapitreNom">
-        - Se repérer dans le temps
+        - Utiliser les propriétés de la proportionnalité
       </td>
     </tr>
   </table>
@@ -39,7 +63,160 @@
     Activité Introduction
   </p>
 
+  <div>
+		<div style="border: solid 1px; border-radius: 10px; overflow: hidden; height: 3cm; max-width: 13cm;">
+			<img id="chocolat" src="Images/Chocolat.webp" style="width: 13cm; height: 3cm;object-fit: cover;">
+		</div>
+    Une pâtissière vend son chocolat 20 € le kilo.
+    <ol>
+      <li>
+        Compléter le tableau suivant :<br>
+        <table class="proportionnaltable samewidth">
+          <tr>
+            <th>Masse (kg)</th>
+            <td>1</td>
+            <td>...</td>
+          </tr>
+          <tr>
+            <th>Prix (€)</th>
+            <td>20</td>
+            <td>10</td>
+          </tr>
+        </table>
+        Avec 10€, on peut acheter ...... de chocolat.
+      </li>
+      <li>
+        On cherche à connaitre les quantités de chocolat que l'on peut acheter pour 30 €, 18 € et 37 €.<br>
+        Recopier et compléter le tableau ci-dessous, puis écrire une phrase donnant les masses de chocolat cherchées.<br>
+        <table class="proportionnaltable samewidth">
+          <tr>
+            <th>Masse de chocolat (en g)</th>
+            <td>1 000</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Prix (€)</th>
+            <td>20</td>
+            <td>10</td>
+            <td>30</td>
+            <td>2</td>
+            <td>18</td>
+            <td>1</td>
+            <td>37</td>
+          </tr>
+        </table>
+      </li>
+    </ol>
+  </div>
 
+  <h1>Linéarité :</h1>
+    <div class="definition">
+      Pour calculer une quatrième proportionnelle, on peut utiliser :<br>
+      <ul>
+        <li>L'addition de quantité (ou de colonne)</li>
+        <li>La multiplication de quantité  par un nombre non nul</li>
+      </ul>
+    </div>
+    <p class="exemple">Exemple :</p>
+    Un robinet fuit et la quantité d'eau perdue est proportionnelle au temps qui passe :
+    <table class="proportionnaltable samewidth">
+      <tr>
+        <th>Temps (h)</th>
+        <td>2</td>
+        <td>6</td>
+        <td>7</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <th>Quantité d'eau (L)</th>
+        <td>5</td>
+        <td>?</td>
+        <td>17,5</td>
+        <td>?</td>
+      </tr>
+    </table>
+    <ul>
+      <li>
+        Pour obtenir la quantité d'eau perdu en 9h, on peut ajouter la quantité perdu en 2h et 7h (2 + 7 = 9) : $5 + 17,5 = 22,5 L$
+      </li>
+      <li>
+        La quantité d'eau perdue en 6h peut être obtenu en multipliant la quantité perdue en 2h par 3 (2 × 3 = 6) : $5\times3=15L$
+      </li>
+    </ul>
+  <h1>Passage par l'unité :</h1>
+    <div class="definition">
+      Pour calculer une quatrième proportionnelle, on peut effectuer un passage par l'unité.
+    </div>
+    <p class="exemple">Exemple :</p>
+    Le prix d'une quantité de pomme est proportionnel a la masse de pomme :
+    <table class="proportionnaltable samewidth">
+      <tr>
+        <th>Quantité de pomme (kg)</th>
+        <td>2</td>
+        <td class="CRed"><b>1</b></td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <th>Prix (€)</th>
+        <td>2,8</td>
+        <td class="CRed"><b>1,4</b></td>
+        <td>?</td>
+      </tr>
+    </table>
+    <p>
+      Le prix de 5 kg de pomme peut-être obtenue en passant par le prix de 1kg (passage à l'unité).<br>
+      1kg de pomme coûte $2,8 \div 2 = 1,40$€.<br>
+      5kg de pomme coûte donc $1,40\times5=7$€
+    </p>
+  <h1>Coefficient de proportionnalité :</h1>
+    <div class="definition">
+      Pour calculer une quatrième proportionnelle, on peut calculer le coefficient de proportionnalité.
+    </div>
+    <p class="exemple">Exemple :</p>
+    Le prix du carburant est proportionnel à son volume :
+    <div class="tableau_prop">
+      <table class="proportionnaltable samewidth">
+        <tr>
+          <th>Volume (L)</th>
+          <td>18</td>
+          <td>53</td>
+        </tr>
+        <tr>
+          <th>Prix (€)</th>
+          <td>29,52</td>
+          <td>?</td>
+        </tr>
+      </table>
+      <img src="Images/Coef2.png" style="max-height: 50px;">
+    </div>
+    Pour calculer le coefficient de proportionnalité, on divise une valeur de la ligne du bas par la quantité correspondante dans la ligne du haut.<br>
+    Ici $29,52\div18 = 1,64$.<br>
+    On peut alors trouver le prix de 53 L de carburant : $53\times1,64=86,92$€
+  <h1>Règle de trois :</h1>
+      <div class="definition">
+        Pour calculer une quatrième proportionnelle, on peut utiliser la règle de trois.<br>
+        <i>« On multiplie la diagonale et on divise par la troisième valeur. »</i>
+      </div>
+      <p class="exemple">Exemple :</p>
+      Les ingrédients d'une recettes sont proportionnels entre eux :
+      <div class="tableaud">
+        <div class="tableaud_div" style="grid-column: 1 / 4; grid-row: 1; background-color: var(--TableHeader);"><b>Farine (g)</b></div>
+        <div class="tableaud_div" style="grid-column: 1 / 4; grid-row: 2; background-color: var(--TableHeader);"><b>Sucre (g)</b></div>
+        <div id="Animation1" class="animation"
+          style="grid-column: 4 / 6; grid-row: 1 / 3; border: none;"
+        width="160" height="60" showmenu="false" loop="true"></div>
+        <div class="tableaud_div" style="grid-column: 4; grid-row: 1">625</div>
+        <div class="tableaud_div" style="grid-column: 5; grid-row: 1">925</div>
+        <div class="tableaud_div" style="grid-column: 4; grid-row: 2">350</div>
+        <div class="tableaud_div" style="grid-column: 5; grid-row: 2">?</div>
+      </div>
+      Pour calculer, on utilise la règle de trois : $\frac{925\times 350}{625} = 518$<br>
+      Pour 925 g de farine il faut donc 518 g de sucre.
         
 </body>
 
