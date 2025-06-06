@@ -1845,7 +1845,14 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre E9",
 		nom: "Axes de symétrie",
 		icone: 11,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_E9/Documents/E9 - Axes de symétrie (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_E9/Documents/E9 - Axes de symétrie (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_E9/Documents/E9 - Axes de symétrie (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_E9/Documents/E9 - Axes de symétrie (A trou).docx",
+			exo: 			 "/Cours/6eme/RogerVailland/Chapitre_E9/Documents/E9 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_E9/Cours.html",
 	},
 	{

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.07 241.57">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #e30613;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-3 {
+        stroke: #9d9d9c;
+        stroke-width: .5px;
+      }
+
+      .cls-4 {
+        fill: #e30613;
+        font-family: Cambria-Italic, Cambria;
+        font-size: 12px;
+        font-style: italic;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1" data-name="Calque 1">
+    <g>
+      <rect class="cls-3" x=".25" y="1" width="239.57" height="239.57"/>
+      <line class="cls-3" x1=".25" y1="216.62" x2="239.82" y2="216.62"/>
+      <line class="cls-3" x1=".25" y1="192.66" x2="239.82" y2="192.66"/>
+      <line class="cls-3" x1=".25" y1="168.7" x2="239.82" y2="168.7"/>
+      <line class="cls-3" x1=".25" y1="144.74" x2="239.82" y2="144.74"/>
+      <line class="cls-3" x1=".25" y1="120.79" x2="239.82" y2="120.79"/>
+      <line class="cls-3" x1=".25" y1="96.83" x2="239.82" y2="96.83"/>
+      <line class="cls-3" x1=".25" y1="72.87" x2="239.82" y2="72.87"/>
+      <line class="cls-3" x1=".25" y1="48.91" x2="239.82" y2="48.91"/>
+      <line class="cls-3" x1=".25" y1="24.96" x2="239.82" y2="24.96"/>
+      <line class="cls-3" x1="215.87" y1="1" x2="215.87" y2="240.57"/>
+      <line class="cls-3" x1="191.91" y1="1" x2="191.91" y2="240.57"/>
+      <line class="cls-3" x1="167.95" y1="1" x2="167.95" y2="240.57"/>
+      <line class="cls-3" x1="143.99" y1="1" x2="143.99" y2="240.57"/>
+      <line class="cls-3" x1="120.04" y1="1" x2="120.04" y2="240.57"/>
+      <line class="cls-3" x1="96.08" y1="1" x2="96.08" y2="240.57"/>
+      <line class="cls-3" x1="72.12" y1="1" x2="72.12" y2="240.57"/>
+      <line class="cls-3" x1="48.16" y1="1" x2="48.16" y2="240.57"/>
+      <line class="cls-3" x1="24.21" y1="1" x2="24.21" y2="240.57"/>
+    </g>
+  </g>
+  <g id="Calque_2" data-name="Calque 2">
+    <polyline class="cls-2" points="215.87 168.7 72.12 168.7 24.21 168.7 72.12 216.62"/>
+    <polyline class="cls-2" points="120.04 96.83 167.95 168.7 72.12 168.7"/>
+    <path class="cls-2" d="m93.46,136.7c-12.86-8.59-21.33-23.24-21.33-39.87,0-26.46,21.45-47.91,47.91-47.91"/>
+    <line class="cls-2" x1="120.04" y1="216.62" x2="167.95" y2="216.62"/>
+    <line class="cls-1" x1="120.04" y1="1" x2="120.04" y2="240.57"/>
+    <text class="cls-4" transform="translate(122.52 14.45)"><tspan x="0" y="0">(d)</tspan></text>
+  </g>
+</svg>
