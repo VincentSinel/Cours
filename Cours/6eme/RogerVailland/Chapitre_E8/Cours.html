@@ -13,17 +13,17 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script src="/JS/Svg.js/svg.min.js" charset="utf-8"></script>
+  <script src="JS/Transformation.js"></script>
 
-  <title>E1 - Droites</title>
+  <title>E8 - Propriétés de la symétrie</title>
 
   <style>
-    .appartient div{
+    #symetrieaxiale
+    {
+      border: solid black 1px; 
+      width: fit-content;
       display: inline-block;
-      width: 8cm;
-    }
-    .appartient div:first-child{
-      display: inline-block;
-      width: 3cm;
     }
   </style>
 
@@ -34,10 +34,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        E1
+        E8
       </td>
       <td id="ChapitreNom">
-        - Droites
+        - Propriétés de la symétrie
       </td>
     </tr>
   </table>
@@ -46,8 +46,68 @@
     Activité Introduction
   </p>
 
+  <img src="Images/Intro.svg" alt="Activité d'introduction à la symétrie axiale" style="max-height: 12cm;">
+  <p>
+    Dans la figure ci-dessus, B, C et D sont alignés et ABC est un triangle équilatéral. A appartient à l'axe de symétrie (d).
+  </p>
+  <ol>
+    <li>Construire l'image de la figure par la symétrie d'axe <i><span class="CRed">(d)</span></i>. On utilisera la notation des points images A', B', C' et D'</li>
+    <li>Que peut-on dire des points B', C' et D'</li>
+    <li>Que peut-on dire du symétrique du cercle de centre D de rayon CD ?</li>
+    <li>Quelle est la mesure de l'angle $\widehat{B'A'C'}$ ?</li>
+    <li>Quelle est la nature du triangle A'B'C'</li>
+  </ol>
 
+  <h1>Propriétés :</h1>
+      <div class="definition">
+        <b><u>Propriétés :</u></b><br>
+        <ul>
+          <li>Une symétrie axiale conserve les propriétés géométriques et les mesures.</li>
+          <li>Si trois points sont alignés, alors leurs symétriques par rapport à un axe sont aussi alignés.</li>
+          <li>Si deux angles sont symétriques par rapport à un axe, alors ils ont la même mesure.</li>
+          <li>Si deux figures sont symétriques par rapport à un axe, alors elles ont le même périmètre et la même aire.</li>
+        </ul>
+      </div>
+      <p class="exemple">Exemple :</p>
+      <div id="symetrieaxiale"></div>
+      <br>
+      <br>
+      <div class="definition">
+        Le symétrique d'un point se trouvant sur l'axe de symétrie est <b>lui-même</b>.<br>
+      </div>
+  <h1>Application :</h1>
+      <p>
+        On peut utiliser les propriétés de la symétrie axiale pour construire le symétrique d'une figure en plus rapidement.
+      </p>
+      <p class="exemple">Exemple :</p>
+      <img src="Images/Proprietes.svg" alt="utilisation des propriétés de la symétrie axiale" style="max-height: 8cm;">
+      <p>
+        Pour construire le symétrique de la figure, il suffit de construire le symétrique des différents points. On peut alors utiliser les propriétés de la symétrie axiale pour construire les arcs de cercle car les longueurs sont conservées.
+      </p>
 
 </body>
-
+<script>
+  let client = new XMLHttpRequest();
+  client.open('GET', 'Images/Lobster.svg');
+  client.onreadystatechange = function(state) {
+      if (client.readyState == 4)
+      {
+          lobster1img = client.responseText
+          if (lobster2img != "")
+              Init()
+      }
+  }
+  client.send();
+  let client2 = new XMLHttpRequest();
+  client2.open('GET', 'Images/Lobster2.svg');
+  client2.onreadystatechange = function(state) {
+      if (client2.readyState == 4)
+      {
+          lobster2img = client2.responseText
+          if (lobster1img != "")
+              Init()
+      }
+  }
+  client2.send();
+</script>
 </html>

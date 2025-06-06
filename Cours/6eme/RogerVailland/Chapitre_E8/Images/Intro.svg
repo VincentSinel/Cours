@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158.05 215.45">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        stroke: #e30613;
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        stroke: #1d1d1c;
+      }
+
+      .cls-5 {
+        fill: #1d1d1b;
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 11px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-4 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-6 {
+        fill: #ea5b0c;
+        stroke-width: 0px;
+      }
+
+      .cls-7 {
+        fill: #e30613;
+        font-family: Cambria-Italic, Cambria;
+        font-size: 12px;
+        font-style: italic;
+      }
+    </style>
+  </defs>
+  <path class="cls-6" d="m134.78,135.05c-1.77-1.66-3.15-3.8-3.9-6.29s-.79-5.03-.24-7.4l13.92,3.26-9.79,10.43Z"/>
+  <line class="cls-2" x1="141.32" y1="4.09" x2="146.98" y2="214.45"/>
+  <text class="cls-7" transform="translate(142.85 10)"><tspan x="0" y="0">(d)</tspan></text>
+  <line class="cls-3" x1="39.08" y1="34.75" x2="88.83" y2="199.49"/>
+  <polygon class="cls-3" points="144.56 124.63 60.25 104.86 85.29 187.76 144.56 124.63"/>
+  <line class="cls-3" x1="44.33" y1="61.26" x2="49.38" y2="59.73"/>
+  <line class="cls-1" x1="67.49" y1="144.5" x2="78.05" y2="148.11"/>
+  <line class="cls-1" x1="104.21" y1="110.28" x2="96.89" y2="118.71"/>
+  <line class="cls-1" x1="110.57" y1="153.83" x2="114.43" y2="164.3"/>
+  <text class="cls-5" transform="translate(113.46 135.05)"><tspan x="0" y="0">60°</tspan></text>
+  <circle class="cls-4" cx="46.85" cy="60.5" r="46.34"/>
+  <text class="cls-5" transform="translate(147.34 121.36)"><tspan x="0" y="0">A</tspan></text>
+  <text class="cls-5" transform="translate(76.18 192.75)"><tspan x="0" y="0">B</tspan></text>
+  <text class="cls-5" transform="translate(51.51 117.12)"><tspan x="0" y="0">C</tspan></text>
+  <text class="cls-5" transform="translate(50.18 59.69)"><tspan x="0" y="0">D</tspan></text>
+</svg>
