@@ -1830,7 +1830,14 @@ var sixieme_rogervailland = [
 		chapter: "Chapitre E8",
 		nom: "Propriétés de la symétrie",
 		icone: 11,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_E8/Documents/E8 - Propriétés de la symétrie (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_E8/Documents/E8 - Propriétés de la symétrie (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_E8/Documents/E8 - Propriétés de la symétrie (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_E8/Documents/E8 - Propriétés de la symétrie (A trou).docx",
+			exo: 			 "/Cours/6eme/RogerVailland/Chapitre_E8/Documents/E8 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_E8/Cours.html",
 	},
 	{
