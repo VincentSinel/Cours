@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
+	 viewBox="0 0 343.6 203.6" width="343.6" height="203.6" >
+<style type="text/css">
+	.st0{fill:#E7D900;fill-opacity:0.5;}
+	.st1{fill:#E7D900;fill-opacity:0.7;}
+	.st2{fill:none;stroke:#ADA300;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:14,8;}
+	.st3{fill:none;stroke:#ADA300;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<polygon class="st0" points="5,68.6 5,198.6 68.6,135 338.6,135 338.6,5 68.6,5 "/>
+<path class="st1" d="M5,198.6L68.6,135c0,0,267.3,0,270,0S275,198.6,275,198.6H5z"/>
+<path class="st2" d="M68.6,135V5"/>
+<path class="st2" d="M68.6,135h270"/>
+<path class="st2" d="M68.6,135L5,198.6"/>
+<path class="st3" d="M5,68.6L68.6,5"/>
+<path class="st3" d="M5,68.6h270"/>
+<path class="st3" d="M5,68.6v130"/>
+<path class="st3" d="M338.6,5h-270"/>
+<path class="st3" d="M338.6,5L275,68.6"/>
+<path class="st3" d="M338.6,5v130"/>
+<path class="st3" d="M275,198.6H5"/>
+<path class="st3" d="M275,198.6l63.6-63.6"/>
+<path class="st3" d="M275,198.6v-130"/>
+</svg>

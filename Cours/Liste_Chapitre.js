@@ -1873,9 +1873,16 @@ var sixieme_rogervailland = [
 	{
 		id: 48,
 		chapter: "Chapitre E11",
-		nom: "Reconnaître les volumes et patrons",
+		nom: "Reconnaître les solides et patrons",
 		icone: 11,
-		ready : false,
+		download: {
+			pdf: 			 "/Cours/6eme/RogerVailland/Chapitre_E11/Documents/E11 - Reconnaître les solides et patrons (Complet).pdf",
+			docx: 		 "/Cours/6eme/RogerVailland/Chapitre_E11/Documents/E11 - Reconnaître les solides et patrons (Complet).docx",
+			pdf_trou:  "/Cours/6eme/RogerVailland/Chapitre_E11/Documents/E11 - Reconnaître les solides et patrons (A trou).pdf",
+			docx_trou: "/Cours/6eme/RogerVailland/Chapitre_E11/Documents/E11 - Reconnaître les solides et patrons (A trou).docx",
+			exo: 			 "/Cours/6eme/RogerVailland/Chapitre_E11/Documents/E11 - Fiche d'exercices.pdf",
+		},
+		ready : true,
 		page : "RogerVailland/Chapitre_E11/Cours.html",
 	},
 	{

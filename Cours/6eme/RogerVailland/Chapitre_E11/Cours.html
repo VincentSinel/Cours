@@ -14,17 +14,9 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>E1 - Droites</title>
+  <title>E11 - Reconnaître les solides et patrons</title>
 
   <style>
-    .appartient div{
-      display: inline-block;
-      width: 8cm;
-    }
-    .appartient div:first-child{
-      display: inline-block;
-      width: 3cm;
-    }
   </style>
 
 </head>
@@ -34,10 +26,10 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        E1
+        E11
       </td>
       <td id="ChapitreNom">
-        - Droites
+        - Reconnaître les solides et patrons
       </td>
     </tr>
   </table>
@@ -46,7 +38,141 @@
     Activité Introduction
   </p>
 
+  <p>Un polyèdres est un <b>solide</b> dont toutes les faces sont des polygones. En voici quatre :</p>
+  <table class="proportionnaltable">
+    <tr>
+      <th>Solide</th>
+      <td><b>Cube</b></td>
+      <td><b>Pyramide</b></td>
+      <td><b>Parallélépipède rectangle</b></td>
+      <td><b>Prisme droit</b></td>
+    </tr>
+    <tr>
+      <th>Représentation en perspective cavalière</th>
+      <td><img src="Images/Cube1.svg" style="max-width: 4cm;"></td>
+      <td><img src="Images/Pyramide1.svg" style="max-width: 4cm;"></td>
+      <td><img src="Images/Pave1.svg" style="max-width: 4cm;"></td>
+      <td><img src="Images/Prisme1.svg" style="max-width: 4cm;"></td>
+    </tr>
+    <tr>
+      <th>Patron</th>
+      <td><img src="Images/Cube2.svg" style="max-width: 4cm;"></td>
+      <td><img src="Images/Pyramide2.svg" style="max-width: 4cm;"></td>
+      <td><img src="Images/Pave2.svg" style="max-width: 4cm;"></td>
+      <td><img src="Images/Prisme2.svg" style="max-width: 4cm;"></td>
+    </tr>
+    <tr>
+      <th>Nombres de faces</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Nombres de sommets</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Nombres d'arêtes</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+  </table>
+  <ol>
+    <li>
+      Completer les trois dernières lignes du tableau.
+    </li>
+    <li>
+      On se concentre sur le cube et le parallélépipède rectangle.
+      <ol type="a">
+        <li>
+          Qu'ont-ils en commun ?
+        </li>
+        <li>
+          Quelle est la forme des faces d'un parallélépipède rectangle ?
+        </li>
+        <li>
+          Construire le patron d'un cube de côté 4cm.
+        </li>
+      </ol>
+    </li>
+  </ol>
 
+  <h1>Vocabulaire :</h1>
+    <h2>Solide :</h2>
+        <div class="definition">
+          Un <span class="CRed">solide</span> est un figure géométrique en trois dimensions. On utilise une <span class="CRed">perspective</span> pour le représenter dans le plan.<br>
+          Un solide est composé de trois éléments :
+          <ul>
+            <li>Des <span class="CRed">sommets</span> (des points dans l'espace)</li>
+            <li>Des <span class="CRed">arêtes</span> (les segments qui relie deux sommets)</li>
+            <li>Des <span class="CRed">faces</span> (les polygones formés par les arêtes)</li>
+          </ul>
+        </div>
+        <div class="flexobject">
+          <img src="Images/Sommets.svg" style="max-width: 6cm;">
+          <img src="Images/Aretes.svg" style="max-width: 6cm;">
+          <img src="Images/Faces.svg" style="max-width: 6cm;">
+        </div>
+        <p class="remarque">Remarque :</p>
+        <p>Tous les points ne sont pas des sommets et certain solide n'en ont pas (et donc aucune arêtes). Par exemple la sphère.</p>
+      <h2>Perspective cavalière :</h2>
+        <div class="definition">
+          La <span class="CRed">perspective cavalière</span> est une représentation de solide dans le plan respectant les règles suivantes :
+          <ul>
+            <li>La face avant est représenté en vrai grandeur.</li>
+            <li>Les arêtes parallèles sont représenté par des segments parallèles et de même longueur.</li>
+          <li>La profondeur représenté par des arêtes <b>obliques</b> et plus courte que la réalité ;</li>
+            <li>Les arêtes cachées sont représenté en pointillé.</li>
+          </ul>
+        </div>
+        <p class="exemple">Exemple :</p>
+        <div class="flexobject">
+          <img src="Images/Perspective3.svg" style="max-width: 5cm;">
+          <img src="Images/Perspective2.svg" style="max-width: 5cm;">
+        </div>
+        <p>
+          La figure ci-dessous représente le parallélépipède rectangle ABCDEFGH en perspective cavalière.
+        </p>
+        <img src="Images/Perspective1.svg" style="max-height: 7cm;">
+    <h2>Patron :</h2>
+      <div class="definition">
+        Un patron est un dessin du plan permettant de construire un solide par découpage et pliage.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>Le patron d'un cube est composé de six carré collé les uns aux autres.</p>
+      <img src="Images/Cube4.svg" style="max-height: 5cm;">
+      <p class="remarque">Remarque :</p>
+      <ul>
+        <li>Il est possible de créer plusieurs patron différents pour un même solide.</li>
+      </ul>
+    <h1>Parallélépipède rectangle :</h1>
+      <h2>Pavé droit :</h2>
+        <div class="definition">
+          Un <span class="CRed">parallélépipède rectangle</span> (aussi appelé <span class="CRed">pavé droit</span>) est un solide composé de six faces rectangulaires.
+        </div>
+        <p class="exemple">Exemple :</p>
+        <p>ABCDEFGH est un pavé droit représenté en perspective cavalière.</p>
+        <img src="Images/Pave3.svg" style="max-height: 4cm;">
+        <p class="remarque">Remarque :</p>
+        <ul>
+          <li>Les solides composés de faces polygonales sont appelés <b>polyèdres</b></li>
+        </ul>
+      <h2>Cube :</h2>
+        <div class="definition">
+          Un <span class="CRed">cube</span> est un parallélépipède rectangle particulier dont toutes les faces sont des <b>carrés</b>.
+        </div>
+        <p class="exemple">Exemple :</p>
+        <img src="Images/Cube3.svg" style="max-height: 4cm;">
+        <p class="remarque">Remarque :</p>
+        <ul>
+          <li>Un cube a toutes ses arêtes de même longueur.</li>
+        </ul>
 
 </body>
 
