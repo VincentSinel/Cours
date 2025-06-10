@@ -48,11 +48,11 @@ function SetTitle(chapter)
 
 function CreatePDFButton()
 {
-
+    
     let but = document.getElementById("PdfButton");
     but.target="_blank";
     but.download="Cours complet.pdf"
-
+    
     but = document.getElementById("PdfDefault");
     but.target="_blank";
     but.download="Cours complet.pdf"
@@ -114,6 +114,7 @@ function SetDownloadButton(path, element)
         if (list.hasOwnProperty("pdf"))
         { 
             but_pdf1.href = list.pdf;
+            but_pdf1.download= list.pdf.substr(list.pdf.lastIndexOf("/") + 1);
             but_pdf1.classList.remove("deactivate")
         }
         else

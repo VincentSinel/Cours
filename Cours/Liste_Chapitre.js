@@ -228,7 +228,7 @@ var troisième_saintexupery = [
 		nom: "Sphère et boules",
 		icone: 2,
 		ready : true,
-		page : "SaintExupery/Chapitre_13/Cours.html"
+		page : "SaintExupery/Chapitre_11/Cours.html"
 	},
 	{
 		id: 12,
@@ -243,6 +243,10 @@ var troisième_saintexupery = [
 		chapter: "Chapitre 13",
 		nom: "Repérage dans l'espace",
 		icone: 2,
+		download: {
+			pdf: 			 "/Cours/3eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Repérage dans l'espace (Complet).pdf",
+			docx:		 	 "/Cours/3eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Repérage dans l'espace (Complet).docx",
+		},
 		ready : true,
 		page : "Base/Chapitre_20/Cours.html"
 	},
