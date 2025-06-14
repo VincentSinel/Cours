@@ -1,0 +1,60 @@
+<g id="France_Villes">
+	<g>
+		<circle class="cls-22" cx="154.61" cy="87.37" r="1.89"/>
+		<circle class="cls-22" cx="100.77" cy="74.98" r="1.89"/>
+		<circle class="cls-22" cx="154.67" cy="113.07" r="1.89"/>
+		<circle class="cls-22" cx="200.09" cy="110.14" r="1.89"/>
+		<circle class="cls-22" cx="223.98" cy="95.53" r="1.89"/>
+		<circle class="cls-22" cx="232.63" cy="67.54" r="1.89"/>
+		<circle class="cls-22" cx="181.67" cy="57.16" r="1.89"/>
+		<circle class="cls-22" cx="208.97" cy="51.01" r="1.89"/>
+		<circle class="cls-22" cx="246.82" cy="15.83" r="1.89"/>
+		<circle class="cls-22" cx="264.94" cy="56.44" r="1.89"/>
+		<circle class="cls-22" cx="306" cy="59.03" r="1.89"/>
+		<circle class="cls-22" cx="306.93" cy="71.7" r="1.89"/>
+		<circle class="cls-22" cx="336.63" cy="73.34" r="1.89"/>
+		<circle class="cls-22" cx="330.39" cy="97.74" r="1.89"/>
+		<circle class="cls-22" cx="285.3" cy="111.78" r="1.89"/>
+		<circle class="cls-22" cx="282.5" cy="156.98" r="1.89"/>
+		<circle class="cls-22" cx="273.47" cy="167.19" r="1.89"/>
+		<circle class="cls-22" cx="301.05" cy="173.61" r="1.89"/>
+		<circle class="cls-22" cx="246.81" cy="157.23" r="1.89"/>
+		<circle class="cls-22" cx="209.83" cy="155.32" r="1.89"/>
+		<circle class="cls-22" cx="171.27" cy="182.43" r="1.89"/>
+		<circle class="cls-22" cx="212.61" cy="219.45" r="1.89"/>
+		<circle class="cls-22" cx="263.72" cy="219.87" r="1.89"/>
+		<circle class="cls-22" cx="273.62" cy="213.57" r="1.89"/>
+		<circle class="cls-22" cx="295.57" cy="228.57" r="1.89"/>
+		<circle class="cls-22" cx="307.33" cy="232.8" r="1.89"/>
+		<circle class="cls-22" cx="335" cy="214.51" r="1.89"/>
+	</g>
+	<g class="front">
+		<text class="cls-7" transform="translate(84.21 77.19)">Brest</text>
+		<text class="cls-7" transform="translate(158.33 88.25)">Rennes</text>
+		<text class="cls-7" transform="translate(157.55 117.23)">Nantes</text>
+		<text class="cls-7" transform="translate(184.31 109.34)">Tours</text>
+		<text class="cls-7" transform="translate(186.83 159.5)">Limoges</text>
+		<text class="cls-7" transform="translate(224.18 153.97)">Clermont-Ferrand</text>
+		<text class="cls-7" transform="translate(144.27 182.43)">Bordeaux</text>
+		<text class="cls-7" transform="translate(245.21 173.2)">Saint-Étienne</text>
+		<text class="cls-7" transform="translate(227.07 94.82)">Orléans</text>
+		<text class="cls-7" transform="translate(288.08 111.59)">Dijon</text>
+		<text class="cls-7" transform="translate(214.71 226.33)">Toulouse</text>
+		<text class="cls-7" transform="translate(234.13 220.81)">Montpellier</text>
+		<text class="cls-7" transform="translate(265.08 210.56)">Nîmes</text>
+		<text class="cls-7" transform="translate(289.97 170.25)">Genoble</text>
+		<text class="cls-7" transform="translate(285.91 160.58)">Lyon</text>
+		<text class="cls-7" transform="translate(269.9 231.41)">Marseille</text>
+		<text class="cls-7" transform="translate(301.06 239.53)">Toulon</text>
+		<text class="cls-7" transform="translate(333.33 221.83)">Nice</text>
+		<text class="cls-7" transform="translate(230.74 64.02)">Paris</text>
+		<text class="cls-7" transform="translate(206.11 47.74)">Rouen</text>
+		<text class="cls-7" transform="translate(185.27 58.34)">Caen</text>
+		<text class="cls-7" transform="translate(232.78 18.17)">Lille</text>
+		<text class="cls-7" transform="translate(267.31 56.29)">Reims</text>
+		<text class="cls-7" transform="translate(309.65 71.44)">Nancy</text>
+		<text class="cls-7" transform="translate(309.39 61.95)">Metz</text>
+		<text class="cls-7" transform="translate(339.88 76.08)">Strasbourg</text>
+		<text class="cls-7" transform="translate(328.5 94.82)">Mulhouse</text>
+	</g>
+</g>

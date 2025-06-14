@@ -1,0 +1,16 @@
+<g id="France_Massifs">
+	<g class="front">
+		<text transform="translate(262.35 118.77)">MORVAN</text>
+		<text transform="translate(322.15 91.59) rotate(-63.23)">VOSGES</text>
+		<text transform="translate(261.96 41.28)">MASSIF<tspan x="-6.17" y="6">ARDENNAIS</tspan></text>
+		<text transform="translate(114.27 76.25)">MASSIF<tspan x="-7.32" y="7">ARMORICAIN</tspan></text>
+	</g>
+	<g class="front">
+		<text transform="translate(173.53 173.2)">BASSIN<tspan x="-4.86" y="20">AQUITAIN</tspan></text>
+		<text transform="translate(221.05 56.94)">BASSIN<tspan x="-5.21" y="21">PARISIEN</tspan></text>
+		<text transform="translate(235.35 180.97)">MASSIF<tspan x="-3.96" y="8.4">CENTRAL</tspan></text>
+		<text transform="translate(302.99 134.89) rotate(-53.88)">JURA</text>
+		<text transform="translate(321.64 197.17) rotate(-81.61)">ALPES</text>
+		<text transform="translate(175.31 240.13) rotate(3.56)">PYRÉNÉES</text>
+	</g>
+</g>

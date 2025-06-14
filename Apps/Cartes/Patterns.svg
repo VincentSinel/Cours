@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 -2.5 297.5 297.5">
+  <defs>
+		<pattern id="pattern1" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse" style="fill: white;" >
+			<rect x="0" y="0" width="5" height="5"/>
+			<rect x="5" y="5" width="5" height="5"/>
+		</pattern>
+		<pattern id="pattern2" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse" style="stroke: white;">
+			<line x1="0"   y1="0"   x2="0"   y2="10"/>
+			<line x1="5"   y1="0"   x2="5"   y2="10"/>
+			<line x1="10"  y1="0"   x2="10"  y2="10"/>
+		</pattern>
+		<pattern id="pattern3" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse" style="stroke: white;">
+			<line x1="0" y1="0"   x2="10" y2="0"  />
+			<line x1="0" y1="5"   x2="10" y2="5"  />
+			<line x1="0" y1="10"  x2="10" y2="10" />
+		</pattern>
+		<pattern id="pattern4" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse" style="stroke: white;">
+			<line x1="0"  y1="0"  x2="10" y2="10"/>
+			<line x1="5"  y1="-5" x2="15" y2="5" />
+			<line x1="-5" y1="5"  x2="5"  y2="15"/>
+		</pattern>
+		<pattern id="pattern5" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse" style="stroke: white;">
+			<line x1="0"  y1="10"  x2="10" y2="0"/>
+			<line x1="-5"  y1="5" x2="5" y2="-5" />
+			<line x1="5" y1="15"  x2="15"  y2="5"/>
+		</pattern>
+		<pattern id="pattern6" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse" style="stroke: white;">
+			<circle cx="5" cy="5" r="3"/>
+		</pattern>
+		<pattern id="pattern7" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse" style="stroke: white;">
+			<circle cx="0" cy="0" r="1"/>
+			<circle cx="10" cy="0" r="1"/>
+			<circle cx="0" cy="10" r="1"/>
+			<circle cx="10" cy="10" r="1"/>
+			<circle cx="5" cy="5" r="1"/>
+		</pattern>
+		<pattern id="pattern8" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse" style="fill: white;">
+      <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2" />
+		</pattern>
+		<pattern id="pattern9" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse" style="fill: white;">
+			<circle cx="5" cy="5" r="1"/>
+		</pattern>
+		<pattern id="pattern10" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse" style="fill: none; stroke: white;">
+			<path d="M 0,5 A 5,5,90,0,0,5,0 M 5,0 A 5,5,90,0,0,10,5 M 0,5 A 5,5,180,0,0,10,5 M 0,-5 A 5,5,180,0,0,10,-5"/>
+		</pattern>
+		<pattern id="pattern11" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse" style="fill: white;">
+			<polygon points="0,0 2.5,0 0,2.5"/>
+			<polygon points="10,10 7.5,10 10,7.5"/>
+			<polygon points="10,0 10,5 5,10 5,7.5 7.5,5 5,5 5,2.5 2.5,5 0,5 5,0"/>
+		</pattern>
+
+		<mask id="mask-pattern1" x="0" y="0" width="1" height="1" >
+      <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern1)" />
+    </mask>
+	</defs>
+	<rect x="0"   y="0"  width="25" height="25" style="fill: blue; stroke: white" mask="url(#mask-pattern1)"/>
+	<rect x="30"  y="0"  width="25" height="25" style="fill: url(#pattern2);  stroke: black"/>
+	<rect x="60"  y="0"  width="25" height="25" style="fill: url(#pattern3);  stroke: black"/>
+	<rect x="90"  y="0"  width="25" height="25" style="fill: url(#pattern4);  stroke: black"/>
+	<rect x="120" y="0"  width="25" height="25" style="fill: url(#pattern5);  stroke: black"/>
+	<rect x="150" y="0"  width="25" height="25" style="fill: url(#pattern6);  stroke: black"/>
+	<rect x="180" y="0"  width="25" height="25" style="fill: url(#pattern7);  stroke: black"/>
+	<rect x="210" y="0"  width="25" height="25" style="fill: url(#pattern8);  stroke: black"/>
+	<rect x="240" y="0"  width="25" height="25" style="fill: url(#pattern9);  stroke: black"/>
+	<rect x="270" y="0"  width="25" height="25" style="fill: url(#pattern10); stroke: black"/>
+	<rect x="0"   y="30" width="25" height="25" style="fill: url(#pattern11); stroke: black"/>
+</svg>
