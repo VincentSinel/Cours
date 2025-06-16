@@ -137,7 +137,18 @@ body{
 #menu_container_carte{
 	padding-right: 15px;
 	width: calc(100% - 15px);
+	height: auto;
 }
+
+#menu_container_actions{
+	padding-right: 15px;
+	width: calc(100% - 15px);
+	height: auto;
+}
+#menu_container_actions button{
+	text-align: center;
+}
+
 
 
 .iconbutton{

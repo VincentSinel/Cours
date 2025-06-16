@@ -1,10 +1,10 @@
   <g id="France_Cadre" class="front">
 		<g>
 			<rect x=".5" y=".5" width="396.86" height="280.32"/>
-			<rect x=".5" y="233.05" width="73.58" height="47.77"/>
-			<rect x=".5" y="185.28" width="73.58" height="47.77"/>
-			<rect x=".5" y="137.5" width="73.58" height="47.77"/>
-			<rect x=".5" y="89.73" width="73.58" height="47.77"/>
 			<rect x=".5" y="41.96" width="73.58" height="47.77"/>
+			<rect x=".5" y="89.73" width="73.58" height="47.77"/>
+			<rect x=".5" y="137.5" width="73.58" height="47.77"/>
+			<rect x=".5" y="185.28" width="73.58" height="47.77"/>
+			<rect x=".5" y="233.05" width="73.58" height="47.77"/>
   	</g>
   </g>

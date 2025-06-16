@@ -41,8 +41,8 @@
 							]
 						}
 						,{
-							"Name": "France_AutrePays",
-							"Section": "Autre pays",
+							"Name": "France_AutresPays",
+							"Section": "Autres pays",
 							"Type": "svg",
 							"Parameters": [
 								{
@@ -88,22 +88,42 @@
 								{
 									"name": "Altitude 1",
 									"fill": "#95c11f",
-									"fill-opacity": "1.0"
+									"fill-opacity": "1.0",
+									"stroke": "black",
+									"stroke-width": 0,
+									"stroke-miterlimit": "10",
+									"stroke-linecap": "round",
+									"stroke-linejoin": "round"
 								}
 								,{
 									"name": "Altitude 2",
 									"fill": "#fbde7e",
-									"fill-opacity": "1.0"
+									"fill-opacity": "1.0",
+									"stroke": "black",
+									"stroke-width": 0,
+									"stroke-miterlimit": "10",
+									"stroke-linecap": "round",
+									"stroke-linejoin": "round"
 								}
 								,{
 									"name": "Altitude 3",
 									"fill": "#f39200",
-									"fill-opacity": "1.0"
+									"fill-opacity": "1.0",
+									"stroke": "black",
+									"stroke-width": 0,
+									"stroke-miterlimit": "10",
+									"stroke-linecap": "round",
+									"stroke-linejoin": "round"
 								}
 								,{
 									"name": "Altitude 4",
 									"fill": "#e30613",
-									"fill-opacity": "1.0"
+									"fill-opacity": "1.0",
+									"stroke": "black",
+									"stroke-width": 0,
+									"stroke-miterlimit": "10",
+									"stroke-linecap": "round",
+									"stroke-linejoin": "round"
 								}
 								,{
 									"name": "Graduation légende",
@@ -287,7 +307,8 @@
 									"font-weight": "700",
 									"font-family": "Bahnschrift-BoldCondensed, Bahnschrift",
 									"font-variation-settings": "'wght' 700, 'wdth' 75",
-									"font-size": "8px"
+									"font-size": "8px",
+									"letter-spacing": "-0.1em"
 								}
 								,{
 									"name": "Lignes",
@@ -322,6 +343,12 @@
         					"stroke-linejoin": "round"
 								}
 							]
+						}
+					],
+					"Options": [
+						{
+							"Boutton": "Afficher/Cacher les outres mers",
+							"Action": "if (SVG_Draw.viewbox().x == 0) ResetSize(73.58, 0, LoadedMap_Size.w - 73.58, LoadedMap_Size.h); else ResetSize(0, 0, LoadedMap_Size.w, LoadedMap_Size.h);"
 						}
 					]
 				}

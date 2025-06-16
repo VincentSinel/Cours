@@ -1,4 +1,4 @@
-<g id="France_AutrePays">
+<g id="France_AutresPays">
   <g>
 		<path d="M140.87,45.49c-.27-.18-.73.1-1.64.66-.72.44-.75.56-.74.64.03.33.89.51,1.21.57.42.09.63.13.85.02.46-.23.56-.89.53-1.28-.02-.25-.04-.5-.21-.62Z"/>
 		<path d="M146.53,52.81c-.27.16-.39.41-.55.74-.18.37-.43.88-.21,1.28.24.44.92.48,1.11.49.62.04.76-.25,1.21-.13.46.12.44.46.89.57.38.1.9,0,1.19-.36.35-.44.21-1.08-.02-1.45-.09-.15-.27-.36-1.55-.81-1.59-.56-1.91-.43-2.06-.34Z"/>
@@ -38,17 +38,17 @@
     <path d="M397.36,116.08c-.67,0-1.63.54-1.63.54,0,0-1.88.57-2.58.52h0c-.3-.93-.35-1.48-.75-1.58-.26-.07-2.17,1.49-2.85,2.3-.27.32-.74.8-1.45,1.19-.36.2-.91.49-1.66.55-1.02.09-1.81-.29-2.43-.6-.64-.31-1.06-.65-1.19-.77-.44-.37-.72-.73-.98-1.06-.59-.76-.45-.81-.77-1.15-.57-.6-1.32-.75-2.6-1.02-.89-.19-1.4-.21-1.4-.21-.79-.08-1.12-.05-1.27-.28-.18-.28.16-.58.13-1.15-.03-.53-.34-.65-.77-1.37-.55-.94-.66-1.84-.73-2.43-.08-.67-.12-1,0-1.43.21-.69.58-.69,1.08-1.54.54-.93.6-1.77.61-1.98.02-.41.04-.84-.16-1.28-.55-1.22-2.28-1.32-2.23-1.69.05-.41,2.07-.04,3.16-1.28.37-.43.31-.67.67-.86.55-.29,1.08.08,2.87.86,1.92.84,2.18.81,2.71,1.34.29.29.87.88,1.12,1.79.16.6.03.8.26,1.05.57.65,1.89-.08,2.3.48.31.42-.34,1.02,0,1.56.3.48,1.18.64,1.82.35.13-.06.38-.19.64-.54.55-.74.35-1.39.52-2.81.15-1.23.33-1.03.47-2.3.15-1.34-.04-1.66.3-2.21.36-.6,1.08-1.03,1.79-1.11,1.1-.12,1.52.67,2.85.85.87.12,1.63-.09,2.15-.3v17.54Z"/>
   </g>
   <g class="front">
-    <text transform="translate(118.85 244.41)">ESPAGNE</text>
-    <text transform="translate(351.71 172.66)">ITALIE</text>
-    <text transform="translate(337.99 123.47)">SUISSE</text>
-    <text transform="translate(340.11 48.52)" >ALLEMAGNE</text>
-    <text transform="translate(288.33 41.74)">LUXEMBOURG</text>
-    <text transform="translate(257.48 12.47)">BELGIQUE</text>
-    <text transform="translate(117.59 8.93)">ROYAUME-UNI</text>
-    <text transform="translate(364.57 113.4)">AUTRICHE</text>
+    <text x="201.40703" y="271.36694" style="text-align:center;text-anchor:middle">ESPAGNE</text>
+    <text x="367.26715" y="173.01927" style="text-align:center;text-anchor:middle">ITALIE</text>
+    <text x="343.68219" y="124.63252" style="text-align:center;text-anchor:middle">SUISSE</text>
+    <text x="366.72906" y="47.409233" style="text-align:center;text-anchor:middle">ALLEMAGNE</text>
+    <text x="303.78568" y="43.987949" style="text-align:center;text-anchor:middle">LUXEMBOURG</text>
+    <text x="273.39728" y="17.595181" style="text-align:center;text-anchor:middle">BELGIQUE</text>
+    <text x="151.28731" y="9.7750998" style="text-align:center;text-anchor:middle">ROYAUME-UNI</text>
+    <text x="379.62973" y="110.45863" style="text-align:center;text-anchor:middle">AUTRICHE</text>
   </g>
   <g class="front">
-    <text transform="translate(2.32 264.42)">SURINAME</text>
-    <text transform="translate(44.17 278.76)">BRÉSIL</text>
+    <text x="14.956229" y="264.89267" style="text-align:center;text-anchor:middle">SURINAME</text>
+    <text x="53.274632" y="279.30878" style="text-align:center;text-anchor:middle">BRÉSIL</text>
   </g>
 </g>

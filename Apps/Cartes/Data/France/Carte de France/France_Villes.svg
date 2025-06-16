@@ -29,28 +29,28 @@
 		<circle class="cls-22" cx="335" cy="214.51" r="1.89"/>
 	</g>
 	<g class="front">
-		<text class="cls-7" transform="translate(84.21 77.19)">Brest</text>
+		<text class="cls-7" transform="translate(84.21 77.19)" x="12.632812" y="0" style="text-align:end;text-anchor:end">Brest</text>
 		<text class="cls-7" transform="translate(158.33 88.25)">Rennes</text>
 		<text class="cls-7" transform="translate(157.55 117.23)">Nantes</text>
-		<text class="cls-7" transform="translate(184.31 109.34)">Tours</text>
+		<text class="cls-7" transform="translate(184.31 109.34)" x="13.325684" y="0" style="text-align:end;text-anchor:end">Tours</text>
 		<text class="cls-7" transform="translate(186.83 159.5)">Limoges</text>
-		<text class="cls-7" transform="translate(224.18 153.97)">Clermont-Ferrand</text>
-		<text class="cls-7" transform="translate(144.27 182.43)">Bordeaux</text>
-		<text class="cls-7" transform="translate(245.21 173.2)">Saint-Étienne</text>
+		<text class="cls-7" transform="translate(224.18 153.97)" x="22.189331" y="0" style="text-align:center;text-anchor:middle">Clermont-Ferrand</text>
+		<text class="cls-7" transform="translate(144.27 182.43)" x="22.926514" y="0" style="text-align:end;text-anchor:end">Bordeaux</text>
+		<text class="cls-7" transform="translate(245.21 173.2)" x="16.568481" y="0" style="text-align:center;text-anchor:middle">Saint-Étienne</text>
 		<text class="cls-7" transform="translate(227.07 94.82)">Orléans</text>
 		<text class="cls-7" transform="translate(288.08 111.59)">Dijon</text>
 		<text class="cls-7" transform="translate(214.71 226.33)">Toulouse</text>
-		<text class="cls-7" transform="translate(234.13 220.81)">Montpellier</text>
+		<text class="cls-7" transform="translate(234.13 220.81)" x="27.440918" y="0" style="text-align:end;text-anchor:end">Montpellier</text>
 		<text class="cls-7" transform="translate(265.08 210.56)">Nîmes</text>
-		<text class="cls-7" transform="translate(289.97 170.25)">Genoble</text>
+		<text class="cls-7" transform="translate(289.97 170.25)" x="9.6907959" y="0" style="text-align:center;text-anchor:middle">Genoble</text>
 		<text class="cls-7" transform="translate(285.91 160.58)">Lyon</text>
-		<text class="cls-7" transform="translate(269.9 231.41)">Marseille</text>
-		<text class="cls-7" transform="translate(301.06 239.53)">Toulon</text>
+		<text class="cls-7" transform="translate(269.9 231.41)" x="22.069824" y="0" style="text-align:end;text-anchor:end">Marseille</text>
+		<text class="cls-7" transform="translate(301.06 239.53)" x="7.8270264" y="0" style="text-align:center;text-anchor:middle">Toulon</text>
 		<text class="cls-7" transform="translate(333.33 221.83)">Nice</text>
-		<text class="cls-7" transform="translate(230.74 64.02)">Paris</text>
+		<text class="cls-7" x="232.83112" y="64.149597" style="text-align:center;text-anchor:middle">Paris</text>
 		<text class="cls-7" transform="translate(206.11 47.74)">Rouen</text>
 		<text class="cls-7" transform="translate(185.27 58.34)">Caen</text>
-		<text class="cls-7" transform="translate(232.78 18.17)">Lille</text>
+		<text class="cls-7" transform="translate(232.78 18.17)" x="9.8613281" y="0" style="text-align:end;text-anchor:end">Lille</text>
 		<text class="cls-7" transform="translate(267.31 56.29)">Reims</text>
 		<text class="cls-7" transform="translate(309.65 71.44)">Nancy</text>
 		<text class="cls-7" transform="translate(309.39 61.95)">Metz</text>

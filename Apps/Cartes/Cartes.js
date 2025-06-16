@@ -2,6 +2,7 @@ var svg_max_size =  {w: 800, h: 600};
 var cartes_data;
 var container_dic = {"Data": null};
 var patterns_mask = {};
+var SVG_Draw;
 
 function Init()
 {
@@ -69,6 +70,7 @@ function AddData(data, parent_folder = "")
 // var LoadedMap_Colors = {};
 var LoadedMap_Files = [];
 var LoadCheck = 0;
+var LoadedMap_Options = "";
 var LoadedMap_Folder = "";
 var LoadedMap_Size = {w: 0, h: 0};
 var LoadedMap_SVGElements = {};
@@ -82,6 +84,7 @@ function LoadMap(parent_folder, data)
 	// 	LoadedMap_Colors[color["Name"]] = color["Color"];
 	// });
 	
+	LoadedMap_Options = data["Options"];
 	LoadedMap_Files = data["Files"];
 	LoadedMap_Size.w = data["Size"]["Width"];
 	LoadedMap_Size.h = data["Size"]["Height"];
@@ -102,6 +105,16 @@ function LoadMap(parent_folder, data)
 	}
 }
 
+function ResetSize(off_x, off_y, size_w, size_h)
+{
+	let coef = svg_max_size.w / size_w;
+	if (svg_max_size.h / size_h < coef)
+		coef = svg_max_size.h / size_h;
+
+	SVG_Draw.size(size_w * coef, size_h * coef);
+	SVG_Draw.viewbox(off_x, off_y, size_w, size_h);
+}
+
 
 function EndLoad()
 {
@@ -111,21 +124,17 @@ function EndLoad()
 
 	document.getElementById('svg_holder').innerHTML = '';
 
-	let coef = svg_max_size.w / LoadedMap_Size.w;
-	if (svg_max_size.h / LoadedMap_Size.h < coef)
-		coef = svg_max_size.h / LoadedMap_Size.h;
+	SVG_Draw = SVG().addTo('#svg_holder');
+	SVG_Draw.attr("xml:space", "preserve");
+	ResetSize(0,0, LoadedMap_Size.w, LoadedMap_Size.h);
 
-	let draw = SVG().addTo('#svg_holder').size(LoadedMap_Size.w * coef, LoadedMap_Size.h * coef);
-	draw.viewbox(0, 0, LoadedMap_Size.w, LoadedMap_Size.h);
-	draw.attr("xml:space", "preserve");
-
-	CreatePatterns(draw);
+	CreatePatterns();
 
 	LoadedMap_Files.forEach(file => {
 		if (file["Type"] === "svg")
 		{
-			draw.svg(file["Data"]);
-			let element = draw.find("#" + file["Name"])[0];
+			SVG_Draw.svg(file["Data"]);
+			let element = SVG_Draw.find("#" + file["Name"])[0];
 			
 			if (file.hasOwnProperty("OffSet"))
 				element.move(file["OffSet"]["x"],file["OffSet"]["y"]);
@@ -144,15 +153,37 @@ function EndLoad()
 		}
 	});
 
-	let list = document.getElementsByClassName("front");
-	let parent = document.getElementById('svg_holder').firstChild;
-	for (let i = 0; i < list.length; i++) {
-		const front_element = list[i];
-		parent.insertBefore(front_element, null);
-	}
+	MoveFrontElement();
 
+	Create_Options();
 	Create_Menu();
 }
+
+function MoveFrontElement()
+{
+	for (let key in LoadedMap_SVGElements) {
+		let element = LoadedMap_SVGElements[key];
+		if (element.attr('class') == 'front')
+		{
+			element.toRoot().front()
+		}
+	}
+}
+
+function Create_Options()
+{
+	var menu_div = document.getElementById("menu_container_actions");
+	menu_div.innerHTML = ""
+
+	LoadedMap_Options.forEach(action => {
+		var button = document.createElement("button");
+		button.innerHTML = action["Boutton"];
+		button.onclick = () => {eval(action["Action"])};
+		menu_div.appendChild(button);
+	})
+}
+
+
 
 function Create_Menu()
 {
@@ -423,21 +454,21 @@ function CreateTool_Font(parent, svgelement, parameters)
 }
 
 
-function CreatePatterns(draw)
+function CreatePatterns()
 {
 	var coef = 0.5; // A changer pour adpater la taille des patternes
-	patterns_mask["pattern1"] = draw.mask().add(
-		draw.rect("100%", "100%").fill(
-			draw.pattern(10 * coef, 10 * coef, function(add) {
+	patterns_mask["pattern1"] = SVG_Draw.mask().add(
+		SVG_Draw.rect("100%", "100%").fill(
+			SVG_Draw.pattern(10 * coef, 10 * coef, function(add) {
 				add.rect(5 * coef, 5 * coef).fill('#fff')
   			add.rect(5 * coef, 5 * coef).move(5 * coef, 5 * coef).fill('#fff')
 			}).url()
 			)
 	)
 
-	patterns_mask["pattern2"] = draw.mask().add(
-		draw.rect("100%", "100%").fill(
-			draw.pattern(10 * coef, 10 * coef, function(add) {
+	patterns_mask["pattern2"] = SVG_Draw.mask().add(
+		SVG_Draw.rect("100%", "100%").fill(
+			SVG_Draw.pattern(10 * coef, 10 * coef, function(add) {
 				add.line(0,0,0,10 * coef).stroke('#fff')
 				add.line(5 * coef,0,5 * coef,10 * coef).stroke('#fff') 
 				add.line(10 * coef,0,10 * coef,10 * coef).stroke('#fff')
@@ -445,9 +476,9 @@ function CreatePatterns(draw)
 			)
 	)
 
-	patterns_mask["pattern3"] = draw.mask().add(
-		draw.rect("100%", "100%").fill(
-			draw.pattern(10 * coef, 10 * coef, function(add) {
+	patterns_mask["pattern3"] = SVG_Draw.mask().add(
+		SVG_Draw.rect("100%", "100%").fill(
+			SVG_Draw.pattern(10 * coef, 10 * coef, function(add) {
 				add.line(0,0,10 * coef,0).stroke('#fff')
 				add.line(0,5 * coef,10 * coef,5 * coef).stroke('#fff') 
 				add.line(0,10 * coef,10 * coef,10 * coef).stroke('#fff')
@@ -455,9 +486,9 @@ function CreatePatterns(draw)
 			)
 	)
 
-	patterns_mask["pattern4"] = draw.mask().add(
-		draw.rect("100%", "100%").fill(
-			draw.pattern(10 * coef, 10 * coef, function(add) {
+	patterns_mask["pattern4"] = SVG_Draw.mask().add(
+		SVG_Draw.rect("100%", "100%").fill(
+			SVG_Draw.pattern(10 * coef, 10 * coef, function(add) {
 				add.line(0,0,10 * coef,10 * coef).stroke('#fff')
 				add.line(5 * coef,-5 * coef,15 * coef, 5 * coef).stroke('#fff') 
 				add.line(-5 * coef, 5 * coef,5 * coef,15 * coef).stroke('#fff')
@@ -465,9 +496,9 @@ function CreatePatterns(draw)
 			)
 	)
 
-	patterns_mask["pattern5"] = draw.mask().add(
-		draw.rect("100%", "100%").fill(
-			draw.pattern(10 * coef, 10 * coef, function(add) {
+	patterns_mask["pattern5"] = SVG_Draw.mask().add(
+		SVG_Draw.rect("100%", "100%").fill(
+			SVG_Draw.pattern(10 * coef, 10 * coef, function(add) {
 				add.line(0,10 * coef,10 * coef,0).stroke('#fff')
 				add.line(-5 * coef, 5 * coef,5 * coef,-5 * coef).stroke('#fff') 
 				add.line(5 * coef,15 * coef,15 * coef, 5 * coef).stroke('#fff')
@@ -475,17 +506,17 @@ function CreatePatterns(draw)
 			)
 	)
 
-	patterns_mask["pattern6"] = draw.mask().add(
-		draw.rect("100%", "100%").fill(
-			draw.pattern(10 * coef, 10 * coef, function(add) {
+	patterns_mask["pattern6"] = SVG_Draw.mask().add(
+		SVG_Draw.rect("100%", "100%").fill(
+			SVG_Draw.pattern(10 * coef, 10 * coef, function(add) {
 				add.circle(4 * coef).move(5 * coef, 5 * coef).fill('#fff')
 			}).url()
 			)
 	)
 
-	patterns_mask["pattern7"] = draw.mask().add(
-		draw.rect("100%", "100%").fill(
-			draw.pattern(10 * coef, 10 * coef, function(add) {
+	patterns_mask["pattern7"] = SVG_Draw.mask().add(
+		SVG_Draw.rect("100%", "100%").fill(
+			SVG_Draw.pattern(10 * coef, 10 * coef, function(add) {
 				add.circle(2 * coef).move(0,0).fill('#fff')
 				add.circle(2 * coef).move(10 * coef,0).fill('#fff')
 				add.circle(2 * coef).move(0,10 * coef).fill('#fff')
@@ -495,33 +526,33 @@ function CreatePatterns(draw)
 			)
 	)
 
-	patterns_mask["pattern8"] = draw.mask().add(
-		draw.rect("100%", "100%").fill(
-			draw.pattern(10 * coef, 10 * coef, function(add) {
+	patterns_mask["pattern8"] = SVG_Draw.mask().add(
+		SVG_Draw.rect("100%", "100%").fill(
+			SVG_Draw.pattern(10 * coef, 10 * coef, function(add) {
 				add.polygon('0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2').transform({scale: coef}).fill('#fff')
 			}).url()
 			)
 	)
 
-	patterns_mask["pattern9"] = draw.mask().add(
-		draw.rect("100%", "100%").fill(
-			draw.pattern(10 * coef, 10 * coef, function(add) {
+	patterns_mask["pattern9"] = SVG_Draw.mask().add(
+		SVG_Draw.rect("100%", "100%").fill(
+			SVG_Draw.pattern(10 * coef, 10 * coef, function(add) {
 				add.circle(1 * coef).move(5 * coef, 5 * coef).fill('#fff')
 			}).url()
 			)
 	)
 
-	patterns_mask["pattern10"] = draw.mask().add(
-		draw.rect("100%", "100%").fill(
-			draw.pattern(10 * coef, 10 * coef, function(add) {
+	patterns_mask["pattern10"] = SVG_Draw.mask().add(
+		SVG_Draw.rect("100%", "100%").fill(
+			SVG_Draw.pattern(10 * coef, 10 * coef, function(add) {
 				add.path("M 0,5 A 5,5,90,0,0,5,0 M 5,0 A 5,5,90,0,0,10,5 M 0,5 A 5,5,180,0,0,10,5 M 0,-5 A 5,5,180,0,0,10,-5").transform({scale: coef}).fill("none").stroke('#fff')
 			}).url()
 			)
 	)
 
-	patterns_mask["pattern11"] = draw.mask().add(
-		draw.rect("100%", "100%").fill(
-			draw.pattern(10 * coef, 10 * coef, function(add) {
+	patterns_mask["pattern11"] = SVG_Draw.mask().add(
+		SVG_Draw.rect("100%", "100%").fill(
+			SVG_Draw.pattern(10 * coef, 10 * coef, function(add) {
 				add.polygon('0,0 2.5,0 0,2.5').transform({scale: coef}).fill('#fff')
 				add.polygon('10,10 7.5,10 10,7.5').transform({scale: coef}).fill('#fff')
 				add.polygon('10,0 10,5 5,10 5,7.5 7.5,5 5,5 5,2.5 2.5,5 0,5 5,0').transform({scale: coef}).fill('#fff')

@@ -1,16 +1,16 @@
 <g id="France_Massifs">
 	<g class="front">
-		<text transform="translate(262.35 118.77)">MORVAN</text>
-		<text transform="translate(322.15 91.59) rotate(-63.23)">VOSGES</text>
-		<text transform="translate(261.96 41.28)">MASSIF<tspan x="-6.17" y="6">ARDENNAIS</tspan></text>
-		<text transform="translate(114.27 76.25)">MASSIF<tspan x="-7.32" y="7">ARMORICAIN</tspan></text>
+		<text transform="translate(262.35,118.77)" x="11.38916" y="0" style="text-align:center;text-anchor:middle">MORVAN</text>
+		<text transform="rotate(-63.23,235.47006,-215.87515)" x="10.801758" y="0" style="text-align:center;text-anchor:middle">VOSGES</text>
+		<text x="267.16385" y="42.24984" style="text-align:center;text-anchor:middle">MASSIF<tspan x="267.16385" y="48.24984">ARDENNAIS</tspan></text>
+		<text x="125.75574" y="80.037849" style="text-align:center;text-anchor:middle">MASSIF<tspan x="125.75574" y="87.037849">ARMORICAIN</tspan></text>
 	</g>
 	<g class="front">
-		<text transform="translate(173.53 173.2)">BASSIN<tspan x="-4.86" y="20">AQUITAIN</tspan></text>
-		<text transform="translate(221.05 56.94)">BASSIN<tspan x="-5.21" y="21">PARISIEN</tspan></text>
-		<text transform="translate(235.35 180.97)">MASSIF<tspan x="-3.96" y="8.4">CENTRAL</tspan></text>
-		<text transform="translate(302.99 134.89) rotate(-53.88)">JURA</text>
-		<text transform="translate(321.64 197.17) rotate(-81.61)">ALPES</text>
-		<text transform="translate(175.31 240.13) rotate(3.56)">PYRÉNÉES</text>
+		<text x="179.31883" y="193.93611" style="text-align:center;text-anchor:middle">BASSIN<tspan x="179.31883" y="213.93611">AQUITAIN</tspan></text>
+		<text x="235.71265" y="57.550945" style="text-align:center;text-anchor:middle">BASSIN<tspan y="78.550941" x="235.71265">PARISIEN</tspan></text>
+		<text y="184.42603" style="text-align:center;text-anchor:middle" x="251.42049">MASSIF<tspan y="192.82602" x="251.42049">CENTRAL</tspan></text>
+		<text transform="rotate(-53.88,284.20665,-230.65199)" id="text204" x="11.063965" y="0" style="text-align:center;text-anchor:middle">JURA</text>
+		<text transform="rotate(-81.61,275.01167,-87.693896)" id="text205" x="13.976074" y="0" style="text-align:center;text-anchor:middle">ALPES</text>
+		<text transform="rotate(3.56,-3775.8307,2940.6525)"   id="text206" x="22.81665"  y="0" style="text-align:center;text-anchor:middle">PYRÉNÉES</text>
 	</g>
 </g>
