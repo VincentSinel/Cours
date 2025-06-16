@@ -262,15 +262,25 @@ function CreateGroup(svg_element, parameters, id)
 	title_check.type = "checkbox";
 	title_check.checked = true;
 	title.appendChild(title_check);
-	title_check.oninput = () => {
-		if (svg_element.visible())
-			svg_element.hide()
-		else
-			svg_element.show()}
+
 
 	var content = document.createElement("div");
 	content.classList.add("groupe-content");
 	main.appendChild(content);
+
+
+	title_check.oninput = () => {
+		if (svg_element.visible())
+		{
+			svg_element.hide()
+			content.classList.add("hide")
+		}
+		else
+		{
+			svg_element.show()
+			content.classList.remove("hide")
+		}}
+
 
 
 	if (parameters.hasOwnProperty("fill"))
