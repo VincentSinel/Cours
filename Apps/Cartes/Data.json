@@ -348,7 +348,7 @@
 					"Options": [
 						{
 							"Boutton": "Afficher/Cacher les outres mers",
-							"Action": "if (SVG_Draw.viewbox().x == 0) ResetSize(73.58, 0, LoadedMap_Size.w - 73.58, LoadedMap_Size.h); else ResetSize(0, 0, LoadedMap_Size.w, LoadedMap_Size.h);"
+							"Action": "if (SVG_Draw.viewbox().x == 0) ResetSize(74.58, 0, LoadedMap_Size.w - 74.58, LoadedMap_Size.h); else ResetSize(0, 0, LoadedMap_Size.w, LoadedMap_Size.h);"
 						}
 					]
 				}

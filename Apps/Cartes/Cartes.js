@@ -672,9 +672,9 @@ document.addEventListener("click", closeAllSelect);
 		img.onload = function onload() {
 			let canvas = document.createElement("canvas");
 			let ctx = canvas.getContext("2d");
-			canvas.width = img.width;
-			canvas.height = img.height;
-			ctx.drawImage(img, 0, 0, img.width, img.height);
+			canvas.width = img.width * 4;
+			canvas.height = img.height * 4;
+			ctx.drawImage(img, 0, 0, img.width * 4, img.height * 4);
 			var link = document.createElement('a');
 			link.download = 'Carte.png';
 			link.href = canvas.toDataURL("image/png")
