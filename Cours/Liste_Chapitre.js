@@ -692,6 +692,10 @@ var cinquieme_saintexupery = [
 			nom: "Solides - Polyèdres, Cône et Sphère",
 			icone: 2,
 			ready : true,
+			download: {
+				pdf: 			 "/Cours/3eme/SaintExupery/Chapitre_13/Documents/Chapitre 17 - Solides - Polyèdres, Cône et Sphère (Complet).pdf",
+				docx:		 	 "/Cours/3eme/SaintExupery/Chapitre_13/Documents/Chapitre 17 - Solides - Polyèdres, Cône et Sphère (Complet).docx",
+			},
 			page : "saintexupery/Chapitre_17/Cours.html"
 	},
 	{
