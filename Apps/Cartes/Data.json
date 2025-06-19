@@ -345,6 +345,13 @@
 							]
 						}
 					],
+					"Base": [
+						"France_Mer-Mers et océans",
+						"France_AutresPays-Autres pays",
+						"France_BordurePrincipale-Bordure principale",
+						"France_Echelles-Echelles",
+						"France_Cadre-Cadres"
+					],
 					"Options": [
 						{
 							"Boutton": "Afficher/Cacher les outres mers",

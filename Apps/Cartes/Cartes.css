@@ -138,6 +138,13 @@ body{
 	padding-right: 15px;
 	width: calc(100% - 15px);
 	height: auto;
+	min-height: 200px;
+}
+
+#menu_container_disponible{
+	padding-right: 15px;
+	height: auto;
+	width: calc(100% - 15px);
 }
 
 #menu_container_actions{
@@ -149,8 +156,32 @@ body{
 	text-align: center;
 }
 
+
+.selectable_couche{
+	background-color: var(--PanelBackActive);
+  padding: 2px 2px;
+  display: inline-block;
+  height: 24px;
+  width: 100%;
+}
+.selectable_couche:hover{
+	background-color: var(--PanelBackHover);
+}
+
+
 .hide{
 	display: none;
+}
+
+.glyphicon-move{
+	background-color: var(--PanelBackActive);
+	text-align: center;
+	vertical-align: center;
+	font-size: 24px;
+	height: 28px;
+	width: 28px;
+  cursor:n-resize;
+  cursor: -webkit-grabbing;
 }
 
 

@@ -1,8 +1,10 @@
+// import Sortable from 'sortable.js'
 var svg_max_size =  {w: 800, h: 600};
 var cartes_data;
 var container_dic = {"Data": null};
 var patterns_mask = {};
 var SVG_Draw;
+
 
 function Init()
 {
@@ -15,6 +17,31 @@ function Init()
 		}
 	}
 	client.send();
+
+	
+	Sortable.create(document.getElementById("menu_container_disponible"), {
+		group: {
+        name: 'shared',
+        pull: 'clone',
+        put: false // Do not allow items to be put into this list
+    },
+		animation: 150,
+		sort: false // To disable sorting: set sort to false
+	});
+
+	Sortable.create(document.getElementById("menu_container_carte"), {
+		group: 'shared',
+		handle: '.glyphicon-move',
+		animation: 150,
+			// Element dragging ended
+		onEnd: function (evt) {
+			CoucheDragged_Ended(evt)
+		},
+			// Element is dropped into the list from another list
+		onAdd: function (/**Event*/evt) {
+			CoucheDragged_Add(evt)
+		},
+	});
 }
 
 function RecreateList()
@@ -69,11 +96,13 @@ function AddData(data, parent_folder = "")
 
 // var LoadedMap_Colors = {};
 var LoadedMap_Files = [];
+var LoadedMap_FilesBase = [];
 var LoadCheck = 0;
 var LoadedMap_Options = "";
 var LoadedMap_Folder = "";
 var LoadedMap_Size = {w: 0, h: 0};
 var LoadedMap_SVGElements = {};
+var LoadedMap_Couches = {}
 
 function LoadMap(parent_folder, data)
 {
@@ -86,8 +115,11 @@ function LoadMap(parent_folder, data)
 	
 	LoadedMap_Options = data["Options"];
 	LoadedMap_Files = data["Files"];
+	LoadedMap_FilesBase = data["Base"];
 	LoadedMap_Size.w = data["Size"]["Width"];
 	LoadedMap_Size.h = data["Size"]["Height"];
+	LoadedMap_Couches = {};
+	LoadedMap_SVGElements = {};
 	LoadCheck = LoadedMap_Files.length;
 
 	for (let index = 0; index < LoadedMap_Files.length; index++) {
@@ -130,33 +162,42 @@ function EndLoad()
 
 	CreatePatterns();
 
-	LoadedMap_Files.forEach(file => {
-		if (file["Type"] === "svg")
-		{
-			SVG_Draw.svg(file["Data"]);
-			let element = SVG_Draw.find("#" + file["Name"])[0];
-			
-			if (file.hasOwnProperty("OffSet"))
-				element.move(file["OffSet"]["x"],file["OffSet"]["y"]);
+	
 
-			if (file.hasOwnProperty("Parameters"))
-			{
-				let groups = element.find("g")
-				for (let i = 0; i < groups.length; i++)
-				{
-					groups[i].attr(file["Parameters"][i]);
-					groups[i].attr({"visibility": "visible"});
-					LoadedMap_SVGElements[file["Name"] + "/" + i.toString()] = groups[i];
-				}
-			}
-			LoadedMap_SVGElements[file["Name"]] = element;
-		}
-	});
+	// LoadedMap_Files.forEach(file => {
+	// 	if (file["Type"] === "svg")
+	// 	{
+	// 		SVG_Draw.svg(file["Data"]);
+	// 		let element = SVG_Draw.find("#" + file["Name"])[0];
+			
+	// 		if (file.hasOwnProperty("OffSet"))
+	// 			element.move(file["OffSet"]["x"],file["OffSet"]["y"]);
+
+	// 		if (file.hasOwnProperty("Parameters"))
+	// 		{
+	// 			let groups = element.find("g")
+	// 			for (let i = 0; i < groups.length; i++)
+	// 			{
+	// 				groups[i].attr(file["Parameters"][i]);
+	// 				groups[i].attr({"visibility": "visible"});
+	// 				LoadedMap_SVGElements[file["Name"] + "/" + i.toString()] = groups[i];
+	// 			}
+	// 		}
+	// 		LoadedMap_SVGElements[file["Name"]] = element;
+	// 	}
+	// });
 
 	MoveFrontElement();
 
 	Create_Options();
 	Create_Menu();
+
+	console.log(LoadedMap_Couches);
+	var menu_div = document.getElementById("menu_container_carte"); 
+	LoadedMap_FilesBase.forEach(base => {
+		var couche = CreateCouche(LoadedMap_Couches[base]);
+		menu_div.appendChild(couche);
+	})
 }
 
 function MoveFrontElement()
@@ -188,49 +229,97 @@ function Create_Options()
 function Create_Menu()
 {
 	var menu_div = document.getElementById("menu_container_carte");
+	var menu_div_dispo = document.getElementById("menu_container_disponible");
 	menu_div.innerHTML = ""
+	menu_div_dispo.innerHTML = ""
 	LoadedMap_Files.forEach(file => {
 		if (file["Type"] === "svg")
 		{
 			if (file.hasOwnProperty("Parameters"))
 			{
-				var couche = CreateCouche(file["Section"])
-				menu_div.appendChild(couche);
+				var couche_name = CreateCoucheList(file)
+				menu_div_dispo.appendChild(couche_name);
 
 
-				var groupes_div = couche.querySelector("#groupes");
-				for (let i = 0; i < file["Parameters"].length; i++)
-				{
-					var svg_element = LoadedMap_SVGElements[file["Name"] + "/" + i.toString()] 
-					var group_div = CreateGroup(svg_element, file["Parameters"][i], i)
-					groupes_div.appendChild(group_div);
-				}
+				// var couche = CreateCouche(file)
+				// menu_div.appendChild(couche);
 			}
 		}
 	})
 	UpdateCustomSelect()
 }
 
-function CreateCouche(name)
+function CreateCoucheList(file)
 {
 	var main = document.createElement("div");
-	main.classList.add("formemenu");
+	main.setAttribute("couche_name", file["Name"] + "-" + file["Section"])
+	main.classList.add("selectable_couche");
+
+	var span = document.createElement("span");
+	span.innerHTML = file["Section"];
+	main.appendChild(span);
+
+	LoadedMap_Couches[file["Name"] + "-" + file["Section"]] = file;
+
+	return main
+}
+
+function CreateCouche(file)
+{
+	let k = 1;
+	var prefix = "(0)"
+	while (LoadedMap_SVGElements.hasOwnProperty(file["Name"] + prefix))
+	{
+		prefix = " (" + k.toString() + ")";
+		k++;
+	}
+
+
+	SVG_Draw.svg(file["Data"]);
+	let element = SVG_Draw.find("#" + file["Name"])[0];
+	element.attr({id: file["Name"] + prefix})
+	
+	if (file.hasOwnProperty("OffSet"))
+		element.move(file["OffSet"]["x"],file["OffSet"]["y"]);
+
+	if (file.hasOwnProperty("Parameters"))
+	{
+		let groups = element.find("g")
+		for (let i = 0; i < groups.length; i++)
+		{
+			groups[i].attr(file["Parameters"][i]);
+			groups[i].attr({"visibility": "visible"});
+			LoadedMap_SVGElements[file["Name"] + prefix + "/" + i.toString()] = groups[i];
+		}
+	}
+	LoadedMap_SVGElements[file["Name"] + prefix] = element;
+
+
+
+	var couche = document.createElement("div");
+	couche.setAttribute("coucheOriginal", file["Name"])
+	couche.setAttribute("id", file["Name"] + prefix)
+	couche.classList.add("formemenu");
 
 	var title = document.createElement("div");
 	title.classList.add("couche");
-	title.onclick = function(){menu_click(main);};
-	main.appendChild(title);
+	title.onclick = function(){menu_click(couche);};
+	couche.appendChild(title);
+
+	var handle = document.createElement("label");
+	handle.classList.add("glyphicon-move")
+	handle.innerHTML = "≡";
+	title.appendChild(handle);
 
 	var span = document.createElement("span");
-	span.innerHTML = name;
+	span.innerHTML = file["Section"] + prefix;
 	title.appendChild(span);
-
-	//TODO ajouter la suppression/création de couche supplémentaire et la réorganisation
 	
-	// var icon = document.createElement("div");
-	// icon.classList.add("iconbutton");
-	// icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill="currentColor" stroke="currentColor" d="M283-130q-30.938 0-52.969-22.031Q208-174.062 208-205v-512h-39v-75h193v-38h237v38h193v75h-39v512q0 30.938-22.031 52.969Q708.938-130 678-130H283Zm395-587H283v512h395v-512ZM365-283.5h75v-355h-75v355Zm156 0h75v-355h-75v355ZM283-717v512-512Z"/></svg>'
-	// title.appendChild(icon);
+	var icon = document.createElement("div");
+	icon.classList.add("iconbutton");
+	icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill="currentColor" stroke="currentColor" d="M283-130q-30.938 0-52.969-22.031Q208-174.062 208-205v-512h-39v-75h193v-38h237v38h193v75h-39v512q0 30.938-22.031 52.969Q708.938-130 678-130H283Zm395-587H283v512h395v-512ZM365-283.5h75v-355h-75v355Zm156 0h75v-355h-75v355ZM283-717v512-512Z"/></svg>'
+	icon.onclick = () => { CoucheDeleted(couche) }
+	title.appendChild(icon);
 
 	var content = document.createElement("div");
 	content.classList.add("formemenu_div");
@@ -239,9 +328,17 @@ function CreateCouche(name)
 	groupes.id = "groupes";
 	content.appendChild(groupes);
 
-	main.appendChild(content);
+	couche.appendChild(content);
 
-	return main
+	var groupes_div = couche.querySelector("#groupes");
+	for (let i = 0; i < file["Parameters"].length; i++)
+	{
+		var svg_element = LoadedMap_SVGElements[file["Name"] + prefix + "/" + i.toString()] 
+		var group_div = CreateGroup(svg_element, file["Parameters"][i], i)
+		groupes_div.appendChild(group_div);
+	}
+
+	return couche
 }
 
 function CreateGroup(svg_element, parameters, id)
@@ -571,6 +668,44 @@ function CreatePatterns()
 	)
 }
 
+function CoucheDragged_Ended(event)
+{
+	ReajustePositionCouche();
+}
+
+function CoucheDragged_Add(event)
+{
+	var couche = CreateCouche(LoadedMap_Couches[event.item.getAttribute("couche_name")]);
+	var menu_div = document.getElementById("menu_container_carte"); 
+	menu_div.insertBefore(couche, event.item);
+	event.item.remove();
+	ReajustePositionCouche();
+}
+
+function CoucheDeleted(couche)
+{
+	for(var key in LoadedMap_SVGElements) {
+    if(LoadedMap_SVGElements.hasOwnProperty(key)) {
+			if (key.startsWith(couche.id + "/") || key == couche.id)
+			{
+				LoadedMap_SVGElements[key].remove();
+				delete LoadedMap_SVGElements[key]
+			}
+    }
+	}
+	
+	couche.remove();
+	ReajustePositionCouche();
+}
+
+function ReajustePositionCouche()
+{
+	let menu_div = document.getElementById("menu_container_carte");
+	for (let i = menu_div.children.length - 1; i >= 0; i--) {
+		const id = menu_div.children[i].id;
+		LoadedMap_SVGElements[id].back()
+	}
+}
 
 
 function UpdateCustomSelect()
