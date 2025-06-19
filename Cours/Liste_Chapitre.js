@@ -570,6 +570,10 @@ var cinquieme_base = [
 			nom: "Parallélogrammes",
 			icone: 2,
 			ready : true,
+			download: {
+				pdf: 			 "/Cours/5eme/base/Chapitre_19/Documents/Chapitre 19 - Parallélogrammes (Complet).pdf",
+				docx:		 	 "/Cours/5eme/base/Chapitre_19/Documents/Chapitre 19 - Parallélogrammes (Complet).docx",
+			},
 			page : "Base/Chapitre_19/Cours.html"
 	}
 ]
@@ -685,6 +689,10 @@ var cinquieme_saintexupery = [
 			nom: "Parallélogrammes",
 			icone: 2,
 			ready : true,
+			download: {
+				pdf: 			 "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (Complet).pdf",
+				docx:		 	 "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (Complet).docx",
+			},
 			page : "Base/Chapitre_19/Cours.html"
 	},
 	{
@@ -693,8 +701,8 @@ var cinquieme_saintexupery = [
 			icone: 2,
 			ready : true,
 			download: {
-				pdf: 			 "/Cours/3eme/SaintExupery/Chapitre_13/Documents/Chapitre 17 - Solides - Polyèdres, Cône et Sphère (Complet).pdf",
-				docx:		 	 "/Cours/3eme/SaintExupery/Chapitre_13/Documents/Chapitre 17 - Solides - Polyèdres, Cône et Sphère (Complet).docx",
+				pdf: 			 "/Cours/5eme/SaintExupery/Chapitre_17/Documents/Chapitre 17 - Solides - Polyèdres, Cône et Sphère (Complet).pdf",
+				docx:		 	 "/Cours/5eme/SaintExupery/Chapitre_17/Documents/Chapitre 17 - Solides - Polyèdres, Cône et Sphère (Complet).docx",
 			},
 			page : "saintexupery/Chapitre_17/Cours.html"
 	},
