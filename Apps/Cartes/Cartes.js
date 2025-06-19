@@ -705,6 +705,7 @@ function ReajustePositionCouche()
 		const id = menu_div.children[i].id;
 		LoadedMap_SVGElements[id].back()
 	}
+	MoveFrontElement();
 }
 
 
