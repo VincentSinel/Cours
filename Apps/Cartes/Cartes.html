@@ -14,6 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
 	<script src="/JS/Sortable.js/Sortable.min.js" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+	<script src="https://cdn.skypack.dev/canvg@^4.0.0" type="module"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
@@ -155,7 +156,7 @@
 			</div>
 			<div>
 				<button onclick="Save()">Enregistrer en SVG</button>
-				<button onclick="SavePNG()">Enregistrer en PNG</button>
+				<button id="Png_Save" onclick="SavePNG()">Enregistrer en PNG</button>
 			</div>
 		</div>
 	</div>
@@ -173,6 +174,46 @@
 		function menu_click(element){
 			element.classList.toggle("show")
 		}
-UpdateCustomSelect();
+	UpdateCustomSelect();
+</script>
+<script type="module">
+	import { Canvg, presets } from 'https://cdn.skypack.dev/canvg@^4.0.0';
+
+	const preset = presets.offscreen()
+
+	async function toPng(data) {
+		const {
+			width,
+			height,
+			svg
+		} = data
+		const canvas = new OffscreenCanvas(width, height)
+		const ctx = canvas.getContext('2d')
+		const v = await Canvg.fromString(ctx, svg, preset)
+
+		v.resize(width * 4, height * 4, 'xMidYMid meet')
+
+		// Render only first frame, ignoring animations and mouse.
+		await v.render()
+
+		const blob = await canvas.convertToBlob()
+		const pngUrl = URL.createObjectURL(blob)
+
+		return pngUrl
+	}
+
+	document.getElementById("Png_Save").onclick = () => {
+		var svgString = document.getElementById('svg_holder').innerHTML;
+		toPng({
+			width: SVG_Draw.width(),
+			height: SVG_Draw.height(),
+			svg: svgString
+		}).then((pngUrl) => {
+			var link = document.createElement('a');
+			link.download = 'Carte.png';
+			link.href = pngUrl
+			link.click();
+		})
+	};
 </script>
 </html>

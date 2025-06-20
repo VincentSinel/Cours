@@ -188,6 +188,21 @@
 							]
 						}
 						,{
+							"Name": "France_Departements",
+							"Section": "Départements",
+							"Type": "svg",
+							"Parameters": [
+								{
+									"name": "Bordure",
+									"fill": "none",
+									"stroke": "#010101",
+									"stroke-width": 0.5,
+									"stroke-linecap": "round",
+									"stroke-linejoin": "round"
+								}
+							]
+						}
+						,{
 							"Name": "France_Fleuves",
 							"Section": "Fleuves et cours d'eau",
 							"Type": "svg",

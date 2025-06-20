@@ -162,37 +162,11 @@ function EndLoad()
 
 	CreatePatterns();
 
-	
-
-	// LoadedMap_Files.forEach(file => {
-	// 	if (file["Type"] === "svg")
-	// 	{
-	// 		SVG_Draw.svg(file["Data"]);
-	// 		let element = SVG_Draw.find("#" + file["Name"])[0];
-			
-	// 		if (file.hasOwnProperty("OffSet"))
-	// 			element.move(file["OffSet"]["x"],file["OffSet"]["y"]);
-
-	// 		if (file.hasOwnProperty("Parameters"))
-	// 		{
-	// 			let groups = element.find("g")
-	// 			for (let i = 0; i < groups.length; i++)
-	// 			{
-	// 				groups[i].attr(file["Parameters"][i]);
-	// 				groups[i].attr({"visibility": "visible"});
-	// 				LoadedMap_SVGElements[file["Name"] + "/" + i.toString()] = groups[i];
-	// 			}
-	// 		}
-	// 		LoadedMap_SVGElements[file["Name"]] = element;
-	// 	}
-	// });
-
 	MoveFrontElement();
 
 	Create_Options();
 	Create_Menu();
 
-	console.log(LoadedMap_Couches);
 	var menu_div = document.getElementById("menu_container_carte"); 
 	LoadedMap_FilesBase.forEach(base => {
 		var couche = CreateCouche(LoadedMap_Couches[base]);
@@ -239,10 +213,6 @@ function Create_Menu()
 			{
 				var couche_name = CreateCoucheList(file)
 				menu_div_dispo.appendChild(couche_name);
-
-
-				// var couche = CreateCouche(file)
-				// menu_div.appendChild(couche);
 			}
 		}
 	})
@@ -796,39 +766,13 @@ then close all select boxes: */
 document.addEventListener("click", closeAllSelect); 
 
 
-{ // Save functions
-
-	function Save()
-	{
-		var svgString = document.getElementById('svg_holder').innerHTML;
-		a = document.createElement('a');
-		a.download = 'Carte.svg';
-		a.type = 'image/svg+xml';
-		blob = new Blob([svgString], {"type": "image/svg+xml"});
-		a.href = (window.URL || webkitURL).createObjectURL(blob);
-		a.click();
-	}
-
-	function SavePNG() {
-		var svg = document.getElementById('svg_holder').innerHTML;
-		let img = document.createElement("img");
-		let url = (window.URL || webkitURL).createObjectURL(new Blob([svg], { type: "image/svg+xml" }));
-		img.src = url;
-		img.setAttribute("style", "position:fixed;left:-200vw;");
-		img.onload = function onload() {
-			let canvas = document.createElement("canvas");
-			let ctx = canvas.getContext("2d");
-			canvas.width = img.width * 4;
-			canvas.height = img.height * 4;
-			ctx.drawImage(img, 0, 0, img.width * 4, img.height * 4);
-			var link = document.createElement('a');
-			link.download = 'Carte.png';
-			link.href = canvas.toDataURL("image/png")
-			link.click();
-			img.remove();
-			(window.URL || webkitURL).revokeObjectURL(url);
-		};
-		document.body.appendChild(img);
-	}
-
+function Save()
+{
+	var svgString = document.getElementById('svg_holder').innerHTML;
+	a = document.createElement('a');
+	a.download = 'Carte.svg';
+	a.type = 'image/svg+xml';
+	blob = new Blob([svgString], {"type": "image/svg+xml"});
+	a.href = (window.URL || webkitURL).createObjectURL(blob);
+	a.click();
 }
