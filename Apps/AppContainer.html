@@ -38,7 +38,7 @@
 
 </head>
 
-<body>
+<body onload="GetCurrentHash()">
 
   <div class="nav-header">
     <div class="nav-headertext">
@@ -68,15 +68,15 @@
     </div>
     <nav>
         <div class="listeapp">
-            <div class="blockmenu buttonbrevet" onclick="OpenMenu('/Brevet/Annales Brevet.html')"><span></span></div>
-            <div class="blockmenu buttonplandc" onclick="OpenMenu('/Apps/Generateur_PlanClasse/Generateur_PlanClasse.html')"><span></span></div>
-            <div class="blockmenu buttonboulie" onclick="OpenMenu('/Apps/Boulier/Boulier.html')"><span></span></div>
-            <div class="blockmenu buttonloto" onclick="OpenMenu('/Apps/Loto/Loto.html')"><span></span></div>
-            <div class="blockmenu buttondecompte" onclick="OpenMenu('/Apps/Chronometre/Chronometre.html')"><span></span></div>
-            <div class="blockmenu buttonmathador" onclick="OpenMenu('/Apps/Mathador/Mathador.html')"><span></span></div>
-            <div class="blockmenu buttoncarte" onclick="OpenMenu('/Apps/Cartes/Cartes.html')"><span></span></div>
-            <div class="blockmenu buttonstructuro" onclick="OpenMenu('/Apps/Structuro/Structuro.html')"><span></span></div>
-            <div class="blockmenu buttonliensutiles" onclick="OpenMenu('/Apps/LiensUtiles/LiensUtiles.html')"><span></span></div>
+            <div class="blockmenu buttonbrevet" onclick="OpenMenu('Brevet')"><span></span></div>
+            <div class="blockmenu buttonplandc" onclick="OpenMenu('PlanClasse')"><span></span></div>
+            <div class="blockmenu buttonboulie" onclick="OpenMenu('Boulier')"><span></span></div>
+            <div class="blockmenu buttonloto" onclick="OpenMenu('Loto')"><span></span></div>
+            <div class="blockmenu buttondecompte" onclick="OpenMenu('Chronometre')"><span></span></div>
+            <div class="blockmenu buttonmathador" onclick="OpenMenu('Mathador')"><span></span></div>
+            <div class="blockmenu buttoncarte" onclick="OpenMenu('Cartes')"><span></span></div>
+            <div class="blockmenu buttonstructuro" onclick="OpenMenu('Structuro')"><span></span></div>
+            <div class="blockmenu buttonliensutiles" onclick="OpenMenu('LiensUtiles')"><span></span></div>
             <!-- <div class="blockmenu" onclick="OpenMenu()"><span></span></div>
             <div class="blockmenu" onclick="OpenMenu()"><span></span></div> -->
         </div>
@@ -98,11 +98,47 @@
       menu.classList.toggle("asideshow");
     }
 
-    function OpenMenu(path)
+    function OpenMenu(name)
     {
-        document.getElementById("noiframe").style.display = "none"
-        document.getElementById("appcontent").src = path
-        toggleMenu();
+      let src = GetCurrentURL(name);
+      document.getElementById("noiframe").style.display = "none"
+      document.getElementById("appcontent").src = src
+      document.location.hash = name
+      toggleMenu();
+    }
+
+    function GetCurrentURL(name)
+    {
+      switch (name) {
+        case "Brevet":
+          return '/Brevet/Annales Brevet.html' 
+        case "PlanClasse":
+          return '/Apps/Generateur_PlanClasse/Generateur_PlanClasse.html'
+        case "Boulier":
+          return '/Apps/Boulier/Boulier.html'
+        case "Loto":
+          return '/Apps/Loto/Loto.html'
+        case "Chronometre":
+          return '/Apps/Chronometre/Chronometre.html'
+        case "Mathador":
+          return '/Apps/Mathador/Mathador.html'
+        case "Cartes":
+          return '/Apps/Cartes/Cartes.html'
+        case "Structuro":
+          return '/Apps/Structuro/Structuro.html'
+        case "LiensUtiles":
+          return '/Apps/LiensUtiles/LiensUtiles.html'
+        default:
+          return "";
+      }
+    }
+
+    function GetCurrentHash()
+    {
+      let src = GetCurrentURL(location.hash.substring(1))
+      if (src === "") return;
+      document.getElementById("noiframe").style.display = "none"
+      document.getElementById("appcontent").src = src
     }
   </script>
 </body>
