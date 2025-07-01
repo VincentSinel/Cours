@@ -385,7 +385,7 @@ function DrawIso()
 
 	let w = View_Iso.width() - 10;
 	let pot_h = (Cube_d() + Cube_w()) * 0.5 +  Cube_h()
-	let pot_w =  (Cube_w() + Cube_d())/ (sin60 * 2)
+	let pot_w =  (Cube_w() + Cube_d()) * sin60
 	let cube_size = w / Math.max(pot_h, pot_w)
 
 	let r_w = (Cube_w() + Cube_d()) * cube_size * sin60;
@@ -407,6 +407,7 @@ function DrawIso()
 		lines.push(line);
 	}
 	let sy = Cube_w() * cube_size / 2.0 - (Cube_w() + Cube_d()) * cube_size;
+	let more = Cube_d() % 2 * cube_size / 2
 	while (sy < pot_h * cube_size)
 	{
 		let x1 = 0; let x2 = r_w; let y1 = sy; let y2 = sy + (Cube_w() + Cube_d()) * cube_size / 2.0
@@ -430,6 +431,18 @@ function DrawIso()
 		line.attr(grid_style)
 		lines.push(line);
 		
+		y1 = y1 + more
+		y2 = y2 + more
+		if (y1 == more && x1 > 1)
+		{
+			y1 = 0;
+			x1 -= cube_size * sin60;
+		}
+		if (y2 > pot_h * cube_size)
+		{
+			y2 = pot_h * cube_size;
+			x2 -= cube_size * sin60;
+		}
 		let line2 = View_Iso.line(r_w - x1, y1, r_w - x2, y2)
 		line2.dmove(offset.x, offset.y)
 		line2.attr(grid_style)
@@ -437,6 +450,7 @@ function DrawIso()
 
 		sy += cube_size;
 	}
+	
 
 	function _local_line(x1, y1, x2, y2)
 	{
