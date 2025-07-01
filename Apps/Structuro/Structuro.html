@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">	
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+	<link rel="stylesheet" href="/CSS/MainPage.css"> 
+	<link rel="stylesheet" href="/CSS/DarkTheme.css">
+  <link rel="stylesheet" href="Structuro.css"> 
+  <script src="Structuro.js"></script>
+
+	<script src="/JS/Svg.js/svg.min.js" charset="utf-8"></script>
+	<script src="/JS/FileSaver/FileSaver.min.js" charset="utf-8"></script>
+	<script src="/JS/JSZip/jszip.min.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+	<script src="https://cdn.skypack.dev/canvg@^4.0.0" type="module"></script>
+	
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+  <title>Structuro</title>
+
+  <style>
+  </style>
+
+</head>
+
+<body>
+	<div id="maincontainer" class="maincontainer">
+
+		<div class="left_panel">
+			<div class="flexobject">
+				<label>Longueur&#8239;:</label>
+				<input type="number" min="1" max="10" step="1" value="5" id="structuro_width" oninput="ChangeCubeSize()">
+				<label>Largeur&#8239;:</label>
+				<input type="number" min="1" max="10" step="1" value="5" id="structuro_height" oninput="ChangeCubeSize()">
+				<label>Profondeur&#8239;:</label>
+				<input type="number" min="1" max="10" step="1" value="5" id="structuro_depth" oninput="ChangeCubeSize()">
+				<button onclick="Save()">Enregistrer en SVG</button>
+				<button id="Png_Save" onclick="SavePNG()">Enregistrer en PNG</button>
+			</div>
+		</div>
+
+		<div class="content_div">
+			<div id="grid_container" class="grid">
+			</div>
+		</div>
+
+	
+	</div>
+</body>	
+	<script>
+		Init()
+	</script>
+	<script type="module">
+		import { Canvg, presets } from 'https://cdn.skypack.dev/canvg@^4.0.0';
+
+		const preset = presets.offscreen()
+
+		async function toPng(data) {
+			const {
+				width,
+				height,
+				svg
+			} = data
+			const canvas = new OffscreenCanvas(width, height)
+			const ctx = canvas.getContext('2d')
+			const v = await Canvg.fromString(ctx, svg, preset)
+
+			v.resize(width * 4, height * 4, 'xMidYMid meet')
+
+			// Render only first frame, ignoring animations and mouse.
+			await v.render()
+
+			const blob = await canvas.convertToBlob()
+
+			return blob
+		}
+
+		document.getElementById("Png_Save").onclick = () => {
+			var zip = new JSZip();
+			
+			console.log(View_Front.node.outerHTML)
+			toPng({
+				width: View_Front.width(),
+				height: View_Front.height(),
+				svg: View_Front.node.outerHTML
+			}).then((blob) => {
+				if (View_Front_flip)
+					zip.file("Face_arriere.png", blob);
+				else
+					zip.file("Face_avant.png", blob);
+				toPng({
+					width: View_Right.width(),
+					height: View_Right.height(),
+					svg: View_Right.node.outerHTML
+				}).then((blob) => {
+					if (View_Right_flip)
+						zip.file("Face_droite.png", blob);
+					else
+						zip.file("Face_gauche.png", blob);
+					toPng({
+						width: View_Top.width(),
+						height: View_Top.height(),
+						svg: View_Top.node.outerHTML
+					}).then((blob) => {
+						if (View_Top_flip)
+							zip.file("Face_dessous.png", blob);
+						else
+							zip.file("Face_dessus.png", blob);
+						toPng({
+							width: View_Iso.width(),
+							height: View_Iso.height(),
+							svg: View_Iso.node.outerHTML
+						}).then((blob) => {
+							zip.file("Vue_isometrique.png", blob);
+							toPng({
+								width: View_Cav.width(),
+								height: View_Cav.height(),
+								svg: View_Cav.node.outerHTML
+							}).then((blob) => {
+								zip.file("Vue_cavaliere.png", blob);
+								zip.generateAsync({type:"blob"})
+								.then(function(content) {
+										// see FileSaver.js
+										saveAs(content, "Structuro.zip");
+								});
+							})
+						})
+					})
+				})
+			})
+		};
+	</script>
+</html>
