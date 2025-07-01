@@ -283,8 +283,8 @@ var troisième_saintexupery = [
 		chapter: "Chapitre 16",
 		nom: "Triangles semblables",
 		icone: 2,
-		ready : false,
-		page : "SaintExupery/Chapitre_17/Cours.html"
+		ready : true,
+		page : "../4eme/Base/Chapitre_15/Cours.html"
 	},
 ]
 
