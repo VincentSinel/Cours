@@ -112,8 +112,9 @@ body{
 }
 .groupe-content{
 	display: flex;
-	flex-direction: column;
-	gap: 0;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 2px;
 	padding-left: 5px;
 	width: calc(100% - 5px);
 }
@@ -209,58 +210,47 @@ body{
 	font-size: 12pt;
 }
 
-.tool-fill
-{
+
+div[class^="tool-"]{
 	display: flex;
-	gap: 5px;
-	flex-direction: column;
+	gap: 2px;
+	flex-direction: row;
+	flex-wrap: wrap;
 	align-items: stretch;
 	justify-items: stretch;
 }
-.tool-fill > div
-{
-	display: flex;
-	flex-direction: row;
-	gap: 5px;
+div[class^="tool-"] > img{
+	max-height: 24px;
 }
-.tool-fill > div > input[type=range]
-{
-	flex-grow: 1;
-}
-.tool-fill > div > input[type=number]
-{
-	flex-grow: 0;
-	width: 50px;
+div[class^="tool-"] > button{
+	max-width: 24px;
+	min-width: 24px;
 }
 
-.tool-stroke
+.tool-fill > div
 {
-	display: flex;
-	gap: 5px;
-	flex-direction: column;
-	align-items: stretch;
-	justify-items: stretch;
+	max-height: 24px;
+	min-width: 44px;
 }
+.tool-fill
+{
+	font-family: 'Glyphter';
+}
+
 .tool-stroke > input
 {
-	width: auto;
+	width: 44px;
 }
 
 
 .tool-font > div
 {
-	display: flex;
-	flex-direction: row;
-	gap: 5px;
+	max-height: 24px;
+	min-width: 232px;
 }
-.tool-font > div > label
+.tool-font > input
 {
-	flex-grow: 0;
-	width: 178px;
-}
-.tool-font > div > input
-{
-	flex-grow: 1;
+	width: 69px;
 }
 
 #title_SelectedMap{
@@ -305,51 +295,51 @@ body{
 }
 
 .select-selected {
-  background-color: var(--BackText);	
+  background-color: var(--Back);	
 	width: calc(100% - 8px);
-	color: var(--OnWhiteTexte);
+	color: var(--BackText);
 	border-radius: 3px;
+	border: #777777 solid 2px;
 }
 
 /* Style the arrow inside the select element: */
 .select-selected:after {
   position: absolute;
   content: "";
-  top: 11px;
+  top: 8px;
   right: 5px;
   width: 0;
   height: 0;
   border: 6px solid transparent;
-  border-color: #000 transparent transparent transparent;
+  border-color: var(--BackText) transparent transparent transparent;
 }
 
 /* Point the arrow upwards when the select box is open (active): */
 .select-selected.select-arrow-active:after {
-  border-color: transparent transparent #000 transparent;
-  top: 7px;
+  border-color: transparent transparent var(--BackText) transparent;
+  top: 2px;
 }
 
 /* style the items (options), including the selected item: */
 .select-items div,.select-selected {
-	color: var(--OnWhiteTexte);
-  padding: 3px 3px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+	color: #e3e3e3;
+  padding: 1px 3px;
   cursor: pointer;
-	font-family: 'Glyphter';
 	border-radius: 3px;
+  background-color: var(--Back);
 }
 
 /* Style items (options): */
 .select-items {
   position: absolute;
-  background-color: var(--PanelBackText);
-  top: 100%;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 99;
 	overflow-y: scroll;
-	max-height: 130px;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 44px;
 }
 
 /* Hide the items when the select box is closed: */

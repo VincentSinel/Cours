@@ -1,9 +1,12 @@
 // import Sortable from 'sortable.js'
 var svg_max_size =  {w: 800, h: 600};
+var legende_height = 60;
 var cartes_data;
 var container_dic = {"Data": null};
 var patterns_mask = {};
 var SVG_Draw;
+var SVG_Cadre;
+var SVG_Legende;
 
 
 function Init()
@@ -103,6 +106,7 @@ var LoadedMap_Folder = "";
 var LoadedMap_Size = {w: 0, h: 0};
 var LoadedMap_SVGElements = {};
 var LoadedMap_Couches = {}
+var LoadedMap_CouchesSelected = {};
 
 function LoadMap(parent_folder, data)
 {
@@ -143,8 +147,9 @@ function ResetSize(off_x, off_y, size_w, size_h)
 	if (svg_max_size.h / size_h < coef)
 		coef = svg_max_size.h / size_h;
 
-	SVG_Draw.size(size_w * coef, size_h * coef);
-	SVG_Draw.viewbox(off_x, off_y, size_w, size_h);
+	SVG_Draw.size(size_w * coef, (size_h + legende_height) * coef);
+	SVG_Draw.viewbox(off_x, off_y, size_w, size_h + legende_height);
+	SVG_Cadre.size(size_w, size_h).move(off_x, off_y);
 }
 
 
@@ -158,11 +163,13 @@ function EndLoad()
 
 	SVG_Draw = SVG().addTo('#svg_holder');
 	SVG_Draw.attr("xml:space", "preserve");
+	SVG_Legende = SVG_Draw.group()
+	SVG_Cadre = SVG_Draw.rect(0,0,SVG_Draw.width(), SVG_Draw.height()).attr({"fill": "none", "stroke": "black", "stroke-width": 4})
 	ResetSize(0,0, LoadedMap_Size.w, LoadedMap_Size.h);
 
 	CreatePatterns();
 
-	MoveFrontElement();
+	LoadedMap_CouchesSelected = {};
 
 	Create_Options();
 	Create_Menu();
@@ -170,8 +177,12 @@ function EndLoad()
 	var menu_div = document.getElementById("menu_container_carte"); 
 	LoadedMap_FilesBase.forEach(base => {
 		var couche = CreateCouche(LoadedMap_Couches[base]);
-		menu_div.appendChild(couche);
+		if (!LoadedMap_Couches[base].hasOwnProperty("Editable"))
+			menu_div.appendChild(couche);
 	})
+
+	ReajustePositionCouche();
+	Recreate_Legendes()
 }
 
 function MoveFrontElement()
@@ -199,7 +210,6 @@ function Create_Options()
 }
 
 
-
 function Create_Menu()
 {
 	var menu_div = document.getElementById("menu_container_carte");
@@ -209,6 +219,9 @@ function Create_Menu()
 	LoadedMap_Files.forEach(file => {
 		if (file["Type"] === "svg")
 		{
+			LoadedMap_Couches[file["Name"] + "-" + file["Section"]] = file;
+			if (file.hasOwnProperty("Editable")) return;
+				
 			if (file.hasOwnProperty("Parameters"))
 			{
 				var couche_name = CreateCoucheList(file)
@@ -216,7 +229,6 @@ function Create_Menu()
 			}
 		}
 	})
-	UpdateCustomSelect()
 }
 
 function CreateCoucheList(file)
@@ -229,21 +241,19 @@ function CreateCoucheList(file)
 	span.innerHTML = file["Section"];
 	main.appendChild(span);
 
-	LoadedMap_Couches[file["Name"] + "-" + file["Section"]] = file;
-
 	return main
 }
 
 function CreateCouche(file)
 {
 	let k = 1;
-	var prefix = "(0)"
+	var prefix = " (0)"
 	while (LoadedMap_SVGElements.hasOwnProperty(file["Name"] + prefix))
 	{
 		prefix = " (" + k.toString() + ")";
 		k++;
 	}
-
+	LoadedMap_CouchesSelected[file["Name"] + prefix] = file;
 
 	SVG_Draw.svg(file["Data"]);
 	let element = SVG_Draw.find("#" + file["Name"])[0];
@@ -257,14 +267,12 @@ function CreateCouche(file)
 		let groups = element.find("g")
 		for (let i = 0; i < groups.length; i++)
 		{
-			groups[i].attr(file["Parameters"][i]);
+			groups[i].attr(file["Parameters"][i]["data"]);
 			groups[i].attr({"visibility": "visible"});
 			LoadedMap_SVGElements[file["Name"] + prefix + "/" + i.toString()] = groups[i];
 		}
 	}
 	LoadedMap_SVGElements[file["Name"] + prefix] = element;
-
-
 
 	var couche = document.createElement("div");
 	couche.setAttribute("coucheOriginal", file["Name"])
@@ -282,7 +290,10 @@ function CreateCouche(file)
 	title.appendChild(handle);
 
 	var span = document.createElement("span");
-	span.innerHTML = file["Section"] + prefix;
+	if (prefix === " (0)")
+		span.innerHTML = file["Section"];
+	else
+		span.innerHTML = file["Section"] + prefix;
 	title.appendChild(span);
 	
 	var icon = document.createElement("div");
@@ -311,7 +322,7 @@ function CreateCouche(file)
 	return couche
 }
 
-function CreateGroup(svg_element, parameters, id)
+function CreateGroup(svg_element, parameters, id)	
 {
 	var main = document.createElement("div");
 	main.classList.add("groupe");
@@ -349,24 +360,19 @@ function CreateGroup(svg_element, parameters, id)
 		}}
 
 
-
-	if (parameters.hasOwnProperty("fill"))
-	{
-		if (parameters["fill"] != "none")
-		{
-			CreateTool_Fill(content, svg_element, parameters)
-		}
-	}
-	if (parameters.hasOwnProperty("stroke"))
-	{
-		if (parameters["stroke"] != "none")
-		{
-			CreateTool_Stroke(content, svg_element, parameters)
-		}
-	}
-	if (parameters.hasOwnProperty("font-family"))
-	{
-		CreateTool_Font(content, svg_element, parameters)
+	switch (parameters["type_obj"]) {
+		case "surface":
+			CreateTool_Fill(content, svg_element, parameters["data"]);
+			CreateTool_Stroke(content, svg_element, parameters["data"]);
+			break;
+		case "line":
+			CreateTool_Stroke(content, svg_element, parameters["data"]);
+			break;
+		case "text":
+			CreateTool_Font(content, svg_element, parameters["data"]);
+			break;
+		default:
+			break;
 	}
 
 	return main;
@@ -377,19 +383,32 @@ function CreateTool_Fill(parent, svgelement, parameters)
 {
 	var base = document.createElement("div");
 	base.classList.add("tool-fill");
+	parent.appendChild(base);
 
-	var title = document.createElement("label");
-	title.innerHTML = "Remplissage";
-	base.appendChild(title);
+	var img1 = document.createElement("img");
+	img1.src = "Img/fill.svg";
+	base.appendChild(img1);
 
-	var pattern = document.createElement("div");
-	pattern.classList.add("pattern");
+	var color_button = document.createElement("button")
+	color_button.setAttribute("data-color", parameters["fill"])
+	color_button.setAttribute("style", "--cp-size:24px")
+	base.appendChild(color_button);
+	var color = new ColorPicker(color_button, base_options_colorpicker)
+	if (!parameters.hasOwnProperty("fill") || parameters["fill"] === "none")
+		color.clear(false)
+	color.on('pick', (color) => { 
+		if (color == null)
+			svgelement.attr({"fill": "none"})
+		else
+			svgelement.attr({"fill": color}) } );
 
-	var pat_title = document.createElement("label");
-	pat_title.innerHTML = "Pattern :";
+	var img2 = document.createElement("img");
+	img2.src = "Img/pattern.svg";
+	base.appendChild(img2);
 
 	var pat_select = document.createElement("div");
 	pat_select.classList.add("custom-select");
+	base.append(pat_select);
 
 	var pat_select_inner = document.createElement("select");
 	for (let i = 0; i < 12; i++) {
@@ -399,50 +418,14 @@ function CreateTool_Fill(parent, svgelement, parameters)
 		pat_select_inner.appendChild(pat_option);
 	}
 	pat_select.appendChild(pat_select_inner);
+	CustomSelect(pat_select, {"class": "tool-fill", "width": "44px","obj-width": "16px"})
+
 	pat_select_inner.oninput = () => {
 		if (pat_select_inner.selectedIndex > 0)
 			svgelement.maskWith(patterns_mask["pattern" + pat_select_inner.selectedIndex.toString()])
 		else
 			svgelement.unmask()
 	}
-
-	pattern.appendChild(pat_title)
-	pattern.appendChild(pat_select)
-	base.appendChild(pattern);
-
-	var color = document.createElement("input");
-	color.type = "color";
-	color.value = parameters["fill"];
-	base.appendChild(color);
-	color.oninput = () => { svgelement.attr({"fill": color.value}); }
-
-	var transparent = document.createElement("div");
-	var transparent_range = document.createElement("input");
-	transparent_range.type = "range"
-	transparent_range.min = 0
-	transparent_range.max = 1
-	transparent_range.value = parameters["fill-opacity"];
-	transparent_range.step = "0.01"
-	var transparent_number = document.createElement("input");
-	transparent_number.type = "number"
-	transparent_number.min = 0
-	transparent_number.max = 1
-	transparent_number.value = parameters["fill-opacity"];
-	transparent_number.step = "0.01"
-	transparent.appendChild(transparent_range)
-	transparent.appendChild(transparent_number)
-	base.appendChild(transparent);
-
-	transparent_number.oninput = () => { 
-		transparent_range.value = transparent_number.value
-		svgelement.attr({"fill-opacity": transparent_number.value});
-	}
-	transparent_range.oninput = () => { 
-		transparent_number.value = transparent_range.value
-		svgelement.attr({"fill-opacity": transparent_number.value});
-	}
-
-	parent.appendChild(base);
 }
 
 function CreateTool_Stroke(parent, svgelement, parameters)
@@ -451,15 +434,27 @@ function CreateTool_Stroke(parent, svgelement, parameters)
 	base.classList.add("tool-stroke");
 	parent.appendChild(base);
 
-	var title = document.createElement("label");
-	title.innerHTML = "Contour";
-	base.appendChild(title);
+	var img1 = document.createElement("img");
+	img1.src = "Img/stroke.svg";
+	base.appendChild(img1);
+	
+	var color_button = document.createElement("button")
+	color_button.setAttribute("data-color", parameters["stroke"])
+	color_button.setAttribute("style", "--cp-size:24px")
+	base.appendChild(color_button);
+	var color = new ColorPicker(color_button, base_options_colorpicker)
+	if (!parameters.hasOwnProperty("stroke") || parameters["stroke"] === "none")
+		color.clear(false)
+	color.on('pick', (color) => { 
+		if (color == null)
+			svgelement.attr({"stroke": "none"})
+		else
+			svgelement.attr({"stroke": color}) } );
 
-	var color = document.createElement("input");
-	color.type = "color";
-	color.value = parameters["stroke"];
-	base.appendChild(color);
-	color.oninput = () => { svgelement.attr({"stroke": color.value}); }
+	
+	var img2 = document.createElement("img");
+	img2.src = "Img/stroke-width.svg";
+	base.appendChild(img2);
 
 	var largeur = document.createElement("input");
 	largeur.type = "number";
@@ -481,26 +476,27 @@ function CreateTool_Font(parent, svgelement, parameters)
 	base.classList.add("tool-font");
 	parent.appendChild(base);
 
-	var title = document.createElement("label");
-	title.innerHTML = "Text";
-	base.appendChild(title);
+	var img1 = document.createElement("img");
+	img1.src = "Img/fill.svg";
+	base.appendChild(img1);
 
-	var font_div = document.createElement("div");
-	base.appendChild(font_div);
-	var font_title = document.createElement("label");
-	font_title.innerHTML = "Font :"
-	font_div.appendChild(font_title);
-	var font = document.createElement("input");
-	font.type = "text";
-	font.value = parameters["font-family"];
-	font_div.appendChild(font);
-	font.oninput = () => { svgelement.attr({"font-family": font.value}); }
+	var color_button = document.createElement("button")
+	color_button.setAttribute("data-color", parameters["fill"])
+	color_button.setAttribute("style", "--cp-size:24px")
+	base.appendChild(color_button);
+	var color = new ColorPicker(color_button, base_options_colorpicker)
+	if (!parameters.hasOwnProperty("fill") || parameters["fill"] === "none")
+		color.clear(false)
+	color.on('pick', (color) => { 
+		if (color == null)
+			svgelement.attr({"fill": "none"})
+		else
+			svgelement.attr({"fill": color}) } );
 
-	var size_div = document.createElement("div");
-	base.appendChild(size_div);
-	var size_title = document.createElement("label");
-	size_title.innerHTML = "Taille :"
-	size_div.appendChild(size_title);
+	img1 = document.createElement("img");
+	img1.src = "Img/text.svg";
+	base.appendChild(img1);
+
 	var size = document.createElement("input");
 	size.type = "number";
 	size.min = 0;
@@ -509,14 +505,13 @@ function CreateTool_Font(parent, svgelement, parameters)
 		size.value = parameters["font-size"].substring(0, parameters["font-size"].length - 2);
 	else
 		size.value = 5.5
-	size_div.appendChild(size);
+	base.appendChild(size);
 	size.oninput = () => { svgelement.attr({"font-size": size.value.toString() + "px"}); }
 
-	var space_div = document.createElement("div");
-	base.appendChild(space_div);
-	var space_title = document.createElement("label");
-	space_title.innerHTML = "Espace lettre :"
-	space_div.appendChild(space_title);
+	img1 = document.createElement("img");
+	img1.src = "Img/letter-spacing.svg";
+	base.appendChild(img1);
+
 	var space = document.createElement("input");
 	space.type = "number";
 	space.step = 0.01
@@ -524,10 +519,95 @@ function CreateTool_Font(parent, svgelement, parameters)
 		space.value = parameters["letter-spacing"].substring(0, parameters["letter-spacing"].length - 2);
 	else
 		space.value = 0
-	space_div.appendChild(space)
+	base.appendChild(space)
 	space.oninput = () => { svgelement.attr({"letter-spacing": space.value.toString() + "em"}); }
 
+	img1 = document.createElement("img");
+	img1.src = "Img/font.svg";
+	base.appendChild(img1);
+
+	var pat_select = document.createElement("div");
+	pat_select.classList.add("custom-select");
+	base.append(pat_select);
+
+	var pat_select_inner = FontSelector(pat_select, {"font": parameters["font-family"]})
+	CustomSelect(pat_select, {"class": "tool-font", "width": "232px","obj-width": "226px", "isfont": true})
+
+	pat_select_inner.oninput = () => {
+		if (pat_select_inner.selectedIndex > 0)
+			svgelement.attr({"font-family": pat_select_inner.selectedOptions[0].innerText});
+	}
+
 	return base
+}
+
+
+var ggl
+var Legend_Parameters = {"fill": "#1d1d1b","fill-opacity": "1.0","font-family": "Bahnschrift",
+	"font-weight": "700","font-variation-settings": "'wght' 700, 'wdth' 87","font-size": "8px"
+}
+
+function Recreate_Legendes()
+{
+	SVG_Legende.clear()
+	
+	let box = SVG_Draw.viewbox()
+	let ox = box.x + 3
+	let oy = box.y2 - legende_height + 5
+	let dx = 0;
+	let dy = 0;
+	let current_max_x = 0;
+	for(const [key, value] of Object.entries(LoadedMap_CouchesSelected))
+	{
+		if (!value.hasOwnProperty("Legende")) continue;
+		const parameters = value["Legende"]
+		if (!parameters.hasOwnProperty("generation")) continue;
+		ggl = SVG_Legende.group();
+		eval(parameters["generation"]);
+		
+		if (ggl.bbox().y2 + dy > legende_height)
+		{
+			dx = current_max_x
+			dy = 0
+		}
+		
+		ggl.dmove(dx, dy - ggl.bbox().y)
+
+		if (!parameters.hasOwnProperty("parts")) continue;
+		for (let i = 0; i < parameters["parts"].length; i++){
+			const element = parameters["parts"][i]
+			SVG_Draw.findOne("[id='" + key + "']").findOne("#" + element["id"]).move(dx + ox + element["offset_x"], dy + oy + element["offset_y"])
+		}
+
+		dy += Math.round(ggl.bbox().h * 100) / 100.0 + 3
+		current_max_x = Math.max(ggl.bbox().x2 + 5, current_max_x)
+	}
+	TestSvgLegende()
+	SVG_Legende.dmove(box.x + 3, box.y2 - legende_height + 5)
+}
+
+function TestSvgLegende()
+{
+	// SVG_Legende.text("Cours d'eau").attr(Legend_Parameters).dx(25).dy(-3);
+	// SVG_Legende.text("Sommets").attr(Legend_Parameters).dx(8).dy(-3);
+	// ggl.rect(20,10).stroke('black').fill('none');ggl.text('Mers et océans').attr(Legend_Parameters).dx(25).dy(-3);
+
+
+
+	// let settings = {"fill": "#1d1d1b","fill-opacity": "1.0","font-family": "Bahnschrift"};
+	// let settings2 = {"font-variation-settings": "'wght' 400, 'wdth' 100","font-size": "5px", "text-anchor": "middle"};
+	// SVG_Legende.line( 0,0, 0,13).stroke("black").dy(8);
+	// SVG_Legende.line(15,0,15,13).stroke("black").dy(8);
+	// SVG_Legende.line(30,0,30,13).stroke("black").dy(8);
+	// SVG_Legende.line(45,0,45,13).stroke("black").dy(8);
+	// SVG_Legende.rect(60,10).stroke("black").fill("none").dy(11);
+	// SVG_Legende.text("0").attr(settings).attr(settings2);
+	// SVG_Legende.text("200").attr(settings).attr(settings2).dx(15);
+	// SVG_Legende.text("500").attr(settings).attr(settings2).dx(30);
+	// SVG_Legende.text("1 500").attr(settings).attr(settings2).dx(45);
+	// SVG_Legende.text(function(add) { add.tspan('Altitude').attr(Legend_Parameters); add.tspan('(en mètres)').attr(settings).attr({"font-weight": "700","font-variation-settings": "'wght' 700, 'wdth' 87","font-size": "5px"}).dx(3); }).dx(65).dy(16)
+
+	// let settings = {'fill': '#1d1d1b','fill-opacity': '1.0','font-family': 'Bahnschrift'}; let settings2 = {'font-weight': '400','font-size': '5px', 'text-anchor': 'middle'}; ggl.line( 0,0, 0,13).stroke('black').dy(8);ggl.line(15,0,15,13).stroke('black').dy(8);ggl.line(30,0,30,13).stroke('black').dy(8);ggl.line(45,0,45,13).stroke('black').dy(8);ggl.rect(60,10).stroke('black').fill('none').dy(11);ggl.text('0').attr(settings).attr(settings2);ggl.text('200').attr(settings).attr(settings2).dx(15);ggl.text('500').attr(settings).attr(settings2).dx(30);ggl.text('1 500').attr(settings).attr(settings2).dx(45);ggl.text(function(add) { add.tspan('Altitude').attr(settings).attr({'font-weight': '700','font-size': '8px'}); add.tspan('(en mètres)').attr(settings).attr({'font-weight': '700','font-size': '5px'}).dx(3); }).dx(65).dy(16)
 }
 
 
@@ -649,6 +729,7 @@ function CoucheDragged_Add(event)
 	var menu_div = document.getElementById("menu_container_carte"); 
 	menu_div.insertBefore(couche, event.item);
 	event.item.remove();
+	Recreate_Legendes();
 	ReajustePositionCouche();
 }
 
@@ -665,6 +746,8 @@ function CoucheDeleted(couche)
 	}
 	
 	couche.remove();
+	delete LoadedMap_CouchesSelected[couche.getAttribute("id")]
+	Recreate_Legendes();
 	ReajustePositionCouche();
 }
 
@@ -677,94 +760,6 @@ function ReajustePositionCouche()
 	}
 	MoveFrontElement();
 }
-
-
-function UpdateCustomSelect()
-{
-	var x, i, j, l, ll, selElmnt, a, b, c;
-	/* Look for any elements with the class "custom-select": */
-	x = document.getElementsByClassName("custom-select");
-	l = x.length;
-	for (i = 0; i < l; i++) {
-		selElmnt = x[i].getElementsByTagName("select")[0];
-		ll = selElmnt.length;
-		/* For each element, create a new DIV that will act as the selected item: */
-		a = document.createElement("DIV");
-		a.setAttribute("class", "select-selected");
-		a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-		x[i].appendChild(a);
-		/* For each element, create a new DIV that will contain the option list: */
-		b = document.createElement("DIV");
-		b.setAttribute("class", "select-items select-hide");
-		for (j = 0; j < ll; j++) {
-			/* For each option in the original select element,
-			create a new DIV that will act as an option item: */
-			c = document.createElement("DIV");
-			c.innerHTML = selElmnt.options[j].innerHTML;
-			c.addEventListener("click", function(e) {
-					/* When an item is clicked, update the original select box,
-					and the selected item: */
-					var y, i, k, s, h, sl, yl;
-					s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-					sl = s.length;
-					h = this.parentNode.previousSibling;
-					for (i = 0; i < sl; i++) {
-						if (s.options[i].innerHTML == this.innerHTML) {
-							s.selectedIndex = i;
-							h.innerHTML = this.innerHTML;
-							y = this.parentNode.getElementsByClassName("same-as-selected");
-							yl = y.length;
-							for (k = 0; k < yl; k++) {
-								y[k].removeAttribute("class");
-							}
-							this.setAttribute("class", "same-as-selected");
-							var event = new Event('input');
-							s.dispatchEvent(event);
-							break;
-						}
-					}
-					h.click();
-			});
-			b.appendChild(c);
-		}
-		x[i].appendChild(b);
-		a.addEventListener("click", function(e) {
-			/* When the select box is clicked, close any other select boxes,
-			and open/close the current select box: */
-			e.stopPropagation();
-			closeAllSelect(this);
-			this.nextSibling.classList.toggle("select-hide");
-			this.classList.toggle("select-arrow-active");
-		});
-	}
-
-}
-
-function closeAllSelect(elmnt) {
-	/* A function that will close all select boxes in the document,
-	except the current select box: */
-	var x, y, i, xl, yl, arrNo = [];
-	x = document.getElementsByClassName("select-items");
-	y = document.getElementsByClassName("select-selected");
-	xl = x.length;
-	yl = y.length;
-	for (i = 0; i < yl; i++) {
-		if (elmnt == y[i]) {
-			arrNo.push(i)
-		} else {
-			y[i].classList.remove("select-arrow-active");
-		}
-	}
-	for (i = 0; i < xl; i++) {
-		if (arrNo.indexOf(i)) {
-			x[i].classList.add("select-hide");
-		}
-	}
-}
-/* If the user clicks anywhere outside the select box,
-then close all select boxes: */
-document.addEventListener("click", closeAllSelect); 
-
 
 function Save()
 {

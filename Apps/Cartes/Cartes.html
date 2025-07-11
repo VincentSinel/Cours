@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-cp-theme="dark">
 <head>
   <meta charset="UTF-8">	
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -15,6 +15,12 @@
 	<script src="/JS/Sortable.js/Sortable.min.js" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 	<script src="https://cdn.skypack.dev/canvg@^4.0.0" type="module"></script>
+
+	<link rel="stylesheet" href="/JS/JSColorPicker/colorpicker.css" />
+	<script src="/JS/JSColorPicker/colorpicker.iife.min.js"></script>
+
+	<!-- <link rel="stylesheet" href="/JS/Choices/choices.min.css" />
+	<script src="/JS/Choices/choices.min.js"></script> -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
@@ -77,54 +83,45 @@
 	
 	
 										<div class="tool-fill">
-											<Label>Remplissage</Label>
-											<div class="pattern">
-												<label>Pattern :</label>
-												<div class="custom-select">
-													<select>
-														<option value="1">A</option>
-														<option value="2">B</option>
-														<option value="3">C</option>
-														<option value="4">D</option>
-														<option value="5">E</option>
-														<option value="6">F</option>
-														<option value="7">G</option>
-														<option value="8">H</option>
-														<option value="9">I</option>
-														<option value="10">J</option>
-														<option value="11">K</option>
-														<option value="12">L</option>
-													</select>
-												</div>
-											</div>
-											<input type="color" value="#FF0000">
-											<div>
-												<input type="range" min="0" max="1" value="1" step="0.01">
-												<input type="number" min="0" max="1" value="1" step="0.01">
+											<img src="Img/fill.svg">
+											<button id="TestColor1" data-color="orange" style="--cp-size:24px"></button>
+											<img src="Img/pattern.svg">
+											<div class="custom-select">
+												<select>
+													<option value="1">A</option>
+													<option value="2">B</option>
+													<option value="3">C</option>
+													<option value="4">D</option>
+													<option value="5">E</option>
+													<option value="6">F</option>
+													<option value="7">G</option>
+													<option value="8">H</option>
+													<option value="9">I</option>
+													<option value="10">J</option>
+													<option value="11">K</option>
+													<option value="12">L</option>
+												</select>
 											</div>
 										</div>
 	
 	
 										<div class="tool-stroke">
-											<Label>Contour</Label>
-											<input type="color" value="#000000">
+											<img src="Img/stroke.svg">
+											<button id="TestColor2" data-color="black" style="--cp-size:24px"></button>
+											<img src="Img/stroke-width.svg">
 											<input type="number" min="0" value="1" step="0.1">
 										</div>
 	
 	
 										<div class="tool-font">
-											<Label>Text</Label>
-											<div>
-												<label>Font :</label>
-												<input type="text" value="Bahnschrift, Bahnschrift">
-											</div>
-											<div>
-												<label>Taille :</label>
-												<input type="number" min="0" value="5.5" step="0.1">
-											</div>
-											<div>
-												<label>Espace lettre :</label>
-												<input type="number" value="0" step="0.1">
+											<img src="Img/fill.svg">
+											<button id="TestColor3" data-color="orange" style="--cp-size:24px"></button>
+											<img src="Img/text.svg">
+											<input type="number" min="0" value="5.5" step="0.1">
+											<img src="Img/letter-spacing.svg">
+											<input type="number" min="0" value="5.5" step="0.1">
+											<img src="Img/font.svg">
+											<div id="font_select" class="custom-select">
 											</div>
 										</div>
 	
@@ -160,8 +157,9 @@
 			</div>
 		</div>
 	</div>
-
+	
 </body>
+	<script src="/JS/CustomSelect/CustomSelect.js"></script>
 <script>
 		var a = document.getElementsByClassName("formemenu");
 		for(let i = 0 ; i < a.length; i++)
@@ -174,7 +172,7 @@
 		function menu_click(element){
 			element.classList.toggle("show")
 		}
-	UpdateCustomSelect();
+	// UpdateCustomSelect();
 </script>
 <script type="module">
 	import { Canvg, presets } from 'https://cdn.skypack.dev/canvg@^4.0.0';

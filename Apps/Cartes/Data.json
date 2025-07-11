@@ -19,26 +19,37 @@
 							"Parameters": [
 								{
 									"name": "Fond",
-									"fill": "#c1e2ed",
-									"fill-opacity": "1.0"
+									"type_obj": "surface",
+									"data": {
+										"fill": "#c1e2ed",
+										"fill-opacity": "1.0"
+									}
 								}
 								,{
 									"name": "Nom des mers",
-									"fill": "#0eafdd",
-									"fill-opacity": 1.0,
-									"font-family": "Bahnschrift, Bahnschrift",
-									"font-variation-settings": "'wght' 400, 'wdth' 100",
-									"font-size": "7px"
+									"type_obj": "text",
+									"data": {
+										"fill": "#0eafdd",
+										"fill-opacity": 1.0,
+										"font-family": "Bahnschrift",
+										"font-variation-settings": "'wght' 400, 'wdth' 100",
+										"font-size": "7px"
+									}
 								}
 								,{
 									"name": "Nom des océans",
-									"fill": "#0eafdd",
-									"fill-opacity": 1.0,
-									"font-family": "Bahnschrift, Bahnschrift",
-									"font-variation-settings": "'wght' 400, 'wdth' 100",
-									"font-size": "8px"
+									"type_obj": "text",
+									"data": {
+										"fill": "#0eafdd",
+										"fill-opacity": 1.0,
+										"font-family": "Bahnschrift",
+										"font-variation-settings": "'wght' 400, 'wdth' 100",
+										"font-size": "8px"
+									}
 								}
-							]
+							],
+							"Legende": {
+							}
 						}
 						,{
 							"Name": "France_AutresPays",
@@ -47,38 +58,45 @@
 							"Parameters": [
 								{
 									"name": "Fond",
-									"fill": "#cbbca0",
-									"fill-opacity": "1.0"
-								}
-								,{
-									"name": "Frontières",
-									"fill": "none",
-									"stroke": "#878787",
-									"stroke-width": 0.5,
-									"stroke-miterlimit": "10",
-									"stroke-linecap": "round",
-									"stroke-linejoin": "round"
+									"type_obj": "surface",
+									"data": {
+										"fill": "#cbbca0",
+										"fill-opacity": "1.0",
+										"stroke": "#878787",
+										"stroke-width": 0.5,
+										"stroke-miterlimit": "10",
+										"stroke-linecap": "round",
+										"stroke-linejoin": "round"
+									}
 								}
 								,{
 									"name": "Nom pays",
-									"fill": "#1d1d1b",
-									"fill-opacity": "1.0",
-									"font-weight": "700",
-									"font-family": "Bahnschrift-BoldSemiCondensed, Bahnschrift",
-									"font-variation-settings": "'wght' 700, 'wdth' 87",
-									"font-size": "7px"
+									"type_obj": "text",
+									"data": {
+										"fill": "#1d1d1b",
+										"fill-opacity": "1.0",
+										"font-weight": "700",
+										"font-family": "Bahnschrift",
+										"font-variation-settings": "'wght' 700, 'wdth' 87",
+										"font-size": "7px"
+									}
 								}
 								,{
 									"name": "Nom pays (petit)",
-									"fill": "#1d1d1b",
-									"fill-opacity": "1.0",
-									"font-weight": "700",
-									"font-family": "Bahnschrift-BoldSemiCondensed, Bahnschrift",
-									"font-variation-settings": "'wght' 700, 'wdth' 87",
-									"font-size": "6px",
-									"letter-spacing": "-.05em"
+									"type_obj": "text",
+									"data": {
+										"fill": "#1d1d1b",
+										"fill-opacity": "1.0",
+										"font-weight": "700",
+										"font-family": "Bahnschrift",
+										"font-variation-settings": "'wght' 700, 'wdth' 87",
+										"font-size": "6px",
+										"letter-spacing": "-.05em"
+									}
 								}
-							]
+							],
+							"Legende": {
+							}
 						}
 						,{
 							"Name": "France_Altitude",
@@ -87,81 +105,83 @@
 							"Parameters": [
 								{
 									"name": "Altitude 1",
-									"fill": "#95c11f",
-									"fill-opacity": "1.0",
-									"stroke": "black",
-									"stroke-width": 0,
-									"stroke-miterlimit": "10",
-									"stroke-linecap": "round",
-									"stroke-linejoin": "round"
+									"type_obj": "surface",
+									"data": {
+										"fill": "#95c11f",
+										"fill-opacity": "1.0",
+										"stroke": "black",
+										"stroke-width": 0,
+										"stroke-miterlimit": "10",
+										"stroke-linecap": "round",
+										"stroke-linejoin": "round"
+									}
 								}
 								,{
 									"name": "Altitude 2",
-									"fill": "#fbde7e",
-									"fill-opacity": "1.0",
-									"stroke": "black",
-									"stroke-width": 0,
-									"stroke-miterlimit": "10",
-									"stroke-linecap": "round",
-									"stroke-linejoin": "round"
+									"type_obj": "surface",
+									"data": {
+										"fill": "#fbde7e",
+										"fill-opacity": "1.0",
+										"stroke": "black",
+										"stroke-width": 0,
+										"stroke-miterlimit": "10",
+										"stroke-linecap": "round",
+										"stroke-linejoin": "round"
+									}
 								}
 								,{
 									"name": "Altitude 3",
-									"fill": "#f39200",
-									"fill-opacity": "1.0",
-									"stroke": "black",
-									"stroke-width": 0,
-									"stroke-miterlimit": "10",
-									"stroke-linecap": "round",
-									"stroke-linejoin": "round"
+									"type_obj": "surface",
+									"data": {
+										"fill": "#f39200",
+										"fill-opacity": "1.0",
+										"stroke": "black",
+										"stroke-width": 0,
+										"stroke-miterlimit": "10",
+										"stroke-linecap": "round",
+										"stroke-linejoin": "round"
+									}
 								}
 								,{
 									"name": "Altitude 4",
-									"fill": "#e30613",
-									"fill-opacity": "1.0",
-									"stroke": "black",
-									"stroke-width": 0,
-									"stroke-miterlimit": "10",
-									"stroke-linecap": "round",
-									"stroke-linejoin": "round"
+									"type_obj": "surface",
+									"data": {
+										"fill": "#e30613",
+										"fill-opacity": "1.0",
+										"stroke": "black",
+										"stroke-width": 0,
+										"stroke-miterlimit": "10",
+										"stroke-linecap": "round",
+										"stroke-linejoin": "round"
+									}
 								}
-								,{
-									"name": "Graduation légende",
-									"fill": "none",
-									"stroke": "#1d1d1b",
-									"stroke-miterlimit": "10",
-									"stroke-linecap": "round",
-									"stroke-linejoin": "round"
-								}
-								,{
-									"name": "Titre légende",
-									"fill": "#1d1d1b",
-									"fill-opacity": "1.0",
-									"font-weight": "700",
-									"font-family": "Bahnschrift-Bold, Bahnschrift",
-									"font-variation-settings": "'wght' 700, 'wdth' 87",
-									"font-size": "8px",
-									"text-decoration": "underline"
-								}
-								,{
-									"name": "Unité légende",
-									"fill": "#1d1d1b",
-									"fill-opacity": "1.0",
-									"font-weight": "700",
-									"font-family": "Bahnschrift-Bold, Bahnschrift",
-									"font-variation-settings": "'wght' 700, 'wdth' 87",
-									"font-size": "5px",
-									"text-decoration": "underline"
-								}
-								,{
-									"name": "Valeur légende",
-									"fill": "#1d1d1b",
-									"fill-opacity": "1.0",
-									"font-family": "Bahnschrift, Bahnschrift",
-									"font-variation-settings": "'wght' 400, 'wdth' 100",
-									"font-size": "5px"
-								}
-							]
+								
+							],
+							"Legende": {
+								"generation": "let settings = {'fill': '#1d1d1b','fill-opacity': '1.0','font-family': 'Bahnschrift'}; let settings2 = {'font-weight': '400','font-size': '5px', 'text-anchor': 'middle'}; ggl.line( 0,0, 0,13).stroke('black').dy(8);ggl.line(15,0,15,13).stroke('black').dy(8);ggl.line(30,0,30,13).stroke('black').dy(8);ggl.line(45,0,45,13).stroke('black').dy(8);ggl.rect(60,10).stroke('black').fill('none').dy(11);ggl.text('0').attr(settings).attr(settings2);ggl.text('200').attr(settings).attr(settings2).dx(15);ggl.text('500').attr(settings).attr(settings2).dx(30);ggl.text('1 500').attr(settings).attr(settings2).dx(45);ggl.text(function(add) { add.tspan('Altitude').attr(Legend_Parameters); add.tspan('(en mètres)').attr(settings).attr({'font-weight': '700','font-size': '5px'}).dx(3); }).dx(65).dy(16)",
+								"parts": [
+									{
+										"id": "France_Altitude_legende1",
+										"offset_x": 0,
+										"offset_y": 8
+									}
+									,{
+										"id": "France_Altitude_legende2",
+										"offset_x": 15,
+										"offset_y": 8
+									}
+									,{
+										"id": "France_Altitude_legende3",
+										"offset_x": 30,
+										"offset_y": 8
+									}
+									,{
+										"id": "France_Altitude_legende4",
+										"offset_x": 45,
+										"offset_y": 8
+									}
+								]
+							}
 						}
 						,{
 							"Name": "France_BordurePrincipale",
@@ -170,22 +190,31 @@
 							"Parameters": [
 								{
 									"name": "Bordure",
-									"fill": "none",
-									"stroke": "black",
-									"stroke-width": 0.5,
-									"stroke-linecap": "round",
-									"stroke-linejoin": "round"
+									"type_obj": "surface",
+									"data": {
+										"fill": "none",
+										"stroke": "black",
+										"stroke-width": 0.5,
+										"stroke-linecap": "round",
+										"stroke-linejoin": "round"
+									}
 								}
 								,{
 									"name": "Noms territoire d'outre-mer",
-									"fill": "#1d1d1b",
-									"fill-opacity": 1.0,
-									"font-weight": "700",
-									"font-family": "Bahnschrift-Bold, Bahnschrift",
-									"font-variation-settings": "'wght' 700, 'wdth' 100",
-									"font-size": "8px"
+									"type_obj": "text",
+									"data": {
+										"fill": "#1d1d1b",
+										"fill-opacity": 1.0,
+										"font-weight": "700",
+										"font-family": "Bahnschrift",
+										"font-variation-settings": "'wght' 700, 'wdth' 100",
+										"font-size": "8px"
+									}
 								}
-							]
+							],
+							"Legende": {
+								
+							}
 						}
 						,{
 							"Name": "France_Departements",
@@ -194,13 +223,19 @@
 							"Parameters": [
 								{
 									"name": "Bordure",
-									"fill": "none",
-									"stroke": "#010101",
-									"stroke-width": 0.5,
-									"stroke-linecap": "round",
-									"stroke-linejoin": "round"
+									"type_obj": "line",
+									"data": {
+										"fill": "none",
+										"stroke": "#010101",
+										"stroke-width": 0.5,
+										"stroke-linecap": "round",
+										"stroke-linejoin": "round"
+									}
 								}
-							]
+							],
+							"Legende": {
+								
+							}
 						}
 						,{
 							"Name": "France_Fleuves",
@@ -209,26 +244,45 @@
 							"Parameters": [
 								{
 									"name": "Cours d'eau",
-									"fill": "none",
-									"stroke": "#009fe3",
-									"stroke-width": 1,
-									"stroke-linecap": "round",
-									"stroke-linejoin": "round"
+									"type_obj": "line",
+									"data": {
+										"fill": "none",
+										"stroke": "#009fe3",
+										"stroke-width": 1,
+										"stroke-linecap": "round",
+										"stroke-linejoin": "round"
+									}
 								}
 								,{
 									"name": "Lac",
-									"fill": "#009fe3",
-									"fill-opacity": 1.0
+									"type_obj": "surface",
+									"data": {
+										"fill": "#009fe3",
+										"fill-opacity": 1.0
+									}
 								}
 								,{
 									"name": "Noms",
-									"fill": "#009fe3",
-									"fill-opacity": 1.0,
-									"font-family": "Bahnschrift, Bahnschrift",
-									"font-variation-settings": "'wght' 400, 'wdth' 100",
-									"font-size": "5px"
+									"type_obj": "text",
+									"data": {
+										"fill": "#009fe3",
+										"fill-opacity": 1.0,
+										"font-family": "Bahnschrift",
+										"font-variation-settings": "'wght' 400, 'wdth' 100",
+										"font-size": "5px"
+									}
 								}
-							]
+							],
+							"Legende": {
+								"generation": "ggl.text('Cours d\\'eau').attr(Legend_Parameters).dx(25).dy(-3)",
+								"parts": [
+									{
+										"id": "Legende",
+										"offset_x": 0,
+										"offset_y": 5
+									}
+								]
+							}
 						}
 						,{
 							"Name": "France_Massifs",
@@ -237,22 +291,31 @@
 							"Parameters": [
 								{
 									"name": "Noms (petit)",
-									"fill": "#1d1d1b",
-									"fill-opacity": 1.0,
-									"font-family": "Bahnschrift-Bold, Bahnschrift",
-									"font-variation-settings": "'wght' 700, 'wdth' 100",
-									"font-size": "6px"
+									"type_obj": "text",
+									"data": {
+										"fill": "#1d1d1b",
+										"fill-opacity": 1.0,
+										"font-family": "Bahnschrift",
+										"font-variation-settings": "'wght' 700, 'wdth' 100",
+										"font-size": "6px"
+									}
 								}
 								,{
 									"name": "Noms (grand)",
-									"fill": "#1d1d1b",
-									"fill-opacity": 1.0,
-									"font-family": "Bahnschrift-Bold, Bahnschrift",
-									"font-variation-settings": "'wght' 700, 'wdth' 100",
-									"font-size": "7px",
-									"letter-spacing": "0.25em"
+									"type_obj": "text",
+									"data": {
+										"fill": "#1d1d1b",
+										"fill-opacity": 1.0,
+										"font-family": "Bahnschrift",
+										"font-variation-settings": "'wght' 700, 'wdth' 100",
+										"font-size": "7px",
+										"letter-spacing": "0.25em"
+									}
 								}
-							]
+							],
+							"Legende": {
+								
+							}
 						}
 						,{
 							"Name": "France_Sommets",
@@ -261,22 +324,38 @@
 							"Parameters": [
 								{
 									"name": "Noms",
-									"fill": "#1d1d1b",
-									"fill-opacity": 1.0,
-									"font-weight": "700",
-									"font-family": "Bahnschrift-Bold, Bahnschrift",
-									"font-variation-settings": "'wght' 700, 'wdth' 100",
-									"font-size": "5px"
+									"type_obj": "text",
+									"data": {
+										"fill": "#1d1d1b",
+										"fill-opacity": 1.0,
+										"font-weight": "700",
+										"font-family": "Bahnschrift",
+										"font-variation-settings": "'wght' 700, 'wdth' 100",
+										"font-size": "5px"
+									}
 								}
 								,{
 									"name": "Symbole",
-									"fill": "#1d1d1b",
-									"fill-opacity": 1.0,
-									"stroke-miterlimit": 10,
-									"stroke": "#fff",
-        					"stroke-width": 0.4
+									"type_obj": "surface",
+									"data": {
+										"fill": "#1d1d1b",
+										"fill-opacity": 1.0,
+										"stroke-miterlimit": 10,
+										"stroke": "#fff",
+										"stroke-width": 0.4
+									}
 								}
-							]
+							],
+							"Legende": {
+								"generation": "ggl.text('Sommets').attr(Legend_Parameters).dx(8).dy(-3)",
+								"parts": [
+									{
+										"id": "legende",
+										"offset_x": 0,
+										"offset_y": 2.5
+									}
+								]
+							}
 						}
 						,{
 							"Name": "France_Villes",
@@ -285,21 +364,37 @@
 							"Parameters": [
 								{
 									"name": "Symbole",
-									"fill": "#e30613",
-									"fill-opacity": 1.0,
-									"stroke-miterlimit": 10,
-									"stroke": "#fff",
-        					"stroke-width": 0.4
+									"type_obj": "surface",
+									"data": {
+										"fill": "#e30613",
+										"fill-opacity": 1.0,
+										"stroke-miterlimit": 10,
+										"stroke": "#fff",
+										"stroke-width": 0.4
+									}
 								}
 								,{
 									"name": "Noms",
-									"fill": "#1d1d1b",
-									"fill-opacity": 1.0,
-									"font-family": "Bahnschrift, Bahnschrift",
-									"font-variation-settings": "'wght' 400, 'wdth' 100",
-									"font-size": "5.5px"
+									"type_obj": "text",
+									"data": {
+										"fill": "#1d1d1b",
+										"fill-opacity": 1.0,
+										"font-family": "Bahnschrift",
+										"font-variation-settings": "'wght' 400, 'wdth' 100",
+										"font-size": "5.5px"
+									}
 								}
-							]
+							],
+							"Legende": {
+								"generation": "ggl.text('Grandes villes').attr(Legend_Parameters).dx(8).dy(-3)",
+								"parts": [
+									{
+										"id": "legende",
+										"offset_x": 0.5,
+										"offset_y": 2.5
+									}
+								]
+							}
 						}
 						,{
 							"Name": "France_Echelles",
@@ -308,54 +403,67 @@
 							"Parameters": [
 								{
 									"name": "Indication nord",
-									"fill": "#1d1d1b",
-									"fill-opacity": 1.0,
-									"font-weight": "700",
-									"font-family": "Bahnschrift-BoldSemiCondensed, Bahnschrift",
-									"font-variation-settings": "'wght' 700, 'wdth' 87",
-									"font-size": "8px"
+									"type_obj": "text",
+									"data": {
+										"fill": "#1d1d1b",
+										"fill-opacity": 1.0,
+										"font-weight": "700",
+										"font-family": "Bahnschrift",
+										"font-variation-settings": "'wght' 700, 'wdth' 87",
+										"font-size": "8px"
+									}
 								}
 								,{
 									"name": "Valeur echelle",
-									"fill": "#1d1d1b",
-									"fill-opacity": 1.0,
-									"font-weight": "700",
-									"font-family": "Bahnschrift-BoldCondensed, Bahnschrift",
-									"font-variation-settings": "'wght' 700, 'wdth' 75",
-									"font-size": "8px",
-									"letter-spacing": "-0.1em"
+									"type_obj": "text",
+									"data": {
+										"fill": "#1d1d1b",
+										"fill-opacity": 1.0,
+										"font-weight": "700",
+										"font-family": "Bahnschrift",
+										"font-variation-settings": "'wght' 700, 'wdth' 75",
+										"font-size": "8px",
+										"letter-spacing": "-0.1em"
+									}
 								}
 								,{
 									"name": "Lignes",
-									"fill": "none",
-									"stroke-miterlimit": 10,
-									"stroke": "#010101"
-								}
-								,{
-									"name": "Extrémité lignes",
-									"fill": "#010101",
-									"fill-opacity": 1.0,
-									"stroke": "none"
+									"type_obj": "line",
+									"data": {
+										"fill": "none",
+										"stroke-miterlimit": 10,
+										"stroke": "#010101"
+									}
 								}
 								,{
 									"name": "Boussole",
-									"fill": "#1d1d1b",
-									"fill-opacity": 1.0,
-									"stroke": "none"
+									"type_obj": "surface",
+									"data": {
+										"fill": "#1d1d1b",
+										"fill-opacity": 1.0,
+										"stroke": "none"
+									}
 								}
-							]
+							],
+							"Legende": {
+
+							}
 						}
 						,{
 							"Name": "France_Cadre",
 							"Section": "Cadres",
 							"Type": "svg",
+							"Editable": false,
 							"Parameters": [
 								{
 									"name": "Cadres",
-									"fill": "none",
-									"stroke": "#1d1d1b",
-									"stroke-linecap": "round",
-        					"stroke-linejoin": "round"
+									"type_obj": "line",
+									"data": {
+										"fill": "none",
+										"stroke": "#1d1d1b",
+										"stroke-linecap": "round",
+										"stroke-linejoin": "round"
+									}
 								}
 							]
 						}
@@ -370,7 +478,7 @@
 					"Options": [
 						{
 							"Boutton": "Afficher/Cacher les outres mers",
-							"Action": "if (SVG_Draw.viewbox().x == 0) ResetSize(74.58, 0, LoadedMap_Size.w - 74.58, LoadedMap_Size.h); else ResetSize(0, 0, LoadedMap_Size.w, LoadedMap_Size.h);"
+							"Action": "if (SVG_Draw.viewbox().x == 0) ResetSize(74.58, 0, LoadedMap_Size.w - 74.58, LoadedMap_Size.h); else ResetSize(0, 0, LoadedMap_Size.w, LoadedMap_Size.h);Recreate_Legendes();"
 						}
 					]
 				}
