@@ -431,8 +431,8 @@ function DrawIso()
 		line.attr(grid_style)
 		lines.push(line);
 		
-		y1 = y1 + more
-		y2 = y2 + more
+		y1 = y1 + more - (Cube_w() % 2) * cube_size / 2
+		y2 = y2 + more - (Cube_w() % 2) * cube_size / 2
 		if (y1 == more && x1 > 1)
 		{
 			y1 = 0;
@@ -440,8 +440,8 @@ function DrawIso()
 		}
 		if (y2 > pot_h * cube_size)
 		{
-			y2 = pot_h * cube_size;
 			x2 -= cube_size * sin60;
+			y2 = pot_h * cube_size;
 		}
 		let line2 = View_Iso.line(r_w - x1, y1, r_w - x2, y2)
 		line2.dmove(offset.x, offset.y)
