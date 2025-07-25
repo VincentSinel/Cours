@@ -164,6 +164,7 @@ body{
   display: inline-block;
   height: 24px;
   width: 100%;
+	cursor: grab;
 }
 .selectable_couche:hover{
 	background-color: var(--PanelBackHover);
