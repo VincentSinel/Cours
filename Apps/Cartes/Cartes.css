@@ -80,6 +80,7 @@ body{
 	height: auto;
 	top: 0;
 	overflow-y: scroll;
+	min-width: 200px;
 }
 
 .couche-parametres{
@@ -90,7 +91,7 @@ body{
 
 .carte-options{
 	background-color: var(--Back2);
-	width: 300px;
+	min-width: 300px;
 	flex-shrink: 0;
 }
 
@@ -168,6 +169,11 @@ body{
 }
 .selectable_couche:hover{
 	background-color: var(--PanelBackHover);
+}
+
+.selectable_couche.sortable-chosen
+{
+	cursor: grabbing;
 }
 
 
@@ -351,3 +357,10 @@ div[class^="tool-"] > button{
 .select-items div:hover, .same-as-selected {
   background-color: var(--PanelBackTextDisabled);
 } 
+
+
+
+.tuto_mouse{
+	position: absolute;
+	z-index: 100;
+}

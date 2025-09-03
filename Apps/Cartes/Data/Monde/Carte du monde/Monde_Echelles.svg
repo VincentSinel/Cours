@@ -1,0 +1,17 @@
+<g id="Monde_Echelles" class="front">
+	<g>
+		<text x="119.9314" y="429.81" style="text-align:center;text-anchor:middle">N</text>
+	</g>
+	<g>
+		<text x="59.3435" y="413.26" style="text-align:center;text-anchor:middle">3 000 km (equat.)</text>
+	</g>
+	<g>
+		<rect x="46.86" y="418.36" width="25.63" height="2.81" style="stroke: none; fill:white;"/>
+  	<rect x="21.23" y="418.36" width="25.63" height="2.81" style="stroke: none; fill:black;"/>
+  	<rect x="72.49" y="418.36" width="25.63" height="2.81" style="stroke: none; fill:black;"/>
+  	<rect x="21.23" y="418.36" width="76.89" height="2.81"/>
+	</g>
+	<g>
+		<path d="m126.33,412.14l-6.41-11.12-6.41,11.12c-3.72,2.21-6.23,6.25-6.23,10.9h3.68c0-4.97,4.02-8.99,8.99-8.99s8.99,4.02,8.99,8.99h3.68c0-4.64-2.51-8.69-6.23-10.9h-.04Z"/>
+	</g>
+</g>

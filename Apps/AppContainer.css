@@ -17,6 +17,7 @@
 }
 .iframe_container{
     flex-grow: 1;
+    max-width: calc(100%);
 }
 @media only screen and (max-width:1220px) {
     .container{

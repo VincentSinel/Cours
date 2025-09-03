@@ -490,6 +490,210 @@
 					]
 				}
 			]
+		},
+		
+		{
+			"Name": "Monde",
+			"Type": "folder",
+			"Content": [
+				{
+					"Name": "Carte du monde",
+					"Type": "carte",
+					"Size": {
+						"Width": 785.20,
+						"Height": 451.50
+					},
+					"Files": [
+						{
+							"Name": "Monde_Mer",
+							"Section": "Mers et océans",
+							"Type": "svg",
+							"Parameters": [
+								{
+									"name": "Fond",
+									"type_obj": "surface",
+									"data": {
+										"fill": "#c1e2ed",
+										"fill-opacity": "1.0"
+									}
+								}
+								,{
+									"name": "Nom des mers",
+									"type_obj": "text",
+									"data": {
+										"fill": "#0eafdd",
+										"fill-opacity": 1.0,
+										"font-family": "Bahnschrift",
+										"font-variation-settings": "'wght' 400, 'wdth' 100",
+										"font-size": "7px"
+									}
+								}
+								,{
+									"name": "Nom des océans",
+									"type_obj": "text",
+									"data": {
+										"fill": "#0eafdd",
+										"fill-opacity": 1.0,
+										"font-family": "Bahnschrift",
+										"font-variation-settings": "'wght' 400, 'wdth' 100",
+										"font-size": "8px"
+									}
+								}
+							],
+							"Legende": {
+							}
+						}
+						,{
+							"Name": "Monde_BordurePrincipale",
+							"Section": "Bordure principale",
+							"Type": "svg",
+							"Parameters": [
+								{
+									"name": "Bordure",
+									"type_obj": "surface",
+									"data": {
+										"fill": "none",
+										"stroke": "black",
+										"stroke-width": 0.5,
+										"stroke-linecap": "round",
+										"stroke-linejoin": "round"
+									}
+								}
+							],
+							"Legende": {
+								
+							}
+						}
+						,{
+							"Name": "Monde_Frontiere",
+							"Section": "Frontières",
+							"Type": "svg",
+							"Parameters": [
+								{
+									"name": "Démarcation",
+									"type_obj": "line",
+									"data": {
+										"fill": "none",
+										"stroke": "#1d1d1b",
+										"stroke-linecap": "round",
+										"stroke-linejoin": "round"
+									}
+								}
+								,{
+									"name": "Noms pays",
+									"type_obj": "text",
+									"data": {
+										"fill": "#1d1d1b",
+										"fill-opacity": 1.0,
+										"font-family": "Bahnschrift",
+										"font-size": "3px"
+									}
+								}
+							],
+							"Legende": {
+								
+							}
+						}
+						,{
+							"Name": "Monde_Echelles",
+							"Section": "Echelles",
+							"Type": "svg",
+							"Parameters": [
+								{
+									"name": "Indication nord",
+									"type_obj": "text",
+									"data": {
+										"fill": "#1d1d1b",
+										"fill-opacity": 1.0,
+										"font-weight": "700",
+										"font-family": "Bahnschrift",
+										"font-variation-settings": "'wght' 700, 'wdth' 87",
+										"font-size": "16px"
+									}
+								}
+								,{
+									"name": "Valeur echelle",
+									"type_obj": "text",
+									"data": {
+										"fill": "#1d1d1b",
+										"fill-opacity": 1.0,
+										"font-weight": "700",
+										"font-family": "Bahnschrift",
+										"font-variation-settings": "'wght' 700, 'wdth' 75",
+										"font-size": "9px",
+										"letter-spacing": "-0.1em"
+									}
+								}
+								,{
+									"name": "Indicateur",
+									"type_obj": "line",
+									"data": {
+										"fill": "none",
+										"stroke-miterlimit": 10,
+										"stroke": "#010101"
+									}
+								}
+								,{
+									"name": "Boussole",
+									"type_obj": "surface",
+									"data": {
+										"fill": "#1d1d1b",
+										"fill-opacity": 1.0,
+										"stroke": "none"
+									}
+								}
+							],
+							"Legende": {
+
+							}
+						}
+						,{
+							"Name": "Monde_Latitudes",
+							"Section": "Latitudes",
+							"Type": "svg",
+							"Parameters": [
+								{
+									"name": "Lignes",
+									"type_obj": "line",
+									"data": {
+										"fill": "none",
+										"stroke": "#1d1d1b",
+										"stroke-linecap": "round",
+										"stroke-linejoin": "round"
+									}
+								}
+							]
+						}
+						,{
+							"Name": "Monde_Cadre",
+							"Section": "Cadres",
+							"Type": "svg",
+							"Editable": false,
+							"Parameters": [
+								{
+									"name": "Cadres",
+									"type_obj": "line",
+									"data": {
+										"fill": "none",
+										"stroke": "#1d1d1b",
+										"stroke-linecap": "round",
+										"stroke-linejoin": "round"
+									}
+								}
+							]
+						}
+					],
+					"Base": [
+						"Monde_Mer-Mers et océans",
+						"Monde_BordurePrincipale-Bordure principale",
+						"Monde_Frontiere-Frontières",
+						"Monde_Echelles-Echelles",
+						"Monde_Cadre-Cadres"
+					],
+					"Options": [
+					]
+				}
+			]
 		}
 	]
 }

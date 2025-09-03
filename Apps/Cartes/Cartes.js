@@ -132,7 +132,12 @@ function LoadMap(parent_folder, data)
 		let client = new XMLHttpRequest();
 		client.open('GET', LoadedMap_Folder + "/" + file["Name"] + "." + file["Type"]);
 		client.onreadystatechange = function() {
+			// console.log(client.readyState, LoadCheck)
 			if (client.readyState === 4){ 
+				if (client.status !== 200) {
+					console.log("Erreur lors du chargement du fichier " + file["Name"] + "." + file["Type"] + " (" + client.status.toString() + ")");
+					return;
+				}
 				file["Data"] = client.responseText;
 				EndLoad();
 			}
@@ -143,9 +148,17 @@ function LoadMap(parent_folder, data)
 
 function ResetSize(off_x, off_y, size_w, size_h)
 {
+	let doc = document.getElementsByClassName("main_view")[0];
+	svg_max_size.w = document.body.clientWidth - 40 - doc.offsetLeft;
+	svg_max_size.h = document.body.clientHeight - 110;
+	
+	//DEBUG
+	// svg_max_size.w *= 5;
+	// svg_max_size.h *= 5;
+
 	let coef = svg_max_size.w / size_w;
-	if (svg_max_size.h / size_h < coef)
-		coef = svg_max_size.h / size_h;
+	if (svg_max_size.h / (size_h + legende_height) < coef)
+		coef = svg_max_size.h / (size_h + legende_height);
 
 	SVG_Draw.size(size_w * coef, (size_h + legende_height) * coef);
 	SVG_Draw.viewbox(off_x, off_y, size_w, size_h + legende_height);
