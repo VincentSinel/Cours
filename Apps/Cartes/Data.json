@@ -482,13 +482,6 @@
 						}
 					]
 				}
-				,{
-					"Name": "Regions",
-					"Type": "folder",
-					"Content": [
-						
-					]
-				}
 			]
 		},
 		
@@ -515,17 +508,6 @@
 									"data": {
 										"fill": "#c1e2ed",
 										"fill-opacity": "1.0"
-									}
-								}
-								,{
-									"name": "Nom des mers",
-									"type_obj": "text",
-									"data": {
-										"fill": "#0eafdd",
-										"fill-opacity": 1.0,
-										"font-family": "Bahnschrift",
-										"font-variation-settings": "'wght' 400, 'wdth' 100",
-										"font-size": "7px"
 									}
 								}
 								,{
@@ -742,7 +724,6 @@
 					],
 					"Base": [
 						"Monde_Mer-Mers et océans",
-						"Monde_Population-Population",
 						"Monde_BordurePrincipale-Bordure principale",
 						"Monde_Frontiere-Frontières",
 						"Monde_Echelles-Echelles",

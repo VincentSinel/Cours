@@ -19,6 +19,8 @@
 	<link rel="stylesheet" href="/JS/JSColorPicker/colorpicker.css" />
 	<script src="/JS/JSColorPicker/colorpicker.iife.min.js"></script>
 
+	<!-- <script src="Tuto.js"></script> -->
+
 	<!-- <link rel="stylesheet" href="/JS/Choices/choices.min.css" />
 	<script src="/JS/Choices/choices.min.js"></script> -->
 
@@ -41,7 +43,10 @@
 	<div id="maincontainer" class="maincontainer">
 	
 		<div class="generation-option param">
-			<p style="text-align: center;">Cartes</p>
+			<div style="display: flex; justify-content: center;">
+				<p style="text-align: center;">Cartes</p>
+				<!-- <img src="/Images/Icons/Help.svg" onclick="Tuto_AddLayer()" style="cursor: help;"> -->
+			</div>
 			<div id="menu_container" class="panel leftpanel">
 
 
@@ -213,5 +218,9 @@
 			link.click();
 		})
 	};
+
+	document.body.onresize = () => {
+		ResetSize(0,0, LoadedMap_Size.w, LoadedMap_Size.h);
+	}
 </script>
 </html>
