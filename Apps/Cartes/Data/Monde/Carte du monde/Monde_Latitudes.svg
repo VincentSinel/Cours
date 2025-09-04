@@ -10,4 +10,10 @@
     <path style="stroke-dasharray: 0 0 2 2;" d="m.71,332.79s66.76-4.34,392.23-4.34c151.18,0,392.97,10.62,392.97,10.62"/>
     <path style="stroke-dasharray: 0 0 2 2;" d="m.71,406.19s131.89-10.37,393.26-10.37c172.96,0,391.97,19.4,391.97,19.4"/>
 	</g>
+  <g>
+    <text x="21" y="10" transform="rotate(10 21,10)">Cercle polaire arctique</text>
+    <text x="5" y="163">Tropique du Cancer</text>
+    <text x="5" y="250">Équateur</text>
+    <text x="5" y="355">Tropique du Capricorne</text>
+  </g>
 </g>

@@ -701,6 +701,17 @@
 										"stroke-linejoin": "round"
 									}
 								}
+								,{
+									"name": "Noms",
+									"type_obj": "text",
+									"data": {
+										"fill": "#565656",
+										"fill-opacity": 1.0,
+										"font-family": "Bahnschrift",
+										"font-variation-settings": "'wght' 400, 'wdth' 100",
+										"font-size": "8px"
+									}
+								}
 							]
 						}
 						,{
