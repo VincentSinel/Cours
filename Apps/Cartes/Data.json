@@ -574,7 +574,8 @@
 									"type_obj": "line",
 									"data": {
 										"fill": "none",
-										"stroke": "#1d1d1b",
+										"stroke": "#878787",
+										"stroke-width": "0.25px",
 										"stroke-linecap": "round",
 										"stroke-linejoin": "round"
 									}
@@ -592,6 +593,62 @@
 							],
 							"Legende": {
 								
+							}
+						}
+						,{
+							"Name": "Monde_Population",
+							"Section": "Population",
+							"Type": "svg",
+							"Parameters": [
+								{
+									"name": "Zone 1",
+									"type_obj": "surface",
+									"data": {
+										"fill": "#fbf398",
+										"fill-opacity": "1.0"
+									}
+								}
+								,{
+									"name": "Zone 2",
+									"type_obj": "surface",
+									"data": {
+										"fill": "#f9b233",
+										"fill-opacity": "1.0"
+									}
+								}
+								,{
+									"name": "Zone 3",
+									"type_obj": "surface",
+									"data": {
+										"fill": "#e30613",
+										"fill-opacity": "1.0"
+									}
+								}
+							],
+							"Legende": {
+								"generation": "ggl.rect(20,10).stroke(\"black\").fill(\"none\").dy(0);ggl.rect(20,10).stroke(\"black\").fill(\"none\").dy(12);ggl.rect(20,10).stroke(\"black\").fill(\"none\").dy(24);ggl.text(\"Régions très peu peuplées\").attr(Legend_Parameters).dx(25).dy(-2);ggl.text(\"Régions assez peuplées\").attr(Legend_Parameters).dx(25).dy(10);ggl.text(\"Régions très peuplées\").attr(Legend_Parameters).dx(25).dy(22);ggl.text(\"500 000 habitants\").attr(Legend_Parameters).dx(25).dy(34);",
+								"parts": [
+									{
+										"id": "Monde_Population_legende1",
+										"offset_x": 0,
+										"offset_y": 0
+									}
+									,{
+										"id": "Monde_Population_legende2",
+										"offset_x": 0,
+										"offset_y": 12
+									}
+									,{
+										"id": "Monde_Population_legende3",
+										"offset_x": 0,
+										"offset_y": 24
+									}
+									,{
+										"id": "Monde_Population_legende4",
+										"offset_x": 8.75,
+										"offset_y": 39.75
+									}
+								]
 							}
 						}
 						,{
@@ -685,6 +742,7 @@
 					],
 					"Base": [
 						"Monde_Mer-Mers et océans",
+						"Monde_Population-Population",
 						"Monde_BordurePrincipale-Bordure principale",
 						"Monde_Frontiere-Frontières",
 						"Monde_Echelles-Echelles",

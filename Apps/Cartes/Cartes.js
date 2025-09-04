@@ -578,6 +578,8 @@ function Recreate_Legendes()
 		ggl = SVG_Legende.group();
 		eval(parameters["generation"]);
 		
+		console.log(ggl.bbox())
+
 		if (ggl.bbox().y2 + dy > legende_height)
 		{
 			dx = current_max_x
@@ -607,18 +609,16 @@ function TestSvgLegende()
 
 
 
-	// let settings = {"fill": "#1d1d1b","fill-opacity": "1.0","font-family": "Bahnschrift"};
-	// let settings2 = {"font-variation-settings": "'wght' 400, 'wdth' 100","font-size": "5px", "text-anchor": "middle"};
-	// SVG_Legende.line( 0,0, 0,13).stroke("black").dy(8);
-	// SVG_Legende.line(15,0,15,13).stroke("black").dy(8);
-	// SVG_Legende.line(30,0,30,13).stroke("black").dy(8);
-	// SVG_Legende.line(45,0,45,13).stroke("black").dy(8);
-	// SVG_Legende.rect(60,10).stroke("black").fill("none").dy(11);
-	// SVG_Legende.text("0").attr(settings).attr(settings2);
-	// SVG_Legende.text("200").attr(settings).attr(settings2).dx(15);
-	// SVG_Legende.text("500").attr(settings).attr(settings2).dx(30);
-	// SVG_Legende.text("1 500").attr(settings).attr(settings2).dx(45);
-	// SVG_Legende.text(function(add) { add.tspan('Altitude').attr(Legend_Parameters); add.tspan('(en mètres)').attr(settings).attr({"font-weight": "700","font-variation-settings": "'wght' 700, 'wdth' 87","font-size": "5px"}).dx(3); }).dx(65).dy(16)
+	// SVG_Legende.rect(20,10).stroke("black").fill("none").dy(0);
+	// SVG_Legende.rect(20,10).stroke("black").fill("none").dy(12);
+	// SVG_Legende.rect(20,10).stroke("black").fill("none").dy(24);
+	// SVG_Legende.text("Régions très peu peuplées").attr(Legend_Parameters).dx(25).dy(-2);
+	// SVG_Legende.text("Régions assez peuplées").attr(Legend_Parameters).dx(25).dy(10);
+	// SVG_Legende.text("Régions très peuplées").attr(Legend_Parameters).dx(25).dy(22);
+	// SVG_Legende.text("500 000 habitants").attr(Legend_Parameters).dx(25).dy(34);
+
+	
+	// SVG_Legende.rect(20,10).stroke("black").fill("none").dy(0);SVG_Legende.rect(20,10).stroke("black").fill("none").dy(12);SVG_Legende.rect(20,10).stroke("black").fill("none").dy(24);SVG_Legende.text("Régions très peu peuplées").attr(Legend_Parameters).dx(25).dy(-2);SVG_Legende.text("Régions assez peuplées").attr(Legend_Parameters).dx(25).dy(10);SVG_Legende.text("Régions très peuplées").attr(Legend_Parameters).dx(25).dy(22);SVG_Legende.text("500 000 habitants").attr(Legend_Parameters).dx(25).dy(34);
 
 	// let settings = {'fill': '#1d1d1b','fill-opacity': '1.0','font-family': 'Bahnschrift'}; let settings2 = {'font-weight': '400','font-size': '5px', 'text-anchor': 'middle'}; ggl.line( 0,0, 0,13).stroke('black').dy(8);ggl.line(15,0,15,13).stroke('black').dy(8);ggl.line(30,0,30,13).stroke('black').dy(8);ggl.line(45,0,45,13).stroke('black').dy(8);ggl.rect(60,10).stroke('black').fill('none').dy(11);ggl.text('0').attr(settings).attr(settings2);ggl.text('200').attr(settings).attr(settings2).dx(15);ggl.text('500').attr(settings).attr(settings2).dx(30);ggl.text('1 500').attr(settings).attr(settings2).dx(45);ggl.text(function(add) { add.tspan('Altitude').attr(settings).attr({'font-weight': '700','font-size': '8px'}); add.tspan('(en mètres)').attr(settings).attr({'font-weight': '700','font-size': '5px'}).dx(3); }).dx(65).dy(16)
 }
