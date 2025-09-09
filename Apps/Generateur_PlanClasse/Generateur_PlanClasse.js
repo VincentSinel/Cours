@@ -533,7 +533,8 @@ function DeleteClasse(id)
   if (id == ClasseSelected)
   {
     document.getElementById("selectedclasse").innerHTML = "Aucune classe selectionné";
-    ClasseSelected = null
+    document.getElementById("listeeleve").innerHTML = "";
+    ClasseSelected = null;
     
     document.getElementById("selectedplan").innerHTML = "Aucun plan selectionné";
     PlanSelected = null;
@@ -734,18 +735,42 @@ function readCSV(e, file) {
     if (!file) { return; }
     var reader = new FileReader();
     reader.onload = function(e) {
-      processCSV(e.target.result);
+      if (e.target.result.includes("�"))
+      {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          processCSV(e.target.result);
+        }
+        reader.readAsText(file, "iso-8859-1");
+      }
+      else
+        processCSV(e.target.result);
     };
-    reader.readAsText(file);
+    reader.readAsText(file, "UTF-8");
 }
 function processCSV(contents) {
-  // console.log(contents);
-  var re = new RegExp("([A-ZÁÀÂÄÅÃÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝÑÇÆ']+ ?-*[A-ZÁÀÂÄÅÃÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝÑÇÆ' ]{2,}) ([A-ZÁÀÂÄÅÃÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝÑÇÆ\\- a-záàâäåãéèêëíìîïóòôöõúùûüýÿçñ']+).*", 'g')
-  let ar = Array.from(contents.matchAll(re));
 
-  ar.forEach(element => {
-    AddEleve(element[1], element[2])
-  });
+  // console.log(contents);
+
+  if (contents.startsWith("Nom;Pr"))
+  { // Export Client
+   contents.split("\n").forEach( (line, index) => {
+      if (index == 0) return;
+      let lineinf = line.split(";");
+      if (lineinf[0] == "") return;
+      AddEleve(lineinf[0], lineinf[1])
+   });
+  }
+  else
+  { // Export Web
+    var re = new RegExp("([A-ZÁÀÂÄÅÃÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝÑÇÆ']+ ?-*[A-ZÁÀÂÄÅÃÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝÑÇÆ' ]{2,}) ([A-ZÁÀÂÄÅÃÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝÑÇÆ\\- a-záàâäåãéèêëíìîïóòôöõúùûüýÿçñ']+).*", 'g')
+    let ar = Array.from(contents.matchAll(re));
+  
+    ar.forEach(element => {
+      AddEleve(element[1], element[2])
+    });
+  }
+
 }
 
 
@@ -1200,6 +1225,7 @@ function Remplir()
     if (PlanSelected.place_double.includes(eleve.UID)) return;
     elevesallowed.push(eleve);
   })
+  shuffle(elevesallowed);
   while (elevesallowed.length != 0 && tablesallowed.length != 0)
   {
     let e = elevesallowed.pop();
@@ -1210,6 +1236,24 @@ function Remplir()
   PlanSelected.UpdateData();
   UpdateInfoPlan();
 }
+
+
+function shuffle(array) {
+  let currentIndex = array.length;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+
+    // Pick a remaining element...
+    let randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+}
+
 
 function Clear()
 {
