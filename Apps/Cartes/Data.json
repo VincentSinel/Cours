@@ -557,7 +557,7 @@
 									"data": {
 										"fill": "none",
 										"stroke": "#878787",
-										"stroke-width": "0.25px",
+										"stroke-width": 0.3,
 										"stroke-linecap": "round",
 										"stroke-linejoin": "round"
 									}
