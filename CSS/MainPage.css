@@ -408,7 +408,7 @@ nav::-webkit-scrollbar-thumb {
 
 .dropdown_download:hover .dropdown_download-content {
   display: block;
-  max-height: calc(43px * 6);
+  max-height: calc(43px * 11);
 }
 .dropdown_download-content{
   max-height: 0px;

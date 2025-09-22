@@ -117,6 +117,16 @@ img{
     max-width: 100%;
 }
 
+#ChapitreParent{
+    background-color: #c8e7ef;
+    font-family: Verdana, Helvetica, Geneva, Tahoma, sans-serif;
+    font-size: 25pt;
+    padding: 5px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
 #ChapitreNumero{
     background-color: #A6A6A6;
     font-family: Verdana, Helvetica, Geneva, Tahoma, sans-serif;

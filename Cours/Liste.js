@@ -39,11 +39,18 @@ function ClicChapter(path, a, element)
 
 function SetTitle(chapter)
 {
+    let title = "";
     if (chapter.hasOwnProperty("chapter"))
-        frame.contentDocument.getElementById("ChapitreNumero").innerHTML = chapter.chapter;
+    {
+        title = chapter.chapter;
+    }
     else
-        frame.contentDocument.getElementById("ChapitreNumero").innerHTML = "Chapitre " + chapter.id.toString();
+    {
+        title = "Chapitre " + chapter.id.toString();
+    }
+    frame.contentDocument.getElementById("ChapitreNumero").innerHTML = title;
     frame.contentDocument.getElementById("ChapitreNom").innerHTML = "- " + chapter.nom;
+    frame.contentDocument.title = title + " - " + chapter.nom;
 }
 
 function CreatePDFButton()
@@ -84,6 +91,14 @@ function CreatePDFButton()
     but = document.getElementById("PdfButtonExo");
     but.target="_blank";
     but.download="Exercices.pdf"
+
+    but = document.getElementById("DocxButtonAct");
+    but.target="_blank";
+    but.download="Activité d'introduction.docx"
+
+    but = document.getElementById("PdfButtonAct");
+    but.target="_blank";
+    but.download="Activité d'introduction.pdf"
 }
 
 function SetDownloadButton(path, element)
@@ -97,6 +112,8 @@ function SetDownloadButton(path, element)
     let but_odt2 = document.getElementById("OdtButton2");
     let but_xlsx = document.getElementById("XlsxButton");
     let but_exo = document.getElementById("PdfButtonExo");
+    let but_actx = document.getElementById("DocxButtonAct");
+    let but_act = document.getElementById("PdfButtonAct");
     but_default.classList.add("deactivate")
     but_pdf1.classList.add("deactivate")
     but_pdf2.classList.add("deactivate")
@@ -106,6 +123,8 @@ function SetDownloadButton(path, element)
     but_odt2.classList.add("deactivate")
     but_xlsx.classList.add("deactivate")
     but_exo.classList.add("deactivate")
+    but_actx.classList.add("deactivate")
+    but_act.classList.add("deactivate")
     if (element.hasOwnProperty("download"))
     {
         let list = element.download;
@@ -181,6 +200,22 @@ function SetDownloadButton(path, element)
             but_exo.download= list.exo.substr(list.exo.lastIndexOf("/") + 1);
             but_exo.classList.remove("deactivate")
         }
+
+        // Activité Docx
+        if (list.hasOwnProperty("actx"))
+        {
+            but_actx.href = list.actx;
+            but_actx.download= list.actx.substr(list.act.lastIndexOf("/") + 1);
+            but_actx.classList.remove("deactivate")
+        }
+
+        // Activité
+        if (list.hasOwnProperty("act"))
+        {
+            but_act.href = list.act;
+            but_act.download= list.act.substr(list.act.lastIndexOf("/") + 1);
+            but_act.classList.remove("deactivate")
+        }
     
     }
     else
@@ -209,7 +244,7 @@ function ShowCollegeSelect()
 
     document.getElementById("noiframe").style.display = "block"
     frame.src = ""
-    frame.style.height = 120 + 'px';
+    frame.style.height = 0 + 'px';
 }
 
 function SelectClasse(id)

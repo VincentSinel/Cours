@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <style>
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreParent" colspan="2">
+        Chapitre 8
+      </td>
+    </tr>
+    <tr>
+      <td id="ChapitreNumero">
+        Partie 1
+      </td>
+      <td id="ChapitreNom">
+        - Nombres entiers
+      </td>
+    </tr>
+  </table>
+
+        
+</body>
+<script>
+	document.title = document.getElementById("ChapitreNumero").innerHTML + " " + document.getElementById("ChapitreNom").innerHTML
+</script>
+</html>

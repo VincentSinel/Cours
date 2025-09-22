@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_6" data-name="Calque 6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-family: Bahnschrift-Bold, Bahnschrift;
+        font-size: 20px;
+        font-variation-settings: 'wght' 700, 'wdth' 100;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        fill: url(#Dégradé_sans_nom_1966);
+        stroke-width: 0px;
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_1966" data-name="Dégradé sans nom 1966" x1="4.39" y1="4.39" x2="25.61" y2="25.61" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0fb9e3"/>
+      <stop offset=".16" stop-color="#0fa8d0"/>
+      <stop offset=".49" stop-color="#107da1"/>
+      <stop offset=".95" stop-color="#123856"/>
+      <stop offset="1" stop-color="#13304d"/>
+    </linearGradient>
+  </defs>
+  <circle class="cls-2" cx="15" cy="15" r="15"/>
+  <text class="cls-1" transform="translate(5.99 21.24)"><tspan x="0" y="0">14</tspan></text>
+</svg>
