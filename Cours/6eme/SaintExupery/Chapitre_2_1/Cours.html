@@ -15,6 +15,51 @@
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
   <style>
+    .addition td{
+      min-width: 20px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .addition tr:first-child{
+      writing-mode: vertical-rl;
+    }
+    .addition tr:first-child td{
+      vertical-align: top;
+    }
+    .addition tr:last-child{
+      border-top: solid 2px black;
+    }
+    .retenu{
+      min-height: 20px;
+      max-height: 20px;
+      min-width: 20px;
+      max-width: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8pt;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+      border-radius: 50%;
+      border: solid 1px red;
+      color: red;
+    }
+    .soustraction td{
+      min-width: 20px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 16pt;
+    }
+    .soustraction tr:last-child{
+      border-top: solid 2px black;
+    }
+    .retenu_soustraction{
+      color: red;
+      font-size: 10pt;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+      font-variant-position: sub;
+    }
   </style>
 
 </head>
@@ -32,10 +77,201 @@
         Partie 1
       </td>
       <td id="ChapitreNom">
-        - Nombres entiers
+        - Addition et soustraction
       </td>
     </tr>
   </table>
+
+  <h1>Addition posée :</h1>
+    <div class="definition">
+      Le résultat d'une addition est appelé <span class="CRed"><b>somme</b></span>.<br>
+      Les nombres qui composent une addition sont appelés les <span class="CRed"><b>termes</b></span>.  
+    </div>
+
+    <p>
+      Pour poser une addition en colonne, on aligne les nombres selon le rang de leurs chiffres. On commence ensuite l'addition par la droite et on remonte petit à petit en prenant en compte les éventuelles retenues. 
+    </p>
+    <p class="exemple">Exemples :</p>
+    <div class="flexobject">
+      <div>
+        <p>Avec des entiers</p>
+        <table class="addition">
+          <tr>
+            <th></th>
+            <td>Chiffre des centaine</td>
+            <td>Chiffre des dizaine</td>
+            <td>Chiffre des unités</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><div class="retenu">+1</div></td>
+            <td><div class="retenu">+1</div></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>1</td>
+            <td>4</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <th>+</th>
+            <td></td>
+            <td>8</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>2</td>
+            <td>3</td>
+            <td>2</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <p>Avec des nombres décimaux</p>
+        <table class="addition">
+          <tr>
+            <th></th>
+            <td>Chiffre des dizaine</td>
+            <td>Chiffre des unités</td>
+            <td style="min-width: auto;"></td>
+            <td>Chiffre des dixième</td>
+            <td>Chiffre des centième</td>
+            <td>Chiffre des millième</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><div class="retenu">+1</div></td>
+            <td></td>
+            <td style="min-width: auto;"></td>
+            <td><div class="retenu">+1</div></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>8</td>
+            <td>3</td>
+            <td style="min-width: auto;">,</td>
+            <td>0</td>
+            <td>4</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <th>+</th>
+            <td></td>
+            <td>7</td>
+            <td style="min-width: auto;">,</td>
+            <td>8</td>
+            <td>8</td>
+            <td><span class="CBlue">0</span></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>9</td>
+            <td>0</td>
+            <td style="min-width: auto;">,</td>
+            <td>9</td>
+            <td>2</td>
+            <td>9</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  <h1>Commutativité de l'addition :</h1>
+    <div class="definition">
+      Une addition est dite <span class="CRed">commutative</span>, cela signifie que l'on peut intervertir les termes sans changer le résultat.
+    </div>
+    <p class="exemple">Exemples :</p>
+    <ul>
+      <li>5 + 8 = 8 + 5</li>
+      <li>3,478 + 142,3 = 142,3 + 3,478</li>
+    </ul>
+  <h1>Soustraction :</h1>
+    <div class="definition">
+      Le résultat d'une soustraction est appelé <b><span class="CRed">différence</span></b>.<br>
+      Les nombres qui composent une soustraction sont appelés les <span class="CRed"><b>termes</b></span>. 
+    </div>
+    <p class="remarque">Remarque :</p>
+    <ul>
+      <li>On soustrait toujours le plus petit des deux termes au plus grand, donc <b>on ne peut pas modifier l'ordre des termes d'une soustraction</b>.</li>
+    </ul>
+  <h1>Soustraction posée :</h1>
+    <p>
+      Pour poser une soustraction en colonne, on aligne les nombres selon le rang de leurs chiffres. On commence ensuite la soustraction par la droite et on remonte petit à petit. Lorsqu'une soustraction n'est pas possible (que l'on soustrait plus que disponible), on prend une dizaine supplémentaire et on indique que l'on soustrait 1 de plus au rang suivant.
+    </p>
+    <p class="exemple">Exemples :</p>
+    <div class="flexobject">
+      <div class="flexobject">
+        <div>
+          <p><b>Avec des entiers</b></p>
+          <table class="soustraction">
+            <tr>
+              <th></th>
+              <td>1</td>
+              <td><span class="retenu_soustraction">1</span>4</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <th>-</th>
+              <td><span class="retenu_soustraction">+1</span></td>
+              <td>8</td>
+              <td>6</td>
+            </tr>
+            <tr>
+  
+            </tr>
+            <tr>
+              <th></th>
+              <td>0</td>
+              <td>6</td>
+              <td>2</td>
+            </tr>
+          </table>
+        </div>
+        <div style="max-width: 5cm;">
+          Ici on ne peut pas retirer 8 à 4. On prend donc <span class="CRed">1</span>4 et on ajoute <span class="CRed">1</span> dans la soustraction au rang des centaines.
+        </div>
+      </div>
+      <div class="flexobject">
+        <div>
+          <p><b>Avec des nombres décimaux</b></p>
+          <table class="soustraction">
+            <tr>
+              <th></th>
+              <td>8</td>
+              <td><span class="retenu_soustraction">1</span>3</td>
+              <td style="min-width: auto;">,</td>
+              <td><span class="retenu_soustraction">1</span>0</td>
+              <td>4</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <th>-</th>
+              <td><span class="retenu_soustraction">+1</span></td>
+              <td>7<span class="retenu_soustraction">+1</span></td>
+              <td style="min-width: auto;">,</td>
+              <td>6</td>
+              <td>3</td>
+              <td><span class="CBlue">0</span></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>7</td>
+              <td>5</td>
+              <td style="min-width: auto;">,</td>
+              <td>9</td>
+              <td>1</td>
+              <td>9</td>
+            </tr>
+          </table>
+        </div>
+        <div style="max-width: 5cm;">
+          On aligne correctement les chiffres de même rang et on effectue la soustraction comme avec des entiers.
+        </div>
+      </div>
+    </div>
 
         
 </body>
