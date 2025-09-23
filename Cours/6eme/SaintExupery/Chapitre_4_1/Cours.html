@@ -15,6 +15,13 @@
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
   <style>
+    .tableau_prop{
+      display: flex;
+      align-items: center;
+    }
+    .samewidth td{
+      width: 50px;
+    }
   </style>
 
 </head>
@@ -32,11 +39,120 @@
         Partie 1
       </td>
       <td id="ChapitreNom">
-        - Nombres entiers
+        - Reconnaître une situation de proportionnalité
       </td>
     </tr>
   </table>
 
+  <h1>Proportionnalité :</h1>
+      <div class="definition">
+        Deux grandeurs sont <span class="CRed">proportionnelles</span> si les valeurs de l'une s'obtiennent en multipliant les valeurs de l'autre par un même nombre non nul appelé <span class="CRed">coefficient de proportionnalité</span>.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>
+        Une voiture roule à 80km/h, la distance parcourue est alors proportionnelle au temps de trajet :
+      </p>
+      <table style="text-align: center;">
+        <tr>
+          <td></td>
+          <td>× 80</td>
+        </tr>
+        <tr>
+          <td>2h de trajet</td>
+          <td style="padding: 0px 10px;">────►</td>
+          <td>160 km parcouru</td>
+        </tr>
+        <tr style="height: 0.5cm;"></tr>
+        <tr>
+          <td></td>
+          <td>× 80</td>
+        </tr>
+        <tr>
+          <td>5h de trajet</td>
+          <td>────►</td>
+          <td>400 km parcouru</td>
+        </tr>
+      </table>
+      <p>
+        Le tableau de proportionnalité permet de représenter cette proportionnalité.
+      </p>
+      <div class="tableau_prop">
+        <table class="proportionnaltable">
+          <tr>
+            <th>Temps de trajet (h)</th>
+            <td>1</td>
+            <td>2</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th>Distance parcourue (km)</th>
+            <td>80</td>
+            <td>160</td>
+            <td>400</td>
+          </tr>
+        </table>
+        <img src="Images/Coef1.png" style="max-height: 50px;">
+      </div>
+  
+  <h1>Coefficient de proportionnalité :</h1>
+    <h2>Calcul :</h2>
+      <p>
+        Pour calculer le coefficient de proportionnalité d'un tableau de proportionnalité, on divise la valeur d'arrivé par la valeur de départ
+      </p>
+      <p class="exemple">Exemple :</p>
+      <div class="tableau_prop">
+        <table class="proportionnaltable">
+          <tr>
+            <th>Masse (kg)</th>
+            <td>3</td>
+            <td>7</td>
+            <td>12,2</td>
+          </tr>
+          <tr>
+            <th>Prix (€)</th>
+            <td>6,75</td>
+            <td>15,75</td>
+            <td>27,45</td>
+          </tr>
+        </table>
+        <img src="Images/Coef2.png" style="max-height: 50px;">
+      </div>
+      <p>
+        On cherche $3\times ? = 6,75$ donc on divise <span class="frac">$\frac{6,75}{3} = 2,25$</span><br>
+        Le coefficient de proportionnalité est donc 2,25.
+        On retrouve la même valeur pour chaque colonne :<br>
+        <span class="frac">$\frac{15,75}{7} = 2,25$</span> et <span class="frac">$\frac{27,45}{12,2} = 2,25$</span>
+      </p>
+    <h2>Vérification :</h2>
+      <p>
+        Pour vérifier qu'un tableau est bien proportionnel, il faut vérifier que le coefficient multiplicateur de chaque colonne est bien le même.
+      </p>
+      <p class="exemple">Exemple :</p>
+      <table class="proportionnaltable">
+        <tr>
+          <th>Nombre de pas</th>
+          <td>3</td>
+          <td>5</td>
+          <td>10</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <th>Distance (m)</th>
+          <td>1,8</td>
+          <td>2,8</td>
+          <td>6</td>
+          <td>18</td>
+        </tr>
+      </table>
+      <div class="flexobject">
+        <span class="frac">$\frac{1,8}{3}=0,6$</span>
+        <span class="frac">$\frac{2,8}{5}=\textcolor{#e53935}{0,56}$</span>
+        <span class="frac">$\frac{6}{10}=0,6$</span>
+        <span class="frac">$\frac{18}{30}=0,6$</span>
+      </div>
+      <p>
+        L'un des coefficient est différent donc le tableau n'est pas proportionnel.
+      </p>
         
 </body>
 <script>

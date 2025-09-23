@@ -15,6 +15,13 @@
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
   <style>
+    .tableau_prop{
+      display: flex;
+      align-items: center;
+    }
+    .samewidth td{
+      width: 50px;
+    }
   </style>
 
 </head>
@@ -32,11 +39,68 @@
         Partie 3
       </td>
       <td id="ChapitreNom">
-        - Nombres entiers
+        - Pourcentages
       </td>
     </tr>
   </table>
 
+  <h1>Pourcentage :</h1>
+    <div class="definition">
+      Un <span class="CRed">pourcentage</span> est une proportion par rapport à 100.  $\textcolor{#e53935}{t} \% = \frac{ \textcolor{#e53935}{t} }{100}$
+    </div>
+    <p class="exemple">Exemple :</p>
+    <div>
+      L'eau de la Mer Noir contient 4% de sel. Cela signifie que :
+      <ul>
+        <li>La proportion de sel dans l'eau est de $\frac{4}{100}$.</li>
+        <li>100kg d'eau contient 4kg de sel.</li>
+        <li>La masse d'eau et de sel sont proportionnel avec un coefficient de proportionnalité de $4\%=\frac{4}{100}= 0,04$</li>
+      </ul>
+    </div>
+    <div class="tableau_prop">
+      <table class="proportionnaltable samewidth">
+        <tr>
+          <th>Masse d'eau (kg)</th>
+          <td>100</td>
+          <td>360</td>
+        </tr>
+        <tr>
+          <th>Masse de sel (kg)</th>
+          <td>4</td>
+          <td>?</td>
+        </tr>
+      </table>
+      <img src="Images/Coef3.png" style="max-height: 50px;">
+    </div>
+    <p>
+      Pour calculer la quantité de sel dans 360kg, on multiplie : $360\times 4\% = 360 \times 0,04 = 14,4 kg$
+    </p>
+    <p class="remarque">Remarque :</p>
+    <ul><li>Le symbole % est un <b>opérateur</b> et non une unité, il peut être utilisé dans les calculs.</li></ul>
+  
+  <h1>Augmentation et réduction :</h1>
+    <h2>Augmentation :</h2>
+      <div class="definition">
+        Pour effectuer une augmentation, on part de 100% et on ajoute le pourcentage d'augmentation avant de faire la multiplication.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>Une augmentation de 30% correspond à prendre 130% de la valeur initiale.</p>
+      <img src="Images/Augmentation.svg" alt="Augmentation de 30%" style="max-height: 4cm;">
+      <p>
+        Par exemple si le prix d'un article est de 50€ et qu'il y a une augmentation de 30%, on calcule :
+        $50 \times 130\% = 50 \times \frac{130}{100} = 65\text{€}$.
+      </p>
+    <h2>Réduction :</h2>
+      <div class="definition">
+        Pour effectuer une réduction, on part de 100% et on soustrait le pourcentage de réduction avant de faire la multiplication.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>Une réduction de 20% correspond à prendre 80% de la valeur initiale.</p>
+      <img src="Images/Reduction.svg" alt="Réduction de 20%" style="max-height: 4cm;">
+      <p>
+        Par exemple si le prix d'un article est de 50€ et qu'il y a une réduction de 20%, on calcule :
+        $50 \times 80\% = 50 \times \frac{80}{100} = 40\text{€}$.
+      </p>
         
 </body>
 <script>

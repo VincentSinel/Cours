@@ -2114,7 +2114,7 @@ var sixieme_saintexupery = [
 			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 4 - Activité d'introduction.docx",
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 4 - Activité d'introduction.pdf",
 		},
-		ready : false,
+		ready : true,
 		page : "SaintExupery/Chapitre_4_1/Cours.html",
 	},
 	{
@@ -2130,7 +2130,7 @@ var sixieme_saintexupery = [
 			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 4 - Activité d'introduction.docx",
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 4 - Activité d'introduction.pdf",
 		},
-		ready : false,
+		ready : true,
 		page : "SaintExupery/Chapitre_4_2/Cours.html",
 	},
 	{
@@ -2146,7 +2146,7 @@ var sixieme_saintexupery = [
 			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 4 - Activité d'introduction.docx",
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 4 - Activité d'introduction.pdf",
 		},
-		ready : false,
+		ready : true,
 		page : "SaintExupery/Chapitre_4_3/Cours.html",
 	},
 	{
