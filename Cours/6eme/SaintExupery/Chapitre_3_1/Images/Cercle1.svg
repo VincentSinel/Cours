@@ -1,0 +1,24 @@
+<svg height="500" version="1.1" width="500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.583344px; top: -0.600006px;">
+<desc>
+Created with Raphaël 2.3.0</desc>
+<defs>
+</defs>
+<ellipse cx="250" cy="250" rx="243" ry="243" fill="none" stroke="#000000" style="stroke-linecap: round; stroke-linejoin: round;" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</ellipse>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="#ff0000" stroke="#000000" d="M493,250A243,243,0,0,1,421.827,421.827L250,250Z" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="#ff0000" stroke="#000000" d="M421.827,421.827A243,243,0,0,1,250,493L250,250Z" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="#ff0000" stroke="#000000" d="M250,493A243,243,0,0,1,78.173,421.827L250,250Z" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="#039be5" stroke="#000000" d="M78.173,421.827A243,243,0,0,1,7,250L250,250Z" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="#00ff00" stroke="#000000" d="M7,250A243,243,0,0,1,78.173,78.173L250,250Z" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="#00ff00" stroke="#000000" d="M78.173,78.173A243,243,0,0,1,250,7L250,250Z" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="#00ff00" stroke="#000000" d="M250,7A243,243,0,0,1,421.827,78.173L250,250Z" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+<path style="stroke-linecap: round; stroke-linejoin: round;" fill="#00ff00" stroke="#000000" d="M421.827,78.173A243,243,0,0,1,493,250L250,250Z" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="none">
+</path>
+</svg>

@@ -390,7 +390,7 @@ nav::-webkit-scrollbar-thumb {
     position: fixed;
     top: calc(var(--HeaderBarHeight) + 5px);
     right: 20px;
-    background: transparent;
+    background: white;
     border: none;
     border-radius: 5px;
     padding: 2px;
