@@ -15,6 +15,147 @@
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
   <style>
+    .line1 {
+      grid-row: 2;
+      align-content: center;
+      border: solid 1px black;
+    }
+    .line2 {
+      grid-row: 3;
+      align-content: center;
+      border: solid 1px black;
+      font-size: 8px;
+      font-weight: bold;
+    }
+    .line3 {
+      grid-row: 4;
+      align-content: center;
+      border: solid 1px black;
+    }
+    @media(max-width: 820px){
+      .line1{
+        writing-mode: vertical-rl;
+      }
+      .line2{
+        writing-mode: vertical-rl;
+      }
+    }
+
+    .p2-table {
+      display: grid;
+      grid-template-columns: repeat(11, 1fr);
+      grid-template-rows: repeat(5, 30px);
+      align-content: center;
+      vertical-align: middle;
+      text-align: center;
+      border: solid 1px black;
+    }
+    .unit1-2 {
+      grid-column: 1 / 4;
+      grid-row: 1;
+      column-span: 2;
+      background-color: #34D15B;
+      align-content: center;
+      border: solid 1px black;
+      color: white; 
+    }
+    .unit1-3 {
+      grid-column: 4 / 9;  
+      grid-row: 1;
+      background-color: #2189C7;
+      align-content: center;
+      border: solid 1px black;
+      color: white;
+    }
+    .unit1-4 {
+      grid-column: 9 / 12;
+      grid-row: 1;
+      background-color: #7B29C1;
+      align-content: center;
+      border: solid 1px black;
+      color: white;
+    }
+    .line1_u {
+      grid-row: 2;
+      align-content: center;
+      border-color: black red black black;
+      border-width: 1px 3px 1px 1px;
+      border-style: solid;
+    }
+    .line2_u {
+      grid-row: 3;
+      align-content: center;
+      border-color: black red black black;
+      border-width: 1px 3px 1px 1px;
+      border-style: solid;
+      font-size: 8px;
+      font-weight: bold;
+    }
+    .line3_u {
+      grid-row: 4;
+      align-content: center;
+      border-color: black red black black;
+      border-width: 1px 3px 1px 1px;
+      border-style: solid;
+    }
+    .line1_v {
+      grid-row: 2;
+      align-content: center;
+      border-color: black black black red;
+      border-width: 1px 1px 1px 3px;
+      border-style: solid;
+    }
+    .line2_v {
+      grid-row: 3;
+      align-content: center;
+      border-color: black black black red;
+      border-width: 1px 1px 1px 3px;
+      border-style: solid;
+      font-size: 8px;
+      font-weight: bold;
+    }
+    .line3_v {
+      grid-row: 4;
+      align-content: center;
+      border-color: black black black red;
+      border-width: 1px 1px 1px 3px;
+      border-style: solid;
+    }
+    .line4_u {
+      grid-row: 5;
+      grid-column: 1 / 7;
+      align-content: center;
+      border-color: black red black black;
+      border-width: 1px 3px 1px 1px;
+      border-style: solid;
+      background-color: #FF7463;
+    }
+    .line4_v {
+      grid-row: 5;
+      grid-column: 7 / 12;
+      align-content: center;
+      border-color: black black black red;
+      border-width: 1px 1px 1px 3px;
+      border-style: solid;
+      background-color: #FFDF68;
+    }
+    @media(max-width: 820px){
+      .p2-table {
+        grid-template-rows: 70px 80px 70px 30px 30px;
+      }
+      .line1_u{
+        writing-mode: vertical-rl;
+      }
+      .line2_u{
+        writing-mode: vertical-rl;
+      }
+      .line1_v{
+        writing-mode: vertical-rl;
+      }
+      .line2_v{
+        writing-mode: vertical-rl;
+      }
+    }
   </style>
 
 </head>
@@ -32,11 +173,155 @@
         Partie 2
       </td>
       <td id="ChapitreNom">
-        - Nombres entiers
+        - Nombres décimaux
       </td>
     </tr>
   </table>
 
+  <h1>Fraction décimale :</h1>
+    <div class="definition">
+      Une <span class="CRed">fraction décimale</span> est une fraction d'un entier "<i>sur</i>" 10, 100, 1 000 etc..
+    </div>
+    <p class="exemple">Exemple :</p>
+    <div class="flexobject">
+      <ul>
+        <li>$0,\textcolor{#CB2F4C}{1}=\frac{1}{\textcolor{#CB2F4C}{10}}$ un <span class="CRed">dixième</span></li>
+        <li>$0,00\ \textcolor{#CB2F4C}{1}=\frac{1}{\textcolor{#CB2F4C}{1\ 000}}$ un <span class="CRed">millième</span></li>
+      </ul>
+      <ul>
+        <li>$0,0\textcolor{#CB2F4C}{1}=\frac{1}{\textcolor{#CB2F4C}{100}}$ un <span class="CRed">centième</span></li>
+        <li>$0,00\ 0\textcolor{#CB2F4C}{1}=\frac{1}{\textcolor{#CB2F4C}{10\ 000}}$ un <span class="CRed">dix-millième</span></li>
+      </ul>
+    </div>
+    <div class="definition">
+      Une fraction décimale admet <b>plusieurs</b> écritures.
+    </div>
+    <p class="exemple">Exemple :</p>
+    <p>
+      <ul>
+        <li>
+          $\frac{10}{10}=\frac{100}{100}=\frac{1\ 000}{1\ 000}=\frac{10\ 000}{10\ 000}$
+        </li>
+        <li>
+          $\frac{1}{10}=\frac{10}{100}=\frac{100}{1\ 000}=\frac{1\ 000}{10\ 000}$
+        </li>
+        <li>
+          $\frac{42}{100}=\frac{40}{100}+\frac{2}{100}=\frac{4}{10}+ \frac{2}{100}$
+        </li>
+      </ul>
+    </p>
+  <h1>Ecriture décimal :</h1>
+    <div class="definition">
+      L'<span class="CRed">écriture décimale</span> d'une fraction décimale est son écriture sous forme de nombre avec virgule.
+    </div>
+    <p>
+      Il est possible d'agrandir le tableau vu précédemment pour les nombres entiers (Chapitre A1) :
+    </p>
+    <div class="p2-table">
+      <div class="unit1-2">Classe des Milliers</div>
+      <div class="unit1-3">Classe des Unités</div>
+      <div class="unit1-4">Classe des Millièmes</div>
+      <div class="line1" style="background-color: #5FF26F; grid-column: 1;">Centaines</div>
+      <div class="line1" style="background-color: #88FF87; grid-column: 2;">Dizaines</div>
+      <div class="line1" style="background-color: #C6FFAC; grid-column: 3;">Unités</div>
+      <div class="line1" style="background-color: #3CB3E3; grid-column: 4;">Centaines</div>
+      <div class="line1" style="background-color: #56DCFF; grid-column: 5;">Dizaines</div>
+      <div class="line1_u" style="background-color: #82FFFF; grid-column: 6;">Unités</div>
+      <div class="line1_v" style="background-color: #ABDBFF; grid-column: 7;">Dixièmes</div>
+      <div class="line1" style="background-color: #D5B7FF; grid-column: 8;">Centièmes</div>
+      <div class="line1" style="background-color: #FF93FF; grid-column: 9;">Unités</div>
+      <div class="line1" style="background-color: #D261FD; grid-column: 10;">Dixièmes</div>
+      <div class="line1" style="background-color: #A546E0; grid-column: 11;">Centièmes</div>
+      <div class="line2" style="grid-column: 1;">100 000</div>
+      <div class="line2" style="grid-column: 2;">10 000</div>
+      <div class="line2" style="grid-column: 3;">1 000</div>
+      <div class="line2" style="grid-column: 4;">100</div>
+      <div class="line2" style="grid-column: 5;">10</div>
+      <div class="line2_u" style="grid-column: 6;">1</div>
+      <div class="line2_v" style="grid-column: 7;">0,1 $=\frac{1}{10}$</div>
+      <div class="line2" style="grid-column: 8;">0,01 $=\frac{1}{100}$</div>
+      <div class="line2" style="grid-column: 9;">0,00 1 $=\frac{1}{1\ 000}$</div>
+      <div class="line2" style="grid-column: 10;">0,00 01 $=\frac{1}{10\ 000}$</div>
+      <div class="line2" style="grid-column: 11;">0,00 001 $=\frac{1}{100\ 000}$</div>
+      <div class="line3" style="grid-column: 1;"></div>
+      <div class="line3" style="grid-column: 2;"></div>
+      <div class="line3" style="grid-column: 3;"></div>
+      <div class="line3" style="grid-column: 4;">5</div>
+      <div class="line3" style="grid-column: 5;">1</div>
+      <div class="line3_u" style="grid-column: 6;">6</div>
+      <div class="line3_v" style="grid-column: 7;">7</div>
+      <div class="line3" style="grid-column: 8;">6</div>
+      <div class="line3" style="grid-column: 9;">2</div>
+      <div class="line3" style="grid-column: 10;"></div>
+      <div class="line3" style="grid-column: 11;"></div>
+      <div class="line4_u">Partie entière</div>
+      <div class="line4_v">Partie décimale</div>
+    </div>
+    <p class="remarque">Remarques :</p>
+    <ul>
+      <li>La barre rouge indique la position de la virgule.</li>
+      <li>Tout nombre décimal est la somme d'un entier (la <span class="CRed"><b>partie entière</b></span>) et d'un nombre décimal inférieur à 1 (la <span class="CYellow"><b>partie décimale</b></span>).</li>
+      <li>Un nombre entier est un nombre dont la partie décimal est 0 (Ex : $5 = 5,0 = 5,00 = ...$)</li>
+      <li>Les zéro supplémentaire derrière la virgule <b>et</b> le dernier chiffre ne sont pas utile (Ex : $2,405\textcolor{#e53935}{00}=2,405$)</li>
+    </ul>
+    <p class="exemple">Exemple :</p>
+    <p>
+      Dans le tableau est inscrit le nombre $516,762$ :<br>
+      $516,762=(\textcolor{#3CB3E3}{5}\times100)+(\textcolor{#56DCFF}{1}\times10)+\textcolor{#82FFFF}{6}+(\textcolor{#ABDBFF}{7}\times\frac{1}{10})+(\textcolor{#D5B7FF}{6}\times\frac{1}{100})+(\textcolor{#FF93FF}{2}\times\frac{1}{1\ 000})$<br>
+      516 est alors la <b>partie entière</b> et 0,762 la <b>partie décimale</b>.
+    </p>
+  <h1>Ecriture fractionnaire :</h1>
+    <div class="definition">
+      Un nombre décimal peut s'écrire comme fraction décimal. Il suffit de prendre le dénominateur correspondant au rang du dernier chiffre après la virgule.
+    </div>
+    <p class="exemple">Exemples :</p>
+    <div class="flexobject">
+      <div>
+        Dans 35,2<b>5</b> le dernier chiffre est le chiffre des <b>centièmes</b>.<br>
+        On utilise donc 100 comme dénominateur pour la fraction décimal.<br>
+        <ul>
+          <li>$35,25 = \frac{3\ 525}{100}$</li>
+        </ul>
+      </div>
+      <div>
+        Dans 102,02<b>7</b> le dernier chiffre est le chiffre des <b>millièmes</b>.<br>
+        On utilise donc 1 000 comme dénominateur pour la fraction décimal.<br>
+        <ul>
+          <li>$102,027 = \frac{102\ 027}{1\ 000}$</li>
+        </ul>
+      </div>
+    </div>
+  <h1>Partie entière et partie décimale :</h1>
+    <div class="definition">
+      On peut décomposer un nombre décimal en séparent sa <span class="CGreen"><b>partie entière</b></span> et sa <span class="CViolet"><b>partie décimal</b></span>.
+    </div>
+    <p class="exemple">Exemple :</p>
+    <ul>
+      <li>
+        $35,25 = \textcolor{#43a047}{35} + \textcolor{#7C4DA5}{0,25} = \textcolor{#43a047}{35} + \textcolor{#7C4DA5}{\frac{25}{100}}$
+      </li>
+      <li>
+        $102,027 = \textcolor{#43a047}{102} + \textcolor{#7C4DA5}{0,027} = \textcolor{#43a047}{102} + \textcolor{#7C4DA5}{\frac{27}{1\ 000}}$
+      </li>
+    </ul>
+  <h1>Autres décompositions :</h1>
+    <p>Il existe de très nombreuses autre décomposition. Voici quelques exemples, dans tous les cas, il faudra suivre la consigne pour effectuer la bonne décomposition dans les exercices :</p>
+    <ul>
+      <li>
+        <b>Décomposition additive :</b><br>
+        <ul>
+          <li>$35,25 = 30 + 5 + 0,2 + 0,05$</li>
+          <li>$35,25 = 30 + 5 + \frac{2}{10} + \frac{5}{100}$</li>
+        </ul>
+      </li>
+      <li>
+        <b>Décomposition multiplicative :</b><br>
+        <ul>
+          <li>$35,25 = (3\times 10) + 5 + (2\times 0,1) + (5\times 0,01)$</li>
+          <li>$35,25 = (3\times 10) + 5 + (2\times \frac{1}{10}) + (5\times \frac{1}{100})$</li>
+        </ul>
+      </li>
+    </ul>
         
 </body>
 <script>
