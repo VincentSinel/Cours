@@ -13,6 +13,7 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script id="Animation" src="/JS/Animation/animation_holder.js"></script>
 
   <style>
   </style>
@@ -32,11 +33,55 @@
         Partie 2
       </td>
       <td id="ChapitreNom">
-        - Nombres entiers
+        - Position relatives de droites
       </td>
     </tr>
   </table>
 
+  <h1>Définition :</h1>
+      <h2>Droites perpendiculaires :</h2>
+          <div class="definition">
+            Deux droites <span class="CRed">perpendiculaires</span> sont deux droites qui se coupent en formant <span class="CRed">quatre angles droits</span>.
+          </div>
+          <p class="exemple">Exemple :</p>
+          <div class="flexobject">
+            <div style="flex: 1 1 6cm; max-width: 10cm;">
+              H est appelé <span class="CRed">pied de la perpendiculaire</span> à $(d)$.
+            </div>
+            <img src="Images/Perpendiculaire.svg" style="flex: 1 1 2cm; max-width: 4cm;">
+          </div>
+          <p class="remarque">Remarques :</p>
+          <ul>
+            <li>$(d')$ se lit "d prime".</li>
+            <li>Pour noter deux droites perpendiculaires, on utilise le symbole $\perp$<br>
+            Ici $(d)\perp(d')$</li>
+          </ul>
+      <h2>Droites parallèles :</h2>
+          <div class="definition">
+            Deux droites <span class="CRed">parallèles</span> sont deux droites qui <b>ne sont pas sécantes</b>. 
+          </div>
+          <p class="exemple">Exemple :</p>
+          <div class="flexobject">
+            <div style="flex: 1 1 6cm; max-width: 10cm;">
+              $(d)$ et $(d')$ sont parallèles, on note cela $(d)\parallel(d')$
+            </div>
+            <img src="Images/Parallèles.svg" style="flex: 1 1 2cm; max-width: 4cm;">
+          </div>
+          <p class="remarque">Remarque :</p>
+          <ul>
+            <li>Lorsque deux droites sont confondues (qu'elles sont superposées), on dit aussi qu'elles sont parallèles.  </li>
+          </ul>
+  <h1>Constructions :</h1>
+      <h2>Droites perpendiculaires :</h2>
+      <div class="flexobject">
+        <div id="Animation1" class="animation center" width="480" height="360"></div>
+        <div id="Animation2" class="animation center" width="480" height="360"></div>
+      </div>
+      <h2>Droites parallèles :</h2>
+      <div class="flexobject">
+        <div id="Animation3" class="animation center" width="480" height="360"></div>
+        <div id="Animation4" class="animation center" width="480" height="360"></div>
+      </div>
         
 </body>
 <script>
