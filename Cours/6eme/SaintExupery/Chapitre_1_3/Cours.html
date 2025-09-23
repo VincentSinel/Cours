@@ -15,6 +15,16 @@
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
   <style>
+    .text_accolade,
+    .accolade_top{
+      width: 17.5%;
+      padding-left: 5.7%;
+    }
+    .text_accolade{
+      text-align: center;
+      font-size: 8pt;
+      color: var(--Cred);
+    }
   </style>
 
 </head>
@@ -32,12 +42,82 @@
         Partie 3
       </td>
       <td id="ChapitreNom">
-        - Nombres entiers
+        - Repérage et comparaison
       </td>
     </tr>
   </table>
 
-        
+  <h1>Repèrage :</h1>
+      <div class="definition">
+        Sur une demi-droite graduée on trouve :
+        <ul>
+          <li>Une <span class="CRed">unité de longueur</span></li>
+          <li>Une <span class="CRed">origine</span></li>
+        </ul>
+        On peut repérer la position de point à l'aide d'un nombre appelé <span class="CRed">abscisse</span>.
+      </div>
+      <table>
+        <tr>
+          <td>
+            <img src="Images/Axe graduee 1.svg">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="accolade_top">
+              <div></div><div></div><div></div><div></div>
+              <div></div><div></div><div></div><div></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="text_accolade">
+              Unité de longueur
+            </div>
+          </td>
+        </tr>
+      </table>
+      <p>
+        L'origine de cette demi-droite graduée a pour abscisse 0.
+        <ul>
+          <li>Le point A a pour <span class="CRed">abscisse</span> 2,0 : on écrit $A(2)$.</li>
+          <li>Le point B a pour <span class="CRed">abscisse</span> 3,5 : on écrit $B(3,5)$.</li>
+          <li>Le point C a pour <span class="CRed">abscisse</span> 2,8 : on écrit $C(2,8)$.</li>
+        </ul>
+      </p>
+      <p class="remarque">Remarque :</p>
+      <ul>
+        <li>Sur la droite gradué, plus un nombre est à droite, plus il est grand.</li>
+      </ul>
+      <p>
+        Pour trouver le « pas » de graduation, on regarde le nombre de morceaux qui compose l'unité et on fait la division.<br> 
+        Ci-dessus l'unité est coupé en 10 morceaux donc chacun représente $\frac{1}{10}$ de l'unité soit 0,1.<br>
+        Ci-dessous l'unité est coupé en 4 morceaux donc chacun représente $\frac{1}{4}$ de l'unité soit 0,25. Le point A a donc une abscisse de 2,75.
+      </p>
+      <img src="Images/Axe_1_4.svg">
+  <h1>Comparaison :</h1>
+      <div class="definition">
+        <span class="CRed">Comparer</span> deux nombres c'est dire si l'un <u>plus petit</u> ; <u>plus grand</u> ou <u>égal</u> à l'autre.
+      </div>
+      <p class="remarque">Remarque :</p>
+      <p>
+        Pour comparer, on utilise les symboles suivants :
+        <ul>
+          <li>$>$  &emsp; Supérieur (Strict)</li>
+          <li>$<$  &emsp; Inférieur (Strict)</li>
+          <li>$=$  &emsp; Égale</li>
+          <li>$\neq$ &emsp; Non égale</li>
+          <li>$\ge$ &emsp; Supérieur ou égale</li>
+          <li>$\le$ &emsp; Inférieur ou égale</li>
+        </ul>
+      </p>
+      <p class="exemple">Exemple :</p>
+      <p>
+        $2<15$ &emsp; se lit "2 est <b>inférieur</b> à 15".<br>
+        $3>2,5$ &emsp; se lit "3 est <b>supérieur</b> à 2,5".
+      </p>
+  
 </body>
 <script>
 	document.title = document.getElementById("ChapitreNumero").innerHTML + " " + document.getElementById("ChapitreNom").innerHTML

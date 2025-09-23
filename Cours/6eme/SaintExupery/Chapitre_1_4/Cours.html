@@ -15,6 +15,21 @@
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
   <style>
+    .encadrement{
+      text-align: center;
+    }
+    .encadrement th{
+      border: solid 3px var(--SectionSecondaire);
+      background-color: var(--Cviolet);
+      color: white;
+    }
+    .encadrement td{
+      border: solid 3px var(--SectionSecondaire);
+    }
+    .encadrement td,th{
+      width: auto;
+      line-height: 40px;
+    }
   </style>
 
 </head>
@@ -32,11 +47,85 @@
         Partie 4
       </td>
       <td id="ChapitreNom">
-        - Nombres entiers
+        - Encadrement
       </td>
     </tr>
   </table>
 
+  <h1>Classement :</h1>
+      <div class="definition">
+        <ul>
+          <li>
+            <span class="CRed">Classer</span> des nombres dans l'ordre <span class="CRed">croissant</span>, c'est ranger du plus petit au plus grand.
+          </li>
+          <li>
+            <span class="CRed">Classer</span> des nombres dans l'ordre <span class="CRed">décroissant</span>, c'est ranger du plus grand au plus petit.
+          </li>
+        </ul>
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>
+        On peut ranger les valeurs suivantes : 0,89 ; 0,7 ; 2,47 ; 1,5 ; 1,03<br>
+        <ul>
+          <li>Par ordre <b>croissant</b> :<br>
+          $0,7<0,89<1,03<1,5<2,47$</li>
+          <li>Par ordre <b>décroissant</b> :<br>
+          $2,47>1,5>1,03>0,89>0,7$</li>
+        </ul>
+      </p>
+  <h1>Encadrement :</h1>
+      <div class="definition">
+        <span class="CRed">Encadrer</span> un nombre, c'est trouver un nombre plus petit et un nombre plus grand que ce nombre.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>
+        On peut encadrer 56 a la dizaine près entre 50 et 60 :<br>
+        $50<56<60$
+      </p>
+      <p class="remarque">Remarque :</p>
+      <p>
+        La différence entre les deux nombres trouvé est appelé l'<span class="CRed">amplitude</span>.
+      </p>
+      <table class="encadrement">
+        <tr>
+          <th>Encadrement de 7,846</th>
+          <th>Amplitude</th>
+          <th>Valeurs approchées</th>
+        </tr>
+        <tr>
+          <td>
+            $\textcolor{#e53935}{7}<7,846<\textcolor{#e53935}{8}$
+          </td>
+          <td>
+            1
+          </td>
+          <td>
+            <span class="CRed">7</span> et <span class="CRed">8</span> (approchées à l'unité près)
+          </td>
+        </tr>
+        <tr>
+          <td>
+            $\textcolor{#039be5}{7,8}<7,846<\textcolor{#039be5}{7,9}$
+          </td>
+          <td>
+            0,1
+          </td>
+          <td>
+            <span class="CBlue">7,8</span> et <span class="CBlue">7,9</span> (approchées au dixième près)
+          </td>
+        </tr>
+        <tr>
+          <td>
+            $\textcolor{#43a047}{7,84}<7,846<\textcolor{#43a047}{7,85}$
+          </td>
+          <td>
+            0,01
+          </td>
+          <td>
+            <span class="CGreen">7,84</span> et <span class="CGreen">7,85</span> (approchées au centième près)
+          </td>
+        </tr>
+      </table>
         
 </body>
 <script>
