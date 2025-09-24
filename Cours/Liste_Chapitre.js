@@ -1924,7 +1924,7 @@ var sixieme_saintexupery = [
 		icone: 16,
 		ready : true,
 		page : "SaintExupery/Chapitre_1_1/Cours.html",
-	},
+	}, // Chapitre 1 Partie 1
 	{
 		id: 2,
 		chapter: "Partie 2",
@@ -1940,7 +1940,7 @@ var sixieme_saintexupery = [
 		},
 		ready : true,
 		page : "SaintExupery/Chapitre_1_2/Cours.html",
-	},
+	}, // Chapitre 1 Partie 2
 	{
 		id: 3,
 		chapter: "Partie 3",
@@ -1956,7 +1956,7 @@ var sixieme_saintexupery = [
 		},
 		ready : true,
 		page : "SaintExupery/Chapitre_1_3/Cours.html",
-	},
+	}, // Chapitre 1 Partie 3
 	{
 		id: 4,
 		chapter: "Partie 4",
@@ -1972,7 +1972,7 @@ var sixieme_saintexupery = [
 		},
 		ready : true,
 		page : "SaintExupery/Chapitre_1_4/Cours.html",
-	},
+	}, // Chapitre 1 Partie 4
 	{
 		id: 5,
 		chapter: "Partie 1",
@@ -1988,7 +1988,7 @@ var sixieme_saintexupery = [
 		},
 		ready : true,
 		page : "SaintExupery/Chapitre_2_1/Cours.html",
-	},
+	}, // Chapitre 2 Partie 1
 	{
 		id: 6,
 		chapter: "Partie 2",
@@ -2004,7 +2004,7 @@ var sixieme_saintexupery = [
 		},
 		ready : true,
 		page : "SaintExupery/Chapitre_2_2/Cours.html",
-	},
+	}, // Chapitre 2 Partie 2
 	{
 		id: 7,
 		chapter: "Partie 3",
@@ -2020,7 +2020,7 @@ var sixieme_saintexupery = [
 		},
 		ready : true,
 		page : "SaintExupery/Chapitre_2_3/Cours.html",
-	},
+	}, // Chapitre 2 Partie 3
 	{
 		id: 8,
 		chapter: "Partie 4",
@@ -2036,7 +2036,7 @@ var sixieme_saintexupery = [
 		},
 		ready : true,
 		page : "SaintExupery/Chapitre_2_4/Cours.html",
-	},
+	}, // Chapitre 2 Partie 4
 	{
 		id: 9,
 		chapter: "Partie 1",
@@ -2052,7 +2052,7 @@ var sixieme_saintexupery = [
 		},
 		ready : true,
 		page : "SaintExupery/Chapitre_3_1/Cours.html",
-	},
+	}, // Chapitre 3 Partie 1
 	{
 		id: 10,
 		chapter: "Partie 2",
@@ -2068,7 +2068,7 @@ var sixieme_saintexupery = [
 		},
 		ready : false,
 		page : "SaintExupery/Chapitre_3_2/Cours.html",
-	},
+	}, // Chapitre 3 Partie 2
 	{
 		id: 11,
 		chapter: "Partie 3",
@@ -2084,7 +2084,7 @@ var sixieme_saintexupery = [
 		},
 		ready : false,
 		page : "SaintExupery/Chapitre_3_3/Cours.html",
-	},
+	}, // Chapitre 3 Partie 3
 	{
 		id: 12,
 		chapter: "Partie 4",
@@ -2100,7 +2100,7 @@ var sixieme_saintexupery = [
 		},
 		ready : false,
 		page : "SaintExupery/Chapitre_3_4/Cours.html",
-	},
+	}, // Chapitre 3 Partie 4
 	{
 		id: 13,
 		chapter: "Partie 1",
@@ -2116,7 +2116,7 @@ var sixieme_saintexupery = [
 		},
 		ready : true,
 		page : "SaintExupery/Chapitre_4_1/Cours.html",
-	},
+	}, // Chapitre 4 Partie 1
 	{
 		id: 14,
 		chapter: "Partie 2",
@@ -2132,7 +2132,7 @@ var sixieme_saintexupery = [
 		},
 		ready : true,
 		page : "SaintExupery/Chapitre_4_2/Cours.html",
-	},
+	}, // Chapitre 4 Partie 2
 	{
 		id: 15,
 		chapter: "Partie 3",
@@ -2148,7 +2148,7 @@ var sixieme_saintexupery = [
 		},
 		ready : true,
 		page : "SaintExupery/Chapitre_4_3/Cours.html",
-	},
+	}, // Chapitre 4 Partie 3
 	{
 		id: 16,
 		chapter: "Partie 4",
@@ -2164,7 +2164,7 @@ var sixieme_saintexupery = [
 		},
 		ready : false,
 		page : "SaintExupery/Chapitre_4_4/Cours.html",
-	},
+	}, // Chapitre 4 Partie 4
 	{
 		id: 17,
 		chapter: "Partie 1",
@@ -2180,7 +2180,7 @@ var sixieme_saintexupery = [
 		},
 		ready : true,
 		page : "SaintExupery/Chapitre_5_1/Cours.html",
-	},
+	}, // Chapitre 5 Partie 1
 	{
 		id: 18,
 		chapter: "Partie 2",
@@ -2196,7 +2196,7 @@ var sixieme_saintexupery = [
 		},
 		ready : true,
 		page : "SaintExupery/Chapitre_5_2/Cours.html",
-	},
+	}, // Chapitre 5 Partie 2
 	{
 		id: 19,
 		chapter: "Partie 1",
@@ -2212,7 +2212,7 @@ var sixieme_saintexupery = [
 		},
 		ready : true,
 		page : "SaintExupery/Chapitre_6_1/Cours.html",
-	},
+	}, // Chapitre 6 Partie 1
 	{
 		id: 20,
 		chapter: "Partie 2",
@@ -2228,7 +2228,7 @@ var sixieme_saintexupery = [
 		},
 		ready : false,
 		page : "SaintExupery/Chapitre_6_2/Cours.html",
-	},
+	}, // Chapitre 6 Partie 2
 	{
 		id: 21,
 		chapter: "Partie 3",
@@ -2244,7 +2244,7 @@ var sixieme_saintexupery = [
 		},
 		ready : false,
 		page : "SaintExupery/Chapitre_6_3/Cours.html",
-	},
+	}, // Chapitre 6 Partie 3
 	{
 		id: 22,
 		chapter: "Partie 1",
@@ -2252,7 +2252,7 @@ var sixieme_saintexupery = [
 		icone: 22,
 		ready : false,
 		page : "SaintExupery/Chapitre_7_1/Cours.html",
-	},
+	}, // Chapitre 7 Partie 1
 	{
 		id: 23,
 		chapter: "Partie 2",
@@ -2260,7 +2260,7 @@ var sixieme_saintexupery = [
 		icone: 22,
 		ready : false,
 		page : "SaintExupery/Chapitre_7_2/Cours.html",
-	},
+	}, // Chapitre 7 Partie 2
 	{
 		id: 24,
 		chapter: "Partie 1",
@@ -2268,7 +2268,7 @@ var sixieme_saintexupery = [
 		icone: 23,
 		ready : false,
 		page : "SaintExupery/Chapitre_8_1/Cours.html",
-	},
+	}, // Chapitre 8 Partie 1
 	{
 		id: 25,
 		chapter: "Partie 2",
@@ -2276,31 +2276,43 @@ var sixieme_saintexupery = [
 		icone: 23,
 		ready : false,
 		page : "SaintExupery/Chapitre_8_2/Cours.html",
-	},
+	}, // Chapitre 8 Partie 2
 	{
 		id: 26,
 		chapter: "Partie 3",
 		nom: "Axes de symétrie",
 		icone: 23,
 		ready : false,
-		page : "SaintExupery/Chapitre_8_2/Cours.html",
-	},
+		page : "SaintExupery/Chapitre_8_3/Cours.html",
+	}, // Chapitre 8 Partie 3
 	{
 		id: 27,
 		chapter: "Partie 1",
 		nom: "Tracer un triangle (Avec 3 longueurs)",
 		icone: 24,
-		ready : false,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_9_1/Documents/Chapitre 9 - Partie 1 - Tracer un triangle (Avec 3 longueurs) (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_9_1/Documents/Chapitre 9 - Partie 1 - Tracer un triangle (Avec 3 longueurs) (Complet).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 9 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 9 - Activité d'introduction.pdf",
+		},
+		ready : true,
 		page : "SaintExupery/Chapitre_9_1/Cours.html",
-	},
+	}, // Chapitre 9 Partie 1
 	{
 		id: 28,
 		chapter: "Partie 2",
 		nom: "Tracer un triangle (Avec deux grandeurs)",
 		icone: 24,
-		ready : false,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_9_2/Documents/Chapitre 9 - Partie 2 - Tracer un triangle (Avec deux grandeurs) (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_9_2/Documents/Chapitre 9 - Partie 2 - Tracer un triangle (Avec deux grandeurs) (Complet).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 9 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 9 - Activité d'introduction.pdf",
+		},
+		ready : true,
 		page : "SaintExupery/Chapitre_9_2/Cours.html",
-	},
+	}, // Chapitre 9 Partie 2
 	{
 		id: 29,
 		chapter: "Partie 3",
@@ -2308,7 +2320,7 @@ var sixieme_saintexupery = [
 		icone: 24,
 		ready : false,
 		page : "SaintExupery/Chapitre_9_3/Cours.html",
-	},
+	}, // Chapitre 9 Partie 3
 	{
 		id: 30,
 		chapter: "Partie 4",
@@ -2316,7 +2328,7 @@ var sixieme_saintexupery = [
 		icone: 24,
 		ready : false,
 		page : "SaintExupery/Chapitre_9_4/Cours.html",
-	},
+	}, // Chapitre 9 Partie 4
 	{
 		id: 31,
 		chapter: "Partie 1",
@@ -2324,7 +2336,7 @@ var sixieme_saintexupery = [
 		icone: 25,
 		ready : false,
 		page : "SaintExupery/Chapitre_10_1/Cours.html",
-	},
+	}, // Chapitre 10 Partie 1
 	{
 		id: 32,
 		chapter: "Partie 2",
@@ -2332,7 +2344,7 @@ var sixieme_saintexupery = [
 		icone: 25,
 		ready : false,
 		page : "SaintExupery/Chapitre_10_2/Cours.html",
-	},
+	}, // Chapitre 10 Partie 2
 	{
 		id: 33,
 		chapter: "Partie 1",
@@ -2340,7 +2352,7 @@ var sixieme_saintexupery = [
 		icone: 26,
 		ready : false,
 		page : "SaintExupery/Chapitre_11_1/Cours.html",
-	},
+	}, // Chapitre 11 Partie 1
 	{
 		id: 33,
 		chapter: "Partie 2",
@@ -2348,7 +2360,7 @@ var sixieme_saintexupery = [
 		icone: 26,
 		ready : false,
 		page : "SaintExupery/Chapitre_11_2/Cours.html",
-	},
+	}, // Chapitre 11 Partie 2
 	{
 		id: 33,
 		chapter: "Partie 3",
@@ -2356,7 +2368,7 @@ var sixieme_saintexupery = [
 		icone: 26,
 		ready : false,
 		page : "SaintExupery/Chapitre_11_3/Cours.html",
-	},
+	}, // Chapitre 11 Partie 3
 	{
 		id: 33,
 		chapter: "Partie 1",
@@ -2364,7 +2376,7 @@ var sixieme_saintexupery = [
 		icone: 27,
 		ready : false,
 		page : "SaintExupery/Chapitre_12_1/Cours.html",
-	},
+	}, // Chapitre 12 Partie 1
 	{
 		id: 33,
 		chapter: "Partie 2",
@@ -2372,7 +2384,7 @@ var sixieme_saintexupery = [
 		icone: 27,
 		ready : false,
 		page : "SaintExupery/Chapitre_12_2/Cours.html",
-	},
+	}, // Chapitre 12 Partie 2
 	{
 		id: 33,
 		chapter: "Partie 3",
@@ -2380,15 +2392,15 @@ var sixieme_saintexupery = [
 		icone: 27,
 		ready : false,
 		page : "SaintExupery/Chapitre_12_3/Cours.html",
-	},
+	}, // Chapitre 12 Partie 3
 	{
 		id: 33,
 		chapter: "Partie 4",
 		nom: "Durées",
 		icone: 27,
 		ready : false,
-		page : "SaintExupery/Chapitre_12_3/Cours.html",
-	},
+		page : "SaintExupery/Chapitre_12_4/Cours.html",
+	}, // Chapitre 12 Partie 4
 	{
 		id: 33,
 		chapter: "Partie 1",
@@ -2396,7 +2408,7 @@ var sixieme_saintexupery = [
 		icone: 28,
 		ready : false,
 		page : "SaintExupery/Chapitre_13_1/Cours.html",
-	},
+	}, // Chapitre 13 Partie 1
 	{
 		id: 33,
 		chapter: "Partie 2",
@@ -2404,7 +2416,7 @@ var sixieme_saintexupery = [
 		icone: 28,
 		ready : false,
 		page : "SaintExupery/Chapitre_13_2/Cours.html",
-	},
+	}, // Chapitre 13 Partie 2
 	{
 		id: 33,
 		chapter: "Partie 3",
@@ -2412,14 +2424,14 @@ var sixieme_saintexupery = [
 		icone: 28,
 		ready : false,
 		page : "SaintExupery/Chapitre_13_3/Cours.html",
-	},
+	}, // Chapitre 13 Partie 3
 	{
 		id: 33,
 		nom: "Problèmes de valeurs inconnues",
 		icone: 29,
 		ready : false,
 		page : "SaintExupery/Chapitre_14_1/Cours.html",
-	},
+	}, // Chapitre 14 Partie 1
 ]
 
 
