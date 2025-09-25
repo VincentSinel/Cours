@@ -285,6 +285,12 @@ var quatrieme_base = [
 			id: 1,
 			nom: "Nombres premiers",
 			icone: 1,
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres premiers (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres premiers (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres premiers (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres premiers (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_1/Cours.html"
 	},
@@ -2374,6 +2380,14 @@ var sixieme_saintexupery = [
 		chapter: "Partie 1",
 		nom: "Longueurs",
 		icone: 27,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_12_1/Documents/Chapitre 12 - Partie 1 - Longueurs (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_12_1/Documents/Chapitre 12 - Partie 1 - Longueurs (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_12_1/Documents/Chapitre 12 - Partie 1 - Longueurs (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_12_1/Documents/Chapitre 12 - Partie 1 - Longueurs (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_12_1/Cours.html",
 	}, // Chapitre 12 Partie 1
@@ -2382,6 +2396,14 @@ var sixieme_saintexupery = [
 		chapter: "Partie 2",
 		nom: "Masse",
 		icone: 27,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_12_2/Documents/Chapitre 12 - Partie 2 - Masse (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_12_2/Documents/Chapitre 12 - Partie 2 - Masse (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_12_2/Documents/Chapitre 12 - Partie 2 - Masse (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_12_2/Documents/Chapitre 12 - Partie 2 - Masse (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_12_2/Cours.html",
 	}, // Chapitre 12 Partie 2
