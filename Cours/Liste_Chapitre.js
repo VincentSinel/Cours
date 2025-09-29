@@ -638,6 +638,12 @@ var cinquieme_saintexupery = [
 			id: 4,
 			nom: "Angles particuliers",
 			icone: 2,
+			download: {
+				docx: 		 "/Cours/5eme/SaintExupery/Chapitre_4/Documents/Chapitre 4 - Angles particuliers (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_4/Documents/Chapitre 4 - Angles particuliers (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery/Chapitre_4/Documents/Chapitre 4 - Angles particuliers (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_4/Documents/Chapitre 4 - Angles particuliers (A trou).pdf",
+			},
 			ready : true,
 			page : "SaintExupery/Chapitre_4/Cours.html"
 	},
