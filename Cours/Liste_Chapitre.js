@@ -612,6 +612,12 @@ var cinquieme_saintexupery = [
 			id: 2,
 			nom: "Symétries",
 			icone: 2,
+			download: {
+				docx: 		 "/Cours/5eme/Base/Chapitre_2/Documents/Chapitre 2 - Symétries (Complet).docx",
+				pdf:  		 "/Cours/5eme/Base/Chapitre_2/Documents/Chapitre 2 - Symétries (Complet).pdf",
+				docx_trou: "/Cours/5eme/Base/Chapitre_2/Documents/Chapitre 2 - Symétries (A trou).docx",
+				pdf_trou:  "/Cours/5eme/Base/Chapitre_2/Documents/Chapitre 2 - Symétries (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_2/Cours.html"
 	},
@@ -619,6 +625,12 @@ var cinquieme_saintexupery = [
 			id: 3,
 			nom: "Priorités opératoires",
 			icone: 1,
+			download: {
+				docx: 		 "/Cours/5eme/Base/Chapitre_3/Documents/Chapitre 3 - Priorités opératoires (Complet).docx",
+				pdf:  		 "/Cours/5eme/Base/Chapitre_3/Documents/Chapitre 3 - Priorités opératoires (Complet).pdf",
+				docx_trou: "/Cours/5eme/Base/Chapitre_3/Documents/Chapitre 3 - Priorités opératoires (A trou).docx",
+				pdf_trou:  "/Cours/5eme/Base/Chapitre_3/Documents/Chapitre 3 - Priorités opératoires (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_3/Cours.html"
 	},
