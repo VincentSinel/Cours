@@ -298,6 +298,12 @@ var quatrieme_base = [
 			id: 2,
 			nom: "Théorème de Pythagore",
 			icone: 2,
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_2/Documents/Chapitre 2 - Théorème de Pythagore (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_2/Documents/Chapitre 2 - Théorème de Pythagore (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_2/Documents/Chapitre 2 - Théorème de Pythagore (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_2/Documents/Chapitre 2 - Théorème de Pythagore (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_2/Cours.html"
 	},
@@ -305,6 +311,12 @@ var quatrieme_base = [
 			id: 3,
 			nom: "Opérations sur les relatifs",
 			icone: 1,
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_3/Documents/Chapitre 3 - Opérations sur les relatifs (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_3/Documents/Chapitre 3 - Opérations sur les relatifs (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_3/Documents/Chapitre 3 - Opérations sur les relatifs (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_3/Documents/Chapitre 3 - Opérations sur les relatifs (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_3/Cours.html"
 	},
@@ -441,6 +453,12 @@ var cinquieme_base = [
 			id: 1,
 			nom: "Nombres Relatifs (Partie 1)",
 			icone: 1,
+			download: {
+				docx: 		 "/Cours/5eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres Relatifs (Complet).docx",
+				pdf:  		 "/Cours/5eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres Relatifs (Complet).pdf",
+				docx_trou: "/Cours/5eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres Relatifs (A trou).docx",
+				pdf_trou:  "/Cours/5eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres Relatifs (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_1/Cours.html",
 	},
@@ -581,6 +599,12 @@ var cinquieme_saintexupery = [
 			id: 1,
 			nom: "Nombres Relatifs - Comparaison et repérage",
 			icone: 1,
+			download: {
+				docx: 		 "/Cours/5eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres Relatifs (Complet).docx",
+				pdf:  		 "/Cours/5eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres Relatifs (Complet).pdf",
+				docx_trou: "/Cours/5eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres Relatifs (A trou).docx",
+				pdf_trou:  "/Cours/5eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres Relatifs (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_1/Cours.html",
 	},
