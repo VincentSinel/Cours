@@ -487,6 +487,12 @@ var cinquieme_base = [
 			id: 5,
 			nom: "Introduction au calcul littéral",
 			icone: 3,
+			download: {
+				docx: 		 "/Cours/5eme/Base/Chapitre_5/Documents/Chapitre 5 - Introduction au calcul littéral (Complet).docx",
+				pdf:  		 "/Cours/5eme/Base/Chapitre_5/Documents/Chapitre 5 - Introduction au calcul littéral (Complet).pdf",
+				docx_trou: "/Cours/5eme/Base/Chapitre_5/Documents/Chapitre 5 - Introduction au calcul littéral (A trou).docx",
+				pdf_trou:  "/Cours/5eme/Base/Chapitre_5/Documents/Chapitre 5 - Introduction au calcul littéral (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_5/Cours.html"
 	},
@@ -651,6 +657,12 @@ var cinquieme_saintexupery = [
 			id: 5,
 			nom: "Calcul littéral (Partie 1)",
 			icone: 3,
+			download: {
+				docx: 		 "/Cours/5eme/Base/Chapitre_5/Documents/Chapitre 5 - Introduction au calcul littéral (Complet).docx",
+				pdf:  		 "/Cours/5eme/Base/Chapitre_5/Documents/Chapitre 5 - Introduction au calcul littéral (Complet).pdf",
+				docx_trou: "/Cours/5eme/Base/Chapitre_5/Documents/Chapitre 5 - Introduction au calcul littéral (A trou).docx",
+				pdf_trou:  "/Cours/5eme/Base/Chapitre_5/Documents/Chapitre 5 - Introduction au calcul littéral (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_5/Cours.html"
 	},
