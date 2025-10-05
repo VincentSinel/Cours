@@ -324,6 +324,12 @@ var quatrieme_base = [
 			id: 4,
 			nom: "Translations et pavages",
 			icone: 2,
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_4/Documents/Chapitre 4 - Translations et pavages (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_4/Documents/Chapitre 4 - Translations et pavages (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_4/Documents/Chapitre 4 - Translations et pavages (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_4/Documents/Chapitre 4 - Translations et pavages (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_4/Cours.html"
 	},
