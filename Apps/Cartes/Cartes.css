@@ -291,7 +291,7 @@ div[class^="tool-"] > button{
 	line-height: 26px;
 }
 
- /* The container must be positioned relative: */
+/* The container must be positioned relative: */
 .custom-select {
   position: relative;
 	border-radius: 3px;
