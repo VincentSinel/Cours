@@ -1,0 +1,145 @@
+
+
+@font-face {
+	font-family: 'Glyphter';
+	src: url('/Font/glyphter-font/fonts/Glyphter.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+div[class^="tool"]{
+	display: flex;
+	gap: 2px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-items: stretch;
+}
+div[class^="tool"] > label{
+	max-height: 24px;
+	
+}
+div[class^="tool"] > img{
+	max-height: 24px;
+}
+div[class^="tool"] > button{
+	max-width: 24px;
+	min-width: 24px;
+	max-height: 24px;
+	min-height: 24px;
+}
+div[class^="tool"] > input:not([type^="checkbox"])
+{
+	flex: 30px 1 1;
+	padding: 0;
+}
+div[class^="tool"] > input[type^="checkbox"]
+{
+	max-height: 24px;
+	margin-top: 0;
+}
+
+.tool-fill > div
+{
+	max-height: 24px;
+	min-width: 44px;
+}
+.tool-fill
+{
+	font-family: 'Glyphter';
+}
+
+
+.tool-stroke > input
+{
+	width: 44px;
+}
+
+
+.tool-font > div
+{
+	max-height: 24px;
+	min-width: 232px;
+}
+.tool-font > input
+{
+	width: 69px;
+}
+
+
+/* .formemenu{
+	height: 38px;
+}
+.show{
+	height: auto;
+} */
+ 
+/* The container must be positioned relative: */
+.custom-select {
+	font-family: 'Glyphter';
+  position: relative;
+	border-radius: 3px;
+	max-height: 24px;
+	min-width: 44px;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: #181818;	
+	width: calc(100% - 8px);
+	color: #DEDEE3;
+	border-radius: 3px;
+	border: #777777 solid 2px;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 8px;
+  right: 5px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #DEDEE3 transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #DEDEE3 transparent;
+  top: 2px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+	color: #e3e3e3;
+  padding: 1px 3px;
+  cursor: pointer;
+	border-radius: 3px;
+  background-color: #181818;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+	overflow-y: scroll;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 44px;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: #7C7C7F;
+} 

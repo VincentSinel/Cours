@@ -64,8 +64,10 @@ function CustomSelect(element, arg = {})
 
 					_remplacement.innerHTML = this.innerHTML;
 
-					_context_menu.getElementsByClassName("same-as-selected").forEach(function(item) {
-						item.classList.remove("same-as-selected") });
+					for(let item of _context_menu.getElementsByClassName("same-as-selected")) 
+					{
+						item.classList.remove("same-as-selected") 
+					};
 					this.classList.add("same-as-selected");
 
 					_remplacement.click();
@@ -81,10 +83,13 @@ function CustomSelect(element, arg = {})
 		closeAllSelect(this);
 		let temp = e.target.getBoundingClientRect()
 		let _context_menu = document.getElementById(this.parentNode.getAttribute("data"))
-		_context_menu.style['top'] = (temp.top + temp.height).toString() + "px";
+		if (temp.top + temp.height + 120 < window.innerHeight)
+			_context_menu.style['top'] = (temp.top + temp.height).toString() + "px";
+		else
+			_context_menu.style['top'] = (temp.top - 120).toString() + "px";
 		_context_menu.style['left'] = temp.left.toString() + "px";
 		_context_menu.classList.toggle("select-hide");
-		_context_menu.style['max-height'] = (window.innerHeight - temp.top - temp.height).toString() + "px";
+		_context_menu.style['max-height'] = "120px";
 		this.classList.toggle("select-arrow-active");
 	})
 }
