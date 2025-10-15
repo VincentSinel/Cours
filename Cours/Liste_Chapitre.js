@@ -2448,7 +2448,7 @@ var sixieme_saintexupery = [
 			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.docx",
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.pdf",
 		},
-		ready : false,
+		ready : true,
 		page : "SaintExupery/Chapitre_12_1/Cours.html",
 	}, // Chapitre 12 Partie 1
 	{
@@ -2464,7 +2464,7 @@ var sixieme_saintexupery = [
 			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.docx",
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.pdf",
 		},
-		ready : false,
+		ready : true,
 		page : "SaintExupery/Chapitre_12_2/Cours.html",
 	}, // Chapitre 12 Partie 2
 	{
@@ -2472,6 +2472,14 @@ var sixieme_saintexupery = [
 		chapter: "Partie 3",
 		nom: "Contenance",
 		icone: 27,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_12_3/Documents/Chapitre 12 - Partie 3 - Contenance (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_12_3/Documents/Chapitre 12 - Partie 3 - Contenance (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_12_3/Documents/Chapitre 12 - Partie 3 - Contenance (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_12_3/Documents/Chapitre 12 - Partie 3 - Contenance (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_12_3/Cours.html",
 	}, // Chapitre 12 Partie 3
@@ -2480,6 +2488,14 @@ var sixieme_saintexupery = [
 		chapter: "Partie 4",
 		nom: "Durées",
 		icone: 27,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_12_4/Documents/Chapitre 12 - Partie 4 - Durées (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_12_4/Documents/Chapitre 12 - Partie 4 - Durées (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_12_4/Documents/Chapitre 12 - Partie 4 - Durées (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_12_4/Documents/Chapitre 12 - Partie 4 - Durées (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_12_4/Cours.html",
 	}, // Chapitre 12 Partie 4
