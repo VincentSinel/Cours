@@ -2316,14 +2316,30 @@ var sixieme_saintexupery = [
 		chapter: "Partie 1",
 		nom: "Angles",
 		icone: 22,
-		ready : false,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_7_1/Documents/Chapitre 7 - Partie 1 - Angles (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_7_1/Documents/Chapitre 7 - Partie 1 - Angles (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_7_1/Documents/Chapitre 7 - Partie 1 - Angles (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_7_1/Documents/Chapitre 7 - Partie 1 - Angles (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 7 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 7 - Activité d'introduction.pdf",
+		},
+		ready : true,
 		page : "SaintExupery/Chapitre_7_1/Cours.html",
 	}, // Chapitre 7 Partie 1
 	{
 		id: 23,
 		chapter: "Partie 2",
-		nom: "Angles particuliers",
+		nom: "Angles particuliers et bissectrice",
 		icone: 22,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_7_2/Documents/Chapitre 7 - Partie 2 - Angles particuliers et bissectrice (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_7_2/Documents/Chapitre 7 - Partie 2 - Angles particuliers et bissectrice (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_7_2/Documents/Chapitre 7 - Partie 2 - Angles particuliers et bissectrice (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_7_2/Documents/Chapitre 7 - Partie 2 - Angles particuliers et bissectrice (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 7 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 7 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_7_2/Cours.html",
 	}, // Chapitre 7 Partie 2
@@ -2332,6 +2348,14 @@ var sixieme_saintexupery = [
 		chapter: "Partie 1",
 		nom: "Symétrie axiale",
 		icone: 23,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_8_1/Documents/Chapitre 8 - Partie 1 - Symétrie axiale (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_8_1/Documents/Chapitre 8 - Partie 1 - Symétrie axiale (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_8_1/Documents/Chapitre 8 - Partie 1 - Symétrie axiale (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_8_1/Documents/Chapitre 8 - Partie 1 - Symétrie axiale (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 8 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 8 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_8_1/Cours.html",
 	}, // Chapitre 8 Partie 1
@@ -2340,6 +2364,14 @@ var sixieme_saintexupery = [
 		chapter: "Partie 2",
 		nom: "Propriétés de la symétrie axiale",
 		icone: 23,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_8_2/Documents/Chapitre 8 - Partie 2 - Propriétés de la symétrie axiale (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_8_2/Documents/Chapitre 8 - Partie 2 - Propriétés de la symétrie axiale (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_8_2/Documents/Chapitre 8 - Partie 2 - Propriétés de la symétrie axiale (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_8_2/Documents/Chapitre 8 - Partie 2 - Propriétés de la symétrie axiale (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 8 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 8 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_8_2/Cours.html",
 	}, // Chapitre 8 Partie 2
@@ -2348,6 +2380,14 @@ var sixieme_saintexupery = [
 		chapter: "Partie 3",
 		nom: "Axes de symétrie",
 		icone: 23,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_8_3/Documents/Chapitre 8 - Partie 3 - Axes de symétrie (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_8_3/Documents/Chapitre 8 - Partie 3 - Axes de symétrie (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_8_3/Documents/Chapitre 8 - Partie 3 - Axes de symétrie (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_8_3/Documents/Chapitre 8 - Partie 3 - Axes de symétrie (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 8 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 8 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_8_3/Cours.html",
 	}, // Chapitre 8 Partie 3
