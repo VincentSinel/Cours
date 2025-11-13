@@ -11,7 +11,7 @@ var lastselected = null;
 var SelectedChapter = null
     
 frame.onload = function() { ReajustIframe() }
-window.onload = function(){ ShowCollegeSelect(); CreatePDFButton() }
+window.onload = function(){ ShowCollegeSelect(); CreatePDFButton(); GetCurrentHash(); }
 window.onresize = function() { ReajustIframe() }
 
 function ReajustIframe()
@@ -20,8 +20,10 @@ function ReajustIframe()
     frame.style.height = frame.contentWindow.document.body.scrollHeight + 120 + 'px';
 }
 
-function ClicChapter(path, a, element)
+function ClicChapter(path, a, element, folder)
 {
+    document.location.hash = College_Selected + "#" + folder + "#" + element.id.toString();
+
     SelectedChapter = element;
     document.getElementById("noiframe").style.display = "none"
     frame.src = path
@@ -230,6 +232,8 @@ function SetDownloadButton(path, element)
 function SelectCollege(name)
 {
     College_Selected = name;
+    document.location.hash = name;
+
     document.getElementById("HoverMenu").style.display = "none";
     document.getElementById("titrepagecollege").className = "";
     document.getElementById("titrepagedate").className = "";
@@ -323,7 +327,7 @@ function CreateDiv(parent, name, folder)
         if (element.ready)
         {
             a.onclick = function() { 
-                ClicChapter('/Cours/' + folder + '/' + element.page, this, element); }
+                ClicChapter('/Cours/' + folder + '/' + element.page, this, element, folder); }
         }
         
         var b = document.createElement("div");
@@ -356,3 +360,42 @@ function CreateDiv(parent, name, folder)
 }
 
 
+function GetCurrentHash()
+{
+    var list = location.hash.split("#");
+    if (list.length != 4) return;
+    SelectCollege(list[1]);
+    switch (list[2])
+    {
+        case "3eme":
+            SelectClasse(0);
+            SelectChapter("troisieme", list[2], list[3]);
+            break;
+        case "4eme":
+            SelectClasse(1);
+            SelectChapter("quatrieme", list[2], list[3]);
+            break;
+        case "5eme":
+            SelectClasse(2);
+            SelectChapter("cinquieme", list[2], list[3]);
+            break;
+        case "6eme":
+            SelectClasse(3);
+            SelectChapter("sixieme", list[2], list[3]);
+            break;
+    }
+}
+
+function SelectChapter(classe, folder, id)
+{
+    var list = ListeCours[classe][College_Selected];
+    for (let i = 0; i < list.length; i++) {
+        const cours = list[i];
+        if (cours.id == id)
+        {
+            let element = document.getElementById("Cours" + folder).children[i];
+            ClicChapter('/Cours/' + folder + '/' + cours.page, element, cours, folder); 
+            return
+        }
+    }
+}
