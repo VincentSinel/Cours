@@ -49,17 +49,28 @@ class Diagramme_Circulaire
         if (config.hasOwnProperty("stroke_width")) this.stroke_width = config["stroke_width"];
         if (config.hasOwnProperty("transparency")) this.transparency = config["transparency"];
         if (config.hasOwnProperty("border")) this.border = config["border"];
-        let e = document.getElementById(this.element_id);
-        e.style.border = "solid black 1px";
-        e.style.width = "fit-content"
-        this.Draw();
+        
+        if (this.element_id != "")
+        {
+            let e = document.getElementById(this.element_id);
+            e.style.border = "solid black 1px";
+            e.style.width = "fit-content"
+            this.draw = SVG().addTo("#" + this.element_id).size(this.Canvas_width, this.Canvas_height)
+            this.Draw(this.draw);
+        }
+        else
+        {
+            if (config.hasOwnProperty("draw_surface"))
+            {
+                this.Draw(config["draw_surface"]);
+            }
+        }
     }
 
     lineh;
 
-    Draw()
+    Draw(draw)
     {
-        this.draw = SVG().addTo("#" + this.element_id).size(this.Canvas_width, this.Canvas_height)
         let w = this.Canvas_width - this.margin_left - this.margin_right;
         let h = this.Canvas_height - this.margin_up - this.margin_down;
 
@@ -74,16 +85,16 @@ class Diagramme_Circulaire
 
         let tsx = this.margin_left + dw + this.legende_space;
 		
-        this.Draw_Diagramme(dsx, dsy, dw, dh);
-        this.Draw_Text(tsx, dsy, tw, dh);
+        this.Draw_Diagramme(draw, dsx, dsy, dw, dh);
+        this.Draw_Text(draw, tsx, dsy, tw, dh);
 
-        let text3 = this.draw.text(this.title)
+        let text3 = draw.text(this.title)
         text3.move(this.margin_left + w / 2, this.margin_up - this.lineh /4)
         text3.font({ fill: 'black', family: 'Bahnschrift', size: this.text_size, anchor:'middle' })
         
     }
 
-    Draw_Text(sx, sy, w, h)
+    Draw_Text(draw, sx, sy, w, h)
     {
 		var text_style = { fill: 'black', family: 'Bahnschrift', size: this.text_size, anchor:'left' }
         let dy = h / this.effectifs.length;
@@ -91,21 +102,21 @@ class Diagramme_Circulaire
         for (let i = 0; i < this.effectifs.length; i++) 
 		{
             let c = this.colors[i % this.colors.length];
-			let rect = this.draw.rect(this.legende_square_size, this.legende_square_size)
+			let rect = draw.rect(this.legende_square_size, this.legende_square_size)
             rect.move(sx, sy + sdy + dy * i)
             rect.fill({color: c, opacity: this.transparency})
             rect.stroke({color: c, width: this.stroke_width})
 			if (this.etiquettes.length > i)
 			{
                 let y = sy + (i+0.5) * dy;
-                let text = this.draw.text(this.etiquettes[i])
+                let text = draw.text(this.etiquettes[i])
                 text.move(sx + this.legende_square_size + 5, y + 3.5 - this.lineh / 2.0)
                 text.font(text_style)
             }
         }
     }
 
-    Draw_Diagramme(sx, sy, w, h)
+    Draw_Diagramme(draw, sx, sy, w, h)
     {
 		let radius = Math.min(w / 2.0, h / 2.0);
 		let effectif_total = 0.0;
@@ -133,14 +144,14 @@ class Diagramme_Circulaire
 			txt += "A"+radius.toString()+" "+radius.toString() + " 0 " + big + " 1 "
 			txt += xe.toString()+" "+ye.toString()
 			txt += "z";
-			let path = this.draw.path(txt)
+			let path = draw.path(txt)
             path.fill({color: c, opacity: this.transparency})
             path.stroke({color: c, width: this.stroke_width})
 			da += a;
         }
         if (this.border)
         {
-            let el = this.draw.ellipse(radius * 2, radius * 2);
+            let el = draw.ellipse(radius * 2, radius * 2);
             el.move(cx - radius, cy - radius);
             el.fill({opacity: 0})
             el.stroke({color: 'black', width: this.stroke_width})

@@ -66,17 +66,28 @@ class Diagramme_Baton
         if (config.hasOwnProperty("grid_width")) this.grid_width = config["grid_width"];
         if (config.hasOwnProperty("transparency")) this.transparency = config["transparency"];
         if (config.hasOwnProperty("show_value_bar")) this.show_value_bar = config["show_value_bar"];
-        let e = document.getElementById(this.element_id);
-        e.style.border = "solid black 1px";
-        e.style.width = "fit-content"
-        this.Draw();
+        
+        if (this.element_id != "")
+        {
+            let e = document.getElementById(this.element_id);
+            e.style.border = "solid black 1px";
+            e.style.width = "fit-content"
+            this.draw = SVG().addTo("#" + this.element_id).size(this.Canvas_width, this.Canvas_height)
+            this.Draw(this.draw);
+        }
+        else
+        {
+            if (config.hasOwnProperty("draw_surface"))
+            {
+                this.Draw(config["draw_surface"]);
+            }
+        }
     }
 
     lineh;
 
-    Draw()
+    Draw(draw)
     {
-        this.draw = SVG().addTo("#" + this.element_id).size(this.Canvas_width, this.Canvas_height)
         let w = this.Canvas_width - this.margin_left - this.margin_right;
         let h = this.Canvas_height - this.margin_up - this.margin_down;
 
@@ -91,25 +102,25 @@ class Diagramme_Baton
         let dw = ex1 - sx
         let dh = ey2 - sy
         if (this.grid)
-            this.Draw_Grid(sx, sy, dw, dh);
-        this.Draw_Diagramme(sx, sy, dw, dh);
-        this.Draw_Axes(sx, sy, dw, dh);
-        this.Draw_Text(sx, sy, dw, dh);
+            this.Draw_Grid(draw, sx, sy, dw, dh);
+        this.Draw_Diagramme(draw, sx, sy, dw, dh);
+        this.Draw_Axes(draw, sx, sy, dw, dh);
+        this.Draw_Text(draw, sx, sy, dw, dh);
 
-        let text1 = this.draw.text(this.Haxe_name)
+        let text1 = draw.text(this.Haxe_name)
         text1.move(ex1, sy + this.graduation_size / 2.0 + this.lineh)
         text1.font({ fill: 'black', family: 'Bahnschrift', size: this.text_size, anchor:'end' })
-        let text2 = this.draw.text(this.Vaxe_name)
+        let text2 = draw.text(this.Vaxe_name)
         text2.move(this.margin_left, this.margin_up + this.lineh - this.lineh /4)
         text2.font({ fill: 'black', family: 'Bahnschrift', size: this.text_size, anchor:'start' })
-        let text3 = this.draw.text(this.title)
+        let text3 = draw.text(this.title)
         text3.move(this.margin_left + w / 2, this.margin_up - this.lineh /4)
         text3.font({ fill: 'black', family: 'Bahnschrift', size: this.text_size, anchor:'middle' })
         
     }
 
 
-    Draw_Grid(sx, sy, w, h)
+    Draw_Grid(draw, sx, sy, w, h)
     {
 		let grid_style = {width: this.grid_width, color: this.grid_color};
         let dy = h / this.max_eff;
@@ -121,13 +132,13 @@ class Diagramme_Baton
         for (let i = 1; i <= this.max_eff; i++) {
             if (i % pass != 0) continue;
             let y = sy + i * dy;
-            this.draw.line(sx, y, sx + w, y)
+            draw.line(sx, y, sx + w, y)
             .stroke(grid_style);
         }
 
     }
 
-    Draw_Axes(sx, sy, w, h)
+    Draw_Axes(draw, sx, sy, w, h)
     {
 		var stroke_style = {width: this.stroke_width, color: "black"};
         let dy = h / this.max_eff;
@@ -139,16 +150,16 @@ class Diagramme_Baton
         for (let i = 0; i <= this.max_eff; i++) {
             if (i % pass != 0) continue;
             let dy = sy + i * h / this.max_eff;
-            this.draw.line(sx - this.graduation_size / 2.0, dy, sx + this.graduation_size / 2.0, dy)
+            draw.line(sx - this.graduation_size / 2.0, dy, sx + this.graduation_size / 2.0, dy)
             .stroke(stroke_style);
         }
-        this.draw.line(sx, sy, sx + w, sy)
+        draw.line(sx, sy, sx + w, sy)
             .stroke(stroke_style);
-        this.draw.line(sx, sy, sx, sy + h)
+        draw.line(sx, sy, sx, sy + h)
             .stroke(stroke_style);
     }
 
-    Draw_Text(sx, sy, w, h)
+    Draw_Text(draw, sx, sy, w, h)
     {
 		var text_style = { fill: 'black', family: 'Bahnschrift', size: this.text_size, anchor:'end' }
         let dy = h / this.max_eff;
@@ -161,7 +172,7 @@ class Diagramme_Baton
             if (i % pass == 0)
             {
                 let y = sy + i * dy;
-                let text = this.draw.text(i.toString())
+                let text = draw.text(i.toString())
                 text.move(sx - this.graduation_size / 2.0, y - this.lineh / 2.0)
                 text.font(text_style)
             }
@@ -170,7 +181,7 @@ class Diagramme_Baton
         for (let i = 0; i < this.etiquettes.length; i++) {
             let dx = sx + (i + 0.5) * w / (this.bar);
 			dx += this.etiq_offset_x;
-            let text = this.draw.text(this.etiquettes[i])
+            let text = draw.text(this.etiquettes[i])
             text.move(dx, sy + this.graduation_size / 2.0 + this.etiq_offset_y)
             text.font(text_style)
 			text.rotate(-this.etiq_offset_angle)
@@ -178,14 +189,14 @@ class Diagramme_Baton
             if (this.show_value_bar)
             {
                 let ty = dy * this.effectifs[i]
-                let text = this.draw.text(this.effectifs[i].toString())
+                let text = draw.text(this.effectifs[i].toString())
                 text.move(dx, sy - this.graduation_size / 2.0 - this.text_size + ty)
                 text.font(text_style)
             }
 		}
     }
 
-    Draw_Diagramme(sx, sy, w, h)
+    Draw_Diagramme(draw, sx, sy, w, h)
     {
         let dx = w / (this.bar);
         let dy = h / this.max_eff;
@@ -196,7 +207,7 @@ class Diagramme_Baton
             let c = this.colors[i % this.colors.length];
 
 
-            let rect = this.draw.rect( (dx - 1) * this.bar_width / 100.0, Math.abs(dy* this.effectifs[i])-0.5)
+            let rect = draw.rect( (dx - 1) * this.bar_width / 100.0, Math.abs(dy* this.effectifs[i])-0.5)
             rect.move(sx + dx * i+0.5 + offset_x, sy + dy * this.effectifs[i])
             rect.fill({color: c, opacity: this.transparency})
             rect.stroke({color: c, width: this.grid_width})

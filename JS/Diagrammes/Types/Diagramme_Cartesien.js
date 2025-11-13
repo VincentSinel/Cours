@@ -69,17 +69,28 @@ class Diagramme_Cartesien
         if (config.hasOwnProperty("grid_width")) this.grid_width = config["grid_width"];
         if (config.hasOwnProperty("point_size")) this.grid_width = config["point_size"];
         if (config.hasOwnProperty("points")) this.points = config["points"];
-        let e = document.getElementById(this.element_id);
-        e.style.border = "solid black 1px";
-        e.style.width = "fit-content"
-        this.Draw();
+        
+        if (this.element_id != "")
+        {
+            let e = document.getElementById(this.element_id);
+            e.style.border = "solid black 1px";
+            e.style.width = "fit-content"
+            this.draw = SVG().addTo("#" + this.element_id).size(this.Canvas_width, this.Canvas_height)
+            this.Draw(this.draw);
+        }
+        else
+        {
+            if (config.hasOwnProperty("draw_surface"))
+            {
+                this.Draw(config["draw_surface"]);
+            }
+        }
     }
 
     lineh;
 
-    Draw()
+    Draw(draw)
     {
-        this.draw = SVG().addTo("#" + this.element_id).size(this.Canvas_width, this.Canvas_height)
         let w = this.Canvas_width - this.margin_left - this.margin_right;
         let h = this.Canvas_height - this.margin_up - this.margin_down;
 
@@ -94,25 +105,25 @@ class Diagramme_Cartesien
         let dw = ex1 - sx
         let dh = ey2 - sy
         if (this.grid)
-            this.Draw_Grid(sx, sy, dw, dh);
-        this.Draw_Diagramme(sx, sy, dw, dh);
-        this.Draw_Axes(sx, sy, dw, dh);
-        this.Draw_Text(sx, sy, dw, dh);
+            this.Draw_Grid(draw, sx, sy, dw, dh);
+        this.Draw_Diagramme(draw, sx, sy, dw, dh);
+        this.Draw_Axes(draw, sx, sy, dw, dh);
+        this.Draw_Text(draw, sx, sy, dw, dh);
 
-        let text1 = this.draw.text(this.Haxe_name)
+        let text1 = draw.text(this.Haxe_name)
         text1.move(ex1, sy + this.graduation_size / 2.0 + this.lineh)
         text1.font({ fill: 'black', family: 'Bahnschrift', size: this.text_size, anchor:'end' })
-        let text2 = this.draw.text(this.Vaxe_name)
+        let text2 = draw.text(this.Vaxe_name)
         text2.move(this.margin_up, this.margin_up + this.lineh - this.lineh /4)
         text2.font({ fill: 'black', family: 'Bahnschrift', size: this.text_size, anchor:'start' })
-        let text3 = this.draw.text(this.title)
+        let text3 = draw.text(this.title)
         text3.move(this.margin_left + w / 2, this.margin_up - this.lineh /4)
         text3.font({ fill: 'black', family: 'Bahnschrift', size: this.text_size, anchor:'middle' })
         
     }
 
 
-    Draw_Grid(sx, sy, w, h)
+    Draw_Grid(draw, sx, sy, w, h)
     {
 		let grid_style = {width: this.grid_width, color: this.grid_color}
 		let grid_style2 = {width: this.grid_width / 2.0, color: this.grid_color}
@@ -122,48 +133,48 @@ class Diagramme_Cartesien
             let x = sx + i * dx;
 			if (i %this.Hsubsection == 0)
 			{
-				this.draw.line(x, sy, x, sy + h).stroke(grid_style);
+				draw.line(x, sy, x, sy + h).stroke(grid_style);
 			}
 			else
 			{
-				this.draw.line(x, sy, x, sy + h).stroke(grid_style2);
+				draw.line(x, sy, x, sy + h).stroke(grid_style2);
 			}
         }
         for (let i = 1; i <= this.Vsection * this.Vsubsection; i++) {
             let y = sy + i * dy;
 			if (i %this.Vsubsection == 0)
 			{
-				this.draw.line(sx, y, sx + w, y).stroke(grid_style);
+				draw.line(sx, y, sx + w, y).stroke(grid_style);
 			}
 			else
 			{
-				this.draw.line(sx, y, sx + w, y).stroke(grid_style2);
+				draw.line(sx, y, sx + w, y).stroke(grid_style2);
 			}
         }
     }
 
-    Draw_Axes(sx, sy, w, h)
+    Draw_Axes(draw, sx, sy, w, h)
     {
 		let stroke_style = {width: this.stroke_width, color: "black"};
 		let dx = w / this.Hsection;
 		let dy = h / this.Vsection;
         for (let i = 0; i <= this.Hsection; i++) {
             let x = sx + i * dx;
-            this.draw.line(x, sy - this.graduation_size / 2.0, x, sy + this.graduation_size / 2.0)
+            draw.line(x, sy - this.graduation_size / 2.0, x, sy + this.graduation_size / 2.0)
             .stroke(stroke_style);
         }
         for (let i = 0; i <= this.Vsection; i++) {
             let y = sy + i * dy;
-            this.draw.line(sx - this.graduation_size / 2.0, y, sx + this.graduation_size / 2.0, y)
+            draw.line(sx - this.graduation_size / 2.0, y, sx + this.graduation_size / 2.0, y)
             .stroke(stroke_style);
         }
-        this.draw.line(sx, sy, sx + w, sy)
+        draw.line(sx, sy, sx + w, sy)
             .stroke(stroke_style);
-        this.draw.line(sx, sy, sx, sy + h)
+        draw.line(sx, sy, sx, sy + h)
             .stroke(stroke_style);
     }
 
-    Draw_Text(sx, sy, w, h)
+    Draw_Text(draw, sx, sy, w, h)
     {
 		var text_style = { fill: 'black', family: 'Bahnschrift', size: this.text_size, anchor:'middle' }
 		let dx = w / this.Hsection;
@@ -171,7 +182,7 @@ class Diagramme_Cartesien
         let pass = Math.max(1, Math.floor(this.lineh / Math.abs(dy)));
         for (let i = 0; i <= this.Hsection; i++) {
             let x = sx + i * dx;
-            let text = this.draw.text((this.Hstart + this.Hpas * i).toString())
+            let text = draw.text((this.Hstart + this.Hpas * i).toString())
             text.move(x, sy + this.graduation_size / 2.0 + 2)
             text.font(text_style)
 		}
@@ -179,14 +190,14 @@ class Diagramme_Cartesien
             if (i % pass == 0)
             {
                 let y = sy + i * dy;
-                let text = this.draw.text((this.Vstart + this.Vpas * i).toString())
+                let text = draw.text((this.Vstart + this.Vpas * i).toString())
                 text.move(sx - this.lineh / 2.0 - this.graduation_size / 2.0, y - this.lineh / 2.0)
                 text.font(text_style)
             }
         }
     }
 
-    Draw_Diagramme(sx, sy, w, h)
+    Draw_Diagramme(draw, sx, sy, w, h)
     {
 		let dx = w / (this.Hsection * this.Hpas);
 		let dy = h / (this.Vsection * this.Vpas);
@@ -197,14 +208,14 @@ class Diagramme_Cartesien
 			let x = sx + dx * (this.points[i][0] - this.Hstart);
 			let y = sy + dy * (this.points[i][1] - this.Vstart);
 			
-			let cross1 = this.draw.line(x - this.point_size / 2.0,y,x + this.point_size / 2.0,y)
+			let cross1 = draw.line(x - this.point_size / 2.0,y,x + this.point_size / 2.0,y)
 			cross1.stroke({color: this.stroke_color, width: this.stroke_width})
-			let cross2 = this.draw.line(x, y - this.point_size / 2.0,x, y + this.point_size / 2.0)
+			let cross2 = draw.line(x, y - this.point_size / 2.0,x, y + this.point_size / 2.0)
 			cross2.stroke({color: this.stroke_color, width: this.stroke_width})
 			
 			if (i > 0)
 			{
-				let line = this.draw.line(ox, oy, x, y);
+				let line = draw.line(ox, oy, x, y);
 				line.stroke({color: this.stroke_color, width: this.stroke_width})
 			}
 
