@@ -46,7 +46,7 @@ class EM
 	
 	CreatePatterns()
 	{
-		var coef = 2; // A changer pour adpater la taille des patternes
+		var coef = 2; // A changer pour adpater la taille des patterns
 		this.PatternsMask["pattern1"] = this.SVG_Draw.mask().add(
 			this.SVG_Draw.rect("100%", "100%").fill(
 				this.SVG_Draw.pattern(10 * coef, 10 * coef, function(add) {
@@ -59,9 +59,9 @@ class EM
 		this.PatternsMask["pattern2"] = this.SVG_Draw.mask().add(
 			this.SVG_Draw.rect("100%", "100%").fill(
 				this.SVG_Draw.pattern(10 * coef, 10 * coef, function(add) {
-					add.line(0,0,0,10 * coef).stroke('#fff')
-					add.line(5 * coef,0,5 * coef,10 * coef).stroke('#fff') 
-					add.line(10 * coef,0,10 * coef,10 * coef).stroke('#fff')
+					add.line(0,0,0,10 * coef).stroke('#fff').attr({'stroke-width': 3})
+					add.line(5 * coef,0,5 * coef,10 * coef).stroke('#fff') .attr({'stroke-width': 3})
+					add.line(10 * coef,0,10 * coef,10 * coef).stroke('#fff').attr({'stroke-width': 3})
 				}).url()
 				)
 		)
@@ -69,9 +69,9 @@ class EM
 		this.PatternsMask["pattern3"] = this.SVG_Draw.mask().add(
 			this.SVG_Draw.rect("100%", "100%").fill(
 				this.SVG_Draw.pattern(10 * coef, 10 * coef, function(add) {
-					add.line(0,0,10 * coef,0).stroke('#fff')
-					add.line(0,5 * coef,10 * coef,5 * coef).stroke('#fff') 
-					add.line(0,10 * coef,10 * coef,10 * coef).stroke('#fff')
+					add.line(0,0,10 * coef,0).stroke('#fff').attr({'stroke-width': 3})
+					add.line(0,5 * coef,10 * coef,5 * coef).stroke('#fff').attr({'stroke-width': 3})
+					add.line(0,10 * coef,10 * coef,10 * coef).stroke('#fff').attr({'stroke-width': 3})
 				}).url()
 				)
 		)
@@ -79,9 +79,9 @@ class EM
 		this.PatternsMask["pattern4"] = this.SVG_Draw.mask().add(
 			this.SVG_Draw.rect("100%", "100%").fill(
 				this.SVG_Draw.pattern(10 * coef, 10 * coef, function(add) {
-					add.line(0,0,10 * coef,10 * coef).stroke('#fff')
-					add.line(5 * coef,-5 * coef,15 * coef, 5 * coef).stroke('#fff') 
-					add.line(-5 * coef, 5 * coef,5 * coef,15 * coef).stroke('#fff')
+					add.line(0,0,10 * coef,10 * coef).stroke('#fff').attr({'stroke-width': 3})
+					add.line(5 * coef,-5 * coef,15 * coef, 5 * coef).stroke('#fff').attr({'stroke-width': 3})
+					add.line(-5 * coef, 5 * coef,5 * coef,15 * coef).stroke('#fff').attr({'stroke-width': 3})
 				}).url()
 				)
 		)
@@ -89,9 +89,9 @@ class EM
 		this.PatternsMask["pattern5"] = this.SVG_Draw.mask().add(
 			this.SVG_Draw.rect("100%", "100%").fill(
 				this.SVG_Draw.pattern(10 * coef, 10 * coef, function(add) {
-					add.line(0,10 * coef,10 * coef,0).stroke('#fff')
-					add.line(-5 * coef, 5 * coef,5 * coef,-5 * coef).stroke('#fff') 
-					add.line(5 * coef,15 * coef,15 * coef, 5 * coef).stroke('#fff')
+					add.line(0,10 * coef,10 * coef,0).stroke('#fff').attr({'stroke-width': 3})
+					add.line(-5 * coef, 5 * coef,5 * coef,-5 * coef).stroke('#fff').attr({'stroke-width': 3})
+					add.line(5 * coef,15 * coef,15 * coef, 5 * coef).stroke('#fff').attr({'stroke-width': 3})
 				}).url()
 				)
 		)

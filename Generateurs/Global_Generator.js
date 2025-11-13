@@ -878,8 +878,6 @@ const pSBC=(p,c0,c1,l)=>{
 					element.attr(attr_white)
 					element = paper.text(p.x, p.y + txt_size * 0.7, value2.toString());
 					element.attr(attr_black)
-					element = paper.text(p.x, p.y + txt_size * 0.7, value2.toString());
-					element.attr(attr_black)
 
 					let line = draw_line(paper, p.x - txt_size / 2.0, p.y, p.x + txt_size / 2.0, p.y);
 					line.attr(
@@ -2141,10 +2139,6 @@ function Solide_Pyramide(paper, data)
 	let sol_pyrami_h_stroke = data["sol_pyrami_h_stroke"]
 	let sol_pyrami_h_color = data["sol_pyrami_h_color"]
 	let sol_pyrami_h_style = data["sol_pyrami_h_style"]
-	let sol_pyrami_r = data["sol_pyrami_r"]
-	let sol_pyrami_r_stroke = data["sol_pyrami_r_stroke"]
-	let sol_pyrami_r_color = data["sol_pyrami_r_color"]
-	let sol_pyrami_r_style = data["sol_pyrami_r_style"]
 	let sol_pyrami_ag = data["sol_pyrami_ag"]
 	let sol_pyrami_ag_stroke = data["sol_pyrami_ag_stroke"]
 	let sol_pyrami_ag_full = data["sol_pyrami_ag_full"]
@@ -2866,7 +2860,6 @@ function Solide_Sphere(paper, data)
 	if (sol_sphere_lon)
 	{
 		let size = get_lon_size(R, sol_sphere_lon_angle, AngleVue);
-		console.log(size)
 		let ellipse;
 		if (size[1] == 0)
 		{
