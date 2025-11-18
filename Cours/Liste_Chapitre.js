@@ -682,6 +682,12 @@ var cinquieme_saintexupery = [
 			id: 6,
 			nom: "Angles d'un triangle",
 			icone: 2,
+			download: {
+				docx: 		 "/Cours/5eme/SaintExupery/Chapitre_6/Documents/Chapitre 6 - Angles d'un triangle (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_6/Documents/Chapitre 6 - Angles d'un triangle (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery/Chapitre_6/Documents/Chapitre 6 - Angles d'un triangle (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_6/Documents/Chapitre 6 - Angles d'un triangle (A trou).pdf",
+			},
 			ready : true,
 			page : "SaintExupery/Chapitre_6/Cours.html"
 	},
