@@ -337,6 +337,12 @@ var quatrieme_base = [
 			id: 5,
 			nom: "Additions et soustractions de fractions",
 			icone: 1,
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_5/Documents/Chapitre 5 - Additions et soustractions de fractions (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_5/Documents/Chapitre 5 - Additions et soustractions de fractions (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_5/Documents/Chapitre 5 - Additions et soustractions de fractions (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_5/Documents/Chapitre 5 - Additions et soustractions de fractions (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_5/Cours.html"
 	},
