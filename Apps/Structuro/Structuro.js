@@ -433,10 +433,16 @@ function DrawIso()
 		
 		y1 = y1 + more - (Cube_w() % 2) * cube_size / 2
 		y2 = y2 + more - (Cube_w() % 2) * cube_size / 2
-		if (y1 == more && x1 > 1)
+		if (Cube_w() % 2 == 1 && Cube_d() % 2 == 0)
+		{
+			y1 += cube_size;
+			y2 += cube_size;
+		}
+		if (y1 >= more && x1 > 1)
 		{
 			y1 = 0;
-			x1 -= cube_size * sin60;
+			// x1 -= cube_size * sin60;
+			x1 -= cube_size * sin60 * ((Cube_w() + Cube_d()) % 2);
 		}
 		if (y2 > pot_h * cube_size)
 		{
