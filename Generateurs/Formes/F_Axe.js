@@ -139,14 +139,24 @@ class F_Axe extends F_Base
 				height: this.EM.Size.h, 
 				left_x: 5,
 				right_x: this.EM.Size.w - this.Parameters["axe_line_pri_arrow"] - 5,
-				y: this.EM.Size.h / 2
+				y: this.EM.Size.h / 2,
+				top_y: 5,
+				bottom_y: this.EM.Size.h -10
 			},
 			base: {
 				width: this.EM.Size.w - this.Parameters["axe_line_pri_arrow"], 
 				height: this.EM.Size.h, 
 				left_x: 0,
 				right_x: this.EM.Size.w - this.Parameters["axe_line_pri_arrow"],
-				y: this.EM.Size.h / 2
+				y: this.EM.Size.h / 2,
+				top_y: 0,
+				bottom_y: this.EM.Size.h
+			},
+			reel: {
+				x_start: this.Parameters["axe_start"],
+				x_end: this.Parameters["axe_end"],
+				y_start: 0,
+				y_end: 0,
 			}
 		}
 
@@ -168,7 +178,6 @@ class F_Axe extends F_Base
 
 		Prim_Line.dmove(this.EM.Margin, this.EM.Margin);
 		Seco_Line.dmove(this.EM.Margin, this.EM.Margin);
-		this.svg_group["Objects"].dmove(this.EM.Margin, this.EM.Margin);
 		Text.dmove(this.EM.Margin, this.EM.Margin);
 	}
 

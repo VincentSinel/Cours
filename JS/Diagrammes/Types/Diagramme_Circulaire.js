@@ -23,10 +23,8 @@ class Diagramme_Circulaire
 	etiquettes = ["valeur 1","valeur 2","valeur 3","valeur 4","valeur 5"];
     // effectifs des différentes sections
 	effectifs = [5,3,4,40,2];
-    // transparence des sections
-	transparency = 0.8; 
 	//Couleur des sections
-	colors = ["#e60049", "#0bb4ff", "#50e991", "#e6d800", "#9b19f5", "#ffa300", "#dc0ab4", "#b3d4ff", "#00bfa0", "#f0cccc"];
+	colors = ["#e60049B3", "#0bb4ffB3", "#50e991B3", "#e6d800B3", "#9b19f5B3", "#ffa300B3", "#dc0ab4B3", "#b3d4ffB3", "#00bfa0B3", "#f0ccccB3"];
 
     constructor(config)
     {
@@ -47,7 +45,6 @@ class Diagramme_Circulaire
         if (config.hasOwnProperty("text_size")) this.text_size = config["text_size"];
         if (config.hasOwnProperty("legende_square_size")) this.legende_square_size = config["legende_square_size"];
         if (config.hasOwnProperty("stroke_width")) this.stroke_width = config["stroke_width"];
-        if (config.hasOwnProperty("transparency")) this.transparency = config["transparency"];
         if (config.hasOwnProperty("border")) this.border = config["border"];
         
         if (this.element_id != "")
@@ -104,13 +101,13 @@ class Diagramme_Circulaire
             let c = this.colors[i % this.colors.length];
 			let rect = draw.rect(this.legende_square_size, this.legende_square_size)
             rect.move(sx, sy + sdy + dy * i)
-            rect.fill({color: c, opacity: this.transparency})
-            rect.stroke({color: c, width: this.stroke_width})
+            rect.fill({color: c})
+            rect.stroke({color: c.substring(0, c.length - 2), width: this.stroke_width})
 			if (this.etiquettes.length > i)
 			{
                 let y = sy + (i+0.5) * dy;
                 let text = draw.text(this.etiquettes[i])
-                text.move(sx + this.legende_square_size + 5, y + 3.5 - this.lineh / 2.0)
+                text.move(sx + this.legende_square_size + 5, y + 5 - this.lineh)
                 text.font(text_style)
             }
         }
@@ -127,27 +124,38 @@ class Diagramme_Circulaire
 		let cx = sx + w / 2.0
 		let cy = sy + h / 2.0
 		let startpos = "M"+ cx.toString() + " " + cy.toString() + "L"
-        for (let i = 0; i < this.effectifs.length; i++) {
-            if (this.effectifs[i] == 0) continue;
-			let a = 360.0 * this.effectifs[i] / effectif_total;
-            let c = this.colors[i % this.colors.length];
-
-			let xs = cx + radius * Math.cos(da / 180.0 * Math.PI);
-			let ys = cy + radius * Math.sin(da / 180.0 * Math.PI);
-
-			let xe = cx + radius * Math.cos((da + a) / 180.0 * Math.PI);
-			let ye = cy + radius * Math.sin((da + a) / 180.0 * Math.PI);
-
-			let txt = startpos + xs.toString()+" "+ys.toString();
-			let big = "0"
-			if (a > 180.0) big = "1"
-			txt += "A"+radius.toString()+" "+radius.toString() + " 0 " + big + " 1 "
-			txt += xe.toString()+" "+ye.toString()
-			txt += "z";
-			let path = draw.path(txt)
-            path.fill({color: c, opacity: this.transparency})
-            path.stroke({color: c, width: this.stroke_width})
-			da += a;
+        if (this.effectifs.length == 1)
+        {
+            let c = this.colors[0];
+            let path = draw.ellipse(radius * 2, radius * 2);
+            path.move(cx - radius, cy - radius);
+            path.fill({color: c})
+            path.stroke({color: c.substring(0, c.length - 2), width: this.stroke_width})
+        }
+        else
+        {
+            for (let i = 0; i < this.effectifs.length; i++) {
+                if (this.effectifs[i] == 0) continue;
+                let a = 360.0 * this.effectifs[i] / effectif_total;
+                let c = this.colors[i % this.colors.length];
+    
+                let xs = cx + radius * Math.cos(da / 180.0 * Math.PI);
+                let ys = cy + radius * Math.sin(da / 180.0 * Math.PI);
+    
+                let xe = cx + radius * Math.cos((da + a) / 180.0 * Math.PI);
+                let ye = cy + radius * Math.sin((da + a) / 180.0 * Math.PI);
+    
+                let txt = startpos + xs.toString()+" "+ys.toString();
+                let big = "0"
+                if (a > 180.0) big = "1"
+                txt += "A"+radius.toString()+" "+radius.toString() + " 0 " + big + " 1 "
+                txt += xe.toString()+" "+ye.toString()
+                txt += "z";
+                let path = draw.path(txt)
+                path.fill({color: c})
+                path.stroke({color: c.substring(0, c.length - 2), width: this.stroke_width})
+                da += a;
+            }
         }
         if (this.border)
         {

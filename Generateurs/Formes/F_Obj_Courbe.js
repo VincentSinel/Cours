@@ -51,7 +51,7 @@ class F_Obj_Courbe extends F_Obj
 				strokecolor: this.E_strokecolor.getAttribute("data-color"),
 				stroketype: this.E_strokestyle.value
 			}
-		); this.ParentObject.Object.push(newobj); this.ParentObject.Recreate(); }
+		); this.ParentObject.Object.add(newobj); this.ParentObject.Recreate(); }
 
 		var div_icon_delete = document.createElement("div");
 		div_icon_delete.classList.add("iconbutton")

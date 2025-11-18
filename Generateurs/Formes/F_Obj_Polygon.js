@@ -1,23 +1,32 @@
 class F_Obj_Polygon extends F_Obj
 {
 	E_tile;
-	E_function;
-	E_xstart;
-	E_xend;
+	E_pointlist;
+	E_points = new Set();
 	E_strokewidth;
 	E_strokecolor;
-	E_strokestyle;
+	E_stroketype;
+	E_fill;
+	E_filloptions;
+	E_fillcolor;
+	E_fillpattern;
+
+	DrawGroup_stroke;
+	DrawGroup_fill;
+
+	alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 	constructor(parent, parameters = {})
 	{
 		super(parent);
 
-		if (!parameters.hasOwnProperty("function")) parameters["function"] = "Math.sin(x)";
-		if (!parameters.hasOwnProperty("xstart")) parameters["xstart"] = parent.Parameters["hor_start"] - 1;
-		if (!parameters.hasOwnProperty("xend")) parameters["xend"] = parent.Parameters["hor_end"] + 1;
-		if (!parameters.hasOwnProperty("strokewidth")) parameters["strokewidth"] = 2;
-		if (!parameters.hasOwnProperty("strokecolor")) parameters["strokecolor"] = "red";
-		if (!parameters.hasOwnProperty("stroketype")) parameters["stroketype"] = "";
+		if (!parameters.hasOwnProperty("points")) parameters["points"] = [[0,0], [2,1] , [1,2]]
+		if (!parameters.hasOwnProperty("strokewidth")) parameters["strokewidth"] = 2
+		if (!parameters.hasOwnProperty("strokecolor")) parameters["strokecolor"] = "red"
+		if (!parameters.hasOwnProperty("stroketype")) parameters["stroketype"] = ""
+		if (!parameters.hasOwnProperty("fill")) parameters["fill"] = false;
+		if (!parameters.hasOwnProperty("fillcolor")) parameters["fillcolor"] = "black";
+		if (!parameters.hasOwnProperty("fillpattern")) parameters["fillpattern"] = 0;
 
 		this.CreateElements(parameters);
 	}
@@ -32,7 +41,7 @@ class F_Obj_Polygon extends F_Obj
 		this.E_tile = document.createElement("span");
 		this.E_tile.classList.add("Object_title");
 		this.E_tile.onclick = () => {this.Root.classList.toggle("show")}
-		this.E_tile.innerHTML = "Courbe " + parameters["function"];
+		this.E_tile.innerHTML = "Polygone";
 		div_title.appendChild(this.E_tile)
 
 		var div_icon_duplicate = document.createElement("div");
@@ -42,16 +51,25 @@ class F_Obj_Polygon extends F_Obj
 		var img_duplicate = document.createElement("img");
 		img_duplicate.src = "/Images/Icons/Copy.svg"
 		div_icon_duplicate.appendChild(img_duplicate)
-		img_duplicate.onclick = () => { let newobj = new F_Obj_Courbe(this.ParentObject, 
+		img_duplicate.onclick = () => { 
+			let points = []
+			this.E_points.forEach(point => {
+				points.push([
+					point.x.valueAsNumber,
+					point.y.valueAsNumber
+				])
+			});
+			let newobj = new F_Obj_Polygon(this.ParentObject, 
 			{
-				function: this.E_function.value,
-				xstart: this.E_xstart.valueAsNumber,
-				xend: this.E_xend.valueAsNumber,
+				points: points,
 				strokewidth: this.E_strokewidth.valueAsNumber,
 				strokecolor: this.E_strokecolor.getAttribute("data-color"),
-				stroketype: this.E_strokestyle.value
+				stroketype: this.E_stroketype.value,
+				fill: this.E_fill.checked,
+				fillcolor: this.E_fillcolor.getAttribute("data-color"),
+				fillpattern: this.E_fillpattern.selectedIndex
 			}
-		); this.ParentObject.Object.push(newobj); this.ParentObject.Recreate(); }
+		); this.ParentObject.Object.add(newobj); this.ParentObject.Recreate(); }
 
 		var div_icon_delete = document.createElement("div");
 		div_icon_delete.classList.add("iconbutton")
@@ -66,60 +84,44 @@ class F_Obj_Polygon extends F_Obj
 		div.classList.add("formemenu_div")
 		this.Root.appendChild(div);
 
-		var label = document.createElement("label")
-		label.innerHTML = "Formule (en JavaScript) :"
-		div.appendChild(label)
+		var divcoord = document.createElement("div");
+		divcoord.classList.add("tool-axe")
+		div.appendChild(divcoord);
 
-		this.E_function = document.createElement("input");
-		this.E_function.type = "text";
-		this.E_function.value = parameters["function"];
-		this.E_function.onchange = (e) => { this.Recreate(this.ParentObject.svg_group["Objects"]); this.E_tile.innerHTML = "Courbe " + e.target.value; }
-		div.appendChild(this.E_function);
+		var label = document.createElement("label")
+		label.innerHTML = "Points :"
+		divcoord.appendChild(label)
+
+		this.E_pointlist = document.createElement("div");
+		this.E_pointlist.classList.add("coord_poly")
+		div.appendChild(this.E_pointlist);
+
+		for (let i = 0; i < parameters["points"].length; i++) {
+			const p = parameters["points"][i];
+			this.CreatePointElement(p[0], p[1]);
+		}
+
+		var div_addbutton1 = document.createElement("div");
+		div_addbutton1.classList.add("center");
+		div.appendChild(div_addbutton1);
+
+		var div_addbutton2 = document.createElement("div");
+		div_addbutton2.classList.add("iconbutton");
+		div_addbutton1.appendChild(div_addbutton2);
+		div_addbutton2.onclick = () => {
+			this.CreatePointElement(0,0);
+		}
+
+		var img = document.createElement("img");
+		img.src = "/Images/Icons/Add.svg"
+		div_addbutton2.appendChild(img);
 
 		var hr = document.createElement("hr");
 		div.appendChild(hr);
 
-		var div2 = document.createElement("div");
-		div2.classList.add("flexparameters")
-		div.appendChild(div2)
-
-		var label2 = document.createElement("label")
-		label2.innerHTML = "$x \\in $ ["
-		div2.appendChild(label2);
-
-		MathJax.typesetPromise();
-
-		this.E_xstart = document.createElement("input");
-		this.E_xstart.classList.add("input_coord")
-		this.E_xstart.type = "number";
-		this.E_xstart.step = 1
-		this.E_xstart.value = parameters["xstart"];
-		this.E_xstart.oninput = () => { this.Recreate(this.ParentObject.svg_group["Objects"]); }
-		div2.appendChild(this.E_xstart);
-
-		var label3 = document.createElement("label")
-		label3.innerHTML = ";"
-		div2.appendChild(label3);
-
-		this.E_xend = document.createElement("input");
-		this.E_xend.classList.add("input_coord")
-		this.E_xend.type = "number";
-		this.E_xend.step = 1
-		this.E_xend.value = parameters["xend"];
-		this.E_xend.oninput = () => { this.Recreate(this.ParentObject.svg_group["Objects"]); }
-		div2.appendChild(this.E_xend);
-
-		var label4 = document.createElement("label")
-		label4.innerHTML = "]"
-		div2.appendChild(label4);
-
-		var hr2 = document.createElement("hr");
-		div.appendChild(hr2);
-
 		var div3 = document.createElement("div");
 		div3.classList.add("tool-line")
 		div.appendChild(div3)
-
 		
 		var img1 = document.createElement("img");
 		img1.src = "/Images/Icons/Stroke Width.svg"
@@ -131,7 +133,7 @@ class F_Obj_Polygon extends F_Obj
 		this.E_strokewidth.step = "1";
 		this.E_strokewidth.min = "1";
 		this.E_strokewidth.value = parameters["strokewidth"];
-		this.E_strokewidth.oninput = (e) => { this.DrawGroup.attr({"stroke-width": e.target.valueAsNumber}); }
+		this.E_strokewidth.oninput = (e) => { this.DrawGroup_stroke.attr({"stroke-width": e.target.valueAsNumber}); }
 		div3.appendChild(this.E_strokewidth);
 
 		var img2 = document.createElement("img");
@@ -143,113 +145,214 @@ class F_Obj_Polygon extends F_Obj
 		this.E_strokecolor.style.setProperty("--cp-size", "24px");
 		div3.appendChild(this.E_strokecolor);
 		var color_picker = new ColorPicker(this.E_strokecolor, base_options_colorpicker)
-		color_picker.on('pick', (color) => { this.DrawGroup.attr({"stroke": color}); } );
+		color_picker.on('pick', (color) => { 
+			this.DrawGroup_stroke.attr({"stroke": color}); 
+			this.DrawGroup_fill.attr({"fill": color}); 
+		} );
 
 		var img3 = document.createElement("img");
 		img3.src = "/Images/Icons/Line Style.svg"
 		div3.appendChild(img3);
 
-		this.E_strokestyle = document.createElement("input");
-		this.E_strokestyle.type = "text";
-		this.E_strokestyle.value = parameters["stroketype"];
-		this.E_strokestyle.oninput = (e) => { this.DrawGroup.attr({"stroke-dasharray": e.target.value}); }
-		div3.appendChild(this.E_strokestyle);
+		this.E_stroketype = document.createElement("input");
+		this.E_stroketype.type = "text";
+		this.E_stroketype.value = parameters["stroketype"];
+		this.E_stroketype.oninput = (e) => { this.DrawGroup_stroke.attr({"stroke-dasharray": e.target.value}); }
+		div3.appendChild(this.E_stroketype);
+
+		hr = document.createElement("hr");
+		div.appendChild(hr);
+		
+		var divfill = document.createElement("div");
+		divfill.classList.add("tool")
+		div.appendChild(divfill)
+
+		var img5 = document.createElement("img");
+		img5.src = "/Images/Icons/Fill.svg"
+		divfill.appendChild(img5);
+
+		this.E_fill = document.createElement("input");
+		this.E_fill.type = "checkbox";
+		this.E_fill.style.width = "auto";
+		this.E_fill.checked = parameters["fill"];
+		divfill.appendChild(this.E_fill);
+
+		this.E_filloptions = document.createElement("div");
+		this.E_filloptions.classList.add("subsection")
+		if (!parameters["fill"])
+			this.E_filloptions.classList.add("hiddenparam")
+		divfill.appendChild(this.E_filloptions);
+
+		this.E_fill.oninput = (e) => { 
+			this.SetFillColor(); 
+			if (e.target.checked)
+				this.E_filloptions.classList.remove("hiddenparam");
+			else
+				this.E_filloptions.classList.add("hiddenparam");
+			}
+		
+		var divfilloptions = document.createElement("div");
+		divfilloptions.classList.add("tool-axe");
+		this.E_filloptions.appendChild(divfilloptions);
+
+		this.E_fillcolor = document.createElement("button");
+		this.E_fillcolor.setAttribute("data-color", parameters["fillcolor"]);
+		this.E_fillcolor.style.setProperty("--cp-size", "24px");
+		divfilloptions.appendChild(this.E_fillcolor);
+		var color_picker2 = new ColorPicker(this.E_fillcolor, base_options_colorpicker)
+		color_picker2.on('pick', (color) => { this.SetFillColor(); } );
+
+		var img6 = document.createElement("img");
+		img6.src = "/Images/Icons/Pattern.svg"
+		divfilloptions.appendChild(img6);
+
+		var divpatternselect = document.createElement("div");
+		divpatternselect.classList.add("custom-select")
+		divfilloptions.appendChild(divpatternselect)
+
+		this.E_fillpattern = document.createElement("select");
+		this.E_fillpattern.selectedIndex = parameters["fillpattern"]
+		divpatternselect.appendChild(this.E_fillpattern);
+
+		let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		for (let i = 0; i < 12; i++) {
+			
+			let select_option = document.createElement("option");
+			select_option.innerHTML = alphabet[i];
+			select_option.value = i+1;
+			this.E_fillpattern.appendChild(select_option);
+		}
+
+		CustomSelect(divpatternselect, {"class": "tool-fill", "width": "44px","obj-width": "16px"})
+
+		this.E_fillpattern.oninput = () => {
+			if (this.E_fillpattern.selectedIndex > 0)
+				this.DrawGroup_fill.maskWith(this.ParentObject.EM.PatternsMask["pattern" + this.E_fillpattern.selectedIndex.toString()])
+			else
+				this.DrawGroup_fill.unmask()
+		}
+	}
+	
+
+	SetFillColor()
+	{
+		if (this.E_fill.checked)
+			this.DrawGroup_fill.attr({"fill": this.E_fillcolor.getAttribute("data-color")});
+		else
+			this.DrawGroup_fill.attr({"fill": "none"});
+	}
+
+	CreatePointElement(x,y)
+	{
+		var resume = {
+			root: document.createElement("div"),
+			title: document.createElement("label"),
+			x: document.createElement("input"),
+			y: document.createElement("input"),
+		}
+		this.E_pointlist.appendChild(resume.root);
+		this.E_points.add(resume);
+
+		resume.title.classList.add("first_child")
+		resume.root.appendChild(resume.title)
+
+		let label = document.createElement("label");
+		label.innerHTML = "("
+		resume.root.appendChild(label)
+
+		resume.x.classList.add("input_coord_poly")
+		resume.x.type = "number";
+		resume.x.value = x;
+		resume.x.oninput = () => { this.Recreate(this.ParentObject.svg_group["Objects"]); }
+		resume.root.appendChild(resume.x)
+		
+		label = document.createElement("label");
+		label.innerHTML = ";"
+		resume.root.appendChild(label)
+		
+		resume.y.classList.add("input_coord_poly")
+		resume.y.type = "number";
+		resume.y.value = y;
+		resume.y.oninput = () => { this.Recreate(this.ParentObject.svg_group["Objects"]); }
+		resume.root.appendChild(resume.y)
+
+		label = document.createElement("label");
+		label.innerHTML = ")"
+		resume.root.appendChild(label)
+
+		let deletebutton = document.createElement("button");
+		deletebutton.classList.add("coord_poly_delete")
+		deletebutton.innerHTML = "❌"
+		deletebutton.onclick = () => {
+			this.E_points.delete(resume);
+			this.E_pointlist.removeChild(resume.root);
+			this.ResetPointsName();
+			this.Recreate(this.ParentObject.svg_group["Objects"]);
+		}
+		resume.root.appendChild(deletebutton)
+
+		this.ResetPointsName()
+	}
+
+	ResetPointsName()
+	{
+		let i = 1;
+		this.E_points.forEach(point => {
+			point.title.innerHTML = "Point " + i.toString() + " :";
+			i++
+		});
 	}
 
 	Recreate(Object_Group)
 	{
 		this.DrawGroup.remove();
 		this.DrawGroup = Object_Group.group();
-
-		let xs = this.ParentObject.Parameters["hor_start"];
-		let xe = this.ParentObject.Parameters["hor_end"];
-		let ys = this.ParentObject.Parameters["ver_start"];
-		let ye = this.ParentObject.Parameters["ver_end"];
+		this.DrawGroup_fill = this.DrawGroup.group();
+		this.DrawGroup_stroke = this.DrawGroup.group();
 
 		let size = this.ParentObject.size;
 
-		let formule = this.E_function.value;
-		let stroke = this.E_strokewidth.valueAsNumber;
+		let xs = size.reel.x_start;
+		let xe = size.reel.x_end;
+		let ys = size.reel.y_start;
+		let ye = size.reel.y_end;
+
+		let points = [];
+		this.E_points.forEach(point => {
+			points.push([
+				(point.x.valueAsNumber - xs)/(xe - xs) * size.grad.width + size.grad.left_x + 5,
+				(1 - (point.y.valueAsNumber - ys)/(ye - ys)) * size.grad.height + size.grad.top_y + 5
+			])
+		});
+		
+		let fill = this.E_fill.checked;
+		let fill_color = this.E_fillcolor.getAttribute("data-color");
+		let fill_pattern = this.E_fillpattern.selectedIndex;
+		let strokewidth = this.E_strokewidth.valueAsNumber;
 		let strokecolor = this.E_strokecolor.getAttribute("data-color");
-		let dashstyle = this.E_strokestyle.value;
+		let stroketype = this.E_stroketype.value;
 
-		console.log(this.DrawGroup)
-		this.DrawGroup.attr(
-			{
-				"stroke-width": stroke,
-				"stroke": strokecolor,
-				"stroke-dasharray": dashstyle,
-				"fill": "none"
-			}
-		)
-
-		let start = this.E_xstart.valueAsNumber;
-		let end = this.E_xend.valueAsNumber;
+		this.DrawGroup_stroke.attr({
+			"fill": "none",
+			"stroke": strokecolor,
+			"stroke-width": strokewidth,
+			"stroke-dasharray": stroketype,
+			"stroke-linecap": "round",
+			"stroke-linejoin": "round"
+		});
 		
-		if (formule == "" || formule == " ") return;
-		let dx = (xe - xs) / size.grad.width;
-		let points = [[]];
-		let index = 0
-		let inside = false
-		x = Math.max(start, xs)
-		let y;
-		// Essaie de formule
-		try {
-			y = Function('"use strict";return (' + formule + ')')()
-		} catch (error) {
-			alert("La formule entrée n'est pas correct : " + error)
-			return;
-		}
+		this.DrawGroup_fill.attr({
+			"fill": fill ? fill_color : "none",
+			"stroke": "none",
+		});
+		if (fill_pattern > 0)
+			this.DrawGroup_fill.maskWith(this.ParentObject.EM.PatternsMask["pattern" + fill_pattern.toString()])
+		else
+			this.DrawGroup_fill.unmask()
 
-		if (y > ys && y < ye)
-		{
-				points[index].push([
-						size.grad.left_x + (x - xs)/(xe - xs) * size.grad.width,
-						size.grad.bottom_y - (y - ys)/(ye - ys) * size.grad.height]);
-				inside = true;
-		}
+		this.DrawGroup_stroke.polygon(points);
+		this.DrawGroup_fill.polygon(points);
 		
-		for(let px = 0; px < size.base.width; px++)
-		{
-				x = xs + dx * (px - size.grad.left_x);
-				if (x > start && x < end)
-				{
-						y = Function('"use strict";return (' + formule + ')')();
-						if (y > ys && y < ye)
-						{
-								points[index].push([
-										size.grad.left_x + (x - xs)/(xe - xs) * size.grad.width,
-										size.grad.bottom_y - (y - ys)/(ye - ys) * size.grad.height]);
-								inside = true;
-						}
-						else if (inside)
-						{
-								y = Math.max(ys, Math.min(ye, y))
-								points[index].push([
-										size.grad.left_x + (x - xs)/(xe - xs) * size.grad.width,
-										size.grad.bottom_y - (y - ys)/(ye - ys) * size.grad.height]);
-								points.push([])
-								index += 1;
-								inside = false;
-						}
-				}
-		}
-		x = Math.min(end, xe)
-		y = Function('"use strict";return (' + formule + ')')()
-		if (y > ys && y < ye)
-		{
-				points[index].push([
-						size.grad.left_x + (x - xs)/(xe - xs) * size.grad.width,
-						size.grad.bottom_y - (y - ys)/(ye - ys) * size.grad.height]);
-		}
-		points.forEach(poly => {
-				if (poly.length > 1)
-				{
-						this.DrawGroup.polyline(poly);
-				}
-
-		})
-		this.DrawGroup.dmove(this.ParentObject.EM.Margin, this.ParentObject.EM.Margin)
 	}
 
 }

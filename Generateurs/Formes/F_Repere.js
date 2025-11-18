@@ -668,7 +668,7 @@ class F_Repere extends F_Base
 				if (this.oy + i <= this.size.grad.height && (this.oy + i) >= 0)
 				{
 					let y = this.size.grad.top_y + this.oy + i + this.Parameters["ver_text_size"] * 0.35;
-					let text = Round(this.Parameters["ver_pas"] * j, 5).toString() 
+					let text = Round(-this.Parameters["ver_pas"] * j, 5).toString() 
 					
 					let ele1 = this.svg_group["Text_Ver"].text(text)
 					ele1.attr({
@@ -684,7 +684,7 @@ class F_Repere extends F_Base
 				if (this.oy - i <= this.size.grad.height && (this.oy - i) >= 0)
 				{
 					let y = this.size.grad.top_y + this.oy - i + this.Parameters["ver_text_size"] * 0.35;
-					let text = Round(-this.Parameters["ver_pas"] * j, 5).toString() 
+					let text = Round(this.Parameters["ver_pas"] * j, 5).toString() 
 					
 					let ele1 = this.svg_group["Text_Ver"].text(text)
 					ele1.attr({

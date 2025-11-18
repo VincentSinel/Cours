@@ -55,4 +55,15 @@ class F_Obj
 		}
 	}
 
+	DrawText(layer, txt, cx, cy, txt_size = 12)
+	{
+		layer.text(txt).center(cx, cy).attr({
+						fill: "white",
+						stroke: "white",
+						"stroke-width": Math.min(8, 5 * txt_size / 12.0),
+						"font-weight": "bold"
+					})
+		layer.text(txt).center(cx, cy)
+	}
+
 }

@@ -2934,7 +2934,7 @@ function Fraction(paper, data)
 		txtstyle: {exist: frac_txt, type: frac_txt_type, size: frac_txt_size}});
 }
 
-function Diagramme_Baton(paper, data)
+function Draw_Diagramme_Baton(paper, data)
 {
 	let Canvas_width = data["Canvas_width"];
 	let Canvas_height = data["Canvas_height"];
@@ -3116,7 +3116,7 @@ function Diagramme_Baton(paper, data)
 	draw_text(title, margin_left + w / 2 + Gen_Margin, margin_up - lineh /4 + Gen_Margin, 'middle')
 }
 
-function Diagramme_Cartesien(paper, data)
+function Draw_Diagramme_Cartesien(paper, data)
 {
 	let Canvas_width = data["Canvas_width"];
 	let Canvas_height = data["Canvas_height"];
@@ -3279,7 +3279,7 @@ function Diagramme_Cartesien(paper, data)
 	draw_text(title, margin_left + w / 2 + Gen_Margin, margin_up - lineh /4 + Gen_Margin, 'middle')
 }
 
-function Diagramme_Circulaire(paper, data)
+function Draw_Diagramme_Circulaire(paper, data)
 {
 	let Canvas_width = data["Canvas_width"];
 	let Canvas_height = data["Canvas_height"];
@@ -3414,7 +3414,7 @@ function Diagramme_Circulaire(paper, data)
 	draw_text(title, margin_left + dw / 2 + Gen_Margin, margin_up - lineh /4 + Gen_Margin, 'middle')
 }
 
-function Diagramme_Histogramme(paper, data)
+function Draw_Diagramme_Histogramme(paper, data)
 {
 	
 }

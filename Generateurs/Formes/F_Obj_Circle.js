@@ -70,7 +70,7 @@ class F_Obj_Circle extends F_Obj
 				fillcolor: this.E_fillcolor.getAttribute("data-color"),
 				fillpattern: this.E_fillpattern.selectedIndex
 			}
-		); this.ParentObject.Object.push(newobj); this.ParentObject.Recreate(); }
+		); this.ParentObject.Object.add(newobj); this.ParentObject.Recreate(); }
 
 		var div_icon_delete = document.createElement("div");
 		div_icon_delete.classList.add("iconbutton")
@@ -329,11 +329,18 @@ class F_Obj_Circle extends F_Obj
 		let strokecolor = this.E_strokecolor.getAttribute("data-color");
 		let dashstyle = this.E_strokestyle.value;
 
-		let rx = (radius)/Math.abs(xe - xs) * this.ParentObject.size.grad.width;
-		let ry = (radius)/Math.abs(ye - ys) * this.ParentObject.size.grad.height;
+		let rx = (radius)/Math.abs(xe - xs) * size.grad.width;
+		let ry;
+		if (ye == ys)
+			ry = rx;
+		else
+			ry = (radius)/Math.abs(ye - ys) * size.grad.height;
 
-		cx = (cx - xs)/(xe - xs) * this.ParentObject.size.grad.width + this.ParentObject.size.grad.left_x + 5;
-		cy = (1 - (cy - ys)/(ye - ys)) * this.ParentObject.size.grad.height + this.ParentObject.size.grad.top_y + 5;
+		cx = (cx - xs)/(xe - xs) * size.grad.width + size.grad.left_x + 5;
+		if (ye == ys)
+			cy = size.base.height / 2 + 5;
+		else
+			cy = (1 - (cy - ys)/(ye - ys)) * size.grad.height + size.grad.top_y + 5;
 		
 		this.DrawGroup_stroke.attr({
 			"fill": "none",

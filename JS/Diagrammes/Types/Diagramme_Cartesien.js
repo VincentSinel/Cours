@@ -61,7 +61,6 @@ class Diagramme_Cartesien
         if (config.hasOwnProperty("Vaxe_name")) this.Vaxe_name = config["Vaxe_name"];
         if (config.hasOwnProperty("grid")) this.grid = config["grid"];
         if (config.hasOwnProperty("grid_color")) this.grid_color = config["grid_color"];
-        if (config.hasOwnProperty("colors")) this.colors = config["colors"];
         if (config.hasOwnProperty("text_size")) this.text_size = config["text_size"];
         if (config.hasOwnProperty("graduation_size")) this.graduation_size = config["graduation_size"];
         if (config.hasOwnProperty("stroke_width")) this.stroke_width = config["stroke_width"];

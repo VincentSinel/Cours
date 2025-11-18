@@ -1,23 +1,34 @@
 class F_Obj_Sector extends F_Obj
 {
 	E_tile;
-	E_function;
-	E_xstart;
-	E_xend;
-	E_strokewidth;
-	E_strokecolor;
-	E_strokestyle;
+	E_weight;
+	E_txt_type;
+	E_txt_size;
+	E_txt_color;
+	E_txt_dist;
+	E_fill;
+	E_filloptions;
+	E_fillcolor;
+	E_fillpattern;
+
+	Index = 0;
+
+	DrawGroup_stroke;
+	DrawGroup_fill;
+	DrawGroup_text;
 
 	constructor(parent, parameters = {})
 	{
 		super(parent);
 
-		if (!parameters.hasOwnProperty("function")) parameters["function"] = "Math.sin(x)";
-		if (!parameters.hasOwnProperty("xstart")) parameters["xstart"] = parent.Parameters["hor_start"] - 1;
-		if (!parameters.hasOwnProperty("xend")) parameters["xend"] = parent.Parameters["hor_end"] + 1;
-		if (!parameters.hasOwnProperty("strokewidth")) parameters["strokewidth"] = 2;
-		if (!parameters.hasOwnProperty("strokecolor")) parameters["strokecolor"] = "red";
-		if (!parameters.hasOwnProperty("stroketype")) parameters["stroketype"] = "";
+		if (!parameters.hasOwnProperty("weight")) parameters["weight"] = 1;
+		if (!parameters.hasOwnProperty("txt_type")) parameters["txt_type"] = 0;
+		if (!parameters.hasOwnProperty("txt_size")) parameters["txt_size"] = this.ParentObject.Parameters["frac_txt_size"]
+		if (!parameters.hasOwnProperty("txt_color")) parameters["txt_color"] = "black";
+		if (!parameters.hasOwnProperty("txt_dist")) parameters["txt_dist"] = 70;
+		if (!parameters.hasOwnProperty("fill")) parameters["fill"] = false;
+		if (!parameters.hasOwnProperty("fill_type")) parameters["fill_type"] = 0;
+		if (!parameters.hasOwnProperty("fill_color")) parameters["fill_color"] = "black";
 
 		this.CreateElements(parameters);
 	}
@@ -32,7 +43,7 @@ class F_Obj_Sector extends F_Obj
 		this.E_tile = document.createElement("span");
 		this.E_tile.classList.add("Object_title");
 		this.E_tile.onclick = () => {this.Root.classList.toggle("show")}
-		this.E_tile.innerHTML = "Courbe " + parameters["function"];
+		this.E_tile.innerHTML = "Secteur 0";
 		div_title.appendChild(this.E_tile)
 
 		var div_icon_duplicate = document.createElement("div");
@@ -42,14 +53,16 @@ class F_Obj_Sector extends F_Obj
 		var img_duplicate = document.createElement("img");
 		img_duplicate.src = "/Images/Icons/Copy.svg"
 		div_icon_duplicate.appendChild(img_duplicate)
-		img_duplicate.onclick = () => { let newobj = new F_Obj_Courbe(this.ParentObject, 
+		img_duplicate.onclick = () => { let newobj = new F_Obj_Sector(this.ParentObject, 
 			{
-				function: this.E_function.value,
-				xstart: this.E_xstart.valueAsNumber,
-				xend: this.E_xend.valueAsNumber,
-				strokewidth: this.E_strokewidth.valueAsNumber,
-				strokecolor: this.E_strokecolor.getAttribute("data-color"),
-				stroketype: this.E_strokestyle.value
+				weight: this.E_weight.valueAsNumber,
+				txt_type: this.E_txt_type.selectedIndex,
+				txt_size: this.E_txt_size.valueAsNumber,
+				txt_color: this.E_txt_color.getAttribute("data-color"),
+				txt_dist: this.E_txt_dist.valueAsNumber,
+				fill: this.E_fill.checked,
+				fill_type: this.E_fillpattern.selectedIndex,
+				fill_color: this.E_fillcolor.getAttribute("data-color"),
 			}
 		); this.ParentObject.Object.push(newobj); this.ParentObject.Recreate(); }
 
@@ -66,190 +79,294 @@ class F_Obj_Sector extends F_Obj
 		div.classList.add("formemenu_div")
 		this.Root.appendChild(div);
 
-		var label = document.createElement("label")
-		label.innerHTML = "Formule (en JavaScript) :"
-		div.appendChild(label)
+		var div_weight = document.createElement("div");
+		div_weight.classList.add("tool-axe");
+		div.appendChild(div_weight);
 
-		this.E_function = document.createElement("input");
-		this.E_function.type = "text";
-		this.E_function.value = parameters["function"];
-		this.E_function.onchange = (e) => { this.Recreate(this.ParentObject.svg_group["Objects"]); this.E_tile.innerHTML = "Courbe " + e.target.value; }
-		div.appendChild(this.E_function);
+		var img = document.createElement("img");
+		img.src = "/Images/Icons/Weight.svg"
+		div_weight.appendChild(img);
+
+		this.E_weight = document.createElement("input");
+		this.E_weight.type = "number";
+		this.E_weight.min = 0
+		this.E_weight.value = parameters["weight"];
+		this.E_weight.onchange = (e) => { this.ParentObject.Recreate(); }
+		div_weight.appendChild(this.E_weight);
 
 		var hr = document.createElement("hr");
 		div.appendChild(hr);
 
-		var div2 = document.createElement("div");
-		div2.classList.add("flexparameters")
-		div.appendChild(div2)
+		var div_text = document.createElement("div");
+		div_text.classList.add("tool-axe")
+		div.appendChild(div_text)
 
-		var label2 = document.createElement("label")
-		label2.innerHTML = "$x \\in $ ["
-		div2.appendChild(label2);
+		img = document.createElement("img");
+		img.src = "/Images/Icons/Text.svg"
+		div_text.appendChild(img);
 
-		MathJax.typesetPromise();
+		this.E_txt_type = document.createElement("select");
+		this.E_txt_type.onchange = () => { this.Recreate(this.ParentObject.svg_group["Objects"], this.Index); }
+		div_text.appendChild(this.E_txt_type);
 
-		this.E_xstart = document.createElement("input");
-		this.E_xstart.classList.add("input_coord")
-		this.E_xstart.type = "number";
-		this.E_xstart.step = 1
-		this.E_xstart.value = parameters["xstart"];
-		this.E_xstart.oninput = () => { this.Recreate(this.ParentObject.svg_group["Objects"]); }
-		div2.appendChild(this.E_xstart);
+		var option = document.createElement("option"); option.value = 0; option.innerHTML = "Hérité"; this.E_txt_type.appendChild(option);
+		option = document.createElement("option"); option.value = 1; option.innerHTML = "Aucun"; this.E_txt_type.appendChild(option);
+		option = document.createElement("option"); option.value = 2; option.innerHTML = "Pourcentage"; this.E_txt_type.appendChild(option);
+		option = document.createElement("option"); option.value = 3; option.innerHTML = "Fraction"; this.E_txt_type.appendChild(option);
+		option = document.createElement("option"); option.value = 4; option.innerHTML = "Décimal"; this.E_txt_type.appendChild(option);
 
-		var label3 = document.createElement("label")
-		label3.innerHTML = ";"
-		div2.appendChild(label3);
+		this.E_txt_type.selectedIndex = parameters["txt_type"];
 
-		this.E_xend = document.createElement("input");
-		this.E_xend.classList.add("input_coord")
-		this.E_xend.type = "number";
-		this.E_xend.step = 1
-		this.E_xend.value = parameters["xend"];
-		this.E_xend.oninput = () => { this.Recreate(this.ParentObject.svg_group["Objects"]); }
-		div2.appendChild(this.E_xend);
+		var div_text_param = document.createElement("div");
+		div_text_param.classList.add("subsection")
+		div.appendChild(div_text_param)
 
-		var label4 = document.createElement("label")
-		label4.innerHTML = "]"
-		div2.appendChild(label4);
+		var div_text_param2 = document.createElement("div");
+		div_text_param2.classList.add("tool-axe")
+		div_text_param.appendChild(div_text_param2)
 
-		var hr2 = document.createElement("hr");
-		div.appendChild(hr2);
+		img = document.createElement("img");
+		img.src = "/Images/Icons/Font Size.svg"
+		div_text_param2.appendChild(img);
 
-		var div3 = document.createElement("div");
-		div3.classList.add("tool-line")
-		div.appendChild(div3)
+		this.E_txt_size = document.createElement("input");
+		this.E_txt_size.type = "number";
+		this.E_txt_size.step = 2
+		this.E_txt_size.min = 0
+		this.E_txt_size.value = parameters["txt_size"];
+		this.E_txt_size.oninput = () => { this.Recreate(this.ParentObject.svg_group["Objects"], this.Index); }
+		div_text_param2.appendChild(this.E_txt_size);
 
+		img = document.createElement("img");
+		img.src = "/Images/Icons/Fill.svg"
+		div_text_param2.appendChild(img);
+
+		this.E_txt_color = document.createElement("button");
+		this.E_txt_color.setAttribute("data-color", parameters["txt_color"]);
+		this.E_txt_color.style.setProperty("--cp-size", "24px");
+		div_text_param2.appendChild(this.E_txt_color);
+		var color_picker = new ColorPicker(this.E_txt_color, base_options_colorpicker)
+		color_picker.on('pick', (color) => { this.DrawGroup_text.attr({"fill": color}); } );
+
+		img = document.createElement("img");
+		img.src = "/Images/Icons/Pourcent.svg"
+		div_text_param2.appendChild(img);
+
+		this.E_txt_dist = document.createElement("input");
+		this.E_txt_dist.type = "number";
+		this.E_txt_dist.step = 5
+		this.E_txt_dist.min = 0
+		this.E_txt_dist.value = parameters["txt_dist"];
+		this.E_txt_dist.oninput = () => { this.Recreate(this.ParentObject.svg_group["Objects"], this.Index); }
+		div_text_param2.appendChild(this.E_txt_dist);
+
+		var label = document.createElement("label")
+		label.innerHTML = "%"
+		div_text_param2.appendChild(label);
+
+		hr = document.createElement("hr");
+		div.appendChild(hr);
 		
-		var img1 = document.createElement("img");
-		img1.src = "/Images/Icons/Stroke Width.svg"
-		div3.appendChild(img1);
+		var divfill = document.createElement("div");
+		divfill.classList.add("tool")
+		div.appendChild(divfill)
 
-		this.E_strokewidth = document.createElement("input");
-		this.E_strokewidth.type = "number";
-		this.E_strokewidth.value = "3";
-		this.E_strokewidth.step = "1";
-		this.E_strokewidth.min = "1";
-		this.E_strokewidth.value = parameters["strokewidth"];
-		this.E_strokewidth.oninput = (e) => { this.DrawGroup.attr({"stroke-width": e.target.valueAsNumber}); }
-		div3.appendChild(this.E_strokewidth);
+		var img5 = document.createElement("img");
+		img5.src = "/Images/Icons/Fill.svg"
+		divfill.appendChild(img5);
 
-		var img2 = document.createElement("img");
-		img2.src = "/Images/Icons/Stroke.svg"
-		div3.appendChild(img2);
+		this.E_fill = document.createElement("input");
+		this.E_fill.type = "checkbox";
+		this.E_fill.style.width = "auto";
+		this.E_fill.checked = parameters["fill"];
+		divfill.appendChild(this.E_fill);
 
-		this.E_strokecolor = document.createElement("button");
-		this.E_strokecolor.setAttribute("data-color", parameters["strokecolor"]);
-		this.E_strokecolor.style.setProperty("--cp-size", "24px");
-		div3.appendChild(this.E_strokecolor);
-		var color_picker = new ColorPicker(this.E_strokecolor, base_options_colorpicker)
-		color_picker.on('pick', (color) => { this.DrawGroup.attr({"stroke": color}); } );
+		this.E_filloptions = document.createElement("div");
+		this.E_filloptions.classList.add("subsection")
+		if (!parameters["fill"])
+			this.E_filloptions.classList.add("hiddenparam")
+		divfill.appendChild(this.E_filloptions);
 
-		var img3 = document.createElement("img");
-		img3.src = "/Images/Icons/Line Style.svg"
-		div3.appendChild(img3);
+		this.E_fill.oninput = (e) => { 
+			this.SetFillColor(); 
+			if (e.target.checked)
+				this.E_filloptions.classList.remove("hiddenparam");
+			else
+				this.E_filloptions.classList.add("hiddenparam");
+			}
+		
+		var divfilloptions = document.createElement("div");
+		divfilloptions.classList.add("tool-axe");
+		this.E_filloptions.appendChild(divfilloptions);
 
-		this.E_strokestyle = document.createElement("input");
-		this.E_strokestyle.type = "text";
-		this.E_strokestyle.value = parameters["stroketype"];
-		this.E_strokestyle.oninput = (e) => { this.DrawGroup.attr({"stroke-dasharray": e.target.value}); }
-		div3.appendChild(this.E_strokestyle);
+		this.E_fillcolor = document.createElement("button");
+		this.E_fillcolor.setAttribute("data-color", parameters["fillcolor"]);
+		this.E_fillcolor.style.setProperty("--cp-size", "24px");
+		divfilloptions.appendChild(this.E_fillcolor);
+		var color_picker2 = new ColorPicker(this.E_fillcolor, base_options_colorpicker)
+		color_picker2.on('pick', (color) => { this.SetFillColor(); } );
+
+		var img6 = document.createElement("img");
+		img6.src = "/Images/Icons/Pattern.svg"
+		divfilloptions.appendChild(img6);
+
+		var divpatternselect = document.createElement("div");
+		divpatternselect.classList.add("custom-select")
+		divfilloptions.appendChild(divpatternselect)
+
+		this.E_fillpattern = document.createElement("select");
+		this.E_fillpattern.selectedIndex = parameters["fillpattern"]
+		divpatternselect.appendChild(this.E_fillpattern);
+
+		let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		for (let i = 0; i < 12; i++) {
+			
+			let select_option = document.createElement("option");
+			select_option.innerHTML = alphabet[i];
+			select_option.value = i+1;
+			this.E_fillpattern.appendChild(select_option);
+		}
+
+		CustomSelect(divpatternselect, {"class": "tool-fill", "width": "44px","obj-width": "16px"})
+
+		this.E_fillpattern.oninput = () => {
+			if (this.E_fillpattern.selectedIndex > 0)
+				this.DrawGroup_fill.maskWith(this.ParentObject.EM.PatternsMask["pattern" + this.E_fillpattern.selectedIndex.toString()])
+			else
+				this.DrawGroup_fill.unmask()
+		}
 	}
 
-	Recreate(Object_Group)
+	SetTitle(index)
 	{
+		this.E_tile.innerHTML = "Secteur " + index.toString();
+	}
+	
+
+	SetFillColor()
+	{
+		if (this.E_fill.checked)
+			this.DrawGroup_fill.attr({"fill": this.E_fillcolor.getAttribute("data-color")});
+		else
+			this.DrawGroup_fill.attr({"fill": "none"});
+	}
+
+	Recreate(Object_Group, index)
+	{
+		this.Index = index;
 		this.DrawGroup.remove();
 		this.DrawGroup = Object_Group.group();
-
-		let xs = this.ParentObject.Parameters["hor_start"];
-		let xe = this.ParentObject.Parameters["hor_end"];
-		let ys = this.ParentObject.Parameters["ver_start"];
-		let ye = this.ParentObject.Parameters["ver_end"];
+		this.DrawGroup_fill = this.DrawGroup.group();
+		this.DrawGroup_stroke = this.DrawGroup.group();
+		this.DrawGroup_text= this.DrawGroup.group();
 
 		let size = this.ParentObject.size;
 
-		let formule = this.E_function.value;
-		let stroke = this.E_strokewidth.valueAsNumber;
-		let strokecolor = this.E_strokecolor.getAttribute("data-color");
-		let dashstyle = this.E_strokestyle.value;
+		let weight = this.E_weight.valueAsNumber;
+		let total_weight = this.ParentObject.GetTotalWeight();
+		let base_weight = this.ParentObject.GetWeightTo(index);
+		
+		let txt_type = this.E_txt_type.selectedIndex;
+		let txt_size = this.E_txt_size.valueAsNumber;
+		let txt_color = this.E_txt_color.getAttribute("data-color");
+		let txt_dist = this.E_txt_dist.valueAsNumber;
+		let fill = this.E_fill.checked;
+		let fill_color = this.E_fillcolor.getAttribute("data-color");
+		let fill_pattern = this.E_fillpattern.selectedIndex;
 
-		console.log(this.DrawGroup)
-		this.DrawGroup.attr(
+		if (txt_type == 0) // hérité
+		{
+			if (!this.ParentObject.Parameters["frac_txt"])
+				txt_type = 1;
+			else 
+				txt_type = this.ParentObject.Parameters["frac_txt_type"] + 2;
+		}
+		this.DrawGroup_text.attr(
 			{
-				"stroke-width": stroke,
-				"stroke": strokecolor,
-				"stroke-dasharray": dashstyle,
-				"fill": "none"
+				"fill": txt_color,
+				"stroke": "none",
+				"font-size": txt_size,
+				"font-family": "Bahnschrift",
+				"text-anchor": "middle",
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
 			}
 		)
-
-		let start = this.E_xstart.valueAsNumber;
-		let end = this.E_xend.valueAsNumber;
-		
-		if (formule == "" || formule == " ") return;
-		let dx = (xe - xs) / size.grad.width;
-		let points = [[]];
-		let index = 0
-		let inside = false
-		x = Math.max(start, xs)
-		let y;
-		// Essaie de formule
-		try {
-			y = Function('"use strict";return (' + formule + ')')()
-		} catch (error) {
-			alert("La formule entrée n'est pas correct : " + error)
-			return;
+		if (txt_type == 1)
+		{
+			this.DrawGroup_text.attr({"fill": "none"});
 		}
 
-		if (y > ys && y < ye)
-		{
-				points[index].push([
-						size.grad.left_x + (x - xs)/(xe - xs) * size.grad.width,
-						size.grad.bottom_y - (y - ys)/(ye - ys) * size.grad.height]);
-				inside = true;
-		}
-		
-		for(let px = 0; px < size.base.width; px++)
-		{
-				x = xs + dx * (px - size.grad.left_x);
-				if (x > start && x < end)
-				{
-						y = Function('"use strict";return (' + formule + ')')();
-						if (y > ys && y < ye)
-						{
-								points[index].push([
-										size.grad.left_x + (x - xs)/(xe - xs) * size.grad.width,
-										size.grad.bottom_y - (y - ys)/(ye - ys) * size.grad.height]);
-								inside = true;
-						}
-						else if (inside)
-						{
-								y = Math.max(ys, Math.min(ye, y))
-								points[index].push([
-										size.grad.left_x + (x - xs)/(xe - xs) * size.grad.width,
-										size.grad.bottom_y - (y - ys)/(ye - ys) * size.grad.height]);
-								points.push([])
-								index += 1;
-								inside = false;
-						}
-				}
-		}
-		x = Math.min(end, xe)
-		y = Function('"use strict";return (' + formule + ')')()
-		if (y > ys && y < ye)
-		{
-				points[index].push([
-						size.grad.left_x + (x - xs)/(xe - xs) * size.grad.width,
-						size.grad.bottom_y - (y - ys)/(ye - ys) * size.grad.height]);
-		}
-		points.forEach(poly => {
-				if (poly.length > 1)
-				{
-						this.DrawGroup.polyline(poly);
-				}
+		this.DrawGroup_stroke.attr(
+			{
+				fill: "none",
+				stroke: this.ParentObject.Parameters["frac_color"],
+				"stroke-width": this.ParentObject.Parameters["frac_stroke"],
+				"stroke-linecap": "round",
+				"stroke-linejoin": "round",
+				"stroke-dasharray": this.ParentObject.Parameters["frac_style"],
+			}
+		)
+		this.DrawGroup_fill.attr({
+			"fill": fill ? fill_color : "none",
+			"stroke": "none",
+		});
+		if (fill_pattern > 0)
+			this.DrawGroup_fill.maskWith(this.ParentObject.EM.PatternsMask["pattern" + fill_pattern.toString()])
+		else
+			this.DrawGroup_fill.unmask()
 
-		})
+		let as = base_weight / total_weight * 360.0
+		let ae = (base_weight + weight) / total_weight * 360.0
+
+		this.DrawEllipseArc(this.DrawGroup_fill, {x: size.base.width / 2, y: size.base.height / 2}, as, ae, size.grad.width / 2, size.grad.height / 2, true);
+		this.DrawEllipseArc(this.DrawGroup_stroke, {x: size.base.width / 2, y: size.base.height / 2}, as, ae, size.grad.width / 2, size.grad.height / 2, true);
+
+		let px = size.base.width / 2  + txt_dist / 100.0 * size.base.width / 2 * Math.cos((as + ae) / 2 * Math.PI / 180.0);
+		let py = size.base.height / 2  + txt_dist / 100.0 * size.base.width / 2 * Math.sin((as + ae) / 2 * Math.PI / 180.0);
+
+		if (this.ParentObject.Object.size == 1)
+		{
+			px = size.base.width / 2;
+			py = size.base.height / 2;
+		}
+
+		if (txt_type == 2) // pourcentage
+		{
+			let value = Math.round(weight / total_weight * 1000.0) / 10.0
+			let text = value.toString() + "%"
+			this.DrawText(this.DrawGroup_text, text, px, py)
+		}
+		else if (txt_type == 3) // fraction
+		{
+			let gcd_ = this.GCD(weight, total_weight);
+			let value1 = weight / gcd_;
+			let value2 = total_weight / gcd_;
+
+			this.DrawText(this.DrawGroup_text, value1, px, py - txt_size * 0.7, txt_size)
+			this.DrawText(this.DrawGroup_text, value2, px, py + txt_size * 0.7, txt_size)
+			this.DrawGroup_stroke.line(px - txt_size / 2.0, py, px + txt_size / 2.0, py).attr({"stroke-width": Math.max(2, txt_size / 10)});
+		}
+		else if (txt_type == 4) // décimal
+		{
+			let value = Math.round((weight / total_weight) * 100.0) / 100.0
+			let text = value.toString()
+			this.DrawText(this.DrawGroup_text, text, px, py)
+		}
+
 		this.DrawGroup.dmove(this.ParentObject.EM.Margin, this.ParentObject.EM.Margin)
 	}
+
+	GCD(a,b) {
+		a = Math.abs(a);
+		b = Math.abs(b);
+		if (b > a) {var temp = a; a = b; b = temp;}
+		while (true) {
+				if (b == 0) return a;
+				a %= b;
+				if (a == 0) return b;
+				b %= a;
+	}
+}
 
 }

@@ -23,8 +23,7 @@ class Histogramme
     grid = true;
     grid_color = "#75FFFF"
     effectifs = [5,3,4,7,2];
-    transparency = 0.8;
-    colors = ["#e60049", "#0bb4ff", "#50e991", "#e6d800", "#9b19f5", "#ffa300", "#dc0ab4", "#b3d4ff", "#00bfa0", "#f0cccc"];
+    colors = ["#e60049B3", "#0bb4ffB3", "#50e991B3", "#e6d800B3", "#9b19f5B3", "#ffa300B3", "#dc0ab4B3", "#b3d4ffB3", "#00bfa0B3", "#f0ccccB3"];
 
     constructor(config)
     {
@@ -50,7 +49,6 @@ class Histogramme
         if (config.hasOwnProperty("graduation_size")) this.graduation_size = config["graduation_size"];
         if (config.hasOwnProperty("stroke_width")) this.stroke_width = config["stroke_width"];
         if (config.hasOwnProperty("grid_width")) this.grid_width = config["grid_width"];
-        if (config.hasOwnProperty("transparency")) this.transparency = config["transparency"];
         
         if (this.element_id != "")
         {
@@ -174,8 +172,8 @@ class Histogramme
             
             let rect = draw.rect( dx - 1, Math.abs(dy* this.effectifs[i])-0.5)
             rect.move(sx + dx * i+0.5, sy + dy * this.effectifs[i])
-            rect.fill({color: c, opacity: this.transparency})
-            rect.stroke({color: c, width: this.grid_width})
+            rect.fill({color: c})
+            rect.stroke({color: c.substring(0, c.length - 2), width: this.grid_width})
         }
     }
 }

@@ -4,9 +4,10 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta http-equiv="content-language" content="fr">
+		<link rel="stylesheet" href="/Font/glyphter-font/css/Glyphter.css">
 		<link rel="stylesheet" href="/CSS/MainPage.css"> 
 		<link rel="stylesheet" href="/CSS/DarkTheme.css">
-		<script src="/JS/Raphael/raphael.min.js"></script>
+		<link rel="stylesheet" href="Forme.css">
 		<script src="Global_Generator.js"></script>
 		<script src="Formes.js"></script>
 		<script src="/JS/Menu.js"></script>
@@ -16,7 +17,20 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="/Images/favicon-16x16.png">
 		<link rel="manifest" href="/Images/site.webmanifest">
 
+		<script>
+			MathJax = {
+				tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+			};
+		</script>
+		<script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+		<script src="Formes/F_Dependancy.js"></script>
+
 		<title>Générateurs</title>
+
+
+		<link rel="stylesheet" type="text/css" href="/JS/IconSelect/iconselect.css" >
+		<script type="text/javascript" src="/JS/IconSelect/iconselect.js"></script>
+		<script type="text/javascript" src="/JS/IconSelect/iscroll.js"></script>
 
 		<style>
 			.smallscreen{ display: none;}
@@ -26,7 +40,7 @@
 				color: white;
 				font-family: var(--TexteFont);
 			}
-			@media only screen and (max-width:1150px) {
+			@media only screen and (max-width:150px) {
 				.content,
 				.param,
 				.objectliste{ display: none;}
@@ -38,6 +52,12 @@
 					height: 100%;
 					background-color: var(--PanelBack);
 				}
+			}
+			@font-face {
+				font-family: 'Glyphter';
+				src: url('/Font/glyphter-font/fonts/Glyphter.ttf');
+				font-weight: normal;
+				font-style: normal;
 			}
 		</style>
 	</head>
@@ -94,41 +114,33 @@
 					<div class="formemenu">
 						<span>Axe horizontal</span>
 						<div class="formemenu_div">
-							<label><b>Nombre de sections:</b></label>
+							<label><b>Intervalle :</b></label>
 							<div class="subsection">
-								<div class="flexparameters">
-									<label>Principale&#8239;:</label>
-									<input id="hor_pri_nbr" type="number" value="6" step="1" min="1" oninput="Regenerate()">
+								<div class="tool-axe">
+									<label>[</label>
+									<input id="hor_start" type="number" value="-3" step="1" title="Début de l'axe">
+									<label>;</label>
+									<input id="hor_end" type="number" value="3" step="1" title="Fin de l'axe">
+									<label>]</label>
 								</div>
-								<div class="flexparameters">
-									<label>Secondaire&#8239;:</label>
-									<input id="hor_sec_nbr" type="number" value="5" step="1" min="1" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Step Over.svg" title="Pas des graduations principale">
+									<input id="hor_pas" type="number" value="1" step="1" min="0" title="Pas des graduations principale">
+									<img src="/Images/Icons/Sous Section.svg" title="Nombre de sections secondaires">
+									<input id="hor_sec_nbr" type="number" value="5" step="1" min="1" max="20" title="Nombre de sections secondaires">
 								</div>
 							</div>
 							<hr>
-							<div class="flexparameters">
-								<label>Début&#8239;:</label>
-								<input id="hor_start" type="number" value="-3" step="1" oninput="Regenerate()">
-								<label>Pas&#8239;:</label>
-								<input id="hor_pas" type="number" value="1" step="1" oninput="Regenerate()">
-							</div>
-							<hr>
-							<div>
-								<input id="hor_text" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('hor_text');">
-								<label for="hor_text" style="width: auto;">Générer le texte</label>
-							</div>
-							<div id="hor_text_section" class="subsection">
-								<select id="hor_text_pos" oninput="Regenerate()">
-									<option value="down">En dessous</option>
-									<option value="up">Au dessus</option>
-								</select>
-								<div class="flexparameters">
-									<label>Taille texte :</label>
-									<input id="hor_text_size" type="number" value="12" step="2" oninput="Regenerate()">
-								</div>
-								<div class="flexparameters">
-									<label>Offset y :</label>
-									<input id="hor_text_offset" type="number" value="0" step="5" oninput="Regenerate()">
+							<div class="tool">
+								<img src="/Images/Icons/Text.svg" title="Afficher le texte">
+								<input id="hor_text" type="checkbox" style="width: auto;" checked oninput="show_hide_param('hor_text');">
+								<div id="hor_text_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Font Size.svg" title="Taille du texte">
+										<input id="hor_text_size" type="number" value="12" step="2" title="Taille du texte">
+										<img src="/Images/Icons/Eloignement.svg" title="Décalage vis à vis de l'axe">
+										<input id="hor_text_offset" type="number" value="0" step="5" title="Décalage vis à vis de l'axe">
+									</div>
 								</div>
 							</div>
 						</div>
@@ -136,41 +148,33 @@
 					<div class="formemenu">
 						<span>Axe vertical</span>
 						<div class="formemenu_div">
-							<label>Nombre de section :</label>
+							<label><b>Intervalle :</b></label>
 							<div class="subsection">
-								<div class="flexparameters">
-									<label>Principale&#8239;:</label>
-									<input id="ver_pri_nbr" type="number" value="6" step="1" min="1" oninput="Regenerate()">
+								<div class="tool-axe">
+									<label>[</label>
+									<input id="ver_start" type="number" value="-3" step="1" title="Début de l'axe">
+									<label>;</label>
+									<input id="ver_end" type="number" value="3" step="1" title="Fin de l'axe">
+									<label>]</label>
 								</div>
-								<div class="flexparameters">
-									<label>Secondaire&#8239;:</label>
-									<input id="ver_sec_nbr" type="number" value="5" step="1" min="1" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Step Over.svg" title="Pas des graduations principale">
+									<input id="ver_pas" type="number" value="1" step="1" min="0" title="Pas des graduations principale">
+									<img src="/Images/Icons/Sous Section.svg" title="Nombre de sections secondaires">
+									<input id="ver_sec_nbr" type="number" value="5" step="1" min="1" max="20" title="Nombre de sections secondaires">
 								</div>
 							</div>
 							<hr>
-							<div class="flexparameters">
-								<label>Début&#8239;:</label>
-								<input id="ver_start" type="number" value="-3" step="1" oninput="Regenerate()">
-								<label>Pas&#8239;:</label>
-								<input id="ver_pas" type="number" value="1" step="1" oninput="Regenerate()">
-							</div>
-							<hr>
-							<div>
-								<input id="ver_text" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('ver_text');">
-								<label for="ver_text" style="width: auto;">Générer le texte</label>
-							</div>
-							<div id="ver_text_section" class="subsection">
-								<select id="ver_text_pos" oninput="Regenerate()">
-									<option value="left">A Gauche</option>
-									<option value="right">A Droite</option>
-								</select>
-								<div class="flexparameters">
-									<label>Taille texte :</label>
-									<input id="ver_text_size" type="number" value="12" step="2" oninput="Regenerate()">
-								</div>
-								<div class="flexparameters">
-									<label>Offset y :</label>
-									<input id="ver_text_offset" type="number" value="0" step="5" oninput="Regenerate()">
+							<div class="tool">
+								<img src="/Images/Icons/Text.svg" title="Afficher le texte">
+								<input id="ver_text" type="checkbox" style="width: auto;" checked oninput="show_hide_param('ver_text');">
+								<div id="ver_text_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Font Size.svg" title="Taille du texte">
+										<input id="ver_text_size" type="number" value="12" step="2" title="Taille du texte">
+										<img src="/Images/Icons/Eloignement.svg" title="Décalage vis à vis de l'axe">
+										<input id="ver_text_offset" type="number" value="0" step="5" title="Décalage vis à vis de l'axe">
+									</div>
 								</div>
 							</div>
 						</div>
@@ -178,43 +182,46 @@
 					<div class="formemenu">
 						<span>Traits principaux</span>
 						<div class="formemenu_div">
-							<div class="flexparameters">
-								<label>Epaisseur:</label>
-								<input id="line_pry_stroke" type="number" value="3" step="1" min="1" oninput="Regenerate()">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Stroke Width.svg">
+								<input id="line_pri_stroke" type="number" value="3" step="1" min="1">
+								<img src="/Images/Icons/Stroke.svg">
+								<button id="line_pri_color" data-color="black" style="--cp-size:24px"></button>
+								<img src="/Images/Icons/Line Style.svg">
+								<input id="line_pri_style" type="text">
 							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Couleur:</label>
-								<input id="line_pry_color" type="color" value="#000000" oninput="Regenerate()">
-							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Style de trait :</label>
-								<input id="line_pry_style" type="text" oninput="Regenerate();">
-							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Taille des graduations:</label>
-								<input id="line_pry_pin_size" type="number" value="10" step="1" min="0" oninput="Regenerate()">
-							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Taille des flêches:</label>
-								<input id="line_pry_arrow" type="number" value="5" step="1" min="0" oninput="Regenerate()">
-							</div>
-							<hr>
-							<div>
-								<input id="line_pry_grid" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('line_pry_grid');">
-								<label for="line_pry_grid" style="width: auto;">Afficher la grille principale</label>
-							</div>
-							<div id="line_pry_grid_section" class="subsection">
-								<div class="flexparameters">
-									<label>Epaisseur grille:</label>
-									<input id="line_pry_grid_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+							<div class="tool">
+								<img src="/Images/Icons/Text.svg" title="Afficher le texte">
+								<input id="hor_text" type="checkbox" style="width: auto;" checked oninput="show_hide_param('hor_text');">
+								<div id="hor_text_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Font Size.svg" title="Taille du texte">
+										<input id="hor_text_size" type="number" value="12" step="2" title="Taille du texte">
+										<img src="/Images/Icons/Eloignement.svg" title="Décalage vis à vis de l'axe">
+										<input id="hor_text_offset" type="number" value="0" step="5" title="Décalage vis à vis de l'axe">
+									</div>
 								</div>
-								<div class="flexparameters">
-									<label>Couleur de la grille :</label>
-									<input id="line_pry_grid_color" type="color" value="#505050" oninput="Regenerate()">
+							</div>
+							<hr>
+							<div class="tool-axe">
+								<img src="/Images/Icons/Size Grad.svg">
+								<input id="line_pri_pin_size" type="number" value="10" step="1" min="0">
+								<img src="/Images/Icons/Arrow Size.svg">
+								<input id="line_pri_arrow" type="number" value="5" step="1" min="0">
+							</div>
+							<hr>
+							<div class="tool">
+								<img src="/Images/Icons/Grid.svg">
+								<input id="line_pri_grid" type="checkbox" style="width: auto;" checked oninput="show_hide_param('line_pri_grid');">
+								<div id="line_pri_grid_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur de la grille principale">
+										<input id="line_pri_grid_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur de la grille principale">
+										<button id="line_pri_grid_color" data-color="#505050" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Line Style.svg">
+										<input id="line_pri_grid_style" type="text" value="">
+									</div>
 								</div>
 							</div>
 						</div>
@@ -222,39 +229,45 @@
 					<div class="formemenu">
 						<span>Traits secondaires</span>
 						<div class="formemenu_div">
-							<div class="flexparameters">
-								<label>Epaisseur:</label>
-								<input id="line_sec_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Stroke Width.svg">
+								<input id="line_sec_stroke" type="number" value="2" step="1" min="1">
+								<img src="/Images/Icons/Stroke.svg">
+								<button id="line_sec_color" data-color="black" style="--cp-size:24px"></button>
+								<img src="/Images/Icons/Line Style.svg">
+								<input id="line_sec_style" type="text">
 							</div>
 							<hr>
-							<div class="flexparameters">
-								<label>Couleur:</label>
-								<input id="line_sec_color" type="color" value="#000000" oninput="Regenerate()">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Size Grad.svg">
+								<input id="line_sec_pin_size" type="number" value="7" step="1" min="0">
 							</div>
 							<hr>
-							<div class="flexparameters">
-								<label>Style de trait :</label>
-								<input id="line_sec_style" type="text" oninput="Regenerate();">
-							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Taille des graduations:</label>
-								<input id="line_sec_pin_size" type="number" value="5" step="1" min="0" oninput="Regenerate()">
-							</div>
-							<hr>
-							<div>
-								<input id="line_sec_grid" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('line_sec_grid');">
-								<label for="line_sec_grid" style="width: auto;">Afficher la grille secondaire</label>
-							</div>
-							<div id="line_sec_grid_section" class="subsection">
-								<div class="flexparameters">
-									<label>Epaisseur grille:</label>
-									<input id="line_sec_grid_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
+							<div class="tool">
+								<img src="/Images/Icons/Grid.svg">
+								<input id="line_sec_grid" type="checkbox" style="width: auto;" checked oninput="show_hide_param('line_sec_grid');">
+								<div id="line_sec_grid_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur de la grille principale">
+										<input id="line_sec_grid_stroke" type="number" value="1" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur de la grille principale">
+										<button id="line_sec_grid_color" data-color="#505050" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Line Style.svg">
+									</div>
 								</div>
-								<div class="flexparameters">
-									<label>Couleur de la grille:</label>
-									<input id="line_sec_grid_color" type="color" value="#505050" oninput="Regenerate()">
-								</div>
+							</div>
+						</div>
+					</div>
+					<div class="formemenu">
+						<span>Rendu final</span>
+						<div class="formemenu_div">
+							<div class="tool">
+								<img src="/Images/Icons/Width.svg" title="Largeur">
+								<input id="repere_gen_width" type="number" value="500" step="20" min="20" title="Largeur">
+								<img src="/Images/Icons/Height.svg" title="Hauteur">
+								<input id="repere_gen_height" type="number" value="500" step="20" min="20" title="Hauteur">
+								<img src="/Images/Icons/Margin.svg" title="Marge">
+								<input id="repere_gen_margin" type="number" value="5" step="1" min="0" title="Marge">
 							</div>
 						</div>
 					</div>
@@ -264,41 +277,33 @@
 					<div class="formemenu">
 						<span>Paramètre principaux</span>
 						<div class="formemenu_div">
-							<label>Nombre de section :</label>
+							<label>Intervalle :</label>
 							<div class="subsection">
-								<div class="flexparameters">
-									<label>Principale :</label>
-									<input id="axe_pri_nbr" type="number" value="6" step="1" min="1" oninput="Regenerate()">
+								<div class="tool-axe">
+									<label>[</label>
+									<input id="axe_start" type="number" value="-3" step="1" title="Début de l'axe">
+									<label>;</label>
+									<input id="axe_end" type="number" value="3" step="1" title="Fin de l'axe">
+									<label>]</label>
 								</div>
-								<div class="flexparameters">
-									<label>Secondaire :</label>
-									<input id="axe_sec_nbr" type="number" value="5" step="1" min="1" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Step Over.svg" title="Pas des graduations principale">
+									<input id="axe_pas" type="number" value="1" step="1" min="0" title="Pas des graduations principale">
+									<img src="/Images/Icons/Sous Section.svg" title="Nombre de sections secondaires">
+									<input id="axe_sec_nbr" type="number" value="5" step="1" min="1" max="20" title="Nombre de sections secondaires">
 								</div>
 							</div>
 							<hr>
-							<div class="flexparameters">
-								<label>Début&#8239;:</label>
-								<input id="axe_start" type="number" value="-3" step="1" oninput="Regenerate()">
-								<label>Pas&#8239;:</label>
-								<input id="axe_pas" type="number" value="1" step="1" oninput="Regenerate()">
-							</div>
-							<hr>
-							<div>
-								<input id="axe_text" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('axe_text');">
-								<label for="axe_text" style="width: auto;">Générer le texte</label>
-							</div>
-							<div id="axe_text_section" class="subsection">
-								<select id="axe_text_pos" oninput="Regenerate()">
-									<option value="down">En dessous</option>
-									<option value="up">Au dessus</option>
-								</select>
-								<div class="flexparameters">
-									<label>Taille texte :</label>
-									<input id="axe_text_size" type="number" value="12" step="2" oninput="Regenerate()">
-								</div>
-								<div class="flexparameters">
-									<label>Offset y :</label>
-									<input id="axe_text_offset" type="number" value="0" step="5" oninput="Regenerate()">
+							<div class="tool">
+								<img src="/Images/Icons/Text.svg" title="Afficher le texte">
+								<input id="axe_text" type="checkbox" style="width: auto;" checked oninput="show_hide_param('axe_text');">
+								<div id="axe_text_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Font Size.svg" title="Taille du texte">
+										<input id="axe_text_size" type="number" value="12" step="2" title="Taille du texte">
+										<img src="/Images/Icons/Eloignement.svg" title="Décalage vis à vis de l'axe">
+										<input id="axe_text_offset" type="number" value="0" step="5" title="Décalage vis à vis de l'axe">
+									</div>
 								</div>
 							</div>
 						</div>
@@ -306,43 +311,51 @@
 					<div class="formemenu">
 						<span>Traits principaux</span>
 						<div class="formemenu_div">
-							<div class="flexparameters">
-								<label>Epaisseur:</label>
-								<input id="axe_line_pry_stroke" type="number" value="3" step="1" min="1" oninput="Regenerate()">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Stroke Width.svg">
+								<input id="axe_line_pri_stroke" type="number" value="3" step="1" min="1">
+								<img src="/Images/Icons/Stroke.svg">
+								<button id="axe_line_pri_color" data-color="black" style="--cp-size:24px"></button>
+								<img src="/Images/Icons/Line Style.svg">
+								<input id="axe_line_pri_style" type="text">
 							</div>
 							<hr>
-							<div class="flexparameters">
-								<label>Couleur:</label>
-								<input id="axe_line_pry_color" type="color" value="#000000" oninput="Regenerate()">
-							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Taille des graduations:</label>
-								<input id="axe_line_pry_pin_size" type="number" value="10" step="1" min="0" oninput="Regenerate()">
-							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Taille de la flêche:</label>
-								<input id="axe_line_pry_arrow" type="number" value="5" step="1" min="0" oninput="Regenerate()">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Size Grad.svg">
+								<input id="axe_line_pri_pin_size" type="number" value="10" step="1" min="0">
+								<img src="/Images/Icons/Arrow Size.svg">
+								<input id="axe_line_pri_arrow" type="number" value="5" step="1" min="0">
 							</div>
 						</div>
 					</div>
 					<div class="formemenu">
 						<span>Traits secondaires</span>
 						<div class="formemenu_div">
-							<div class="flexparameters">
-								<label>Epaisseur:</label>
-								<input id="axe_line_sec_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Stroke Width.svg">
+								<input id="axe_line_sec_stroke" type="number" value="2" step="1" min="1">
+								<img src="/Images/Icons/Stroke.svg">
+								<button id="axe_line_sec_color" data-color="black" style="--cp-size:24px"></button>
+								<img src="/Images/Icons/Line Style.svg">
+								<input id="axe_line_sec_style" type="text">
 							</div>
 							<hr>
-							<div class="flexparameters">
-								<label>Couleur:</label>
-								<input id="axe_line_sec_color" type="color" value="#000000" oninput="Regenerate()">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Size Grad.svg">
+								<input id="axe_line_sec_pin_size" type="number" value="7" step="1" min="0">
 							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Taille des graduations:</label>
-								<input id="axe_line_sec_pin_size" type="number" value="5" step="1" min="0" oninput="Regenerate()">
+						</div>
+					</div>
+					<div class="formemenu">
+						<span>Rendu final</span>
+						<div class="formemenu_div">
+							<div class="tool">
+								<img src="/Images/Icons/Width.svg" title="Largeur">
+								<input id="axe_gen_width" type="number" value="500" step="20" min="20" title="Largeur">
+								<img src="/Images/Icons/Height.svg" title="Hauteur">
+								<input id="axe_gen_height" type="number" value="60" step="20" min="20" title="Hauteur">
+								<img src="/Images/Icons/Margin.svg" title="Marge">
+								<input id="axe_gen_margin" type="number" value="5" step="1" min="0" title="Marge">
 							</div>
 						</div>
 					</div>
@@ -352,73 +365,67 @@
 					<div class="formemenu">
 						<span>Surface</span>
 						<div class="formemenu_div">
-							<label>Nombre de carreau :</label>
-							<div class="subsection">
-								<label>Horizontal :</label>
-								<input id="c_hor_nbr" type="number" value="10" step="1" min="1" oninput="Regenerate()">
-								<label>Vertical :</label>
-								<input id="c_ver_nbr" type="number" value="5" step="1" min="1" oninput="Regenerate()">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Range Width.svg" title="Nombre de carreau horizontaux">
+								<input id="c_hor_nbr" type="number" value="10" step="1" min="1" title="Nombre de carreau horizontaux">
+								<img src="/Images/Icons/Range Height.svg" title="Nombre de carreau verticaux">
+								<input id="c_ver_nbr" type="number" value="5" step="1" min="1" title="Nombre de carreau verticaux">
 							</div>
 							<hr>
-							<label>Taille des carreaux :</label>
-							<div class="flexparameters">
-								<input id="c_size_x" type="number" value="40" step="5" min="0" oninput="Regenerate()">
-								<label>par</label>
-								<input id="c_size_y" type="number" value="40" step="5" min="0" oninput="Regenerate()">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Square Width.svg" title="Nombre de carreau horizontaux">
+								<input id="c_size_x" type="number" value="40" step="5" min="0" title="Nombre de carreau horizontaux">
+								<img src="/Images/Icons/Square Height.svg" title="Nombre de carreau verticaux">
+								<input id="c_size_y" type="number" value="40" step="5" min="0" title="Nombre de carreau verticaux">
 							</div>
 							<hr>
-							<div class="flexparameters">
-								<label>Epaisseur:</label>
-								<input id="q_line_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
-							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Couleur:</label>
-								<input id="q_line_color" type="color" value="#ffbbff" oninput="Regenerate()">
-							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Style de trait :</label>
-								<input id="q_line_style" type="text" oninput="Regenerate();">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Stroke Width.svg">
+								<input id="c_line_stroke" type="number" value="2" step="1" min="1">
+								<img src="/Images/Icons/Stroke.svg">
+								<button id="c_line_color" data-color="#ffbbff" style="--cp-size:24px"></button>
+								<img src="/Images/Icons/Line Style.svg">
+								<input id="c_line_style" type="text">
 							</div>
 							<hr>
 							<div>
-								<input id="q_points" type="checkbox" style="width: auto;" oninput="Regenerate()">
-								<label for="q_points" style="width: auto;">Afficher uniquement les points d'intersection du quadrillage.</label><br>
+								<input id="c_points" type="checkbox" style="width: auto;" oninput="Regenerate()">
+								<label for="c_points" style="width: auto;">Afficher uniquement les points d'intersection du quadrillage.</label><br>
 							</div>
 						</div>
 					</div>
 					<div class="formemenu">
 						<span>Quadrillage interne</span>
 						<div class="formemenu_div">
-							<div>
-								<input id="q_int" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('q_int');">
-								<label for="q_int" style="width: auto;">Activer le quadrillage interne</label><br>
+							<div class="tool">
+								<img src="/Images/Icons/Grid.svg">
+								<input id="c_int" type="checkbox" style="width: auto;" checked oninput="show_hide_param('c_int');">
+								<label for="c_int" style="width: auto; margin: auto;">Activer le quadrillage interne</label><br>
 							</div>
-							<div id="q_int_section" class="subsection">
-								<label>Nombre de carreau :</label>
-								<div class="subsection">
-									<div class="flexparameters">
-										<label>Horizontal :</label>
-										<input id="c_int_hor_nbr" type="number" value="1" step="1" min="0" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Vertical :</label>
-										<input id="c_int_ver_nbr" type="number" value="4" step="1" min="0" oninput="Regenerate()">
-									</div>
+							<div id="c_int_section" class="subsection">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Range Width.svg" title="Nombre de carreau horizontaux">
+									<input id="c_int_hor_nbr" type="number" value="1" step="1" min="1" title="Nombre de carreau horizontaux">
+									<img src="/Images/Icons/Range Height.svg" title="Nombre de carreau verticaux">
+									<input id="c_int_ver_nbr" type="number" value="4" step="1" min="1" title="Nombre de carreau verticaux">
 								</div>
-								<div class="flexparameters">
-									<label>Epaisseur:</label>
-									<input id="q_int_line_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur de la grille principale">
+									<input id="c_int_line_stroke" type="number" value="1" step="1" min="1">
+									<img src="/Images/Icons/Stroke.svg" title="Couleur de la grille principale">
+									<button id="c_int_line_color" data-color="#75FFFF" style="--cp-size:24px"></button>
+									<img src="/Images/Icons/Line Style.svg">
+									<input id="c_int_line_style" type="text">
 								</div>
-								<div class="flexparameters">
-									<label>Couleur:</label>
-									<input id="q_int_line_color" type="color" value="#75FFFF" oninput="Regenerate()">
-								</div>
-								<div class="flexparameters">
-									<label>Style de trait :</label>
-									<input id="q_int_line_style" type="text" oninput="Regenerate();">
-								</div>
+							</div>
+						</div>
+					</div>
+					<div class="formemenu">
+						<span>Rendu final</span>
+						<div class="formemenu_div">
+							<div class="tool">
+								<img src="/Images/Icons/Margin.svg" title="Marge">
+								<input id="quad_gen_margin" type="number" value="5" step="1" min="0" title="Marge">
 							</div>
 						</div>
 					</div>
@@ -438,93 +445,98 @@
 						<div class="formemenu">
 							<span>Principaux</span>
 							<div class="formemenu_div">
-								<div class="flexparameters">
-									<label>Longueur :</label>
-									<input id="sol_pavdrt_L" type="number" value="150" step="10" min="0" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Hauteur :</label>
-									<input id="sol_pavdrt_H" type="number" value="150" step="10" min="0" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Profondeur :</label>
-									<input id="sol_pavdrt_P" type="number" value="150" step="10" min="0" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Cube_Width.svg" title="Longueur">
+									<input id="sol_pavdrt_L" type="number" value="150" step="10" min="0">
+									<img src="/Images/Icons/Cube_Height.svg" title="Hauteur">
+									<input id="sol_pavdrt_H" type="number" value="150" step="10" min="0">
+									<img src="/Images/Icons/Cube_Depth.svg" title="Profondeur">
+									<input id="sol_pavdrt_P" type="number" value="150" step="10" min="0">
 								</div>
 							</div>
 						</div>
 						<div class="formemenu">
 							<span>Rendu</span>
 							<div class="formemenu_div">
-								<div class="flexparameters">
-									<label>Epaisseur:</label>
-									<input id="sol_pavdrt_line_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Stroke Width.svg">
+									<input id="sol_pavdrt_line_stroke" type="number" value="2" step="1" min="1">
+									<img src="/Images/Icons/Stroke.svg">
+									<button id="sol_pavdrt_line_color" data-color="black" style="--cp-size:24px"></button>
+									<img src="/Images/Icons/Line Style.svg">
+									<input id="sol_pavdrt_line_style" type="text">
 								</div>
 								<hr>
-								<div class="flexparameters">
-									<label>Couleur :</label>
-									<input id="sol_pavdrt_line_color" type="color" value="#000000" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div>
-									<input id="sol_pavdrt_show_hide" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_pavdrt_show_hide')">
-									<label for="sol_pavdrt_show_hide">Afficher les arrêtes cachés.</label>
+								<div class="tool">
+									<input id="sol_pavdrt_show_hide" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_pavdrt_show_hide');">
+									<label for="sol_pavdrt_show_hide">Afficher les arrêtes cachées</label>
 								</div>
 								<div id="sol_pavdrt_show_hide_section" class="subsection">
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_pavdrt_hide_style" type="text" value="--" oninput="Regenerate();">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_pavdrt_hide_color" type="color" value="#888888" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_pavdrt_hide_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_pavdrt_hide_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_pavdrt_hide_color" data-color="#505050" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Line Style.svg" title="Style des arrêtes cachées">
+										<input id="sol_pavdrt_hide_style" type="text" value="10">
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_pavdrt_fill_base" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_pavdrt_fill_base')">
-									<label for="sol_pavdrt_fill_base">Remplir la base.</label>
+								<div class="tool">
+									<input id="sol_pavdrt_fill_base" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_pavdrt_fill_base');">
+									<label for="sol_pavdrt_fill_base">Remplir la base</label>
 								</div>
-								<div id="sol_pavdrt_fill_base_section" class="subsection hiddenparam">
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_pavdrt_base_color" type="color" value="#FF0000" oninput="Regenerate()">
-									</div>
-									<div>
-										<input id="sol_pavdrt_base_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
-										<label for="sol_pavdrt_base_full">Plein.</label>
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_pavdrt_base_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_pavdrt_base_style" type="text" value="" oninput="Regenerate();">
+								<div id="sol_pavdrt_fill_base_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Fill.svg">
+										<button id="sol_pavdrt_fill_base_color" data-color="red" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Pattern.svg">
+										<div class="custom-select">
+											<select id="sol_pavdrt_fill_base_type">
+												<option value="1">A</option>
+												<option value="2">B</option>
+												<option value="3">C</option>
+												<option value="4">D</option>
+												<option value="5">E</option>
+												<option value="6">F</option>
+												<option value="7">G</option>
+												<option value="8">H</option>
+												<option value="9">I</option>
+												<option value="10">J</option>
+												<option value="11">K</option>
+												<option value="12">L</option>
+											</select>
+										</div>
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_pavdrt_fill" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate(); show_hide_param('sol_pavdrt_fill')">
-									<label for="sol_pavdrt_fill">Remplir les faces.</label>
+								<div class="tool">
+									<input id="sol_pavdrt_fill" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_pavdrt_fill');">
+									<label for="sol_pavdrt_fill">Remplir les faces</label>
 								</div>
-								<div id="sol_pavdrt_fill_section" class="subsection hiddenparam">
-									<div>
-										<input id="sol_pavdrt_fill_shadow" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
-										<label for="sol_pavdrt_fill_shadow">Effet 3D.</label>
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_pavdrt_fill_color" type="color" value="#888888" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Opacité&#8239;:</label>
-										<input id="sol_pavdrt_fill_color_alpha" type="range" value="1" min="0" max="1" step="0.1" oninput="Regenerate()">
+								<div id="sol_pavdrt_fill_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Fill.svg">
+										<button id="sol_pavdrt_fill_color" data-color="red" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/3D.svg">
+										<input id="sol_pavdrt_fill_shadow" type="checkbox" style="width: 24px; max-width: 24px; margin: 0;" unchecked>
+										<img src="/Images/Icons/Pattern.svg">
+										<div class="custom-select">
+											<select id="sol_pavdrt_fill_type">
+												<option value="1">A</option>
+												<option value="2">B</option>
+												<option value="3">C</option>
+												<option value="4">D</option>
+												<option value="5">E</option>
+												<option value="6">F</option>
+												<option value="7">G</option>
+												<option value="8">H</option>
+												<option value="9">I</option>
+												<option value="10">J</option>
+												<option value="11">K</option>
+												<option value="12">L</option>
+											</select>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -534,104 +546,105 @@
 					<div id="sol_prmdrt_param" class="hiddenparam">
 						<div class="formemenu">
 							<span>Principaux</span>
-							<div class="formemenu_div">
-								<div class="flexparameters">
-									<label>Longueur :</label>
-									<input id="sol_prmdrt_L" type="number" value="150" step="10" min="0" oninput="Regenerate()">
+								<div class="formemenu_div">
+									<div class="tool-axe">
+									<img src="/Images/Icons/Cube_Width.svg" title="Longueur">
+									<input id="sol_prmdrt_L" type="number" value="150" step="10" min="0">
+									<img src="/Images/Icons/Cube_Height.svg" title="Hauteur">
+									<input id="sol_prmdrt_H" type="number" value="150" step="10" min="0">
+									<img src="/Images/Icons/Cube_Depth.svg" title="Profondeur">
+									<input id="sol_prmdrt_P" type="number" value="150" step="10" min="0">
 								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Hauteur :</label>
-									<input id="sol_prmdrt_H" type="number" value="150" step="10" min="0" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Profondeur :</label>
-									<input id="sol_prmdrt_P" type="number" value="150" step="10" min="0" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Nombre de face :</label>
-									<input id="sol_prmdrt_F" type="number" value="3" step="1" min="3" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Angle de vue :</label>
-									<input id="sol_prmdrt_A" type="number" value="0" step="2" min="-360" max="360" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Polygon.svg" title="Nombre de faces">
+									<input id="sol_prmdrt_F" type="number" value="3" step="1" min="3">
+									<img src="/Images/Icons/Rotation.svg" title="Profondeur">
+									<input id="sol_prmdrt_A" type="number" value="0" step="2" min="-360" max="360">
 								</div>
 							</div>
 						</div>
 						<div class="formemenu">
 							<span>Rendu</span>
 							<div class="formemenu_div">
-								<div class="flexparameters">
-									<label>Epaisseur:</label>
-									<input id="sol_prmdrt_line_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Stroke Width.svg">
+									<input id="sol_prmdrt_line_stroke" type="number" value="2" step="1" min="1">
+									<img src="/Images/Icons/Stroke.svg">
+									<button id="sol_prmdrt_line_color" data-color="black" style="--cp-size:24px"></button>
+									<img src="/Images/Icons/Line Style.svg">
+									<input id="sol_prmdrt_line_style" type="text">
 								</div>
 								<hr>
-								<div class="flexparameters">
-									<label>Couleur :</label>
-									<input id="sol_prmdrt_line_color" type="color" value="#000000" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div>
-									<input id="sol_prmdrt_show_hide" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_prmdrt_show_hide')">
-									<label for="sol_prmdrt_show_hide">Afficher les arrêtes cachés.</label>
+								<div class="tool">
+									<input id="sol_prmdrt_show_hide" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_prmdrt_show_hide');">
+									<label for="sol_prmdrt_show_hide">Afficher les arrêtes cachées</label>
 								</div>
 								<div id="sol_prmdrt_show_hide_section" class="subsection">
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_prmdrt_hide_style" type="text" value="--" oninput="Regenerate();">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_prmdrt_hide_color" type="color" value="#888888" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_prmdrt_hide_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_prmdrt_hide_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_prmdrt_hide_color" data-color="#505050" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Line Style.svg" title="Style des arrêtes cachées">
+										<input id="sol_prmdrt_hide_style" type="text" value="10">
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_prmdrt_fill_base" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_prmdrt_fill_base')">
-									<label for="sol_prmdrt_fill_base">Remplir la base.</label>
+								<div class="tool">
+									<input id="sol_prmdrt_fill_base" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_prmdrt_fill_base');">
+									<label for="sol_prmdrt_fill_base">Remplir la base</label>
 								</div>
-								<div id="sol_prmdrt_fill_base_section" class="subsection hiddenparam">
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_prmdrt_base_color" type="color" value="#FF0000" oninput="Regenerate()">
-									</div>
-									<div>
-										<input id="sol_prmdrt_base_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
-										<label for="sol_prmdrt_base_full">Plein.</label>
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_prmdrt_base_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_prmdrt_base_style" type="text" value="" oninput="Regenerate();">
+								<div id="sol_prmdrt_fill_base_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Fill.svg">
+										<button id="sol_prmdrt_fill_base_color" data-color="red" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Pattern.svg">
+										<div class="custom-select">
+											<select id="sol_prmdrt_fill_base_type">
+												<option value="1">A</option>
+												<option value="2">B</option>
+												<option value="3">C</option>
+												<option value="4">D</option>
+												<option value="5">E</option>
+												<option value="6">F</option>
+												<option value="7">G</option>
+												<option value="8">H</option>
+												<option value="9">I</option>
+												<option value="10">J</option>
+												<option value="11">K</option>
+												<option value="12">L</option>
+											</select>
+										</div>
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_prmdrt_fill" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate(); show_hide_param('sol_prmdrt_fill')">
-									<label for="sol_prmdrt_fill">Remplir les faces.</label>
+								<div class="tool">
+									<input id="sol_prmdrt_fill" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_prmdrt_fill');">
+									<label for="sol_prmdrt_fill">Remplir les faces</label>
 								</div>
-								<div id="sol_prmdrt_fill_section" class="subsection hiddenparam">
-									<div>
-										<input id="sol_prmdrt_fill_shadow" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
-										<label for="sol_prmdrt_fill_shadow">Effet 3D.</label>
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_prmdrt_fill_color" type="color" value="#888888" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Opacité&#8239;:</label>
-										<input id="sol_prmdrt_fill_color_alpha" type="range" value="1" min="0" max="1" step="0.1" oninput="Regenerate()">
+								<div id="sol_prmdrt_fill_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Fill.svg">
+										<button id="sol_prmdrt_fill_color" data-color="red" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/3D.svg">
+										<input id="sol_prmdrt_fill_shadow" type="checkbox" style="width: 24px; max-width: 24px; margin: 0;" unchecked>
+										<img src="/Images/Icons/Pattern.svg">
+										<div class="custom-select">
+											<select id="sol_prmdrt_fill_type">
+												<option value="1">A</option>
+												<option value="2">B</option>
+												<option value="3">C</option>
+												<option value="4">D</option>
+												<option value="5">E</option>
+												<option value="6">F</option>
+												<option value="7">G</option>
+												<option value="8">H</option>
+												<option value="9">I</option>
+												<option value="10">J</option>
+												<option value="11">K</option>
+												<option value="12">L</option>
+											</select>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -641,89 +654,97 @@
 					<div id="sol_cylind_param" class="hiddenparam">
 						<div class="formemenu">
 							<span>Principaux</span>
-							<div class="formemenu_div">
-								<div class="flexparameters">
-									<label>Rayon :</label>
-									<input id="sol_cylind_R" type="number" value="150" step="10" min="0" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Hauteur :</label>
-									<input id="sol_cylind_H" type="number" value="200" step="10" min="0" oninput="Regenerate()">
+								<div class="formemenu_div">
+									<div class="tool-axe">
+									<img src="/Images/Icons/Radius.svg" title="Longueur">
+									<input id="sol_cylind_R" type="number" value="150" step="10" min="0">
+									<img src="/Images/Icons/Cube_Height.svg" title="Hauteur">
+									<input id="sol_cylind_H" type="number" value="150" step="10" min="0">
 								</div>
 							</div>
 						</div>
 						<div class="formemenu">
 							<span>Rendu</span>
 							<div class="formemenu_div">
-								<div class="flexparameters">
-									<label>Epaisseur:</label>
-									<input id="sol_cylind_line_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Stroke Width.svg">
+									<input id="sol_cylind_line_stroke" type="number" value="2" step="1" min="1">
+									<img src="/Images/Icons/Stroke.svg">
+									<button id="sol_cylind_line_color" data-color="black" style="--cp-size:24px"></button>
+									<img src="/Images/Icons/Line Style.svg">
+									<input id="sol_cylind_line_style" type="text">
 								</div>
 								<hr>
-								<div class="flexparameters">
-									<label>Couleur :</label>
-									<input id="sol_cylind_line_color" type="color" value="#000000" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div>
-									<input id="sol_cylind_show_hide" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_cylind_show_hide')">
-									<label for="sol_cylind_show_hide">Afficher les arrêtes cachés.</label>
+								<div class="tool">
+									<input id="sol_cylind_show_hide" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_cylind_show_hide');">
+									<label for="sol_cylind_show_hide">Afficher les arrêtes cachées</label>
 								</div>
 								<div id="sol_cylind_show_hide_section" class="subsection">
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_cylind_hide_style" type="text" value="--" oninput="Regenerate();">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_cylind_hide_color" type="color" value="#888888" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_cylind_hide_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_cylind_hide_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_cylind_hide_color" data-color="#505050" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Line Style.svg" title="Style des arrêtes cachées">
+										<input id="sol_cylind_hide_style" type="text" value="10">
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_cylind_fill_base" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_cylind_fill_base')">
-									<label for="sol_cylind_fill_base">Remplir la base.</label>
+								<div class="tool">
+									<input id="sol_cylind_fill_base" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_cylind_fill_base');">
+									<label for="sol_cylind_fill_base">Remplir la base</label>
 								</div>
-								<div id="sol_cylind_fill_base_section" class="subsection hiddenparam">
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_cylind_base_color" type="color" value="#FF0000" oninput="Regenerate()">
-									</div>
-									<div>
-										<input id="sol_cylind_base_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
-										<label for="sol_cylind_base_full">Plein.</label>
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_cylind_base_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_cylind_base_style" type="text" value="" oninput="Regenerate();">
+								<div id="sol_cylind_fill_base_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Fill.svg">
+										<button id="sol_cylind_fill_base_color" data-color="red" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Pattern.svg">
+										<div class="custom-select">
+											<select id="sol_cylind_fill_base_type">
+												<option value="1">A</option>
+												<option value="2">B</option>
+												<option value="3">C</option>
+												<option value="4">D</option>
+												<option value="5">E</option>
+												<option value="6">F</option>
+												<option value="7">G</option>
+												<option value="8">H</option>
+												<option value="9">I</option>
+												<option value="10">J</option>
+												<option value="11">K</option>
+												<option value="12">L</option>
+											</select>
+										</div>
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_cylind_fill" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate(); show_hide_param('sol_cylind_fill')">
-									<label for="sol_cylind_fill">Remplir les faces.</label>
+								<div class="tool">
+									<input id="sol_cylind_fill" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_cylind_fill');">
+									<label for="sol_cylind_fill">Remplir les faces</label>
 								</div>
-								<div id="sol_cylind_fill_section" class="subsection hiddenparam">
-									<div>
-										<input id="sol_cylind_fill_shadow" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
-										<label for="sol_cylind_fill_shadow">Effet 3D.</label>
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_cylind_fill_color" type="color" value="#888888" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Opacité&#8239;:</label>
-										<input id="sol_cylind_fill_color_alpha" type="range" value="1" min="0" max="1" step="0.1" oninput="Regenerate()">
+								<div id="sol_cylind_fill_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Fill.svg">
+										<button id="sol_cylind_fill_color" data-color="red" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/3D.svg">
+										<input id="sol_cylind_fill_shadow" type="checkbox" style="width: 24px; max-width: 24px; margin: 0;" unchecked>
+										<img src="/Images/Icons/Pattern.svg">
+										<div class="custom-select">
+											<select id="sol_cylind_fill_type">
+												<option value="1">A</option>
+												<option value="2">B</option>
+												<option value="3">C</option>
+												<option value="4">D</option>
+												<option value="5">E</option>
+												<option value="6">F</option>
+												<option value="7">G</option>
+												<option value="8">H</option>
+												<option value="9">I</option>
+												<option value="10">J</option>
+												<option value="11">K</option>
+												<option value="12">L</option>
+											</select>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -731,67 +752,52 @@
 						<div class="formemenu">
 							<span>Information</span>
 							<div class="formemenu_div">
-								<div>
-									<input id="sol_cylind_h" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_cylind_h')">
-									<label for="sol_cylind_h">Afficher la hauteur centrale.</label>
+								<div class="tool">
+									<input id="sol_cylind_h" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_cylind_h');">
+									<label for="sol_cylind_h">Afficher la hauteur centrale</label>
 								</div>
 								<div id="sol_cylind_h_section" class="subsection">
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_cylind_h_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_cylind_h_color" type="color" value="#8888EE" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_cylind_h_style" type="text" value="--" oninput="Regenerate();">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_cylind_h_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_cylind_h_color" data-color="#8888EE" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Line Style.svg" title="Style des arrêtes cachées">
+										<input id="sol_cylind_h_style" type="text" value="10">
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_cylind_r" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_cylind_r')">
-									<label for="sol_cylind_r">Afficher un rayon.</label>
+								<div class="tool">
+									<input id="sol_cylind_r" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_cylind_r');">
+									<label for="sol_cylind_r">Afficher un rayon</label>
 								</div>
 								<div id="sol_cylind_r_section" class="subsection">
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_cylind_r_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_cylind_r_color" type="color" value="#CC8888" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_cylind_r_style" type="text" value="--" oninput="Regenerate();">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_cylind_r_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_cylind_r_color" data-color="#cc8888" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Line Style.svg" title="Style des arrêtes cachées">
+										<input id="sol_cylind_r_style" type="text" value="10">
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_cylind_ag" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_cylind_ag')">
-									<label for="sol_cylind_ag">Afficher l'angle droit.</label>
+								<div class="tool">
+									<input id="sol_cylind_ag" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_cylind_ag');">
+									<label for="sol_cylind_ag">Afficher l'angle droit</label>
 								</div>
 								<div id="sol_cylind_ag_section" class="subsection">
-									<div>
-										<input id="sol_cylind_ag_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
-										<label for="sol_cylind_ag_full">Plein.</label>
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_cylind_ag_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_cylind_ag_color" type="color" value="#88CC88" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_cylind_ag_style" type="text" value="" oninput="Regenerate();">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Fill.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_cylind_ag_full" style="width: 24px; max-width: 24px; margin: 0;" type="checkbox" unchecked>
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_cylind_ag_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_cylind_ag_color" data-color="#88cc88" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Line Style.svg" title="Style des arrêtes cachées">
+										<input id="sol_cylind_ag_style" type="text" value="0">
 									</div>
 								</div>
-								<hr>
 							</div>
 						</div>
 					</div>
@@ -799,104 +805,105 @@
 					<div id="sol_pyrami_param" class="hiddenparam">
 						<div class="formemenu">
 							<span>Principaux</span>
-							<div class="formemenu_div">
-								<div class="flexparameters">
-									<label>Longueur :</label>
-									<input id="sol_pyrami_L" type="number" value="150" step="10" min="0" oninput="Regenerate()">
+								<div class="formemenu_div">
+									<div class="tool-axe">
+									<img src="/Images/Icons/Cube_Width.svg" title="Longueur">
+									<input id="sol_pyrami_L" type="number" value="150" step="10" min="0">
+									<img src="/Images/Icons/Cube_Height.svg" title="Hauteur">
+									<input id="sol_pyrami_H" type="number" value="150" step="10" min="0">
+									<img src="/Images/Icons/Cube_Depth.svg" title="Profondeur">
+									<input id="sol_pyrami_P" type="number" value="150" step="10" min="0">
 								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Hauteur :</label>
-									<input id="sol_pyrami_H" type="number" value="150" step="10" min="0" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Profondeur :</label>
-									<input id="sol_pyrami_P" type="number" value="150" step="10" min="0" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Nombre de face :</label>
-									<input id="sol_pyrami_F" type="number" value="3" step="1" min="3" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Angle de vue :</label>
-									<input id="sol_pyrami_A" type="number" value="0" step="2" min="-360" max="360" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Polygon.svg" title="Nombre de faces">
+									<input id="sol_pyrami_F" type="number" value="3" step="1" min="3">
+									<img src="/Images/Icons/Rotation.svg" title="Profondeur">
+									<input id="sol_pyrami_A" type="number" value="0" step="2" min="-360" max="360">
 								</div>
 							</div>
 						</div>
 						<div class="formemenu">
 							<span>Rendu</span>
 							<div class="formemenu_div">
-								<div class="flexparameters">
-									<label>Epaisseur:</label>
-									<input id="sol_pyrami_line_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Stroke Width.svg">
+									<input id="sol_pyrami_line_stroke" type="number" value="2" step="1" min="1">
+									<img src="/Images/Icons/Stroke.svg">
+									<button id="sol_pyrami_line_color" data-color="black" style="--cp-size:24px"></button>
+									<img src="/Images/Icons/Line Style.svg">
+									<input id="sol_pyrami_line_style" type="text">
 								</div>
 								<hr>
-								<div class="flexparameters">
-									<label>Couleur :</label>
-									<input id="sol_pyrami_line_color" type="color" value="#000000" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div>
-									<input id="sol_pyrami_show_hide" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_pyrami_show_hide')">
-									<label for="sol_pyrami_show_hide">Afficher les arrêtes cachés.</label>
+								<div class="tool">
+									<input id="sol_pyrami_show_hide" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_pyrami_show_hide');">
+									<label for="sol_pyrami_show_hide">Afficher les arrêtes cachées</label>
 								</div>
 								<div id="sol_pyrami_show_hide_section" class="subsection">
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_pyrami_hide_style" type="text" value="--" oninput="Regenerate();">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_pyrami_hide_color" type="color" value="#888888" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_pyrami_hide_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_pyrami_hide_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_pyrami_hide_color" data-color="#505050" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Line Style.svg" title="Style des arrêtes cachées">
+										<input id="sol_pyrami_hide_style" type="text" value="10">
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_pyrami_fill_base" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_pyrami_fill_base')">
-									<label for="sol_pyrami_fill_base">Remplir la base.</label>
+								<div class="tool">
+									<input id="sol_pyrami_fill_base" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_pyrami_fill_base');">
+									<label for="sol_pyrami_fill_base">Remplir la base</label>
 								</div>
-								<div id="sol_pyrami_fill_base_section" class="subsection hiddenparam">
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_pyrami_base_color" type="color" value="#FF0000" oninput="Regenerate()">
-									</div>
-									<div>
-										<input id="sol_pyrami_base_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
-										<label for="sol_pyrami_base_full">Plein.</label>
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_pyrami_base_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_pyrami_base_style" type="text" value="" oninput="Regenerate();">
+								<div id="sol_pyrami_fill_base_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Fill.svg">
+										<button id="sol_pyrami_fill_base_color" data-color="red" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Pattern.svg">
+										<div class="custom-select">
+											<select id="sol_pyrami_fill_base_type">
+												<option value="1">A</option>
+												<option value="2">B</option>
+												<option value="3">C</option>
+												<option value="4">D</option>
+												<option value="5">E</option>
+												<option value="6">F</option>
+												<option value="7">G</option>
+												<option value="8">H</option>
+												<option value="9">I</option>
+												<option value="10">J</option>
+												<option value="11">K</option>
+												<option value="12">L</option>
+											</select>
+										</div>
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_pyrami_fill" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate(); show_hide_param('sol_pyrami_fill')">
-									<label for="sol_pyrami_fill">Remplir les faces.</label>
+								<div class="tool">
+									<input id="sol_pyrami_fill" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_pyrami_fill');">
+									<label for="sol_pyrami_fill">Remplir les faces</label>
 								</div>
-								<div id="sol_pyrami_fill_section" class="subsection hiddenparam">
-									<div>
-										<input id="sol_pyrami_fill_shadow" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
-										<label for="sol_pyrami_fill_shadow">Effet 3D.</label>
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_pyrami_fill_color" type="color" value="#888888" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Opacité&#8239;:</label>
-										<input id="sol_pyrami_fill_color_alpha" type="range" value="1" min="0" max="1" step="0.1" oninput="Regenerate()">
+								<div id="sol_pyrami_fill_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Fill.svg">
+										<button id="sol_pyrami_fill_color" data-color="red" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/3D.svg">
+										<input id="sol_pyrami_fill_shadow" type="checkbox" style="width: 24px; max-width: 24px; margin: 0;" unchecked>
+										<img src="/Images/Icons/Pattern.svg">
+										<div class="custom-select">
+											<select id="sol_pyrami_fill_type">
+												<option value="1">A</option>
+												<option value="2">B</option>
+												<option value="3">C</option>
+												<option value="4">D</option>
+												<option value="5">E</option>
+												<option value="6">F</option>
+												<option value="7">G</option>
+												<option value="8">H</option>
+												<option value="9">I</option>
+												<option value="10">J</option>
+												<option value="11">K</option>
+												<option value="12">L</option>
+											</select>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -904,48 +911,37 @@
 						<div class="formemenu">
 							<span>Information</span>
 							<div class="formemenu_div">
-								<div>
-									<input id="sol_pyrami_h" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_pyrami_h')">
-									<label for="sol_pyrami_h">Afficher la hauteur centrale.</label>
+								<div class="tool">
+									<input id="sol_pyrami_h" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_pyrami_h');">
+									<label for="sol_pyrami_h">Afficher la hauteur centrale</label>
 								</div>
 								<div id="sol_pyrami_h_section" class="subsection">
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_pyrami_h_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_pyrami_h_color" type="color" value="#8888EE" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_pyrami_h_style" type="text" value="--" oninput="Regenerate();">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_pyrami_h_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_pyrami_h_color" data-color="#8888EE" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Line Style.svg" title="Style des arrêtes cachées">
+										<input id="sol_pyrami_h_style" type="text" value="10">
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_pyrami_ag" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_pyrami_ag')">
-									<label for="sol_pyrami_ag">Afficher l'angle droit.</label>
+								<div class="tool">
+									<input id="sol_pyrami_ag" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_pyrami_ag');">
+									<label for="sol_pyrami_ag">Afficher l'angle droit</label>
 								</div>
 								<div id="sol_pyrami_ag_section" class="subsection">
-									<div>
-										<input id="sol_pyrami_ag_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
-										<label for="sol_pyrami_ag_full">Plein.</label>
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_pyrami_ag_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_pyrami_ag_color" type="color" value="#88CC88" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_pyrami_ag_style" type="text" value="" oninput="Regenerate();">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Fill.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_pyrami_ag_full" style="width: 24px; max-width: 24px; margin: 0;" type="checkbox" unchecked>
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_pyrami_ag_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_pyrami_ag_color" data-color="#88cc88" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Line Style.svg" title="Style des arrêtes cachées">
+										<input id="sol_pyrami_ag_style" type="text" value="0">
 									</div>
 								</div>
-								<hr>
 							</div>
 						</div>
 					</div>
@@ -953,89 +949,97 @@
 					<div id="sol_cone_param" class="hiddenparam">
 						<div class="formemenu">
 							<span>Principaux</span>
-							<div class="formemenu_div">
-								<div class="flexparameters">
-									<label>Rayon :</label>
-									<input id="sol_cone_R" type="number" value="150" step="10" min="0" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Hauteur :</label>
-									<input id="sol_cone_H" type="number" value="200" step="10" min="0" oninput="Regenerate()">
+								<div class="formemenu_div">
+									<div class="tool-axe">
+									<img src="/Images/Icons/Radius.svg" title="Longueur">
+									<input id="sol_cone_R" type="number" value="150" step="10" min="0">
+									<img src="/Images/Icons/Cube_Height.svg" title="Hauteur">
+									<input id="sol_cone_H" type="number" value="200" step="10" min="0">
 								</div>
 							</div>
 						</div>
 						<div class="formemenu">
 							<span>Rendu</span>
 							<div class="formemenu_div">
-								<div class="flexparameters">
-									<label>Epaisseur:</label>
-									<input id="sol_cone_line_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Stroke Width.svg">
+									<input id="sol_cone_line_stroke" type="number" value="2" step="1" min="1">
+									<img src="/Images/Icons/Stroke.svg">
+									<button id="sol_cone_line_color" data-color="black" style="--cp-size:24px"></button>
+									<img src="/Images/Icons/Line Style.svg">
+									<input id="sol_cone_line_style" type="text">
 								</div>
 								<hr>
-								<div class="flexparameters">
-									<label>Couleur :</label>
-									<input id="sol_cone_line_color" type="color" value="#000000" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div>
-									<input id="sol_cone_show_hide" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_cone_show_hide')">
-									<label for="sol_cone_show_hide">Afficher les arrêtes cachés.</label>
+								<div class="tool">
+									<input id="sol_cone_show_hide" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_cone_show_hide');">
+									<label for="sol_cone_show_hide">Afficher les arrêtes cachées</label>
 								</div>
 								<div id="sol_cone_show_hide_section" class="subsection">
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_cone_hide_style" type="text" value="--" oninput="Regenerate();">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_cone_hide_color" type="color" value="#888888" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_cone_hide_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_cone_hide_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_cone_hide_color" data-color="#505050" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Line Style.svg" title="Style des arrêtes cachées">
+										<input id="sol_cone_hide_style" type="text" value="10">
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_cone_fill_base" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_cone_fill_base')">
-									<label for="sol_cone_fill_base">Remplir la base.</label>
+								<div class="tool">
+									<input id="sol_cone_fill_base" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_cone_fill_base');">
+									<label for="sol_cone_fill_base">Remplir la base</label>
 								</div>
-								<div id="sol_cone_fill_base_section" class="subsection hiddenparam">
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_cone_base_color" type="color" value="#FF0000" oninput="Regenerate()">
-									</div>
-									<div>
-										<input id="sol_cone_base_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
-										<label for="sol_cone_base_full">Plein.</label>
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_cone_base_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_cone_base_style" type="text" value="" oninput="Regenerate();">
+								<div id="sol_cone_fill_base_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Fill.svg">
+										<button id="sol_cone_fill_base_color" data-color="red" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Pattern.svg">
+										<div class="custom-select">
+											<select id="sol_cone_fill_base_type">
+												<option value="1">A</option>
+												<option value="2">B</option>
+												<option value="3">C</option>
+												<option value="4">D</option>
+												<option value="5">E</option>
+												<option value="6">F</option>
+												<option value="7">G</option>
+												<option value="8">H</option>
+												<option value="9">I</option>
+												<option value="10">J</option>
+												<option value="11">K</option>
+												<option value="12">L</option>
+											</select>
+										</div>
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_cone_fill" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate(); show_hide_param('sol_cone_fill')">
-									<label for="sol_cone_fill">Remplir les faces.</label>
+								<div class="tool">
+									<input id="sol_cone_fill" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_cone_fill');">
+									<label for="sol_cone_fill">Remplir les faces</label>
 								</div>
-								<div id="sol_cone_fill_section" class="subsection hiddenparam">
-									<div>
-										<input id="sol_cone_fill_shadow" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
-										<label for="sol_cone_fill_shadow">Effet 3D.</label>
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_cone_fill_color" type="color" value="#888888" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Opacité&#8239;:</label>
-										<input id="sol_cone_fill_color_alpha" type="range" value="1" min="0" max="1" step="0.1" oninput="Regenerate()">
+								<div id="sol_cone_fill_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Fill.svg">
+										<button id="sol_cone_fill_color" data-color="red" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/3D.svg">
+										<input id="sol_cone_fill_shadow" type="checkbox" style="width: 24px; max-width: 24px; margin: 0;" unchecked>
+										<img src="/Images/Icons/Pattern.svg">
+										<div class="custom-select">
+											<select id="sol_cone_fill_type">
+												<option value="1">A</option>
+												<option value="2">B</option>
+												<option value="3">C</option>
+												<option value="4">D</option>
+												<option value="5">E</option>
+												<option value="6">F</option>
+												<option value="7">G</option>
+												<option value="8">H</option>
+												<option value="9">I</option>
+												<option value="10">J</option>
+												<option value="11">K</option>
+												<option value="12">L</option>
+											</select>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -1043,67 +1047,52 @@
 						<div class="formemenu">
 							<span>Information</span>
 							<div class="formemenu_div">
-								<div>
-									<input id="sol_cone_h" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_cone_h')">
-									<label for="sol_cone_h">Afficher la hauteur centrale.</label>
+								<div class="tool">
+									<input id="sol_cone_h" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_cone_h');">
+									<label for="sol_cone_h">Afficher la hauteur centrale</label>
 								</div>
 								<div id="sol_cone_h_section" class="subsection">
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_cone_h_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_cone_h_color" type="color" value="#8888EE" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_cone_h_style" type="text" value="--" oninput="Regenerate();">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_cone_h_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_cone_h_color" data-color="#8888EE" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Line Style.svg" title="Style des arrêtes cachées">
+										<input id="sol_cone_h_style" type="text" value="10">
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_cone_r" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_cone_r')">
-									<label for="sol_cone_r">Afficher un rayon.</label>
+								<div class="tool">
+									<input id="sol_cone_r" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_cone_r');">
+									<label for="sol_cone_r">Afficher un rayon</label>
 								</div>
 								<div id="sol_cone_r_section" class="subsection">
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_cone_r_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_cone_r_color" type="color" value="#CC8888" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_cone_r_style" type="text" value="--" oninput="Regenerate();">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_cone_r_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_cone_r_color" data-color="#cc8888" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Line Style.svg" title="Style des arrêtes cachées">
+										<input id="sol_cone_r_style" type="text" value="10">
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_cone_ag" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_cone_ag')">
-									<label for="sol_cone_ag">Afficher l'angle droit.</label>
+								<div class="tool">
+									<input id="sol_cone_ag" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_cone_ag');">
+									<label for="sol_cone_ag">Afficher l'angle droit</label>
 								</div>
 								<div id="sol_cone_ag_section" class="subsection">
-									<div>
-										<input id="sol_cone_ag_full" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
-										<label for="sol_cone_ag_full">Plein.</label>
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_cone_ag_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_cone_ag_color" type="color" value="#88CC88" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_cone_ag_style" type="text" value="" oninput="Regenerate();">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Fill.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_cone_ag_full" style="width: 24px; max-width: 24px; margin: 0;" type="checkbox" unchecked>
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_cone_ag_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_cone_ag_color" data-color="#88cc88" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Line Style.svg" title="Style des arrêtes cachées">
+										<input id="sol_cone_ag_style" type="text" value="0">
 									</div>
 								</div>
-								<hr>
 							</div>
 						</div>
 					</div>
@@ -1111,58 +1100,69 @@
 					<div id="sol_sphere_param" class="hiddenparam">
 						<div class="formemenu">
 							<span>Principaux</span>
-							<div class="formemenu_div">
-								<div class="flexparameters">
-									<label>Rayon :</label>
-									<input id="sol_sphere_R" type="number" value="150" step="10" min="0" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Angle de vue :</label>
-									<input id="sol_sphere_A" type="number" value="10" step="5" min="-90" max="90" oninput="Regenerate()">
+								<div class="formemenu_div">
+									<div class="tool-axe">
+									<img src="/Images/Icons/Radius.svg" title="Longueur">
+									<input id="sol_sphere_R" type="number" value="150" step="10" min="0">
+									<img src="/Images/Icons/Rotation.svg" title="Profondeur">
+									<input id="sol_sphere_A" type="number" value="10" step="2" min="-90" max="90">
 								</div>
 							</div>
 						</div>
 						<div class="formemenu">
 							<span>Rendu</span>
 							<div class="formemenu_div">
-								<div class="flexparameters">
-									<label>Epaisseur:</label>
-									<input id="sol_sphere_line_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Stroke Width.svg">
+									<input id="sol_sphere_line_stroke" type="number" value="2" step="1" min="1">
+									<img src="/Images/Icons/Stroke.svg">
+									<button id="sol_sphere_line_color" data-color="black" style="--cp-size:24px"></button>
+									<img src="/Images/Icons/Line Style.svg">
+									<input id="sol_sphere_line_style" type="text">
 								</div>
 								<hr>
-								<div class="flexparameters">
-									<label>Couleur :</label>
-									<input id="sol_sphere_line_color" type="color" value="#000000" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div>
-									<input id="sol_sphere_show_hide" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param('sol_sphere_show_hide')">
-									<label for="sol_sphere_show_hide">Afficher les arrêtes cachés.</label>
+								<div class="tool">
+									<input id="sol_sphere_show_hide" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_sphere_show_hide');">
+									<label for="sol_sphere_show_hide">Afficher les arrêtes cachées</label>
 								</div>
 								<div id="sol_sphere_show_hide_section" class="subsection">
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_sphere_hide_style" type="text" value="--" oninput="Regenerate();">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_sphere_hide_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_sphere_hide_color" data-color="#505050" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Line Style.svg" title="Style des arrêtes cachées">
+										<input id="sol_sphere_hide_style" type="text" value="10">
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_sphere_fill" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate(); show_hide_param('sol_sphere_fill')">
-									<label for="sol_sphere_fill">Remplir les faces.</label>
+								<div class="tool">
+									<input id="sol_sphere_fill" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_sphere_fill');">
+									<label for="sol_sphere_fill">Remplir les faces</label>
 								</div>
-								<div id="sol_sphere_fill_section" class="subsection hiddenparam">
-									<div>
-										<input id="sol_sphere_fill_shadow" type="checkbox"  style="width: auto;" unchecked oninput="Regenerate();">
-										<label for="sol_sphere_fill_shadow">Effet 3D.</label>
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_sphere_fill_color" type="color" value="#888888" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Opacité&#8239;:</label>
-										<input id="sol_sphere_fill_color_alpha" type="range" value="1" min="0" max="1" step="0.1" oninput="Regenerate()">
+								<div id="sol_sphere_fill_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Fill.svg">
+										<button id="sol_sphere_fill_color" data-color="red" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/3D.svg">
+										<input id="sol_sphere_fill_shadow" type="checkbox" style="width: 24px; max-width: 24px; margin: 0;" unchecked>
+										<img src="/Images/Icons/Pattern.svg">
+										<div class="custom-select">
+											<select id="sol_sphere_fill_type">
+												<option value="1">A</option>
+												<option value="2">B</option>
+												<option value="3">C</option>
+												<option value="4">D</option>
+												<option value="5">E</option>
+												<option value="6">F</option>
+												<option value="7">G</option>
+												<option value="8">H</option>
+												<option value="9">I</option>
+												<option value="10">J</option>
+												<option value="11">K</option>
+												<option value="12">L</option>
+											</select>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -1170,116 +1170,94 @@
 						<div class="formemenu">
 							<span>Information</span>
 							<div class="formemenu_div">
-								<div>
-									<input id="sol_sphere_e" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_sphere_e')">
-									<label for="sol_sphere_e">Afficher l'équateur.</label>
+								<div class="tool">
+									<input id="sol_sphere_equ" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_sphere_equ');">
+									<label for="sol_sphere_equ">Afficher l'équateur.</label>
 								</div>
-								<div id="sol_sphere_e_section" class="subsection hiddenparam">
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_sphere_e_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_sphere_e_color" type="color" value="#8888EE" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_sphere_e_style" type="text" value="--" oninput="Regenerate();">
+								<div id="sol_sphere_equ_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_sphere_equ_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_sphere_equ_color" data-color="#8888EE" style="--cp-size:24px"></button>
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_sphere_lon" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_sphere_lon')">
+								<div class="tool">
+									<input id="sol_sphere_lon" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_sphere_lon');">
 									<label for="sol_sphere_lon">Afficher une longitude.</label>
 								</div>
-								<div id="sol_sphere_lon_section" class="subsection hiddenparam">
-									<div class="flexparameters">
-										<label>Angle&#8239;:</label>
-										<input id="sol_sphere_lon_angle" type="number" value="30" step="1" min="0" max="180" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_sphere_lon_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_sphere_lon_color" type="color" value="#8888EE" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_sphere_lon_style" type="text" value="--" oninput="Regenerate();">
+								<div id="sol_sphere_lon_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Longitude.svg" title="Profondeur">
+										<input id="sol_sphere_lon_angle" type="number" value="30" step="1" min="0" max="180">
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_sphere_lon_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_sphere_lon_color" data-color="#8888EE" style="--cp-size:24px"></button>
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_sphere_lat" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_sphere_lat')">
+								<div class="tool">
+									<input id="sol_sphere_lat" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_sphere_lat');">
 									<label for="sol_sphere_lat">Afficher une latitude.</label>
 								</div>
-								<div id="sol_sphere_lat_section" class="subsection hiddenparam">
-									<div class="flexparameters">
-										<label>Angle&#8239;:</label>
-										<input id="sol_sphere_lat_angle" type="number" value="30" step="1" min="-90" max="90" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_sphere_lat_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_sphere_lat_color" type="color" value="#8888EE" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_sphere_lat_style" type="text" value="--" oninput="Regenerate();">
+								<div id="sol_sphere_lat_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Latitude.svg" title="Profondeur">
+										<input id="sol_sphere_lat_angle" type="number" value="30" step="1" min="-90" max="90">
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_sphere_lat_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_sphere_lat_color" data-color="#8888EE" style="--cp-size:24px"></button>
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_sphere_h" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_sphere_h')">
-									<label for="sol_sphere_h">Afficher la hauteur centrale.</label>
+								<div class="tool">
+									<input id="sol_sphere_pol" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_sphere_pol');">
+									<label for="sol_sphere_pol">Afficher le lien entre les pôles.</label>
 								</div>
-								<div id="sol_sphere_h_section" class="subsection hiddenparam">
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_sphere_h_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_sphere_h_color" type="color" value="#8888EE" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_sphere_h_style" type="text" value="--" oninput="Regenerate();">
+								<div id="sol_sphere_pol_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_sphere_pol_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_sphere_pol_color" data-color="#8888EE" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Line Style.svg" title="Style des arrêtes cachées">
+										<input id="sol_sphere_pol_style" type="text" value="10">
 									</div>
 								</div>
 								<hr>
-								<div>
-									<input id="sol_sphere_r" type="checkbox" style="width: auto;" oninput="Regenerate(); show_hide_param('sol_sphere_r')">
-									<label for="sol_sphere_r">Afficher un rayon.</label>
+								<div class="tool">
+									<input id="sol_sphere_rad" type="checkbox" style="width: auto;" checked oninput="show_hide_param('sol_sphere_rad');">
+									<label for="sol_sphere_rad">Afficher un rayon.</label>
 								</div>
-								<div id="sol_sphere_r_section" class="subsection hiddenparam">
-									<div class="flexparameters">
-										<label>Longitude&#8239;:</label>
-										<input id="sol_sphere_r_lon" type="number" value="30" step="1" min="0" max="360" oninput="Regenerate()">
+								<div id="sol_sphere_rad_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Longitude.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_sphere_rad_lon" type="number" value="30" step="1" min="0" max="360">
+										<img src="/Images/Icons/Latitude.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_sphere_rad_lat" type="number" value="30" step="1" min="-90" max="90">
 									</div>
-									<div class="flexparameters">
-										<label>Latitude&#8239;:</label>
-										<input id="sol_sphere_r_lat" type="number" value="30" step="1" min="-90" max="90" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Epaisseur&#8239;:</label>
-										<input id="sol_sphere_r_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Couleur&#8239;:</label>
-										<input id="sol_sphere_r_color" type="color" value="#CC8888" oninput="Regenerate()">
-									</div>
-									<div class="flexparameters">
-										<label>Style&#8239;:</label>
-										<input id="sol_sphere_r_style" type="text" value="--" oninput="Regenerate();">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur des arrêtes cachées">
+										<input id="sol_sphere_rad_stroke" type="number" value="2" step="1" min="1">
+										<img src="/Images/Icons/Stroke.svg" title="Couleur des arrêtes cachées">
+										<button id="sol_sphere_rad_color" data-color="#CC8888" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Line Style.svg" title="Style des arrêtes cachées">
+										<input id="sol_sphere_rad_style" type="text" value="5">
 									</div>
 								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Parametres globaux -->
+					<div class="formemenu">
+						<span>Rendu final</span>
+						<div class="formemenu_div">
+							<div class="tool">
+								<img src="/Images/Icons/Margin.svg" title="Marge">
+								<input id="sol_gen_margin" type="number" value="5" step="1" min="0" title="Marge">
 							</div>
 						</div>
 					</div>
@@ -1289,35 +1267,40 @@
 					<div class="formemenu">
 						<span>Pramètres principaux</span>
 						<div class="formemenu_div">
-							<div>
-								<input id="frac_txt" type="checkbox" style="width: auto;" checked oninput="Regenerate(); show_hide_param(this.id);">
-								<label for="frac_txt" style="width: auto;">Générer le texte</label>
-							</div>
-							<div id="frac_txt_section" class="subsection">
-								<select id="frac_txt_type" oninput="Regenerate()">
-									<option value="0">Pourcentage</option>
-									<option value="1">Fraction</option>
-									<option value="2">Décimal</option>
-								</select>
-								<div class="flexparameters">
-									<label>Taille texte :</label>
-									<input id="frac_txt_size" type="number" value="24" step="2" oninput="Regenerate()">
+							<div class="tool">
+								<img src="/Images/Icons/Text.svg" title="Afficher le texte">
+								<input id="frac_txt" type="checkbox" style="width: auto;" checked oninput="show_hide_param('frac_txt');">
+								<div id="frac_txt_section" class="subsection">
+									<div class="tool-axe">
+										<select id="frac_txt_type">
+											<option value="0">Pourcentage</option>
+											<option value="1">Fraction</option>
+											<option value="2">Décimal</option>
+										</select>
+										<img src="/Images/Icons/Font Size.svg" title="Taille du texte">
+										<input id="frac_txt_size" type="number" value="12" step="2" title="Taille du texte">
+									</div>
 								</div>
 							</div>
 							<hr>
-							<div class="flexparameters">
-								<label>Epaisseur:</label>
-								<input id="frac_line_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Stroke Width.svg">
+								<input id="frac_stroke" type="number" value="2" step="1" min="1">
+								<img src="/Images/Icons/Stroke.svg">
+								<button id="frac_color" data-color="black" style="--cp-size:24px"></button>
+								<img src="/Images/Icons/Line Style.svg">
+								<input id="frac_style" type="text">
 							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Couleur:</label>
-								<input id="frac_line_color" type="color" value="#000000" oninput="Regenerate()">
-							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Style de trait :</label>
-								<input id="frac_line_style" type="text" oninput="Regenerate();">
+						</div>
+					</div>
+					<div class="formemenu">
+						<span>Rendu final</span>
+						<div class="formemenu_div">
+							<div class="tool">
+								<img src="/Images/Icons/Size.svg" title="Largeur">
+								<input id="frac_gen_size" type="number" value="500" step="20" min="20" title="Taille">
+								<img src="/Images/Icons/Margin.svg" title="Marge">
+								<input id="frac_gen_margin" type="number" value="5" step="1" min="0" title="Marge">
 							</div>
 						</div>
 					</div>
@@ -1349,31 +1332,22 @@
 									<span>Barres :</span>
 									<div class="formemenu_div">
 										<div id="diag_baton_listbarre" class="panel">
-											<div id="diag_baton_barre1" class="formemenu" >
-												<span>Barre 1 :</span>
-												<div class="formemenu_div">
-													<div class="flexparameters">
-														<label>Nom :</label>
-														<input id="diag_baton_barre1_name" type="text" value="" oninput="Regenerate()">
-													</div>
-													<hr>
-													<div class="flexparameters">
-														<label>Effectif :</label>
-														<input id="diag_baton_barre1_eff" type="number" value="5" step="1" min="0" oninput="Regenerate()">
-													</div>
-													<hr>
-													<div class="flexparameters">
-														<label>Couleur :</label>
-														<input id="diag_baton_barre1_color" type="color" value="#e60049" oninput="Regenerate()">
-													</div>
-													<hr>
-													<button class="diag_baton_1_delete" onclick="Remove_Diag_Element(1)" style="color: red">
-														supprimer
-													</button>
+											<div class="tool-axe">
+												<img src="/Images/Icons/Name.svg">
+												<input id="diag_baton_barre1_name" type="text" value="">
+												<img src="/Images/Icons/Size.svg">
+												<input id="diag_baton_barre1_eff" type="number" value="5" step="1" min="0" style="width: 30px;">
+												<img src="/Images/Icons/Fill.svg">
+												<button id="diag_baton_barre1_color" data-color="#e60049" style="--cp-size:24px"></button>
+												<div class="iconbutton">
+													<img src="/Images/Icons/Copy.svg">
+												</div>
+												<div class="iconbutton">
+													<img src="/Images/Icons/Delete.svg">
 												</div>
 											</div>
 										</div>
-										<button onclick="Add_Diag_Element()">Ajouter une barre</button>
+										<button id="diag_baton_add_baton">Ajouter une barre</button>
 									</div>
 								</div>
 							</div>
@@ -1381,34 +1355,25 @@
 						<div class="formemenu">
 							<span>Style</span>
 							<div class="formemenu_div">
-								<div class="flexparameters">
-									<label>Epaisseur des traits :</label>
-									<input id="diag_baton_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur de la grille principale">
+									<input id="diag_baton_stroke" type="number" value="1" step="1" min="1">
+									<img src="/Images/Icons/Size Grad.svg">
+									<input id="diag_baton_grad_size" type="number" value="6" step="1" min="0">
+									<img src="/Images/Icons/Square Width.svg">
+									<input id="diag_baton_bar_width" type="number" value="50" step="1" min="1" max="100">
+									<label>%</label>
 								</div>
 								<hr>
-								<div class="flexparameters">
-									<label>Couleur de la grille :</label>
-									<input id="diag_baton_gridcolor" type="color" value="#75FFFF" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Afficher la grille :</label>
-									<input id="diag_baton_grid" type="checkbox" style="width: auto;" oninput="Regenerate();">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Largeur des barres :</label>
-									<input id="diag_baton_bar_width" type="number" value="50" step="1" min="1" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Taille des graduations :</label>
-									<input id="diag_baton_grad_size" type="number" value="6" step="1" min="1" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Opacité :</label>
-									<input id="diag_baton_fill_opacity" type="number" value="0.7" step="0.1" min="0" max="1" oninput="Regenerate()">
+								<div class="tool">
+									<img src="/Images/Icons/Grid.svg">
+									<input id="diag_baton_grid" type="checkbox" style="width: auto;" checked oninput="show_hide_param('diag_baton_grid');">
+									<div id="diag_baton_grid_section" class="subsection">
+										<div class="tool-axe">
+											<img src="/Images/Icons/Stroke.svg" title="Couleur de la grille principale">
+											<button id="diag_baton_gridcolor" data-color="#75FFFF" style="--cp-size:24px"></button>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1417,43 +1382,39 @@
 							<div class="formemenu_div">
 								<div class="flexparameters">
 									<label>Titre :</label>
-									<input id="diag_baton_title" type="text" value="" oninput="Regenerate()">
+									<input id="diag_baton_title" type="text" value="">
 								</div>
 								<hr>
 								<div class="flexparameters">
 									<label>Axe horizontal :</label>
-									<input id="diag_baton_haxe_name" type="text" value="" oninput="Regenerate()">
+									<input id="diag_baton_haxe_name" type="text" value="">
 								</div>
 								<hr>
 								<div class="flexparameters">
 									<label>Axe vertical :</label>
-									<input id="diag_baton_vaxe_name" type="text" value="Effectifs" oninput="Regenerate()">
+									<input id="diag_baton_vaxe_name" type="text" value="Effectifs">
 								</div>
 								<hr>
-								<div class="flexparameters">
-									<label>Taille des textes :</label>
-									<input id="diag_baton_txt_size" type="number" value="12" step="1" min="1" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Font Size.svg">
+									<input id="diag_baton_txt_size" type="number" step="2" min="0" value="12">
 								</div>
 								<hr>
-								<div class="flexparameters">
-									<label>Afficher valeur des barres:</label>
-									<input id="diag_baton_bar_value" type="checkbox" style="width: auto;" oninput="Regenerate();">
+								<div class="tool">
+									<img src="/Images/Icons/Text.svg" title="Afficher le texte">
+									<input id="diag_baton_text" type="checkbox" style="width: auto;" checked>
+									<label for="diag_baton_text">Afficher les effectifs</label>
 								</div>
 								<hr>
-								<div class="flexparameters" style="flex-direction: column;">
-									<label>Offset des etiquettes des barres:</label><br>
-									<div  class="coord">
-										<label>(</label>
-										<input id="diag_baton_offset_x" type="number" value="0" oninput="Regenerate()">
-										<label>;</label>
-										<input id="diag_baton_offset_y" type="number" value="0" oninput="Regenerate()">
-										<label>)</label>
-									</div>
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Angle étiquettes :</label>
-									<input id="diag_baton_offset_angle" type="number" value="0" step="5" min="0" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Coordonate.svg" title="Position du point">
+									<label>(</label>
+									<input class="input_coord" id="diag_baton_px" type="number" value="0">
+									<label>;</label>
+									<input class="input_coord" id="diag_baton_py" type="number" value="0">
+									<label>)</label>
+									<img src="/Images/Icons/Rotation.svg">
+									<input id="diag_baton_txt_angle" type="number" value="0" step="5" min="-360" max="360">
 								</div>
 							</div>
 						</div>
@@ -1466,24 +1427,17 @@
 								<div class="formemenu">
 									<span>Axe horizontal:</span>
 									<div class="formemenu_div">
-										<div class="flexparameters">
-											<label>Debut :</label>
-											<input id="diag_carte_Xstart" type="number" value="0" step="1" min="0" oninput="Regenerate()">
+										<div class="tool-axe">
+											<img src="/Images/Icons/Start Point.svg" title="Pas des graduations principale">
+											<input id="diag_carte_Xstart" type="number" value="0" step="1" min="0">
+											<img src="/Images/Icons/Step Over.svg" title="Pas des graduations principale">
+											<input id="diag_carte_Xpas" type="number" value="1" step="1" min="1">
 										</div>
-										<hr>
-										<div class="flexparameters">
-											<label>Pas :</label>
-											<input id="diag_carte_Xpas" type="number" value="1" step="1" min="1" oninput="Regenerate()">
-										</div>
-										<hr>
-										<div class="flexparameters">
-											<label>Section :</label>
-											<input id="diag_carte_Xsec" type="number" value="3" step="1" min="0" oninput="Regenerate()">
-										</div>
-										<hr>
-										<div class="flexparameters">
-											<label>Subsection :</label>
-											<input id="diag_carte_Xsubsec" type="number" value="5" step="1" min="0" oninput="Regenerate()">
+										<div class="tool-axe">
+											<img src="/Images/Icons/Sous Section.svg" title="Nombre de sections secondaires">
+											<input id="diag_carte_Xsec" type="number" value="3" step="1" min="0">
+											<label>×</label>
+											<input id="diag_carte_Xsubsec" type="number" value="5" step="1" min="0">
 										</div>
 									</div>
 								</div>
@@ -1491,24 +1445,17 @@
 								<div class="formemenu">
 									<span>Axe vertical:</span>
 									<div class="formemenu_div">
-										<div class="flexparameters">
-											<label>Debut :</label>
-											<input id="diag_carte_Ystart" type="number" value="0" step="1" min="0" oninput="Regenerate()">
+										<div class="tool-axe">
+											<img src="/Images/Icons/Start Point.svg" title="Pas des graduations principale">
+											<input id="diag_carte_Ystart" type="number" value="0" step="1" min="0">
+											<img src="/Images/Icons/Step Over.svg" title="Pas des graduations principale">
+											<input id="diag_carte_Ypas" type="number" value="1" step="1" min="1">
 										</div>
-										<hr>
-										<div class="flexparameters">
-											<label>Pas :</label>
-											<input id="diag_carte_Ypas" type="number" value="1" step="1" min="1" oninput="Regenerate()">
-										</div>
-										<hr>
-										<div class="flexparameters">
-											<label>Section :</label>
-											<input id="diag_carte_Ysec" type="number" value="5" step="1" min="0" oninput="Regenerate()">
-										</div>
-										<hr>
-										<div class="flexparameters">
-											<label>Subsection :</label>
-											<input id="diag_carte_Ysubsec" type="number" value="5" step="1" min="0" oninput="Regenerate()">
+										<div class="tool-axe">
+											<img src="/Images/Icons/Sous Section.svg" title="Nombre de sections secondaires">
+											<input id="diag_carte_Ysec" type="number" value="3" step="1" min="0">
+											<label>×</label>
+											<input id="diag_carte_Ysubsec" type="number" value="5" step="1" min="0">
 										</div>
 									</div>
 								</div>
@@ -1517,25 +1464,22 @@
 									<span>Points :</span>
 									<div class="formemenu_div">
 										<div id="diag_carte_listpoint" class="panel">
-											<div id="diag_carte_point1" class="formemenu" >
-												<span>Point 1 :</span>
-												<div class="formemenu_div">
-													<label>Position :</label>
-													<div class="flexparameters">
-														<label>(</label>
-														<input class="input_coord" id="diag_carte_point1_x" type="number" value="0" oninput="Regenerate()">
-														<label>;</label>
-														<input class="input_coord" id="diag_carte_point1_y" type="number" value="0" oninput="Regenerate()">
-														<label>)</label>
-													</div>
-													<hr>
-													<button class="diag_baton_1_delete" onclick="Remove_Diag_Element(1)" style="color: red">
-														supprimer
-													</button>
+											<div class="tool-axe">
+												<img src="/Images/Icons/Coordonate.svg" title="Position du point">
+												<label>(</label>
+												<input class="input_coord" id="diag_baton_px" type="number" value="0">
+												<label>;</label>
+												<input class="input_coord" id="diag_baton_py" type="number" value="0">
+												<label>)</label>
+												<div class="iconbutton">
+													<img src="/Images/Icons/Copy.svg">
+												</div>
+												<div class="iconbutton">
+													<img src="/Images/Icons/Delete.svg">
 												</div>
 											</div>
 										</div>
-										<button onclick="Add_Diag_Element()">Ajouter un point</button>
+										<button id="diag_carte_add_point">Ajouter un point</button>
 									</div>
 								</div>
 							</div>
@@ -1543,39 +1487,31 @@
 						<div class="formemenu">
 							<span>Style</span>
 							<div class="formemenu_div">
-								<div class="flexparameters">
-									<label>Epaisseur des traits :</label>
-									<input id="diag_carte_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
+								
+								<div class="tool-axe">
+									<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur de la grille principale">
+									<input id="diag_carte_stroke" type="number" value="1" step="1" min="1">
+									<img src="/Images/Icons/Stroke.svg" title="Couleur de la grille principale">
+									<button id="diag_carte_strokecolor" data-color="#dc0ab4" style="--cp-size:24px"></button>
+								</div>
+								<div class="tool-axe">
+									<img src="/Images/Icons/Pourcent.svg">
+									<input id="diag_carte_point_size" type="number" value="10" step="1" min="1">
+									<img src="/Images/Icons/Size Grad.svg">
+									<input id="diag_carte_grad_size" type="number" value="6" step="1" min="0">
 								</div>
 								<hr>
-								<div class="flexparameters">
-									<label>Taille des points :</label>
-									<input id="diag_carte_point_size" type="number" value="10" step="1" min="1" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Taille des graduations :</label>
-									<input id="diag_carte_grad_size" type="number" value="6" step="1" min="1" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Couleur des traits :</label>
-									<input id="diag_carte_strokecolor" type="color" value="#dc0ab4" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Afficher la grille :</label>
-									<input id="diag_carte_grid" type="checkbox" style="width: auto;" oninput="Regenerate();">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Epaisseur de la grille :</label>
-									<input id="diag_carte_grid_width" type="number" value="1" step="1" min="1" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Couleur de la grille :</label>
-									<input id="diag_carte_gridcolor" type="color" value="#75FFFF" oninput="Regenerate()">
+								<div class="tool">
+									<img src="/Images/Icons/Grid.svg">
+									<input id="diag_carte_grid" type="checkbox" style="width: auto;" checked oninput="show_hide_param('diag_carte_grid');">
+									<div id="diag_carte_grid_section" class="subsection">
+										<div class="tool-axe">
+											<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur de la grille principale">
+											<input id="diag_carte_grid_width" type="number" value="1" step="1" min="1">
+											<img src="/Images/Icons/Stroke.svg" title="Couleur de la grille principale">
+											<button id="diag_carte_gridcolor" data-color="#75FFFF" style="--cp-size:24px"></button>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1584,22 +1520,22 @@
 							<div class="formemenu_div">
 								<div class="flexparameters">
 									<label>Titre :</label>
-									<input id="diag_carte_title" type="text" value="" oninput="Regenerate()">
+									<input id="diag_carte_title" type="text" value="">
 								</div>
 								<hr>
 								<div class="flexparameters">
 									<label>Axe horizontal :</label>
-									<input id="diag_carte_haxe_name" type="text" value="" oninput="Regenerate()">
+									<input id="diag_carte_haxe_name" type="text" value="">
 								</div>
 								<hr>
 								<div class="flexparameters">
 									<label>Axe vertical :</label>
-									<input id="diag_carte_vaxe_name" type="text" value="Effectifs" oninput="Regenerate()">
+									<input id="diag_carte_vaxe_name" type="text" value="Effectifs">
 								</div>
 								<hr>
-								<div class="flexparameters">
-									<label>Taille des textes :</label>
-									<input id="diag_carte_txt_size" type="number" value="12" step="1" min="1" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Font Size.svg">
+									<input id="diag_carte_txt_size" type="number" step="2" min="1" value="12">
 								</div>
 							</div>
 						</div>
@@ -1610,64 +1546,51 @@
 							<span>Sections</span>
 							<div class="formemenu_div">
 								<div id="diag_circu_listsection" class="panel">
-									<div id="diag_circu_section1" class="formemenu" >
-										<span>Section 1 :</span>
-										<div class="formemenu_div">
-											<div class="flexparameters">
-												<label>Nom :</label>
-												<input id="diag_circu_section1_name" type="text" value="" oninput="Regenerate()">
-											</div>
-											<hr>
-											<div class="flexparameters">
-												<label>Effectif :</label>
-												<input id="diag_circu_section1_eff" type="number" value="0" step="1" min="0" oninput="Regenerate()">
-											</div>
-											<hr>
-											<div class="flexparameters">
-												<label>Couleur :</label>
-												<input id="diag_circu_section1_color" type="color" value="#e60049" oninput="Regenerate()">
-											</div>
-											<hr>
-											<button class="diag_circu_section1_delete" onclick="Remove_Diag_Element(1)" style="color: red">
-												supprimer
-											</button>
+									<div class="tool-axe">
+										<img src="/Images/Icons/Name.svg">
+										<input id="diag_circu_section1_name" type="text" value="Valeur 1">
+										<img src="/Images/Icons/Size.svg">
+										<input id="diag_circu_section1_eff" type="number" value="5" step="1" min="0" style="width: 30px;">
+										<img src="/Images/Icons/Fill.svg">
+										<button id="diag_circu_section1_color" data-color="#e60049" style="--cp-size:24px"></button>
+										<div class="iconbutton">
+											<img src="/Images/Icons/Copy.svg">
+										</div>
+										<div class="iconbutton">
+											<img src="/Images/Icons/Delete.svg">
 										</div>
 									</div>
 								</div>
-								<button onclick="Add_Diag_Element()">Ajouter une section</button>
+								<button id="diag_circu_add_sector">Ajouter une section</button>
 							</div>
 						</div>
 						<div class="formemenu">
 							<span>Style</span>
 							<div class="formemenu_div">
-								<div class="flexparameters">
-									<label>Epaisseur des traits :</label>
-									<input id="diag_circu_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Stroke Width.svg" title="Epaisseur de la grille principale">
+									<input id="diag_circu_stroke" type="number" value="1" step="1" min="1">
+									<img src="/Images/Icons/Pourcent.svg">
+									<input id="diag_circu_width" type="number" value="75" step="1" min="0">
+									<label>%</label>
+									<img src="/Images/Icons/Rotation.svg">
+									<input id="diag_circu_offset" type="number" value="0" step="1" min="0" max="360">
+									<label>°</label>
 								</div>
 								<hr>
 								<div class="flexparameters">
-									<label>Occupation du diagramme :</label>
-									<input id="diag_circu_width" type="number" value="75" step="1" min="1" max="100" oninput="Regenerate()">
+									<label>Espace légende :</label>
+									<input id="diag_circu_legende_space" type="number" value="10" step="1" min="1">
 								</div>
 								<hr>
 								<div class="flexparameters">
-									<label>Offset d'angle :</label>
-									<input id="diag_circu_offset" type="number" value="0" step="1" min="0" oninput="Regenerate()">
+									<label>Taille des carré de légende :</label>
+									<input id="diag_circu_legende_size" type="number" value="10" step="1" min="1">
 								</div>
 								<hr>
 								<div class="flexparameters">
-									<label>Espace legende :</label>
-									<input id="diag_circu_legende_space" type="number" value="10" step="1" min="1" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Taille des carré de legende :</label>
-									<input id="diag_circu_legende_size" type="number" value="10" step="1" min="1" oninput="Regenerate()">
-								</div>
-								<hr>
-								<div class="flexparameters">
-									<label>Opacité :</label>
-									<input id="diag_circu_fill_opacity" type="number" value="0.7" step="0.1" min="0" max="1" oninput="Regenerate()">
+									<img src="/Images/Icons/Stroke.svg">
+									<input id="diag_circu_border" type="checkbox" unchecked>
 								</div>
 							</div>
 						</div>
@@ -1676,12 +1599,12 @@
 							<div class="formemenu_div">
 								<div class="flexparameters">
 									<label>Titre :</label>
-									<input id="diag_circu_title" type="text" value="" oninput="Regenerate()">
+									<input id="diag_circu_title" type="text" value="">
 								</div>
 								<hr>
-								<div class="flexparameters">
-									<label>Taille des textes :</label>
-									<input id="diag_circu_txt_size" type="number" value="12" step="1" min="1" oninput="Regenerate()">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Font Size.svg">
+									<input id="diag_circu_txt_size" type="number" step="2" min="0" value="12">
 								</div>
 							</div>
 						</div>
@@ -1689,24 +1612,17 @@
 					<!-- Parametres histogramme -->
 					<div id="diag_histo_param" class="hiddenparam">
 					</div>
-				</div>
-				<!-- Parametres généraux -->
-				<div class="formemenu">
-					<span>Rendu final</span>
-					<div class="formemenu_div">
-						<div class="flexparameters">
-							<label>Largeur :</label>
-							<input id="gen_width" type="number" value="500" step="20" min="20" oninput="Regenerate()">
-						</div>
-						<hr>
-						<div class="flexparameters">
-							<label>Hauteur :</label>
-							<input id="gen_height" type="number" value="500" step="20" min="20" oninput="Regenerate()">
-						</div>
-						<hr>
-						<div class="flexparameters">
-							<label>Marge :</label>
-							<input id="gen_margin" type="number" value="5" step="1" min="0" oninput="Regenerate()">
+					<div class="formemenu">
+						<span>Rendu final</span>
+						<div class="formemenu_div">
+							<div class="tool">
+								<img src="/Images/Icons/Width.svg" title="Largeur">
+								<input id="diag_gen_width" type="number" value="500" step="20" min="20" title="Largeur">
+								<img src="/Images/Icons/Height.svg" title="Hauteur">
+								<input id="diag_gen_height" type="number" value="500" step="20" min="20" title="Hauteur">
+								<img src="/Images/Icons/Margin.svg" title="Marge">
+								<input id="diag_gen_margin" type="number" value="5" step="1" min="0" title="Marge">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -1720,403 +1636,386 @@
 			<p style="text-align: center;">Objects</p>
 
 			<div id="object_repere">
-				<button onclick="Add_courbe()" class="newobjecthalf">Ajouter une courbe</button>
-				<button onclick="Add_point()" class="newobjecthalf">Ajouter un point</button>
-				<button onclick="Add_segment()" class="newobjecthalf">Ajouter un segment</button>
-				<button onclick="Add_texte()" class="newobjecthalf">Ajouter un texte</button>
+				<button onclick="AddObject('courbe')" class="newobjecthalf">Ajouter une courbe</button>
+				<button onclick="AddObject('point')" class="newobjecthalf">Ajouter un point</button>
+				<button onclick="AddObject('circle')" class="newobjecthalf">Ajouter un cercle</button>
+				<button onclick="AddObject('polygon')" class="newobjecthalf">Ajouter un polygone</button>
+				<button onclick="AddObject('line')" class="newobjecthalf">Ajouter un segment</button>
+				<button onclick="AddObject('text')" class="newobjecthalf">Ajouter un texte</button>
 			</div>
 			<div id="object_axe" class="hiddenparam">
-				<button onclick="Add_point()" class="newobjectfull">Ajouter un point</button>
+				<button onclick="AddObject('circle')" class="newobjecthalf">Ajouter un cercle</button>
+				<button onclick="AddObject('point')" class="newobjecthalf">Ajouter un point</button>
+				<button onclick="AddObject('text')" class="newobjecthalf">Ajouter un texte</button>
 			</div>
 			<div id="object_quadrillage" class="hiddenparam">
-				<button onclick="Add_point()" class="newobjecthalf">Ajouter un point</button>
-				<button onclick="Add_polygone()" class="newobjecthalf">Ajouter un polygone</button>
-				<button onclick="Add_circle()" class="newobjecthalf">Ajouter un cercle</button>
-				<button onclick="Add_segment()" class="newobjecthalf">Ajouter un segment</button>
-				<button onclick="Add_texte()" class="newobjecthalf">Ajouter un texte</button>
+				<button onclick="AddObject('point')" class="newobjecthalf">Ajouter un point</button>
+				<button onclick="AddObject('polygon')" class="newobjecthalf">Ajouter un polygone</button>
+				<button onclick="AddObject('circle')" class="newobjecthalf">Ajouter un cercle</button>
+				<button onclick="AddObject('line')" class="newobjecthalf">Ajouter un segment</button>
+				<button onclick="AddObject('text')" class="newobjecthalf">Ajouter un texte</button>
 			</div>
 			<div id="object_solide" class="hiddenparam">
 			</div>
 			<div id="object_fraction" class="hiddenparam">
-				<button onclick="Add_section()" class="newobjecthalf">Ajouter une section</button>
+				<button onclick="AddObject('sector')" class="newobjecthalf">Ajouter une section</button>
 			</div>
 			<div id="object_diagramme" class="hiddenparam">
 			</div>
 			<hr style="margin-top: 2px; margin-bottom: 2px;">
 			<div id="object_list" class="panel rightpanel">
 				
-					<!-- <div id="seg1" class="formemenu show">
-						<span>Segment 1</span>
-						<div class="formemenu_div">
-							<label>Point de départ :</label><br>
-							<div  class="coord">
-								<label>(</label>
-								<input id="seg1_psx" type="number" value="1" oninput="Regenerate()">
-								<label>;</label>
-								<input id="seg1_psy" type="number" value="1" oninput="Regenerate()">
-								<label>)</label>
+	
+					<!-- <div id="segUID" class="formemenu show">
+						<div class="formetitle">
+							<span>Segment UID</span>
+							<div class="iconbutton">
+								<img src="/Images/Icons/Copy.svg">
 							</div>
-							<label>Point d'arrivée :</label><br>
-							<div  class="coord">
-								<label>(</label>
-								<input id="seg1_pex" type="number" value="1" oninput="Regenerate()">
-								<label>;</label>
-								<input id="seg1_pey" type="number" value="1" oninput="Regenerate()">
-								<label>)</label>
+							<div class="iconbutton">
+								<img src="/Images/Icons/Delete.svg">
 							</div>
-							<label>Style début :</label><br>
-							<div  class="coord">
-								<select id="seg1_ss">
-									<option value="0">Aucun</option>
-									<option value="1">Flêche 1</option>
-									<option value="2">Flêche 2</option>
-									<option value="2">Flêche 3</option>
-									<option value="3">Segment</option>
-									<option value="4">Rond</option>
-								</select>
-								<label> - </label>
-								<input id="seg1_ses" type="number" min="0" value="100" oninput="Regenerate()">
+						</div>
+						<div class="tool-axe">
+							<img src="/Images/Icons/Start Point.svg">
+							<div style="background-color: gray; width: 1px;"></div>
+							<label>(</label>
+							<input id="segUID_psx" type="number" value="1" oninput="Regenerate()">
+							<label>;</label>
+							<input id="segUID_psy" type="number" value="1" oninput="Regenerate()">
+							<label>)</label>
+						</div>
+						<div class="subsection section_icon">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Apparence.svg">
+        				<div id="segUID_ss"></div>
+								<img src="/Images/Icons/Pourcent.svg">
+								<input id="segUID_ses" type="number" min="0" value="100" oninput="Regenerate()">
 								<label>%</label>
 							</div>
-							<label>Style fin :</label><br>
-							<div  class="coord">
-								<select id="seg1_se">
-									<option value="0">Aucun</option>
-									<option value="1">Flêche 1</option>
-									<option value="2">Flêche 2</option>
-									<option value="2">Flêche 3</option>
-									<option value="3">Segment</option>
-									<option value="4">Rond</option>
-								</select>
-								<label> - </label>
-								<input id="seg1_ses" type="number" min="0" value="100" oninput="Regenerate()">
+						</div>
+						<hr>
+						<div class="tool-axe">
+							<img src="/Images/Icons/End Point.svg">
+							<div style="background-color: gray; width: 1px;"></div>
+							<label>(</label>
+							<input id="segUID_pex" type="number" value="1" oninput="Regenerate()">
+							<label>;</label>
+							<input id="segUID_pey" type="number" value="1" oninput="Regenerate()">
+							<label>)</label>
+						</div>
+						<div class="subsection section_icon">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Apparence.svg">
+        				<div id="segUID_se"></div>
+								<img src="/Images/Icons/Pourcent.svg">
+								<input id="segUID_ses" type="number" min="0" value="100" oninput="Regenerate()">
 								<label>%</label>
 							</div>
-							<label>Epaisseur :</label>
-							<input id="cir1_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
-							<label>Couleur :</label>
-							<input id="cir1_stroke_color" type="color" oninput="Regenerate()">
-							<label>Style de trait :</label>
-							<input id="cir1_style" type="text" oninput="Regenerate()">
-							<button class="delete">Supprimer</button>
+						</div>
+						<hr>
+						<div class="tool-line">
+							<img src="/Images/Icons/Stroke Width.svg">
+							<input id="segUID_stroke" type="number" value="3" step="1" min="1" oninput="Regenerate()">
+							<img src="/Images/Icons/Stroke.svg">
+							<button id="segUID_stroke_color" data-color="black" style="--cp-size:24px"></button>
+							<img src="/Images/Icons/Line Style.svg">
+							<input id="segUID_style" type="text" oninput="Regenerate();">
 						</div>
 					</div> -->
 					
-					<!-- <div id="poiUID" class="formemenu show">
-						<span onclick="menu_click(document.getElementById('poiUID'))">Point UID</span>
+					<!-- <div id="poiUID" class="formemenu">
+						<div class="formetitle">
+							<span>Point UID</span>
+							<div class="iconbutton">
+								<img src="/Images/Icons/Copy.svg">
+							</div>
+							<div class="iconbutton">
+								<img src="/Images/Icons/Delete.svg">
+							</div>
+						</div>
 						<div class="formemenu_div">
-							<div class="flexparameters">
-								<label>Nom :</label>
-								<input id="poiUID_text" type="text" oninput="Regenerate()">
-							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Taille du texte :</label>
-								<input id="poiUID_text_size" type="number" step="2" min="0" oninput="Regenerate()">
-							</div>
-							<hr>
-							<label>Position :</label><br>
-							<div class="flexparameters">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Coordonate.svg" title="Position du point">
 								<label>(</label>
-								<input class="input_coord" id="poiUID_px" type="number" oninput="Regenerate()">
+								<input class="input_coord" id="poiUID_px" type="number" value="0" oninput="Regenerate()">
 								<label>;</label>
-								<input class="input_coord" id="poiUID_py" type="number" oninput="Regenerate()">
+								<input class="input_coord" id="poiUID_py" type="number" value="0" oninput="Regenerate()">
 								<label>)</label>
 							</div>
 							<hr>
-							<label>Position relative du texte :</label>
-							<div class="flexparameters">
-								<label>(</label>
-								<input class="input_coord" id="poiUID_tx" type="number" step="1" oninput="Regenerate()">
-								<label>;</label>
-								<input class="input_coord" id="poiUID_ty" type="number" step="1" oninput="Regenerate()">
-								<label>)</label><br>
+							<div class="tool">
+								<img src="/Images/Icons/Text.svg" title="Afficher le texte">
+								<input id="poiUID_text" type="checkbox" style="width: auto;" checked oninput="show_hide_param('poiUID_text');">
+								<div id="poiUID_text_section" class="subsection">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Name.svg">
+										<input id="poiUID_text" type="text" value="A" oninput="Regenerate()">
+										<img src="/Images/Icons/Font Size.svg">
+										<input id="poiUID_text_size" type="number" step="2" min="0" value="12" oninput="Regenerate()">
+									</div>
+									<div class="tool-axe">
+										<img src="/Images/Icons/X Pos.svg">
+										<input class="input_coord" id="poiUID_tx" type="number" step="1" value="0" oninput="Regenerate()">
+										<img src="/Images/Icons/Y Pos.svg">
+										<input class="input_coord" id="poiUID_ty" type="number" step="1" value="-10" oninput="Regenerate()">
+									</div>
+								</div>
 							</div>
 							<hr>
-							<div class="flexparameters">
-								<label>Type de symbole :</label>
+							<div class="tool-axe">
+								<img src="/Images/Icons/Apparence.svg">
 								<select id="poiUID_type" oninput="Regenerate()">
 									<option value="1">+</option>
 									<option value="2">×</option>
 									<option value="3">○</option>
 									<option value="4">•</option>
 									<option value="5">.</option>
-									<option value="6"></option>
+									<option value="6">Aucun</option>
 								</select>
+								<img src="/Images/Icons/Pourcent.svg">
+								<input id="poiUID_size" type="number" step="5" min="0" value="100" oninput="Regenerate()">
+								<label>%</label>
 							</div>
 							<hr>
-							<div class="flexparameters">
-								<label>Taille du symbole :</label>
-								<input id="poiUID_size" type="number" step="1" min="0" oninput="Regenerate()">
+							<div class="tool-line">
+								<img src="/Images/Icons/Stroke Width.svg">
+								<input id="poiUID_stroke" type="number" value="3" step="1" min="1" oninput="Regenerate()">
+								<img src="/Images/Icons/Stroke.svg">
+								<button id="poiUID_stroke_color" data-color="black" style="--cp-size:24px"></button>
+								<img src="/Images/Icons/Line Style.svg">
+								<input id="poiUID_style" type="text" oninput="Regenerate();">
 							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Epaisseur :</label>
-								<input id="poiUID_stroke" type="number" step="1" min="1" oninput="Regenerate()">
-							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Couleur :</label>
-								<input id="poiUID_stroke_color" type="color" oninput="Regenerate()">
-							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Style de trait :</label>
-								<input id="poiUID_style" type="text" oninput="Regenerate()">
-							</div>
-							<hr>
-							<button class="delete" onclick="Add_point(Get_Point({id: UID}));">Dupliquer</button>
-							<button class="delete" onclick="RemovePoint('poiUID')">Supprimer</button>
 						</div>
 					</div> -->
 			
-					<!-- <div id="forUID" class="formemenu show">
-						<span onclick="menu_click(document.getElementById('forUID'))">Courbe UID</span>
+					<!-- <div id="forUID" class="formemenu">
+						<div class="formetitle">
+							<span>Courbe UID</span>
+							<div class="iconbutton">
+								<img src="/Images/Icons/Copy.svg">
+							</div>
+							<div class="iconbutton">
+								<img src="/Images/Icons/Delete.svg">
+							</div>
+						</div>
 						<div class="formemenu_div">
 							<label>Formule (en JavaScript) :</label>
 							<input id="forUID_text" type="text" oninput="Regenerate()">
 							<hr>
 							<div class="flexparameters">
-								<label>Epaisseur :</label>
-								<input id="forUID_stroke" type="number" step="1" min="1" oninput="Regenerate()">
-							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Couleur :</label>
-								<input id="forUID_stroke_color" type="color" oninput="Regenerate()">
-							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Style de trait :</label>
-								<input id="forUID_style" type="text" oninput="Regenerate()">
-							</div>
-							<hr>
-							<label>Interval x :</label>
-							<div class="flexparameters">
-								<label>[</label>
+								<label>$x \in $ [</label>
 								<input class="input_coord" id="forUID_start" type="number" step="1" oninput="Regenerate()">
 								<label>;</label>
 								<input class="input_coord" id="forUID_end" type="number" step="1" oninput="Regenerate()">
 								<label>]</label>
 							</div>
 							<hr>
-							<button class="delete" onclick="Add_point(Get_Point({id: UID}));">Dupliquer</button>
-							<button class="delete" onclick="RemovePoint('forUID')">Supprimer</button>
-						</div>
-					</div> -->
-
-					<!-- <div id="segUID" class="formemenu show">
-						<span onclick="menu_click(document.getElementById('segUID'))">Segment UID</span>
-						<div class="formemenu_div">
-						<label>Position :</label>
-						<div class="subsection">
-							<div class="flexparameters">
-							<label>Départ (</label>
-							<input class="input_coord" id="segUID_psx" type="number" value="0" oninput="Regenerate()">
-							<label>;</label>
-							<input class="input_coord" id="segUID_psy" type="number" value="0" oninput="Regenerate()">
-							<label>)</label>
+							<div class="tool-line">
+								<img src="/Images/Icons/Stroke Width.svg">
+								<input id="line_pri_stroke" type="number" value="3" step="1" min="1" oninput="Regenerate()">
+								<img src="/Images/Icons/Stroke.svg">
+								<button id="line_pri_color" data-color="black" style="--cp-size:24px"></button>
+								<img src="/Images/Icons/Line Style.svg">
+								<input id="line_pri_style" type="text" oninput="Regenerate();">
 							</div>
+							<hr>
 							<div class="flexparameters">
-							<label>Arrivée (</label>
-							<input class="input_coord" id="segUID_pex" type="number" value="0" oninput="Regenerate()">
-							<label>;</label>
-							<input class="input_coord" id="segUID_pey" type="number" value="0" oninput="Regenerate()">
-							<label>)</label>
+								<button class="delete" onclick="Add_point(Get_Point({id: UID}));">Dupliquer</button>
+								<button class="delete" onclick="RemovePoint('forUID')">Supprimer</button>
 							</div>
-						</div>
-						<hr>
-						<label>Style :</label>
-						<div class="subsection">
-							<div class="flexparameters">
-								<label>Départ :</label>
-								<select id="segUID_ss" oninput="Regenerate()">
-									<option value="0">Aucun</option>
-									<option value="1">Flêche 1</option>
-									<option value="2">Flêche 2</option>
-									<option value="3">Flêche 3</option>
-									<option value="4">Segment</option>
-									<option value="5">Rond</option>
-								</select>
-								<label> - </label>
-								<input class="input_coord" id="segUID_sss" type="number" value="100" step="5" min="0" oninput="Regenerate()">
-								<label>%</label>
-							</div>
-							<div class="flexparameters">
-								<label>Arrivée :</label>
-							<select id="segUID_se" oninput="Regenerate()">
-							<option value="0">Aucun</option>
-							<option value="1">Flêche 1</option>
-							<option value="2">Flêche 2</option>
-							<option value="3">Flêche 3</option>
-							<option value="4">Segment</option>
-							<option value="5">Rond</option>
-							</select>
-							<label> - </label>
-							<input class="input_coord" id="segUID_ses" type="number" step="5" min="0" oninput="Regenerate()">
-							<label>%</label>
-							</div>
-						</div>
-						<hr>
-						<div class="flexparameters">
-							<label>Epaisseur :</label>
-							<input id="segUID_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate()">
-						</div>
-						<hr>
-						<div class="flexparameters">
-							<label>Couleur :</label>
-							<input id="segUID_stroke_color" type="color" oninput="Regenerate()">
-						</div>
-						<hr>
-						<div class="flexparameters">
-							<label>Style de trait :</label>
-							<input id="segUID_style" type="text" oninput="Regenerate()">
-						</div>
-						<hr>
-						<button class="delete" onclick="Add_segment(Get_Segment({id: UID}));">Dupliquer</button>
-						<button class="delete" onclick="RemoveSegment('segUID')">Supprimer</button>
 						</div>
 					</div> -->
 
 					<!-- <div id="txtUID" class="formemenu show">
-						<span onclick="menu_click(document.getElementById('txtUID'))">Texte UID</span>
+						<div class="formetitle">
+							<span>Texte UID</span>
+							<div class="iconbutton">
+								<img src="/Images/Icons/Copy.svg">
+							</div>
+							<div class="iconbutton">
+								<img src="/Images/Icons/Delete.svg">
+								</div>
+						</div>
 						<div class="formemenu_div">
-							<label>Position :</label>
-							<div class="flexparameters">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Coordonate.svg" title="Position du point">
 								<label>(</label>
-								<input class="input_coord" id="txt1_px" type="number" value="0" oninput="Regenerate()">
+								<input class="input_coord" id="txtUID_px" type="number" value="0" oninput="Regenerate()">
 								<label>;</label>
-								<input class="input_coord" id="txt1_py" type="number" value="0" oninput="Regenerate()">
+								<input class="input_coord" id="txtUID_py" type="number" value="0" oninput="Regenerate()">
 								<label>)</label>
 							</div>
 							<hr>
-							<div class="flexparameters">
-								<label>Nom :</label>
-								<input id="txt1_text" type="text" value="A" oninput="Regenerate()">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Name.svg">
+								<input id="txtUID" type="text" value="A" oninput="Regenerate()">
+								<img src="/Images/Icons/Font Size.svg">
+								<input id="txtUID_text_size" type="number" step="2" min="0" value="12" oninput="Regenerate()">
 							</div>
 							<hr>
-							<div class="flexparameters">
-								<label>Angle :</label>
-								<input id="txt1_angle" type="number" value="0" step="5" min="-360" max="360" oninput="Regenerate()">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Rotation.svg">
+								<input id="txtUID_angle" type="number" value="0" step="5" min="-360" max="360" oninput="Regenerate()">
+								<img src="/Images/Icons/Stroke.svg">
+								<button id="txtUID_stroke_color" data-color="black" style="--cp-size:24px"></button>
 							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Taille du texte :</label>
-								<input id="txt1_text_size" type="number" value="12" step="2" min="0" oninput="Regenerate()">
-							</div>
-							<hr>
-							<div class="flexparameters">
-								<label>Couleur :</label>
-								<input id="txt1_stroke_color" type="color" oninput="Regenerate()">
-							</div>
-							<hr>
-							<button class="delete" onclick="Add_texte(Get_Texte({id: UID}));">Dupliquer</button>
-							<button class="delete" onclick="RemoveTexte('txtUID')">Supprimer</button>
 						</div>
 					</div> -->
 
 					<!-- <div id="cirUID" class="formemenu show">
-						<span onclick="menu_click(document.getElementById('cirUID'))">Cercle UID</span>
-						<div class="formemenu_div">
-						<label>Position centre :</label>
-						<div class="flexparameters">
-						<label>(</label>
-						<input class="input_coord" id="cirUID_px" type="number" value="1" oninput="Regenerate();">
-						<label>;</label>
-						<input class="input_coord" id="cirUID_py" type="number" value="1" oninput="Regenerate();">
-						<label>)</label>
-						</div>
-						<hr>
-						<div class="flexparameters">
-							<label>Angle :</label>
-						<input class="input_coord" id="cirUID_as" type="number" value="0" oninput="Regenerate();">
-						<label>-&gt;</label>
-						<input class="input_coord" id="cirUID_ae" type="number" value="360" oninput="Regenerate();">
-						</div>
-						<hr>
-						<div class="flexparameters">
-							<label>Rayon :</label>
-							<input id="cirUID_radius" type="number" value="1" min="0" oninput="Regenerate();">
-						</div>
-						<hr>
-						<div class="flexparameters">
-							<label>Epaisseur :</label>
-							<input id="cirUID_stroke" type="number" value="1" step="1" min="1" oninput="Regenerate();">
-						</div>
-						<hr>
-						<div class="flexparameters">
-							<label>Couleur :</label>
-							<input id="cirUID_stroke_color" type="color" oninput="Regenerate();">
-						</div>
-						<hr>
-						<div class="flexparameters">
-							<label>Style de trait :</label>
-							<input id="cirUID_style" type="text" oninput="Regenerate();">
-						</div>
-						<hr>
-						<div>
-							<input id="cirUID_fill" type="checkbox" style="width: auto;"
-							oninput="Regenerate(); show_hide_param('cirUID_fill')">
-							<label for="cirUID_fill" style="width: auto;">Remplir la forme</label>
-						</div>
-						<div id="cirUID_fill_section" class="subsection hiddenparam">
-							<div class="flexparameters">
-								<label>Couleur de remplissage :</label>
-								<input id="cirUID_fill_color" type="color" oninput="Regenerate();">
+						<div class="formetitle">
+							<span>Cercle UID</span>
+							<div class="iconbutton">
+								<img src="/Images/Icons/Copy.svg">
+							</div>
+							<div class="iconbutton">
+								<img src="/Images/Icons/Delete.svg">
 							</div>
 						</div>
-						<hr>
-						<button class="delete" onclick="Add_circle(Get_Circle({id: UID}));">Dupliquer</button>
-						<button class="delete" onclick="RemoveTexte('cirUID')">Supprimer</button>
+						<div class="formemenu_div">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Coordonate.svg" title="Position du point">
+								<label>(</label>
+								<input class="input_coord" id="cirUID_px" type="number" value="0" oninput="Regenerate()">
+								<label>;</label>
+								<input class="input_coord" id="cirUID_py" type="number" value="0" oninput="Regenerate()">
+								<label>)</label>
+							</div>
+							<hr>
+							<div class="tool-axe">
+								<label>$\theta \in $ [</label>
+								<input class="input_coord" id="cirUID_as" type="number" value="0" oninput="Regenerate()">
+								<label>;</label>
+								<input class="input_coord" id="cirUID_ae" type="number" value="360" oninput="Regenerate()">
+								<label>]</label>
+							</div>
+							<hr>
+							<div class="tool-axe">
+								<img src="/Images/Icons/Radius.svg">
+								<input id="cirUID_radius" type="number" value="1" min="0" oninput="Regenerate();">
+							</div>
+							<hr>
+							<div class="tool-line">
+								<img src="/Images/Icons/Stroke Width.svg">
+								<input id="cirUID_stroke" type="number" value="3" step="1" min="1" oninput="Regenerate()">
+								<img src="/Images/Icons/Stroke.svg">
+								<button id="cirUID_stroke_color" data-color="black" style="--cp-size:24px"></button>
+								<img src="/Images/Icons/Line Style.svg">
+								<input id="cirUID_style" type="text" oninput="Regenerate();">
+							</div>
+							<hr>
+							<div class="tool">
+								<img src="/Images/Icons/Fill.svg">
+								<input id="cirUID_fill" type="checkbox" style="width: auto;"
+								oninput="Regenerate(); show_hide_param('cirUID_fill')">
+								<div id="cirUID_fill_section" class="subsection hiddenparam">
+									<div class="tool-axe">
+										<button id="cirUID_fill_color" data-color="black" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Pattern.svg">
+										<div class="custom-select">
+											<select>
+												<option value="1">A</option>
+												<option value="2">B</option>
+												<option value="3">C</option>
+												<option value="4">D</option>
+												<option value="5">E</option>
+												<option value="6">F</option>
+												<option value="7">G</option>
+												<option value="8">H</option>
+												<option value="9">I</option>
+												<option value="10">J</option>
+												<option value="11">K</option>
+												<option value="12">L</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div> -->
 
 					<!-- <div id="polUID" class="formemenu show">
-						<span onclick="menu_click(document.getElementById('polUID'))">Polygone UID</span>
-						<div class="formemenu_div">
-						<label>Points :</label>
-						<div id="polUIDpoints_list" class="coord_poly">
-						</div>
-						<button onclick="Add_Point_Polygone(UID)">Ajouter un point</button>
-						<hr>
-						<div class="flexparameters">
-							<label>Epaisseur :</label>
-							<input id="polUID_stroke" type="number" value="1" step="1" oninput="Regenerate()">
-						</div>
-						<hr>
-						<div class="flexparameters">
-							<label>Couleur :</label>
-							<input id="polUID_stroke_color" type="color" oninput="Regenerate()">
-						</div>
-						<hr>
-						<div class="flexparameters">
-							<label>Style de trait :</label>
-							<input id="polUID_style" type="text" oninput="Regenerate()">
-						</div>
-						<hr>
-						<div>
-							<input id="polUID_fill" type="checkbox" style="width: auto;"
-							oninput="Regenerate(); show_hide_param('polUID_fill')">
-							<label for="polUID_fill" style="width: auto;">Remplir la forme</label>
-						</div>
-						<div id="polUID_fill_section" class="subsection hiddenparam">
-							<div class="flexparameters">
-								<label>Couleur de remplissage :</label>
-								<input id="polUID_fill_color" type="color" oninput="Regenerate()">
+						<div class="formetitle">
+							<span>Polygone UID</span>
+							<div class="iconbutton">
+								<img src="/Images/Icons/Copy.svg">
+							</div>
+							<div class="iconbutton">
+								<img src="/Images/Icons/Delete.svg">
 							</div>
 						</div>
-						<button class="delete" onclick="Add_polygone(Get_Polygone({id: UID}));">Dupliquer</button>
-						<button class="delete" onclick="RemovePolygone('polUID')">Supprimer</button>
+						<div class="formemenu_div">
+							<div class="tool-axe">
+								<label>Points :</label>
+							</div>
+							<div id="polUIDpoints_list" class="coord_poly">
+
+							</div>
+							<div class="center">
+								<div class="iconbutton">
+									<img src="/Images/Icons/Add.svg">
+								</div>
+							</div>
+							<hr>
+							<div class="tool-line">
+								<img src="/Images/Icons/Stroke Width.svg">
+								<input id="polUID_stroke" type="number" value="3" step="1" min="1" oninput="Regenerate()">
+								<img src="/Images/Icons/Stroke.svg">
+								<button id="polUID_stroke_color" data-color="black" style="--cp-size:24px"></button>
+								<img src="/Images/Icons/Line Style.svg">
+								<input id="polUID_style" type="text" oninput="Regenerate();">
+							</div>
+							<hr>
+							<div class="tool">
+								<img src="/Images/Icons/Fill.svg">
+								<input id="polUID_fill" type="checkbox" style="width: auto;"
+								oninput="Regenerate(); show_hide_param('polUID_fill')">
+								<div id="polUID_fill_section" class="subsection hiddenparam">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Fill.svg">
+										<button id="polUID_fill_color" data-color="black" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Pattern.svg">
+										<div class="custom-select">
+											<select>
+												<option value="1">A</option>
+												<option value="2">B</option>
+												<option value="3">C</option>
+												<option value="4">D</option>
+												<option value="5">E</option>
+												<option value="6">F</option>
+												<option value="7">G</option>
+												<option value="8">H</option>
+												<option value="9">I</option>
+												<option value="10">J</option>
+												<option value="11">K</option>
+												<option value="12">L</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div> -->
 
 					<!-- <div id="secUID" class="formemenu show">
-						<span onclick="menu_click(document.getElementById('secUID'))">Section UID</span>
+						<div class="formetitle">
+							<span>Section UID</span>
+							<div class="iconbutton">
+								<img src="/Images/Icons/Copy.svg">
+							</div>
+							<div class="iconbutton">
+								<img src="/Images/Icons/Delete.svg">
+							</div>
+						</div>
 						<div class="formemenu_div">
-							<label>Poid :</label><br>
-							<input id="secUID_pds" type="number" value="1" min="0" oninput="Regenerate()">
-							<label>Texte :</label><br>
-							<div class="subsection">
+							<div class="tool-axe">
+								<img src="/Images/Icons/Weight.svg">
+								<input id="secUID_pds" type="number" value="1" min="0" oninput="Regenerate()">
+							</div>
+							<hr>
+							<div class="tool-axe">
+								<img src="/Images/Icons/Text.svg">
 								<select id="secUID_txt_type" oninput="Regenerate()">
 									<option value="0">Hérité</option>
 									<option value="1">Aucun</option>
@@ -2124,56 +2023,52 @@
 									<option value="3">Fraction</option>
 									<option value="4">Décimal</option>
 								</select>
-								<div class="flexparameters">
-									<label>Taille texte :</label>
-									<input id="secUID_txt_size" type="number" value="-1" step="2" oninput="Regenerate()">
-								</div>
-								<div class="flexparameters">
-									<label>Couleur :</label>
-									<input id="secUID_txt_color" type="color" oninput="Regenerate()">
-								</div>
-								<div class="flexparameters">
-									<label>Distance texte (%) :</label>
-									<input id="secUID_txt_dist" type="number" value="70" step="5" oninput="Regenerate()">
+							</div>
+							<div class="subsection">
+								<div class="tool-axe">
+									<img src="/Images/Icons/Font Size.svg">
+									<input id="secUID_txt_size" type="number" value="12" step="2" oninput="Regenerate()">
+									<img src="/Images/Icons/Fill.svg">
+									<button id="secUID_txt_color" data-color="black" style="--cp-size:24px"></button>
+									<img src="/Images/Icons/Pourcent.svg">
+									<input id="secUID_txt_dist" type="number" step="5" min="0" value="70" oninput="Regenerate()">
+									<label>%</label>
 								</div>
 							</div>
-							<div>
-								<input id="secUID_fill" type="checkbox" style="width: auto;" unchecked oninput="Regenerate(); show_hide_param(this.id);">
-								<label for="secUID_fill" style="width: auto;">Remplir la section</label>
+							<hr>
+							<div class="tool">
+								<img src="/Images/Icons/Fill.svg">
+								<input id="secUID_fill" type="checkbox" style="width: auto;"
+								oninput="Regenerate(); show_hide_param('secUID_fill')">
+								<div id="secUID_fill_section" class="subsection hiddenparam">
+									<div class="tool-axe">
+										<img src="/Images/Icons/Fill.svg">
+										<button id="secUID_fill_color" data-color="black" style="--cp-size:24px"></button>
+										<img src="/Images/Icons/Pattern.svg">
+										<div class="custom-select">
+											<select>
+												<option value="1">A</option>
+												<option value="2">B</option>
+												<option value="3">C</option>
+												<option value="4">D</option>
+												<option value="5">E</option>
+												<option value="6">F</option>
+												<option value="7">G</option>
+												<option value="8">H</option>
+												<option value="9">I</option>
+												<option value="10">J</option>
+												<option value="11">K</option>
+												<option value="12">L</option>
+											</select>
+										</div>
+									</div>
+								</div>
 							</div>
-							<div id="secUID_fill_section" class="subsection hiddenparam">
-								<select id="secUID_fill_type" oninput="Regenerate()">
-									<option value="0">Uni</option>
-									<option value="1">Ligne horizontale</option>
-									<option value="2">Ligne verticale</option>
-									<option value="3">Ligne diagonale HG→BD</option>
-									<option value="4">Ligne diagonale BG→HD</option>
-									<option value="5">Points</option>
-									<option value="6">Quadrillage</option>
-									<option value="7">Quadrillage diagonal</option>
-									<option value="8">Damier</option>
-									<option value="9">Damier diagonal</option>
-								</select>
-								<div class="flexparameters">
-									<label>Taille forme :</label>
-									<input id="secUID_fill_size" type="number" value="12" step="2" oninput="Regenerate()">
-								</div>
-								<div class="flexparameters">
-									<label>Couleur :</label>
-									<input id="secUID_fill_color" type="color" oninput="Regenerate()">
-								</div>
-								<div class="flexparameters">
-									<label>Epaisseur :</label>
-									<input id="secUID_fill_stroke" type="number" value="2" step="1" min="1" oninput="Regenerate()">
-								</div>
-							</div>
-							<button class="delete" onclick="Add_section(Get_Section({id: UID}));">Dupliquer</button>
-							<button class="delete" onclick="Remove_Global('secUID')">Supprimer</button>
 						</div>
-					</div> -->
+					</div>
 					
 			</div>
-		</div>
+		</div> -->
 
 		<!-- Message pour les petits écrans -->
 		<div class="smallscreen">
@@ -2183,127 +2078,11 @@
 		</div>
 
 	</body>
+	<script src="/JS/CustomSelect/CustomSelect.js"></script>
 	<script>
-		var a = document.getElementsByClassName("formemenu");
-		for(let i = 0 ; i < a.length; i++)
-		{
-			let element = a[i];
-			element.children[0].onclick = function(){menu_click(element)};
+		var pat_select = document.getElementsByClassName("custom-select");
+		for (let element of pat_select) {
+			CustomSelect(element, {"class": "tool-fill", "width": "44px","obj-width": "16px"})
 		}
-
-
-		function menu_click(element){
-			element.classList.toggle("show")
-		}
-
-		function show_hide_param(element_name)
-		{
-			let a = document.getElementById(element_name).checked;
-			if (a)
-			{
-				document.getElementById(element_name + '_section').classList.remove("hiddenparam");
-			}
-			else
-			{
-				document.getElementById(element_name + '_section').classList.add("hiddenparam");
-			}
-		}
-
-		function menu_solid_changed()
-		{
-			let elements = [];
-			elements.push(document.getElementById("sol_pavdrt_param"))
-			elements.push(document.getElementById("sol_prmdrt_param"))
-			elements.push(document.getElementById("sol_cylind_param"))
-			elements.push(document.getElementById("sol_pyrami_param"))
-			elements.push(document.getElementById("sol_cone_param"))
-			elements.push(document.getElementById("sol_sphere_param"))
-			let type = document.getElementById("sol_type").selectedIndex;
-
-			for (let i = 0; i < elements.length; i++) {
-				if (type == i)
-					elements[i].classList.remove("hiddenparam");
-				else
-					elements[i].classList.add("hiddenparam");
-				
-			}
-
-			ClearObject();
-			Regenerate();
-		}
-
-		function menu_diag_changed()
-		{
-			let elements = [];
-			elements.push(document.getElementById("diag_baton_param"))
-			elements.push(document.getElementById("diag_carte_param"))
-			elements.push(document.getElementById("diag_circu_param"))
-			elements.push(document.getElementById("diag_histo_param"))
-			let type = document.getElementById("diag_type").selectedIndex;
-
-			for (let i = 0; i < elements.length; i++) {
-				if (type == i)
-					elements[i].classList.remove("hiddenparam");
-				else
-					elements[i].classList.add("hiddenparam");
-				
-			}
-
-			ClearObject();
-			Regenerate();
-		}
-
-		function menu_changed()
-		{
-			objects = [];
-			document.getElementById("param_repere").classList.add("hiddenparam")
-			document.getElementById("param_axe").classList.add("hiddenparam")
-			document.getElementById("param_quadrillage").classList.add("hiddenparam")
-			document.getElementById("param_solide").classList.add("hiddenparam")
-			document.getElementById("param_fraction").classList.add("hiddenparam")
-			document.getElementById("param_diagramme").classList.add("hiddenparam")
-			document.getElementById("object_repere").classList.add("hiddenparam")
-			document.getElementById("object_axe").classList.add("hiddenparam")
-			document.getElementById("object_quadrillage").classList.add("hiddenparam")
-			document.getElementById("object_solide").classList.add("hiddenparam")
-			document.getElementById("object_fraction").classList.add("hiddenparam")
-			document.getElementById("object_diagramme").classList.add("hiddenparam")
-			let type = document.getElementById("gen_type").selectedIndex;
-			if (type == 0)
-			{
-				document.getElementById("param_repere").classList.remove("hiddenparam")
-				document.getElementById("object_repere").classList.remove("hiddenparam")
-			}
-			else if (type == 1)
-			{
-				document.getElementById("param_axe").classList.remove("hiddenparam")
-				document.getElementById("object_axe").classList.remove("hiddenparam")
-			}
-			else if (type == 2)
-			{
-				document.getElementById("param_quadrillage").classList.remove("hiddenparam")
-				document.getElementById("object_quadrillage").classList.remove("hiddenparam")
-			}
-			else if (type == 3)
-			{
-				document.getElementById("param_solide").classList.remove("hiddenparam")
-				document.getElementById("object_solide").classList.remove("hiddenparam")
-			}
-			else if (type == 4)
-			{
-				document.getElementById("param_fraction").classList.remove("hiddenparam")
-				document.getElementById("object_fraction").classList.remove("hiddenparam")
-			}
-			else if (type == 5)
-			{
-				document.getElementById("param_diagramme").classList.remove("hiddenparam")
-				document.getElementById("object_diagramme").classList.remove("hiddenparam")
-			}
-			ClearObject();
-			Regenerate()
-		}
-
-
-
 	</script>
 </html>

@@ -31,10 +31,8 @@ class Diagramme_Baton
 	etiq_offset_angle = 0; // Angle en degrés par rapport au centre du texte
     // effectifs des différentes barres
 	effectifs = [5,3,4,7,2];
-    // transparence des barres
-	transparency = 0.7; 
 	//Couleur des barres
-	colors = ["#e60049", "#0bb4ff", "#50e991", "#e6d800", "#9b19f5", "#ffa300", "#dc0ab4", "#b3d4ff", "#00bfa0", "#f0cccc"];
+	colors = ["#e60049B3", "#0bb4ffB3", "#50e991B3", "#e6d800B3", "#9b19f5B3", "#ffa300B3", "#dc0ab4B3", "#b3d4ffB3", "#00bfa0B3", "#f0ccccB3"];
 
     constructor(config)
     {
@@ -52,7 +50,7 @@ class Diagramme_Baton
         if (config.hasOwnProperty("Haxe_name")) this.Haxe_name = config["Haxe_name"];
         if (config.hasOwnProperty("Vaxe_name")) this.Vaxe_name = config["Vaxe_name"];
         if (config.hasOwnProperty("grid")) this.grid = config["grid"];
-        if (config.hasOwnProperty("bar_width")) this.grid = config["bar_width"];
+        if (config.hasOwnProperty("bar_width")) this.bar_width = config["bar_width"];
         if (config.hasOwnProperty("grid_color")) this.grid_color = config["grid_color"];
         if (config.hasOwnProperty("etiquettes")) this.etiquettes = config["etiquettes"];
         if (config.hasOwnProperty("etiq_offset_x")) this.etiq_offset_x = config["etiq_offset_x"];
@@ -64,7 +62,6 @@ class Diagramme_Baton
         if (config.hasOwnProperty("graduation_size")) this.graduation_size = config["graduation_size"];
         if (config.hasOwnProperty("stroke_width")) this.stroke_width = config["stroke_width"];
         if (config.hasOwnProperty("grid_width")) this.grid_width = config["grid_width"];
-        if (config.hasOwnProperty("transparency")) this.transparency = config["transparency"];
         if (config.hasOwnProperty("show_value_bar")) this.show_value_bar = config["show_value_bar"];
         
         if (this.element_id != "")
@@ -180,11 +177,6 @@ class Diagramme_Baton
         text_style.anchor = 'middle'
         for (let i = 0; i < this.etiquettes.length; i++) {
             let dx = sx + (i + 0.5) * w / (this.bar);
-			dx += this.etiq_offset_x;
-            let text = draw.text(this.etiquettes[i])
-            text.move(dx, sy + this.graduation_size / 2.0 + this.etiq_offset_y)
-            text.font(text_style)
-			text.rotate(-this.etiq_offset_angle)
 
             if (this.show_value_bar)
             {
@@ -193,6 +185,12 @@ class Diagramme_Baton
                 text.move(dx, sy - this.graduation_size / 2.0 - this.text_size + ty)
                 text.font(text_style)
             }
+
+			dx += this.etiq_offset_x;
+            let text = draw.text(this.etiquettes[i])
+            text.move(dx, sy + this.graduation_size / 2.0 + this.etiq_offset_y)
+            text.font(text_style)
+			text.rotate(-this.etiq_offset_angle)
 		}
     }
 
@@ -209,8 +207,8 @@ class Diagramme_Baton
 
             let rect = draw.rect( (dx - 1) * this.bar_width / 100.0, Math.abs(dy* this.effectifs[i])-0.5)
             rect.move(sx + dx * i+0.5 + offset_x, sy + dy * this.effectifs[i])
-            rect.fill({color: c, opacity: this.transparency})
-            rect.stroke({color: c, width: this.grid_width})
+            rect.fill({color: c})
+            rect.stroke({color: c.substring(0, c.length - 2), width: this.grid_width})
         }
     }
 }
