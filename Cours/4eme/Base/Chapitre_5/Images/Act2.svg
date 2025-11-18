@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500.32 561.5">
+  <defs>
+    <clipPath id="b">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="c">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="d">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="e">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="f">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="g">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="h">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="i">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="j">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="k">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="l">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="m">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="n">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="o">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="p">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="q">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="r">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="s">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="t">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="u">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="v">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="w">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="x">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="y">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="z">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="aa">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ab">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ac">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ad">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ae">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="af">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ag">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ah">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ai">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="aj">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ak">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="al">
+      <path d="m-158.73,78.2c45.6,45.5,71.2,107.4,71.2,171.8h-243L-158.73,78.2Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="am">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="an">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ao">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ap">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="aq">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ar">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="as">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="at">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="au">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="av">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="aw">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ax">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ay">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="az">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ba">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bb">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bc">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bd">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="be">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bf">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bg">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bh">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bi">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bj">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bk">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bl">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bm">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bn">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bo">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bp">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bq">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="br">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bs">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bt">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bu">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bv">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bw">
+      <path d="m-502.33,421.8c-45.6-45.5-71.2-107.4-71.2-171.8h243l-171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bx">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="by">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="bz">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ca">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cb">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cc">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cd">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ce">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cf">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cg">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ch">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ci">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cj">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ck">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cl">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cm">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cn">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="co">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cp">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cq">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cr">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cs">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="ct">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cu">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cv">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cw">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cx">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cy">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="cz">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="da">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="db">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="dc">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="dd">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="de">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="df">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="dg">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <clipPath id="dh">
+      <path d="m-158.73,421.8c-45.5,45.6-107.4,71.2-171.8,71.2v-243l171.8,171.8Z" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+    <pattern id="di" data-name="Nouveau motif" x="0" y="0" width="14.17" height="14.17" patternTransform="translate(-580.53 561.5)" patternUnits="userSpaceOnUse" viewBox="0 0 14.17 14.17">
+      <g>
+        <rect x="0" y="0" width="14.17" height="14.17" style="fill: none; stroke-width: 0px;"/>
+        <line x1="14.17" y1="28.35" x2="28.35" y2="14.17" style="fill: none; stroke: red; stroke-linecap: round; stroke-miterlimit: 10; stroke-width: 4px;"/>
+        <line x1="0" y1="28.35" x2="14.17" y2="14.17" style="fill: none; stroke: red; stroke-linecap: round; stroke-miterlimit: 10; stroke-width: 4px;"/>
+        <line x1="-14.17" y1="28.35" x2="0" y2="14.17" style="fill: none; stroke: red; stroke-linecap: round; stroke-miterlimit: 10; stroke-width: 4px;"/>
+        <line x1="14.17" y1="14.17" x2="28.35" y2="0" style="fill: none; stroke: red; stroke-linecap: round; stroke-miterlimit: 10; stroke-width: 4px;"/>
+        <line x1="0" y1="14.17" x2="14.17" y2="0" style="fill: none; stroke: red; stroke-linecap: round; stroke-miterlimit: 10; stroke-width: 4px;"/>
+        <line x1="-14.17" y1="14.17" x2="0" y2="0" style="fill: none; stroke: red; stroke-linecap: round; stroke-miterlimit: 10; stroke-width: 4px;"/>
+        <line x1="14.17" y1="0" x2="28.35" y2="-14.17" style="fill: none; stroke: red; stroke-linecap: round; stroke-miterlimit: 10; stroke-width: 4px;"/>
+        <line x1="0" y1="0" x2="14.17" y2="-14.17" style="fill: none; stroke: red; stroke-linecap: round; stroke-miterlimit: 10; stroke-width: 4px;"/>
+        <line x1="-14.17" y1="0" x2="0" y2="-14.17" style="fill: none; stroke: red; stroke-linecap: round; stroke-miterlimit: 10; stroke-width: 4px;"/>
+      </g>
+    </pattern>
+  </defs>
+  <g style="clip-path: url(#b);">
+    <path d="m-580.53,1195.8L615.27,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#c);">
+    <path d="m-580.53,1178.8L598.27,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#d);">
+    <path d="m-580.53,1161.9L581.37,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#e);">
+    <path d="m-580.53,1144.9L564.37,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#f);">
+    <path d="m-580.53,1127.9L547.37,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#g);">
+    <path d="m-580.53,1110.9L530.37,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#h);">
+    <path d="m-580.53,1094L513.47,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#i);">
+    <path d="m-580.53,1077L496.47,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#j);">
+    <path d="m-580.53,1060L479.47,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#k);">
+    <path d="m-580.53,1043.1L462.57,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#l);">
+    <path d="m-580.53,1026.1L445.57,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#m);">
+    <path d="m-580.53,1009.1L428.57,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#n);">
+    <path d="m-580.53,992.1L411.57,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#o);">
+    <path d="m-580.53,975.2L394.67,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#p);">
+    <path d="m-580.53,958.2L377.67,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#q);">
+    <path d="m-580.53,941.2L360.67,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#r);">
+    <path d="m-580.53,924.3L343.77,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#s);">
+    <path d="m-580.53,907.3L326.77,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#t);">
+    <path d="m-580.53,890.3L309.77,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#u);">
+    <path d="m-580.53,873.4L292.87,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#v);">
+    <path d="m-580.53,856.4L275.87,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#w);">
+    <path d="m-580.53,839.4L258.87,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#x);">
+    <path d="m-580.53,822.4L241.87,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#y);">
+    <path d="m-580.53,805.5L224.97,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#z);">
+    <path d="m-580.53,788.5L207.97,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#aa);">
+    <path d="m-580.53,771.5L190.97,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ab);">
+    <path d="m-580.53,754.6L174.07,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ac);">
+    <path d="m-580.53,737.6L157.07,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ad);">
+    <path d="m-580.53,720.6L140.07,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ae);">
+    <path d="m-580.53,703.6L123.07,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#af);">
+    <path d="m-580.53,686.7L106.17,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ag);">
+    <path d="m-580.53,669.7L89.17,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ah);">
+    <path d="m-580.53,652.7L72.17,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ai);">
+    <path d="m-580.53,635.8L55.27,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#aj);">
+    <path d="m-580.53,618.8L38.27,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ak);">
+    <path d="m-580.53,601.8L21.27,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#al);">
+    <path d="m-580.53,584.9L4.37,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#am);">
+    <path d="m-580.53,1195.8L615.27,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#an);">
+    <path d="m-580.53,1178.8L598.27,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ao);">
+    <path d="m-580.53,1161.9L581.37,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ap);">
+    <path d="m-580.53,1144.9L564.37,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#aq);">
+    <path d="m-580.53,1127.9L547.37,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ar);">
+    <path d="m-580.53,1110.9L530.37,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#as);">
+    <path d="m-580.53,1094L513.47,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#at);">
+    <path d="m-580.53,1077L496.47,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#au);">
+    <path d="m-580.53,1060L479.47,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#av);">
+    <path d="m-580.53,1043.1L462.57,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#aw);">
+    <path d="m-580.53,1026.1L445.57,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ax);">
+    <path d="m-580.53,1009.1L428.57,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ay);">
+    <path d="m-580.53,992.1L411.57,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#az);">
+    <path d="m-580.53,975.2L394.67,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ba);">
+    <path d="m-580.53,958.2L377.67,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bb);">
+    <path d="m-580.53,941.2L360.67,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bc);">
+    <path d="m-580.53,924.3L343.77,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bd);">
+    <path d="m-580.53,907.3L326.77,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#be);">
+    <path d="m-580.53,890.3L309.77,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bf);">
+    <path d="m-580.53,873.4L292.87,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bg);">
+    <path d="m-580.53,856.4L275.87,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bh);">
+    <path d="m-580.53,839.4L258.87,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bi);">
+    <path d="m-580.53,822.4L241.87,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bj);">
+    <path d="m-580.53,805.5L224.97,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bk);">
+    <path d="m-580.53,788.5L207.97,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bl);">
+    <path d="m-580.53,771.5L190.97,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bm);">
+    <path d="m-580.53,754.6L174.07,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bn);">
+    <path d="m-580.53,737.6L157.07,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bo);">
+    <path d="m-580.53,720.6L140.07,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bp);">
+    <path d="m-580.53,703.6L123.07,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bq);">
+    <path d="m-580.53,686.7L106.17,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#br);">
+    <path d="m-580.53,669.7L89.17,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bs);">
+    <path d="m-580.53,652.7L72.17,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bt);">
+    <path d="m-580.53,635.8L55.27,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bu);">
+    <path d="m-580.53,618.8L38.27,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bv);">
+    <path d="m-580.53,601.8L21.27,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bw);">
+    <path d="m-580.53,584.9L4.37,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bx);">
+    <path d="m-580.53,1195.8L615.27,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#by);">
+    <path d="m-580.53,1178.8L598.27,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#bz);">
+    <path d="m-580.53,1161.9L581.37,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ca);">
+    <path d="m-580.53,1144.9L564.37,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cb);">
+    <path d="m-580.53,1127.9L547.37,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cc);">
+    <path d="m-580.53,1110.9L530.37,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cd);">
+    <path d="m-580.53,1094L513.47,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ce);">
+    <path d="m-580.53,1077L496.47,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cf);">
+    <path d="m-580.53,1060L479.47,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cg);">
+    <path d="m-580.53,1043.1L462.57,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ch);">
+    <path d="m-580.53,1026.1L445.57,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ci);">
+    <path d="m-580.53,1009.1L428.57,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cj);">
+    <path d="m-580.53,992.1L411.57,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ck);">
+    <path d="m-580.53,975.2L394.67,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cl);">
+    <path d="m-580.53,958.2L377.67,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cm);">
+    <path d="m-580.53,941.2L360.67,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cn);">
+    <path d="m-580.53,924.3L343.77,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#co);">
+    <path d="m-580.53,907.3L326.77,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cp);">
+    <path d="m-580.53,890.3L309.77,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cq);">
+    <path d="m-580.53,873.4L292.87,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cr);">
+    <path d="m-580.53,856.4L275.87,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cs);">
+    <path d="m-580.53,839.4L258.87,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#ct);">
+    <path d="m-580.53,822.4L241.87,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cu);">
+    <path d="m-580.53,805.5L224.97,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cv);">
+    <path d="m-580.53,788.5L207.97,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cw);">
+    <path d="m-580.53,771.5L190.97,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cx);">
+    <path d="m-580.53,754.6L174.07,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cy);">
+    <path d="m-580.53,737.6L157.07,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#cz);">
+    <path d="m-580.53,720.6L140.07,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#da);">
+    <path d="m-580.53,703.6L123.07,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#db);">
+    <path d="m-580.53,686.7L106.17,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#dc);">
+    <path d="m-580.53,669.7L89.17,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#dd);">
+    <path d="m-580.53,652.7L72.17,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#de);">
+    <path d="m-580.53,635.8L55.27,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#df);">
+    <path d="m-580.53,618.8L38.27,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#dg);">
+    <path d="m-580.53,601.8L21.27,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <g style="clip-path: url(#dh);">
+    <path d="m-580.53,584.9L4.37,0" style="fill: none; stroke: red; stroke-linecap: round; stroke-linejoin: round; stroke-width: 5px;"/>
+  </g>
+  <rect x="7.72" y="7" width="243.43" height="243.43" style="fill: url(#di); stroke-width: 0px;"/>
+  <polygon points="493.72 493 251.16 493 251.16 7 372.44 7 372.44 250 493.72 250 493.72 493" style="fill: blue; stroke-width: 0px;"/>
+  <rect x="7.72" y="250" width="121.72" height="243" style="fill: blue; stroke-width: 0px;"/>
+  <rect x="7.72" y="7" width="486" height="486" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 6.52px;"/>
+  <rect x="100.81" y="510.7" width="60" height="35" style="fill: blue; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 4px;"/>
+  <g>
+    <g>
+      <polygon points="255.21 510.7 248.11 510.7 228.01 530.8 228.01 537.9 255.21 510.7" style="fill: red; stroke-width: 0px;"/>
+      <polygon points="272.21 510.7 265.11 510.7 230.11 545.7 237.21 545.7 272.21 510.7" style="fill: red; stroke-width: 0px;"/>
+      <polygon points="238.21 510.7 231.11 510.7 228.01 513.9 228.01 520.9 238.21 510.7" style="fill: red; stroke-width: 0px;"/>
+      <polygon points="288.01 511.9 288.01 510.7 282.11 510.7 247.11 545.7 254.11 545.7 288.01 511.9" style="fill: red; stroke-width: 0px;"/>
+      <polygon points="288.01 528.8 288.01 521.8 264.01 545.7 271.11 545.7 288.01 528.8" style="fill: red; stroke-width: 0px;"/>
+      <polygon points="288.01 538.7 281.01 545.7 288.01 545.7 288.01 538.7" style="fill: red; stroke-width: 0px;"/>
+    </g>
+    <rect x="228.01" y="510.7" width="60" height="35" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 4px;"/>
+  </g>
+  <rect x="355.21" y="510.7" width="60" height="35" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 4px;"/>
+  <line x1="251.16" y1="7" x2="251.16" y2="493" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 6.52px;"/>
+  <line x1="493.72" y1="250" x2="7.72" y2="250" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 6.52px;"/>
+  <line x1="129.44" y1="7" x2="129.44" y2="493" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 6.52px;"/>
+  <line x1="372.44" y1="7" x2="372.44" y2="493" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: 6.52px;"/>
+</svg>
