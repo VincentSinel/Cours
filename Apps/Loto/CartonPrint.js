@@ -10,6 +10,15 @@ const A4_h_coef = 841.89 / 297.0
 
 var color = "";
 
+var txt_nbr = true;
+var txt_uid = true;
+var txt_txt1 = false;
+var txt_txt2 = false;
+var txt_txt3 = false;
+var txt_txt1_value = "";
+var txt_txt2_value = "";
+var txt_txt3_value = "";
+
 onmessage = function(e) {
 	CreatePDF(e.data);
 }
@@ -19,7 +28,14 @@ function CreatePDF(data)
 	postMessage({status: "Start", completion: 0, time: 0})
 	var cardRangeList = CheckPage(data.range, Object.keys(data.cardlist).length)
 	color = data.color
-	console.log(color)
+	txt_nbr = data.show_carton_nbr;
+	txt_uid = data.show_carton_uid;
+	txt_txt1 = data.show_carton_txt1;
+	txt_txt2 = data.show_carton_txt2;
+	txt_txt3 = data.show_carton_txt3;
+	txt_txt1_value = data.show_carton_txt1_value;
+	txt_txt2_value = data.show_carton_txt2_value;
+	txt_txt3_value = data.show_carton_txt3_value;
 	PDFCreation(data.cardlist, cardRangeList)
 }
 
@@ -104,13 +120,20 @@ function PDFCreation(data, cardRangeList)
 				h * A4_h_coef).fill()
 
 			doc.fillColor("#FFF")
-			doc.text('Carton n°' + (cardIndex + 1).toString(), 
+			let txt1 = txt_nbr ? ('Carton n°' + (cardIndex + 1).toString()) : txt_txt1 ? txt_txt1_value : "";
+			doc.text(txt1, 
 				(dx + 2) * A4_w_coef, 
 				(dy + 4) * A4_h_coef).fill()
 
-			let uid = element
-			let tw = doc.widthOfString(uid);
-			doc.text(uid, 
+			let txt2 = txt_txt2 ? txt_txt2_value : "";
+			let tw = doc.widthOfString(txt2);
+			doc.text(txt2, 
+				(dx + w / 2.0) * A4_w_coef - tw / 2.0, 
+				(dy + 4) * A4_h_coef).fill()
+
+			let txt3 = txt_uid ? element : txt_txt3 ? txt_txt3_value : "";
+			tw = doc.widthOfString(txt3);
+			doc.text(txt3, 
 				(dx + w - 2) * A4_w_coef - tw, 
 				(dy + 4) * A4_h_coef).fill()
 

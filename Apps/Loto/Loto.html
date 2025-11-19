@@ -184,6 +184,9 @@
 				</div>
 				<label id="PreviewInfo1">Carton n°</label>
 				<label id="PreviewInfo2" style="text-align: right;"></label>
+				<label id="PreviewText1"></label>
+				<label id="PreviewText2" style="text-align: center;"></label>
+				<label id="PreviewText3" style="text-align: right;"></label>
 			</div>
 			<div class="flex_color_list">
 				<button class="iconbutton" onclick="ChangeColor('#e60049')">
@@ -245,6 +248,21 @@
 				<button onclick="this.parentNode.querySelector('input[type=number]').stepDown();UpdatePreview()"></button>
 				<input id="CartonSelection" type="number" value="1" step="1" min="1" max="200000" onchange="UpdatePreview()">
 				<button onclick="this.parentNode.querySelector('input[type=number]').stepUp();UpdatePreview()" class="plus"></button>
+			</div>
+			<div class="other_options">
+				<input id="show_carton_nbr" type="checkbox" checked oninput="ReajustText()">
+				<label for="show_carton_nbr">Afficher le numéro du carton</label><br>
+				<input id="show_carton_uid" type="checkbox" checked oninput="ReajustText()">
+				<label for="show_carton_uid">Afficher le code du carton</label><br>
+				<input id="show_carton_txt1" type="checkbox" unchecked oninput="ReajustText()">
+				<label for="show_carton_txt1">Ajouter un champs de texte à gauche</label>
+				<input id="show_carton_txt1_value" type="text" oninput="ReajustText()"><br>
+				<input id="show_carton_txt2" type="checkbox" unchecked oninput="ReajustText()">
+				<label for="show_carton_txt2">Ajouter un champs de texte au centre</label>
+				<input id="show_carton_txt2_value" type="text" oninput="ReajustText()"><br>
+				<input id="show_carton_txt3" type="checkbox" unchecked oninput="ReajustText()">
+				<label for="show_carton_txt3">Ajouter un champs de texte à droite</label>
+				<input id="show_carton_txt3_value" type="text" oninput="ReajustText()"><br>
 			</div>
 		</div>
 

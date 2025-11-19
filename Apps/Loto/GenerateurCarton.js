@@ -72,6 +72,7 @@ function StopGeneration()
 
 function Download()
 {
+	if (document.getElementById("DownloadButton").classList.contains("disabled")) return;
 	let jsonData = JSON.stringify(loaded_data, null, "\t");
 	if (jsonData == undefined)
 	{
@@ -155,7 +156,25 @@ function UpdatePreview()
 			}
 		}
 	}
+}
 
+function ReajustText()
+{
+	var lab1 = document.getElementById("PreviewInfo1")
+	var lab2 = document.getElementById("PreviewInfo2")
+	var lab3 = document.getElementById("PreviewText1")
+	var lab4 = document.getElementById("PreviewText2")
+	var lab5 = document.getElementById("PreviewText3")
+
+	lab3.innerHTML = document.getElementById("show_carton_txt1_value").value
+	lab4.innerHTML = document.getElementById("show_carton_txt2_value").value
+	lab5.innerHTML = document.getElementById("show_carton_txt3_value").value
+
+	lab1.style.display = document.getElementById("show_carton_nbr").checked ? "block" : "none";
+	lab2.style.display = document.getElementById("show_carton_uid").checked ? "block" : "none";
+	lab3.style.display = document.getElementById("show_carton_txt1").checked ? "block" : "none";
+	lab4.style.display = document.getElementById("show_carton_txt2").checked ? "block" : "none";
+	lab5.style.display = document.getElementById("show_carton_txt3").checked ? "block" : "none";
 }
 
 function PrintCarton()
@@ -178,7 +197,19 @@ function PrintCarton()
 				worker_pdf = new Worker("CartonPrint.js");
 				worker_pdf.onmessage = function(event) { Printing_Update(event.data)};
 				
-				worker_pdf.postMessage({cardlist: loaded_data, range: range, color: color});
+				worker_pdf.postMessage({
+					cardlist: loaded_data, 
+					range: range, 
+					color: color,
+					show_carton_nbr: document.getElementById("show_carton_nbr").checked,
+					show_carton_uid: document.getElementById("show_carton_uid").checked,
+					show_carton_txt1: document.getElementById("show_carton_txt1").checked,
+					show_carton_txt2: document.getElementById("show_carton_txt2").checked,
+					show_carton_txt3: document.getElementById("show_carton_txt3").checked,
+					show_carton_txt1_value: document.getElementById("show_carton_txt1_value").value,
+					show_carton_txt2_value: document.getElementById("show_carton_txt2_value").value,
+					show_carton_txt3_value: document.getElementById("show_carton_txt3_value").value,
+				});
 			}
 			else
 			{

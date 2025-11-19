@@ -41,6 +41,13 @@ p, span{
 	color: var(--BackText);
 }
 
+.other_options{
+	color: var(--BackText);
+}
+.other_options > label{
+	font-weight: bold;
+}
+
 button, input, select{
 	border: solid gray 1px;
 	border-radius: 5px;
