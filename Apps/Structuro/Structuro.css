@@ -26,6 +26,7 @@
 
 .flexobject{
 	display: flex;
+	flex-wrap: wrap;
 	align-items: baseline;
 	gap: 5px;
 	flex-direction: row;
@@ -40,7 +41,6 @@
 
 .left_panel{
 	width: 100%;
-	height: 22px;
 }
 
 .content_div{
@@ -86,4 +86,42 @@ svg text::selection {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+
+div[class^="tool"]{
+	display: flex;
+	gap: 2px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-items: stretch;
+}
+div[class^="tool"] > img{
+	max-height: 24px;
+}
+/* div[class^="tool"] > button{
+	max-width: 24px;
+	min-width: 24px;
+} */
+div[class^="tool"] > input
+{
+	width: 50px;
+}
+
+.tool-coord > label{
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+.tool-axe > input{
+	flex: 30px 1 1;
+	padding: 0;
+	align-items: center;
+	max-height: 16px;
+}
+
+.tool-axe > select{
+	flex: 30px 1 1;
+	width: auto;
 }

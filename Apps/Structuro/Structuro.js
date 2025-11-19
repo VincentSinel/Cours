@@ -17,6 +17,8 @@ var View_Top_flip = false;
 
 var Cubes = [[[0]]]
 
+var font_size = 12;
+
 function Cube_w()
 {
 	return Cubes.length;
@@ -132,6 +134,7 @@ function ChangeCubeSize()
 
 function RecreateGrid()
 {
+	font_size = document.getElementById("structuro_txt_size").valueAsNumber;
 	Resize()
 	DrawFront()
 	DrawRight()
@@ -227,10 +230,13 @@ function DrawFront()
 		line.front()
 	});
 
-	let title = View_Front.text(View_Front_flip ? "Vue de dos" : "Vue de face")
-	title.move(5,5).font({ stroke:"white", 'stroke-width': 5, family: 'courrier', weight: "bold", size: 12 })
-	title = View_Front.text(View_Front_flip ? "Vue de dos" : "Vue de face")
-	title.move(5,5).font({ fill: 'black', family: 'courrier', weight: "bold", size: 12 })
+	if (font_size > 0)
+	{
+		let title = View_Front.text(View_Front_flip ? "Vue de dos" : "Vue de face")
+		title.move(5,5).font({ stroke:"white", 'stroke-width': 5, family: 'arial', weight: "bold", size: font_size })
+		title = View_Front.text(View_Front_flip ? "Vue de dos" : "Vue de face")
+		title.move(5,5).font({ fill: 'black', family: 'arial', weight: "bold", size: font_size })
+	}
 }
 
 function DrawRight()
@@ -299,10 +305,14 @@ function DrawRight()
 		line.front()
 	});
 
-	let title = View_Right.text(View_Right_flip ? "Vue de gauche" : "Vue de droite")
-	title.move(5,5).font({ stroke:"white", 'stroke-width': 5, family: 'courrier', weight: "bold", size: 12 })
-	title = View_Right.text(View_Right_flip ? "Vue de gauche" : "Vue de droite")
-	title.move(5,5).font({ fill: 'black', family: 'courrier', weight: "bold", size: 12 })
+
+	if (font_size > 0)
+	{
+		let title = View_Right.text(View_Right_flip ? "Vue de gauche" : "Vue de droite")
+		title.move(5,5).font({ stroke:"white", 'stroke-width': 5, family: 'arial', weight: "bold", size: font_size })
+		title = View_Right.text(View_Right_flip ? "Vue de gauche" : "Vue de droite")
+		title.move(5,5).font({ fill: 'black', family: 'arial', weight: "bold", size: font_size })
+	}
 }
 
 function DrawTop()
@@ -371,10 +381,13 @@ function DrawTop()
 		line.front()
 	});
 
-	let title = View_Top.text(View_Top_flip ? "Vue de dessous" : "Vue de dessus")
-	title.move(5,5).font({ stroke:"white", 'stroke-width': 5, family: 'courrier', weight: "bold", size: 12 })
-	title = View_Top.text(View_Top_flip ? "Vue de dessous" : "Vue de dessus")
-	title.move(5,5).font({ fill: 'black', family: 'courrier', weight: "bold", size: 12 })
+	if (font_size > 0)
+	{
+		let title = View_Top.text(View_Top_flip ? "Vue de dessous" : "Vue de dessus")
+		title.move(5,5).font({ stroke:"white", 'stroke-width': 5, family: 'arial', weight: "bold", size: font_size })
+		title = View_Top.text(View_Top_flip ? "Vue de dessous" : "Vue de dessus")
+		title.move(5,5).font({ fill: 'black', family: 'arial', weight: "bold", size: font_size })
+	}
 }
 
 function DrawIso()
@@ -520,10 +533,14 @@ function DrawIso()
 		line.front()
 	});
 
-	let title = View_Iso.text("Perspective isométrique")
-	title.move(5,5).font({ stroke:"white", 'stroke-width': 5, family: 'courrier', weight: "bold", size: 12 })
-	title = View_Iso.text("Perspective isométrique")
-	title.move(5,5).font({ fill: 'black', family: 'courrier', weight: "bold", size: 12 })
+
+	if (font_size > 0)
+	{
+		let title = View_Iso.text("Perspective isométrique")
+		title.move(5,5).font({ stroke:"white", 'stroke-width': 5, family: 'arial', weight: "bold", size: font_size })
+		title = View_Iso.text("Perspective isométrique")
+		title.move(5,5).font({ fill: 'black', family: 'arial', weight: "bold", size: font_size })
+	}
 }
 
 function DrawCav()
@@ -615,10 +632,14 @@ function DrawCav()
 		line.front()
 	});
 
-	let title = View_Cav.text("Perspective cavalière")
-	title.move(5,5).font({ stroke:"white", 'stroke-width': 5, family: 'courrier', weight: "bold", size: 12 })
-	title = View_Cav.text("Perspective cavalière")
-	title.move(5,5).font({ fill: 'black', family: 'courrier', weight: "bold", size: 12 })
+
+	if (font_size > 0)
+	{
+		let title = View_Cav.text("Perspective cavalière")
+		title.move(5,5).font({ stroke:"white", 'stroke-width': 5, family: 'arial', weight: "bold", size: font_size })
+		title = View_Cav.text("Perspective cavalière")
+		title.move(5,5).font({ fill: 'black', family: 'arial', weight: "bold", size: font_size })
+	}
 }
 
 function GetTopDepth(x, y, view)

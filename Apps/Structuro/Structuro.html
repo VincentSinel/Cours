@@ -28,22 +28,30 @@
 	<div id="maincontainer" class="maincontainer">
 
 		<div class="left_panel">
-			<div class="flexobject">
-				<label>Longueur&#8239;:</label>
+			<div class="tool-axe">
+				<img src="/Images/Icons/Cube_Width.svg">
+				<!-- <label>Longueur&#8239;:</label> -->
 				<input type="number" min="1" max="10" step="1" value="5" id="structuro_width" oninput="ChangeCubeSize()">
-				<label>Largeur&#8239;:</label>
+				<img src="/Images/Icons/Cube_Height.svg">
+				<!-- <label>Largeur&#8239;:</label> -->
 				<input type="number" min="1" max="10" step="1" value="5" id="structuro_height" oninput="ChangeCubeSize()">
-				<label>Profondeur&#8239;:</label>
+				<img src="/Images/Icons/Cube_Depth.svg">
+				<!-- <label>Profondeur&#8239;:</label> -->
 				<input type="number" min="1" max="10" step="1" value="5" id="structuro_depth" oninput="ChangeCubeSize()">
-				<button onclick="Save()">Enregistrer en SVG</button>
-				<button id="Png_Save" onclick="SavePNG()">Enregistrer en PNG</button>
+				<img src="/Images/Icons/Font Size.svg">
+				<input type="number" min="0" step="1" value="12" id="structuro_txt_size" oninput="RecreateGrid()">
 			</div>
 		</div>
-
+		<div class="tool-axe">
+			<button onclick="Save()">Enregistrer en SVG</button>
+			<button id="Png_Save" onclick="SavePNG()">Enregistrer en PNG</button>
+		</div>
+		
 		<div class="content_div">
 			<div id="grid_container" class="grid">
 			</div>
 		</div>
+		
 
 	
 	</div>
