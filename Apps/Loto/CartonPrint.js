@@ -4,9 +4,8 @@ importScripts(
   "/JS/PDFKit/blob-stream.js"
 );
 
-// Coef from pixel to points
-const A4_w_coef = 595.28 / 210.0
-const A4_h_coef = 841.89 / 297.0
+// Coef from cm to points
+const mm_points_coef = 2.8346;
 
 var color = "";
 
@@ -18,6 +17,12 @@ var txt_txt3 = false;
 var txt_txt1_value = "";
 var txt_txt2_value = "";
 var txt_txt3_value = "";
+
+var parameters_width = 0;
+var parameters_height = 0;
+var parameters_marge = 0;
+var parameters_gap = 0;
+var parameters_pagetype = 0;
 
 onmessage = function(e) {
 	CreatePDF(e.data);
@@ -36,6 +41,12 @@ function CreatePDF(data)
 	txt_txt1_value = data.show_carton_txt1_value;
 	txt_txt2_value = data.show_carton_txt2_value;
 	txt_txt3_value = data.show_carton_txt3_value;
+	parameters_width = data.parameters_width;
+	parameters_height = data.parameters_height;
+	parameters_marge = data.parameters_marge;
+	parameters_gap = data.parameters_gap;
+	parameters_pagetype = data.parameters_pagetype == 0 ? 'A4' : 'A3';
+
 	PDFCreation(data.cardlist, cardRangeList)
 }
 
@@ -82,14 +93,31 @@ function PDFCreation(data, cardRangeList)
 
 	var keys = Object.keys(data)
 
-	const doc = new PDFDocument({size: 'A4'});
+	const doc = new PDFDocument({size: parameters_pagetype, layout: parameters_pagetype == 'A4' ? 'portrait' : 'landscape' });
 
 	// pipe the document to a blob
 	const stream = doc.pipe(blobStream());	
 
-	let w = 157;
-	let h = 86;
+	let w = parameters_width;
+	let h = parameters_height;
+	let margin = parameters_marge;
 	let cartonCount = 0;
+
+	let c = 0;
+	let r = 0;
+	if (parameters_pagetype == 'A4')
+	{
+		c = Math.max(Math.floor((210 - margin * 2 + parameters_gap) / (w + parameters_gap)), 1);
+		r = Math.max(Math.floor((297 - margin * 2 + parameters_gap) / (h + parameters_gap)), 1);
+	}	
+	else if (parameters_pagetype == 'A3')
+	{
+		c = Math.max(Math.floor((420 - margin * 2 + parameters_gap) / (w + parameters_gap)), 1);
+		r = Math.max(Math.floor((297 - margin * 2 + parameters_gap) / (h + parameters_gap)), 1);
+	}	
+	
+
+	// if (cartonCount % 3 == 0 && cartonCount != 0 && parameters_pagetype == 'A4')
 
 	for (let cardRangeIndex = 0; cardRangeIndex < cardRangeList.list.length; cardRangeIndex++) {
 		const cardRange = cardRangeList.list[cardRangeIndex];
@@ -97,70 +125,75 @@ function PDFCreation(data, cardRangeList)
 		for (let cardIndex = cardRange[0]; cardIndex <= cardRange[1]; cardIndex++) {
 			const element = keys[cardIndex];
 
-			if (cartonCount % 3 == 0 && cartonCount != 0)
+			if (cartonCount % (c * r) == 0 && cartonCount != 0)
 			{
 				doc.addPage()
 			}
 
+			// if (cartonCount % 6 == 0 && cartonCount != 0 && parameters_pagetype == 'A3')
+			// {
+			// 	doc.addPage()
+			// }
+
 
 			var grid = RetrieveGrid(data[element])
 
-			let dx = 10;
-			let dy = 10 + (cartonCount % 3) * (h + 1);
-
-			// let color = "#50E991"
+			let dx = margin + (w + parameters_gap) * Math.floor((cartonCount % (r * c))  / r);
+			// if (parameters_pagetype == 'A3' && cartonCount % 6 >=3)
+			// 	dx += w + parameters_gap;
+			let dy = margin + ((cartonCount % (r * c)) % r) * (h + parameters_gap);
 
 			doc.fontSize(8);
 			doc.font('Helvetica-Bold')
 			doc.fillColor(color)
 			doc.rect(
-				dx * A4_w_coef, 
-				dy * A4_h_coef, 
-				w * A4_w_coef, 
-				h * A4_h_coef).fill()
+				dx * mm_points_coef, 
+				dy * mm_points_coef, 
+				w * mm_points_coef, 
+				h * mm_points_coef).fill()
 
 			doc.fillColor("#FFF")
 			let txt1 = txt_nbr ? ('Carton n°' + (cardIndex + 1).toString()) : txt_txt1 ? txt_txt1_value : "";
 			doc.text(txt1, 
-				(dx + 2) * A4_w_coef, 
-				(dy + 4) * A4_h_coef).fill()
+				(dx + 2) * mm_points_coef, 
+				(dy + 4) * mm_points_coef).fill()
 
 			let txt2 = txt_txt2 ? txt_txt2_value : "";
 			let tw = doc.widthOfString(txt2);
 			doc.text(txt2, 
-				(dx + w / 2.0) * A4_w_coef - tw / 2.0, 
-				(dy + 4) * A4_h_coef).fill()
+				(dx + w / 2.0) * mm_points_coef - tw / 2.0, 
+				(dy + 4) * mm_points_coef).fill()
 
 			let txt3 = txt_uid ? element : txt_txt3 ? txt_txt3_value : "";
 			tw = doc.widthOfString(txt3);
 			doc.text(txt3, 
-				(dx + w - 2) * A4_w_coef - tw, 
-				(dy + 4) * A4_h_coef).fill()
+				(dx + w - 2) * mm_points_coef - tw, 
+				(dy + 4) * mm_points_coef).fill()
 
 			doc.fillColor("#FFF")
 			doc.rect(
-				(dx + 2) * A4_w_coef, 
-				(dy + 7) * A4_h_coef, 
-				(w - 4) * A4_w_coef, 
-				(h - 9) * A4_h_coef).fill()
+				(dx + 2) * mm_points_coef, 
+				(dy + 7) * mm_points_coef, 
+				(w - 4) * mm_points_coef, 
+				(h - 9) * mm_points_coef).fill()
 			doc.fillColor(color)
 			doc.rect(
-				(dx + 2.5) * A4_w_coef, 
-				(dy + 7.5) * A4_h_coef, 
-				(w - 5) * A4_w_coef, 
-				(h - 10) * A4_h_coef).fill()
+				(dx + 2.5) * mm_points_coef, 
+				(dy + 7.5) * mm_points_coef, 
+				(w - 5) * mm_points_coef, 
+				(h - 10) * mm_points_coef).fill()
 			doc.fillColor("#FFF")
 			doc.rect(
-				(dx + 3) * A4_w_coef, 
-				(dy + 8) * A4_h_coef, 
-				(w - 6) * A4_w_coef, 
-				(h - 11) * A4_h_coef).fill()
+				(dx + 3) * mm_points_coef, 
+				(dy + 8) * mm_points_coef, 
+				(w - 6) * mm_points_coef, 
+				(h - 11) * mm_points_coef).fill()
 			doc.fillColor(color)
 			doc.rect(
-				(dx + 4) * A4_w_coef, 
-				(dy + 9) * A4_h_coef, 
-				(w - 8) * A4_w_coef, 
-				(h - 13) * A4_h_coef).fill()
+				(dx + 4) * mm_points_coef, 
+				(dy + 9) * mm_points_coef, 
+				(w - 8) * mm_points_coef, 
+				(h - 13) * mm_points_coef).fill()
 			
 			let dw = (w - 9.5) / 9;
 			let dh = (h - 14.5) / 3;
@@ -174,36 +207,38 @@ function PDFCreation(data, cardRangeList)
 
 					doc.fillColor("#FFF")
 					doc.roundedRect(
-						x * A4_w_coef, 
-						y * A4_h_coef, 
-						(dw - 0.5) * A4_w_coef, 
-						(dh - 0.5) * A4_h_coef, 
+						x * mm_points_coef, 
+						y * mm_points_coef, 
+						(dw - 0.5) * mm_points_coef, 
+						(dh - 0.5) * mm_points_coef, 
 						1, 1).fill()
 					
 					if (v == 0)
 					{
 						doc.fillColor(color)
 						doc.roundedRect(
-							(x + 1) * A4_w_coef, 
-							(y + 1) * A4_h_coef, 
-							(dw - 2.5) * A4_w_coef, 
-							(dh - 2.5) * A4_h_coef, 
+							(x + 1) * mm_points_coef, 
+							(y + 1) * mm_points_coef, 
+							(dw - 2.5) * mm_points_coef, 
+							(dh - 2.5) * mm_points_coef, 
 							1, 1).fill()
 					}
 					else
 					{
 						doc.fillColor("#000");
-						doc.fontSize(36);
+						doc.fontSize(34);
 						let tw = doc.widthOfString(v.toString())
 						doc.text(v.toString(), 
-						(x + (dw - 0.5) / 2) * A4_w_coef - tw / 2, 
-						(y + (dh - 0.5) * 1/3) * A4_h_coef - 10).fill()
+						(x + (dw - 0.5) / 2) * mm_points_coef - tw / 2, 
+						(y + (dh - 0.5) * 1/3) * mm_points_coef - 10, 
+						{lineBreak: false}).fill()
 
 						doc.fontSize(12);
 						tw = doc.widthOfString(v.toString())
 						doc.text(v.toString(),
-						(x + (dw - 0.5) / 2) * A4_w_coef - tw / 2, 
-						(y + (dh - 0.5)*5/6) * A4_h_coef - 2).fill()
+						(x + (dw - 0.5) / 2) * mm_points_coef - tw / 2, 
+						(y + (dh - 0.5)*5/6) * mm_points_coef - 2, 
+						{lineBreak: false}).fill()
 
 					}
 				}
@@ -216,7 +251,7 @@ function PDFCreation(data, cardRangeList)
 			if (e - last_time > 500)
 			{
 				let completion = (cartonCount + 1) / cardRangeList.size;
-				postMessage({status: "Generating", completion: completion, time: e - start_time})
+				postMessage({status: "Generating", completion: completion, time: e - start_time, column: c, rows: r})
 				last_time = e;
 			}
 				
@@ -232,6 +267,6 @@ function PDFCreation(data, cardRangeList)
 		// get a blob you can do whatever you like with
 		blob = stream.toBlob("application/pdf");
 		console.log(blob)
-		postMessage({status: "End", completion: 1, time: Date.now() - start_time, result: blob})
+		postMessage({status: "End", completion: 1, time: Date.now() - start_time, result: blob, column: c, rows: r})
 	});
 }

@@ -206,9 +206,11 @@ function PrintCarton()
 					show_carton_txt1: document.getElementById("show_carton_txt1").checked,
 					show_carton_txt2: document.getElementById("show_carton_txt2").checked,
 					show_carton_txt3: document.getElementById("show_carton_txt3").checked,
-					show_carton_txt1_value: document.getElementById("show_carton_txt1_value").value,
-					show_carton_txt2_value: document.getElementById("show_carton_txt2_value").value,
-					show_carton_txt3_value: document.getElementById("show_carton_txt3_value").value,
+					parameters_width: document.getElementById("parameters_width").valueAsNumber,
+					parameters_height: document.getElementById("parameters_height").valueAsNumber,
+					parameters_marge: document.getElementById("parameters_marge").valueAsNumber,
+					parameters_gap: document.getElementById("parameters_gap").valueAsNumber,
+					parameters_pagetype: document.getElementById("parameters_pagetype").selectedIndex,
 				});
 			}
 			else
@@ -252,6 +254,8 @@ function Printing_Update(data)
 	rect.setAttribute("width", Math.floor(data.completion * 316).toString())
 	rect.setAttribute("fill-opacity", data.completion)
 	label.innerHTML = Math.floor(data.completion * 100).toString() + "%"
+
+	console.log(data)
 
 	if (data.status == "End")
 	{

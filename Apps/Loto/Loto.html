@@ -137,6 +137,29 @@
 			
 			<span style="margin-left: 5px;">Plage d'impression (en carton) :</span>
 			<input id="selected_card" class="card_select" type="text" oninput="onPlageChange()">
+			<div class="other_options">
+				<div class="tool-axe">
+					<label>Marge :</label>
+					<input id="parameters_marge" type="number" value="10">
+					<label>mm</label>
+				</div>
+				<div class="tool-axe">
+					<label>Taille carton :</label>
+					<input id="parameters_width" type="number" value="157">
+					<label>mm x</label>
+					<input id="parameters_height" type="number" value="86">
+					<label>mm</label>
+				</div>
+				<div class="tool-axe">
+					<label>Espace entre les cartons :</label>
+					<input id="parameters_gap" type="number" value="10">
+					<label>mm</label>
+				</div>
+			</div>
+			<select id="parameters_pagetype">
+				<option>A4</option>
+				<option>A3</option>
+			</select>
 		</div>
 
 		<div class="main_view">

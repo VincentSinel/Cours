@@ -365,3 +365,46 @@ input[type=number]::-webkit-outer-spin-button {
 		padding: 1.6px;
 		cursor: pointer;
 }
+
+div[class^="tool"]{
+	display: flex;
+	gap: 2px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-items: stretch;
+}
+div[class^="tool"] > label {
+  max-height: 24px;
+	font-weight: bold;
+	font-size: 12pt;
+}
+div[class^="tool"] > img{
+	max-height: 24px;
+}
+/* div[class^="tool"] > button{
+	max-width: 24px;
+	min-width: 24px;
+} */
+div[class^="tool"] > input
+{
+	width: 50px;
+}
+
+.tool-coord > label{
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+.tool-axe > input{
+	flex: 30px 1 1;
+	padding: 0;
+	align-items: center;
+	text-align: right;
+	max-height: 16px;
+}
+
+.tool-axe > select{
+	flex: 30px 1 1;
+	width: auto;
+}
