@@ -215,7 +215,6 @@ function PrintCarton()
 					parameters_gap: document.getElementById("parameters_gap").valueAsNumber,
 					parameters_pagetype: document.getElementById("parameters_pagetype").selectedIndex,
 				}
-				console.log(message)
 				worker_pdf.postMessage(message);
 			}
 			else
@@ -259,8 +258,6 @@ function Printing_Update(data)
 	rect.setAttribute("width", Math.floor(data.completion * 316).toString())
 	rect.setAttribute("fill-opacity", data.completion)
 	label.innerHTML = Math.floor(data.completion * 100).toString() + "%"
-
-	console.log(data)
 
 	if (data.status == "End")
 	{
