@@ -13,7 +13,20 @@
 		"node_modules",
 		"**/node_modules/*",
 		".vscode",
-		"Cours",
-		
+		"Cours/*",
+		"Images",
+		"Documents",
+		"Font",
+		"CSS",
+		"JS/es5",
+		"JS/FileSaver",
+		"JS/Interact.js",
+		"JS/JSColorPicker",
+		"JS/jsPDF",
+		"JS/JSZip",
+		"JS/PDFKit",
+		"JS/Raphael",
+		"JS/Sortable.js/*",
+		"JS/Svg.js/*",
 	]
 }
