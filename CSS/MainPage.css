@@ -647,3 +647,26 @@ a.deactivate{
   -ms-user-select: none;
   user-select: none;
 }
+
+
+
+
+.infobulle {
+	position: relative;
+}
+.infobulle-texte {
+	position: absolute;
+	left: 5px;
+	padding: 5px;
+	width: 300px;
+	z-index: 8;
+	color: var(--BluePanelHover);
+	font-size: 12px;
+	background-color: var(--BluePanelActive);
+	border: 1px solid var(--BluePanelHover);
+	border-radius: 5px;
+}
+
+.infobulle-texte_hover{
+	opacity: 0;
+}
