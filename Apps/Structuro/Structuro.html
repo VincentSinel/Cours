@@ -29,6 +29,14 @@
 
 		<div class="left_panel">
 			<div class="tool-axe">
+				<img src="/Images/Icons/Help.svg" onmouseover="ShowHelp('Help_Width');" onmouseout="ShowHelp('Help_Width');">
+				<div class="infobulle">
+					<div class="infobulle-texte" id="Help_Width" style="display: none;">
+						Faites un clic gauche pour ajouter des cubes.<br>
+						Faites un clic droit pour retirer des cubes.<br>
+						Faites un clic de la molette pour retourner la vue.<br>
+					</div>
+				</div>
 				<img src="/Images/Icons/Cube_Width.svg">
 				<!-- <label>Longueur&#8239;:</label> -->
 				<input type="number" min="1" max="10" step="1" value="5" id="structuro_width" oninput="ChangeCubeSize()">
@@ -49,6 +57,24 @@
 		
 		<div class="content_div">
 			<div id="grid_container" class="grid">
+				<div id="view_lr">
+					<div class="checkbox">
+						<input type="checkbox" id="lr_show_numbers" oninput="HideShow('lr')">
+						<label for="lr_show_numbers">Afficher le nombre de cube</label>
+					</div>
+				</div>
+				<div id="view_fb">
+					<div class="checkbox">
+						<input type="checkbox" id="fb_show_numbers" oninput="HideShow('fb')">
+						<label for="fb_show_numbers">Afficher le nombre de cube</label>
+					</div>
+				</div>
+				<div id="view_tb">
+					<div class="checkbox">
+						<input type="checkbox" id="tb_show_numbers" oninput="HideShow('tb')">
+						<label for="tb_show_numbers">Afficher le nombre de cube</label>
+					</div>
+				</div>
 			</div>
 		</div>
 		
@@ -58,6 +84,12 @@
 </body>	
 	<script>
 		Init()
+
+		function ShowHelp(id) {
+			var div = document.getElementById(id)
+			if (div.style.display == "none") div.style.display = "block";
+			else div.style.display = "none";
+		}
 	</script>
 	<script type="module">
 		import { Canvg, presets } from 'https://cdn.skypack.dev/canvg@^4.0.0';

@@ -5,9 +5,9 @@ Number.prototype.mod = function (n) {
 };
 
 
-var View_Front
-var View_Right
-var View_Top
+var View_Front = {};
+var View_Right = {};
+var View_Top = {};
 var View_Iso
 var View_Cav
 
@@ -53,6 +53,13 @@ var stroke_style = {
 		"stroke-linecap": "round",
 		"stroke-linejoin": "round",
 	}
+var text_style = {
+		fill: "black",
+		stroke: "none",
+		family: 'arial', 
+		weight: "bold", 
+		size: font_size
+	}
 var front_face = {
 		stroke: "none",
 		fill: "red",
@@ -73,23 +80,27 @@ function Init()
 		RecreateGrid()
 	}
 
-	View_Right = SVG().addTo('#grid_container');
-	View_Front = SVG().addTo('#grid_container');
-	View_Top   = SVG().addTo('#grid_container');
+	View_Right["view"] = SVG().addTo('#view_lr');
+	View_Front["view"] = SVG().addTo('#view_fb');
+	View_Top["view"]   = SVG().addTo('#view_tb');
 	View_Iso   = SVG().addTo('#grid_container');
 	View_Cav   = SVG().addTo('#grid_container');
 
-	View_Front.mouseup(function(event) {
+	View_Front["view"].mouseup(function(event) {
 		Clic_Grid_Front(event);
 	})
 
-	View_Right.mouseup(function(event) {
+	View_Right["view"].mouseup(function(event) {
 		Clic_Grid_Right(event);
 	})
 
-	View_Top.mouseup(function(event) {
+	View_Top["view"].mouseup(function(event) {
 		Clic_Grid_Top(event);
 	})
+
+	document.getElementById("lr_show_numbers").addEventListener("input", (e) => { if (e.target.checked) View_Right["txt"].show(); else View_Right["txt"].hide();})
+	document.getElementById("fb_show_numbers").addEventListener("input", (e) => { if (e.target.checked) View_Front["txt"].show(); else View_Front["txt"].hide();})
+	document.getElementById("tb_show_numbers").addEventListener("input", (e) => { if (e.target.checked) View_Top["txt"].show(); else View_Top["txt"].hide();})
 
 	ChangeCubeSize()
 }
@@ -151,14 +162,14 @@ function Resize()
 	let dh = Math.floor((h - 5) / 2.0);
 	let size = Math.min(dw, dh);
 
-	View_Front.size(size, size);
-	View_Right.size(size, size);
-	View_Top.size(size, size);
+	View_Front["view"].size(size, size);
+	View_Right["view"].size(size, size);
+	View_Top["view"].size(size, size);
 	View_Iso.size(size, size);
 	View_Cav.size(size, size);
-	View_Front.viewbox(0, 0, size, size);
-	View_Right.viewbox(0, 0, size, size);
-	View_Top.viewbox(0, 0, size, size);
+	View_Front["view"].viewbox(0, 0, size, size);
+	View_Right["view"].viewbox(0, 0, size, size);
+	View_Top["view"].viewbox(0, 0, size, size);
 	View_Iso.viewbox(0, 0, size, size);
 	View_Cav.viewbox(0, 0, size, size);
 }
@@ -166,9 +177,11 @@ function Resize()
 
 function DrawFront()
 {
-	View_Front.clear()
+	View_Front["view"].clear()
+	View_Front["cnt"] = View_Front["view"].group();
+	View_Front["txt"] = View_Front["view"].group();
 
-	let w = View_Front.width() - 10;
+	let w = View_Front["view"].width() - 10;
 	let cube_size = w / Math.max(Cube_w(),	Cube_h())
 
 	let offset = {
@@ -179,7 +192,7 @@ function DrawFront()
 	let lines = []
 	// Create grid
 	for (let x = 0; x <= Cube_w() * 2; x++) {
-		let line = View_Front.line(x * cube_size / 2, 0, x * cube_size / 2, cube_size * Cube_h())
+		let line = View_Front["cnt"].line(x * cube_size / 2, 0, x * cube_size / 2, cube_size * Cube_h())
 		line.dmove(offset.x, offset.y)
 		if (x % 2 === 0)
 			line.attr(grid_style)
@@ -188,7 +201,7 @@ function DrawFront()
 		lines.push(line);
 	}
 	for (let y = 0; y <= Cube_h() * 2; y++) {
-		let line = View_Front.line(0, y * cube_size / 2, cube_size * Cube_w(), y * cube_size / 2)
+		let line = View_Front["cnt"].line(0, y * cube_size / 2, cube_size * Cube_w(), y * cube_size / 2)
 		line.dmove(offset.x, offset.y)
 		if (y % 2 === 0)
 			line.attr(grid_style)
@@ -204,24 +217,33 @@ function DrawFront()
 			let current = GetTopDepth(x,y, layer)
 			if (current > 0)
 			{
-				let rect = View_Front.rect(cube_size, cube_size)
+				let rect = View_Front["cnt"].rect(cube_size, cube_size)
 				rect.move(x * cube_size, y * cube_size)
 				rect.dmove(offset.x, offset.y)
 				rect.attr(front_face)
 			}
 			if (GetTopDepth(x + 1,y, layer) != current)
 			{
-				let line = View_Front.line((x + 1) * cube_size, y * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
+				let line = View_Front["cnt"].line((x + 1) * cube_size, y * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
 				line.dmove(offset.x, offset.y)
 				line.attr(stroke_style)
 				lines.push(line);
 			}
 			if (GetTopDepth(x,y + 1, layer) != current)
 			{
-				let line = View_Front.line(x * cube_size, (y + 1) * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
+				let line = View_Front["cnt"].line(x * cube_size, (y + 1) * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
 				line.dmove(offset.x, offset.y)
 				line.attr(stroke_style)
 				lines.push(line);
+			}
+			current = GetCubeCount(x,y,layer);
+			if (current > 0)
+			{
+				let txt = View_Front["txt"].text(current.toString())
+				txt.center((x + 0.5) * cube_size, (y + 0.5) * cube_size)
+				txt.dmove(offset.x, offset.y)
+				txt.attr(stroke_style)
+				txt.disabled = true;
 			}
 		}
 	}
@@ -232,18 +254,24 @@ function DrawFront()
 
 	if (font_size > 0)
 	{
-		let title = View_Front.text(View_Front_flip ? "Vue de dos" : "Vue de face")
+		let title = View_Front["cnt"].text(View_Front_flip ? "Vue de dos" : "Vue de face")
 		title.move(5,5).font({ stroke:"white", 'stroke-width': 5, family: 'arial', weight: "bold", size: font_size })
-		title = View_Front.text(View_Front_flip ? "Vue de dos" : "Vue de face")
+		title = View_Front["cnt"].text(View_Front_flip ? "Vue de dos" : "Vue de face")
 		title.move(5,5).font({ fill: 'black', family: 'arial', weight: "bold", size: font_size })
 	}
+	
+	View_Front["txt"].hide()
+	if (document.getElementById("fb_show_numbers").checked)
+		View_Front["txt"].show()
 }
 
 function DrawRight()
 {
-	View_Right.clear()
+	View_Right["view"].clear()
+	View_Right["cnt"] = View_Right["view"].group();
+	View_Right["txt"] = View_Right["view"].group();
 
-	let w = View_Right.width() - 10;
+	let w = View_Right["view"].width() - 10;
 	let cube_size = w / Math.max(Cube_h(),	Cube_d())
 
 	let offset = {
@@ -254,7 +282,7 @@ function DrawRight()
 	let lines = []
 	// Create grid
 	for (let x = 0; x <= Cube_d() * 2; x++) {
-		let line = View_Right.line(x * cube_size / 2, 0, x * cube_size / 2, cube_size * Cube_h())
+		let line = View_Right["cnt"].line(x * cube_size / 2, 0, x * cube_size / 2, cube_size * Cube_h())
 		line.dmove(offset.x, offset.y)
 		if (x % 2 === 0)
 			line.attr(grid_style)
@@ -263,7 +291,7 @@ function DrawRight()
 		lines.push(line);
 	}
 	for (let y = 0; y <= Cube_h() * 2; y++) {
-		let line = View_Right.line(0, y * cube_size / 2, cube_size * Cube_d(), y * cube_size / 2)
+		let line = View_Right["cnt"].line(0, y * cube_size / 2, cube_size * Cube_d(), y * cube_size / 2)
 		line.dmove(offset.x, offset.y)
 		if (y % 2 === 0)
 			line.attr(grid_style)
@@ -279,24 +307,32 @@ function DrawRight()
 			let current = GetTopDepth(x,y, layer)
 			if (current > 0)
 			{
-				let rect = View_Right.rect(cube_size, cube_size)
+				let rect = View_Right["cnt"].rect(cube_size, cube_size)
 				rect.move(x * cube_size, y * cube_size)
 				rect.dmove(offset.x, offset.y)
 				rect.attr(side_face)
 			}
 			if (GetTopDepth(x + 1,y, layer) != current)
 			{
-				let line = View_Right.line((x + 1) * cube_size, y * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
+				let line = View_Right["cnt"].line((x + 1) * cube_size, y * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
 				line.dmove(offset.x, offset.y)
 				line.attr(stroke_style)
 				lines.push(line);
 			}
 			if (GetTopDepth(x,y + 1, layer) != current)
 			{
-				let line = View_Right.line(x * cube_size, (y + 1) * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
+				let line = View_Right["cnt"].line(x * cube_size, (y + 1) * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
 				line.dmove(offset.x, offset.y)
 				line.attr(stroke_style)
 				lines.push(line);
+			}
+			current = GetCubeCount(x,y,layer);
+			if (current > 0)
+			{
+				let txt = View_Right["txt"].text(current.toString())
+				txt.center((x + 0.5) * cube_size, (y + 0.5) * cube_size)
+				txt.dmove(offset.x, offset.y)
+				txt.attr(stroke_style)
 			}
 		}
 	}
@@ -308,18 +344,24 @@ function DrawRight()
 
 	if (font_size > 0)
 	{
-		let title = View_Right.text(View_Right_flip ? "Vue de gauche" : "Vue de droite")
+		let title = View_Right["cnt"].text(View_Right_flip ? "Vue de gauche" : "Vue de droite")
 		title.move(5,5).font({ stroke:"white", 'stroke-width': 5, family: 'arial', weight: "bold", size: font_size })
-		title = View_Right.text(View_Right_flip ? "Vue de gauche" : "Vue de droite")
+		title = View_Right["cnt"].text(View_Right_flip ? "Vue de gauche" : "Vue de droite")
 		title.move(5,5).font({ fill: 'black', family: 'arial', weight: "bold", size: font_size })
 	}
+
+	View_Right["txt"].hide()
+	if (document.getElementById("lr_show_numbers").checked)
+		View_Right["txt"].show()
 }
 
 function DrawTop()
 {
-	View_Top.clear()
+	View_Top["view"].clear()
+	View_Top["cnt"] = View_Top["view"].group();
+	View_Top["txt"] = View_Top["view"].group();
 
-	let w = View_Top.width() - 10;
+	let w = View_Top["view"].width() - 10;
 	let cube_size = w / Math.max(Cube_w(),	Cube_d())
 
 	let offset = {
@@ -330,7 +372,7 @@ function DrawTop()
 	let lines = []
 	// Create grid
 	for (let x = 0; x <= Cube_w() * 2; x++) {
-		let line = View_Top.line(x * cube_size / 2, 0, x * cube_size / 2, cube_size * Cube_d())
+		let line = View_Top["cnt"].line(x * cube_size / 2, 0, x * cube_size / 2, cube_size * Cube_d())
 		line.dmove(offset.x, offset.y)
 		if (x % 2 === 0)
 			line.attr(grid_style)
@@ -339,7 +381,7 @@ function DrawTop()
 		lines.push(line);
 	}
 	for (let y = 0; y <= Cube_d() * 2; y++) {
-		let line = View_Top.line(0, y * cube_size / 2, cube_size * Cube_w(), y * cube_size / 2)
+		let line = View_Top["cnt"].line(0, y * cube_size / 2, cube_size * Cube_w(), y * cube_size / 2)
 		line.dmove(offset.x, offset.y)
 		if (y % 2 === 0)
 			line.attr(grid_style)
@@ -355,24 +397,32 @@ function DrawTop()
 			let current = GetTopDepth(x,y, layer)
 			if (current > 0)
 			{
-				let rect = View_Top.rect(cube_size, cube_size)
+				let rect = View_Top["cnt"].rect(cube_size, cube_size)
 				rect.move(x * cube_size, y * cube_size)
 				rect.dmove(offset.x, offset.y)
 				rect.attr(top_face)
 			}	
 			if (GetTopDepth(x + 1,y, layer) != current)
 			{
-				let line = View_Top.line((x + 1) * cube_size, y * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
+				let line = View_Top["cnt"].line((x + 1) * cube_size, y * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
 				line.dmove(offset.x, offset.y)
 				line.attr(stroke_style)
 				lines.push(line);
 			}
 			if (GetTopDepth(x,y + 1, layer) != current)
 			{
-				let line = View_Top.line(x * cube_size, (y + 1) * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
+				let line = View_Top["cnt"].line(x * cube_size, (y + 1) * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
 				line.dmove(offset.x, offset.y)
 				line.attr(stroke_style)
 				lines.push(line);
+			}
+			current = GetCubeCount(x,y,layer);
+			if (current > 0)
+			{
+				let txt = View_Top["txt"].text(current.toString())
+				txt.center((x + 0.5) * cube_size, (y + 0.5) * cube_size)
+				txt.dmove(offset.x, offset.y)
+				txt.attr(stroke_style)
 			}
 		}
 	}
@@ -383,11 +433,15 @@ function DrawTop()
 
 	if (font_size > 0)
 	{
-		let title = View_Top.text(View_Top_flip ? "Vue de dessous" : "Vue de dessus")
+		let title = View_Top["cnt"].text(View_Top_flip ? "Vue de dessous" : "Vue de dessus")
 		title.move(5,5).font({ stroke:"white", 'stroke-width': 5, family: 'arial', weight: "bold", size: font_size })
-		title = View_Top.text(View_Top_flip ? "Vue de dessous" : "Vue de dessus")
+		title = View_Top["cnt"].text(View_Top_flip ? "Vue de dessous" : "Vue de dessus")
 		title.move(5,5).font({ fill: 'black', family: 'arial', weight: "bold", size: font_size })
 	}
+
+	View_Top["txt"].hide()
+	if (document.getElementById("tb_show_numbers").checked)
+		View_Top["txt"].show()
 }
 
 function DrawIso()
@@ -685,6 +739,41 @@ function GetTopDepth(x, y, view)
 	}
 }
 
+function GetCubeCount(x, y, view)
+{
+	let count = 0;
+	if (x < 0 || y < 0) return 0;
+	switch (view) {
+		case "front":
+			for (let i = 0; i < Cube_d(); i++)
+				if (Cubes[x][y][i] > 0) count ++;
+			return count;
+		case "back":
+			for (let i = 0; i < Cube_d(); i++)
+				if (Cubes[Cube_w() - 1 - x][y][i] > 0) count ++;
+			return count;
+		case "right":
+			for (let i = 0; i < Cube_w(); i++)
+				if (Cubes[i][y][x] > 0) count ++;
+			return count;
+		case "left":
+			for (let i = 0; i < Cube_w(); i++)
+				if (Cubes[i][y][Cube_d() - 1 - x] > 0) count ++;
+			return count;
+		case "top":
+			for (let i = 0; i < Cube_h(); i++)
+				if (Cubes[x][i][Cube_d() - 1 - y] > 0) count ++;
+			return count;
+		case "bottom":
+			for (let i = 0; i < Cube_h(); i++)
+				if (Cubes[x][i][y] > 0) count ++;
+			return count;
+		default:
+			break;
+	}
+	return count;
+}
+
 function AddFrom(x, y, view)
 {
 	let count = GetTopDepth(x, y, view)
@@ -736,12 +825,19 @@ function SetCubeValue(x, y, z, value)
 
 function Clic_Grid_Front(event)
 {
-	let w = View_Front.width() - 10;
+	let target = event.target;
+	while(target.tagName != "svg")
+	{
+		target = target.parentNode;
+		if (target == null) return;
+	}
+	var rect = target.getBoundingClientRect();	
+	let w = View_Front["view"].width() - 10;
 	let cube_size = w / Math.max(Cube_w(),	Cube_h())
 	let ox = w - cube_size * Cube_w();
 	let oy = w - cube_size * Cube_h();
-	let x = Math.floor((event.offsetX - 5 - ox / 2) / cube_size)
-	let y = Math.floor((event.offsetY - 5 - oy / 2) / cube_size)
+	let x = Math.floor((event.clientX - rect.left - 5 - ox / 2) / cube_size)
+	let y = Math.floor((event.clientY - rect.top - 5 - oy / 2) / cube_size)
 	if (x < 0 || y < 0 || x >= Cube_w() || y >= Cube_h()) return;
 	
 	let layer = View_Front_flip ? "back" : "front";
@@ -759,12 +855,19 @@ function Clic_Grid_Front(event)
 
 function Clic_Grid_Right(event)
 {
-	let w = View_Right.width() - 10;
+	let target = event.target;
+	while(target.tagName != "svg")
+	{
+		target = target.parentNode;
+		if (target == null) return;
+	}
+	var rect = target.getBoundingClientRect();	
+	let w = View_Right["view"].width() - 10;
 	let cube_size = w / Math.max(Cube_d(),	Cube_h())
 	let ox = w - cube_size * Cube_d();
 	let oy = w - cube_size * Cube_h();
-	let x = Math.floor((event.offsetX - 5 - ox / 2) / cube_size)
-	let y = Math.floor((event.offsetY - 5 - oy / 2) / cube_size)
+	let x = Math.floor((event.clientX - rect.left - 5 - ox / 2) / cube_size)
+	let y = Math.floor((event.clientY - rect.top - 5 - oy / 2) / cube_size)
 	if (x < 0 || y < 0 || x >= Cube_d() || y >= Cube_h()) return;
 
 	let layer = View_Right_flip ? "left" : "right";
@@ -782,12 +885,19 @@ function Clic_Grid_Right(event)
 
 function Clic_Grid_Top(event)
 {
-	let w = View_Right.width() - 10;
+	let target = event.target;
+	while(target.tagName != "svg")
+	{
+		target = target.parentNode;
+		if (target == null) return;
+	}
+	var rect = target.getBoundingClientRect();	
+	let w = View_Top["view"].width() - 10;
 	let cube_size = w / Math.max(Cube_d(),	Cube_w())
 	let ox = w - cube_size * Cube_w();
 	let oy = w - cube_size * Cube_d();
-	let x = Math.floor((event.offsetX - 5 - ox / 2) / cube_size)
-	let y = Math.floor((event.offsetY - 5 - oy / 2) / cube_size)
+	let x = Math.floor((event.clientX - rect.left - 5 - ox / 2) / cube_size)
+	let y = Math.floor((event.clientY - rect.top - 5 - oy / 2) / cube_size)
 	if (x < 0 || y < 0 || x >= Cube_w() || y >= Cube_d()) return;
 
 	let layer = View_Top_flip ? "bottom" : "top";
@@ -808,17 +918,17 @@ function Save()
 {
 	var zip = new JSZip();
 	if (View_Front_flip)
-		zip.file("Face_arriere.svg", View_Front.node.outerHTML);
+		zip.file("Face_arriere.svg", View_Front["view"].node.outerHTML);
 	else
-		zip.file("Face_avant.svg", View_Front.node.outerHTML);
+		zip.file("Face_avant.svg", View_Front["view"].node.outerHTML);
 	if (View_Right_flip)
-		zip.file("Face_droite.svg", View_Right.node.outerHTML);
+		zip.file("Face_droite.svg", View_Right["view"].node.outerHTML);
 	else
-		zip.file("Face_gauche.svg", View_Right.node.outerHTML);
+		zip.file("Face_gauche.svg", View_Right["view"].node.outerHTML);
 	if (View_Top_flip)
-		zip.file("Face_dessous.svg", View_Top.node.outerHTML);
+		zip.file("Face_dessous.svg", View_Top["view"].node.outerHTML);
 	else
-		zip.file("Face_dessus.svg", View_Top.node.outerHTML);
+		zip.file("Face_dessus.svg", View_Top["view"].node.outerHTML);
 	zip.file("Vue_isometrique.svg", View_Iso.node.outerHTML);
 	zip.file("Vue_cavaliere.svg", View_Cav.node.outerHTML);
 
@@ -827,4 +937,23 @@ function Save()
 			// see FileSaver.js
 			saveAs(content, "Structuro.zip");
 	});
+}
+
+
+
+function HideShow(layer)
+{
+	switch (layer) {
+		case "lr":
+			
+			break;
+		case "fb":
+			
+			break;
+		case "tb":
+			
+			break;
+		default:
+			break;
+	}
 }

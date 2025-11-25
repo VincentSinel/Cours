@@ -20,8 +20,17 @@
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.grid > svg{
+.grid svg{
 	background-color: white;
+}
+svg text {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+svg text::selection {
+    background: none;
 }
 
 .flexobject{
@@ -100,6 +109,13 @@ div[class^="tool"]{
 div[class^="tool"] > img{
 	max-height: 24px;
 }
+
+div[class^="tool"] > label {
+  max-height: 24px;
+	font-weight: bold;
+	font-size: 12pt;
+	color: var(--PanelBackText);
+}
 /* div[class^="tool"] > button{
 	max-width: 24px;
 	min-width: 24px;
@@ -121,7 +137,17 @@ div[class^="tool"] > input
 	max-height: 16px;
 }
 
-.tool-axe > select{
-	flex: 30px 1 1;
+.tool-axe{
+	align-items: center;
+}
+
+.checkbox{
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 12pt;
+	color: var(--PanelBackText);
+}
+.checkbox > input{
 	width: auto;
 }
