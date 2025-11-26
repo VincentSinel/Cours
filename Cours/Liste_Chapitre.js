@@ -2436,6 +2436,14 @@ var sixieme_saintexupery = [
 		chapter: "Partie 3",
 		nom: "Triangles particuliers",
 		icone: 24,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_9_3/Documents/Chapitre 9 - Partie 3 - Triangles particuliers (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_9_3/Documents/Chapitre 9 - Partie 3 - Triangles particuliers (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_9_3/Documents/Chapitre 9 - Partie 3 - Triangles particuliers (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_9_3/Documents/Chapitre 9 - Partie 3 - Triangles particuliers (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 9 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 9 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_9_3/Cours.html",
 	}, // Chapitre 9 Partie 3
@@ -2444,6 +2452,14 @@ var sixieme_saintexupery = [
 		chapter: "Partie 4",
 		nom: "Médiatrices dans le triangle",
 		icone: 24,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_9_4/Documents/Chapitre 9 - Partie 4 - Médiatrices dans le triangle (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_9_4/Documents/Chapitre 9 - Partie 4 - Médiatrices dans le triangle (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_9_4/Documents/Chapitre 9 - Partie 4 - Médiatrices dans le triangle (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_9_4/Documents/Chapitre 9 - Partie 4 - Médiatrices dans le triangle (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 9 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 9 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_9_4/Cours.html",
 	}, // Chapitre 9 Partie 4
@@ -2452,6 +2468,14 @@ var sixieme_saintexupery = [
 		chapter: "Partie 1",
 		nom: "Périmètre et aire",
 		icone: 25,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_10_1/Documents/Chapitre 10 - Partie 1 - Périmètre et aire (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_10_1/Documents/Chapitre 10 - Partie 1 - Périmètre et aire (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_10_1/Documents/Chapitre 10 - Partie 1 - Périmètre et aire (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_10_1/Documents/Chapitre 10 - Partie 1 - Périmètre et aire (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 10 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 10 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_10_1/Cours.html",
 	}, // Chapitre 10 Partie 1
@@ -2460,6 +2484,14 @@ var sixieme_saintexupery = [
 		chapter: "Partie 2",
 		nom: "Formulaire des périmètres et aires",
 		icone: 25,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_10_2/Documents/Chapitre 10 - Partie 2 - Formulaire des périmètres et aires (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_10_2/Documents/Chapitre 10 - Partie 2 - Formulaire des périmètres et aires (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_10_2/Documents/Chapitre 10 - Partie 2 - Formulaire des périmètres et aires (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_10_2/Documents/Chapitre 10 - Partie 2 - Formulaire des périmètres et aires (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 10 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 10 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_10_2/Cours.html",
 	}, // Chapitre 10 Partie 2
@@ -2468,6 +2500,14 @@ var sixieme_saintexupery = [
 		chapter: "Partie 1",
 		nom: "Se repérer dans l’espace",
 		icone: 26,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_11_1/Documents/Chapitre 11 - Partie 1 - Se repérer dans l’espace (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_11_1/Documents/Chapitre 11 - Partie 1 - Se repérer dans l’espace (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_11_1/Documents/Chapitre 11 - Partie 1 - Se repérer dans l’espace (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_11_1/Documents/Chapitre 11 - Partie 1 - Se repérer dans l’espace (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 11 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 11 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_11_1/Cours.html",
 	}, // Chapitre 11 Partie 1
@@ -2476,6 +2516,14 @@ var sixieme_saintexupery = [
 		chapter: "Partie 2",
 		nom: "Solides",
 		icone: 26,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_11_2/Documents/Chapitre 11 - Partie 2 - Solides (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_11_2/Documents/Chapitre 11 - Partie 2 - Solides (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_11_2/Documents/Chapitre 11 - Partie 2 - Solides (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_11_2/Documents/Chapitre 11 - Partie 2 - Solides (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 11 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 11 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_11_2/Cours.html",
 	}, // Chapitre 11 Partie 2
@@ -2484,6 +2532,14 @@ var sixieme_saintexupery = [
 		chapter: "Partie 3",
 		nom: "Volumes",
 		icone: 26,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_11_3/Documents/Chapitre 11 - Partie 3 - Volumes (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_11_3/Documents/Chapitre 11 - Partie 3 - Volumes (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_11_3/Documents/Chapitre 11 - Partie 3 - Volumes (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_11_3/Documents/Chapitre 11 - Partie 3 - Volumes (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 11 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 11 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_11_3/Cours.html",
 	}, // Chapitre 11 Partie 3
@@ -2556,6 +2612,14 @@ var sixieme_saintexupery = [
 		chapter: "Partie 1",
 		nom: "Tableau de données",
 		icone: 28,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_13_1/Documents/Chapitre 13 - Partie 1 - Tableau de données (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_13_1/Documents/Chapitre 13 - Partie 1 - Tableau de données (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_13_1/Documents/Chapitre 13 - Partie 1 - Tableau de données (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_13_1/Documents/Chapitre 13 - Partie 1 - Tableau de données (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 13 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 13 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_13_1/Cours.html",
 	}, // Chapitre 13 Partie 1
@@ -2564,6 +2628,14 @@ var sixieme_saintexupery = [
 		chapter: "Partie 2",
 		nom: "Diagrammes",
 		icone: 28,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_13_2/Documents/Chapitre 13 - Partie 2 - Diagrammes (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_13_2/Documents/Chapitre 13 - Partie 2 - Diagrammes (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_13_2/Documents/Chapitre 13 - Partie 2 - Diagrammes (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_13_2/Documents/Chapitre 13 - Partie 2 - Diagrammes (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 13 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 13 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_13_2/Cours.html",
 	}, // Chapitre 13 Partie 2
@@ -2572,13 +2644,30 @@ var sixieme_saintexupery = [
 		chapter: "Partie 3",
 		nom: "Probabilité",
 		icone: 28,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_13_3/Documents/Chapitre 13 - Partie 3 - Probabilité (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_13_3/Documents/Chapitre 13 - Partie 3 - Probabilité (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_13_3/Documents/Chapitre 13 - Partie 3 - Probabilité (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_13_3/Documents/Chapitre 13 - Partie 3 - Probabilité (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 13 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 13 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_13_3/Cours.html",
 	}, // Chapitre 13 Partie 3
 	{
 		id: 43,
+		chapter: "Partie 1",
 		nom: "Problèmes de valeurs inconnues",
 		icone: 29,
+		download: {
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_14_1/Documents/Chapitre 14 - Partie 1 - Problèmes de valeurs inconnues (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_14_1/Documents/Chapitre 14 - Partie 1 - Problèmes de valeurs inconnues (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_14_1/Documents/Chapitre 14 - Partie 1 - Problèmes de valeurs inconnues (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_14_1/Documents/Chapitre 14 - Partie 1 - Problèmes de valeurs inconnues (A trou).pdf",
+			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 14 - Activité d'introduction.docx",
+			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 14 - Activité d'introduction.pdf",
+		},
 		ready : false,
 		page : "SaintExupery/Chapitre_14_1/Cours.html",
 	}, // Chapitre 14 Partie 1
