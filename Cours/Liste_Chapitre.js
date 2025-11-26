@@ -2352,7 +2352,7 @@ var sixieme_saintexupery = [
 			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 7 - Activité d'introduction.docx",
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 7 - Activité d'introduction.pdf",
 		},
-		ready : false,
+		ready : true,
 		page : "SaintExupery/Chapitre_7_2/Cours.html",
 	}, // Chapitre 7 Partie 2
 	{
