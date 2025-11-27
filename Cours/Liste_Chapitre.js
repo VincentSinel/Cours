@@ -350,6 +350,12 @@ var quatrieme_base = [
 			id: 6,
 			nom: "Egalité des produits en croix",
 			icone: 5,
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_6/Documents/Chapitre 6 - Egalité des produits en croix (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_6/Documents/Chapitre 6 - Egalité des produits en croix (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_6/Documents/Chapitre 6 - Egalité des produits en croix (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_6/Documents/Chapitre 6 - Egalité des produits en croix (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_6/Cours.html"
 	},
