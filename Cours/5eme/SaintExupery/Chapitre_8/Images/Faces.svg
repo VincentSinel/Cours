@@ -3,7 +3,8 @@
   <defs>
     <style>
       .cls-1 {
-        fill: rgba(68, 172, 226, .4);
+        fill: rgba(68, 172, 226, 1);
+		fill-opacity: .4;
       }
 
       .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
@@ -34,7 +35,8 @@
       }
 
       .cls-3 {
-        fill: rgba(103, 70, 149, .3);
+        fill: rgba(103, 70, 149, 1);
+		fill-opacity: .3;
       }
 
       .cls-4 {

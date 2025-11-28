@@ -363,6 +363,12 @@ var quatrieme_base = [
 			id: 7,
 			nom: "Rotations",
 			icone: 2,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_7/Documents/Chapitre 7 - Rotations (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_7/Documents/Chapitre 7 - Rotations (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_7/Documents/Chapitre 7 - Rotations (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_7/Documents/Chapitre 7 - Rotations (A trou).pdf",
+			// },
 			ready : true,
 			page : "Base/Chapitre_7/Cours.html"
 	},
@@ -370,6 +376,12 @@ var quatrieme_base = [
 			id: 8,
 			nom: "Puissances positives",
 			icone: 1,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_8/Documents/Chapitre 8 - Puissances positives (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_8/Documents/Chapitre 8 - Puissances positives (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_8/Documents/Chapitre 8 - Puissances positives (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_8/Documents/Chapitre 8 - Puissances positives (A trou).pdf",
+			// },
 			ready : true,
 			page : "Base/Chapitre_8/Cours.html"
 	},
@@ -377,6 +389,12 @@ var quatrieme_base = [
 			id: 9,
 			nom: "Distributivité simple",
 			icone: 3,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_9/Documents/Chapitre 9 - Distributivité simple (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_9/Documents/Chapitre 9 - Distributivité simple (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_9/Documents/Chapitre 9 - Distributivité simple (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_9/Documents/Chapitre 9 - Distributivité simple (A trou).pdf",
+			// },
 			ready : true,
 			page : "Base/Chapitre_9/Cours.html"
 	},
@@ -384,6 +402,12 @@ var quatrieme_base = [
 			id: 10,
 			nom: "Coordonnées sphériques",
 			icone: 2,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (A trou).pdf",
+			// },
 			ready : true,
 			page : "Base/Chapitre_10/Cours.html"
 	},
@@ -391,6 +415,12 @@ var quatrieme_base = [
 			id: 11,
 			nom: "Réciproque du théorème de Pythagore",
 			icone: 2,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_11/Documents/Chapitre 11 - Réciproque du théorème de Pythagore (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_11/Documents/Chapitre 11 - Réciproque du théorème de Pythagore (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_11/Documents/Chapitre 11 - Réciproque du théorème de Pythagore (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_11/Documents/Chapitre 11 - Réciproque du théorème de Pythagore (A trou).pdf",
+			// },
 			ready : true,
 			page : "Base/Chapitre_11/Cours.html"
 	},
@@ -398,6 +428,12 @@ var quatrieme_base = [
 			id: 12,
 			nom: "Multiplications et divisions de fractions",
 			icone: 1,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_12/Documents/Chapitre 12 - Multiplications et divisions de fractions (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_12/Documents/Chapitre 12 - Multiplications et divisions de fractions (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_12/Documents/Chapitre 12 - Multiplications et divisions de fractions (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_12/Documents/Chapitre 12 - Multiplications et divisions de fractions (A trou).pdf",
+			// },
 			ready : true,
 			page : "Base/Chapitre_12/Cours.html"
 	},
@@ -405,6 +441,12 @@ var quatrieme_base = [
 			id: 13,
 			nom: "Equation simple",
 			icone: 3,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_13/Documents/Chapitre 13 - Equation simple (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_13/Documents/Chapitre 13 - Equation simple (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_13/Documents/Chapitre 13 - Equation simple (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_13/Documents/Chapitre 13 - Equation simple (A trou).pdf",
+			// },
 			ready : true,
 			page : "Base/Chapitre_13/Cours.html"
 	},
@@ -412,6 +454,12 @@ var quatrieme_base = [
 			id: 14,
 			nom: "Puissances négatives",
 			icone: 1,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (A trou).pdf",
+			// },
 			ready : true,
 			page : "Base/Chapitre_14/Cours.html"
 	},
@@ -419,6 +467,12 @@ var quatrieme_base = [
 			id: 15,
 			nom: "Triangle semblable",
 			icone: 2,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (A trou).pdf",
+			// },
 			ready : true,
 			page : "Base/Chapitre_15/Cours.html"
 	},
@@ -426,6 +480,12 @@ var quatrieme_base = [
 			id: 16,
 			nom: "Pyramides et cônes",
 			icone: 2,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (A trou).pdf",
+			// },
 			ready : true,
 			page : "Base/Chapitre_16/Cours.html"
 	},
@@ -433,6 +493,12 @@ var quatrieme_base = [
 			id: 17,
 			nom: "Médiane et étendue",
 			icone: 5,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (A trou).pdf",
+			// },
 			ready : true,
 			page : "Base/Chapitre_17/Cours.html"
 	},
@@ -440,6 +506,12 @@ var quatrieme_base = [
 			id: 18,
 			nom: "Proportionnalité",
 			icone: 5,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (A trou).pdf",
+			// },
 			ready : true,
 			page : "Base/Chapitre_18/Cours.html"
 	},
@@ -447,6 +519,12 @@ var quatrieme_base = [
 			id: 19,
 			nom: "Probabilité",
 			icone: 4,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (A trou).pdf",
+			// },
 			ready : true,
 			page : "Base/Chapitre_19/Cours.html"
 	},
@@ -454,6 +532,12 @@ var quatrieme_base = [
 			id: 20,
 			nom: "Distributivité double",
 			icone: 3,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_20/Documents/Chapitre 20 - Distributivité double (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_20/Documents/Chapitre 20 - Distributivité double (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_20/Documents/Chapitre 20 - Distributivité double (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_20/Documents/Chapitre 20 - Distributivité double (A trou).pdf",
+			// },
 			ready : true,
 			page : "Base/Chapitre_20/Cours.html"
 	},
@@ -461,6 +545,12 @@ var quatrieme_base = [
 			id: 21,
 			nom: "Cosinus",
 			icone: 3,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (A trou).pdf",
+			// },
 			ready : true,
 			page : "Base/Chapitre_21/Cours.html"
 	}
@@ -701,6 +791,12 @@ var cinquieme_saintexupery = [
 			id: 7,
 			nom: "Distributivité simple",
 			icone: 3,
+			download: {
+				docx: 		 "/Cours/5eme/SaintExupery/Chapitre_7/Documents/Chapitre 7 - Distributivité simple (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_7/Documents/Chapitre 7 - Distributivité simple (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery/Chapitre_7/Documents/Chapitre 7 - Distributivité simple (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_7/Documents/Chapitre 7 - Distributivité simple (A trou).pdf",
+			},
 			ready : true,
 			page : "SaintExupery/Chapitre_7/Cours.html"
 	},
@@ -708,6 +804,12 @@ var cinquieme_saintexupery = [
 			id: 8,
 			nom: "Prismes et cylindres",
 			icone: 2,
+			download: {
+				docx: 		 "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (A trou).pdf",
+			},
 			ready : true,
 			page : "SaintExupery/Chapitre_8/Cours.html"
 	},
@@ -715,6 +817,12 @@ var cinquieme_saintexupery = [
 			id: 9,
 			nom: "Additions et Soustractions de nombres relatifs",
 			icone: 1,
+			// download: {
+			// 	docx: 		 "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (Complet).docx",
+			// 	pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (Complet).pdf",
+			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).docx",
+			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).pdf",
+			// },
 			ready : true,
 			page : "Base/Chapitre_11/Cours.html"
 	},
@@ -722,6 +830,12 @@ var cinquieme_saintexupery = [
 			id: 10,
 			nom: "Multiples et diviseurs",
 			icone: 1,
+			// download: {
+			// 	docx: 		 "/Cours/5eme/SaintExupery/Chapitre_10/Documents/Chapitre 10 - Multiples et diviseurs (Complet).docx",
+			// 	pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_10/Documents/Chapitre 10 - Multiples et diviseurs (Complet).pdf",
+			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_10/Documents/Chapitre 10 - Multiples et diviseurs (A trou).docx",
+			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_10/Documents/Chapitre 10 - Multiples et diviseurs (A trou).pdf",
+			// },
 			ready : true,
 			page : "Base/Chapitre_8/Cours.html"
 	},
@@ -729,6 +843,12 @@ var cinquieme_saintexupery = [
 			id: 11,
 			nom: "Triangles - Longueurs et droites remarquables",
 			icone: 2,
+			// download: {
+			// 	docx: 		 "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (Complet).docx",
+			// 	pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (Complet).pdf",
+			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (A trou).docx",
+			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (A trou).pdf",
+			// },
 			ready : true,
 			page : "SaintExupery/Chapitre_11/Cours.html"
 	},
@@ -736,6 +856,12 @@ var cinquieme_saintexupery = [
 			id: 12,
 			nom: "Fraction - Proportion et quotient",
 			icone: 1,
+			// download: {
+			// 	docx: 		 "/Cours/5eme/SaintExupery/Chapitre_12/Documents/Chapitre 12 - Fraction - Proportion et quotient (Complet).docx",
+			// 	pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_12/Documents/Chapitre 12 - Fraction - Proportion et quotient (Complet).pdf",
+			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_12/Documents/Chapitre 12 - Fraction - Proportion et quotient (A trou).docx",
+			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_12/Documents/Chapitre 12 - Fraction - Proportion et quotient (A trou).pdf",
+			// },
 			ready : true,
 			page : "saintexupery/Chapitre_12/Cours.html"
 	},
@@ -743,6 +869,12 @@ var cinquieme_saintexupery = [
 			id: 13,
 			nom: "Proportionnalité",
 			icone: 5,
+			// download: {
+			// 	docx: 		 "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (Complet).docx",
+			// 	pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (Complet).pdf",
+			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (A trou).docx",
+			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (A trou).pdf",
+			// },
 			ready : true,
 			page : "saintexupery/Chapitre_13/Cours.html"
 	},
@@ -750,6 +882,12 @@ var cinquieme_saintexupery = [
 			id: 14,
 			nom: "Statistiques",
 			icone: 5,
+			// download: {
+			// 	docx: 		 "/Cours/5eme/SaintExupery/Chapitre_14/Documents/Chapitre 14 - Statistiques (Complet).docx",
+			// 	pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_14/Documents/Chapitre 14 - Statistiques (Complet).pdf",
+			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_14/Documents/Chapitre 14 - Statistiques (A trou).docx",
+			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_14/Documents/Chapitre 14 - Statistiques (A trou).pdf",
+			// },
 			ready : true,
 			page : "saintexupery/Chapitre_14/Cours.html"
 	},
@@ -757,6 +895,12 @@ var cinquieme_saintexupery = [
 			id: 15,
 			nom: "Fraction - Comparaison, somme et différence",
 			icone: 1,
+			// download: {
+			// 	docx: 		 "/Cours/5eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Fraction - Comparaison, somme et différence (Complet).docx",
+			// 	pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Fraction - Comparaison, somme et différence (Complet).pdf",
+			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Fraction - Comparaison, somme et différence (A trou).docx",
+			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Fraction - Comparaison, somme et différence (A trou).pdf",
+			// },
 			ready : true,
 			page : "saintexupery/Chapitre_15/Cours.html"
 	},
@@ -768,6 +912,8 @@ var cinquieme_saintexupery = [
 			download: {
 				pdf: 			 "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (Complet).pdf",
 				docx:		 	 "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (Complet).docx",
+			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (A trou).docx",
+			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (A trou).pdf",
 			},
 			page : "Base/Chapitre_19/Cours.html"
 	},
@@ -779,6 +925,8 @@ var cinquieme_saintexupery = [
 			download: {
 				pdf: 			 "/Cours/5eme/SaintExupery/Chapitre_17/Documents/Chapitre 17 - Solides - Polyèdres, Cône et Sphère (Complet).pdf",
 				docx:		 	 "/Cours/5eme/SaintExupery/Chapitre_17/Documents/Chapitre 17 - Solides - Polyèdres, Cône et Sphère (Complet).docx",
+			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_17/Documents/Chapitre 17 - Solides - Polyèdres, Cône et Sphère (A trou).docx",
+			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_17/Documents/Chapitre 17 - Solides - Polyèdres, Cône et Sphère (A trou).pdf",
 			},
 			page : "saintexupery/Chapitre_17/Cours.html"
 	},
@@ -786,6 +934,12 @@ var cinquieme_saintexupery = [
 			id: 18,
 			nom: "Probabilités",
 			icone: 4,
+			// download: {
+			// 	docx: 		 "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (Complet).docx",
+			// 	pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (Complet).pdf",
+			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (A trou).docx",
+			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (A trou).pdf",
+			// },
 			ready : true,
 			page : "Base/Chapitre_13/Cours.html"
 	},
