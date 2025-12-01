@@ -376,12 +376,12 @@ var quatrieme_base = [
 			id: 8,
 			nom: "Puissances positives",
 			icone: 1,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_8/Documents/Chapitre 8 - Puissances positives (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_8/Documents/Chapitre 8 - Puissances positives (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_8/Documents/Chapitre 8 - Puissances positives (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_8/Documents/Chapitre 8 - Puissances positives (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_8/Documents/Chapitre 8 - Puissances positives (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_8/Documents/Chapitre 8 - Puissances positives (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_8/Documents/Chapitre 8 - Puissances positives (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_8/Documents/Chapitre 8 - Puissances positives (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_8/Cours.html"
 	},
