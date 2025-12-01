@@ -363,12 +363,12 @@ var quatrieme_base = [
 			id: 7,
 			nom: "Rotations",
 			icone: 2,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_7/Documents/Chapitre 7 - Rotations (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_7/Documents/Chapitre 7 - Rotations (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_7/Documents/Chapitre 7 - Rotations (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_7/Documents/Chapitre 7 - Rotations (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_7/Documents/Chapitre 7 - Rotations (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_7/Documents/Chapitre 7 - Rotations (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_7/Documents/Chapitre 7 - Rotations (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_7/Documents/Chapitre 7 - Rotations (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_7/Cours.html"
 	},
