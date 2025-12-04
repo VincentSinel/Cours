@@ -104,37 +104,67 @@ function menu_changed()
 	document.getElementById("object_fraction").classList.add("hiddenparam")
 	document.getElementById("object_diagramme").classList.add("hiddenparam")
 	let type = document.getElementById("gen_type").selectedIndex;
+	Formes["repere"].HideObject();
+	Formes["axe"].HideObject();
+	Formes["quadrillage"].HideObject();
+	Formes["solide"].HideObject();
+	Formes["fraction"].HideObject();
+	Formes["diagramme"].HideObject();
 	if (type == 0)
 	{
 		document.getElementById("param_repere").classList.remove("hiddenparam")
 		document.getElementById("object_repere").classList.remove("hiddenparam")
+		Formes["repere"].ShowObject();
 	}
 	else if (type == 1)
 	{
 		document.getElementById("param_axe").classList.remove("hiddenparam")
 		document.getElementById("object_axe").classList.remove("hiddenparam")
+		Formes["axe"].ShowObject();
 	}
 	else if (type == 2)
 	{
 		document.getElementById("param_quadrillage").classList.remove("hiddenparam")
 		document.getElementById("object_quadrillage").classList.remove("hiddenparam")
+		Formes["quadrillage"].ShowObject();
 	}
 	else if (type == 3)
 	{
 		document.getElementById("param_solide").classList.remove("hiddenparam")
 		document.getElementById("object_solide").classList.remove("hiddenparam")
+		Formes["solide"].ShowObject();
 	}
 	else if (type == 4)
 	{
 		document.getElementById("param_fraction").classList.remove("hiddenparam")
 		document.getElementById("object_fraction").classList.remove("hiddenparam")
+		Formes["fraction"].ShowObject();
 	}
 	else if (type == 5)
 	{
 		document.getElementById("param_diagramme").classList.remove("hiddenparam")
 		document.getElementById("object_diagramme").classList.remove("hiddenparam")
+		Formes["diagramme"].ShowObject();
 	}
 	Regenerate()
+}
+
+function ClearObject()
+{
+	let type = document.getElementById("gen_type").selectedIndex;
+	if (type == 0)
+		Formes["repere"].ClearObject();
+	if (type == 1)
+		Formes["axe"].ClearObject();
+	if (type == 2)
+		Formes["quadrillage"].ClearObject();
+	if (type == 3)
+		Formes["solide"].ClearObject();
+	if (type == 4)
+		Formes["fraction"].ClearObject();
+	if (type == 5)
+		Formes["diagramme"].ClearObject();
+	Regenerate();
 }
 
 

@@ -93,4 +93,26 @@ class F_Base
 			return group.ellipse(rx * 2, ry * 2).center(center.x, center.y);
 		}
 	}
+
+
+	HideObject()
+	{
+		this.Object.forEach(obj => {
+			obj.Root.classList.add("hide");
+		});
+	}
+	ShowObject()
+	{
+		this.Object.forEach(obj => {
+			obj.Root.classList.remove("hide");
+		});
+	}
+	ClearObject()
+	{
+		var parent = document.getElementById("object_list");
+		this.Object.forEach(obj => {
+			parent.removeChild(obj.Root);
+		});
+		this.Object.clear();
+	}
 }

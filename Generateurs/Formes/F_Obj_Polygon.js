@@ -146,8 +146,7 @@ class F_Obj_Polygon extends F_Obj
 		div3.appendChild(this.E_strokecolor);
 		var color_picker = new ColorPicker(this.E_strokecolor, base_options_colorpicker)
 		color_picker.on('pick', (color) => { 
-			this.DrawGroup_stroke.attr({"stroke": color}); 
-			this.DrawGroup_fill.attr({"fill": color}); 
+			this.DrawGroup_stroke.attr({"stroke": color});
 		} );
 
 		var img3 = document.createElement("img");

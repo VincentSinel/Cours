@@ -20,10 +20,34 @@ class F_Obj_Line extends F_Obj
 	{
 		super(parent);
 
-		if (!parameters.hasOwnProperty("xstart")) parameters["xstart"] = parent.Parameters["hor_start"] + 1;
-		if (!parameters.hasOwnProperty("ystart")) parameters["ystart"] = parent.Parameters["ver_start"] + 1;
-		if (!parameters.hasOwnProperty("xend")) parameters["xend"] = parent.Parameters["hor_end"] - 1;
-		if (!parameters.hasOwnProperty("yend")) parameters["yend"] = parent.Parameters["ver_end"] - 1;
+		if (!parameters.hasOwnProperty("xstart"))
+		{
+			if (parameters.hasOwnProperty("hor_start"))
+				parameters["xstart"] = parent.Parameters["hor_start"] + 1;
+			else
+				parameters["xstart"] = 0;
+		}
+		if (!parameters.hasOwnProperty("ystart"))
+		{
+			if (parameters.hasOwnProperty("ver_start"))
+				parameters["ystart"] = parent.Parameters["ver_start"] + 1;
+			else
+				parameters["ystart"] = 0;
+		}
+		if (!parameters.hasOwnProperty("xend"))
+		{
+			if (parameters.hasOwnProperty("hor_end"))
+				parameters["xend"] = parent.Parameters["hor_end"] - 1;
+			else
+				parameters["xend"] = 1;
+		}
+		if (!parameters.hasOwnProperty("yend"))
+		{
+			if (parameters.hasOwnProperty("ver_end"))
+				parameters["yend"] = parent.Parameters["ver_end"] - 1;
+			else
+				parameters["yend"] = 1;
+		}
 		if (!parameters.hasOwnProperty("arrowstart")) parameters["arrowstart"] = 0;
 		if (!parameters.hasOwnProperty("arrowstartsize")) parameters["arrowstartsize"] = 100;
 		if (!parameters.hasOwnProperty("arrowend")) parameters["arrowend"] = 0;
