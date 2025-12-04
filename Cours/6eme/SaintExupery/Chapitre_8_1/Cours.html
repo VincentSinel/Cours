@@ -13,8 +13,18 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script id="Animation" src="/JS/Animation/animation_holder.js"></script>
+  <script src="JS/Transformation.js"></script>
 
   <style>
+    .appartient div{
+      display: inline-block;
+      width: 8cm;
+    }
+    .appartient div:first-child{
+      display: inline-block;
+      width: 3cm;
+    }
   </style>
 
 </head>
@@ -32,14 +42,66 @@
         Partie 1
       </td>
       <td id="ChapitreNom">
-        - Nombres entiers
+        - Symétrie axiale
       </td>
     </tr>
   </table>
 
+  <h1>Définition :</h1>
+      <div class="definition">
+        Dire que deux figures sont <span class="CRed">symétriques par rapport à une droite</span> signifie que, en effectuant un pliage le long de la droite, les figures se superposent.
+      </div>
+      <div class="flexobject">
+        <div style="max-width: 8cm; margin-right: 1cm;">
+          <p class="exemple">Exemple :</p>
+          <div id="symetrieaxiale"></div>
+        </div>
+        <img src="Images/Forme2.svg" style="flex: 3cm 1 1; max-width: 8cm;">
+        <img src="Images/Forme.svg" style="flex: 3cm 1 1; max-width: 8cm;">
+        <div style="flex: 1 1 6cm;">
+          <p class="remarque">Remarques :</p>
+          <ul>
+            <li>Dans une symétrie axiale, l'axe de symétrie est la <b>médiatrice</b> de tous les segments reliant un point et son image.</li>
+            <li>Avec un quadrillage, la construction peut se faire sans outils de géométrie à l'aide des carreaux.</li>
+          </ul>
+        </div>
+      </div>
+  <h1>Constructions :</h1>
+      <div class="flexobject">
+        <div style="flex: 1 1 500px;">
+          <div style="text-align: center;"><b>A la règle et l'équerre :</b></div>
+          <div id="Animation1" class="animation center" width="480" height="360"></div>
+        </div>
+        <div style="flex: 1 1 500px;">
+          <div style="text-align: center;"><b>Au compas :</b></div>
+          <div id="Animation2" class="animation center" width="480" height="360"></div>
+        </div>
+      </div>
         
 </body>
 <script>
 	document.title = document.getElementById("ChapitreNumero").innerHTML + " " + document.getElementById("ChapitreNom").innerHTML
+  let client = new XMLHttpRequest();
+  client.open('GET', 'Images/Lobster.svg');
+  client.onreadystatechange = function(state) {
+      if (client.readyState == 4)
+      {
+          lobster1img = client.responseText
+          if (lobster2img != "")
+              Init()
+      }
+  }
+  client.send();
+  let client2 = new XMLHttpRequest();
+  client2.open('GET', 'Images/Lobster2.svg');
+  client2.onreadystatechange = function(state) {
+      if (client2.readyState == 4)
+      {
+          lobster2img = client2.responseText
+          if (lobster1img != "")
+              Init()
+      }
+  }
+  client2.send();
 </script>
 </html>
