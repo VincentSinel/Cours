@@ -15,6 +15,34 @@
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
   <style>
+    .equal{
+      max-width: 1cm;
+      font-size: 40pt;
+      font-weight: bold;
+      text-align: center;
+    }
+    .equal{
+      max-width: 1cm;
+      font-size: 40pt;
+      font-weight: bold;
+    }
+    .frac{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 2cm;
+    }
+    .frac img{
+      flex: 8cm 1 1;
+      max-width: 18cm;
+      min-width: 8cm;
+    }
+    .frac p {
+      font-weight: bold;
+      font-size: 20pt;
+      min-width: 3cm;
+      width: 3cm;
+    }
   </style>
 
 </head>
@@ -32,10 +60,63 @@
         Partie 2
       </td>
       <td id="ChapitreNom">
-        - Nombres entiers
+        - Fractions égales
       </td>
     </tr>
   </table>
+
+  <h1>Fractions :</h1>
+    <div class="definition">
+      Un quotient ne change pas lorsque l'on multiplie (ou divise) son numérateur et son dénominateur par un même nombre (non nul).<br>
+      Soit <span class="CRed">k</span>$\neq0$ :<br>
+      <span class="formule">
+        $\frac{a}{b}=\frac{a\ \times\ \textcolor{#e53935}{k}}{b\ \times\ \textcolor{#e53935}{k}}$
+      </span>
+      et 
+      <span class="formule">
+        $\frac{a}{b}=\frac{a\ \div\ \textcolor{#e53935}{k}}{b\ \div\ \textcolor{#e53935}{k}}$
+      </span>
+    </div>
+    <p class="exemple">Exemples :</p>
+    <div class="flexobject">
+      <div class="frac">
+        $\frac{6}{7}=\frac{6\ \times\ \textcolor{#e53935}{4}}{7\ \times\ \textcolor{#e53935}{4}}=\frac{24}{28}$ 
+      </div>
+      <div class="frac">
+        $\frac{32}{24}=\frac{32\ \div\ \textcolor{#e53935}{8}}{24\ \div\ \textcolor{#e53935}{8}}=\frac{4}{3}$ 
+      </div>
+    </div>
+    <p>On peut voir cela comme un « redécoupage » des différents morceaux :</p>
+    <div class="flexobject">
+      <p class="equal">$\frac{3}{4}$</p>
+      <img src="Images/Fraction1.svg" style="max-width: 4cm;">
+      <p class="equal">=</p>
+      <p class="equal">$\frac{6}{8}$</p>
+      <img src="Images/Fraction2.svg" style="max-width: 4cm;">
+      <p class="equal">=</p>
+      <p class="equal">$\frac{9}{12}$</p>
+      <img src="Images/Fraction3.svg" style="max-width: 4cm;">
+    </div>
+  <h1>Droites graduées :</h1>
+    <p>Selon le choix des graduations d'un axe graduée, on peut utiliser différentes fractions pour définir l'abscisse d'un même point.</p>
+    <div style="display: flex; flex-direction: column;">
+      <div class="frac">
+        <img src="Images/Axe1.svg">
+        <p>$A(\frac{4}{3})$</p>
+      </div>
+      <div class="frac">
+        <img src="Images/Axe2.svg">
+        <p>$A(\frac{8}{6})$</p>
+      </div>
+      <div class="frac">
+        <img src="Images/Axe3.svg">
+        <p>$A(\frac{12}{9})$</p>
+      </div>
+      <div class="frac">
+        <img src="Images/Axe4.svg">
+        <p>$A(\frac{20}{15})$</p>
+      </div>
+    </div>
 
         
 </body>
