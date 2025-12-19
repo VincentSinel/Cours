@@ -15,6 +15,14 @@
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
   <style>
+    .exemple_perspec > div {
+      flex-direction: column;
+      align-items: center;
+    }
+    .exemple_perspec img {
+      max-width: 4cm;
+      max-height: 3cm;
+    }
   </style>
 
 </head>
@@ -32,10 +40,92 @@
         Partie 1
       </td>
       <td id="ChapitreNom">
-        - Nombres entiers
+        - Se repérer dans l’espace
       </td>
     </tr>
   </table>
+
+  <h1>Représentation d'un solide :</h1>
+      <div class="definition">
+        Un <span class="CRed">solide</span> est une figure géométrique en trois dimensions.
+      </div>
+
+      <p class="exemple">Exemples :</p>
+      <div class="flexobject">
+        <img src="Images/Container.png" style="max-width: 4cm; max-height: 3cm;">
+        <img src="Images/Dé.png" style="max-width: 4cm; max-height: 3cm;">
+        <img src="Images/Pyramide.png" style="max-width: 4cm; max-height: 3cm;">
+        <img src="Images/Tuyau.png" style="max-width: 4cm; max-height: 3cm;">
+        <img src="Images/Toblerone.png" style="max-width: 4cm; max-height: 3cm;">
+      </div>
+      <br>
+
+      <div class="definition">
+        Il existe plusieurs manières de représenter un solide dans le plan :<br>
+        <ul>
+          <li>
+            <b>La vue en perspective :</b> C'est une représentation qui permet de voir les différents côtés qui compose le solide donnant l'illusion d'un objet en 3 dimensions. Les traits cachés sont alors souvent représentés en pointillés.
+          </li>
+          <li>
+            <b>Le patron :</b> C'est une représentation de l'objet dont toutes les faces ont été déplié et mise à plat dans le plan.
+          </li>
+          <li>
+            <b>La vue directionnelle :</b> C'est une représentation de face particulière du solide vue dans leurs directions. (Vue de face, de droite, de dessus, etc...)
+          </li>
+        </ul>
+      </div>
+
+      <p class="exemple">Exemples :</p>
+
+      <div class="flexobject exemple_perspec">
+        <div class="flexobject">
+          <span>Vue en perspective cavalière :</span>
+          <img src="Images/Solides-04.svg">
+        </div>
+        <div class="flexobject">
+          <span>Patron :</span>
+          <img src="Images/Patrons-04.svg">
+        </div>
+        <div class="flexobject">
+          <span>Vue en perspective isométrique :</span>
+          <img src="Images/Vue_isometrique.svg">
+        </div>
+        <div class="flexobject">
+          <span>Vue de droite :</span>
+          <img src="Images/Face_droite.svg">
+        </div>
+        <div class="flexobject">
+          <span>Vue de dessus :</span>
+          <img src="Images/Face_dessus.svg">
+        </div>
+      </div>
+
+      <p class="remarque">Remarque :</p>
+      <ul>
+        <li>
+          Il existe plusieurs types de vue en perspective. Les plus connu sont la perspective <span class="CRed">cavalière</span> et la perspective <span class="CRed">isométrique</span>.
+        </li>
+      </ul>
+
+  <h1>Assemblage de cube :</h1>
+  
+      <p>Lorsque l'on assemble plusieurs cubes entre eux, on parle d'assemblage de cube. Il est possible d'utiliser plusieurs types de représentation pour se repérer dans ce type d'assemblage.</p>
+
+      <div class="flexobject">
+        <img src="Images/Structuro/Vue_cavaliere.svg">
+        <img src="Images/Structuro/Vue_isometrique.svg">
+        <img src="Images/Structuro/Face_avant.svg">
+        <img src="Images/Structuro/Face_dessus.svg">
+        <img src="Images/Structuro/Face_droite.svg">
+      </div>
+
+      <p>Il est possible d'indiquer le nombre de cube sur les faces pour aider à la représentation</p>
+
+      <div class="flexobject">
+        <img src="Images/Structuro/Face_avant2.svg">
+        <img src="Images/Structuro/Face_dessus2.svg">
+        <img src="Images/Structuro/Face_droite2.svg">
+      </div>
 
         
 </body>
