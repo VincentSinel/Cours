@@ -56,9 +56,9 @@ var stroke_style = {
 var text_style = {
 		fill: "black",
 		stroke: "none",
-		family: 'arial', 
-		weight: "bold", 
-		size: font_size
+		"font-family": 'arial', 
+		"font-weight": "bold", 
+		"font-size": font_size
 	}
 var front_face = {
 		stroke: "none",
@@ -146,6 +146,7 @@ function ChangeCubeSize()
 function RecreateGrid()
 {
 	font_size = document.getElementById("structuro_txt_size").valueAsNumber;
+	text_style["font-size"] = font_size * 2
 	Resize()
 	DrawFront()
 	DrawRight()
@@ -240,9 +241,9 @@ function DrawFront()
 			if (current > 0)
 			{
 				let txt = View_Front["txt"].text(current.toString())
+				txt.attr(text_style)
 				txt.center((x + 0.5) * cube_size, (y + 0.5) * cube_size)
 				txt.dmove(offset.x, offset.y)
-				txt.attr(stroke_style)
 				txt.disabled = true;
 			}
 		}
@@ -330,9 +331,9 @@ function DrawRight()
 			if (current > 0)
 			{
 				let txt = View_Right["txt"].text(current.toString())
+				txt.attr(text_style)
 				txt.center((x + 0.5) * cube_size, (y + 0.5) * cube_size)
 				txt.dmove(offset.x, offset.y)
-				txt.attr(stroke_style)
 			}
 		}
 	}
@@ -420,9 +421,9 @@ function DrawTop()
 			if (current > 0)
 			{
 				let txt = View_Top["txt"].text(current.toString())
+				txt.attr(text_style)
 				txt.center((x + 0.5) * cube_size, (y + 0.5) * cube_size)
 				txt.dmove(offset.x, offset.y)
-				txt.attr(stroke_style)
 			}
 		}
 	}
