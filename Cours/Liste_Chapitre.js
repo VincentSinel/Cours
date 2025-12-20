@@ -2604,7 +2604,7 @@ var sixieme_saintexupery = [
 			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 9 - Activité d'introduction.docx",
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 9 - Activité d'introduction.pdf",
 		},
-		ready : false,
+		ready : true,
 		page : "SaintExupery/Chapitre_9_3/Cours.html",
 	}, // Chapitre 9 Partie 3
 	{
