@@ -389,12 +389,12 @@ var quatrieme_base = [
 			id: 9,
 			nom: "Distributivité simple",
 			icone: 3,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_9/Documents/Chapitre 9 - Distributivité simple (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_9/Documents/Chapitre 9 - Distributivité simple (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_9/Documents/Chapitre 9 - Distributivité simple (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_9/Documents/Chapitre 9 - Distributivité simple (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_9/Documents/Chapitre 9 - Distributivité simple (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_9/Documents/Chapitre 9 - Distributivité simple (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_9/Documents/Chapitre 9 - Distributivité simple (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_9/Documents/Chapitre 9 - Distributivité simple (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_9/Cours.html"
 	},
