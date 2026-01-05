@@ -415,12 +415,12 @@ var quatrieme_base = [
 			id: 11,
 			nom: "Réciproque du théorème de Pythagore",
 			icone: 2,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_11/Documents/Chapitre 11 - Réciproque du théorème de Pythagore (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_11/Documents/Chapitre 11 - Réciproque du théorème de Pythagore (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_11/Documents/Chapitre 11 - Réciproque du théorème de Pythagore (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_11/Documents/Chapitre 11 - Réciproque du théorème de Pythagore (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_11/Documents/Chapitre 11 - Réciproque du théorème de Pythagore (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_11/Documents/Chapitre 11 - Réciproque du théorème de Pythagore (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_11/Documents/Chapitre 11 - Réciproque du théorème de Pythagore (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_11/Documents/Chapitre 11 - Réciproque du théorème de Pythagore (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_11/Cours.html"
 	},
