@@ -830,12 +830,12 @@ var cinquieme_saintexupery = [
 			id: 10,
 			nom: "Multiples et diviseurs",
 			icone: 1,
-			// download: {
-			// 	docx: 		 "/Cours/5eme/SaintExupery/Chapitre_10/Documents/Chapitre 10 - Multiples et diviseurs (Complet).docx",
-			// 	pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_10/Documents/Chapitre 10 - Multiples et diviseurs (Complet).pdf",
-			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_10/Documents/Chapitre 10 - Multiples et diviseurs (A trou).docx",
-			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_10/Documents/Chapitre 10 - Multiples et diviseurs (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/5eme/SaintExupery/Chapitre_10/Documents/Chapitre 10 - Multiples et diviseurs (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_10/Documents/Chapitre 10 - Multiples et diviseurs (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery/Chapitre_10/Documents/Chapitre 10 - Multiples et diviseurs (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_10/Documents/Chapitre 10 - Multiples et diviseurs (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_8/Cours.html"
 	},
