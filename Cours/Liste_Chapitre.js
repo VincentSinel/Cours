@@ -402,12 +402,12 @@ var quatrieme_base = [
 			id: 10,
 			nom: "Coordonnées sphériques",
 			icone: 2,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_10/Cours.html"
 	},
