@@ -559,7 +559,7 @@ var quatrieme_base = [
 var cinquieme_base = [
 	{
 			id: 1,
-			nom: "Nombres Relatifs (Partie 1)",
+			nom: "Nombres Relatifs",
 			icone: 1,
 			download: {
 				docx: 		 "/Cours/5eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres Relatifs (Complet).docx",
@@ -763,7 +763,7 @@ var cinquieme_saintexupery = [
 	},
 	{
 			id: 5,
-			nom: "Calcul littéral (Partie 1)",
+			nom: "Calcul littéral",
 			icone: 3,
 			download: {
 				docx: 		 "/Cours/5eme/Base/Chapitre_5/Documents/Chapitre 5 - Introduction au calcul littéral (Complet).docx",
@@ -863,7 +863,7 @@ var cinquieme_saintexupery = [
 			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_12/Documents/Chapitre 12 - Fraction - Proportion et quotient (A trou).pdf",
 			// },
 			ready : true,
-			page : "saintexupery/Chapitre_12/Cours.html"
+			page : "SaintExupery/Chapitre_12/Cours.html"
 	},
 	{
 			id: 13,
@@ -876,7 +876,7 @@ var cinquieme_saintexupery = [
 			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (A trou).pdf",
 			// },
 			ready : true,
-			page : "saintexupery/Chapitre_13/Cours.html"
+			page : "SaintExupery/Chapitre_13/Cours.html"
 	},
 	{
 			id: 14,
@@ -889,7 +889,7 @@ var cinquieme_saintexupery = [
 			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_14/Documents/Chapitre 14 - Statistiques (A trou).pdf",
 			// },
 			ready : true,
-			page : "saintexupery/Chapitre_14/Cours.html"
+			page : "SaintExupery/Chapitre_14/Cours.html"
 	},
 	{
 			id: 15,
@@ -902,7 +902,7 @@ var cinquieme_saintexupery = [
 			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Fraction - Comparaison, somme et différence (A trou).pdf",
 			// },
 			ready : true,
-			page : "saintexupery/Chapitre_15/Cours.html"
+			page : "SaintExupery/Chapitre_15/Cours.html"
 	},
 	{
 			id: 16,
@@ -928,7 +928,7 @@ var cinquieme_saintexupery = [
 			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_17/Documents/Chapitre 17 - Solides - Polyèdres, Cône et Sphère (A trou).docx",
 			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_17/Documents/Chapitre 17 - Solides - Polyèdres, Cône et Sphère (A trou).pdf",
 			},
-			page : "saintexupery/Chapitre_17/Cours.html"
+			page : "SaintExupery/Chapitre_17/Cours.html"
 	},
 	{
 			id: 18,
@@ -2658,7 +2658,7 @@ var sixieme_saintexupery = [
 	{
 		id: 33,
 		chapter: "Partie 1",
-		nom: "Se repérer dans l’espace",
+		nom: "Se repérer dans l'espace",
 		icone: 26,
 		download: {
 			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_11_1/Documents/Chapitre 11 - Partie 1 - Se repérer dans l’espace (Complet).docx",
@@ -2736,37 +2736,21 @@ var sixieme_saintexupery = [
 		page : "SaintExupery/Chapitre_12_2/Cours.html",
 	}, // Chapitre 12 Partie 2
 	{
-		id: 38,
+		id: 39,
 		chapter: "Partie 3",
-		nom: "Contenance",
+		nom: "Durées",
 		icone: 27,
 		download: {
-			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_12_3/Documents/Chapitre 12 - Partie 3 - Contenance (Complet).docx",
-			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_12_3/Documents/Chapitre 12 - Partie 3 - Contenance (Complet).pdf",
-			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_12_3/Documents/Chapitre 12 - Partie 3 - Contenance (A trou).docx",
-			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_12_3/Documents/Chapitre 12 - Partie 3 - Contenance (A trou).pdf",
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_12_3/Documents/Chapitre 12 - Partie 3 - Durées (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_12_3/Documents/Chapitre 12 - Partie 3 - Durées (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_12_3/Documents/Chapitre 12 - Partie 3 - Durées (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_12_3/Documents/Chapitre 12 - Partie 3 - Durées (A trou).pdf",
 			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.docx",
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.pdf",
 		},
 		ready : false,
 		page : "SaintExupery/Chapitre_12_3/Cours.html",
 	}, // Chapitre 12 Partie 3
-	{
-		id: 39,
-		chapter: "Partie 4",
-		nom: "Durées",
-		icone: 27,
-		download: {
-			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_12_4/Documents/Chapitre 12 - Partie 4 - Durées (Complet).docx",
-			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_12_4/Documents/Chapitre 12 - Partie 4 - Durées (Complet).pdf",
-			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_12_4/Documents/Chapitre 12 - Partie 4 - Durées (A trou).docx",
-			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_12_4/Documents/Chapitre 12 - Partie 4 - Durées (A trou).pdf",
-			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.docx",
-			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.pdf",
-		},
-		ready : false,
-		page : "SaintExupery/Chapitre_12_4/Cours.html",
-	}, // Chapitre 12 Partie 4
 	{
 		id: 40,
 		chapter: "Partie 1",
