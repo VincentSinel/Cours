@@ -428,12 +428,12 @@ var quatrieme_base = [
 			id: 12,
 			nom: "Multiplications et divisions de fractions",
 			icone: 1,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_12/Documents/Chapitre 12 - Multiplications et divisions de fractions (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_12/Documents/Chapitre 12 - Multiplications et divisions de fractions (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_12/Documents/Chapitre 12 - Multiplications et divisions de fractions (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_12/Documents/Chapitre 12 - Multiplications et divisions de fractions (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_12/Documents/Chapitre 12 - Multiplications et divisions de fractions (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_12/Documents/Chapitre 12 - Multiplications et divisions de fractions (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_12/Documents/Chapitre 12 - Multiplications et divisions de fractions (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_12/Documents/Chapitre 12 - Multiplications et divisions de fractions (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_12/Cours.html"
 	},
