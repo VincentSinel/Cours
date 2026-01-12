@@ -1,6 +1,8 @@
 <html>
 	<head>
 
+		<script src="/Cours/Liste_Chapitre.js"></script>
+
 		<style>
 			ul {
 				width: max-content;
@@ -13,6 +15,18 @@
 			}
 			.flexobject label{
 				font-weight: bold;
+			}
+			.pdfbutton{
+				font-size: 10pt;
+				font-weight: bold;
+				margin-left: 10px;
+				color: lightseagreen;
+			}
+			.pdfbutton2{
+				font-size: 10pt;
+				font-weight: bold;
+				margin-left: 10px;
+				color: lightcoral;
 			}
 		</style>
 	</head>
@@ -28,287 +42,120 @@
 		<p>3ème</p>
 		<div class="flexobject">
 			<div>
-				<label>Base :</label>
-				<ul>
-					<li><a href="/Cours/3eme/Base/Chapitre_1/Cours.html" >Chapitre 1 - Nombres premiers</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_2/Cours.html" >Chapitre 2 - Homothéties</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_3/Cours.html" >Chapitre 3 - Puissances</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_4/Cours.html" >Chapitre 4 - Fonctions (Généralités)</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_5/Cours.html" >Chapitre 5 - Transformations</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_6/Cours.html" >Chapitre 6 - Factorisations développements</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_7/Cours.html" >Chapitre 7 - Gestions de données</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_8/Cours.html" >Chapitre 8 - Théorème de Thalès Sens Direct</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_9/Cours.html" >Chapitre 9 - Equations</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_10/Cours.html">Chapitre 10 - Trigonométrie</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_11/Cours.html">Chapitre 11 - Médiane et étendu</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_12/Cours.html">Chapitre 12 - Fonctions linéaires</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_13/Cours.html">Chapitre 13 - Volumes (Boules)</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_14/Cours.html">Chapitre 14 - Trigonométrie Calcul d'angle</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_15/Cours.html">Chapitre 15 - Reciproque de Thalès</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_16/Cours.html">Chapitre 16 - Equations produit nul</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_17/Cours.html">Chapitre 17 - Fonctions affines</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_18/Cours.html">Chapitre 18 - Probabilités</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_19/Cours.html">Chapitre 19 - Ratios</a></li>
-					<li><a href="/Cours/3eme/Base/Chapitre_20/Cours.html">Chapitre 20 - Repérage dans l'espace</a></li>
+				<label>Madame de Lafayette :</label>
+				<ul id="3eme_madame_de_lafayette">
 				</ul>
 			</div>
 			<div>
 				<label>Saint Exupéry :</label>
-					<ul>
-						<li><a href="/Cours/3eme/Base/Chapitre_1/Cours.html">Chapitre 1 - Fractions irréductibles</a></li>
-						<li><a href="/Cours/3eme/Base/Chapitre_2/Cours.html">Chapitre 2 - Homothéties</a></li>
-						<li><a href="/Cours/3eme/Base/Chapitre_3/Cours.html">Chapitre 3 - Puissances</a></li>
-						<li><a href="/Cours/3eme/Base/Chapitre_4/Cours.html">Chapitre 4 - Fonctions (Généralités)</a></li>
-						<li><a href="/Cours/3eme/SaintExupery/Chapitre_5/Cours.html">Chapitre 5 - Théorème de Thalès</a></li>
-						<li><a href="/Cours/3eme/SaintExupery/Chapitre_6/Cours.html">Chapitre 6 - Double distributivité</a></li>
-						<li><a href="/Cours/3eme/Base/Chapitre_5/Cours.html">Chapitre 7 - Transformations</a></li>
-						<li><a href="/Cours/3eme/SaintExupery/Chapitre_8/Cours.html">Chapitre 8 - Statistiques</a></li>
-						<li><a href="/Cours/3eme/SaintExupery/Chapitre_9/Cours.html">Chapitre 9 - Trigonométrie</a></li>
-						<li><a href="/Cours/3eme/Base/Chapitre_12/Cours.html">Chapitre 10 - Fonctions linéaires</a></li>
-						<li><a href="/Cours/3eme/SaintExupery/Chapitre_11/Cours.html">Chapitre 11 - Sphère et boules</a></li>
-						<li><a href="/Cours/3eme/Base/Chapitre_17/Cours.html">Chapitre 12 - Fonctions affines</a></li>
-						<li><a href="/Cours/3eme/Base/Chapitre_20/Cours.html">Chapitre 13 - Repérage dans l'espace</a></li>
-						<li><a href="/Cours/3eme/SaintExupery/Chapitre_14/Cours.html">Chapitre 14 - Grandeurs composées et Ratios</a></li>
-						<li><a href="/Cours/3eme/Base/Chapitre_18/Cours.html">Chapitre 15 - Probabilités</a></li>
-						<li><a href="/Cours/4eme/Base/Chapitre_15/Cours.html">Chapitre 16 - Triangles semblables</a></li>
+					<ul id="3eme_saint_exupery">
 					</ul>
 				</div>
 		</div>
 		<p>4ème</p>
 		<div class="flexobject">
 			<div>
-				<label>Base :</label>
-				<ul>
-					<li><a href="/Cours/4eme/Base/Chapitre_1/Cours.html" >Chapitre 1 - Nombres premiers</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_2/Cours.html" >Chapitre 2 - Théorème de Pythagore</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_3/Cours.html" >Chapitre 3 - Opérations sur les relatifs</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_4/Cours.html" >Chapitre 4 - Translations et pavages</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_5/Cours.html" >Chapitre 5 - Additions et soustractions de fractions</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_6/Cours.html" >Chapitre 6 - Egalité des produits en croix</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_7/Cours.html" >Chapitre 7 - Rotations</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_8/Cours.html" >Chapitre 8 - Puissances positives</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_9/Cours.html" >Chapitre 9 - Distributivité simple</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_10/Cours.html">Chapitre 10 - Coordonnées sphériques</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_11/Cours.html">Chapitre 11 - Réciproque du théorème de Pythagore</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_12/Cours.html">Chapitre 12 - Multiplications et divisions de fractions</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_13/Cours.html">Chapitre 13 - Equation simple</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_14/Cours.html">Chapitre 14 - Puissances négatives</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_15/Cours.html">Chapitre 15 - Triangle semblable</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_16/Cours.html">Chapitre 16 - Pyramides et cônes</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_17/Cours.html">Chapitre 17 - Médiane et étendue</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_18/Cours.html">Chapitre 18 - Proportionnalité</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_19/Cours.html">Chapitre 19 - Probabilité</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_20/Cours.html">Chapitre 20 - Distributivité double</a></li>
-					<li><a href="/Cours/4eme/Base/Chapitre_21/Cours.html">Chapitre 21 - Cosinus</a></li>
+				<label>Madame de Lafayette :</label>
+				<ul id="4eme_madame_de_lafayette">
 				</ul>
 			</div>
 		</div>
 		<p>5ème</p>
 		<div class="flexobject">
 			<div>
-				<label>Base :</label>
-				<ul>
-					<li><a href="/Cours/5eme/Base/Chapitre_1/Cours.html" >Chapitre 1 - Nombres Relatifs</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_2/Cours.html" >Chapitre 2 - Symétries</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_3/Cours.html" >Chapitre 3 - Priorités opératoires</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_4/Cours.html" >Chapitre 4 - Algorithmes</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_5/Cours.html" >Chapitre 5 - Introduction au calcul littéral</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_6/Cours.html" >Chapitre 6 - Triangles - Inégalité triangulaire et construction</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_7/Cours.html" >Chapitre 7 - Statistiques</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_8/Cours.html" >Chapitre 8 - Nombres Premiers</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_9/Cours.html" >Chapitre 9 - Fractions et Proportions</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_10/Cours.html">Chapitre 10 - Tableaux de Proportionnalité</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_11/Cours.html">Chapitre 11 - Additions et Soustractions de Nombres Relatifs</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_12/Cours.html">Chapitre 12 - Triangles - Droites remarquables</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_13/Cours.html">Chapitre 13 - Probabilités</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_14/Cours.html">Chapitre 14 - Fraction, Somme et Différence</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_15/Cours.html">Chapitre 15 - Aires</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_16/Cours.html">Chapitre 16 - Angles</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_17/Cours.html">Chapitre 17 - Proportionnalité, échelles et pourcentage</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_18/Cours.html">Chapitre 18 - Solide</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_19/Cours.html">Chapitre 19 - Parallélogrammes</a></li>
+				<label>Madame de Lafayette :</label>
+				<ul id="5eme_madame_de_lafayette">
 				</ul>
 			</div>
 			<div>
 				<label>Saint Exupéry :</label>
-				<ul>
-					<li><a href="/Cours/5eme/Base/Chapitre_1/Cours.html" >Chapitre 1 - Nombres Relatifs - Comparaison et repérage</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_2/Cours.html" >Chapitre 2 - Symétries</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_3/Cours.html" >Chapitre 3 - Priorités opératoires</a></li>
-					<li><a href="/Cours/5eme/SaintExupery/Chapitre_4/Cours.html" >Chapitre 4 - Angles particuliers</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_5/Cours.html" >Chapitre 5 - Calcul littéral</a></li>
-					<li><a href="/Cours/5eme/SaintExupery/Chapitre_6/Cours.html" >Chapitre 6 - Angles d'un triangle</a></li>
-					<li><a href="/Cours/5eme/SaintExupery/Chapitre_7/Cours.html" >Chapitre 7 - Distributivité simple</a></li>
-					<li><a href="/Cours/5eme/SaintExupery/Chapitre_8/Cours.html" >Chapitre 8 - Prismes et cylindres</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_11/Cours.html">Chapitre 9 - Additions et Soustractions de nombres relatifs</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_8/Cours.html">Chapitre 10 - Multiples et diviseurs</a></li>
-					<li><a href="/Cours/5eme/SaintExupery/Chapitre_11/Cours.html">Chapitre 11 - Triangles - Longueurs et droites remarquables</a></li>
-					<li><a href="/Cours/5eme/SaintExupery/Chapitre_12/Cours.html">Chapitre 12 - Fraction - Proportion et quotient</a></li>
-					<li><a href="/Cours/5eme/SaintExupery/Chapitre_13/Cours.html">Chapitre 13 - Proportionnalité</a></li>
-					<li><a href="/Cours/5eme/SaintExupery/Chapitre_14/Cours.html">Chapitre 14 - Statistiques</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_15/Cours.html">Chapitre 15 - Fraction - Comparaison, somme et différence</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_19/Cours.html">Chapitre 16 - Parallélogrammes</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_17/Cours.html">Chapitre 17 - Solides - Polyèdres, Cône et Sphère</a></li>
-					<li><a href="/Cours/5eme/Base/Chapitre_13/Cours.html">Chapitre 18 - Probabilités</a></li>
+				<ul id="5eme_saint_exupery">
 				</ul>
 			</div>
 			<div>
 				<label>Roger Vailland :</label>
-				<ul>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_A1/Cours.html">Chapitre A1 - Divisibilité</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_A2/Cours.html">Chapitre A2 - Division décimale</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_A3/Cours.html">Chapitre A3 - Nombres premiers</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_A4/Cours.html">Chapitre A4 - Généralité sur les fractions</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_A5/Cours.html">Chapitre A5 - Egalité de fraction</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_A6/Cours.html">Chapitre A6 - Addition et soustraction de fractions</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_A7/Cours.html">Chapitre A7 - Comparaison de fractions</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_B1/Cours.html">Chapitre B1 - Nombres relatifs</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_B2/Cours.html">Chapitre B2 - Repérage et comparaison</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_B3/Cours.html">Chapitre B3 - Repérage dans le plan</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_B4/Cours.html">Chapitre B4 - Additions de relatifs</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_B5/Cours.html">Chapitre B5 - Soustraction de relatifs</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_C1/Cours.html">Chapitre C1 - Priorités opératoires</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_C2/Cours.html">Chapitre C2 - Expression littérale</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_C3/Cours.html">Chapitre C3 - Tester une égalité</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_D1/Cours.html">Chapitre D1 - Effectifs et fréquences</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_D2/Cours.html">Chapitre D2 - Représentations graphiques</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_D3/Cours.html">Chapitre D3 - Moyenne</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_D4/Cours.html">Chapitre D4 - Notion de probabilité</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_E1/Cours.html">Chapitre E1 - Généralité sur les triangles</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_E2/Cours.html">Chapitre E2 - Angles d'un triangle</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_E3/Cours.html">Chapitre E3 - Droites remarquables du triangle</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_E4/Cours.html">Chapitre E4 - Caractérisation angulaire du parallélisme</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_E5/Cours.html">Chapitre E5 - Parallélogramme</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_E6/Cours.html">Chapitre E6 - Prisme et cylindre</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_F1/Cours.html">Chapitre F1 - La symétrie centrale</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_F2/Cours.html">Chapitre F2 - Propriétés des symétries</a></li>
-					<li><a href="/Cours/5eme/RogerVailland/Chapitre_F3/Cours.html">Chapitre F3 - Les échelles</a></li>
+				<ul id="5eme_roger_vailland">
 				</ul>
 			</div>
 		</div>
 		<p>6ème</p>
 		<div class="flexobject">
 			<div>
-				<label>Base :</label>
-				<ul>
-					<li><a href="/Cours/6eme/Base/Chapitre_1/Cours.html" >Chapitre 1 - Entier et décimaux</a></li>
-					<li><a href="/Cours/6eme/Base/Chapitre_2/Cours.html" >Chapitre 2 - Premiers objets de géométrie</a></li>
-					<li><a href="/Cours/6eme/Base/Chapitre_3/Cours.html" >Chapitre 3 - Comparaison de nombres décimaux</a></li>
-					<li><a href="/Cours/6eme/Base/Chapitre_4/Cours.html" >Chapitre 4 - Parallèles et perpendiculaires</a></li>
-					<li><a href="/Cours/6eme/Base/Chapitre_5/Cours.html" >Chapitre 5 - Gestion de données</a></li>
-					<li><a href="/Cours/6eme/Base/Chapitre_6/Cours.html" >Chapitre 6 - Cercle et disque</a></li>
-					<li><a href="/Cours/6eme/Base/Chapitre_7/Cours.html" >Chapitre 7 - Angles</a></li>
-					<li><a href="/Cours/6eme/Base/Chapitre_8/Cours.html" >Chapitre 8 - Polygones et quadrilatères particuliers</a></li>
-					<li><a href="/Cours/6eme/Base/Chapitre_9/Cours.html" >Chapitre 9 - Divisions</a></li>
-					<li><a href="/Cours/6eme/Base/Chapitre_10/Cours.html">Chapitre 10 - Triangles</a></li>
-					<li><a href="/Cours/6eme/Base/Chapitre_11/Cours.html">Chapitre 11 - Nombres en écritures fractionnaires</a></li>
-					<li><a href="/Cours/6eme/Base/Chapitre_12/Cours.html">Chapitre 12 - Longueur et périmètres</a></li>
-					<li><a href="/Cours/6eme/Base/Chapitre_13/Cours.html">Chapitre 13 - Symétrie axiale</a></li>
-					<li><a href="/Cours/6eme/Base/Chapitre_14/Cours.html">Chapitre 14 - Aires de figures planes usuelles</a></li>
-					<li><a href="/Cours/6eme/Base/Chapitre_15/Cours.html">Chapitre 15 - Proportionnalité et pourcentages</a></li>
-					<li><a href="/Cours/6eme/Base/Chapitre_16/Cours.html">Chapitre 16 - Pavé droit</a></li>
-					<li><a href="/Cours/6eme/Base/Chapitre_17/Cours.html">Chapitre 17 - Priorités opératoires</a></li>
-					<li><a href="/Cours/6eme/Base/Chapitre_18/Cours.html">Chapitre 18 - Se repérer dans le temps</a></li>
+				<label>Madame de Lafayette :</label>
+				<ul id="6eme_madame_de_lafayette">
 				</ul>
 			</div>
 			<div>
 				<label>Saint Exupéry :</label>
-				<ul>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_1_1/Cours.html" >Chapitre 1 - Partie 1 - Nombres entiers</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_1_2/Cours.html" >Chapitre 1 - Partie 2 - Nombres décimaux</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_1_3/Cours.html" >Chapitre 1 - Partie 3 - Repérage et comparaison</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_1_4/Cours.html" >Chapitre 1 - Partie 4 - Encadrement</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_2_1/Cours.html" >Chapitre 2 - Partie 1 - Addition et soustraction</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_2_2/Cours.html" >Chapitre 2 - Partie 2 - Multiplication</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_2_3/Cours.html" >Chapitre 2 - Partie 3 - Division euclidienne</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_2_4/Cours.html" >Chapitre 2 - Partie 4 - Division décimale</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_3_1/Cours.html" >Chapitre 3 - Partie 1 - Fractions : Partage et repérage</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_3_2/Cours.html" >Chapitre 3 - Partie 2 - Fractions égales</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_3_3/Cours.html" >Chapitre 3 - Partie 3 - Additions de fractions</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_3_4/Cours.html" >Chapitre 3 - Partie 4 - Fractions d'une quantité</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_4_1/Cours.html" >Chapitre 4 - Partie 1 - Reconnaître une situation de proportionnalité</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_4_2/Cours.html" >Chapitre 4 - Partie 2 - Utiliser les propriétés de la proportionnalité</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_4_3/Cours.html" >Chapitre 4 - Partie 3 - Pourcentages</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_4_4/Cours.html" >Chapitre 4 - Partie 4 - Représentations à l'échelle</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_5_1/Cours.html" >Chapitre 5 - Partie 1 - Droites et segments</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_5_2/Cours.html" >Chapitre 5 - Partie 2 - Position relatives de droites</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_6_1/Cours.html" >Chapitre 6 - Partie 1 - Cercles et disques</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_6_2/Cours.html" >Chapitre 6 - Partie 2 - Périmètre du cercle</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_6_3/Cours.html" >Chapitre 6 - Partie 3 - Médiatrice</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_7_1/Cours.html" >Chapitre 7 - Partie 1 - Angles</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_7_2/Cours.html" >Chapitre 7 - Partie 2 - Angles particuliers et bissectrice</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_8_1/Cours.html" >Chapitre 8 - Partie 1 - Symétrie axiale</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_8_2/Cours.html" >Chapitre 8 - Partie 2 - Propriétés de la symétrie axiale</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_8_3/Cours.html" >Chapitre 8 - Partie 3 - Axes de symétrie</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_9_1/Cours.html" >Chapitre 9 - Partie 1 - Tracer un triangle (Avec 3 longueurs)</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_9_2/Cours.html" >Chapitre 9 - Partie 2 - Tracer un triangle (Avec deux grandeurs)</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_9_3/Cours.html" >Chapitre 9 - Partie 3 - Triangles particuliers</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_9_4/Cours.html" >Chapitre 9 - Partie 4 - Médiatrices dans le triangle</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_10_1/Cours.html">Chapitre 10 - Partie 1 - Périmètre et aire</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_10_2/Cours.html">Chapitre 10 - Partie 2 - Formulaire des périmètres et aires</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_11_1/Cours.html">Chapitre 11 - Partie 1 - Se repérer dans l'espace</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_11_2/Cours.html">Chapitre 11 - Partie 2 - Solides</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_11_3/Cours.html">Chapitre 11 - Partie 3 - Volumes</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_12_1/Cours.html">Chapitre 12 - Partie 1 - Longueurs</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_12_2/Cours.html">Chapitre 12 - Partie 2 - Masse</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_12_3/Cours.html">Chapitre 12 - Partie 3 - Durées</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_13_1/Cours.html">Chapitre 13 - Partie 1 - Tableau de données</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_13_2/Cours.html">Chapitre 13 - Partie 2 - Diagrammes</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_13_3/Cours.html">Chapitre 13 - Partie 3 - Probabilité</a></li>
-					<li><a href="/Cours/6eme/SaintExupery/Chapitre_14_1/Cours.html">Chapitre 14 - Partie 1 - Problèmes de valeurs inconnues</a></li>
+				<ul id="6eme_saint_exupery">
 				</ul>
 			</div>
 			<div>
 				<label>Roger Vailland :</label>
-				<ul>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_Fo1/Cours.html">Chapitre Fo1 - Consignes de début d'année</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_Fo2/Cours.html">Chapitre Fo2 - Dictionnaire : les verbes d'actions en mathématiques</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_Fo3/Cours.html">Chapitre Fo3 - Résoudre un problème</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_Fo4/Cours.html">Chapitre Fo4 - Tableau sur la numération</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_Fo5/Cours.html">Chapitre Fo5 - Tableaux de conversions</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_Fo6/Cours.html">Chapitre Fo6 - Priorités opératoires</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_A1/Cours.html">Chapitre A1 - Les nombres entiers</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_A2/Cours.html">Chapitre A2 - Nombres décimaux</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_A3/Cours.html">Chapitre A3 - Différentes écritures d'un nombre décimal</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_A4/Cours.html">Chapitre A4 - Comparaison des nombres décimaux</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_A5/Cours.html">Chapitre A5 - Fraction</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_A6/Cours.html">Chapitre A6 - Manipuler les fractions</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_A7/Cours.html">Chapitre A7 - Calculer avec des fractions</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_B1/Cours.html">Chapitre B1 - Addition</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_B2/Cours.html">Chapitre B2 - Soustraction</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_B3/Cours.html">Chapitre B3 - Multiplication</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_B4/Cours.html">Chapitre B4 - Division euclidienne</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_B5/Cours.html">Chapitre B5 - Division décimale</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_C1/Cours.html">Chapitre C1 - Reconnaître une situation de proportionnalité</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_C2/Cours.html">Chapitre C2 - Utiliser les propriétés de la proportionnalité</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_C3/Cours.html">Chapitre C3 - Utiliser les pourcentages</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_C4-1/Cours.html">Chapitre C4-1 - Statistiques (Tableaux)</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_C4-2/Cours.html">Chapitre C4-2 - Statistiques (Diagramme bâtons et graphique cartésien)</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_C4-3/Cours.html">Chapitre C4-3 - Statistiques (Diagramme circulaire)</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_D1/Cours.html">Chapitre D1 - Se repérer dans le temps</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_D2/Cours.html">Chapitre D2 - Longueurs et masses</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_D3/Cours.html">Chapitre D3 - Surfaces</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_D4/Cours.html">Chapitre D4 - Volumes</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_D5/Cours.html">Chapitre D5 - Formulaire</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_E1/Cours.html">Chapitre E1 - Droites</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_E2/Cours.html">Chapitre E2 - Notion de perpendiculaires et parallèles</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_E3/Cours.html">Chapitre E3 - Propriétés sur les perpendiculaires et parallèles</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_E4/Cours.html">Chapitre E4 - Le cercle</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_E5/Cours.html">Chapitre E5 - La médiatrice</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_E6/Cours.html">Chapitre E6 - Les angles</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_E7/Cours.html">Chapitre E7 - La symétrie</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_E8/Cours.html">Chapitre E8 - Propriétés de la symétrie</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_E9/Cours.html">Chapitre E9 - Axes de symétrie</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_E10/Cours.html">Chapitre E10 - Triangles</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_E11/Cours.html">Chapitre E11 - Reconnaître les solides et patrons</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_F1/Cours.html">Chapitre F1 - Tracer une perpendiculaire</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_F2/Cours.html">Chapitre F2 - Tracer une parallèle</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_F3/Cours.html">Chapitre F3 - Mesurer un angle</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_F4/Cours.html">Chapitre F4 - Tracer un angle</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_F5-1/Cours.html">Chapitre F5-1 - Tracer un triangle (Avec 3 longueurs)</a></li>
-					<li><a href="/Cours/6eme/RogerVailland/Chapitre_F5-2/Cours.html">Chapitre F5-2 - Tracer un triangle (Avec deux grandeurs)</a></li>
+				<ul id="6eme_roger_vailland">
 				</ul>
 			</div>
 		</div>
 	</body>
+	<script>
+
+		function create_link(liste, classe, element)
+		{
+			element.innerHTML = "";
+			for (let chap = 0; chap < liste.length; chap++) {
+				const chapitre = liste[chap];
+				var name = "Chapitre " + (chap+1).toString()
+				if (chapitre.hasOwnProperty("chapter"))
+					name = chapitre.chapter;
+				name += " - " + chapitre.nom;
+				var link = "/Cours/" + classe + "/" + chapitre.page
+				var li = document.createElement("li");
+				var a1 = document.createElement("a");
+				a1.href = link;
+				a1.innerHTML = name;
+				li.appendChild(a1);
+				element.appendChild(li);
+				if (chapitre.hasOwnProperty("download"))
+				{
+					if (chapitre.download.hasOwnProperty("pdf"))
+					{
+						var a2 = document.createElement("a");
+						a2.href = chapitre.download.pdf;
+						a2.innerHTML = "PDF";
+						a2.classList.add("pdfbutton")
+						li.appendChild(a2);
+					}
+					if (chapitre.download.hasOwnProperty("pdf_trou"))
+					{
+						var a2 = document.createElement("a");
+						a2.href = chapitre.download.pdf_trou;
+						a2.innerHTML = "A trou";
+						a2.classList.add("pdfbutton2")
+						li.appendChild(a2);
+					}
+				}
+			}
+		}
+		
+		var troisieme_lafayette = document.getElementById("3eme_madame_de_lafayette");
+		var troisieme_exupery = document.getElementById("3eme_saint_exupery");
+		var quatrieme_lafayette = document.getElementById("4eme_madame_de_lafayette");
+		var cinquieme_lafayette = document.getElementById("5eme_madame_de_lafayette");
+		var cinquieme_exupery = document.getElementById("5eme_saint_exupery");
+		var cinquieme_vailland = document.getElementById("5eme_roger_vailland");
+		var sixieme_lafayette = document.getElementById("6eme_madame_de_lafayette");
+		var sixieme_exupery = document.getElementById("6eme_saint_exupery");
+		var sixieme_vailland = document.getElementById("6eme_roger_vailland");
+
+		create_link(ListeCours.troisieme["madame_de_lafayette"], "3eme", troisieme_lafayette)
+		create_link(ListeCours.troisieme["saint_exupery"], "3eme", troisieme_exupery)
+		create_link(ListeCours.quatrieme["madame_de_lafayette"], "4eme", quatrieme_lafayette)
+		create_link(ListeCours.cinquieme["madame_de_lafayette"], "5eme", cinquieme_lafayette)
+		create_link(ListeCours.cinquieme["saint_exupery"], "5eme", cinquieme_exupery)
+		create_link(ListeCours.cinquieme["roger_vailland"], "5eme", cinquieme_vailland)
+		create_link(ListeCours.sixieme["madame_de_lafayette"], "6eme", sixieme_lafayette)
+		create_link(ListeCours.sixieme["saint_exupery"], "6eme", sixieme_exupery)
+		create_link(ListeCours.sixieme["roger_vailland"], "6eme", sixieme_vailland)
+
+	</script>
 </html>
