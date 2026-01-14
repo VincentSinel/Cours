@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/MainPage.css"> 
+  <link rel="stylesheet" href="/CSS/MenuPrincipal.css"> 
+  <link rel="stylesheet" href="Exerciseur.css"> 
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Images/favicon-16x16.png">
+  <link rel="manifest" href="/Images/site.webmanifest">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Exerciseur</title>
+
+</head>
+
+<body onload="ExerciseurLoad()">
+	
+	<div class="exercice_container">
+		<div class="menu">
+			<button class="iconbutton" onclick="Regenerate()">
+				<div class="flexline">
+					<img src="/Images/Icons/Shuffle.svg">
+					<label class="button-text">Générer</label>
+				</div>
+			</button>
+			<button id="correction_button" class="iconbutton" onclick="Correction()">
+				<div class="flexline">
+					<img src="/Images/Icons/Correction.svg">
+					<label class="button-text">Correction</label>
+				</div>
+			</button>
+			<button id="exercice_button" class="iconbutton" onclick="Exercice()">
+				<div class="flexline">
+					<img src="/Images/Icons/Exercice.svg">
+					<label class="button-text">Exercice</label>
+				</div>
+			</button>
+		</div>
+	
+		<div class="exercice_content">
+			<div id="exercice">
+			</div>
+			<div id="correction">
+			</div>
+		</div>
+	</div>
+     
+
+</body>
+<script>
+
+	var generators = []
+	var loaded = 0;
+
+	function ExerciseurLoad()
+	{
+		const urlParams = new URLSearchParams(window.location.search);
+		var classe = urlParams.get("classe");
+		var ids = urlParams.get("id");
+		ids = ids.split("-");
+		
+		var head = document.getElementsByTagName('head')[0];
+		ids.forEach(id => {
+			var script = document.createElement('script');
+			script.type = 'text/javascript';
+			script.src = "Exercices/Generator_" + id.toString() + ".js";
+
+			var callback = function() { CheckLoad(classe, ids.length) }
+
+			script.onreadystatechange = callback;
+			script.onload = callback;
+
+			head.appendChild(script);
+		});
+	}
+
+	function CheckLoad(classe, target)
+	{
+		loaded++;
+		if (loaded == target)
+		{
+			Regenerate(classe)
+		}
+	}
+
+	function Regenerate(classe)
+	{
+		var index = Math.floor(Math.random() * generators.length)
+		var result = generators[index](classe);
+
+		document.getElementById("exercice").innerHTML = "";
+		document.getElementById("correction").innerHTML = "";
+		document.getElementById("exercice").appendChild(result.exercice)
+		document.getElementById("correction").appendChild(result.correction)
+
+		MathJax.typesetPromise();
+	}
+
+	function Correction()
+	{
+		document.getElementById("exercice").style.display = "none"
+		document.getElementById("correction_button").style.display = "none"
+		document.getElementById("correction").style.display = "inline-block"
+		document.getElementById("exercice_button").style.display = "inline-block"
+	}
+
+	function Exercice()
+	{
+		document.getElementById("correction").style.display = "none"
+		document.getElementById("exercice_button").style.display = "none"
+		document.getElementById("exercice").style.display = "inline-block"
+		document.getElementById("correction_button").style.display = "inline-block"
+	}
+
+	Exercice();
+
+</script>

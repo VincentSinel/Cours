@@ -1,0 +1,69 @@
+body{
+	height: 100%;
+	max-height: 100%;
+	min-height: 100%;
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+}
+
+.menu{
+	display: flex;
+	gap: 5px;
+	margin-top: 5px;
+	flex-direction: row;
+	justify-content: stretch;
+	align-items: stretch;
+}
+.menu > img{
+	max-height: 24px;
+}
+
+.iconbutton{
+	width: auto;
+	min-width: 100px;
+	height: 30px;
+	transition: 150ms;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: var(--HeadMenuButton);
+  color: #F9F9FF;
+}
+
+.iconline > div{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.button-text{
+	-webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+	flex-basis: 100%; 
+	text-align: center;
+}
+
+
+.flexline{
+	display: flex;
+	align-items: center;
+}
+
+
+.exercice_container {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	min-height: 100%;
+	max-height: 100%;
+	margin: 0;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+.exercice_content{
+	flex: auto 1 1;
+	overflow-y: scroll;
+	background-color: var(--PanelBackText);
+	padding: 10px;
+}
