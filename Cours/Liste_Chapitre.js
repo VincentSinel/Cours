@@ -2801,18 +2801,18 @@ var sixieme_saintexupery = [
 	}, // Chapitre 13 Partie 3
 	{
 		id: 43,
-		chapter: "Partie 1",
+		chapter: "Chapitre 14",
 		nom: "Problèmes de valeurs inconnues",
 		icone: 29,
 		download: {
-			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_14_1/Documents/Chapitre 14 - Partie 1 - Problèmes de valeurs inconnues (Complet).docx",
-			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_14_1/Documents/Chapitre 14 - Partie 1 - Problèmes de valeurs inconnues (Complet).pdf",
-			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_14_1/Documents/Chapitre 14 - Partie 1 - Problèmes de valeurs inconnues (A trou).docx",
-			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_14_1/Documents/Chapitre 14 - Partie 1 - Problèmes de valeurs inconnues (A trou).pdf",
+			docx: 		 "/Cours/6eme/SaintExupery/Chapitre_14_1/Documents/Chapitre 14 - Problèmes de valeurs inconnues (Complet).docx",
+			pdf:  		 "/Cours/6eme/SaintExupery/Chapitre_14_1/Documents/Chapitre 14 - Problèmes de valeurs inconnues (Complet).pdf",
+			docx_trou: "/Cours/6eme/SaintExupery/Chapitre_14_1/Documents/Chapitre 14 - Problèmes de valeurs inconnues (A trou).docx",
+			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_14_1/Documents/Chapitre 14 - Problèmes de valeurs inconnues (A trou).pdf",
 			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 14 - Activité d'introduction.docx",
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 14 - Activité d'introduction.pdf",
 		},
-		ready : false,
+		ready : true,
 		page : "SaintExupery/Chapitre_14_1/Cours.html",
 	}, // Chapitre 14 Partie 1
 ]

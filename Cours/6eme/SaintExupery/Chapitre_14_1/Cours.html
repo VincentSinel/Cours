@@ -28,14 +28,107 @@
       </td>
     </tr>
     <tr>
-      <td id="ChapitreNumero">
-        Partie 1
-      </td>
       <td id="ChapitreNom">
-        - Nombres entiers
+        Problèmes de valeurs inconnues
       </td>
     </tr>
   </table>
+
+  <h1>Algèbre :</h1>
+    <p>En mathématiques, pour résoudre des problèmes, il est souvent plus facile de représenter les informations sous forme de schéma. On utilise alors un dessin, un mot ou une lettre pour représenter les nombres que l'on ne connaît pas encore.</p>
+
+    <p>
+      En sixième on utilise encore des symboles, par exemple : ⚽ + ⚽ = 34€<br>
+      Cela permet de représenter le prix de deux ballons.
+    </p>
+  <h1>Schéma :</h1>
+    <p>Pour résoudre des problèmes, on utilise principalement les schémas suivants. Il est aussi possible de choisir son propre schéma, mais il ne faut oublier aucune information.</p>
+    <h2>Egalité :</h2>
+        <p class="exemple">Exemple 1 :</p>
+        <p>
+          Cinq poires identiques pèsent 600 g.<br>
+          On peut représenter cela par l'égalité : 🍐 + 🍐 + 🍐 + 🍐 + 🍐 = 600g.<br>
+          On peut donc déterminer la masse d'une poire représentée par le symbole de poire dans ce calcul.<br>
+          🍐 = 600 ÷ 5 = 120g. Une poire pèse 120g
+        </p>
+        <p class="exemple">Exemple 2 :</p>
+        <p>
+          On dispose de carton et de baril identiques (de même masse). Voici deux pesées effectuées sur deux chargements différents.<br>
+          🛢️ + 📦️ = 90 kg<br>
+          🛢️ + 🛢️ + 🛢️ + 📦️ = 198 kg<br>
+          Pour connaître la masse d'un carton et d'un baril, on peut effectuer les calculs suivants :<br>
+          <img src="Images/Exemple2.svg" style="max-height: 3cm;"><br>
+          🛢️📦️ pèsent 90kg et 🛢️🛢️🛢️📦️ pèsent 198 kg. Donc 🛢️🛢️ pèsent 198 - 90 soit 108 kg.<br>
+          Un baril pèse donc 108 ÷ 2 = 54 kg.<br>
+          Un carton pèse donc 90 - 54 = 36 kg.
+        </p>
+    <h2>Figure évolutive :</h2>
+        <p class="exemple">Exemple :</p>
+        <div class="flexobject">
+          <div class="flexobject" style="flex-direction: column;">
+            Motif 0
+            <img src="Images/image0.svg" style="height: 2cm;">
+          </div>
+          <div class="flexobject" style="flex-direction: column;">
+            Motif 1
+            <img src="Images/image1.svg" style="height: 2cm;">
+          </div>
+          <div class="flexobject" style="flex-direction: column;">
+            Motif 2
+            <img src="Images/image2.svg" style="height: 2cm;">
+          </div>
+          <div class="flexobject" style="flex-direction: column;">
+            ............
+          </div>
+        </div>
+        <p>
+          Pour déterminer le nombre de segment composant un motif de numéro élevé, on cherche une relation entre le numéro du motif et le nombre de segment qui le composent. Pour cela, on peut organiser les valeurs dans un tableau et observer l'évolution du nombre de segments.
+        </p>
+        <table class="proportionnaltable">
+          <tr>
+            <th>Motif</th>
+            <th>Nombre de segment</th>
+            <th>Calcul</th>
+          </tr>
+          <tr>
+            <td><span class="CRed">0</span></td>
+            <td>4</td>
+            <td>= 4 + (3 × <span class="CRed">0</span>)</td>
+          </tr>
+          <tr>
+            <td><span class="CRed">1</span></td>
+            <td>7</td>
+            <td>= 4 + (3 × <span class="CRed">1</span>)</td>
+          </tr>
+          <tr>
+            <td><span class="CRed">2</span></td>
+            <td>10</td>
+            <td>= 4 + (3 × <span class="CRed">2</span>)</td>
+          </tr>
+          <tr>
+            <td><span class="CRed">3</span></td>
+            <td>13</td>
+            <td>= 4 + (3 × <span class="CRed">3</span>)</td>
+          </tr>
+          <tr>
+            <td><span class="CRed">4</span></td>
+            <td>16</td>
+            <td>= 4 + (3 × <span class="CRed">4</span>)</td>
+          </tr>
+          <tr>
+            <td><span class="CRed">...</span></td>
+            <td>...</td>
+            <td>= 4 + (3 × <span class="CRed">...</span>)</td>
+          </tr>
+        </table>
+        <p>
+          On obtient donc une formule permettant de trouver pour le motif 50, par exemple : <br>
+          4 + (3 × 50) = 154 segments.<br>
+          On utilise petit à petit des lettres. On note <span class="CRed">M</span> le numéro du motif et la formule obtenu est 4 + (3 × <span class="CRed">M</span>)
+        </p>
+        
+        
+    
 
         
 </body>
