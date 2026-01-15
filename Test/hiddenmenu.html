@@ -116,7 +116,7 @@
 				a1.innerHTML = name;
 				li.appendChild(a1);
 				element.appendChild(li);
-				if (chapitre.hasOwnProperty("download"))
+				if (chapitre.hasOwnProperty("download") && chapitre.ready)
 				{
 					if (chapitre.download.hasOwnProperty("pdf"))
 					{
