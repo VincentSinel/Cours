@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.11 138.57">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #009640;
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke: #e30613;
+      }
+
+      .cls-3 {
+        stroke: #1d1d1b;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-3" points="44.06 16.56 .76 118.56 44.06 118.56 87.36 118.56 44.06 16.56"/>
+  <line class="cls-2" x1="44.06" x2="44.06" y2="138.57"/>
+  <line class="cls-1" x1="12.57" y1="77.54" x2="20.53" y2="85.5"/>
+  <line class="cls-1" x1="75.67" y1="77.54" x2="67.71" y2="85.5"/>
+</svg>

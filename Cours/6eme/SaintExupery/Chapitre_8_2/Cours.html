@@ -13,8 +13,16 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+  <script src="/JS/Svg.js/svg.min.js" charset="utf-8"></script>
+  <script src="JS/Transformation.js"></script>
 
   <style>
+    #symetrieaxiale
+    {
+      border: solid black 1px; 
+      width: fit-content;
+      display: inline-block;
+    }
   </style>
 
 </head>
@@ -32,14 +40,64 @@
         Partie 2
       </td>
       <td id="ChapitreNom">
-        - Nombres entiers
+        - Propriétés de la symétrie axiale
       </td>
     </tr>
   </table>
+
+  <h1>Propriétés :</h1>
+      <div class="definition">
+        <b><u>Propriétés :</u></b><br>
+        <ul>
+          <li>Une symétrie axiale conserve les propriétés géométriques et les mesures.</li>
+          <li>Si trois points sont alignés, alors leurs symétriques par rapport à un axe sont aussi alignés.</li>
+          <li>Si deux angles sont symétriques par rapport à un axe, alors ils ont la même mesure.</li>
+          <li>Si deux figures sont symétriques par rapport à un axe, alors elles ont le même périmètre et la même aire.</li>
+        </ul>
+      </div>
+      <p class="exemple">Exemple :</p>
+      <div id="symetrieaxiale"></div>
+      <br>
+      <br>
+      <div class="definition">
+        Le symétrique d'un point se trouvant sur l'axe de symétrie est <b>lui-même</b>.<br>
+      </div>
+  <h1>Application :</h1>
+      <p>
+        On peut utiliser les propriétés de la symétrie axiale pour construire le symétrique d'une figure en plus rapidement.
+      </p>
+      <p class="exemple">Exemple :</p>
+      <img src="Images/Proprietes.svg" alt="utilisation des propriétés de la symétrie axiale" style="max-height: 8cm;">
+      <p>
+        Pour construire le symétrique de la figure, il suffit de construire le symétrique des différents points. On peut alors utiliser les propriétés de la symétrie axiale pour construire les arcs de cercle car les longueurs sont conservées.
+      </p>
 
         
 </body>
 <script>
 	document.title = document.getElementById("ChapitreNumero").innerHTML + " " + document.getElementById("ChapitreNom").innerHTML
+  
+  let client = new XMLHttpRequest();
+  client.open('GET', 'Images/Lobster.svg');
+  client.onreadystatechange = function(state) {
+      if (client.readyState == 4)
+      {
+          lobster1img = client.responseText
+          if (lobster2img != "")
+              Init()
+      }
+  }
+  client.send();
+  let client2 = new XMLHttpRequest();
+  client2.open('GET', 'Images/Lobster2.svg');
+  client2.onreadystatechange = function(state) {
+      if (client2.readyState == 4)
+      {
+          lobster2img = client2.responseText
+          if (lobster1img != "")
+              Init()
+      }
+  }
+  client2.send();
 </script>
 </html>
