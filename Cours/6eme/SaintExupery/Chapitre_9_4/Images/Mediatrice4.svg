@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 201.9 164.4" style="enable-background:new 0 0 201.9 164.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#008D36;}
+	.st1{fill:none;stroke:#1D1D1B;stroke-width:2;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#E30613;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st3{enable-background:new    ;}
+	.st4{fill:#1D1D1B;}
+	.st5{fill:none;stroke:#B44090;stroke-linecap:round;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#E7D900;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:#74BD83;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+<rect x="138.8" y="68.6" transform="matrix(0.7503 -0.6611 0.6611 0.7503 -12.6398 113.1401)" class="st0" width="9.3" height="9.3"/>
+<rect x="101.4" y="117.7" transform="matrix(4.344502e-02 -0.9991 0.9991 4.344502e-02 -20.7313 222.9947)" class="st0" width="9.3" height="9.3"/>
+<rect x="41.4" y="64.8" transform="matrix(0.5714 -0.8207 0.8207 0.5714 -37.2516 67.6069)" class="st0" width="9.3" height="9.3"/>
+<polygon class="st1" points="88.4,1.6 45.2,62.6 1.9,123.6 100.8,127.3 199.6,131 144,66.3 "/>
+<polyline class="st2" points="16,41.9 45.2,62.6 112.4,110.3 "/>
+<polyline class="st2" points="173.9,40.6 144,66.3 79.3,121.9 "/>
+<polyline class="st2" points="99.4,163.4 100.8,127.3 104.5,28.4 "/>
+<g>
+	<g class="st3">
+		<path class="st4" d="M92.4,84.7l4-8.9h1.8v13.5h-1.8V79.2l0.1,0.6l-3.3,7.6h-1.3l-3.3-7.5l0.1-0.8v10.1h-1.8V75.8h1.8L92.4,84.7z"
+			/>
+	</g>
+</g>
+<polygon class="st5" points="144.5,124.3 142.4,132.9 150.9,130.4 "/>
+<polygon class="st5" points="41.7,119.8 39.6,128.4 48.1,125.9 "/>
+<circle class="st6" cx="172.4" cy="99.1" r="5"/>
+<circle class="st6" cx="117.5" cy="34.8" r="5"/>
+<g>
+	<line class="st7" x1="16" y1="91.7" x2="27.6" y2="97.4"/>
+	<line class="st7" x1="18.3" y1="89.3" x2="29.9" y2="95"/>
+</g>
+<g>
+	<line class="st7" x1="60.9" y1="27.3" x2="71.6" y2="34.7"/>
+	<line class="st7" x1="63.6" y1="25.3" x2="74.2" y2="32.7"/>
+</g>
+</svg>
