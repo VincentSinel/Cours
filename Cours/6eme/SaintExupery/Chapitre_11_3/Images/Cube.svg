@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:svgjs="http://svgjs.com/svgjs" width="344" height="344" viewBox="0 0 344 344">
+	<polygon points="172,172 316.6262424320013,88.5 316.6262424320013,255.5 172,339" stroke="none" fill="red"></polygon>
+	<polygon points="27.37375831604004,88.5 172.0000007480413,172 172.0000007480413,339 27.37375831604004,255.5"
+		stroke="none" fill="blue"></polygon>
+	<polygon points="27.37375831604004,88.5 172.0000007480413,172 316.6262431800426,88.5 172.0000007480413,5"
+		stroke="none" fill="yellow"></polygon>
+	<line x1="316.626220703125" y1="255.5" x2="316.626220703125" y2="88.5" stroke="black" stroke-width="15"
+		stroke-linecap="round" stroke-linejoin="round"></line>
+	<line x1="316.6262424320013" y1="255.5" x2="172" y2="339" stroke="black" stroke-width="15" stroke-linecap="round"
+		stroke-linejoin="round"></line>
+	<line x1="172" y1="5" x2="316.6262424320013" y2="88.5" stroke="black" stroke-width="15" stroke-linecap="round"
+		stroke-linejoin="round"></line>
+	<line x1="172.0000007480413" y1="5" x2="27.37375831604004" y2="88.5" stroke="black" stroke-width="15"
+		stroke-linecap="round" stroke-linejoin="round"></line>
+	<line x1="316.6262424320013" y1="88.5" x2="172" y2="172" stroke="black" stroke-width="15" stroke-linecap="round"
+		stroke-linejoin="round"></line>
+	<line x1="27.37375831604004" y1="255.5" x2="27.37375831604004" y2="88.5" stroke="black" stroke-width="15"
+		stroke-linecap="round" stroke-linejoin="round"></line>
+	<line x1="27.37375831604004" y1="255.5" x2="172.0000007480413" y2="339" stroke="black" stroke-width="15"
+		stroke-linecap="round" stroke-linejoin="round"></line>
+	<line x1="172" y1="339" x2="172" y2="172" stroke="black" stroke-width="15" stroke-linecap="round"
+		stroke-linejoin="round"></line>
+	<line x1="27.37375831604004" y1="88.5" x2="172.0000007480413" y2="172" stroke="black" stroke-width="15"
+		stroke-linecap="round" stroke-linejoin="round"></line>
+</svg>

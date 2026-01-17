@@ -32,14 +32,72 @@
         Partie 3
       </td>
       <td id="ChapitreNom">
-        - Nombres entiers
+        - Volumes
       </td>
     </tr>
   </table>
 
+  <h1>Définition :</h1>
+      <div class="definition">
+        Le <span class="CRed">volume</span> est la mesure du contenue d'un solide en trois dimensions.
+      </div>
+      <p class="exemple">Exemple :</p>
+      <p>
+        On définit une unité de volume et on compte le nombre de fois que celle-ci peut être mise dans notre solide pour obtenir son volume.
+      </p>
+      <img src="Images/Volume.svg" style="height: 10cm;">
+      <p>
+        Ici on peut mettre 10 par 15 par 8 cubes d'unité de volume, soit 10×15×8=1200 cubes
+      </p>
+
+      <div style="width: 410px; padding: 5px; text-align: center; border: solid black 1px;">
+        <div class="flexobject" style="gap: 5px;">
+            <label for="cube_size_l">Longueur :</label>
+            <input type="number" value="10" min="1" max="12" id="cube_size_l" oninput="Resize()" style="width: 55px;">
+            <label for="cube_size_l">Largeur :</label>
+            <input type="number" value="10" min="1" max="12" id="cube_size_p" oninput="Resize()">
+            <label for="cube_size_l">Hauteur :</label>
+            <input type="number" value="10" min="1" max="12" id="cube_size_h" oninput="Resize()">
+        </div><br>
+        <canvas id="cube_visualisation" height="360" width="360"></canvas><br>
+        <div>
+            <input id="cube_draw" style="width: 100%;" type="range" 
+            value="0" min="0" max="1000" step="1" oninput="Redraw_range()">
+            <input type="number" value="0" min="0" max="1000" id="cube_draw_value" oninput="Redraw_spin()">
+        </div>
+      </div>
+  <h1>Mesure :</h1>
+      <div class="definition">
+        Un <span class="CRed">centimètre cube</span> est le volume d'un cube de 1cm de côté. On le note $cm^3$. C'est une des unités courantes du volume.
+      </div>
+      <p class="remarque">Remarques :</p>
+      <ul>
+        <li>Il existe plusieurs unités de volumes, on utilise dans le système international le <b>mètre cube</b> et ses sous unités ou le <b>Litre</b></li>
+        <li>1 décimètre cube (1 $dm^3$) = 1 Litre (1 L)</li>
+      </ul>
+
+      <p>Pour mesurer le volume d'un objet, on peut effectuer un dénombrement du nombre de cubes qu'il contient :</p>
+      <div class="flexobject">
+        <img src="Images/Vue_isometrique.svg" style="height: 10cm;">
+        <div>
+          <img src="Images/Cube.svg" style="height: 2cm;"><br>
+
+          Ici la figure est composée de cube unité comme ci-dessus (de 1 $cm^3$).<br>
+          Elle est formée de 5 couches composées comme suit :<br>
+          <ul>
+            <li>Couche 1 : 1 cube</li>
+            <li>Couche 2 : 2 × 2 = 4 cubes</li>
+            <li>Couche 3 : 3 × 3 = 9 cubes</li>
+            <li>Couche 4 : 4 × 4 = 16 cubes</li>
+            <li>Couche 5 : 5 × 5 = 25 cubes</li>
+          </ul>
+          Soit au total 1 + 4 + 9 + 16 + 25 = 55 cubes. Son volume est donc de 55 $cm^3$.
+        </div>
+      </div>
         
 </body>
 <script>
 	document.title = document.getElementById("ChapitreNumero").innerHTML + " " + document.getElementById("ChapitreNom").innerHTML
 </script>
+<script src="JS/Intro.js"></script>
 </html>
