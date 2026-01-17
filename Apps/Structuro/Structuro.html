@@ -32,6 +32,7 @@
 				<img src="/Images/Icons/Help.svg" onmouseover="ShowHelp('Help_Width');" onmouseout="ShowHelp('Help_Width');">
 				<div class="infobulle">
 					<div class="infobulle-texte" id="Help_Width" style="display: none;">
+						Sur les vues de gauche, face et dessus :<br>
 						Faites un clic gauche pour ajouter des cubes.<br>
 						Faites un clic droit pour retirer des cubes.<br>
 						Faites un clic de la molette pour retourner la vue.<br>
@@ -48,6 +49,12 @@
 				<input type="number" min="1" max="10" step="1" value="5" id="structuro_depth" oninput="ChangeCubeSize()">
 				<img src="/Images/Icons/Font Size.svg">
 				<input type="number" min="0" step="1" value="12" id="structuro_txt_size" oninput="RecreateGrid()">
+				<input type="checkbox" id="structuro_showalledge" oninput="RecreateGrid()" style="width: 30px; flex-grow: 0;">
+				<label for="structuro_showalledge">Afficher toutes les arêtes</label>
+				<input type="checkbox" id="structuro_showgrid" oninput="RecreateGrid()" style="width: 30px; flex-grow: 0;" checked>
+				<label for="structuro_showgrid">Afficher la grille</label>
+				<input type="checkbox" id="structuro_showtitle" oninput="RecreateGrid()" style="width: 30px; flex-grow: 0;" checked>
+				<label for="structuro_showtitle">Afficher les titres</label>
 			</div>
 		</div>
 		<div class="tool-axe">

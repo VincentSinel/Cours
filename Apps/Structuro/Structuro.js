@@ -15,9 +15,14 @@ var View_Front_flip = false;
 var View_Right_flip = true;
 var View_Top_flip = false;
 
+var View_AllEdge = false;
+var View_GridLines = true;
+var View_ShowTitle = true;
+
 var Cubes = [[[0]]]
 
 var font_size = 12;
+var offset_face = 1
 
 function Cube_w()
 {
@@ -50,6 +55,12 @@ var grid_style_2 = {
 var stroke_style = {
 		stroke: "black",
 		"stroke-width": 3,
+		"stroke-linecap": "round",
+		"stroke-linejoin": "round",
+	}
+var stroke_style2 = {
+		stroke: "black",
+		"stroke-width": 1,
 		"stroke-linecap": "round",
 		"stroke-linejoin": "round",
 	}
@@ -146,6 +157,9 @@ function ChangeCubeSize()
 function RecreateGrid()
 {
 	font_size = document.getElementById("structuro_txt_size").valueAsNumber;
+	View_AllEdge = document.getElementById("structuro_showalledge").checked;
+	View_GridLines = document.getElementById("structuro_showgrid").checked;
+	View_ShowTitle = document.getElementById("structuro_showtitle").checked;
 	text_style["font-size"] = font_size * 2
 	Resize()
 	DrawFront()
@@ -160,7 +174,7 @@ function Resize()
 	let w = document.getElementById("grid_container").clientWidth;
 	let h = document.getElementById("grid_container").clientHeight;
 	let dw = Math.floor((w - 10) / 3.0);
-	let dh = Math.floor((h - 5) / 2.0);
+	let dh = Math.floor((h - 45) / 2.0);
 	let size = Math.min(dw, dh);
 
 	View_Front["view"].size(size, size);
@@ -192,23 +206,26 @@ function DrawFront()
 
 	let lines = []
 	// Create grid
-	for (let x = 0; x <= Cube_w() * 2; x++) {
-		let line = View_Front["cnt"].line(x * cube_size / 2, 0, x * cube_size / 2, cube_size * Cube_h())
-		line.dmove(offset.x, offset.y)
-		if (x % 2 === 0)
-			line.attr(grid_style)
-		else 
-			line.attr(grid_style_2)
-		lines.push(line);
-	}
-	for (let y = 0; y <= Cube_h() * 2; y++) {
-		let line = View_Front["cnt"].line(0, y * cube_size / 2, cube_size * Cube_w(), y * cube_size / 2)
-		line.dmove(offset.x, offset.y)
-		if (y % 2 === 0)
-			line.attr(grid_style)
-		else 
-			line.attr(grid_style_2)
-		lines.push(line);
+	if (View_GridLines)
+	{
+		for (let x = 0; x <= Cube_w() * 2; x++) {
+			let line = View_Front["cnt"].line(x * cube_size / 2, 0, x * cube_size / 2, cube_size * Cube_h())
+			line.dmove(offset.x, offset.y)
+			if (x % 2 === 0)
+				line.attr(grid_style)
+			else 
+				line.attr(grid_style_2)
+			lines.push(line);
+		}
+		for (let y = 0; y <= Cube_h() * 2; y++) {
+			let line = View_Front["cnt"].line(0, y * cube_size / 2, cube_size * Cube_w(), y * cube_size / 2)
+			line.dmove(offset.x, offset.y)
+			if (y % 2 === 0)
+				line.attr(grid_style)
+			else 
+				line.attr(grid_style_2)
+			lines.push(line);
+		}
 	}
 
 	let layer = View_Front_flip ? "back" : "front";
@@ -223,18 +240,34 @@ function DrawFront()
 				rect.dmove(offset.x, offset.y)
 				rect.attr(front_face)
 			}
-			if (GetTopDepth(x + 1,y, layer) != current)
+			var temp = GetTopDepth(x + 1,y, layer)
+			if (temp != current)
 			{
 				let line = View_Front["cnt"].line((x + 1) * cube_size, y * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
 				line.dmove(offset.x, offset.y)
 				line.attr(stroke_style)
 				lines.push(line);
 			}
-			if (GetTopDepth(x,y + 1, layer) != current)
+			else if (temp > 0 && View_AllEdge)
+			{
+				let line = View_Front["cnt"].line((x + 1) * cube_size, y * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
+				line.dmove(offset.x, offset.y)
+				line.attr(stroke_style2)
+				lines.push(line);
+			}
+			var temp = GetTopDepth(x,y + 1, layer)
+			if (temp != current)
 			{
 				let line = View_Front["cnt"].line(x * cube_size, (y + 1) * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
 				line.dmove(offset.x, offset.y)
 				line.attr(stroke_style)
+				lines.push(line);
+			}
+			else if (temp > 0 && View_AllEdge)
+			{
+				let line = View_Front["cnt"].line(x * cube_size, (y + 1) * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
+				line.dmove(offset.x, offset.y)
+				line.attr(stroke_style2)
 				lines.push(line);
 			}
 			current = GetCubeCount(x,y,layer);
@@ -253,7 +286,7 @@ function DrawFront()
 		line.front()
 	});
 
-	if (font_size > 0)
+	if (font_size > 0 && View_ShowTitle)
 	{
 		let title = View_Front["cnt"].text(View_Front_flip ? "Vue de dos" : "Vue de face")
 		title.move(5,5).font({ stroke:"white", 'stroke-width': 5, family: 'arial', weight: "bold", size: font_size })
@@ -282,23 +315,26 @@ function DrawRight()
 
 	let lines = []
 	// Create grid
-	for (let x = 0; x <= Cube_d() * 2; x++) {
-		let line = View_Right["cnt"].line(x * cube_size / 2, 0, x * cube_size / 2, cube_size * Cube_h())
-		line.dmove(offset.x, offset.y)
-		if (x % 2 === 0)
-			line.attr(grid_style)
-		else 
-			line.attr(grid_style_2)
-		lines.push(line);
-	}
-	for (let y = 0; y <= Cube_h() * 2; y++) {
-		let line = View_Right["cnt"].line(0, y * cube_size / 2, cube_size * Cube_d(), y * cube_size / 2)
-		line.dmove(offset.x, offset.y)
-		if (y % 2 === 0)
-			line.attr(grid_style)
-		else 
-			line.attr(grid_style_2)
-		lines.push(line);
+	if (View_GridLines)
+	{
+		for (let x = 0; x <= Cube_d() * 2; x++) {
+			let line = View_Right["cnt"].line(x * cube_size / 2, 0, x * cube_size / 2, cube_size * Cube_h())
+			line.dmove(offset.x, offset.y)
+			if (x % 2 === 0)
+				line.attr(grid_style)
+			else 
+				line.attr(grid_style_2)
+			lines.push(line);
+		}
+		for (let y = 0; y <= Cube_h() * 2; y++) {
+			let line = View_Right["cnt"].line(0, y * cube_size / 2, cube_size * Cube_d(), y * cube_size / 2)
+			line.dmove(offset.x, offset.y)
+			if (y % 2 === 0)
+				line.attr(grid_style)
+			else 
+				line.attr(grid_style_2)
+			lines.push(line);
+		}
 	}
 
 	let layer = View_Right_flip ? "left" : "right";
@@ -313,18 +349,34 @@ function DrawRight()
 				rect.dmove(offset.x, offset.y)
 				rect.attr(side_face)
 			}
-			if (GetTopDepth(x + 1,y, layer) != current)
+			let temp = GetTopDepth(x + 1,y, layer)
+			if (temp != current)
 			{
 				let line = View_Right["cnt"].line((x + 1) * cube_size, y * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
 				line.dmove(offset.x, offset.y)
 				line.attr(stroke_style)
 				lines.push(line);
 			}
-			if (GetTopDepth(x,y + 1, layer) != current)
+			else if (temp > 0 && View_AllEdge)
+			{
+				let line = View_Right["cnt"].line((x + 1) * cube_size, y * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
+				line.dmove(offset.x, offset.y)
+				line.attr(stroke_style2)
+				lines.push(line);
+			}
+			temp = GetTopDepth(x,y + 1, layer)
+			if (temp != current)
 			{
 				let line = View_Right["cnt"].line(x * cube_size, (y + 1) * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
 				line.dmove(offset.x, offset.y)
 				line.attr(stroke_style)
+				lines.push(line);
+			}
+			else if (temp > 0 && View_AllEdge)
+			{
+				let line = View_Right["cnt"].line(x * cube_size, (y + 1) * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
+				line.dmove(offset.x, offset.y)
+				line.attr(stroke_style2)
 				lines.push(line);
 			}
 			current = GetCubeCount(x,y,layer);
@@ -343,7 +395,7 @@ function DrawRight()
 	});
 
 
-	if (font_size > 0)
+	if (font_size > 0 && View_ShowTitle)
 	{
 		let title = View_Right["cnt"].text(View_Right_flip ? "Vue de gauche" : "Vue de droite")
 		title.move(5,5).font({ stroke:"white", 'stroke-width': 5, family: 'arial', weight: "bold", size: font_size })
@@ -372,23 +424,26 @@ function DrawTop()
 
 	let lines = []
 	// Create grid
-	for (let x = 0; x <= Cube_w() * 2; x++) {
-		let line = View_Top["cnt"].line(x * cube_size / 2, 0, x * cube_size / 2, cube_size * Cube_d())
-		line.dmove(offset.x, offset.y)
-		if (x % 2 === 0)
-			line.attr(grid_style)
-		else 
-			line.attr(grid_style_2)
-		lines.push(line);
-	}
-	for (let y = 0; y <= Cube_d() * 2; y++) {
-		let line = View_Top["cnt"].line(0, y * cube_size / 2, cube_size * Cube_w(), y * cube_size / 2)
-		line.dmove(offset.x, offset.y)
-		if (y % 2 === 0)
-			line.attr(grid_style)
-		else 
-			line.attr(grid_style_2)
-		lines.push(line);
+	if (View_GridLines)
+	{
+		for (let x = 0; x <= Cube_w() * 2; x++) {
+			let line = View_Top["cnt"].line(x * cube_size / 2, 0, x * cube_size / 2, cube_size * Cube_d())
+			line.dmove(offset.x, offset.y)
+			if (x % 2 === 0)
+				line.attr(grid_style)
+			else 
+				line.attr(grid_style_2)
+			lines.push(line);
+		}
+		for (let y = 0; y <= Cube_d() * 2; y++) {
+			let line = View_Top["cnt"].line(0, y * cube_size / 2, cube_size * Cube_w(), y * cube_size / 2)
+			line.dmove(offset.x, offset.y)
+			if (y % 2 === 0)
+				line.attr(grid_style)
+			else 
+				line.attr(grid_style_2)
+			lines.push(line);
+		}
 	}
 
 	let layer = View_Top_flip ? "bottom" : "top";
@@ -403,18 +458,34 @@ function DrawTop()
 				rect.dmove(offset.x, offset.y)
 				rect.attr(top_face)
 			}	
-			if (GetTopDepth(x + 1,y, layer) != current)
+			let temp = GetTopDepth(x + 1,y, layer)
+			if (temp != current)
 			{
 				let line = View_Top["cnt"].line((x + 1) * cube_size, y * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
 				line.dmove(offset.x, offset.y)
 				line.attr(stroke_style)
 				lines.push(line);
 			}
+			else if (temp > 0 && View_AllEdge)
+			{
+				let line = View_Top["cnt"].line((x + 1) * cube_size, y * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
+				line.dmove(offset.x, offset.y)
+				line.attr(stroke_style2)
+				lines.push(line);
+			}
+			temp = GetTopDepth(x,y + 1, layer)
 			if (GetTopDepth(x,y + 1, layer) != current)
 			{
 				let line = View_Top["cnt"].line(x * cube_size, (y + 1) * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
 				line.dmove(offset.x, offset.y)
 				line.attr(stroke_style)
+				lines.push(line);
+			}
+			else if (temp > 0 && View_AllEdge)
+			{
+				let line = View_Top["cnt"].line(x * cube_size, (y + 1) * cube_size, (x + 1) * cube_size, (y + 1) * cube_size)
+				line.dmove(offset.x, offset.y)
+				line.attr(stroke_style2)
 				lines.push(line);
 			}
 			current = GetCubeCount(x,y,layer);
@@ -432,7 +503,7 @@ function DrawTop()
 		line.front()
 	});
 
-	if (font_size > 0)
+	if (font_size > 0 && View_ShowTitle)
 	{
 		let title = View_Top["cnt"].text(View_Top_flip ? "Vue de dessous" : "Vue de dessus")
 		title.move(5,5).font({ stroke:"white", 'stroke-width': 5, family: 'arial', weight: "bold", size: font_size })
@@ -468,61 +539,64 @@ function DrawIso()
 
 	let lines = []
 	// Create grid
-	for (let x = 0; x <= (Cube_w() + Cube_d()); x++) {
-		let line = View_Iso.line(x * cube_size * sin60, 0, x * cube_size * sin60, cube_size * pot_h)
-		line.dmove(offset.x, offset.y)
-		line.attr(grid_style)
-		lines.push(line);
-	}
-	let sy = Cube_w() * cube_size / 2.0 - (Cube_w() + Cube_d()) * cube_size;
-	let more = Cube_d() % 2 * cube_size / 2
-	while (sy < pot_h * cube_size)
+	if (View_GridLines)
 	{
-		let x1 = 0; let x2 = r_w; let y1 = sy; let y2 = sy + (Cube_w() + Cube_d()) * cube_size / 2.0
-		if (y2 <= 0)
-		{
-			sy += cube_size;
-			continue;
-		} 
-		if (sy < 0)
-		{
-			x1 = (-sy) * sin60 * 2;
-			y1 = 0;
+		for (let x = 0; x <= (Cube_w() + Cube_d()); x++) {
+			let line = View_Iso.line(x * cube_size * sin60, 0, x * cube_size * sin60, cube_size * pot_h)
+			line.dmove(offset.x, offset.y)
+			line.attr(grid_style)
+			lines.push(line);
 		}
-		if (y2 > pot_h * cube_size)
+		let sy = Cube_w() * cube_size / 2.0 - (Cube_w() + Cube_d()) * cube_size;
+		let more = Cube_d() % 2 * cube_size / 2
+		while (sy < pot_h * cube_size)
 		{
-			y2 = pot_h * cube_size;
-			x2 = (pot_h * cube_size - sy) * sin60 * 2;
-		}
-		let line = View_Iso.line(x1, y1, x2, y2)
-		line.dmove(offset.x, offset.y)
-		line.attr(grid_style)
-		lines.push(line);
-		
-		y1 = y1 + more - (Cube_w() % 2) * cube_size / 2
-		y2 = y2 + more - (Cube_w() % 2) * cube_size / 2
-		if (Cube_w() % 2 == 1 && Cube_d() % 2 == 0)
-		{
-			y1 += cube_size;
-			y2 += cube_size;
-		}
-		if (y1 >= more && x1 > 1)
-		{
-			y1 = 0;
-			// x1 -= cube_size * sin60;
-			x1 -= cube_size * sin60 * ((Cube_w() + Cube_d()) % 2);
-		}
-		if (y2 > pot_h * cube_size)
-		{
-			x2 -= cube_size * sin60;
-			y2 = pot_h * cube_size;
-		}
-		let line2 = View_Iso.line(r_w - x1, y1, r_w - x2, y2)
-		line2.dmove(offset.x, offset.y)
-		line2.attr(grid_style)
-		lines.push(line2);
+			let x1 = 0; let x2 = r_w; let y1 = sy; let y2 = sy + (Cube_w() + Cube_d()) * cube_size / 2.0
+			if (y2 <= 0)
+			{
+				sy += cube_size;
+				continue;
+			} 
+			if (sy < 0)
+			{
+				x1 = (-sy) * sin60 * 2;
+				y1 = 0;
+			}
+			if (y2 > pot_h * cube_size)
+			{
+				y2 = pot_h * cube_size;
+				x2 = (pot_h * cube_size - sy) * sin60 * 2;
+			}
+			let line = View_Iso.line(x1, y1, x2, y2)
+			line.dmove(offset.x, offset.y)
+			line.attr(grid_style)
+			lines.push(line);
+			
+			y1 = y1 + more - (Cube_w() % 2) * cube_size / 2
+			y2 = y2 + more - (Cube_w() % 2) * cube_size / 2
+			if (Cube_w() % 2 == 1 && Cube_d() % 2 == 0)
+			{
+				y1 += cube_size;
+				y2 += cube_size;
+			}
+			if (y1 >= more && x1 > 1)
+			{
+				y1 = 0;
+				// x1 -= cube_size * sin60;
+				x1 -= cube_size * sin60 * ((Cube_w() + Cube_d()) % 2);
+			}
+			if (y2 > pot_h * cube_size)
+			{
+				x2 -= cube_size * sin60;
+				y2 = pot_h * cube_size;
+			}
+			let line2 = View_Iso.line(r_w - x1, y1, r_w - x2, y2)
+			line2.dmove(offset.x, offset.y)
+			line2.attr(grid_style)
+			lines.push(line2);
 
-		sy += cube_size;
+			sy += cube_size;
+		}
 	}
 	
 
@@ -531,6 +605,12 @@ function DrawIso()
 		let line = View_Iso.line(x1, y1, x2, y2)
 		line.dmove(offset.x, offset.y)
 		line.attr(stroke_style)
+	}
+	function _local_line2(x1, y1, x2, y2)
+	{
+		let line = View_Iso.line(x1, y1, x2, y2)
+		line.dmove(offset.x, offset.y)
+		line.attr(stroke_style2)
 	}
 
 	function _get_cubes(x,y,z)
@@ -557,26 +637,44 @@ function DrawIso()
 
 				if (((b*c + (a+b+c+d)% 2) * (1-d)) > 0)
 					_local_line(px, py, px, py - cube_size)
+				else if ((a+b+c+d) > 0 && View_AllEdge)
+					_local_line2(px, py, px, py - cube_size)
 				if (((e*b + (f+e+b+d)% 2) * (1-d)) > 0)
 					_local_line(px, py, px + cube_size * sin60, py + cube_size / 2)
+				else if ((f+e+b+d) > 0 && View_AllEdge)
+					_local_line2(px, py, px + cube_size * sin60, py + cube_size / 2)
 				if (((e*c + (g+e+c+d)% 2) * (1-d)) > 0)
 					_local_line(px, py, px - cube_size * sin60, py + cube_size / 2)
+				else if ((g+e+c+d) > 0 && View_AllEdge)
+					_local_line2(px, py, px - cube_size * sin60, py + cube_size / 2)
 					
 
 				if (d > 0)
 				{
-					let face_front = View_Iso.polygon([[0, cube_size / 2], [cube_size * sin60, 0], [cube_size * sin60, cube_size], [0,cube_size * 1.5]])
-					face_front.move(px, py - cube_size / 2)
+					let face_front = View_Iso.polygon([
+						[0, cube_size / 2], 
+						[cube_size * sin60 + offset_face * sin60, -offset_face / 2], 
+						[cube_size * sin60 + offset_face * sin60, cube_size + offset_face / 2], 
+						[0,cube_size * 1.5 + offset_face / 2]])
+					face_front.move(px, py - cube_size / 2 - offset_face / 2)
 					face_front.dmove(offset.x, offset.y)
 					face_front.attr(front_face)
 	
-					let face_left = View_Iso.polygon([[0,0], [cube_size * sin60, cube_size / 2], [cube_size * sin60,cube_size * 1.5], [0,cube_size]])
-					face_left.move(px - cube_size * sin60, py - cube_size / 2)
+					let face_left = View_Iso.polygon([
+						[-offset_face * sin60, -offset_face / 2], 
+						[cube_size * sin60, cube_size / 2], 
+						[cube_size * sin60,cube_size * 1.5 + offset_face / 2], 
+						[-offset_face * sin60,cube_size + offset_face / 2]])
+					face_left.move(px - cube_size * sin60 - offset_face * sin60, py - cube_size / 2 - offset_face / 2)
 					face_left.dmove(offset.x, offset.y)
 					face_left.attr(side_face)
 	
-					let face_top = View_Iso.polygon([[0,cube_size / 2], [cube_size * sin60, cube_size], [cube_size * sin60 * 2, cube_size / 2], [cube_size * sin60, 0]])
-					face_top.move(px - cube_size * sin60, py - cube_size)
+					let face_top = View_Iso.polygon([
+						[-offset_face * sin60,cube_size / 2 - offset_face / 2], 
+						[cube_size * sin60, cube_size], 
+						[cube_size * sin60 * 2 + offset_face * sin60, cube_size / 2 - offset_face / 2], 
+						[cube_size * sin60, - offset_face / 2]])
+					face_top.move(px - cube_size * sin60 - offset_face * sin60, py - cube_size - offset_face / 2)
 					face_top.dmove(offset.x, offset.y)
 					face_top.attr(top_face)
 				}
@@ -589,7 +687,7 @@ function DrawIso()
 	});
 
 
-	if (font_size > 0)
+	if (font_size > 0 && View_ShowTitle)
 	{
 		let title = View_Iso.text("Perspective isométrique")
 		title.move(5,5).font({ stroke:"white", 'stroke-width': 5, family: 'arial', weight: "bold", size: font_size })
@@ -612,17 +710,20 @@ function DrawCav()
 
 	let lines = []
 	// Create grid
-	for (let x = 0; x <= Cube_w() * 2 + Cube_d(); x++) {
-		let line = View_Cav.line(x * cube_size / 2, 0, x * cube_size / 2, cube_size * (Cube_h() + Cube_d() * 0.5))
-		line.dmove(offset.x, offset.y)
-		line.attr(grid_style)
-		lines.push(line);
-	}
-	for (let y = 0; y <= Cube_h() * 2 + Cube_d(); y++) {
-		let line = View_Cav.line(0, y * cube_size / 2, cube_size * (Cube_w() + Cube_d() * 0.5), y * cube_size / 2)
-		line.dmove(offset.x, offset.y)
-		line.attr(grid_style)
-		lines.push(line);
+	if (View_GridLines)
+	{
+		for (let x = 0; x <= Cube_w() * 2 + Cube_d(); x++) {
+			let line = View_Cav.line(x * cube_size / 2, 0, x * cube_size / 2, cube_size * (Cube_h() + Cube_d() * 0.5))
+			line.dmove(offset.x, offset.y)
+			line.attr(grid_style)
+			lines.push(line);
+		}
+		for (let y = 0; y <= Cube_h() * 2 + Cube_d(); y++) {
+			let line = View_Cav.line(0, y * cube_size / 2, cube_size * (Cube_w() + Cube_d() * 0.5), y * cube_size / 2)
+			line.dmove(offset.x, offset.y)
+			line.attr(grid_style)
+			lines.push(line);
+		}
 	}
 
 	function _local_line(x1, y1, x2, y2)
@@ -630,6 +731,12 @@ function DrawCav()
 		let line = View_Cav.line(x1, y1, x2, y2)
 		line.dmove(offset.x, offset.y)
 		line.attr(stroke_style)
+	}
+	function _local_line2(x1, y1, x2, y2)
+	{
+		let line = View_Cav.line(x1, y1, x2, y2)
+		line.dmove(offset.x, offset.y)
+		line.attr(stroke_style2)
 	}
 
 	function _get_cubes(x,y,z)
@@ -656,26 +763,40 @@ function DrawCav()
 
 				if (((b*c + (a+b+c+d)% 2) * (1-d)) > 0)
 					_local_line(px + cube_size, py, px + cube_size, py + cube_size)
+				else if ((a+b+c+d) > 0 && View_AllEdge)
+					_local_line2(px + cube_size, py, px + cube_size, py + cube_size)
 				if (((e*b + (f+e+b+d)% 2) * (1-d)) > 0)
 					_local_line(px + cube_size, py + cube_size, px + cube_size * 1.5, py + cube_size * 1.5)
+				else if ((f+e+b+d) > 0 && View_AllEdge)
+					_local_line2(px + cube_size, py + cube_size, px + cube_size * 1.5, py + cube_size * 1.5)
 				if (((e*c + (g+e+c+d)% 2) * (1-d)) > 0)
 					_local_line(px , py  + cube_size, px + cube_size , py + cube_size)
+				else if ((g+e+c+d) > 0 && View_AllEdge)
+					_local_line2(px , py  + cube_size, px + cube_size , py + cube_size)
 					
 
 				if (d > 0)
 				{
-					let face_front = View_Cav.rect(cube_size, cube_size)
+					let face_front = View_Cav.rect(cube_size + offset_face, cube_size + offset_face)
 					face_front.move(px + cube_size / 2, py + cube_size / 2)
 					face_front.dmove(offset.x, offset.y)
 					face_front.attr(front_face)
 	
-					let face_left = View_Cav.polygon([[0,0], [cube_size / 2,cube_size / 2], [cube_size / 2,cube_size * 1.5], [0,cube_size]])
-					face_left.move(px, py)
+					let face_left = View_Cav.polygon([
+						[-offset_face / 2,-offset_face / 2], 
+						[cube_size / 2,cube_size / 2], 
+						[cube_size / 2,cube_size * 1.5 + offset_face / 2], 
+						[-offset_face / 2,cube_size + offset_face / 2]])
+					face_left.move(px-offset_face / 2, py-offset_face / 2)
 					face_left.dmove(offset.x, offset.y)
 					face_left.attr(side_face)
 	
-					let face_top = View_Cav.polygon([[0,0], [cube_size,0], [cube_size * 1.5,cube_size / 2], [cube_size / 2,cube_size / 2]])
-					face_top.move(px, py)
+					let face_top = View_Cav.polygon([
+						[-offset_face / 2, - offset_face / 2], 
+						[cube_size + offset_face / 2, - offset_face / 2], 
+						[cube_size * 1.5 + offset_face / 2,cube_size / 2], 
+						[cube_size / 2,cube_size / 2]])
+					face_top.move(px - offset_face / 2, py - offset_face / 2)
 					face_top.dmove(offset.x, offset.y)
 					face_top.attr(top_face)
 				}
@@ -688,7 +809,7 @@ function DrawCav()
 	});
 
 
-	if (font_size > 0)
+	if (font_size > 0 && View_ShowTitle)
 	{
 		let title = View_Cav.text("Perspective cavalière")
 		title.move(5,5).font({ stroke:"white", 'stroke-width': 5, family: 'arial', weight: "bold", size: font_size })
