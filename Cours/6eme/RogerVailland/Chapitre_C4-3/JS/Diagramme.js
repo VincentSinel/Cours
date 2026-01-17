@@ -8,7 +8,7 @@ function CreateDiagrammes()
         "title": "Nombre d'élève en fonction de l'age",
         "effectifs": [4, 8 , 10, 2],
         "etiquettes": ["10 ans", "11 ans", "12 ans", "13 ans"],
-        "colors": ["#e60049", "#FFFFFF", "#FFFFFF", "#FFFFFF"],
+        "colors": ["#e60049FF", "#FFFFFFFF", "#FFFFFFFF", "#FFFFFFFF"],
         "border": true
     }
     Create_DiagCirculaire(config1);

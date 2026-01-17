@@ -6,6 +6,10 @@
   <meta http-equiv="content-language" content="fr">
   <link rel="stylesheet" href="/CSS/Cours.css"> 
 
+  <script src="/JS/Svg.js/svg.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+	<script src="/JS/Diagrammes/Diagramme_Holder.js"></script> 
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
     MathJax = {
@@ -32,12 +36,133 @@
         Partie 2
       </td>
       <td id="ChapitreNom">
-        - Nombres entiers
+        - Diagrammes
       </td>
     </tr>
   </table>
 
-        
+  <h1>Diagramme bâtons :</h1>
+    <div class="definition">
+      Dans un diagramme en bâtons, la hauteur des batôns est proportionnelle à la quantité représentée.
+    </div>
+    <div class="flexobject">
+      <div id="baton1" style="flex: 0 1 5cm;"></div>
+      <div style="flex: 1 1 5cm;">
+        Diagramme en bâtons de la répartition de la population de la france et des pays voisin en 2018.
+        <table class="proportionnaltable">
+          <tr>
+            <th>Pays</th>
+            <td>Allemagne</td>
+            <td>Belgique</td>
+            <td>Espagne</td>
+            <td>France</td>
+            <td>Italie</td>
+            <td>Luxembourg</td>
+            <td>Royaume-Uni</td>
+            <td>Suisse</td>
+          </tr>
+          <tr>
+            <th>Population<br>(en million)</th>
+            <td>84</td>
+            <td>11</td>
+            <td>47</td>
+            <td>67</td>
+            <td>60</td>
+            <td>1</td>
+            <td>67</td>
+            <td>9</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <p class="remarque">Remarque :</p>
+    <ul><li>Ce type de diagramme permet de représenter un tableau à simple entrée</li></ul>
+  <h1>Diagramme cartésien :</h1>
+    <div class="definition">
+      Dans un diagramme cartésien, on représente les valeur par des points relier entre eux. La position des points est définie par deux grandeur qui évolue entre-elles.
+    </div>
+    <div class="flexobject">
+      <div id="cartesien1" style="flex: 0 1 5cm;"></div>
+      <div style="flex: 1 1 5cm;">
+        Diagramme cartésien montrant l'évolution de la vitesse d'Usain Bolt en fonction de la distance parcourue en 2009 sur 100 m.<br>
+        On peut lire par exemple que à 30 m, sa vitesse était de 11 m/s.
+        <table class="proportionnaltable">
+          <tr>
+            <th>Distance (m)</th>
+            <td>0</td>
+            <td>10</td>
+            <td>20</td>
+            <td>30</td>
+            <td>40</td>
+            <td>50</td>
+            <td>60</td>
+            <td>70</td>
+            <td>80</td>
+            <td>90</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <th>Vitesse<br>(en m/s)</th>
+            <td>0</td>
+            <td>5,4</td>
+            <td>9,8</td>
+            <td>11</td>
+            <td>11,5</td>
+            <td>11,8</td>
+            <td>12,2</td>
+            <td>12,2</td>
+            <td>12,2</td>
+            <td>12</td>
+            <td>11,1</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <p class="remarque">Remarque :</p>
+    <ul><li>On utilise souvent ce type de diagramme pour représenter l'évolution d'une grandeur en fonction du temps.</li></ul>
+  <h1>Diagramme circulaire :</h1>
+          <div class="definition">
+            Dans un diagramme circulaire, la taille des sections est proportionnelle à la quantité représentée.
+          </div>
+          <div class="flexobject">
+            <div id="circulaire1" style="flex: 0 1 5cm;"></div>
+            <div style="flex: 1 1 5cm;">
+              Diagramme circulaire de la population mondiale par continent en 2022.<br>
+              Ici on peut voir que c'est l'Asie qui regroupe la plus grande partie de la population mondiale.
+              <table class="proportionnaltable">
+                <tr>
+                  <th>Continent</th>
+                  <td>Asie</td>
+                  <td>Afrique</td>
+                  <td>Amérique</td>
+                  <td>Europe</td>
+                  <td>Océanie</td>
+                  <th>Total</th>
+                </tr>
+                <tr>
+                  <th>Population</th>
+                  <td>4&#8239;722&#8239;635&#8239;000</td>
+                  <td>1&#8239;426&#8239;736&#8239;000</td>
+                  <td>1&#8239;037&#8239;140&#8239;000</td>
+                  <td>743&#8239;556&#8239;000</td>
+                  <td>45&#8239;039&#8239;000</td>
+                  <td>7&#8239;975&#8239;106&#8239;000</td>
+                </tr>
+                <tr>
+                  <th>Angle (°)</th>
+                  <td>213°</td>
+                  <td>64°</td>
+                  <td>47°</td>
+                  <td>34°</td>
+                  <td>2°</td>
+                  <td><b>360°</b></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <p class="remarque">Remarque :</p>
+          <ul><li>Ce type de diagramme permet de représenter un tableau à simple entrée</li></ul>
+
 </body>
 <script>
 	document.title = document.getElementById("ChapitreNumero").innerHTML + " " + document.getElementById("ChapitreNom").innerHTML
