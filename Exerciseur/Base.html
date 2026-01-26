@@ -20,6 +20,8 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+	<script src="/JS/Svg.js/svg.min.js"></script>
+	<script src="Geometrie.js"></script>
 
   <title>Exerciseur</title>
 
@@ -51,6 +53,20 @@
 	
 		<div class="exercice_content">
 			<div id="exercice">
+				<div class="flexobject">
+					<svg width="400" height="400">
+						<rect width="400" height="400" style="fill: red;"/>
+					</svg>
+					<p>
+						<ol>
+							<li>Cite deux droites sécantes.</li>
+							<li>Nommer E le point d'intersection de $(d_1)$ et $(d_2)$.</li>
+							<li>Que peut-on dire des points B, D et C ?.</li>
+							<li>Repasser en bleu [BD].</li>
+							<li>Repasser en vert [AC).</li>
+						</ol>
+					</p>
+				</div>
 			</div>
 			<div id="correction">
 			</div>
@@ -106,6 +122,7 @@
 		document.getElementById("correction").appendChild(result.correction)
 
 		MathJax.typesetPromise();
+		Exercice();
 	}
 
 	function Correction()

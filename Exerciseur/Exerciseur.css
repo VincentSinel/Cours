@@ -66,4 +66,26 @@ body{
 	overflow-y: scroll;
 	background-color: var(--PanelBackText);
 	padding: 10px;
+	font-family: Verdana, Helvetica, Geneva, Tahoma, sans-serif;
+}
+
+.flexobject{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.flexstretch{
+	flex: 5cm 1 1;
+}
+ol > li::marker {
+    font-weight: bold;
+}
+ul > li::marker {
+    font-weight: bold;
+}
+
+.correction{
+	color: red;
 }
