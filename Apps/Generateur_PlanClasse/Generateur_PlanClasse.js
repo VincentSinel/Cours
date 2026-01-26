@@ -854,8 +854,8 @@ function ClickPlan(e) {
   MouseRightClickPosition.y = e.layerY;
   if (e.target == document.getElementById("content"))
   {
-    let x = e.pageX - Math.max(0,176 + e.layerX - e.originalTarget.clientWidth)
-    let y = e.pageY - Math.max(0, 59 + e.layerY - e.originalTarget.clientHeight)
+    let x = e.pageX - Math.max(0,176 + e.layerX - e.srcElement.clientWidth)
+    let y = e.pageY - Math.max(0, 59 + e.layerY - e.srcElement.clientHeight)
     var menu = document.getElementById("contextMenu1")      
     menu.style.display = 'block'; 
     menu.style.left = x + "px"; 
@@ -863,8 +863,8 @@ function ClickPlan(e) {
   }
   else if (e.target.classList.contains("draggable"))
   {
-    let x = e.pageX - Math.max(0, 185 + e.layerX - e.originalTarget.clientWidth)
-    let y = e.pageY - Math.max(0, 136 + e.layerY - e.originalTarget.clientHeight)
+    let x = e.pageX - Math.max(0, 185 + e.layerX - e.srcElement.clientWidth)
+    let y = e.pageY - Math.max(0, 136 + e.layerY - e.srcElement.clientHeight)
     TableSelected = e.target.table;
     var menu = document.getElementById("contextMenu2")      
     menu.style.display = 'block';
