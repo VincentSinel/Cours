@@ -127,7 +127,7 @@ function CreateHTML(id)
 	let span1 = document.createElement("span");
 	span1.classList.add("resultat_title")
 	span1.classList.add("unselectable")
-	span1.innerText = name;
+	span1.innerText = name.replaceAll("_", " ");
 	div1.appendChild(span1)
 
 	let div2 = document.createElement("div");
