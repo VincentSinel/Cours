@@ -101,6 +101,10 @@ function CreatePDFButton()
     but = document.getElementById("PdfButtonAct");
     but.target="_blank";
     but.download="Activité d'introduction.pdf"
+
+    but = document.getElementById("PdfButtonImg");
+    but.target="_blank";
+    but.download="Image cours.pdf"
 }
 
 function SetDownloadButton(path, element)
@@ -116,6 +120,7 @@ function SetDownloadButton(path, element)
     let but_exo = document.getElementById("PdfButtonExo");
     let but_actx = document.getElementById("DocxButtonAct");
     let but_act = document.getElementById("PdfButtonAct");
+    let but_img = document.getElementById("PdfButtonImg");
     but_default.classList.add("deactivate")
     but_pdf1.classList.add("deactivate")
     but_pdf2.classList.add("deactivate")
@@ -127,6 +132,7 @@ function SetDownloadButton(path, element)
     but_exo.classList.add("deactivate")
     but_actx.classList.add("deactivate")
     but_act.classList.add("deactivate")
+    but_img.classList.add("deactivate")
     if (element.hasOwnProperty("download"))
     {
         let list = element.download;
@@ -217,6 +223,14 @@ function SetDownloadButton(path, element)
             but_act.href = list.act;
             but_act.download= list.act.substr(list.act.lastIndexOf("/") + 1);
             but_act.classList.remove("deactivate")
+        }
+
+        // Image PDF
+        if (list.hasOwnProperty("img"))
+        {
+            but_img.href = list.img;
+            but_img.download= list.img.substr(list.img.lastIndexOf("/") + 1);
+            but_img.classList.remove("deactivate")
         }
     
     }
