@@ -89,3 +89,19 @@ ul > li::marker {
 .correction{
 	color: red;
 }
+
+p{
+	color: black;
+}
+
+.program-calcul{
+	border: solid black 2px;
+	border-radius: 5px;
+	background-color: #F7794350;
+	padding-right: 10px;
+	line-height: 25pt;
+}
+
+ol.nodot-list{
+	list-style-type: none;
+}

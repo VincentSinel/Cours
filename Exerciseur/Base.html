@@ -22,6 +22,7 @@
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 	<script src="/JS/Svg.js/svg.min.js"></script>
 	<script src="Geometrie.js"></script>
+	<script src="Calcul.js"></script>
 
   <title>Exerciseur</title>
 
@@ -113,6 +114,8 @@
 
 	function Regenerate(classe)
 	{
+		const urlParams = new URLSearchParams(window.location.search);
+		var classe = urlParams.get("classe");
 		var index = Math.floor(Math.random() * generators.length)
 		var result = generators[index](classe);
 
@@ -122,7 +125,7 @@
 		document.getElementById("correction").appendChild(result.correction)
 
 		MathJax.typesetPromise();
-		Exercice();
+		// Exercice();
 	}
 
 	function Correction()

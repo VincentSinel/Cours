@@ -229,30 +229,34 @@ class Geometrie
 		let size = param.hasOwnProperty("size") ? param.size : 10;
 		let attr_sup = param.hasOwnProperty("attr") ? param.attr : {};
 		let attr_sup_text = param.hasOwnProperty("attr-text") ? param["attr-text"] : {};
+
+		let g = this.base_group.group();
 		
 		switch (type) {
 			case "+":
-				this.base_group.line(v.x - size / 2,v.y, v.x + size / 2,v.y).attr(this.base_line_attr).attr(attr_sup);
-				this.base_group.line(v.x, v.y - size / 2, v.x, v.y + size / 2).attr(this.base_line_attr).attr(attr_sup);		
+				g.line(v.x - size / 2,v.y, v.x + size / 2,v.y).attr(this.base_line_attr).attr(attr_sup);
+				g.line(v.x, v.y - size / 2, v.x, v.y + size / 2).attr(this.base_line_attr).attr(attr_sup);		
 				break;
 			case "x":
-				this.base_group.line(v.x - size / 2,v.y - size / 2, v.x + size / 2,v.y + size / 2).attr(this.base_line_attr).attr(attr_sup);
-				this.base_group.line(v.x - size / 2,v.y + size / 2, v.x + size / 2,v.y - size / 2).attr(this.base_line_attr).attr(attr_sup);		
+				g.line(v.x - size / 2,v.y - size / 2, v.x + size / 2,v.y + size / 2).attr(this.base_line_attr).attr(attr_sup);
+				g.line(v.x - size / 2,v.y + size / 2, v.x + size / 2,v.y - size / 2).attr(this.base_line_attr).attr(attr_sup);		
 				break;
 			case "o":
-				this.base_group.circle(size).attr(this.base_line_attr).attr(attr_sup).center(v.x,v.y);
+				g.circle(size).attr(this.base_line_attr).attr(attr_sup).center(v.x,v.y);
 				break;
 			default:
 				break;
 		}
-		this.txt_group.text(nom).attr(this.base_txt_attr).attr(attr_sup_text).attr(this.base_txt_back_attr).center(v.x + offsetX, v.y + offsetY);
-		this.txt_group.text(nom).attr(this.base_txt_attr).attr(attr_sup_text).center(v.x + offsetX, v.y + offsetY);
+		let g_txt = this.AjoutText(v.add(new Vecteur2(offsetX, offsetY)), nom, attr_sup_text);
+		return {svg: g, txt: g_txt};
 	}
 
 	AjouterSegment(line, param = {})
 	{
 		let attr_sup = param.hasOwnProperty("attr") ? param.attr : {};
-		this.base_group.line(line.p1.x, line.p1.y, line.p2.x, line.p2.y).attr(this.base_line_attr).attr(attr_sup);
+		let g = this.base_group.group()
+
+		g.line(line.p1.x, line.p1.y, line.p2.x, line.p2.y).attr(this.base_line_attr).attr(attr_sup);
 		let codage = param.hasOwnProperty("codage") ? param.codage : "none";
 		let c_size = param.hasOwnProperty("codage-size") ? param["codage-size"] : 20;
 		let c_color = param.hasOwnProperty("codage-color") ? param["codage-color"] : "#43a047";
@@ -266,39 +270,39 @@ class Geometrie
 				case "/":
 					let v3 = middle.add(dir.rotate(Math.PI / 2).mul(c_size / 2));
 					let v4 = middle.add(dir.rotate(-Math.PI / 2).mul(c_size / 2));
-					this.base_group.line(v3.x, v3.y, v4.x, v4.y).attr(this.base_line_attr).attr({stroke: c_color});
+					g.line(v3.x, v3.y, v4.x, v4.y).attr(this.base_line_attr).attr({stroke: c_color});
 					break;
 				case "//":
 					let offset = dir.mul(c_size / 3);
 					let v5 = middle.add(dir.rotate(Math.PI / 2).mul(c_size / 2)).add(offset);
 					let v6 = middle.add(dir.rotate(-Math.PI / 2).mul(c_size / 2)).add(offset);
-					this.base_group.line(v5.x, v5.y, v6.x, v6.y).attr(this.base_line_attr).attr({stroke: c_color});
+					g.line(v5.x, v5.y, v6.x, v6.y).attr(this.base_line_attr).attr({stroke: c_color});
 					let v7 = middle.add(dir.rotate(Math.PI / 2).mul(c_size / 2)).sub(offset);
 					let v8 = middle.add(dir.rotate(-Math.PI / 2).mul(c_size / 2)).sub(offset);
-					this.base_group.line(v7.x, v7.y, v8.x, v8.y).attr(this.base_line_attr).attr({stroke: c_color});
+					g.line(v7.x, v7.y, v8.x, v8.y).attr(this.base_line_attr).attr({stroke: c_color});
 					break;
 				case "///":
 					let offset2 = dir.mul(c_size / 2);
 					let v9 = middle.add(dir.rotate(Math.PI / 2).mul(c_size / 2));
 					let v10 = middle.add(dir.rotate(-Math.PI / 2).mul(c_size / 2));
-					this.base_group.line(v9.x, v9.y, v10.x, v10.y).attr(this.base_line_attr).attr({stroke: c_color});
+					g.line(v9.x, v9.y, v10.x, v10.y).attr(this.base_line_attr).attr({stroke: c_color});
 					let v11 = middle.add(dir.rotate(Math.PI / 2).mul(c_size / 2)).add(offset2);
 					let v12 = middle.add(dir.rotate(-Math.PI / 2).mul(c_size / 2)).add(offset2);
-					this.base_group.line(v11.x, v11.y, v12.x, v12.y).attr(this.base_line_attr).attr({stroke: c_color});
+					g.line(v11.x, v11.y, v12.x, v12.y).attr(this.base_line_attr).attr({stroke: c_color});
 					let v13 = middle.add(dir.rotate(Math.PI / 2).mul(c_size / 2)).sub(offset2);
 					let v14 = middle.add(dir.rotate(-Math.PI / 2).mul(c_size / 2)).sub(offset2);
-					this.base_group.line(v13.x, v13.y, v14.x, v14.y).attr(this.base_line_attr).attr({stroke: c_color});
+					g.line(v13.x, v13.y, v14.x, v14.y).attr(this.base_line_attr).attr({stroke: c_color});
 					break;
 				case "x":
 					let v15 = middle.add(dir.rotate(Math.PI / 4).mul(c_size / 2));
 					let v16 = middle.add(dir.rotate(-Math.PI / 4).mul(c_size / 2));
 					let v17 = middle.add(dir.rotate(3 * Math.PI / 4).mul(c_size / 2));
 					let v18 = middle.add(dir.rotate(-3 * Math.PI / 4).mul(c_size / 2));
-					this.base_group.line(v15.x, v15.y, v18.x, v18.y).attr(this.base_line_attr).attr({stroke: c_color});
-					this.base_group.line(v17.x, v17.y, v16.x, v16.y).attr(this.base_line_attr).attr({stroke: c_color});
+					g.line(v15.x, v15.y, v18.x, v18.y).attr(this.base_line_attr).attr({stroke: c_color});
+					g.line(v17.x, v17.y, v16.x, v16.y).attr(this.base_line_attr).attr({stroke: c_color});
 					break;
 				case "o":
-					this.base_group.circle(c_size).attr(this.base_line_attr).attr({stroke: c_color}).center(middle.x, middle.y);
+					g.circle(c_size).attr(this.base_line_attr).attr({stroke: c_color}).center(middle.x, middle.y);
 					break;
 			}
 		}
@@ -310,21 +314,28 @@ class Geometrie
 		{
 			let v3 = line.p1.add(dir.rotate(Math.PI / 2).mul(d_size / 2));
 			let v4 = line.p1.add(dir.rotate(-Math.PI / 2).mul(d_size / 2));
-			this.base_group.line(v3.x, v3.y, v4.x, v4.y).attr(this.base_line_attr).attr(attr_sup);
+			g.line(v3.x, v3.y, v4.x, v4.y).attr(this.base_line_attr).attr(attr_sup);
 		}
 		if (fin)
 		{
 			let v5 = line.p2.add(dir.rotate(Math.PI / 2).mul(f_size / 2));
 			let v6 = line.p2.add(dir.rotate(-Math.PI / 2).mul(f_size / 2));
-			this.base_group.line(v5.x, v5.y, v6.x, v6.y).attr(this.base_line_attr).attr(attr_sup);
+			g.line(v5.x, v5.y, v6.x, v6.y).attr(this.base_line_attr).attr(attr_sup);
 		}
+
+		return {svg: g, line: line};
 	}
 
 	AjouterDroite(line, param = {})
 	{
 		let border_line = line.toBorder(this.SVG_Draw.width(), this.SVG_Draw.height());
 		let attr_sup = param.hasOwnProperty("attr") ? param.attr : {};
-		this.base_group.line(border_line.p1.x, border_line.p1.y, border_line.p2.x, border_line.p2.y).attr(this.base_line_attr).attr(attr_sup);
+		let attr_sup_text = param.hasOwnProperty("nom-text") ? param["nom-text"] : {"attr": {}};
+		attr_sup_text["attr"]["font-style"] = "italic";
+
+		let g = this.base_group.group()
+
+		g.line(border_line.p1.x, border_line.p1.y, border_line.p2.x, border_line.p2.y).attr(this.base_line_attr).attr(attr_sup);
 		
 		let dir = line.direction().rotate(Math.PI / 2);
 		let depart = param.hasOwnProperty("depart") ? param.depart : false;
@@ -335,15 +346,16 @@ class Geometrie
 		{
 			let v3 = line.p1.add(dir.mul(d_size / 2));
 			let v4 = line.p1.add(dir.mul(-d_size / 2));
-			this.base_group.line(v3.x, v3.y, v4.x, v4.y).attr(this.base_line_attr).attr(attr_sup);
+			g.line(v3.x, v3.y, v4.x, v4.y).attr(this.base_line_attr).attr(attr_sup);
 		}
 		if (fin)
 		{
 			let v5 = line.p2.add(dir.mul(f_size / 2));
 			let v6 = line.p2.add(dir.mul(-f_size / 2));
-			this.base_group.line(v5.x, v5.y, v6.x, v6.y).attr(this.base_line_attr).attr(attr_sup);
+			g.line(v5.x, v5.y, v6.x, v6.y).attr(this.base_line_attr).attr(attr_sup);
 		}
 
+		let txt_svg;
 		if (param.hasOwnProperty("nom"))
 		{
 			let pos_target =  param.hasOwnProperty("nom-position") ? param["nom-position"] : 0;
@@ -374,10 +386,10 @@ class Geometrie
 				txt_position = txt_position.add(border_line.direction().mul(pos == 0 ? 5	: -5));
 				count--;
 			}
-			this.AjoutText(txt_position, param.nom, param.hasOwnProperty("nom-attr") ? param["nom-attr"] : {});
+			txt_svg = this.AjoutText(txt_position, param.nom, attr_sup_text).txt;
 		}
 
-		return border_line;
+		return {svg: g, line: border_line, txt: txt_svg};
 	}
 
 	AjouterDemiDroite(line, param = {})
@@ -385,11 +397,13 @@ class Geometrie
 		let border_line = line.toBorder(this.SVG_Draw.width(), this.SVG_Draw.height());
 		let attr_sup = param.hasOwnProperty("attr") ? param.attr : {};
 
+		let g = this.base_group.group()
+
 		let dot = line.direction().dot(border_line.direction());
 		if (dot > 0)
-			this.base_group.line(line.p1.x, line.p1.y, border_line.p2.x, border_line.p2.y).attr(this.base_line_attr).attr(attr_sup);
+			g.line(line.p1.x, line.p1.y, border_line.p2.x, border_line.p2.y).attr(this.base_line_attr).attr(attr_sup);
 		else
-			this.base_group.line(line.p1.x, line.p1.y, border_line.p1.x, border_line.p1.y).attr(this.base_line_attr).attr(attr_sup);
+			g.line(line.p1.x, line.p1.y, border_line.p1.x, border_line.p1.y).attr(this.base_line_attr).attr(attr_sup);
 		
 		let depart = param.hasOwnProperty("depart") ? param.depart : false;
 		let d_size = param.hasOwnProperty("depart-size") ? param["depart-size"] : 15;
@@ -401,19 +415,21 @@ class Geometrie
 			let v3 = line.p1.add(direction.rotate(Math.PI / 2).mul(d_size / 2));
 			let v4 = line.p1.add(direction.rotate(-Math.PI / 2).mul(d_size / 2));
 			let attr_sup = param.hasOwnProperty("attr") ? param.attr : {};
-			this.base_group.line(v3.x, v3.y, v4.x, v4.y).attr(this.base_line_attr).attr(attr_sup);
+			g.line(v3.x, v3.y, v4.x, v4.y).attr(this.base_line_attr).attr(attr_sup);
 		}
 		if (fin)
 		{
 			let v5 = line.p2.add(direction.rotate(Math.PI / 2).mul(f_size / 2));
 			let v6 = line.p2.add(direction.rotate(-Math.PI / 2).mul(f_size / 2));
-			this.base_group.line(v5.x, v5.y, v6.x, v6.y).attr(this.base_line_attr).attr(attr_sup);
+			g.line(v5.x, v5.y, v6.x, v6.y).attr(this.base_line_attr).attr(attr_sup);
 		}
 
+		let new_line;
 		if (dot > 0)
-			return new Ligne(line.p1, border_line.p2);
+			new_line = new Ligne(line.p1, border_line.p2);
 		else
-			return new Ligne(line.p1, border_line.p1);
+			new_line = new Ligne(line.p1, border_line.p1);
+		return {svg: g, line: new_line};
 	}
 
 	AjoutText(v, txt, param = {})
@@ -421,15 +437,18 @@ class Geometrie
 		let offsetX = param.hasOwnProperty("offsetX") ? param.offsetX : 0;
 		let offsetY = param.hasOwnProperty("offsetY") ? param.offsetY : 0;
 		let attr_sup = param.hasOwnProperty("attr") ? param.attr : {};
-		this.txt_group.text(txt).attr(this.base_txt_attr).attr(attr_sup).attr(this.base_txt_back_attr).center(v.x + offsetX, v.y + offsetY);
-		this.txt_group.text(txt).attr(this.base_txt_attr).attr(attr_sup).center(v.x + offsetX, v.y + offsetY);
+		let g = this.txt_group.group();
+		g.text(txt).attr(this.base_txt_attr).attr(attr_sup).attr(this.base_txt_back_attr).center(v.x + offsetX, v.y + offsetY);
+		g.text(txt).attr(this.base_txt_attr).attr(attr_sup).center(v.x + offsetX, v.y + offsetY);
+		return {txt: g};
 	}
 
 	AjoutPolygone(points, param = {})
 	{
 		let attr_sup = param.hasOwnProperty("attr") ? param.attr : {};
 		let points_svg = points.map(p => `${p.x},${p.y}`).join(" ");
-		this.base_group.polygon(points_svg).attr(this.base_line_attr).attr(attr_sup);
+		let poly =  this.base_group.polygon(points_svg).attr(this.base_line_attr).attr(attr_sup);
+		return {svg: poly, points: points};
 	}
 
 	AjoutAngle(angle, dir = 0, param = {})
@@ -437,6 +456,8 @@ class Geometrie
 		let bisect = angle.bisectrice();
 		let radius = param.hasOwnProperty("radius") ? param.radius : 30;
 		let attr_sup = param.hasOwnProperty("attr") ? param.attr : {};
+
+		let g = this.base_group.group()
 		
 		let p_start = angle.p2.add(angle.p1.sub(angle.p2).normalize().mul(radius));
 		let p_end = angle.p2.add(angle.p3.sub(angle.p2).normalize().mul(radius));
@@ -454,7 +475,7 @@ class Geometrie
 		else if(right < 0 && dir == 1)
 			arc += "1 0 "
 		arc += p_end.x + " " + p_end.y;
-		this.base_group.path(arc).attr(this.base_line_attr).attr(attr_sup)
+		g.path(arc).attr(this.base_line_attr).attr(attr_sup)
 
 
 		let codage = param.hasOwnProperty("codage") ? param.codage : "none";
@@ -470,7 +491,7 @@ class Geometrie
 					{
 						let v1 = middle.add(bisect.mul(c_size / 2));
 						let v2 = middle.add(bisect.mul(-c_size / 2));
-						this.base_group.line(v1.x, v1.y, v2.x, v2.y).attr(this.base_line_attr).attr({stroke: c_color});
+						g.line(v1.x, v1.y, v2.x, v2.y).attr(this.base_line_attr).attr({stroke: c_color});
 					}
 					break;
 				case "//":
@@ -485,8 +506,8 @@ class Geometrie
 						let v4 = m1.add(b1.mul(-c_size / 2));
 						let v5 = m2.add(b2.mul(c_size / 2));
 						let v6 = m2.add(b2.mul(-c_size / 2));
-						this.base_group.line(v3.x, v3.y, v4.x, v4.y).attr(this.base_line_attr).attr({stroke: c_color});
-						this.base_group.line(v5.x, v5.y, v6.x, v6.y).attr(this.base_line_attr).attr({stroke: c_color});
+						g.line(v3.x, v3.y, v4.x, v4.y).attr(this.base_line_attr).attr({stroke: c_color});
+						g.line(v5.x, v5.y, v6.x, v6.y).attr(this.base_line_attr).attr({stroke: c_color});
 					}
 					break;
 				case "///":
@@ -503,9 +524,9 @@ class Geometrie
 						let v4 = m1.add(b1.mul(-c_size / 2));
 						let v5 = m2.add(b2.mul(c_size / 2));
 						let v6 = m2.add(b2.mul(-c_size / 2));
-						this.base_group.line(v1.x, v1.y, v2.x, v2.y).attr(this.base_line_attr).attr({stroke: c_color});
-						this.base_group.line(v3.x, v3.y, v4.x, v4.y).attr(this.base_line_attr).attr({stroke: c_color});
-						this.base_group.line(v5.x, v5.y, v6.x, v6.y).attr(this.base_line_attr).attr({stroke: c_color});;
+						g.line(v1.x, v1.y, v2.x, v2.y).attr(this.base_line_attr).attr({stroke: c_color});
+						g.line(v3.x, v3.y, v4.x, v4.y).attr(this.base_line_attr).attr({stroke: c_color});
+						g.line(v5.x, v5.y, v6.x, v6.y).attr(this.base_line_attr).attr({stroke: c_color});;
 					}
 					break;
 				case "x":
@@ -513,14 +534,15 @@ class Geometrie
 					let v16 = middle.add(bisect.rotate(-Math.PI / 4).mul(c_size / 2));
 					let v17 = middle.add(bisect.rotate(3 * Math.PI / 4).mul(c_size / 2));
 					let v18 = middle.add(bisect.rotate(-3 * Math.PI / 4).mul(c_size / 2));
-					this.base_group.line(v15.x, v15.y, v18.x, v18.y).attr(this.base_line_attr).attr({stroke: c_color});
-					this.base_group.line(v17.x, v17.y, v16.x, v16.y).attr(this.base_line_attr).attr({stroke: c_color});
+					g.line(v15.x, v15.y, v18.x, v18.y).attr(this.base_line_attr).attr({stroke: c_color});
+					g.line(v17.x, v17.y, v16.x, v16.y).attr(this.base_line_attr).attr({stroke: c_color});
 					break;
 				case "o":
-					this.base_group.circle(c_size / 2).attr(this.base_line_attr).attr({stroke: c_color}).center(middle.x, middle.y);
+					g.circle(c_size / 2).attr(this.base_line_attr).attr({stroke: c_color}).center(middle.x, middle.y);
 					break;
 			}
 		}
+		return {svg: g, angle: angle}
 	}
 
 
