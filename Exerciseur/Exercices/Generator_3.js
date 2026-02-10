@@ -137,8 +137,8 @@ generators.push((classe) => {
 		content.classList.add("flexobject")
 		correction.appendChild(content);
 		rng.Reset()
-		// let fig = createFigure(classe, rng, data);
-		// content.appendChild(fig.GetElement());
+		let fig = createFigure(classe, rng, data);
+		content.appendChild(fig.GetElement());
 		
 		rng.Reset()
 		let names = getShuffleLettreArray(rng)
