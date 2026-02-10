@@ -279,3 +279,73 @@ class CalculExpressionLitterale
 		return "";
 	}
 }
+
+
+
+class RNG
+{
+	RNG_VEC_X = 23.14069263277926
+	RNG_VEC_Y = 2.665144142690225
+	index = -1
+	seed
+
+	constructor(seed = -1)
+	{
+		if (seed == -1)
+			this.seed = Math.floor(Math.random() * 999_999_999)
+		else
+			this.seed = seed
+	}
+
+	Reset()
+	{
+		this.index = -1;
+	}
+
+	GetRNG()
+	{
+		this.index++;
+		return this.GetRNGIndex(this.index);
+	}
+
+	GetRNGIndex(id)
+	{
+		if (id % 2 == 0)
+			return this.fract(Math.cos(id * this.RNG_VEC_X) * 12345.6789 * this.seed);
+		else
+			return this.fract(Math.cos(id * this.RNG_VEC_Y) * 12345.6789 * this.seed);
+	}
+
+	fract(value)
+	{
+		return Math.abs(value - Math.floor(value));
+	}
+}
+
+function shuffleArray(array) {
+	for (let i = array.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[array[i], array[j]] = [array[j], array[i]];
+	}
+}
+
+function shuffleArraySeeded(array, rng) {
+	for (let i = array.length - 1; i > 0; i--) {
+		const j = Math.floor(rng.GetRNG() * (i + 1));
+		[array[i], array[j]] = [array[j], array[i]];
+	}
+}
+
+const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+function getShuffleLettreArray(rng = null) {
+	if (rng == null)
+		rng = new RNG()
+	let copy = Array.from(ALPHABET);
+	shuffleArraySeeded(copy, rng)
+	return copy
+}
+
+function float_round(value)
+{
+	return Math.floor((value + 0.0000001) * 10000) / 10000
+}

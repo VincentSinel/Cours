@@ -49,13 +49,6 @@ function CreateObjects() {
 	return objects;
 }
 
-function shuffleArray(array) {
-	for (let i = array.length - 1; i > 0; i--) {
-		const j = Math.floor(Math.random() * (i + 1));
-		[array[i], array[j]] = [array[j], array[i]];
-	}
-}
-
 
 function CreateFigure(point_name, line_name, objects) 
 {
@@ -71,6 +64,9 @@ function CreateFigure(point_name, line_name, objects)
 	figure.AjouterDroite(objects["lines"][2], {nom:line_name[1], "nom-position": 1, "nom-attr": {attr:{"font-style": "italic"}}})
 	figure.AjouterDroite(objects["lines"][3], {nom:line_name[3], "nom-position": 1, "nom-attr": {attr:{"font-style": "italic"}}})
 	figure.AjouterDemiDroite(objects["lines"][4]);
+
+	figure.Recreate()
+
 	return figure
 }
 
@@ -90,6 +86,9 @@ function CreateFigure_correction(point_name, line_name, objects)
 	figure.AjouterDroite(objects["lines"][3], {nom:line_name[3], "nom-position": 1, "nom-attr": {attr:{"font-style": "italic"}}})
 	figure.AjouterDemiDroite(objects["lines"][4], {"attr": {"stroke": "lime", "stroke-width": 4}});
 	figure.AjouterSegment(objects["lines"][1], {"attr": {"stroke": "blue", "stroke-width": 4}});
+
+	figure.Recreate()
+
 	return figure
 }
 

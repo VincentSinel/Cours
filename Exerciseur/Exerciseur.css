@@ -92,6 +92,7 @@ ul > li::marker {
 
 p{
 	color: black;
+	text-align: left;
 }
 
 .program-calcul{
