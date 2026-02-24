@@ -1,6 +1,6 @@
 // Théorème de Pythagore sens direct
 // 4ème exercice d'application direct
-// 3ème figure plus complexe avec informations inutiles
+// 3ème figure plus complexe avec informations inutiles (WIP)
 
 function createFigure(classe, rng, data) {
 	let w = 300;

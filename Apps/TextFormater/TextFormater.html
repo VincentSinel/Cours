@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">	
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+	<link rel="stylesheet" href="/CSS/MainPage.css"> 
+  <link rel="stylesheet" href="TextFormater.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <script src="/JS/jsPDF/jspdf.umd.min.js" ></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" async></script>
+
+  <title>Manipulation de texte</title>
+
+  <style>
+    .buttonlinecount span::before{ content: "Numérotation de ligne"; }
+    .buttoncharcount span::before{ content: "Compteur de caractére"; }
+  </style>
+
+</head>
+
+<body>
+	<div class="maincontainer">
+
+		<div class="generation-option">
+			<div class="blockmenu buttoncharcount" onclick="OpenMenu('CharCount')"><span></span></div>
+				<div class="blockmenu buttonlinecount" onclick="OpenMenu('LineCount')"><span></span></div>
+		</div>
+
+		<div class="main_view" id="CharCount">
+			<div class="flexvertical">
+				<div class="tool">
+					<label>Limit de caractères : </label>
+					<input type="number" id="charmax" value="500" min="0" style="background-color: white; flex-grow: 1;" oninput="CheckCharCount()">
+				</div>
+				<textarea id="TextInput_CharCount" class="errorChar" oninput="CheckCharCount()"></textarea>
+				<label class="label_bold" id="charcounter"></label>
+			</div>
+		</div>
+
+		<div class="main_view" id="LineCount" style="display: none;">
+			<div class="flexvertical">
+				<div class="tool">
+					<label>Auteur </label>
+					<input type="text" id="auteur">
+					<label>Titre </label>
+					<input type="text" id="titre">
+					<label>Complément </label>
+					<input type="text" id="complement">
+				</div>
+				<div class="tool">
+					<label>Marge :</label>
+					<input type="number" value="10" min="0" id="Marge">
+					<label>mm | Tabulation :</label>
+					<input type="number" value="30" min="0" id="Indent">
+					<label>mm | Pas :</label>
+					<input type="number" value="5" min="1" id="Pas">
+					<label>| Espace paragraphes :</label>
+					<input type="number" value="10" min="0" id="EspaceParagraph">
+					<label>mm | Largeur n° ligne :</label>
+					<input type="number" value="30" min="1" id="LineCountSpace">
+					<label>|</label>
+					<img src="/Images/Icons/Font Size.svg">
+					<input type="number" value="12" min="1" id="FontSize">
+				</div> 
+				<textarea id="TextInput"></textarea>
+				<div class="tool">
+					<div id="PrintButton" class="iconbutton iconline" onclick="Print()">
+						<div class="flexline">
+							<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+								<path d="M638-635v-118H322v118h-75v-193h466v193h-75Zm-471 75h626-626Zm548 96.5q15.5 0 26.5-11t11-26.5q0-15.5-11-26.5t-26.5-11q-15.5 0-26.5 11t-11 26.5q0 15.5 11 26.5t26.5 11ZM638-204v-160H322v160h316Zm75 75H247.25v-157H92v-235q0-48 33.25-81T206-635h548q48 0 81 33t33 81v235.2H713V-129Zm80-232v-160q0-16.58-11.25-27.79T753.88-560H206.13q-16.63 0-27.88 11.21T167-521v160h80v-78h466v78h80Z" fill="currentColor"/></svg>
+							<label style="flex-basis: 100%; text-align: center;">Générer le PDF</label>
+						</div>
+					</div>
+
+					<div id="CancelButtonPrint" class="iconbutton iconline progression-bar-canceled disabled" onclick="StopPrinting()">
+						<div class="flexline">
+							<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+								<path d="m338-286 142-142 142 142 52-52-142-142 142-142-52-52-142 142-142-142-52 52 142 142-142 142 52 52ZM480-90q-80.91 0-152.07-30.76-71.15-30.77-123.79-83.5Q151.5-257 120.75-328.09 90-399.17 90-480q0-80.91 30.76-152.07 30.77-71.15 83.5-123.79Q257-808.5 328.09-839.25 399.17-870 480-870q80.91 0 152.07 30.76 71.15 30.77 123.79 83.5Q808.5-703 839.25-631.91 870-560.83 870-480q0 80.91-30.76 152.07-30.77 71.15-83.5 123.79Q703-151.5 631.91-120.75 560.83-90 480-90Zm0-75q131.5 0 223.25-91.75T795-480q0-131.5-91.75-223.25T480-795q-131.5 0-223.25 91.75T165-480q0 131.5 91.75 223.25T480-165Zm0-315Z" fill="currentColor"/>
+							</svg>
+							<label class="button-text">Annuler la création du PDF</label>
+						</div>
+					</div>
+
+					<div id="progressionContainer_Pdf" class="progression-bar">
+						<div style="display: grid;">
+							<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 320 24" width="320px">
+								<rect id="ProgressionRect_Pdf" width="0" height="20" x="2" y="2" fill="currentColor"/>
+							</svg>
+							<label id="ProgressionLabel_Pdf">0%</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+
+	function OpenMenu(name)
+	{
+		let menu1 = document.getElementById("LineCount");
+		let menu2 = document.getElementById("CharCount");
+		menu1.style.display = "none"
+		menu2.style.display = "none"
+		
+		switch (name) {
+			case "LineCount":
+				return menu1.style.display = "block" 
+			case "CharCount":
+				return menu2.style.display = "block" 
+			default:
+				return;
+		}
+	}
+
+	function CheckCharCount()
+	{
+		var max = document.getElementById("charmax").valueAsNumber;
+		var txt = document.getElementById("TextInput_CharCount").value;
+		txt = txt.replaceAll("\n", "")
+		let size = txt.length
+		
+		TextInput_CharCount.classList.remove("errorChar")
+		TextInput_CharCount.classList.remove("okChar")
+		if (size > max && max != 0)
+			TextInput_CharCount.classList.add("errorChar")
+		else
+			TextInput_CharCount.classList.add("okChar")
+
+		document.getElementById("charcounter").innerHTML = size.toString() + " / " + max.toString()
+	}
+	CheckCharCount()
+
+
+	var worker_pdf = undefined
+
+	function Print()
+	{
+		if(typeof(Worker) !== "undefined") {
+			if (worker_pdf in window)
+			{
+				document.getElementById("progressionContainer_Pdf").classList.remove("progression-bar-canceled")
+				document.getElementById("CancelButtonPrint").classList.remove("disabled")
+
+				worker_pdf = new Worker("Print.js");
+				worker_pdf.onmessage = function(event) { Printing_Update(event.data)};
+				
+				let message = { 
+					text: document.getElementById("TextInput").value,
+					auteur: document.getElementById("auteur").value,
+					titre: document.getElementById("titre").value,
+					complement: document.getElementById("complement").value,
+					parameters_marge: document.getElementById("Marge").valueAsNumber,
+					parameters_indent: document.getElementById("Indent").valueAsNumber,
+					parameters_paragraph_gap: document.getElementById("EspaceParagraph").valueAsNumber,
+					parameters_line_number_space: document.getElementById("LineCountSpace").valueAsNumber,
+					parameters_count_step: document.getElementById("Pas").valueAsNumber,
+					parameters_font_size: document.getElementById("FontSize").valueAsNumber
+				}
+				worker_pdf.postMessage(message);
+			}
+		}
+		else {
+			alert("Désoler, votre navigateur ne supporte pas les 'Web Workers' nécessaire pour cette application...");
+		}
+	}
+
+	function Printing_Update(data)
+	{
+		var rect = document.getElementById("ProgressionRect_Pdf");
+		var label = document.getElementById("ProgressionLabel_Pdf");
+		rect.setAttribute("width", Math.floor(data.completion * 316).toString())
+		rect.setAttribute("fill-opacity", data.completion)
+		label.innerHTML = Math.floor(data.completion * 100).toString() + "%"
+
+		if (data.status == "End")
+		{
+			if (!data.result) return;
+
+			document.getElementById("CancelButtonPrint").classList.add("disabled")
+			var a = document.createElement("a");
+			a.href = URL.createObjectURL(data.result);
+			a.download = 'Document.pdf';
+			a.click()
+
+			worker_pdf.terminate();
+			worker_pdf = undefined
+		}
+	}
+
+	function StopPrinting() 
+	{
+		if (worker_pdf)
+		{
+			worker_pdf.terminate();
+			worker_pdf = undefined
+
+			var rect = document.getElementById("ProgressionRect_Pdf");
+			var label = document.getElementById("ProgressionLabel_Pdf");
+			document.getElementById("CancelButtonPrint").classList.add("disabled")
+			rect.setAttribute("width", 316)
+			rect.setAttribute("fill-opacity", 1)
+			label.innerHTML = "Annulé"
+			document.getElementById("progressionContainer_Pdf").classList.add("progression-bar-canceled")
+		}
+	}
+</script>
+
+</html>

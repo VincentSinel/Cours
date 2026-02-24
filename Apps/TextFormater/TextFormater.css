@@ -1,0 +1,245 @@
+:root{
+	--TableWidth : 77px;
+	--TableHeight: calc(var(--TableWidth) * 41.0 / 44.0);
+	--TableFontSize: calc(var(--TableWidth) * 8.0 / 44.0);
+
+	--Back: #181818;
+	--BackObject: #262626;
+	--BackActive: #37373D;
+	--BackHover: #2A2D2E;
+	--BackHoverMenu: #36363C;
+	--BackText: #DEDEE3;
+	--DBackText: #CFCFD3;
+
+	--WBack: #353535;
+	--WBackActive: #53535B;
+	--WBackDisabled: #F9F9FF08;
+	--WBackHover: #494D4F;
+	--WBackHoverMenu: #52525B;
+	--WBackText: #F9F9FF;
+	--WBackTextDisabled: #F9F9FF55;
+
+	--CartonColor: #50e991;
+}
+
+body{
+	background-color: var(--PanelBackHoverMenu);
+}
+
+.maincontainer{
+	display: flex;
+	width: 100%;
+	min-height: 100%;
+	max-height: 100%;
+}
+
+.main_view{
+	padding: 20px;
+	flex-grow: 1;
+}
+
+.flexvertical{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	max-height: 100%;
+	gap: 10px;
+}
+
+p, span, div{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p, span{
+	color: var(--BackText);
+}
+
+button, input, select{
+	border: solid gray 1px;
+	border-radius: 5px;
+	background-color: var(--BackText);
+}
+button:focus,
+button:hover,
+input:focus,
+input:hover,
+select:focus,
+select:hover{
+	background-color: var(--WBackActive);
+}
+button:focus,
+select:focus,
+input:focus{
+	outline: solid var(--BluePanelHover) 1px;
+}
+
+.generation-option{
+	padding: 5px;
+	padding-left: 45px;
+	width: 320px;
+	line-height: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	background-color: var(--PanelBack);
+	min-height: 100%;
+	max-height: 100%;
+}
+.generation-option div{
+    width: calc(100% - 20px);
+    flex: 0 1 45px;
+}
+.generation-option div span{
+    width: 100%;
+}
+
+.iconbutton{
+	width: 24px;
+	height: 24px;
+	transition: 150ms;
+	border-radius: 5px;
+	display: inline-block;
+	background-color: var(--HeadMenuButton);
+	color: var(--WBackText);;
+}
+.iconbutton:hover{
+	background-color: var(--WBackHover);
+}
+.iconbutton:active{
+	background-color: var(--WBackActive);
+}
+.iconline{
+	flex-grow: 1;
+}
+
+
+.flexline{
+	display: flex;
+}
+
+.progression-bar{
+	display: inline-block;
+	/* background-color: var(--HeadMenuButton); */
+	color: var(--BluePanelHover);
+	border-radius: 0px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+}
+.progression-bar svg{
+	grid-column: 1; 
+	grid-row: 1; 
+}
+.progression-bar label{
+	color: var(--WBackText);
+	grid-column: 1; 
+	grid-row: 1; 
+	color: white;
+	text-align: center;
+}
+
+.button-text{
+	-webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+	flex-basis: 100%; 
+	text-align: center;
+}
+
+.progression-bar-canceled{
+	color: var(--RedPanelHover);
+}
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.disabled,
+.disabled:hover,
+.disabled:active{
+	background-color: var(--WBackDisabled);
+	color: var(--WBackTextDisabled);
+}
+
+
+div[class^="tool"]{
+	display: flex;
+	gap: 5px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-items: stretch;
+}
+div[class^="tool"] > label {
+  max-height: 24px;
+	font-weight: bold;
+	font-size: 12pt;
+	color: var(--BackText);
+}
+div[class^="tool"] > img{
+	max-height: 24px;
+}
+
+div[class^="tool"] > input
+{
+	width: 50px;
+}
+
+.tool-coord > label{
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+.tool-axe > input{
+	flex: 30px 1 1;
+	padding: 0;
+	align-items: center;
+	text-align: right;
+	max-height: 16px;
+}
+
+.tool-axe > select{
+	flex: 30px 1 1;
+	width: auto;
+}
+
+.label_bold{
+	color: var(--BackText);
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+textarea{
+	width: 100%;
+	background-color: white !important;
+	border: solid gray 1px;
+	border-radius: 5px;
+	resize: none;
+	flex-grow: 1;
+	font-size: 14pt;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+textarea:focus,
+textarea:hover{
+	background-color: white;
+}
+
+input[type="text"] {
+	background-color: white !important;
+	flex-grow: 1;
+}
+
+.errorChar{
+	border: solid red 10px;
+}
+.okChar{
+	border: solid lightgreen 10px;
+}

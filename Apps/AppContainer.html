@@ -32,6 +32,7 @@
     .buttonmathador span::before{ content: "Solveur Mathador"; }
     .buttoncarte span::before{ content: "Créateur de fond de cartes"; }
     .buttonstructuro span::before{ content: "Structuro"; }
+    .buttontextetool span::before{ content: "Outils Texte"; }
     .buttonliensutiles span::before{ content: "Liens utiles"; }
     #noiframe{display: inline-block; margin-left: 45px; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: left; width: calc(100% - 45px);}
   </style>
@@ -76,6 +77,7 @@
             <div class="blockmenu buttonmathador" onclick="OpenMenu('Mathador')"><span></span></div>
             <div class="blockmenu buttoncarte" onclick="OpenMenu('Cartes')"><span></span></div>
             <div class="blockmenu buttonstructuro" onclick="OpenMenu('Structuro')"><span></span></div>
+            <div class="blockmenu buttontextetool" onclick="OpenMenu('TexteTool')"><span></span></div>
             <div class="blockmenu buttonliensutiles" onclick="OpenMenu('LiensUtiles')"><span></span></div>
             <!-- <div class="blockmenu" onclick="OpenMenu()"><span></span></div>
             <div class="blockmenu" onclick="OpenMenu()"><span></span></div> -->
@@ -126,6 +128,8 @@
           return '/Apps/Cartes/Cartes.html'
         case "Structuro":
           return '/Apps/Structuro/Structuro.html'
+        case "TexteTool":
+          return '/Apps/TextFormater/TextFormater.html'
         case "LiensUtiles":
           return '/Apps/LiensUtiles/LiensUtiles.html'
         default:

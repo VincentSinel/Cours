@@ -1,4 +1,3 @@
-
 importScripts(
 	"/JS/PDFKit/pdfkit.standalone.js",
   "/JS/PDFKit/blob-stream.js"
