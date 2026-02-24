@@ -15,7 +15,7 @@
 
   <style>
     .buttonlinecount span::before{ content: "Numérotation de ligne"; }
-    .buttoncharcount span::before{ content: "Compteur de caractére"; }
+    .buttoncharcount span::before{ content: "Compteur de caractères"; }
   </style>
 
 </head>
@@ -31,7 +31,7 @@
 		<div class="main_view" id="CharCount">
 			<div class="flexvertical">
 				<div class="tool">
-					<label>Limit de caractères : </label>
+					<label>Limite de caractères : </label>
 					<input type="number" id="charmax" value="500" min="0" style="background-color: white; flex-grow: 1;" oninput="CheckCharCount()">
 				</div>
 				<textarea id="TextInput_CharCount" class="errorChar" oninput="CheckCharCount()"></textarea>
@@ -58,7 +58,7 @@
 					<input type="number" value="5" min="1" id="Pas">
 					<label>| Espace paragraphes :</label>
 					<input type="number" value="10" min="0" id="EspaceParagraph">
-					<label>mm | Largeur n° ligne :</label>
+					<label>pt | Largeur n° ligne :</label>
 					<input type="number" value="30" min="1" id="LineCountSpace">
 					<label>|</label>
 					<img src="/Images/Icons/Font Size.svg">

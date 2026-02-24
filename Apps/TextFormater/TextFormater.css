@@ -218,7 +218,7 @@ div[class^="tool"] > input
 }
 
 textarea{
-	width: 100%;
+	width: calc(100% - 4px);
 	background-color: white !important;
 	border: solid gray 1px;
 	border-radius: 5px;
@@ -242,4 +242,7 @@ input[type="text"] {
 }
 .okChar{
 	border: solid lightgreen 10px;
+}
+#CharCount textarea{
+	width: calc(100% - 24px);
 }
