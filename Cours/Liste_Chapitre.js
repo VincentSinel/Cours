@@ -532,17 +532,280 @@ var quatrieme_base = [
 			id: 20,
 			nom: "Distributivité double",
 			icone: 3,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_20/Documents/Chapitre 20 - Distributivité double (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_20/Documents/Chapitre 20 - Distributivité double (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_20/Documents/Chapitre 20 - Distributivité double (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_20/Documents/Chapitre 20 - Distributivité double (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_20/Documents/Chapitre 20 - Distributivité double (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_20/Documents/Chapitre 20 - Distributivité double (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_20/Documents/Chapitre 20 - Distributivité double (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_20/Documents/Chapitre 20 - Distributivité double (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_20/Cours.html"
 	},
 	{
 			id: 21,
+			nom: "Cosinus",
+			icone: 3,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (A trou).pdf",
+			// },
+			ready : true,
+			page : "Base/Chapitre_21/Cours.html"
+	}
+]
+
+var quatrieme_saintexupery = [
+	{
+			id: 1,
+			nom: "Nombres premiers",
+			icone: 1,
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres premiers (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres premiers (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres premiers (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres premiers (A trou).pdf",
+			},
+			ready : true,
+			page : "Base/Chapitre_1/Cours.html"
+	},
+	{
+			id: 2,
+			nom: "Théorème de Pythagore",
+			icone: 2,
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_2/Documents/Chapitre 2 - Théorème de Pythagore (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_2/Documents/Chapitre 2 - Théorème de Pythagore (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_2/Documents/Chapitre 2 - Théorème de Pythagore (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_2/Documents/Chapitre 2 - Théorème de Pythagore (A trou).pdf",
+			},
+			ready : true,
+			page : "Base/Chapitre_2/Cours.html"
+	},
+	{
+			id: 3,
+			nom: "Opérations sur les relatifs",
+			icone: 1,
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_3/Documents/Chapitre 3 - Opérations sur les relatifs (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_3/Documents/Chapitre 3 - Opérations sur les relatifs (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_3/Documents/Chapitre 3 - Opérations sur les relatifs (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_3/Documents/Chapitre 3 - Opérations sur les relatifs (A trou).pdf",
+			},
+			ready : true,
+			page : "Base/Chapitre_3/Cours.html"
+	},
+	{
+			id: 4,
+			nom: "Translations et pavages",
+			icone: 2,
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_4/Documents/Chapitre 4 - Translations et pavages (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_4/Documents/Chapitre 4 - Translations et pavages (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_4/Documents/Chapitre 4 - Translations et pavages (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_4/Documents/Chapitre 4 - Translations et pavages (A trou).pdf",
+			},
+			ready : true,
+			page : "Base/Chapitre_4/Cours.html"
+	},
+	{
+			id: 5,
+			nom: "Additions et soustractions de fractions",
+			icone: 1,
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_5/Documents/Chapitre 5 - Additions et soustractions de fractions (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_5/Documents/Chapitre 5 - Additions et soustractions de fractions (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_5/Documents/Chapitre 5 - Additions et soustractions de fractions (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_5/Documents/Chapitre 5 - Additions et soustractions de fractions (A trou).pdf",
+			},
+			ready : true,
+			page : "Base/Chapitre_5/Cours.html"
+	},
+	{
+			id: 6,
+			nom: "Egalité des produits en croix",
+			icone: 5,
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_6/Documents/Chapitre 6 - Egalité des produits en croix (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_6/Documents/Chapitre 6 - Egalité des produits en croix (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_6/Documents/Chapitre 6 - Egalité des produits en croix (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_6/Documents/Chapitre 6 - Egalité des produits en croix (A trou).pdf",
+			},
+			ready : true,
+			page : "Base/Chapitre_6/Cours.html"
+	},
+	{
+			id: 7,
+			nom: "Rotations",
+			icone: 2,
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_7/Documents/Chapitre 7 - Rotations (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_7/Documents/Chapitre 7 - Rotations (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_7/Documents/Chapitre 7 - Rotations (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_7/Documents/Chapitre 7 - Rotations (A trou).pdf",
+			},
+			ready : true,
+			page : "Base/Chapitre_7/Cours.html"
+	},
+	{
+			id: 8,
+			nom: "Puissances positives",
+			icone: 1,
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_8/Documents/Chapitre 8 - Puissances positives (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_8/Documents/Chapitre 8 - Puissances positives (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_8/Documents/Chapitre 8 - Puissances positives (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_8/Documents/Chapitre 8 - Puissances positives (A trou).pdf",
+			},
+			ready : true,
+			page : "Base/Chapitre_8/Cours.html"
+	},
+	{
+			id: 9,
+			nom: "Distributivité double",
+			icone: 3,
+			download: {
+				docx: 		 "/Cours/4eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Distributivité double (Complet).docx",
+				pdf:  		 "/Cours/4eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Distributivité double (Complet).pdf",
+				docx_trou: "/Cours/4eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Distributivité double (A trou).docx",
+				pdf_trou:  "/Cours/4eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Distributivité double (A trou).pdf",
+			},
+			ready : true,
+			page : "Base/Chapitre_20/Cours.html"
+	},
+	{
+			id: 10,
+			nom: "Coordonnées sphériques",
+			icone: 2,
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (A trou).pdf",
+			},
+			ready : true,
+			page : "Base/Chapitre_10/Cours.html"
+	},
+	{
+			id: 11,
+			nom: "Réciproque du théorème de Pythagore",
+			icone: 2,
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_11/Documents/Chapitre 11 - Réciproque du théorème de Pythagore (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_11/Documents/Chapitre 11 - Réciproque du théorème de Pythagore (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_11/Documents/Chapitre 11 - Réciproque du théorème de Pythagore (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_11/Documents/Chapitre 11 - Réciproque du théorème de Pythagore (A trou).pdf",
+			},
+			ready : true,
+			page : "Base/Chapitre_11/Cours.html"
+	},
+	{
+			id: 12,
+			nom: "Multiplications et divisions de fractions",
+			icone: 1,
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_12/Documents/Chapitre 12 - Multiplications et divisions de fractions (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_12/Documents/Chapitre 12 - Multiplications et divisions de fractions (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_12/Documents/Chapitre 12 - Multiplications et divisions de fractions (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_12/Documents/Chapitre 12 - Multiplications et divisions de fractions (A trou).pdf",
+			},
+			ready : true,
+			page : "Base/Chapitre_12/Cours.html"
+	},
+	{
+			id: 13,
+			nom: "Equation simple",
+			icone: 3,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_13/Documents/Chapitre 13 - Equation simple (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_13/Documents/Chapitre 13 - Equation simple (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_13/Documents/Chapitre 13 - Equation simple (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_13/Documents/Chapitre 13 - Equation simple (A trou).pdf",
+			// },
+			ready : true,
+			page : "Base/Chapitre_13/Cours.html"
+	},
+	{
+			id: 14,
+			nom: "Puissances négatives",
+			icone: 1,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (A trou).pdf",
+			// },
+			ready : true,
+			page : "Base/Chapitre_14/Cours.html"
+	},
+	{
+			id: 15,
+			nom: "Triangle semblable",
+			icone: 2,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (A trou).pdf",
+			// },
+			ready : true,
+			page : "Base/Chapitre_15/Cours.html"
+	},
+	{
+			id: 16,
+			nom: "Pyramides et cônes",
+			icone: 2,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (A trou).pdf",
+			// },
+			ready : true,
+			page : "Base/Chapitre_16/Cours.html"
+	},
+	{
+			id: 17,
+			nom: "Médiane et étendue",
+			icone: 5,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (A trou).pdf",
+			// },
+			ready : true,
+			page : "Base/Chapitre_17/Cours.html"
+	},
+	{
+			id: 18,
+			nom: "Proportionnalité",
+			icone: 5,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (A trou).pdf",
+			// },
+			ready : true,
+			page : "Base/Chapitre_18/Cours.html"
+	},
+	{
+			id: 19,
+			nom: "Probabilité",
+			icone: 4,
+			// download: {
+			// 	docx: 		 "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (Complet).docx",
+			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (Complet).pdf",
+			// 	docx_trou: "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (A trou).docx",
+			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (A trou).pdf",
+			// },
+			ready : true,
+			page : "Base/Chapitre_19/Cours.html"
+	},
+	{
+			id: 20,
 			nom: "Cosinus",
 			icone: 3,
 			// download: {
@@ -2832,7 +3095,7 @@ var ListeCours = {
 	},
 	quatrieme: {
 		"roger_vailland" : quatrieme_base,
-		"saint_exupery" : quatrieme_base,
+		"saint_exupery" : quatrieme_saintexupery,
 		"madame_de_lafayette" : quatrieme_base,
 	},
 	cinquieme: {

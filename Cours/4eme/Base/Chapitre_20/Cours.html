@@ -26,6 +26,19 @@
       display: inline;
       position: relative;
     }
+		.table_mult{
+			text-align: center;
+		}
+		.table_mult td,th{
+			padding: 5px;
+			border: solid 1px black;
+		}
+		.table_mult td{
+			color: var(--Dgreen);
+		}
+		.table_mult th{
+			font-weight: bold;
+		}
   </style>
 
 </head>
@@ -146,6 +159,35 @@
 					$(-3x+8)(5x-3)$ $=(-3x)\times5x+(-3x)\times(-3)+8\times5x+8\times(-3)$ $=-15x^2+9x+40x-24=-15x^2+49x-24$
 				</span>
 			</p>
+			<p><u><b>Méthode du tableau :</b></u></p>
+			<div class="flexobject">
+				<div style="flex: 4cm 1 1;">
+					Pour ne rien oublier et effectuer les calculs, il est possible de représenter le développement sous forme d'une table de multiplication.<br>
+					Il faut mettre les termes de la première parenthèse dans la première ligne et les termes de la seconde parenthèse dans la première colonne. On ajoute ensuite tous les résultats obtenus pour avoir le développement.
+				</div>
+				<div style="flex: 6cm 1 1;">
+					<p>
+						$(6x-7)(4-2x) =$ <span class="DGreen">$24x-28-12x^2+14x$</span> $= -12x^2+38x-28 $
+					</p>
+					<table class="table_mult">
+						<tr>
+							<th>$\times$</th>
+							<th>$6x$</th>
+							<th>$-7$</th>
+						</tr>
+						<tr>
+							<th>$4$</th>
+							<td>$24x$</td>
+							<td>$-28$</td>
+						</tr>
+						<tr>
+							<th>$-2x$</th>
+							<td>$-12x^2$</td>
+							<td>$14x$</td>
+						</tr>
+					</table>
+				</div>
+			</div>
 		<h2>Cas particuliers :</h2>
 			<p>
 				Il existe trois formule de double distributivité fortement utiliser car elle permettent de factoriser une expressions.<br>
