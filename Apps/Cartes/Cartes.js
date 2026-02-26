@@ -769,6 +769,7 @@ function CoucheDeleted(couche)
 
 function ReajustePositionCouche()
 {
+	if (SVG_Draw == null) return;
 	RemovePanZoom()
 	let menu_div = document.getElementById("menu_container_carte");
 	for (let i = menu_div.children.length - 1; i >= 0; i--) {
@@ -811,6 +812,7 @@ function RemovePanZoom()
 
 function Save()
 {
+	RemovePanZoom()
 	var svgString = document.getElementById('svg_holder').innerHTML;
 	a = document.createElement('a');
 	a.download = 'Carte.svg';
@@ -818,4 +820,5 @@ function Save()
 	blob = new Blob([svgString], {"type": "image/svg+xml"});
 	a.href = (window.URL || webkitURL).createObjectURL(blob);
 	a.click();
+	ReajustePositionCouche()
 }
