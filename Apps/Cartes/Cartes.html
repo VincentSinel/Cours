@@ -19,6 +19,8 @@
 	<link rel="stylesheet" href="/JS/JSColorPicker/colorpicker.css" />
 	<script src="/JS/JSColorPicker/colorpicker.iife.min.js"></script>
 
+	<script src="/JS/SVGZoomPan/svg-pan-zoom.js"></script>
+
 	<!-- <script src="Tuto.js"></script> -->
 
 	<!-- <link rel="stylesheet" href="/JS/Choices/choices.min.css" />
@@ -152,7 +154,7 @@
 		</div>
 
 		<div class="main_view">
-			<span id="title_SelectedMap">Select a map first</span>
+			<span id="title_SelectedMap">Choisir une carte avant de commencer</span>
 			<div class="preview">
 				<div id="svg_holder"></div>
 			</div>
@@ -164,7 +166,7 @@
 	</div>
 	
 </body>
-	<script src="/JS/CustomSelect/CustomSelect.js"></script>
+<script src="/JS/CustomSelect/CustomSelect.js"></script>
 <script>
 		var a = document.getElementsByClassName("formemenu");
 		for(let i = 0 ; i < a.length; i++)
@@ -177,7 +179,6 @@
 		function menu_click(element){
 			element.classList.toggle("show")
 		}
-	// UpdateCustomSelect();
 </script>
 <script type="module">
 	import { Canvg, presets } from 'https://cdn.skypack.dev/canvg@^4.0.0';
@@ -219,8 +220,12 @@
 		})
 	};
 
+	var zoom_coef = 1.0;
 	document.body.onresize = () => {
-		ResetSize(0,0, LoadedMap_Size.w, LoadedMap_Size.h);
+		ResetSize(0,0, LoadedMap_Size.w * zoom_coef, LoadedMap_Size.h * zoom_coef);
 	}
+	document.getElementById("svg_holder").addEventListener("scroll", (event) => { 
+		console.log(event)
+	})
 </script>
 </html>

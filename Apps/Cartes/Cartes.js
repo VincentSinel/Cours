@@ -107,6 +107,7 @@ var LoadedMap_Size = {w: 0, h: 0};
 var LoadedMap_SVGElements = {};
 var LoadedMap_Couches = {}
 var LoadedMap_CouchesSelected = {};
+var panZoom 
 
 function LoadMap(parent_folder, data)
 {
@@ -148,6 +149,7 @@ function LoadMap(parent_folder, data)
 
 function ResetSize(off_x, off_y, size_w, size_h)
 {
+	if (SVG_Draw == null) return;
 	let doc = document.getElementsByClassName("main_view")[0];
 	svg_max_size.w = document.body.clientWidth - 40 - doc.offsetLeft;
 	svg_max_size.h = document.body.clientHeight - 110;
@@ -168,6 +170,7 @@ function ResetSize(off_x, off_y, size_w, size_h)
 
 function EndLoad()
 {
+	RemovePanZoom()
 	LoadCheck--;
 	if (LoadCheck > 0)
 		return;
@@ -577,8 +580,6 @@ function Recreate_Legendes()
 		if (!parameters.hasOwnProperty("generation")) continue;
 		ggl = SVG_Legende.group();
 		eval(parameters["generation"]);
-		
-		console.log(ggl.bbox())
 
 		if (ggl.bbox().y2 + dy > legende_height)
 		{
@@ -738,6 +739,7 @@ function CoucheDragged_Ended(event)
 
 function CoucheDragged_Add(event)
 {
+	RemovePanZoom()
 	var couche = CreateCouche(LoadedMap_Couches[event.item.getAttribute("couche_name")]);
 	var menu_div = document.getElementById("menu_container_carte"); 
 	menu_div.insertBefore(couche, event.item);
@@ -748,6 +750,7 @@ function CoucheDragged_Add(event)
 
 function CoucheDeleted(couche)
 {
+	RemovePanZoom()
 	for(var key in LoadedMap_SVGElements) {
     if(LoadedMap_SVGElements.hasOwnProperty(key)) {
 			if (key.startsWith(couche.id + "/") || key == couche.id)
@@ -766,12 +769,44 @@ function CoucheDeleted(couche)
 
 function ReajustePositionCouche()
 {
+	RemovePanZoom()
 	let menu_div = document.getElementById("menu_container_carte");
 	for (let i = menu_div.children.length - 1; i >= 0; i--) {
 		const id = menu_div.children[i].id;
 		LoadedMap_SVGElements[id].back()
 	}
 	MoveFrontElement();
+	
+	var beforePan = function(oldPan, newPan){
+		var sizes = this.getSizes()
+			, leftLimit = sizes.width - ((sizes.viewBox.x + sizes.viewBox.width) * sizes.realZoom)
+			, rightLimit =  - (sizes.viewBox.x * sizes.realZoom)
+			, topLimit = -((sizes.viewBox.y + sizes.viewBox.height) * sizes.realZoom) + sizes.height
+			, bottomLimit = - (sizes.viewBox.y * sizes.realZoom)
+
+		customPan = {}
+		customPan.x = Math.max(leftLimit, Math.min(rightLimit, newPan.x))
+		customPan.y = Math.max(topLimit, Math.min(bottomLimit, newPan.y))
+
+		return customPan
+		
+	}
+	panZoom = svgPanZoom(SVG_Draw.root().node, {minZoom: 1.0, beforePan: beforePan, zoomScaleSensitivity: 0.3, maxZoom: 30});
+}
+
+function RemovePanZoom()
+{
+	if (panZoom != null)
+	{
+		panZoom.destroy();
+		fake_viewport = SVG_Draw.root().node.getElementsByClassName("svg-pan-zoom_viewport")[0]
+		while (fake_viewport.children.length > 0){
+			fake_viewport.parentNode.appendChild(fake_viewport.children[0]);
+		}
+		fake_viewport.remove();
+		panZoom = null;
+	}
+	ResetSize(0,0, LoadedMap_Size.w, LoadedMap_Size.h);
 }
 
 function Save()

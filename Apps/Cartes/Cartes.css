@@ -131,6 +131,7 @@ body{
 	padding: 2px;
 	line-height: 0;
 	background-color: black;
+	overflow: scroll;
 }
 #svg_holder > svg:first-child{
 	background-color: white;
