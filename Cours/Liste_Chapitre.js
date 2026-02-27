@@ -1119,12 +1119,12 @@ var cinquieme_saintexupery = [
 			id: 12,
 			nom: "Fraction - Proportion et quotient",
 			icone: 1,
-			// download: {
-			// 	docx: 		 "/Cours/5eme/SaintExupery/Chapitre_12/Documents/Chapitre 12 - Fraction - Proportion et quotient (Complet).docx",
-			// 	pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_12/Documents/Chapitre 12 - Fraction - Proportion et quotient (Complet).pdf",
-			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_12/Documents/Chapitre 12 - Fraction - Proportion et quotient (A trou).docx",
-			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_12/Documents/Chapitre 12 - Fraction - Proportion et quotient (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/5eme/SaintExupery/Chapitre_12/Documents/Chapitre 12 - Fraction - Proportion et quotient (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_12/Documents/Chapitre 12 - Fraction - Proportion et quotient (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery/Chapitre_12/Documents/Chapitre 12 - Fraction - Proportion et quotient (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_12/Documents/Chapitre 12 - Fraction - Proportion et quotient (A trou).pdf",
+			},
 			ready : true,
 			page : "SaintExupery/Chapitre_12/Cours.html"
 	},
