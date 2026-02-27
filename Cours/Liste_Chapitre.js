@@ -1132,12 +1132,12 @@ var cinquieme_saintexupery = [
 			id: 13,
 			nom: "Proportionnalité",
 			icone: 5,
-			// download: {
-			// 	docx: 		 "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (Complet).docx",
-			// 	pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (Complet).pdf",
-			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (A trou).docx",
-			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (A trou).pdf",
+			},
 			ready : true,
 			page : "SaintExupery/Chapitre_13/Cours.html"
 	},
