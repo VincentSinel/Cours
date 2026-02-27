@@ -1106,12 +1106,12 @@ var cinquieme_saintexupery = [
 			id: 11,
 			nom: "Triangles - Longueurs et droites remarquables",
 			icone: 2,
-			// download: {
-			// 	docx: 		 "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (Complet).docx",
-			// 	pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (Complet).pdf",
-			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (A trou).docx",
-			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (A trou).pdf",
+			},
 			ready : true,
 			page : "SaintExupery/Chapitre_11/Cours.html"
 	},
