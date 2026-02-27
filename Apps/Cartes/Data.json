@@ -579,7 +579,7 @@
 						}
 						,{
 							"Name": "Monde_Population",
-							"Section": "Population",
+							"Section": "Population (2000)",
 							"Type": "svg",
 							"Parameters": [
 								{
