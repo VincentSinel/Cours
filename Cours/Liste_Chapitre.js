@@ -1175,8 +1175,8 @@ var cinquieme_saintexupery = [
 			download: {
 				pdf: 			 "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (Complet).pdf",
 				docx:		 	 "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (Complet).docx",
-			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (A trou).docx",
-			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (A trou).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (A trou).pdf",
 			},
 			page : "Base/Chapitre_19/Cours.html"
 	},
