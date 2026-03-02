@@ -1158,12 +1158,12 @@ var cinquieme_saintexupery = [
 			id: 15,
 			nom: "Fraction - Comparaison, somme et différence",
 			icone: 1,
-			// download: {
-			// 	docx: 		 "/Cours/5eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Fraction - Comparaison, somme et différence (Complet).docx",
-			// 	pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Fraction - Comparaison, somme et différence (Complet).pdf",
-			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Fraction - Comparaison, somme et différence (A trou).docx",
-			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Fraction - Comparaison, somme et différence (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/5eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Fraction - Comparaison, somme et différence (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Fraction - Comparaison, somme et différence (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Fraction - Comparaison, somme et différence (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Fraction - Comparaison, somme et différence (A trou).pdf",
+			},
 			ready : true,
 			page : "SaintExupery/Chapitre_15/Cours.html"
 	},
