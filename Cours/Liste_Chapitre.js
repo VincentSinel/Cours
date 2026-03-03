@@ -407,6 +407,7 @@ var quatrieme_base = [
 				pdf:  		 "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (Complet).pdf",
 				docx_trou: "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (A trou).docx",
 				pdf_trou:  "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (A trou).pdf",
+				img:			 "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Images.pdf",
 			},
 			ready : true,
 			page : "Base/Chapitre_10/Cours.html"
