@@ -1188,8 +1188,8 @@ var cinquieme_saintexupery = [
 			download: {
 				pdf: 			 "/Cours/5eme/SaintExupery/Chapitre_17/Documents/Chapitre 17 - Solides - Polyèdres, Cône et Sphère (Complet).pdf",
 				docx:		 	 "/Cours/5eme/SaintExupery/Chapitre_17/Documents/Chapitre 17 - Solides - Polyèdres, Cône et Sphère (Complet).docx",
-			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_17/Documents/Chapitre 17 - Solides - Polyèdres, Cône et Sphère (A trou).docx",
-			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_17/Documents/Chapitre 17 - Solides - Polyèdres, Cône et Sphère (A trou).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery/Chapitre_17/Documents/Chapitre 17 - Solides - Polyèdres, Cône et Sphère (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_17/Documents/Chapitre 17 - Solides - Polyèdres, Cône et Sphère (A trou).pdf",
 			},
 			page : "SaintExupery/Chapitre_17/Cours.html"
 	},
