@@ -455,12 +455,12 @@ var quatrieme_base = [
 			id: 14,
 			nom: "Puissances négatives",
 			icone: 1,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_14/Cours.html"
 	},
@@ -731,12 +731,12 @@ var quatrieme_saintexupery = [
 			id: 14,
 			nom: "Puissances négatives",
 			icone: 1,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_14/Documents/Chapitre 14 - Puissances négatives (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_14/Cours.html"
 	},
