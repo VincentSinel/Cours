@@ -718,12 +718,12 @@ var quatrieme_saintexupery = [
 			id: 13,
 			nom: "Equation simple",
 			icone: 3,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_13/Documents/Chapitre 13 - Equation simple (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_13/Documents/Chapitre 13 - Equation simple (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_13/Documents/Chapitre 13 - Equation simple (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_13/Documents/Chapitre 13 - Equation simple (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_13/Documents/Chapitre 13 - Equation simple (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_13/Documents/Chapitre 13 - Equation simple (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_13/Documents/Chapitre 13 - Equation simple (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_13/Documents/Chapitre 13 - Equation simple (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_13/Cours.html"
 	},
