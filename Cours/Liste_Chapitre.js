@@ -837,6 +837,12 @@ var cinquieme_base = [
 			id: 2,
 			nom: "Symétries",
 			icone: 2,
+			download: {
+				docx: 		 "/Cours/5eme/Base/Chapitre_2/Documents/Chapitre 2 - Symétries (Complet).docx",
+				pdf:  		 "/Cours/5eme/Base/Chapitre_2/Documents/Chapitre 2 - Symétries (Complet).pdf",
+				docx_trou: "/Cours/5eme/Base/Chapitre_2/Documents/Chapitre 2 - Symétries (A trou).docx",
+				pdf_trou:  "/Cours/5eme/Base/Chapitre_2/Documents/Chapitre 2 - Symétries (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_2/Cours.html"
 	},
@@ -844,6 +850,12 @@ var cinquieme_base = [
 			id: 3,
 			nom: "Priorités opératoires",
 			icone: 1,
+			download: {
+				docx: 		 "/Cours/5eme/Base/Chapitre_3/Documents/Chapitre 3 - Priorités opératoires (Complet).docx",
+				pdf:  		 "/Cours/5eme/Base/Chapitre_3/Documents/Chapitre 3 - Priorités opératoires (Complet).pdf",
+				docx_trou: "/Cours/5eme/Base/Chapitre_3/Documents/Chapitre 3 - Priorités opératoires (A trou).docx",
+				pdf_trou:  "/Cours/5eme/Base/Chapitre_3/Documents/Chapitre 3 - Priorités opératoires (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_3/Cours.html"
 	},
@@ -885,6 +897,12 @@ var cinquieme_base = [
 			id: 8,
 			nom: "Nombres Premiers",
 			icone: 1,
+			download: {
+				docx: 		 "/Cours/5eme/Base/Chapitre_8/Documents/Chapitre 8 - Multiples et diviseurs (Complet).docx",
+				pdf:  		 "/Cours/5eme/Base/Chapitre_8/Documents/Chapitre 8 - Multiples et diviseurs (Complet).pdf",
+				docx_trou: "/Cours/5eme/Base/Chapitre_8/Documents/Chapitre 8 - Multiples et diviseurs (A trou).docx",
+				pdf_trou:  "/Cours/5eme/Base/Chapitre_8/Documents/Chapitre 8 - Multiples et diviseurs (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_8/Cours.html"
 	},
@@ -906,6 +924,12 @@ var cinquieme_base = [
 			id: 11,
 			nom: "Additions et Soustractions de Nombres Relatifs",
 			icone: 1,
+			download: {
+				docx: 		 "/Cours/5eme/Base/Chapitre_11/Documents/Chapitre 11 - Additions et Soustractions de nombres relatifs (Complet).docx",
+				pdf:  		 "/Cours/5eme/Base/Chapitre_11/Documents/Chapitre 11 - Additions et Soustractions de nombres relatifs (Complet).pdf",
+				docx_trou: "/Cours/5eme/Base/Chapitre_11/Documents/Chapitre 11 - Additions et Soustractions de nombres relatifs (A trou).docx",
+				pdf_trou:  "/Cours/5eme/Base/Chapitre_11/Documents/Chapitre 11 - Additions et Soustractions de nombres relatifs (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_11/Cours.html"
 	},
@@ -920,6 +944,12 @@ var cinquieme_base = [
 			id: 13,
 			nom: "Probabilités",
 			icone: 4,
+			download: {
+				docx: 		 "/Cours/5eme/Base/Chapitre_13/Documents/Chapitre 13 - Probabilités (Complet).docx",
+				pdf:  		 "/Cours/5eme/Base/Chapitre_13/Documents/Chapitre 13 - Probabilités (Complet).pdf",
+				docx_trou: "/Cours/5eme/Base/Chapitre_13/Documents/Chapitre 13 - Probabilités (A trou).docx",
+				pdf_trou:  "/Cours/5eme/Base/Chapitre_13/Documents/Chapitre 13 - Probabilités (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_13/Cours.html"
 	},
@@ -964,8 +994,10 @@ var cinquieme_base = [
 			icone: 2,
 			ready : true,
 			download: {
-				pdf: 			 "/Cours/5eme/base/Chapitre_19/Documents/Chapitre 19 - Parallélogrammes (Complet).pdf",
-				docx:		 	 "/Cours/5eme/base/Chapitre_19/Documents/Chapitre 19 - Parallélogrammes (Complet).docx",
+				pdf: 			 "/Cours/5eme/Base/Chapitre_19/Documents/Chapitre 19 - Parallélogrammes (Complet).pdf",
+				docx:		 	 "/Cours/5eme/Base/Chapitre_19/Documents/Chapitre 19 - Parallélogrammes (Complet).docx",
+				docx_trou: "/Cours/5eme/Base/Chapitre_19/Documents/Chapitre 19 - Parallélogrammes (A trou).docx",
+				pdf_trou:  "/Cours/5eme/Base/Chapitre_19/Documents/Chapitre 19 - Parallélogrammes (A trou).pdf",
 			},
 			page : "Base/Chapitre_19/Cours.html"
 	}
@@ -1197,12 +1229,12 @@ var cinquieme_saintexupery = [
 			id: 18,
 			nom: "Probabilités",
 			icone: 4,
-			// download: {
-			// 	docx: 		 "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (Complet).docx",
-			// 	pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (Complet).pdf",
-			// 	docx_trou: "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (A trou).docx",
-			// 	pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_13/Cours.html"
 	},
