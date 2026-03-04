@@ -481,12 +481,12 @@ var quatrieme_base = [
 			id: 16,
 			nom: "Pyramides et cônes",
 			icone: 2,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_16/Cours.html"
 	},
@@ -757,12 +757,12 @@ var quatrieme_saintexupery = [
 			id: 16,
 			nom: "Pyramides et cônes",
 			icone: 2,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_16/Documents/Chapitre 16 - Pyramides et cônes (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_16/Cours.html"
 	},
