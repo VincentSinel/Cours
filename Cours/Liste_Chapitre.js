@@ -468,12 +468,12 @@ var quatrieme_base = [
 			id: 15,
 			nom: "Triangle semblable",
 			icone: 2,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_15/Cours.html"
 	},
@@ -744,12 +744,12 @@ var quatrieme_saintexupery = [
 			id: 15,
 			nom: "Triangle semblable",
 			icone: 2,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_15/Documents/Chapitre 15 - Triangle semblable (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_15/Cours.html"
 	},
