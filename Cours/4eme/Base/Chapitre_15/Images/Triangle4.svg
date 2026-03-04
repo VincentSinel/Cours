@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285.11 142.11">
+  <polygon points="24.14 25.31 261.08 23.61 104.82 105.99 24.14 25.31" style="fill: none; stroke: #1d1d1b; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.83px;"/>
+  <text transform="translate(92.98 134.44)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 28.35px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">M</tspan></text>
+  <text transform="translate(266.81 24.24)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 28.35px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">O</tspan></text>
+  <text transform="translate(0 24.24)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 28.35px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">N</tspan></text>
+  <path d="m82.53,83.71c5.7-5.7,13.58-9.23,22.29-9.23,12.1,0,22.6,6.81,27.88,16.81l-27.88,14.7-22.29-22.29Z" style="fill: #f9b233; stroke: #1d1d1b; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7px;"/>
+  <g>
+    <line x1="67.46" y1="61.59" x2="66.43" y2="76.36" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.83px;"/>
+    <line x1="59.56" y1="68.46" x2="74.33" y2="69.49" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.83px;"/>
+  </g>
+  <circle cx="183.36" cy="64.8" r="8.32" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.83px;"/>
+</svg>

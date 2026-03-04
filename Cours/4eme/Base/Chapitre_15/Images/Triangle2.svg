@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282.43 142.11">
+  <polygon points="22.69 25.31 259.62 23.61 103.37 105.99 22.69 25.31" style="fill: none; stroke: #1d1d1b; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.83px;"/>
+  <text transform="translate(93.27 134.44)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 28.35px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">D</tspan></text>
+  <text transform="translate(266.59 24.24)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 28.35px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">F</tspan></text>
+  <text transform="translate(0 24.24)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 28.35px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">E</tspan></text>
+  <path d="m226.84,40.9c-2.73-5.16-4.27-11.04-4.27-17.28h37.05s-32.78,17.28-32.78,17.28Z" style="fill: #009fe3; stroke: #1d1d1b; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7px;"/>
+  <path d="m52.02,25.31c0,8.1-3.28,15.43-8.59,20.74l-20.74-20.74h29.33Z" style="fill: #95c11f; stroke: #1d1d1b; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7px;"/>
+  <g>
+    <line x1="142.95" y1="16.56" x2="151.89" y2="31.91" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.83px;"/>
+    <line x1="136.57" y1="16.56" x2="145.51" y2="31.91" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.83px;"/>
+  </g>
+</svg>

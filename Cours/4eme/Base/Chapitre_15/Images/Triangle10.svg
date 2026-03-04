@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282.38 138.66">
+  <text transform="translate(195.69 49.94)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 22.68px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">35°</tspan></text>
+  <text transform="translate(73.24 46.05)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 22.68px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">15°</tspan></text>
+  <polygon points="260.39 25.31 23.45 23.61 179.71 105.99 260.39 25.31" style="fill: none; stroke: #1d1d1b; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.83px;"/>
+  <text transform="translate(171.75 130.99)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 28.35px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">S</tspan></text>
+  <text transform="translate(268.45 24.24)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 28.35px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">T</tspan></text>
+  <text transform="translate(0 24.24)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 28.35px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">R</tspan></text>
+  <path d="m56.24,40.9c2.73-5.16,4.27-11.04,4.27-17.28H23.45l32.78,17.28Z" style="fill: #009fe3; stroke: #1d1d1b; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7px;"/>
+  <path d="m231.06,25.31c0,8.1,3.28,15.43,8.59,20.74l20.74-20.74h-29.33Z" style="fill: #95c11f; stroke: #1d1d1b; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7px;"/>
+</svg>

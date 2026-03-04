@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 281.33 141.82">
+  <polygon points="21.38 25.31 258.31 23.61 102.06 105.99 21.38 25.31" style="fill: none; stroke: #1d1d1b; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.83px;"/>
+  <text transform="translate(92.08 134.15)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 28.35px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">K</tspan></text>
+  <text transform="translate(265.08 24.24)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 28.35px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">L</tspan></text>
+  <text transform="translate(0 24.24)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 28.35px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">J</tspan></text>
+  <g>
+    <line x1="141.64" y1="16.56" x2="150.58" y2="31.91" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.83px;"/>
+    <line x1="135.26" y1="16.56" x2="144.2" y2="31.91" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.83px;"/>
+  </g>
+  <g>
+    <line x1="64.7" y1="61.59" x2="63.67" y2="76.36" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.83px;"/>
+    <line x1="56.8" y1="68.46" x2="71.57" y2="69.49" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.83px;"/>
+  </g>
+  <circle cx="180.6" cy="64.8" r="8.32" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.83px;"/>
+</svg>
