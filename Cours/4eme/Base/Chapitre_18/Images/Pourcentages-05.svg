@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="20.79mm" height="13.73mm" viewBox="0 0 58.92 38.91">
   <title>Pourcentages</title>
-  <rect x="1.11" y="9.67" width="56.69" height="28.35" fill="#e1e43c"/>
-  <rect x="1.11" y="9.67" width="56.69" height="28.35" fill="none" stroke="#e1e43c" stroke-miterlimit="10"/>
+  <rect x="1.11" y="10.56" width="56.69" height="26.56" fill="#e1e43c" stroke="#e1e43c" stroke-miterlimit="10"/>
   <rect x="43.63" y="10.56" width="14.17" height="26.56" fill="#d34f1d"/>
   <g>
     <path d="M19.23,1.81h0L18,2.48l-.18-.73L19.34.91h.83V8.06h-.94Z" fill="#642d10"/>

@@ -494,12 +494,12 @@ var quatrieme_base = [
 			id: 17,
 			nom: "Médiane et étendue",
 			icone: 5,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_17/Cours.html"
 	},
@@ -507,12 +507,12 @@ var quatrieme_base = [
 			id: 18,
 			nom: "Proportionnalité",
 			icone: 5,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_18/Cours.html"
 	},
@@ -770,12 +770,12 @@ var quatrieme_saintexupery = [
 			id: 17,
 			nom: "Médiane et étendue",
 			icone: 5,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_17/Documents/Chapitre 17 - Médiane et étendue (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_17/Cours.html"
 	},
@@ -783,12 +783,12 @@ var quatrieme_saintexupery = [
 			id: 18,
 			nom: "Proportionnalité",
 			icone: 5,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_18/Documents/Chapitre 18 - Proportionnalité (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_18/Cours.html"
 	},
