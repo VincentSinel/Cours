@@ -520,12 +520,12 @@ var quatrieme_base = [
 			id: 19,
 			nom: "Probabilité",
 			icone: 4,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_19/Cours.html"
 	},
@@ -546,12 +546,12 @@ var quatrieme_base = [
 			id: 21,
 			nom: "Cosinus",
 			icone: 3,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_21/Cours.html"
 	}
@@ -796,12 +796,12 @@ var quatrieme_saintexupery = [
 			id: 19,
 			nom: "Probabilité",
 			icone: 4,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_19/Documents/Chapitre 19 - Probabilité (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_19/Cours.html"
 	},
@@ -809,12 +809,12 @@ var quatrieme_saintexupery = [
 			id: 20,
 			nom: "Cosinus",
 			icone: 3,
-			// download: {
-			// 	docx: 		 "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (Complet).docx",
-			// 	pdf:  		 "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (Complet).pdf",
-			// 	docx_trou: "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (A trou).docx",
-			// 	pdf_trou:  "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (A trou).pdf",
-			// },
+			download: {
+				docx: 		 "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (Complet).docx",
+				pdf:  		 "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (Complet).pdf",
+				docx_trou: "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (A trou).docx",
+				pdf_trou:  "/Cours/4eme/Base/Chapitre_21/Documents/Chapitre 21 - Cosinus (A trou).pdf",
+			},
 			ready : true,
 			page : "Base/Chapitre_21/Cours.html"
 	}
