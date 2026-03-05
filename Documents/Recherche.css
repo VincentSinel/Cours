@@ -7,6 +7,7 @@
 	gap: 10px;
 	margin-left: 0;
 	background-color: var(--PanelBack);
+	max-height: calc(100% - var(--HeaderBarHeight));
 }
 
 .search_list{
@@ -98,6 +99,7 @@
 	flex-flow: column;
 	color: white;
 	transition-duration: 0.2s;
+	max-height: 100%;
 }
 #Resultats::-webkit-scrollbar {
     width: 11px;
@@ -199,4 +201,16 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+@media only screen and (max-width:1220px) {
+	.container{
+		max-height: calc(100% - 2 * var(--HeaderBarHeight));
+	}
+}
+
+@media only screen and (max-width:860px) {
+  .nav-header {
+		max-height: calc(100% - 2 * var(--HeaderBarHeight));
+	}
 }
