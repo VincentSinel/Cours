@@ -126,29 +126,29 @@
 		document.getElementById("Png_Save").onclick = () => {
 			var zip = new JSZip();
 			
-			console.log(View_Front.node.outerHTML)
+			console.log(View_Iso)
 			toPng({
-				width: View_Front.width(),
-				height: View_Front.height(),
-				svg: View_Front.node.outerHTML
+				width: View_Front.view.width(),
+				height: View_Front.view.height(),
+				svg: View_Front.view.node.outerHTML
 			}).then((blob) => {
 				if (View_Front_flip)
 					zip.file("Face_arriere.png", blob);
 				else
 					zip.file("Face_avant.png", blob);
 				toPng({
-					width: View_Right.width(),
-					height: View_Right.height(),
-					svg: View_Right.node.outerHTML
+					width: View_Right.view.width(),
+					height: View_Right.view.height(),
+					svg: View_Right.view.node.outerHTML
 				}).then((blob) => {
 					if (View_Right_flip)
 						zip.file("Face_droite.png", blob);
 					else
 						zip.file("Face_gauche.png", blob);
 					toPng({
-						width: View_Top.width(),
-						height: View_Top.height(),
-						svg: View_Top.node.outerHTML
+						width: View_Top.view.width(),
+						height: View_Top.view.height(),
+						svg: View_Top.view.node.outerHTML
 					}).then((blob) => {
 						if (View_Top_flip)
 							zip.file("Face_dessous.png", blob);
