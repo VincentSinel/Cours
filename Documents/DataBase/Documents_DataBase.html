@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<script src="JSonCreator.js"></script>
+		<link rel="stylesheet" href="DataBase.css"> 
+	</head>
+	<body>
+		<div class="flexholder">
+			<div class="flexmenu" style="max-height: 100%;">
+				<div class="panel">
+					<ul id="list_img">
+
+					</ul>
+				</div>
+				<div class="content">
+					<div  class="contentflex">
+						<embed id="preview" src="" width= "100%" height= "99%" type="application/pdf">
+					</div>
+				</div>
+				<div class="panel info">
+					<div style="height: 100%;">
+						<div style="min-height: calc(100% - 117px); max-height: calc(100% - 117px); overflow-y: scroll;">
+							<span>Informations</span>
+							<div style="padding-left: 10px;">
+								<div>
+									<label>Fichier de previsualisation :</label>
+									<select id="preview_file">
+									</select>
+								</div>
+								<label>Nom :</label>
+								<input id="file_name" type="text">
+								<label>Fichiers associés</label>
+								<div id="list_file" class="list_file">
+									<div class="file_link">
+										<select>
+											
+										</select>
+										<div>
+											<img src="/Images/Icons/Delete.svg">
+										</div>
+									</div>
+								</div>
+								<button style="width: 100%;" onclick="AddFileLinked()">Ajouter</button>
+								<label>Tags</label>
+								<div id="list_tag" class="list_file">
+									<div class="file_link">
+										<input type="text">
+										<div>
+											<img src="/Images/Icons/Delete.svg">
+										</div>
+									</div>
+								</div>
+								<button style="width: 100%;" onclick="AddTag()">Ajouter</button>
+							</div>
+						</div>
+						<div class="buttons">
+							<button onclick="Previous()">Sauvegarder et précédent</button>
+							<button onclick="Save()">Sauvegarder</button>
+							<button onclick="Next()">Sauvegarder et suivant</button>
+							<button onclick="LockExo()">🔑</button>
+							<button onclick="Clear()">❌</button>
+						</div>
+						<div style="height: 30px;"></div>
+						<button style="width: 100%;" onclick="Export()">Exporter</button>
+						<button style="width: 100%;" onclick="ExportSave()">Sauvegarder et Exporter</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+	<script>
+		Load_Data();
+	</script>
+</html>

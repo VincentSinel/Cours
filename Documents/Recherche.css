@@ -28,6 +28,27 @@
 	width: 50%;
 	overflow-y: auto;
 	background-color: var(--HeadMenuButton);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.preview_img{
+	max-height: 100%;
+	max-width: calc(100% - 20px);
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+.preview_img > img{
+	max-width: calc(100% - 20px);
+	max-height: calc(100% - 20px);
+	background-color: white;
+}
+
+.hidden{
+	display: none;
 }
 
 .searchbar {

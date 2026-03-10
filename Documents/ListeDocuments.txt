@@ -7,24 +7,36 @@ Documents\Fiches\Tableau conversion Masse.pdf
 Documents\Fiches\Tableau conversion Volume.pdf 
 Documents\Fiches\Tableaux conversions.pdf 
 Documents\Fiches\Tableau_sur_la_numeration.pdf 
-Documents\Jeux\Enigme d'einstein.pdf 
-Documents\Seances info\Scratch\Activite scratch - Code morse.pdf 
-Documents\Seances info\Scratch\Activite scratch - Decomposition en produit de facteur premiers.pdf 
-Documents\Seances info\Scratch\Activite scratch - Exercice brevet.pdf 
-Documents\Seances info\Scratch\Activite Scratch - Jeu de vitesse.pdf 
-Documents\Seances info\Scratch\Chaos et scratch.pdf 
-Documents\Seances info\Tableur\Activite tableur - Puissances.pdf 
-Documents\Seances info\Scratch\Activite scratch - Code morse.docx 
-Documents\Seances info\Scratch\Activite scratch - Decomposition en produit de facteur premiers.docx 
-Documents\Seances info\Scratch\Activite scratch - Exercice brevet.docx 
-Documents\Seances info\Scratch\Activite Scratch - Jeu de vitesse.docx 
-Documents\Seances info\Tableur\Activite tableur - Puissances.docx 
-Documents\Jeux\Calcul express.zip 
-Documents\Jeux\Chiffroscope.zip 
+Documents\Jeux\Calcul Express.zip 
+Documents\Jeux\Enigme d'Einstein.docx 
+Documents\Jeux\Enigme d'Einstein.pdf 
 Documents\Jeux\Figures telephonees.zip 
 Documents\Jeux\Flextangle.zip 
 Documents\Jeux\Jeu_Pythagore.zip 
-Documents\Jeux\Operations sur les relatifs.zip 
-Documents\Seances info\Scratch\Activite scratch - Produit en croix.zip 
-Documents\Seances info\Tableur\Activite tableur - Equations.zip 
-Documents\Seances info\Tableur\Activite tableur - Fonctions.zip 
+Documents\Jeux\Operations_relatifs.zip 
+Documents\Jeux\Preview - Calcul_Express.svg 
+Documents\Jeux\Preview - Figures_telephonees.svg 
+Documents\Jeux\Preview - Flextangle.png 
+Documents\Jeux\Preview - Jeu_Pythagore.svg 
+Documents\Jeux\Preview - Operations_relatifs.png 
+Documents\Seances info\Scratch\Activite produit en croix.sb3 
+Documents\Seances info\Scratch\Activite scratch - Code morse.docx 
+Documents\Seances info\Scratch\Activite scratch - Code morse.pdf 
+Documents\Seances info\Scratch\Activite scratch - Decomposition en produit de facteur premiers.docx 
+Documents\Seances info\Scratch\Activite scratch - Decomposition en produit de facteur premiers.pdf 
+Documents\Seances info\Scratch\Activite scratch - Exercice brevet.docx 
+Documents\Seances info\Scratch\Activite scratch - Exercice brevet.pdf 
+Documents\Seances info\Scratch\Activite Scratch - Jeu de vitesse.docx 
+Documents\Seances info\Scratch\Activite Scratch - Jeu de vitesse.pdf 
+Documents\Seances info\Scratch\Activite scratch - Produit en croix.docx 
+Documents\Seances info\Scratch\Activite scratch - Produit en croix.pdf 
+Documents\Seances info\Scratch\Chaos et scratch.odt 
+Documents\Seances info\Scratch\Chaos et scratch.pdf 
+Documents\Seances info\Tableur\Activite tableur - 3eme.docx 
+Documents\Seances info\Tableur\Activite tableur - 3eme.pdf 
+Documents\Seances info\Tableur\Activite tableur - Equations.docx 
+Documents\Seances info\Tableur\Activite tableur - Equations.pdf 
+Documents\Seances info\Tableur\Activite tableur - Puissances.docx 
+Documents\Seances info\Tableur\Activite tableur - Puissances.pdf 
+Documents\Seances info\Tableur\Tableau.ods 
+Documents\Seances info\Tableur\Tableur equations.xlsx 
