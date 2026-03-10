@@ -169,6 +169,7 @@
 	min-height: 20px;
 	font-size: 12px;
 	align-items: center;
+	gap: 3px;
 }
 .resultat_tag div{
 	background-color: var(--PurplePanel);
