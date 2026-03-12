@@ -28,6 +28,12 @@
 				margin-left: 10px;
 				color: lightcoral;
 			}
+			.pdfbutton3{
+				font-size: 10pt;
+				font-weight: bold;
+				margin-left: 10px;
+				color: violet;
+			}
 		</style>
 	</head>
 	<body>
@@ -132,6 +138,14 @@
 						a2.href = chapitre.download.pdf_trou;
 						a2.innerHTML = "A trou";
 						a2.classList.add("pdfbutton2")
+						li.appendChild(a2);
+					}
+					if (chapitre.download.hasOwnProperty("img"))
+					{
+						var a2 = document.createElement("a");
+						a2.href = chapitre.download.img;
+						a2.innerHTML = "Images";
+						a2.classList.add("pdfbutton3")
 						li.appendChild(a2);
 					}
 				}
