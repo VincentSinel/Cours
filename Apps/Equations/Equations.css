@@ -1,0 +1,334 @@
+:root{
+	--TableWidth : 77px;
+	--SolutionWidth : 300px;
+	--TableHeight: calc(var(--TableWidth) * 41.0 / 44.0);
+	--TableFontSize: calc(var(--TableWidth) * 8.0 / 44.0);
+
+	--Back: #181818;
+	--BackObject: #262626;
+	--BackActive: #37373D;
+	--BackHover: #2A2D2E;
+	--BackHoverMenu: #36363C;
+	--BackText: #DEDEE3;
+	--DBackText: #CFCFD3;
+	--DBackText: #CFCFD3;
+
+	--WBack: #353535;
+	--WBackActive: #53535B;
+	--WBackDisabled: #F9F9FF08;
+	--WBackHover: #494D4F;
+	--WBackHoverMenu: #52525B;
+	--WBackText: #F9F9FF;
+	--WBackTextDisabled: #F9F9FF55;
+
+	--HeadMenuButton: #F9F9FF10;
+
+
+	--ButtonBack: #DEDEE3;
+	--ButtonBack_Hover: #CFCFD3;
+	--ButtonBack_Active: #FFFFFF;
+
+	
+	--MBack: #3C295B;
+	--MBack2T: #7030A055;
+	--MBack2: #7030A0;
+	--MBack2Hover: #7C35B2;
+	--MBack2Active: #612A8C;
+	--MBack3T: #D24C1055;
+	--MBack3: #D24C10;
+	--MBack3Hover: #E24D12;
+	--MBack3Active: #C1440F;
+	--MBack4T: #d2101055;
+}
+
+body{
+	background-color: var(--PanelBack);
+	overflow-x: hidden;
+}
+
+.split{
+	display: flex;
+	gap: 5px;
+	flex-direction: row;
+	padding: 5px;
+	padding-left: 45px;
+	min-width: calc(100% - 50px);
+	max-width: calc(100% - 50px);
+	min-height: calc(100% - 10px);
+	max-height: calc(100% - 10px);
+}
+
+.left_column{
+	flex: 1;
+	display: flex;
+	gap: 5px;
+	flex-direction: column;
+}
+.right_column{
+	flex: 2;
+	display: flex;
+	gap: 5px;
+	flex-direction: column;
+}
+.balance{
+	background-color: white;
+	min-height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.modes{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.operations{
+	display: flex;
+	gap: 5px;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.calculs{
+	background-color: white;
+	flex-grow: 1;
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	align-items: flex-start;
+	max-height: 100%;
+	overflow-y: scroll;
+	font-size: 25pt;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.calculs > table{
+	border-collapse:collapse;	
+	margin-bottom: 100px;
+}
+
+.hidden{
+	display: none !important;
+}
+
+.calcul{
+	flex-direction: row;
+	justify-content: center;
+	align-items: baseline;
+}
+.calcul > td
+{
+	padding: 5px 0;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.calcul > td:nth-child(even)
+{
+	width: 20px;
+}
+.calcul > td:nth-child(1)
+{
+	align-items: flex-end;
+}
+.calcul > td > div
+{
+	text-align: center;
+}
+.calcul > td > div > hr
+{
+	margin: 5px 0;
+}
+.calcul > td:nth-child(13)
+{
+	text-align: left;
+}
+
+.calcul_add{
+	color: red;
+}
+
+.solved > td{
+	border-top: solid 5px limegreen;
+	border-bottom: solid 5px limegreen;
+}
+.solved > td:first-child
+{
+	border-left: solid 5px limegreen;
+}
+.solved > td:last-child
+{
+	border-right: solid 5px limegreen;
+}
+
+.operation{
+	display: flex;
+	gap: 2px;
+	flex-direction: column;
+	padding: 2px;
+	border: solid gray 1px;
+	background-color: var(--ButtonBack);
+	border-radius: 5px;
+	min-width: 82px;
+}
+.operation:hover{
+	background-color: var(--ButtonBack_Hover);
+}
+.operation:active{
+	background-color: var(--ButtonBack_Active);
+}
+.operation > img{
+	height: 30px;
+}
+.operation > label{
+	text-align: center;
+	font-weight: bold;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 25pt;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.icon_button{
+	width: 100%;
+	height: 24px;
+	transition: 150ms;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+	background-color: var(--HeadMenuButton);
+	color: var(--WBackText);
+
+}
+.icon_button > img{
+	min-width: 24px;
+	max-width: 24px;
+}
+.icon_button > label{
+	font-weight: bold;
+	font-size: 12pt;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	flex-grow: 1;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.icon_button:hover{
+	background-color: var(--WBackHover);
+}
+.icon_button:active{
+	background-color: var(--WBackActive);
+}
+
+.info{
+	background-color: var(--HeadMenuButton);
+	flex: 1;
+	border-radius: 5px;
+	color: var(--WBackText);
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	padding: 10px;
+}
+.info label{
+	border-radius: 5px;
+	font-size: 12pt;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.info table{
+	border-radius: 5px;
+	font-size: 12pt;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	border-collapse: collapse;
+}
+.info table tr:nth-child(even)
+{
+	background-color: var(--MBack3T);
+}
+.info table tr:nth-child(odd)
+{
+	background-color: var(--MBack2T);
+}
+.info table tr:last-child
+{
+	background-color: var(--MBack4T);
+}
+
+.info table td{
+	text-align: right;
+	font-weight: bold;
+	border: solid #7030A0 2px;
+}
+.info table th{
+	text-align: left;
+	font-weight: bold;
+	border: solid #7030A0 2px;
+}
+.info_change{
+	font-weight: bold;
+	text-align: right;
+}
+
+
+.menu_value{
+	background-color: #E24D12;
+	color: var(--WBackText);
+	border: solid 5px #C1440F;
+	border-radius: 20px;
+	padding: 10px;
+	position: fixed;
+	z-index: 50;
+	height: 60px;
+	width: 300px;
+	top: calc(50% - 30px);
+	left: calc(50% - 150px);
+	display: flex;
+	gap: 5px;
+	flex-direction: row;
+	justify-content: center;
+	align-items: baseline;
+	text-align: center;
+}
+.menu_value > label{
+	font-weight: bold;
+	font-size: 30pt;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.menu_value > input{
+	font-weight: bold;
+	font-size: 25pt;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	width: 150px;
+	flex: 150px 1 1;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+#countdowncompetition{
+	background-color: #E24D12;
+	color: var(--WBackText);
+	border: solid 5px #C1440F;
+	border-radius: 20px;
+	padding: 10px;
+	position: fixed;
+	z-index: 50;
+	height: 110px;
+	width: 250px;
+	top: calc(50% - 55px);
+	left: calc(50% - 125px);
+	font-weight: bold;
+	font-size: 30pt;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

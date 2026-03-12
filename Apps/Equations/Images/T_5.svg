@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129.74 124.81">
+  <path d="m64.87,1h53.79c5.57,0,10.09,4.52,10.09,10.09v102.64c0,5.57-4.52,10.09-10.09,10.09h-53.79s-53.79,0-53.79,0c-5.57,0-10.09-4.52-10.09-10.09V11.09C1,5.52,5.52,1,11.09,1c0,0,53.79,0,53.79,0Z" style="fill: #9d9d9c; stroke: #1d1d1b; stroke-miterlimit: 10; stroke-width: 5px;"/>
+  <line x1="125.78" y1="120.87" x2="111.87" y2="103.29" style="fill: none; stroke: #1d1d1b; stroke-miterlimit: 10; stroke-width: 5px;"/>
+  <path d="m64.87,1s29.7,0,29.7,0h8.7c3.35,0,6.38,1.36,8.58,3.55s3.55,5.23,3.55,8.58v41.11s0,41.11,0,41.11c0,3.35-1.46,5.94-3.61,8.03-7.3,7.06-26.37,9.17-46.92,9.13-20.55.03-39.62-2.07-46.92-9.13-2.15-2.08-3.61-4.68-3.61-8.03V13.13c0-3.35,1.36-6.38,3.55-8.58s5.23-3.55,8.58-3.55h8.7s29.7,0,29.7,0Z" style="fill: #fff; stroke: #1d1d1b; stroke-miterlimit: 10; stroke-width: 5px;"/>
+  <line x1="3.97" y1="120.87" x2="17.87" y2="103.29" style="fill: none; stroke: #1d1d1b; stroke-miterlimit: 10; stroke-width: 5px;"/>
+  <text transform="translate(43.86 79)" style="fill: #1d1d1b; font-family: HelveticaRounded-Bold, &apos;Helvetica Rounded&apos;; font-size: 70.87px; font-weight: 700;"><tspan x="0" y="0">5</tspan></text>
+</svg>

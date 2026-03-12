@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">	
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+	<link rel="stylesheet" href="/CSS/MainPage.css"> 
+  <link rel="stylesheet" href="Equations.css"> 
+  <script src="Equations.js"></script>
+
+	<script src="/JS/Svg.js/svg.min.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+	
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+  <title>Resolution d'équations</title>
+
+  <style>
+  </style>
+
+</head>
+
+<body onload="LoadFiles()">
+	<div class="split">
+		<div class="left_column">
+			<div id="balance_holder" class="balance hidden">
+
+			</div>
+			<div class="modes">
+				<div class="icon_button" onclick="StartRandomEquation()">
+					<img src="/Images/Icons/Shuffle.svg">
+					<label>Nouvelle équation aléatoire</label>
+				</div>
+				<div class="icon_button" onclick="StartCompetition()">
+					<img src="/Images/Icons/Reward.svg">
+					<label>Démarrer une compétition</label>
+				</div>
+				<div class="info">
+					<label>Meilleur temps :</label>
+					<label id="time_best" class="info_change">-</label>
+					<label>Temps moyen :</label>
+					<label id="time_average" class="info_change">-</label>
+					<label>Temps moyen (5 derniers calcul) :</label>
+					<label id="time_average5" class="info_change">-</label>
+					<label>Dernière compétition :</label>
+					<table>
+						<tr>
+							<th>Calcul n°1 :</th>
+							<td id="time_comp_1">-</td>
+						</tr>
+						<tr>
+							<th>Calcul n°2 :</th>
+							<td id="time_comp_2">-</td>
+						</tr>
+						<tr>
+							<th>Calcul n°3 :</th>
+							<td id="time_comp_3">-</td>
+						</tr>
+						<tr>
+							<th>Calcul n°4 :</th>
+							<td id="time_comp_4">-</td>
+						</tr>
+						<tr>
+							<th>Calcul n°5 :</th>
+							<td id="time_comp_5">-</td>
+						</tr>
+						<tr>
+							<th>Moyenne :</th>
+							<td id="time_comp_M">-</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="right_column">
+			<div class="operations">
+				<div class="operation" onclick="ShowValueChoice('+x')">
+					<img src="Images/T_P.svg">
+					<label>+ ... 𝓍</label>
+				</div>
+				<div class="operation" onclick="ShowValueChoice('-x')">
+					<img src="Images/T_M.svg">
+					<label>- ... 𝓍</label>
+				</div>
+				<div class="operation" onclick="ShowValueChoice('+')">
+					<img src="Images/T_+.svg">
+					<label>+ ...</label>
+				</div>
+				<div class="operation" onclick="ShowValueChoice('-')">
+					<img src="Images/T_-.svg">
+					<label>- ...</label>
+				</div>
+				<div class="operation" onclick="ShowValueChoice('*')">
+					<img src="Images/T_mul.svg">
+					<label>× ...</label>
+				</div>
+				<div class="operation" onclick="ShowValueChoice('/')">
+					<img src="Images/T_div.svg">
+					<label>÷ ...</label>
+				</div>
+				<div class="operation" onclick="Undo()">
+					<img src="Images/T_Z.svg">
+					<label>⤶</label>
+				</div>
+			</div>
+			<div class="calculs">
+				<table id="calculs">
+				</table>
+			</div>
+		</div>
+	</div>
+	<div id="menu_value" class="menu_value hidden">
+		<label>+</label>
+		<input id="modificateur" type="number">
+		<label>𝓍</label>
+	</div>
+
+	<label id="countdowncompetition" class="menu_value hidden">
+	</label>
+</body>
+</html>
