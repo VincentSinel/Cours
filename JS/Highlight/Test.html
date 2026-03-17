@@ -1,0 +1,143 @@
+<html>
+	<head>
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/gdscript.css">
+    <script src="highlight.js"></script>
+		<script src="languages/gdscript.min.js"></script>
+		<script>hljs.highlightAll();</script>
+	</head>
+	<body>
+		<pre><code class="language-gdscript light_mode">
+@tool
+class_name SomeClass
+extends Node
+
+signal changed(new_value)
+signal health_changed
+
+var a: Array[int]
+
+@export var exported_var:int = 10:
+	set(val):
+		exported_var = val
+	get:
+		return exported_val
+
+const SomeOtherClass = preload("path/to/class")
+const SubClass = SomeOtherClass.SubClass
+
+func _ready() -> void:
+	print("Testing syntax highlighter")
+	for i:int in range(exported_var + 10):
+			var sc_instance = SubClass.instantiate()
+			add_child(sc_instance)
+			sc_instance.queue_free()
+
+	character_node.health_changed.connect(lifebar_node._on_Character_health_changed)
+
+	await get_tree().process_frame
+	var success:bool = end_test(get_child_count())
+	y += 3 if y < 10 else -1
+	if success:
+		print("Success")
+
+func end_test(child_count:int) -> bool:
+    if child_count == 0:
+        return true
+    else:
+        return false
+# Everything after "#" is a comment.
+# A file is a class!
+
+# (optional) icon to show in the editor dialogs:
+@icon("res://path/to/optional/icon.svg")
+
+# (optional) class definition:
+class_name MyClass
+
+# Inheritance:
+extends BaseClass
+
+
+# Member variables.
+var a = 5
+var s = "Hello"
+var arr = [1, 2, 3]
+var dict = {"key": "value", 2: 3}
+var other_dict = {key = "value", other_key = 2}
+var typed_var: int
+var inferred_type := "String"
+
+# Constants.
+const ANSWER = 42
+const THE_NAME = "Charly"
+
+# Enums.
+enum {UNIT_NEUTRAL, UNIT_ENEMY, UNIT_ALLY}
+enum Named {THING_1, THING_2, ANOTHER_THING = -1}
+
+# Built-in vector types.
+var v2 = Vector2(1, 2)
+var v3 = Vector3(1, 2, 3)
+
+
+# Function, with a default value for the last parameter.
+func some_function(param1, param2, param3 = 123):
+	const local_const = 5
+
+	if param1 < local_const:
+		print(param1)
+	elif param2 > 5:
+		print(param2)
+	else:
+		print("Fail!")
+
+	for i in range(20):
+		print(i)
+
+	while param2 != 0:
+		param2 -= 1
+
+	match param3:
+		3:
+			print("param3 is 3!")
+		_:
+			print("param3 is not 3!")
+
+	var local_var = param1 + 3
+	return local_var
+
+
+# Functions override functions with the same name on the base/super class.
+# If you still want to call them, use "super":
+func something(p1, p2):
+	super(p1, p2)
+
+
+# It's also possible to call another function in the super class:
+func other_something(p1, p2):
+	super.something(p1, p2)
+
+
+# Inner class
+class Something:
+	var a = 10
+
+
+# Constructor
+func _init():
+	print("Constructed!")
+	var lv = Something.new()
+	print(lv.a)
+		</code></pre>
+    <pre><code class="language-gdscript dark_mode">var greetings : String = "Hello World"
+
+func _ready() -> void:
+&#9;print(greetings + "!")</code></pre>
+	</body>
+</html>
+
+var greetings : String = "Hello World"
+
+func _ready() -> void:
+	print(greetings + "!")

@@ -1,0 +1,160 @@
+.language-gdscript.light_mode {
+    /* Define GDScript highlight.js colors */
+    --background-color: #f0f0f0;
+    --border_color: #e6e6e6;
+    --text-color: #404040;
+    --annotation-color: #cc5e00;
+    --symbol-color: #00008c;
+    --member-variable-color: #0066ad;
+    --node-ref-color: #63c259;
+    --keyword-color: #e62282;
+    --control_flow_keyword-color: #bd1fcc;
+    --base_type-color: #009933;
+    --engine_type-color: #1c8c66;
+    --user_type-color: #2e7366;
+    --comment-color: rgba(20,20,20,0.5);
+    --string-color: #996b00;
+    --number-color: #008c47;
+    --function_definition-color: #009999;
+    --function-color: #0039e6;
+    --global-func-color: #5c2eb8;
+}
+.language-gdscript.dark_mode{
+    --background-color: #0e1012;
+    --text-color: #ccced3;
+    --annotation-color: #ffb373;
+    --symbol-color: #abc8ff;
+    --member-variable-color: #bce0ff;
+    --node-ref-color: #63c259;
+    --keyword-color: #ff7085;
+    --control_flow_keyword-color: #ff8ccc;
+    --base_type-color: #42ffc2;
+    --engine_type-color: #8effda;
+    --user_type-color: #c7ffed;
+    --comment-color: grey;
+    --string-color: #ffeca1;
+    --number-color: #a1ffe0;
+    --function_definition-color: #66e6ff;
+    --function-color: #57b3ff;
+    --global-func-color: #a3a3f5
+}
+
+.language-gdscript {
+
+    --monospace-font-family: "JetBrains Mono", SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, Courier, monospace;;
+
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: var(--monospace-font-family);
+    font-variant-ligatures: none;
+    border: 3px solid var(--border_color);
+    padding: 18px 16px;
+    white-space: pre;
+}
+
+code.hljs.language-gdscript .hljs-class_name {
+    color: var(--user_type-color);
+}
+
+code.hljs.language-gdscript .hljs-annotations {
+    color: var(--annotation-color);
+}
+
+code.hljs.language-gdscript .hljs-signal {
+    color: var(--member-variable-color);
+}
+
+code.hljs.language-gdscript .hljs-node_ref {
+    color: var(--node-ref-color);
+}
+
+code.hljs.language-gdscript .hljs-variable {
+    color: var(--member-variable-color);
+}
+
+code.hljs.language-gdscript .hljs-keyword {
+    color: var(--keyword-color);
+}
+
+code.hljs.language-gdscript .hljs-control_flow_keyword {
+    color: var(--control_flow_keyword-color);
+}
+
+code.hljs.language-gdscript .hljs-base_type {
+    color: var(--base_type-color);
+}
+
+code.hljs.language-gdscript .hljs-engine_type {
+    color: var(--engine_type-color);
+}
+
+code.hljs.language-gdscript .hljs-user_type {
+    color: var(--user_type-color);
+}
+
+code.hljs.language-gdscript .hljs-comment {
+    color: var(--comment-color);
+}
+
+code.hljs.language-gdscript .hljs-string {
+    color: var(--string-color)
+}
+
+code.hljs.language-gdscript .hljs-number {
+    color: var(--number-color);
+}
+
+code.hljs.language-gdscript .hljs-title {
+    color: var(--function_definition-color);
+}
+
+code.hljs.language-gdscript .hljs-return_type {
+    color: var(--base_type-color);
+}
+
+code.hljs.language-gdscript .hljs-function_call{
+    color: var(--function-color);
+}
+
+code.hljs.language-gdscript .hljs-global_func{
+    color: var(--global-func-color);
+}
+
+code.hljs.language-gdscript .hljs-symbol {
+    color: var(--symbol-color);
+}
+
+code.hljs .hljs-name,
+code.hljs .hljs-tag,
+code.hljs .hljs-attr {
+    color: var(--html-color);
+}
+
+pre,
+code,
+code.hljs {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+pre,
+code,
+code.hljs {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+/* code {
+    margin: 20px;
+    padding: 5px 20px;
+    display: block;
+    position: relative;
+    font-size: 1.1em;
+    text-align: initial;
+    tab-size: 4;
+    line-height: 2;
+}
+
+* {
+    box-sizing: border-box;
+} */
