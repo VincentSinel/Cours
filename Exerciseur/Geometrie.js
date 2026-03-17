@@ -391,20 +391,42 @@ class Geometrie
 			}
 		}
 		let depart = param.hasOwnProperty("depart") ? param.depart : false;
+		let d_type = param.hasOwnProperty("depart-type") ? param["depart-type"] : "|";
 		let d_size = param.hasOwnProperty("depart-size") ? param["depart-size"] : 15;
-		let fin = param.hasOwnProperty("fin") ? param.fin : false;
+		let fin 	 = param.hasOwnProperty("fin") ? param.fin : false;
+		let f_type = param.hasOwnProperty("fin-type") ? param["fin-type"] : "|";
 		let f_size = param.hasOwnProperty("fin-size") ? param["fin-size"] : 15;
 		if (depart)
 		{
-			let v3 = line.p1.add(dir.rotate(Math.PI / 2).mul(d_size / 2));
-			let v4 = line.p1.add(dir.rotate(-Math.PI / 2).mul(d_size / 2));
-			g.line(v3.x, v3.y, v4.x, v4.y).attr(this.base_line_attr).attr(attr_sup);
+			if (d_type == "|")
+			{
+				let v3 = line.p1.add(dir.rotate(Math.PI / 2).mul(d_size / 2));
+				let v4 = line.p1.add(dir.rotate(-Math.PI / 2).mul(d_size / 2));
+				g.line(v3.x, v3.y, v4.x, v4.y).attr(this.base_line_attr).attr(attr_sup);
+			}
+			else if (d_type == "<")
+			{
+				let v3 = line.p1.add(dir.rotate(Math.PI / 4).mul(d_size / 2));
+				let v4 = line.p1.add(dir.rotate(-Math.PI / 4).mul(d_size / 2));
+				g.line(v3.x, v3.y, line.p1.x, line.p1.y).attr(this.base_line_attr).attr(attr_sup);
+				g.line(v4.x, v4.y, line.p1.x, line.p1.y).attr(this.base_line_attr).attr(attr_sup);
+			}
 		}
 		if (fin)
 		{
-			let v5 = line.p2.add(dir.rotate(Math.PI / 2).mul(f_size / 2));
-			let v6 = line.p2.add(dir.rotate(-Math.PI / 2).mul(f_size / 2));
-			g.line(v5.x, v5.y, v6.x, v6.y).attr(this.base_line_attr).attr(attr_sup);
+			if (f_type == "|")
+			{
+				let v5 = line.p2.add(dir.rotate(Math.PI / 2).mul(f_size / 2));
+				let v6 = line.p2.add(dir.rotate(-Math.PI / 2).mul(f_size / 2));
+				g.line(v5.x, v5.y, v6.x, v6.y).attr(this.base_line_attr).attr(attr_sup);
+			}
+			else if (d_type == "<")
+			{
+				let v5 = line.p2.add(dir.rotate(Math.PI / 4).mul(-d_size / 2));
+				let v6 = line.p2.add(dir.rotate(-Math.PI / 4).mul(-d_size / 2));
+				g.line(v5.x, v5.y, line.p2.x, line.p2.y).attr(this.base_line_attr).attr(attr_sup);
+				g.line(v6.x, v6.y, line.p2.x, line.p2.y).attr(this.base_line_attr).attr(attr_sup);
+			}
 		}
 
 		return {svg: g, line: line};
