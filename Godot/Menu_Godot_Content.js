@@ -4,10 +4,9 @@ var MenuContent = [
 		content: [
 			{
 				name: "Créer un projet",
-				path: "",
-				ready: false,
+				path: "Pages/Interface/Creer_un_projet.html",
+				ready: true,
 			},
-
 			{
 				name: "Interface de l'éditeur",
 				path: "",
@@ -139,22 +138,22 @@ var MenuContent = [
 					{
 						name: "Tourelles",
 						path: "",
-				ready: false,
+						ready: false,
 					},
 					{
 						name: "Laser",
 						path: "",
-				ready: false,
+						ready: false,
 					},
 					{
 						name: "Tête chercheuse",
 						path: "",
-				ready: false,
+						ready: false,
 					},
 					{
 						name: "Marcheur",
 						path: "",
-				ready: false,
+						ready: false,
 					},
 				],
 			},
