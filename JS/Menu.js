@@ -28,6 +28,12 @@ function Applications()
 	window.location.href = "/Apps/AppContainer.html";
 }
 
+function Godot()
+{
+	window.location = "/Godot/Menu.html";
+	window.location.href = "/Godot/Menu.html";
+}
+
 
 
 function CodeEnter(event) {

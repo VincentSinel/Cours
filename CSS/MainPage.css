@@ -150,7 +150,7 @@ header {
   padding-right: 10px;
 }
 .blockmenuprincipal span::before{
-  content: "Menu principal";
+  content: "Accueil";
 }
 .blockmenucours span::before{
   content: "Cours";
@@ -164,6 +164,19 @@ header {
 .blockmenuapps span::before{
   content: "Applications";
 }
+.blockmenugodot span::before{
+  content: url("/Images/Godot_icon-45x45.svg"); 
+}
+.blockmenugodot{
+  background-color: #333f67;
+}
+.blockmenugodot:hover{
+  background-color: #29355c;
+}
+.blockmenugodot:active{
+  background-color: #212d51;
+}
+
 .blockmenusecret{
   flex: 0 1 auto;
   margin-left: auto;
@@ -556,6 +569,9 @@ a.deactivate{
   }
   .blockmenuapps span:before{
     content: "💿";
+  }
+  .blockmenugodot span::before{
+    content: url("/Images/Godot_icon-24x24.svg");
   }
   .blockmenu span {
     width: 30px;

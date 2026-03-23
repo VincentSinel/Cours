@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/MainPage.css"> 
+  <link rel="stylesheet" href="Menu_Godot.css"> 
+  <script src="/JS/Menu.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Images/favicon-16x16.png">
+  <link rel="manifest" href="/Images/site.webmanifest">
+  
+  <script src="https://kit.fontawesome.com/5d8c762684.js" crossorigin="anonymous"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Tutos Godot</title>
+
+
+  <script src="Menu_Godot_Content.js"></script>
+  <script src="Menu_Godot.js"></script>
+
+  <style>
+    #noiframe{
+      display: inline-block; 
+      margin-left: 45px; 
+	    margin-top: 20px;
+      color: var(--navbar-background-color);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      font-size: 14pt;
+      font-weight: bold;
+      text-align: left; 
+      width: calc(100% - 45px);}
+  </style>
+
+</head>
+
+<body onload="RefreshMenu()">
+
+  <div class="nav-header">
+    <div class="nav-headertext">
+      <div class="titrepageback">
+        <p class="titrepage"> SINEL Vincent</p>
+        <p id="titrepagecollege"><span></span></p>
+        <p id="titrepagedate"><span></span></p>
+      </div>
+    </div>
+    <header>
+      <div class="menuprincipale">
+		<div class="blockmenu blockmenuprincipal" title="Menu principal" onclick="Menu()"><span></span></div>
+		<div class="blockmenu blockmenucours" title="Cours" onclick="Cours()"><span></span></div>
+		<div class="blockmenu blockmenugenerateurs" title="Générateurs de formes" onclick="Outils()"><span></span></div>
+		<div class="blockmenu blockmenudocuments" title="Recherche de documents" onclick="Documents()"><span></span></div>
+		<div class="blockmenu blockmenuapps" title="Applications" onclick="Applications()"><span></span></div>
+		<div class="blockmenu blockmenugodot" title="Godot" onclick="Godot()"><span></span></div>
+		<div class="blockmenu blockmenusecret" title="???" onclick="ShowConnection()"><span></span></div>
+      </div>
+    </header>
+  </div>
+  <div id="secret" class="secret_connect">
+	  <input type="password" onfocusout="HideConnection()" onkeypress="CodeEnter(event)">
+  </div>
+  <div id="menu" class="aside">
+    <div class="openmenu" onclick="toggleMenu()">
+      ☰
+    </div>
+    <nav>
+      <div id="navigation_menu">
+        <p class="caption active">
+          <span class="caption-text">
+            Interface
+          </span>
+        </p>
+        <ul>
+          <li class="tree-1">
+            <a class="tree-root active">
+              <button class="tree-expand"></button>
+              Créer un projet
+            </a>
+            <ul>
+              <li class="tree-2">
+                <a class="reference active">
+                  Créer un projet
+                </a>
+              </li>
+              <li class="tree-2">
+                <a class="reference">
+                  Créer un projet
+                </a>
+              </li>
+              <li class="tree-2 current">
+                <a class="reference">
+                  Créer un projet
+                </a>
+              </li>
+              <li class="tree-2">
+                <a class="reference">
+                  Créer un projet
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="tree-1">
+            <a class="reference">
+              Créer un projet
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="container">
+    <div>
+      <span id="noiframe">
+        ← Choisissez un tutoriel dans le menu ci-contre.
+      </span>
+      <iframe id="Iframe"></iframe>
+    </div>
+  </div>
+</body>
+
+
+
+  
