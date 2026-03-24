@@ -9,8 +9,8 @@ var MenuContent = [
 			},
 			{
 				name: "Interface de l'éditeur",
-				path: "",
-				ready: false,
+				path: "Pages/Interface/Interface_editeur.html",
+				ready: true,
 			},
 			{
 				name: "Gestion des fichiers",
@@ -19,6 +19,11 @@ var MenuContent = [
 			},
 			{
 				name: "Paramètres du projet",
+				path: "",
+				ready: false,
+			},
+			{
+				name: "Quelques noeuds de base",
 				path: "",
 				ready: false,
 			},
@@ -33,7 +38,7 @@ var MenuContent = [
 				ready: false,
 			},
 			{
-				name: "Premier objet",
+				name: "Premiers objets",
 				path: "",
 				ready: false,
 			},

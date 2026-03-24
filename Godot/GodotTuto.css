@@ -7,6 +7,10 @@
   src: url(/Font/Sono/Sono-Bold.woff2);
   font-weight: bold;
 }
+@font-face {
+  font-family: CashMarket;
+  src: url(/Font/CashMarket-BoldRounded.ttf);
+}
 
 :root {
     --Cred: #e53935;
@@ -155,14 +159,10 @@ img{
 body {
     counter-reset: h1count;
     line-height: 1.4;
-    font-family: Sono;
+    font-family: CashMarket;
     margin: 3rem;
-}
-
-@media only screen and (max-width:1024px) {
-    body {
-        margin: 15px;
-    }
+    max-width: 900px;
+    margin: auto;
 }
 
 h1 {
@@ -170,7 +170,7 @@ h1 {
     counter-increment: h1count;
     counter-reset: h2count;
     display: list-item;
-    font-family: Sono;
+    font-family: CashMarket;
     font-size: 18pt;
     font-weight: bold;
     text-decoration: underline;
@@ -589,4 +589,19 @@ ol > li::marker {
     min-height: var(--AccoladeSize);
     border-top: solid var(--AccoladeWeight) black;
     border-left: solid var(--AccoladeWeight) black;
+}
+.info{
+    background-color: var(--Color_Orange5);
+    border: solid 2px var(--Color_Orange4);
+    border-radius: 5px;
+    white-space: pre;
+    padding: 0 2px;
+}
+.info.bleu{
+    background-color: var(--Color_Blue5);
+    border: solid 2px var(--Color_Blue4);
+}
+.info.vert{
+    background-color: var(--Color_Green5);
+    border: solid 2px var(--Color_Green4);
 }

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/Godot/GodotTuto.css"> 
+
+
+  <link rel="stylesheet" href="/JS/Highlight/styles/default.css">
+  <link rel="stylesheet" href="/JS/Highlight/styles/gdscript.css">
+  <script src="/JS/Highlight/highlight.js"></script>
+  <script src="/JS/Highlight/languages/gdscript.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  
+  <script src="https://kit.fontawesome.com/5d8c762684.js" crossorigin="anonymous"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Interface de l'éditeur</title>
+
+  <style>
+    .link{
+      font-family: FontAwesome;
+    }
+		.red_list li::marker {
+			color: red;
+		}
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Interface
+      </td>
+      <td id="ChapitreNom">
+        - Interface de l'éditeur
+      </td>
+    </tr>
+  </table>
+
+  <h1>Organisation</h1>
+
+  <img src="Images/Interface base.png">
+  <p>
+    Voici l'éditeur lorsque l'on lance le projet pour la première fois. Celui-ci est complexe au premier abord mais on peut découper les différentes informations.
+  </p>
+	<img src="Images/Interface base zones.png">
+	<p>
+		Voici le découpage principale avec les élèments les plus utiles pour démarrer un projet :<br>
+		<ol class="red_list">
+			<li>Le panneau <span class="info">Scène</span> contient la liste de tous les objets actuellement présent dans notre scène (la vue centrale). Il permet d'organiser, selectionner et hiérarchiser les différents élèments de notre jeu.</li>
+			<li>Le panneau <span class="info">Système de fichiers</span> est un explorateur de fichier qui montre ce que l'on trouve dans le dossier de sauvegarde du projet.</li>
+			<li>Le panneau <span class="info">Inspecteur</span> affiche les informations et propriétés d'un objet lorsque celui-ci est selectionné.</li>
+			<li>Le panneau centrale montre une <span class="info">prévisualisation de la scène</span> selectionné. Par default, la vision 3D est affiché mais on peut basculer sur la vision 2D dans le menu centrale en haut de l'écran.</li>
+			<li>La <span class="info">barre des menus</span> donne accés à des paramètres globaux de l'éditeur ou du projet.</li>
+			<li>Les panneaux en bas de l'écran son des menus de paramètrages supplémentaire lorsque des objets complexe sont selectionné (Tilemaps, Animations, Audio, ...). Les menus peuvent changer en fonction de l'objet selectionné. Le menu <span class="info">Sortie</span> indique toutes les actions effectué dans l'éditeur ainsi que les retours console que nécessaire au débuggage du jeu. Il permet aussi d'avoir des informations sur les éventuelles bug de ton jeu.</li>
+			<li>Le panneau <span class="info">Signaux</span> indique la liste des signaux que peut renvoyer un objet en fonction de différentes actions du jeu. Il permet de lié ses actions à un script et ainsi executer du code lorsque certain évenement ont lieux.</li>
+			<li>Les bouttons en haut à droite permettent de <span class="info">Lancer le programme</span>, de le mettre en pause ou de lancer une scene particulière.</li>
+		</ol>
+		Les deux panneaux bleus restant ainsi que les onglets cachés, proposent des outils non nécessaire pour débuter sur le logiciel.
+	</p>
+  <h1>Premiers noeuds</h1>
+	<div class="flexobject">
+		<p>
+			Les tutoriels de ce site se limite à la création de projet en 2 dimensions. Pour commencer et avoir la vue classique, il faut selectionner une scéne 2D dans le panneau des <span class="info">Scène</span>.
+		</p>
+		<img src="Images/Choix premier noeud - 2D.png">
+	</div>
+	<img src="Images/Interface 2D.png">
+	<p>
+		Dans le panneau <span class="info">Scène</span>, on voit désormais apparaitre notre premier noeud que l'on appelle le <span class="info bleu">Noeud racine</span>. Celui-ci etant directement selectionné, l'<span class="info">Inspecteur</span> affiche ses propriétés.
+	</p>
+	<p>
+		On peut désormais commencer à créer des objets. Par exemple, on peut ajouter une image à la scene en effectuant un glisser déposer de l'image présente dans le <span class="info">Système de fichiers</span> vers la <span class="info">prévisualisation de la scène</span>.
+	</p>
+	<img src="Images/DragDrop.png">
+	<p>
+		L'image viens s'afficher sur la parti centrale et un noeud est automatiquement créer sous notre <span class="info bleu">Noeud racine</span>. On peut alors modifier les propriétés de ce noeud pour le modifier. Par exemple effectuer une rotation. On peut noter que ce noeud est de type <span class="info vert">Sprite2D</span>
+	</p>
+	<img src="Images/Proprietes.png">
+	<p>
+		A noter que lorsque l'on dézoome sur la <span class="info">prévisualisation de la scène</span>, on voit apparaitre le rectangle suivant :
+	</p>
+	<img src="Images/BordCamera.png">
+	<p>
+		Ce rectangle délimite la zone visible actuel. Si vous lancer le jeu vous ne verrez que ce qui se trouve à l'intérieur de ce rectangle car rien n'a encore été modifié.
+	</p>
+	<p>
+		Pour te déplacer facilement sur la <span class="info">prévisualisation de la scène</span>, il est préférable de garder le mode <b>selection</b> (boutton en forme de curseur le plus à gauche en dans la barre d'outils). On peut alors selectionner les objets avec un clic gauche et déplacer la camera avec le clic de la molette.
+	</p>
+    
+</body>
+
+</html>
