@@ -133,7 +133,6 @@ function OpenPage(path_index)
 
 function ReajustIframe()
 {
-    console.log("ready")
     if (document.getElementById("Iframe").contentWindow.document.documentURI == "about:blank") return;
     document.getElementById("Iframe").style.height = document.getElementById("Iframe").contentWindow.document.body.scrollHeight + 120 + 'px';
 }
