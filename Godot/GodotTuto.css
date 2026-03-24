@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Sono;
+  src: url(/Font/Sono/Sono-Regular.woff2); 
+}
+@font-face {
+  font-family: Sono;
+  src: url(/Font/Sono/Sono-Bold.woff2);
+  font-weight: bold;
+}
+
 :root {
     --Cred: #e53935;
     --Cblue: #039be5;
@@ -145,7 +155,7 @@ img{
 body {
     counter-reset: h1count;
     line-height: 1.4;
-    font-family: system-ui;
+    font-family: Sono;
     margin: 3rem;
 }
 
@@ -160,17 +170,17 @@ h1 {
     counter-increment: h1count;
     counter-reset: h2count;
     display: list-item;
-    font-family: Verdana, Helvetica, Geneva, Tahoma, sans-serif;
+    font-family: Sono;
     font-size: 18pt;
     font-weight: bold;
     text-decoration: underline;
     margin-top: 50px;
-    margin-left: 2rem;
+    margin-left: 10rem;
 
 }
 h1::marker {
     display: list-item;
-    content: "Partie " counter(h1count, upper-roman) " ";
+    content: "Partie " counter(h1count, upper-roman) " : ";
     text-decoration: underline;
     color: var(--SectionPrincipale);
     font-weight: bold;
