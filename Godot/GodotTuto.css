@@ -122,6 +122,7 @@
 
 table#TitleTable{
     margin: 0 auto;
+    margin-top: 40px;
     border: 1px solid black;
     border-collapse: collapse;
     box-shadow: 2px 2px 5px #000;
