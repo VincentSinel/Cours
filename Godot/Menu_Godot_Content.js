@@ -14,17 +14,17 @@ var MenuContent = [
 			},
 			{
 				name: "Gestion des fichiers",
-				path: "",
+				path: "Pages/Interface/Gestion_Fichiers.html",
 				ready: false,
 			},
 			{
 				name: "Paramètres du projet",
-				path: "",
+				path: "Pages/Interface/Parametres_projet.html",
 				ready: false,
 			},
 			{
 				name: "Quelques noeuds de base",
-				path: "",
+				path: "Pages/Interface/Noeuds_Base.html",
 				ready: false,
 			},
 		]
@@ -34,27 +34,27 @@ var MenuContent = [
 		content: [
 			{
 				name: "Mise en place",
-				path: "",
+				path: "Pages/Premier_Jeu/Mise_en_place.html",
 				ready: false,
 			},
 			{
 				name: "Premiers objets",
-				path: "",
+				path: "Pages/Premier_Jeu/Premiers_objets.html",
 				ready: false,
 			},
 			{
 				name: "Plateforme",
-				path: "",
+				path: "Pages/Premier_Jeu/Plateforme.html",
 				ready: false,
 			},
 			{
 				name: "Joueur",
-				path: "",
+				path: "Pages/Premier_Jeu/Joueur.html",
 				ready: false,
 			},
 			{
 				name: "Pour aller plus loin",
-				path: "",
+				path: "Pages/Premier_Jeu/Aller_plus_loin.html",
 				ready: false,
 			},
 		]
@@ -64,17 +64,17 @@ var MenuContent = [
 		content: [
 			{
 				name: "Principe",
-				path: "",
+				path: "Pages/Tilemap/Principe.html",
 				ready: false,
 			},
 			{
 				name: "Tilemap classique",
-				path: "",
+				path: "Pages/Tilemap/Tilemap_classique.html",
 				ready: false,
 			},
 			{
 				name: "Autotile",
-				path: "",
+				path: "Pages/Tilemap/Autotile.html",
 				ready: false,
 			},
 		]
@@ -84,32 +84,32 @@ var MenuContent = [
 		content: [
 			{
 				name: "Export de variables",
-				path: "",
+				path: "Pages/Programmation/Export.html",
 				ready: false,
 			},
 			{
 				name: "Instanciation",
-				path: "",
+				path: "Pages/Programmation/Instanciation.html",
 				ready: false,
 			},
 			{
 				name: "Héritage",
-				path: "",
+				path: "Pages/Programmation/Heritage.html",
 				ready: false,
 			},
 			{
 				name: "Signaux",
-				path: "",
+				path: "Pages/Programmation/Signaux.html",
 				ready: false,
 			},
 			{
-				name: "Scene globale",
-				path: "",
+				name: "Scène globale",
+				path: "Pages/Programmation/Scene_globale.html",
 				ready: false,
 			},
 			{
 				name: "Singleton",
-				path: "",
+				path: "Pages/Programmation/Singleton.html",
 				ready: false,
 			},
 		]
@@ -119,22 +119,22 @@ var MenuContent = [
 		content: [
 			{
 				name: "Checkpoint - Réapparition",
-				path: "",
+				path: "Pages/Gameplay/Checkpoint.html",
 				ready: false,
 			},
 			{
 				name: "Téléporteurs",
-				path: "",
+				path: "Pages/Gameplay/Teleporteurs.html",
 				ready: false,
 			},
 			{
 				name: "Zone de mort",
-				path: "",
+				path: "Pages/Gameplay/Zone_mort.html",
 				ready: false,
 			},
 			{
-				name: "Objet - Powerup",
-				path: "",
+				name: "Objets - Powerup",
+				path: "Pages/Gameplay/Objets.html",
 				ready: false,
 			},
 			{
@@ -142,59 +142,59 @@ var MenuContent = [
 				content: [
 					{
 						name: "Tourelles",
-						path: "",
+						path: "Pages/Gameplay/Enemies/Tourelles.html",
 						ready: false,
 					},
 					{
 						name: "Laser",
-						path: "",
+						path: "Pages/Gameplay/Enemies/Laser.html",
 						ready: false,
 					},
 					{
 						name: "Tête chercheuse",
-						path: "",
+						path: "Pages/Gameplay/Enemies/Tete_chercheuse.html",
 						ready: false,
 					},
 					{
 						name: "Marcheur",
-						path: "",
+						path: "Pages/Gameplay/Enemies/Marcheur.html",
 						ready: false,
 					},
 				],
 			},
 			{
 				name: "HUD",
-				path: "",
+				path: "Pages/Gameplay/HUD.html",
 				ready: false,
 			},
 			{
 				name: "Vie",
-				path: "",
+				path: "Pages/Gameplay/Vie.html",
 				ready: false,
 			},
 			{
 				name: "Particules",
-				path: "",
+				path: "Pages/Gameplay/Particules.html",
 				ready: false,
 			},
 			{
 				name: "Textes",
-				path: "",
+				path: "Pages/Gameplay/Textes.html",
 				ready: false,
 			},
 			{
 				name: "2 joueurs",
-				path: "",
+				path: "Pages/Gameplay/Multijoueur.html",
 				ready: false,
 			},
 			{
 				name: "Objets physiques",
-				path: "",
+				path: "Pages/Gameplay/Objets_physiques.html",
 				ready: false,
 			},
 			{
 				name: "Changement de gravité",
-				path: "",
+				path: "Pages/Gameplay/Gravite.html",
 				ready: false,
 			},
 		]
