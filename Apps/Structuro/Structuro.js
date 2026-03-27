@@ -87,9 +87,9 @@ var top_face = {
 
 function Init()
 {
-	window.onresize = () => {
+	window.addEventListener("resize", () => {
 		RecreateGrid()
-	}
+	})
 
 	View_Right["view"] = SVG().addTo('#view_lr');
 	View_Front["view"] = SVG().addTo('#view_fb');
