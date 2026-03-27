@@ -237,10 +237,10 @@
   var Canvas_height = 360;
   var Gen_Margin = 25;
   var paper = null;
-  window.onload = function(){
+  window.addEventListener("load", function(){
     paper = Raphael("canvas", "100%", "100%");
     Regenerate()
-  }
+  })
   function Regenerate()
   {
     paper.clear();

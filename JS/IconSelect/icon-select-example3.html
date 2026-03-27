@@ -12,7 +12,7 @@
             
         var iconSelect;
 
-        window.onload = function(){
+        window.addEventListener("load", function(){
 
             iconSelect = new IconSelect("my-icon-select", 
                 {'selectedIconWidth':23,
@@ -42,7 +42,7 @@
             
             iconSelect.refresh(icons);
 
-        };
+        });
             
         </script>
         

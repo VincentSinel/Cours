@@ -5,7 +5,7 @@ var editor;
 var Formes = {};
 
 
-window.onload = function(){
+window.addEventListener("load", function(){
 	editor = new EM("#preview", {size:{w:Canvas_width, h:Canvas_height}});
 
 	var a = document.getElementsByClassName("formemenu");
@@ -27,7 +27,7 @@ window.onload = function(){
 	menu_diag_changed()
 	menu_changed()
 	Regenerate()
-}
+})
 
 
 function menu_click(element){

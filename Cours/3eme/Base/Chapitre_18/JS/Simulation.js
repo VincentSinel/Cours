@@ -6,10 +6,10 @@ var paper = null;
 var nbr_simulation = 6000;
 var objects = [
 ];
-window.onload = function(){
+window.addEventListener("load", function(){
 	paper = Raphael("preview", "100%", "100%");
 	Regenerate()
-}
+})
 
 function Regenerate()
 {

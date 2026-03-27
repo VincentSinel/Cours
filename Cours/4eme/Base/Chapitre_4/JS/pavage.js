@@ -12,7 +12,7 @@ var dh;
 var maxcount;
 var drawn = [];
 
-window.onresize = function() { Resize() }
+window.addEventListener("resize", function() { Resize() })
 
 
 function Resize()

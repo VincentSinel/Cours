@@ -9,10 +9,10 @@ for (let s = 0; s < Scripts.length; s++)
     document.write('<script src="' + "/JS/Diagrammes/" + Scripts[s] + '" charset="utf-8"></script>')
 }
 document.write('<script src="JS/Diagramme.js" charset="utf-8"></script>')
-window.onload = function()
+window.addEventListener("load", function()
 {
     CreateDiagrammes();
-}
+})
 
 
 function Create_Histogramme(config)

@@ -23,7 +23,7 @@ let link = document.createElement("link");
 link.rel = "stylesheet";
 link.href = "/CSS/Animation.css"
 document.head.appendChild(link);
-window.onload = () => {CreateAnimationObject()}
+window.addEventListener("load", () => {CreateAnimationObject()})
 
 class Animation_Gestionnaire
 {
@@ -32,7 +32,7 @@ class Animation_Gestionnaire
 
     static StartMainLoop()
     {
-        window.onresize = function() { Animation_Gestionnaire.ResizeCanvas()}
+        window.addEventListener("resize", function() { Animation_Gestionnaire.ResizeCanvas()})
         window.requestAnimationFrame(Animation_Gestionnaire.MainLoop);
     }
 

@@ -240,7 +240,7 @@
 
 </body>
 <script>
-	window.onscroll = function() {myFunction()};
+	window.addEventListener("scroll", function() {myFunction()});
 
 	function myFunction() {
 		var value = 100 + (document.body.scrollTop || document.documentElement.scrollTop) * 0.6

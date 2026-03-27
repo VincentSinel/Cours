@@ -10,9 +10,9 @@ var lastselected = null;
 
 var SelectedChapter = null
     
-frame.onload = function() { ReajustIframe() }
-window.onload = function(){ ShowCollegeSelect(); CreatePDFButton(); GetCurrentHash(); }
-window.onresize = function() { ReajustIframe() }
+frame.addEventListener("load", function() { ReajustIframe() })
+window.addEventListener("load", function(){ ShowCollegeSelect(); CreatePDFButton(); GetCurrentHash(); })
+window.addEventListener("resize", function() { ReajustIframe() })
 
 function ReajustIframe()
 {

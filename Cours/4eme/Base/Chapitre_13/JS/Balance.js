@@ -18,7 +18,7 @@ class Balance
     {
         Balance.instance = new Balance();
         Balance.instance.Init();
-        window.onresize = function() { Balance.instance.Resize()}
+        window.addEventListener("resize", function() { Balance.instance.Resize()})
         window.requestAnimationFrame(Balance.MainLoop);
     }
 
