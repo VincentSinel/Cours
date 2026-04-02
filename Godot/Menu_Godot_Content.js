@@ -15,7 +15,7 @@ var MenuContent = [
 			{
 				name: "Gestion des fichiers",
 				path: "Pages/Interface/Gestion_Fichiers.html",
-				ready: false,
+				ready: true,
 			},
 			{
 				name: "Paramètres du projet",

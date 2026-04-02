@@ -49,7 +49,21 @@
     </tr>
   </table>
 
-  <p></p>
+  <p>Afin de s'y retrouver dans les fichiers de notre jeu, qui vont devenir nombreux très vite, il faut impérativement penser à l'organisation de notre dossier de projet en amont. Cela peut être fait depuis Godot ou depuis l'explorateur de fichiers de l'ordinateur. Pour accéder rapidement à l'explorateur de fichiers depuis Godot, il suffit de faire un clic droit dans le panneau <span class="info">Système de fichiers</span> et cliquer sur <span class="info">Ouvrir dans le gestionnaire de fichiers</span>.</p>
+  <img src="Images/Popup gestionnaire de fichier.png">
+  <p>Dans le dossier de votre jeu, vous trouverez plus de fichiers que ceux affichés dans Godot. C'est normal, Godot crée des fichiers d'informations qui ne sont utiles qu'au moteur de jeu et donc qui n'ont pas lieu d'apparaître dans les ressources utilisables depuis l'éditeur.</p>
+  <img src="Images/Dossier projet.png">
+  <p>Une chose à remarquer tout de même, les fichiers images, son ou autre sont très souvent suivis d'un fichier portant le même nom mais dont l'extension est <span class="info">.import</span>, ce fichier contient les informations d'importation que Godot a générées. Il faut absolument le déplacer avec le fichier source si tu souhaites le changer de place. Sinon, cela risque de casser des liens entre les données dans tes différentes scènes.</p>
+  <img src="Images/Dossier projet2.png">
+  <p>Comme tu peux le voir, j'ai créé 5 nouveaux dossiers. C'est une organisation classique. On retrouve :</p>
+  <ul>
+    <li>Un dossier <span class="info">Préfabs</span>, raccourci de préfabriqué. Il contiendra tous les objets réutilisables de ton jeu (Un monstre, un objet, etc...)</li>
+    <li>Un dossier <span class="info">Scènes</span> qui contiendra toutes les scènes principales de ton jeu (Menu, Mondes, etc...)</li>
+    <li>Un dossier <span class="info">Scripts</span> qui contiendra tous les scripts généraux ou non assignés à un préfabriqué.</li>
+    <li>Un dossier <span class="info">Sons</span> pour tous les sons.</li>
+    <li>Un dossier <span class="info">Textures</span> pour toutes les images.</li>
+  </ul>
+  <p>Bien sûr, il n'y a pas d'obligation, mais c'est la base qui sera utilisée par la suite.</p>
     
 </body>
 
