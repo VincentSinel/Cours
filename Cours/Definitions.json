@@ -191,6 +191,16 @@
 		"tags": [],
 		"definitions": [
 			"Un nombre est dit <span class=\"CRed\">diviseur</span> d'un autre si le reste de leur division euclidienne est nul."
+		]
+	},"diviseur commun": {
+		"tags": [],
+		"definitions": [
+			"Dire qu'un nombre entier <span class=\"CBlue\">$d$</span> est un <span = class=\"CRed\">diviseur commun</span> à deux nombres, entiers $a$ et $b$ signifie que $a$ et $b$ sont divisibles par <span class=\"CBlue\">$d$</span>"
+		]
+	},"divisible": {
+		"tags": [],
+		"definitions": [
+			"Un nombre est dit <span class=\"CRed\">divisible</span> par un autre si le reste de leur division euclidienne est nul."
 		],
 		"proprietes": [
 			"Un nombre est <b>divisible par 2</b> lorsque son chiffre des unités est 0, 2, 4, 6 ou 8.",
@@ -238,7 +248,7 @@
 	},"équation": {
 		"tags": [],
 		"definitions": [
-			"Une <span class=\"DRed\">équation</span> est une <b>égalité</b> comportant un ou plusieurs nombres inconnus désignés par des lettres (que l'on nomme <span class=\"DRed\">inconnues</span> de l'équation)."
+			"Une <span class=\"CRed\">équation</span> est une <b>égalité</b> comportant un ou plusieurs nombres inconnus désignés par des lettres (que l'on nomme <span class=\"CRed\">inconnues</span> de l'équation)."
 		]
 	},"facteur": {
 		"tags": [],
@@ -262,6 +272,11 @@
 		"tags": ["fraction", "fractionnaire"],
 		"definitions": [
 			"Une <span class='CRed'>fraction décimale</span> est une fraction d'un entier \"sur\" 10, 100, 1 000 etc.."
+		]
+	},"fraction irréductible":{
+		"tags": ["fraction", "fractionnaire"],
+		"definitions": [
+			"Une fraction est dite <span class=\"CRed\">irréductible</span> lorsque le numérateur et le dénominateur sont premiers entre eux."
 		]
 	},"hauteur": {
 		"tags": [],
@@ -287,6 +302,10 @@
 		"tags": [],
 		"definitions": [
 			"La <span class=\"CRed\">médiatrice</span> d'un segment est la droite perpendiculaire à ce segment et qui le coupe en son milieu."
+		],
+		"proprietes": [
+			"Si un point est situé sur la médiatrice d'un segment, alors ce point est équidistant des extrémités de ce segment.",
+			"Si un point est équidistant des extrémités d'un segment, alors ce point appartient à la médiatrice de ce segment."
 		]
 	},"milieu": {
 		"tags": [],
@@ -296,7 +315,13 @@
 	},"multiple": {
 		"tags": [],
 		"definitions": [
-			"Lorsque le reste de la division euclidienne est <b>nul</b> on dit alors que le <b>dividende</b> est un <span class=\"CRed\">multiple</span> du <b>diviseur</b>. On dit aussi que le <b>dividende</b> est <span class=\"CRed\">divisible</span> par le <b>diviseur</b>."
+			"Lorsque le reste de la division euclidienne est <b>nul</b> on dit alors que le <b>dividende</b> est un <span class=\"CRed\">multiple</span> du <b>diviseur</b>. On dit aussi que le <b>dividende</b> est <span class=\"CRed\">divisible</span> par le <b>diviseur</b>.",
+			"Un nombre entier $\\textcolor{#43a047}{a}$ est un <span class=\"CRed\">multiple</span> d'un nombre entier $\\textcolor{#039be5}{b}$ ($\\textcolor{#039be5}{b}\\ne0$) lorsque le reste de la division euclidienne de $\\textcolor{#43a047}{a}$ par $\\textcolor{#039be5}{b}$ est 0. <br>On dit aussi que $\\textcolor{#039be5}{b}$ est le <span class=\"CRed\">diviseur</span> de $\\textcolor{#43a047}{a}$ ou que $\\textcolor{#43a047}{a}$ est <span class=\"CRed\">divisible</span> par $\\textcolor{#039be5}{b}$."
+		]
+	},"nombre premier": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">nombre premier</span> est un nombre qui possède exactement deux diviseurs, 1 et lui-même."
 		]
 	},"numérateur": {
 		"tags": [],
@@ -367,6 +392,14 @@
 		"definitions": [
 			"Un <span class=\"CRed\">pourcentage</span> est une proportion par rapport à 100.  $\\textcolor{#e53935}{t} \\% = \\frac{ \\textcolor{#e53935}{t} }{100}$"
 		]
+	},"priorités opératoires": {
+		"tags": [],
+		"proprietes": [
+			"Pour calculer une suite d'additions et de soustractions sans parenthèses, on fait les opérations une par une dans l'ordre où elles sont écrites.",
+			"Pour calculer une suite multiplications et de divisions sans parenthèses, on fait les opérations une par une dans l'ordre où elles sont écrites.",
+			"La multiplication et la division sont <b><u>prioritaires</u></b> par rapport à l'addition et à la soustraction.",
+			"Dans une suite de calculs comprenant des parenthèses, on effectue d'abord les calculs entre parenthèses."
+		]
 	},"prisme": {
 		"tags": [],
 		"definitions": [
@@ -375,12 +408,22 @@
 	},"produit": {
 		"tags": [],
 		"definitions": [
-			"Le résultat d'une multiplication est appelé <span class=\"CRed\">produit</span>"
+			"Le résultat d'une multiplication est appelé <span class=\"CRed\">produit</span>."
+		]
+	},"produit de facteurs premiers": {
+		"tags": [],
+		"definitions": [
+			"Décomposer un nombre en <span class=\"CRed\">produit de facteurs premiers</span>, c'est l'écrire sous forme d'une multiplication de nombres premiers."
 		]
 	},"proportionnelle": {
 		"tags": [],
 		"definitions": [
 			"Deux grandeurs sont <span class=\"CRed\">proportionnelles</span> si les valeurs de l'une s'obtiennent en multipliant les valeurs de l'autre par un même nombre non nul appelé <span class=\"CRed\">coefficient de proportionnalité</span>."
+		],
+		"proprietes": [
+			"Pour calculer une quatrième proportionnelle, on peut utiliser :<br><ul><li>L'addition de quantité (ou de colonne)</li><li>La multiplication de quantité  par un nombre non nul</li></ul>",
+			"Pour calculer une quatrième proportionnelle, on peut effectuer un passage par l'unité.",
+			"Pour calculer une quatrième proportionnelle, on peut calculer le coefficient de proportionnalité."
 		]
 	},"quadrilatère": {
 		"tags": [],
@@ -406,7 +449,7 @@
 	},"résoudre": {
 		"tags": [],
 		"definitions": [
-			"<span class=\"DRed\">Résoudre</span> une équation d'inconnue $x$ revient à trouver, si cela est possible, les nombres par lesquels remplacer $x$ pour que <b>l'égalité soit vraie</b>. Un tel nombre est appelé <span class=\"DRed\">solution</span> de l'équation.",
+			"<span class=\"CRed\">Résoudre</span> une équation d'inconnue $x$ revient à trouver, si cela est possible, les nombres par lesquels remplacer $x$ pour que <b>l'égalité soit vraie</b>. Un tel nombre est appelé <span class=\"CRed\">solution</span> de l'équation.",
 			"Pour résoudre un problème à l'aide d'équations, il faut :<br><div class=\"NumR\">1</div>Choisir une inconnue et la nommer avec une lettre.<br><div class=\"NumR\">2</div>Mettre le problème en équation.<br><div class=\"NumR\">3</div>Trouver une solution de cette équation.<br><div class=\"NumR\">4</div>Répondre en interprétant la solution de l'équation en fonction du problème initial."
 		],
 		"proprietes": [
@@ -432,6 +475,10 @@
 		"tags": [],
 		"definitions": [
 			" Dire que deux figures sont <span class=\"CRed\">symétriques par rapport à une droite</span> signifie que, en effectuant un pliage le long de la droite, les figures se superposent."
+		],
+		"proprietes": [
+			"Lors d'une symétrie axiale les longueurs, les alignements et les angles sont conservés.",
+			""
 		]
 	},"symétrie centrale": {
 		"tags": [],
@@ -483,6 +530,9 @@
 		"tags": [],
 		"definitions": [
 			"Le <span class=\"CRed\">volume</span> est une grandeur représentant la contenance d'un solide. Il existe deux unités usuelles utilisé, le <b>mètre cube</b> noté <b>m³</b> et le <b>litre</b> noté <b>L</b>."
+		],
+		"proprietes": [
+			"Le volume $V$ d'un pavé droit, de dimension L, 𝓁 et <i>h</i>, est :<br> $V\\ =\\ L\\ \\times\\ 𝓁\\ \\times\\ h$"
 		]
 	}
 }
