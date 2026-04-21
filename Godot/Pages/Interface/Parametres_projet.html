@@ -48,6 +48,126 @@
       </td>
     </tr>
   </table>
+
+
+  <p>
+    Il est possible de définir des paramètres généraux à notre projet. Pour cela, dans l'onglet <span class="info">Projet</span>, il est possible d'ouvrir les paramètres du projet.
+  </p>
+  <h1>Paramètres généraux :</h1>
+  <img src="Images/Parametre - Configuration.png">
+  <p>
+    On arrive sur la page ci-dessus. Nous sommes dans l'onglet Général que nous allons détailler maintenant. Le premier sous-menu ouvert est <span class="info">Configuration</span>. Dans ce sous-menu, on peut changer le titre de notre jeu, sa description, sa version ainsi que son icône. Nous n'allons pas détailler tous les sous-menus mais uniquement ceux permettant de gérer des options particulièrement importantes.
+  </p>
+  <img src="Images/Parametre - Fenetre.png">
+  <p>
+    Dans ce second sous-menu, <span class="info">Fenêtre</span>, il est possible de modifier la taille d'affichage par défaut de la fenêtre de jeu, sa manière de se lancer (fenêtré ou plein écran).<br>
+    Ce menu propose aussi un paramètre important permettant de gérer ce qui se produit lorsque l'on change la taille de la fenêtre (en particulier le passage du mode fenêtré à plein écran). C'est l'ensemble des paramètres sous le titre <span class="info vert">Étirement</span>.<br>
+    <ul>
+      <li>
+        Le <span class="info vert">Mode</span> définit ce qui se passe lorsque l'écran change de taille.
+        <ul>
+          <li>
+            <Span class="info bleu">disabled</span> signifie que la vue n'est pas changée, un pixel en jeu est un pixel dans la fenêtre quelque soit sa taille. Lorsque l'on change la taille de la fenêtre, celle-ci peut alors ne plus respecter les dimensions définies au départ. Concrètement, un écran plus grand permet de voir une plus grande partie de l'espace de jeu, il y a donc une grande différence possible d'un ordinateur à l'autre.
+          </li>
+          <li>
+            <Span class="info bleu">canvas_item</span> signifie que le contenu visible dans la surface de la caméra est agrandi pour correspondre à la taille de l'écran. Le rendu a lieu après l'agrandissement. Cela respecte donc les dimensions définies pour la caméra.
+          </li>
+          <li>
+            <Span class="info bleu">viewport</span> signifie que le contenu visible dans la surface de la caméra est agrandi pour correspondre à la taille de l'écran. La différence avec le mode précédent est l'ordre entre rendu et agrandissement. Le rendu a lieu avant l'agrandissement, ce qui est en général bien meilleur pour les jeux au graphisme en pixel. Cela respecte donc les dimensions définies pour la caméra.
+          </li>
+        </ul>
+        <table>
+          <tr>
+            <th>Configuration de base</th>
+            <td><img src="https://docs.godotengine.org/en/stable/_images/stretch_demo_scene.png"></td>
+          </tr>
+          <tr>
+            <th>Mode = disabled</th>
+            <td><img src="https://docs.godotengine.org/en/stable/_images/stretch_disabled_expand.gif"></td>
+          </tr>
+          <tr>
+            <th>Mode = canvas_item</th>
+            <td><img src="https://docs.godotengine.org/en/stable/_images/stretch_2d_expand.gif"></td>
+          </tr>
+          <tr>
+            <th>Mode = viewport</th>
+            <td><img src="https://docs.godotengine.org/en/stable/_images/stretch_viewport_expand.gif"></td>
+          </tr>
+        </table>
+      </li>
+      <li>
+        L' <span class="info vert">Aspect</span> définit la manière dont le contenu est modifié.
+        <ul>
+          <li>
+            <Span class="info bleu">ignore</span> signifie que l'agrandissement pourra déformer le rendu pour s'adapter à l'écran.
+          </li>
+          <li>
+            <Span class="info bleu">keep</span> signifie que le ratio de taille de l'écran reste valable et la vue est agrandie pour apparaître le plus grand possible dans la zone disponible.
+          </li>
+          <li>
+            <Span class="info bleu">keep_width</span> signifie la vue est agrandie pour couvrir la largeur mais s'il reste de la marge en hauteur, une plus grande partie du jeu est alors visible.
+          </li>
+          <li>
+            <Span class="info bleu">keep_height</span> signifie la vue est agrandie pour couvrir la hauteur mais s'il reste de la marge en largeur, une plus grande partie du jeu est alors visible.
+          </li>
+          <li>
+            <Span class="info bleu">expand</span> signifie que la vue est agrandie pour couvrir la place maximale en respectant le ratio de l'écran. Tout l'espace restant est alors une partie du jeu visible supplémentaire.
+          </li>
+        </ul>
+        <table>
+          <tr>
+            <th>Configuration de base</th>
+            <td><img src="https://docs.godotengine.org/en/stable/_images/stretch_demo_scene.png"></td>
+          </tr>
+          <tr>
+            <th>Aspect = ignore</th>
+            <td><img src="https://docs.godotengine.org/en/stable/_images/stretch_viewport_ignore.gif"></td>
+          </tr>
+          <tr>
+            <th>Aspect = keep</th>
+            <td><img src="https://docs.godotengine.org/en/stable/_images/stretch_viewport_keep.gif"></td>
+          </tr>
+          <tr>
+            <th>Aspect = keep_width</th>
+            <td><img src="https://docs.godotengine.org/en/stable/_images/stretch_viewport_keep_width.gif"></td>
+          </tr>
+          <tr>
+            <th>Aspect = keep_height</th>
+            <td><img src="https://docs.godotengine.org/en/stable/_images/stretch_viewport_keep_height.gif"></td>
+          </tr>
+          <tr>
+            <th>Aspect = expand</th>
+            <td><img src="https://docs.godotengine.org/en/stable/_images/stretch_viewport_expand.gif"></td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </p>
+  <img src="Images/Parametre - Textures.png">
+  <p>
+     Dans ce troisième sous-menu, <span class="info">Textures</span>, il est possible de modifier le filtre appliqué par défaut aux textures lorsqu'elles sont affichées avec une taille différente de celle à l'origine. Pour des graphismes en pixel, il est préférable d'utiliser <span class="info bleu">Nearest</span> qui donne un aspect net aux images.<br>
+  </p>
+  <img src="Images/Parametre - Environnement.png">
+  <p>
+     Dans ce quatrième sous-menu, <span class="info">Environnement</span>, il est possible de modifier la couleur par défaut du fond de la partie de jeu.<br>
+  </p>
+  <h1>Paramètres des touches :</h1>
+  <p>
+    Dans l'onglet <span class="info">Contrôles</span>, il est possible de définir des actions liées à des touches de clavier, de manettes de jeu ou de souris. Celle-ci sera alors facilement utilisables plus tard dans les programmes de nos objets.
+  </p>
+  <img src="Images/Parametre - Touches.png">
+  <p>
+    De nombreuses actions sont déjà intégrées pour la gestion de l'interface utilisateur, mais il est préférable de définir ses propres actions pour gérer les touches en jeu. Pour ajouter une nouvelle action, il faut lui donner un nom puis cliquer sur <span class="info vert">Ajouter</span>.
+  </p>
+  <img src="Images/Parametre - Touches - Ajout.png">
+  <p>
+    Cela crée l'action dans le menu en dessous, il faut ensuite lui assigner des touches. Pour cela, il faut appuyer sur le bouton en bout de ligne. Il est possible d'assigner plusieurs touches à une même action.
+  </p>
+  <img src="Images/Parametre - Touches - definition.png">
+  <p>
+    La fenêtre suivante s'ouvre alors, la case désignée par la flèche est automatiquement sélectionnée et se remplit automatiquement lorsqu'une touche ou une combinaison de touches est pressée. Il n'y a alors plus qu'à valider.
+  </p>
+  <img src="Images/Parametre - Touches - selection.png">
     
 </body>
 

@@ -20,7 +20,7 @@ var MenuContent = [
 			{
 				name: "Paramètres du projet",
 				path: "Pages/Interface/Parametres_projet.html",
-				ready: false,
+				ready: true,
 			},
 			{
 				name: "Quelques noeuds de base",
