@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta http-equiv="content-language" content="fr">
-  <link rel="stylesheet" href="/CSS/Cours.css"> 
+  <link rel="stylesheet" href="/CSS/Cours.css">
+  <script src="/Cours/DefinitionLoader.js"></script> 
   <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,9 +45,7 @@
   <div id="ggbApplet"></div>
 
   <h1>Quadrilatères :</h1>
-    <div class="definition">
-      Un <span class="CRed">polygone</span> est une figure géomètrique à plusieurs côtés.
-    </div>
+    <div class="definition" definition="polygone" objids="0"></div>
     <table>
       <tr style="font-weight: bold; font-size: 14pt;">
         <th style="text-align: right;">POLY</th>
@@ -58,11 +57,11 @@
         <td></td>
         <td>Côtés</td>
       </tr>
-    </table>
+    </table><br>
     <div class="definition">
       <ul>
-        <li>Un <span class="CRed">triangle</span> est un <b>polygone</b> à trois côtés</li>
-        <li>Un <span class="CRed">quadrilatère</span> est un <b>polygone</b> à quatre côtés</li>
+        <li><div class="definition" definition="triangle" objids="0"></div></li>
+        <li><div class="definition" definition="quadrilatère" objids="0"></div></li>
       </ul>
     </div>
     <p class="exemple">Exemple :</p>
@@ -70,9 +69,7 @@
   <h1>Quadrilatères particuliers :</h1>
     <h2>Parallèlogramme :</h2>
       <div class="flexobject">
-        <div class="definition" style="flex: 1 1 5cm;">
-          Un <span class="CRed">parallèlogramme</span> est un quadrilatère dont les côtés opposés sont parallèles.
-        </div>
+        <div class="definition" style="flex: 1 1 5cm;" definition="parallèlogramme" objids="0"></div>
         <div style="flex: 1 1 5cm">
           <p class="exemple">Exemple :</p>
           <img src="Images/Quad2.svg" style="max-height: 4cm;">
@@ -80,9 +77,7 @@
       </div>
     <h2>Losange :</h2>
       <div class="flexobject">
-        <div class="definition" style="flex: 1 1 5cm;">
-          Un <span class="CRed">losange</span> est un quadrilatère qui a quatre côtés de même longueur.
-        </div>
+        <div class="definition" style="flex: 1 1 5cm;" definition="losange" objids="0"></div>
         <div style="flex: 1 1 5cm">
           <p class="exemple">Exemple :</p>
           <img src="Images/Quad3.svg" style="max-height: 4cm;">
@@ -92,9 +87,7 @@
       <ul><li>Un losange est un parallèlogramme particulier.</li></ul>
     <h2>Rectangle :</h2>
       <div class="flexobject">
-        <div class="definition" style="flex: 1 1 5cm;">
-          Un <span class="CRed">rectangle</span> est un quadrilatère qui a quatre angle droit.
-        </div>
+        <div class="definition" style="flex: 1 1 5cm;" definition="rectangle" objids="0"></div>
         <div style="flex: 1 1 5cm">
           <p class="exemple">Exemple :</p>
           <img src="Images/Quad4.svg" style="max-height: 4cm;">
@@ -104,9 +97,7 @@
       <ul><li>Un rectangle est un parallèlogramme particulier.</li></ul>
     <h2>Carré :</h2>
       <div class="flexobject">
-        <div class="definition" style="flex: 1 1 5cm;">
-          Un <span class="CRed">carré</span> est un quadrilatère qui a quatre côtés de même longueur et quatre angle droit.
-        </div>
+        <div class="definition" style="flex: 1 1 5cm;" definition="carré" objids="0"></div>
         <div style="flex: 1 1 5cm">
           <p class="exemple">Exemple :</p>
           <img src="Images/Quad5.svg" style="max-height: 4cm;">

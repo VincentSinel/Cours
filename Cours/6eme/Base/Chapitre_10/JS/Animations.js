@@ -335,7 +335,6 @@ class Animation4 extends Animation_Data
 			this.AddAnimation(line4, {attr: {'stroke-opacity': 1.0}}, 6000, 1000)
 			
 			let regle = new Anim_Regle(this)
-			console.log(regle)
 			regle.obj.scale(2.0, 2.0).translate(228,310)
 
 			

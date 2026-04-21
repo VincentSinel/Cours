@@ -1,0 +1,488 @@
+{
+	"00": {
+		"tags": [],
+		"definitions": [
+			""
+		],
+		"proprietes": [
+			""
+		]
+	},
+
+	  "abscisse": {
+		"tags": [],
+		"definitions": [
+			""
+		]
+	},"aire": {
+		"tags": [],
+		"definitions": [
+			"L'<span class=\"CRed\">aire</span> d'une figure est la mesure de sa surface."
+		]
+	},"angle": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">angle</span> est une partie du plan limitée par deux demi-droites de même origine."
+		]
+	},"amplitude": {
+		"tags": [],
+		"definitions": [
+			"L'<span class=\"CRed\">amplitude</span> d'un encadrement est la différence entre les deux nombres encadrants."
+		]
+	},"appartient": {
+		"tags": [],
+		"definitions": [
+			"Lorsqu'un point <b>appartient</b> à une figure géométrique, on note cela avec le symbole $\\in$ ou si il <b>n'appartient pas</b>, on note $\\notin$"
+		]
+	},"arc de cercle": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">arc de cercle</span> est une partie du cercle délimité par deux points."
+		]
+	},"axe de symétrie": {
+		"tags": [],
+		"definitions": [
+			"On dit qu'une droite est un <span class=\"CRed\">axe de symétrie</span> d'une figure lorsque la figure et son symétrique par rapport à cette droite sont confondus. "
+		]
+	},"bissectrice": {
+		"tags": [],
+		"definitions": [
+			""
+		]
+	},"carré": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">carré</span> est un quadrilatère qui a quatre côtés de même longueur et quatre angle droit."
+		]
+	},"cercle": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">cercle</span> de <span class=\"CRed\">centre</span> O est formé de tous les points à une même distance du point O.<br>Cette distance est appelée le <span class=\"CRed\">rayon</span> du cercle."
+		],
+		"proprietes": [
+			"Tous les points d'un cercle de centre O sont à la même distance du point O.",
+			"Deux points situés à la même distance d'un point O appartient au un même cercle de centre O."
+		]
+	},"coefficient de proportionnalité": {
+		"tags": [],
+		"definitions": [
+			"Pour calculer le <span class=\"CRed\">coefficient de proportionnalité</span> d'un tableau de proportionnalité, on divise la valeur d'arrivé par la valeur de départ."
+		]
+	},"coefficient directeur": {
+		"tags": [],
+		"definitions": [
+			""
+		]
+	},"comparer": {
+		"tags": [],
+		"definitions": [
+			"<span class=\"CRed\">Comparer</span> deux nombres c'est dire si l'un <u>plus petit</u> ; <u>plus grand</u> ou <u>égal</u> à l'autre."
+		]
+	},"commutative": {
+		"tags": [],
+		"definitions": [
+			"Une addition est dite <span class=\"CRed\">commutative</span>, cela signifie que l'on peut intervertir les termes sans changer le résultat.",
+			"Une multiplication est dite <span class=\"CRed\">commutative</span>, cela signifie que l'on peut intervertir les facteurs sans changer le résultat."
+		]
+	},"concourante": {
+		"tags": [],
+		"definitions": [
+			"Lorsque plusieurs droite se croisent en un même point, on dit qu'elles sont <span class=\"CRed\">concourante</span>."
+		]
+	},"corde": {
+		"tags": [],
+		"definitions": [
+			"Une <span class=\"CRed\">corde</span> est un segment dont les deux extrémités appartiennent au cercle."
+		]
+	},"critère de divisibilité": {
+		"tags": [],
+		"definitions": [
+			"Un nombre est <b>divisible par 2</b> lorsque son chiffre des unités est 0, 2, 4, 6 ou 8.",
+			"Un nombre est <b>divisible par 3</b> lorsque la somme de ses chiffres est divisible par 3.",
+			"Un nombre est <b>divisible par 5</b> lorsque son chiffre des unités est 0 ou 5.",
+			"Un nombre est <b>divisible par 9</b> lorsque la somme de ses chiffres est divisible par 9.",
+			"Un nombre est <b>divisible par 10</b> lorsque son chiffre des unités est 0."
+		]
+	},"croissant": {
+		"tags": [],
+		"definitions": [
+			"<span class=\"CRed\">Classer</span> des nombres dans l'ordre <span class=\"CRed\">croissant</span>, c'est ranger du plus petit au plus grand."
+		]
+	},"cube": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">cube</span> est un parallélépipède rectangle particulier dont toutes les faces sont des <b>carrés</b>."
+		]
+	},"cylindre": {
+		"tags": [],
+		"definitions": [
+			""
+		]
+	},"décomposer": {
+		"tags": [],
+		"definitions": [
+			"Il est possible de décomposer un nombre pour mettre en évidence le rôle de chaque chiffre ou ensemble de chiffre.",
+			"On peut décomposer un nombre décimal en séparent sa <span class=\"CGreen\"><b>partie entière</b></span> et sa <span class=\"CViolet\"><b>partie décimal</b></span>."
+		]
+	},"décroissant": {
+		"tags": [],
+		"definitions": [
+			"<span class=\"CRed\">Classer</span> des nombres dans l'ordre <span class=\"CRed\">décroissant</span>, c'est ranger du plus grand au plus petit."
+		]
+	},"degré": {
+		"tags": [],
+		"definitions": [
+			"Pour mesurer un angle, on utilise le <span class=\"CRed\">degré</span> comme unité. Il se note avec le symbole <b>°</b>."
+		]
+	},"dénominateur": {
+		"tags": [],
+		"definitions": [
+			"Dans une <b>écriture fractionnaire</b> le nombre du bas se nomme le <span class=\"CRed\">dénominateur</span>."
+		]
+	},"demi-droite": {
+		"tags": [],
+		"definitions": [
+			"Une <span class=\"CRed\">demi-droite</span> commence d'un point et se prolonge dans une seul direction."
+		]
+	},"demi-droite graduée": {
+		"tags": [],
+		"definitions": [
+			"Sur une demi-droite graduée on trouve :<ul><li>Une <span class=\"CRed\">unité de longueur</span></li><li>Une <span class=\"CRed\">origine</span></li></ul>On peut repérer la position de point à l'aide d'un nombre appelé <span class=\"CRed\">abscisse</span>."
+		]
+	},"diagramme cartésien": {
+		"tags": [],
+		"definitions": [
+			"Dans un <span class=\"CRed\">diagramme cartésien</span>, on représente les valeur par des points relier entre-eux."
+		]
+	},"diagramme circulaire": {
+		"tags": [],
+		"definitions": [
+			"Dans un <span class=\"CRed\">diagramme circulaire</span>, la taille des sections est proportionnelle à la quantité représentée."
+		]
+	},"diagramme en bâtons": {
+		"tags": [],
+		"definitions": [
+			"Dans un <span class=\"CRed\">diagramme en bâtons</span>, la hauteur des batôns est proportionnelle à la quantité représentée."
+		]
+	},"diamètre": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">diamètre</span> est une corde particulière qui passe par le centre du cercle.",
+			"<b><u><i>LE</i></u></b> <span class=\"CRed\">diamètre</span> d'un cercle est la longueur commune à tous les diamètres."
+		]
+	},"différence": {
+		"tags": [],
+		"definitions": [
+			"Le résultat d'une soustraction est appelé <span class=\"CRed\">différence</span>."
+		]
+	},"disque": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">disque</span> de centre O est formé de tous les points à une distance inférieur ou égale à un certain rayon du point O."
+		]
+	},"distance": {
+		"tags": [],
+		"definitions": [
+			"La <span class=\"CRed\">distance</span> entre deux points est la longueur du plus court chemin entre ces deux points. C'est la longueur du segment qui joint ces deux points.",
+			"La <b>distance</b> d'un point à une droite est <b>longueur du plus court chemin</b> entre ce point et la droite.",
+			"La distance d'un point A à une droite $(d)$ est la longueur du segment reliant le point A au <b>pied de la perpendiculaire</b> à $(d)$ passant par A."
+		]
+	},"diviseur": {
+		"tags": [],
+		"definitions": [
+			"Un nombre est dit <span class=\"CRed\">diviseur</span> d'un autre si le reste de leur division euclidienne est nul."
+		],
+		"proprietes": [
+			"Un nombre est <b>divisible par 2</b> lorsque son chiffre des unités est 0, 2, 4, 6 ou 8.",
+			"Un nombre est <b>divisible par 3</b> lorsque la somme de ses chiffres est divisible par 3.",
+			"Un nombre est <b>divisible par 4</b> lorsque le nombre formé de ses 2 derniers chiffres est dvisible par 4",
+			"Un nombre est <b>divisible par 5</b> lorsque son chiffre des unités est 0 ou 5.",
+			"Un nombre est <b>divisible par 9</b> lorsque la somme de ses chiffres est divisible par 9.",
+			"Un nombre est <b>divisible par 10</b> lorsque son chiffre des unités est 0."
+		]
+	},"division décimale": {
+		"tags": [],
+		"definitions": [
+			"Une <span class=\"CRed\">division décimale</span> est la recherche d'un <span class=\"CGreen\">quotient</span> (qui peut être décimal) tel que :<br><span class=\"CRed\">$dividende$</span> $=$ <span class=\"CBlue\">$diviseur$</span> $\\times$ <span class=\"CGreen\">$quotient$</span>"
+		]
+	},"division euclidienne": {
+		"tags": [],
+		"definitions": [
+			"Une <b>division euclidienne</b> est une division ou l'on ne parle que d'entier. Elle fait intervenir quatre nombres : le <span class=\"CBlue\"><b>dividende</b></span>, le <span class=\"CRed\"><b>diviseur</b></span>, le <span class=\"CGreen\"><b>quotient</b></span> et le <span class=\"CViolet\"><b>reste</b></span>, tel que :<br><span class=\"CBlue\"><b>dividende</b></span> = <span class=\"CRed\"><b>diviseur</b></span> × <span class=\"CGreen\"><b>quotient</b></span> + <span class=\"CViolet\"><b>reste</b></span> avec <span class=\"CViolet\"><b>reste</b></span> < <span class=\"CRed\"><b>diviseur</b></span>"
+		]
+	},"droite": {
+		"tags": [],
+		"definitions": [
+			"Une <span class=\"CRed\">droite</span> est une ligne <b>illimitée</b> qui se prolonge des deux côtés."
+		]
+	},"durée": {
+		"tags": [],
+		"definitions": [
+			"Une <span class=\"CRed\">durée</span> est la mesure du temps entre deux instants. L'unité de durée couramment utilisée est la <b>seconde</b> (s)."
+		]
+	},"échelle": {
+		"tags": [],
+		"definitions": [
+			"Sur un plan dit « <i>à l'échelle</i> », les longueurs sont proportionnelles aux longueurs réelles.<br>Le coefficient de proportionnalité obtenu en divisant les longueurs sur la carte par les longueurs réelles, toutes exprimées dans <b>la même unité</b>, s'appelle l'<span class=\"CRed\">échelle</span> du plan.<br>Echelle = <span class=\"formule\">$\\frac{Taille\\ plan}{Taille\\ réel}$</span>"
+		]
+	},"écriture décimale":{
+		"tags": [],
+		"definitions": [
+			"L'<span class='CRed'>écriture décimale</span> d'une fraction décimale est son écriture sous forme de nombre à virgule."
+		]
+	},"encadrer": {
+		"tags": [],
+		"definitions": [
+			"<span class=\"CRed\">Encadrer</span> un nombre, c'est trouver un nombre plus petit et un nombre plus grand que ce nombre."
+		]
+	},"équation": {
+		"tags": [],
+		"definitions": [
+			"Une <span class=\"DRed\">équation</span> est une <b>égalité</b> comportant un ou plusieurs nombres inconnus désignés par des lettres (que l'on nomme <span class=\"DRed\">inconnues</span> de l'équation)."
+		]
+	},"facteur": {
+		"tags": [],
+		"definitions": [
+			"Les éléments qui composent une multiplication sont appelés <span class=\"CRed\">facteurs</span>."
+		]
+	},"forme fractionnaire": {
+		"tags": [],
+		"definitions": [
+			"Le <b>quotient</b> de deux nombre (<span class=\"CBlue\">▲</span> et <span class=\"CGreen\">●</span>) peut être représenté sous <span class=\"CRed\">forme fractionnaire</span> <span style=\"font-size: 16pt;\">$(\\frac{\\textcolor{#039be5}{▲}}{\\textcolor{#43a047}{●}})$</span>. Lorsque les nombres sont entiers on parle alors de <span class=\"CRed\">fraction</span>."
+		]
+	},"fraction": {
+		"tags": [],
+		"definitions": [
+			"Une <span class=\"CRed\">fraction</span> est la représentation de la division de deux <b>nombres entiers</b>.",
+			"Une fraction permet de représenter un partage de l'unité.",
+			"Les fractions sont utilisées pour se repérer sur une demi-droite graduée.",
+			"Prendre une fraction d'une quantité, c'est multiplier cette quantité par la fraction."
+		]
+	},"fraction décimale":{
+		"tags": ["fraction", "fractionnaire"],
+		"definitions": [
+			"Une <span class='CRed'>fraction décimale</span> est une fraction d'un entier \"sur\" 10, 100, 1 000 etc.."
+		]
+	},"hauteur": {
+		"tags": [],
+		"definitions": [
+			""
+		]
+	},"histogramme": {
+		"tags": [],
+		"definitions": [
+			""
+		]
+	},"longueur": {
+		"tags": [],
+		"definitions": [
+			"Dans le système métrique, l'unité usuelle de <b>longueur</b> est le <span class=\"CRed\">mètre</span> noté « <span class=\"CRed\">m</span> »."
+		]
+	},"losange": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">losange</span> est un quadrilatère qui a quatre côtés de même longueur."
+		]
+	},"médiatrice": {
+		"tags": [],
+		"definitions": [
+			"La <span class=\"CRed\">médiatrice</span> d'un segment est la droite perpendiculaire à ce segment et qui le coupe en son milieu."
+		]
+	},"milieu": {
+		"tags": [],
+		"definitions": [
+			"Le <span class=\"CRed\">milieu</span> I d'un segment [RS] est le point tel que :<br><ul><li>I appartient au segment [RS]</li><li>I est à égale distance des points R et S</li></ul>"
+		]
+	},"multiple": {
+		"tags": [],
+		"definitions": [
+			"Lorsque le reste de la division euclidienne est <b>nul</b> on dit alors que le <b>dividende</b> est un <span class=\"CRed\">multiple</span> du <b>diviseur</b>. On dit aussi que le <b>dividende</b> est <span class=\"CRed\">divisible</span> par le <b>diviseur</b>."
+		]
+	},"numérateur": {
+		"tags": [],
+		"definitions": [
+			"Dans une <b>écriture fractionnaire</b> le nombre du haut se nomme le <span class=\"CRed\">numérateur</span>."
+		]
+	},"ordonnée": {
+		"tags": [],
+		"definitions": [
+			""
+		]
+	},"parallèle": {
+		"tags": [],
+		"definitions": [
+			"Deux droites <span class=\"CRed\">parallèles</span> sont deux droites qui <b>ne sont pas sécantes</b>. "
+		],
+		"proprietes": [
+			"<b>Si</b> deux droites sont parallèles à une même troisième droite, <b>alors</b> ces droites sont parallèles entre elles.",
+			"<b>Si</b> deux droites sont perpendiculaires à une même troisième droite, <b>alors</b> ces droites sont parallèles entre elles."
+		]
+	},"parallèlogramme": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">parallèlogramme</span> est un quadrilatère dont les côtés opposés sont parallèles."
+		]
+	},"patron": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">patron</span> est un dessin du plan permettant de construire un solide par découpage et pliage."
+		]
+	},"pavé droit": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">parallélépipède rectangle</span> (aussi appelé <span class=\"CRed\">pavé droit</span>) est un solide composé de six faces rectangulaires."
+		]
+	},"périmètre": {
+		"tags": [],
+		"definitions": [
+			" Le <span class=\"CRed\">périmètre</span> d'une figure plane est la <b>longueur</b> du contour de celle-ci. (On le note souvent $\\mathscr{P}$)",
+			"Le périmètre d'un polygone est égal à la somme de la longueur de tous ses côtés.",
+			"Le périmètre d'un cercle est égal au produit de son diamètre par le nombre <span class=\"CRed\">π</span> (pi)"
+		]
+	},"perpendiculaire": {
+		"tags": [],
+		"definitions": [
+			"Deux droites <span class=\"CRed\">perpendiculaires</span> sont deux droites qui se coupent en formant <span class=\"CRed\">quatre angles droits</span>."
+		],
+		"proprietes": [
+			"<b>Si</b> deux droites sont parallèles et que l'une d'elle est perpendiculaire a une troisième droite, <b>alors</b> cette troisième droite est aussi perpendiculaire à l'autre."
+		]
+	},"perspective cavalière": {
+		"tags": [],
+		"definitions": [
+			"La <span class=\"CRed\">perspective cavalière</span> est une représentation plane d'un solide avec :<ul><li>La face avant en vraie grandeur ;</li><li>Conservation des parallèlisme et des alignements ;</li><li>La profondeur représenté par des arêtes <b>obliques</b> et plus courte que la réalité ;</li><li>Les arêtes cachés en pointillés.</li></ul>"
+		]
+	},"point": {
+		"tags": [],
+		"definitions": [
+			"En géométrie, un <span class=\"CRed\">point</span> est représenté par une croix. On peut alors lui donner un nom en utilisant une lettre majuscule en batons."
+		]
+	},"polygone": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">polygone</span> est une figure géomètrique à plusieurs côtés."
+		]
+	},"pourcentage": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">pourcentage</span> est une proportion par rapport à 100.  $\\textcolor{#e53935}{t} \\% = \\frac{ \\textcolor{#e53935}{t} }{100}$"
+		]
+	},"prisme": {
+		"tags": [],
+		"definitions": [
+			""
+		]
+	},"produit": {
+		"tags": [],
+		"definitions": [
+			"Le résultat d'une multiplication est appelé <span class=\"CRed\">produit</span>"
+		]
+	},"proportionnelle": {
+		"tags": [],
+		"definitions": [
+			"Deux grandeurs sont <span class=\"CRed\">proportionnelles</span> si les valeurs de l'une s'obtiennent en multipliant les valeurs de l'autre par un même nombre non nul appelé <span class=\"CRed\">coefficient de proportionnalité</span>."
+		]
+	},"quadrilatère": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">quadrilatère</span> est un <b>polygone</b> à quatre côtés"
+		]
+	},"quotient": {
+		"tags": [],
+		"definitions": [
+			"Le quotient de deux nombre <span class=\"CBlue\">▲</span> et <span class=\"CGreen\">●</span> est le nombre qui multiplié par <span class=\"CGreen\">●</span> donne <span class=\"CBlue\">▲</span>. On le note <span style=\"font-size: 16pt;\">$(\\frac{\\textcolor{#039be5}{▲}}{\\textcolor{#43a047}{●}})$</span>",
+			"Le résultat d'une division est appelé <span class=\"CRed\">quotient</span>."
+		]
+	},"rectangle": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">rectangle</span> est un quadrilatère qui a quatre angle droit."
+		]
+	},"règle de trois": {
+		"tags": [],
+		"definitions": [
+			"Pour calculer une quatrième proportionnelle, on peut utiliser la <span class=\"CRed\">règle de trois</span>.<br><i>« On multiplie la diagonale et on divise par la troisième valeur. »</i>"
+		]
+	},"résoudre": {
+		"tags": [],
+		"definitions": [
+			"<span class=\"DRed\">Résoudre</span> une équation d'inconnue $x$ revient à trouver, si cela est possible, les nombres par lesquels remplacer $x$ pour que <b>l'égalité soit vraie</b>. Un tel nombre est appelé <span class=\"DRed\">solution</span> de l'équation.",
+			"Pour résoudre un problème à l'aide d'équations, il faut :<br><div class=\"NumR\">1</div>Choisir une inconnue et la nommer avec une lettre.<br><div class=\"NumR\">2</div>Mettre le problème en équation.<br><div class=\"NumR\">3</div>Trouver une solution de cette équation.<br><div class=\"NumR\">4</div>Répondre en interprétant la solution de l'équation en fonction du problème initial."
+		],
+		"proprietes": [
+			"Une égalité reste vraie quand on ajoute (ou soustrait) un même nombre aux deux membres.",
+			"Une égalité reste vraie quand on multiplie (ou divise) les deux membres par un même nombre <b>non nul</b>."
+		]
+	},"sécantes": {
+		"tags": [],
+		"definitions": [
+			"Lorsque des droites ; segments ou demi-droites se coupent en un point on dit qu'elles sont <span class=\"CRed\">sécantes</span>."
+		]
+	},"segment": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">segment</span> est composé de deux points relié entre eux en ligne droite."
+		]
+	},"somme": {
+		"tags": [],
+		"definitions": [
+			"Le résultat d'une addition est appelé <span class=\"CRed\">somme</span>."
+		]
+	},"symétrie axiale": {
+		"tags": [],
+		"definitions": [
+			" Dire que deux figures sont <span class=\"CRed\">symétriques par rapport à une droite</span> signifie que, en effectuant un pliage le long de la droite, les figures se superposent."
+		]
+	},"symétrie centrale": {
+		"tags": [],
+		"definitions": [
+			""
+		]
+	},"système décimal":{
+		"tags": ["chiffre", "décimal", "nombres"],
+		"definitions": [
+			"Le <b>système décimal</b> utilise dix <span class='CRed'>chiffres</span> : <br> $0,1,2,3,4,5,6,7,8,9$<br> On peut écrire tous les nombres à l'aide de ces chiffres."
+		]
+	},"tableau": {
+		"tags": [],
+		"definitions": [
+			" Les <span class=\"CRed\">tableaux</span> permettent de rassembler un grand nombre de données et de les présenter de façon organisé. Il en existe deux types :<ul><li>A simple entré</li><li>A double entrés</li></ul>"
+		]
+	},"terme": {
+		"tags": [],
+		"definitions": [
+			"Les nombres qui composent une addition ou une soustraction sont appelés les <span class=\"CRed\">termes</span>."
+		]
+	},"triangle": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">triangle</span> est un <b>polygone</b> à trois côtés."
+		]
+	},"triangle équilatéral": {
+		"tags": [],
+		"definitions": [
+			"Un triangle <span class=\"CRed\">équilatéral</span> est un triangle qui a trois côtés de même longueur. "
+		],
+		"proprietes": [
+			"Dans un triangle <b>équilatéral</b> tous les angles ont la même mesure : 60°."
+		]
+	},"triangle isocèle": {
+		"tags": [],
+		"definitions": [
+			"Un triangle <span class=\"CRed\">isocèle</span> est un triangle qui a deux côtés de même longueur."
+		],
+		"proprietes": [
+			"Dans un triangle <b>isocèle</b> les angles à la base ont la même mesure."
+		]
+	},"triangle rectangle": {
+		"tags": [],
+		"definitions": [
+			"Un triangle <span class=\"CRed\">rectangle</span> est un triangle qui a deux côtés perpendiculaires."
+		]
+	},"volume": {
+		"tags": [],
+		"definitions": [
+			"Le <span class=\"CRed\">volume</span> est une grandeur représentant la contenance d'un solide. Il existe deux unités usuelles utilisé, le <b>mètre cube</b> noté <b>m³</b> et le <b>litre</b> noté <b>L</b>."
+		]
+	}
+}

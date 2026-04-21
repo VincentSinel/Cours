@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta http-equiv="content-language" content="fr">
-  <link rel="stylesheet" href="/CSS/Cours.css"> 
+  <link rel="stylesheet" href="/CSS/Cours.css">
+  <script src="/Cours/DefinitionLoader.js"></script> 
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
@@ -77,21 +78,16 @@
 
   <h1>Vocabulaire :</h1>
       <h2>Points et segments :</h2>
-        <div class="definition flexobject">
-          <div style="flex: 1 1 9cm;">
-            En géométrie, un point est représenté par une croix. On peut alors lui donner un nom en utilisant une lettre majuscule en batons.
-          </div>
-          <img src="Images/Point.svg" style="flex: 1 1 4cm; max-height: 1.5cm;">
-        </div>
+        <div class="definition" definition="point" objids="0"></div>
+        <p class="exemple">Exemple :</p>
+        <img src="Images/Point.svg" style="max-height: 1.5cm;">
+
         <p class="remarque">Remarque :</p>
         <p>Sur une figure, deux points <b>distincts</b> (c'est-à-dire qui ne sont pas confondus) ont une nom différents</p>
         
-        <div class="definition flexobject">
-          <div style="flex: 1 1 9cm;">
-            Un <span class="CRed">segment</span> est composé de deux points relié entre eux en ligne droite.
-          </div>
-          <img src="Images/Segment.svg" style="flex: 1 1 4cm; max-height: 2cm;">
-        </div>
+        <div class="definition" definition="segment" objids="0"></div>
+        <p class="exemple">Exemple :</p>
+        <img src="Images/Segment.svg" style="max-height: 2cm;">
         <p class="remarque">Remarque :</p>
         <p>
           <ul>
@@ -100,12 +96,9 @@
           </ul>
         </p>
     <h2>Droite et demi-droite :</h2>
-        <div class="definition flexobject">
-          <div style="flex: 1 1 9cm;">
-            Une <span class="CRed">droite</span> est une ligne <b>illimitée</b> qui se prolonge des deux côtés.
-          </div>
-          <img src="Images/Droite1.svg" style="flex: 1 1 4cm; max-height: 1cm;">
-        </div>
+        <div class="definition" definition="droite" objids="0"></div>
+        <p class="exemple">Exemple :</p>
+        <img src="Images/Droite1.svg" style="flex: 1 1 4cm; max-height: 1cm;">
         <p class="remarque">Remarque :</p>
         <p>
           <ul>
@@ -152,12 +145,9 @@
           </ul>
         </p>
         
-        <div class="definition flexobject">
-          <div style="flex: 1 1 9cm;">
-            Une <span class="CRed">demi-droite</span> commence d'un point et se prolonge dans une seul direction.
-          </div>
-          <img src="Images/DemiDroite1.svg" style="flex: 1 1 4cm; max-height: 1cm;">
-        </div>
+        <div class="definition" definition="demi-droite" objids="0"></div>
+        <p class="exemple">Exemple :</p>
+        <img src="Images/DemiDroite1.svg" style="flex: 1 1 4cm; max-height: 1cm;">
         <p class="remarque">Remarque :</p>
         <p>
           <ul>
@@ -189,9 +179,7 @@
         </p>
   <h1>Points particuliers :</h1>
       <h2>Droite sécante :</h2>
-          <div class="definition">
-            Lorsque des droites ; segments ou demi-droites se coupent en un point on dit qu'elles sont <span class="CRed">sécantes</span>.
-          </div>
+          <div class="definition" definition="sécantes" objids="0"></div>
           <p class="exemple">Exemple :</p>
           <div class="flexobject">
             <img src="Images/Secantes.svg" style="flex: 1 1 4cm; max-width: 7cm;">
@@ -204,9 +192,7 @@
             Les points C, E et D sont <span class="CRed">alignés</span>.
           </p>
       <h2>Distance et milieu :</h2>
-          <div class="definition">
-            La <span class="CRed">distance</span> entre deux points est la longueur du plus court chemin entre ces deux points. C'est la longueur du segment qui joint ces deux points.
-          </div>
+          <div class="definition" definition="distance" objids="0"></div>
           <p class="exemple">Exemple :</p>
           <div class="flexobject">
             <img src="Images/Distance.svg" style="flex: 1 1 4cm; max-width: 7cm;">
@@ -215,22 +201,11 @@
               On note la longeur : AB = 2,5cm
             </div>
           </div><br>
-          <div class="definition">
-            Le <span class="CRed">milieu</span> I d'un segment [RS] est le point tel que :<br>
-            <div class="flexobject">
-              <div class="flex: 1 1 5cm">
-                <ul>
-                  <li>I appartient au segment [RS]</li>
-                  <li>I est à égale distance des points A et B</li>
-                </ul>
-              </div>
-              <img src="Images/Milieu.svg" style="flex: 1 1 4cm; max-width: 4cm;">
-            </div>
-          </div>
+          <div class="definition" definition="milieu" objids="0"></div>
+          <p class="exemple">Exemple :</p>
+          <img src="Images/Milieu.svg" style="flex: 1 1 4cm; max-width: 4cm;">
       <h2>Appartenance :</h2>
-          <div class="definition">
-            Lorsqu'un point <b>appartient</b> à une figure géométrique, on note cela avec le symbole $\in$ ou si il <b>n'appartient pas</b>, on note $\notin$
-          </div>
+          <div class="definition" definition="appartient" objids="0"></div>
           <p class="exemple">Exemple :</p>
           <div class="flexobject">
             <img src="Images/Appartenance.svg" style="flex: 1 1 4cm; max-width: 7cm;">

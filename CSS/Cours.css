@@ -95,7 +95,7 @@
 .CRRound-bottom{ border-radius: 20px; padding: 1px; width: fit-content; height: fit-content; display: inline-block; border-bottom: 2px solid var(--Cred);}
 
 .NumR{ border-radius: 50%; width: 15px; height: 15px; vertical-align:middle; margin-bottom: 0.25em; display: inline-block; border: 2px solid var(--Texte); background: var(--Texte);
-    color: white; text-align: center; vertical-align: middle; font: 12px Arial, sans-serif;}
+    color: white; text-align: center; vertical-align: middle; font: 12px Arial, sans-serif; margin-right: 1em;}
 
 @media print {
     .pagebreak { 
@@ -293,12 +293,23 @@ table, th, td, tr {
     text-align: center;
 }
 
+.propriete,
 .definition {
     border: 1px solid var(--SectionSecondaire);
     box-shadow: -5px -5px lightgray;
     padding: 10px;
     font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial;
     margin-bottom: 20px;
+}
+.definition .definition{ /* Annule les effets si les définitions sont emboités */
+    border: none;
+    box-shadow: none;
+    padding: inherit;
+    margin-bottom: auto;
+}
+.propriete > ul,
+.definition > ul {
+    margin: 0;
 }
 
 .rotate30 {

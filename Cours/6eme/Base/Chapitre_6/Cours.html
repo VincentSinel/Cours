@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta http-equiv="content-language" content="fr">
-  <link rel="stylesheet" href="/CSS/Cours.css"> 
+  <link rel="stylesheet" href="/CSS/Cours.css">
+  <script src="/Cours/DefinitionLoader.js"></script> 
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
@@ -68,15 +69,10 @@
 
   <h1>Définitions :</h1>
       <h2>Cercle et disque :</h2>
-          <div class="definition">
-            Un <span class="CRed">cercle</span> de <span class="CRed">centre</span> O est formé de tous les points à une même distance du point O.<br>
-            Cette distance est appelée le <span class="CRed">rayon</span> du cercle.
-          </div>
+          <div class="definition" definition="cercle" objids="0"></div>
           <p class="exemple">Exemple :</p>
           <img src="Images/Cercle1.svg" style="max-width: 5cm;"><br><br>
-          <div class="definition">
-            Un <span class="CRed">disque</span> de centre O est formé de tous les points à une distance inférieur ou égale à un certain rayon du point O.<br>
-          </div>
+          <div class="definition" definition="disque" objids="0"></div>
           <p class="exemple">Exemple :</p>
           <img src="Images/Cercle3.svg" style="max-width: 5cm;">
           <p class="remarque">Remarque :</p>
@@ -84,10 +80,10 @@
       <h2>Vocabulaire :</h2>
           <div class="definition">
             <ul>
-              <li>Une <span class="CRed">corde</span> est un segment dont les deux extrémités appartiennent au cercle.</li>
-              <li>Un <span class="CRed">diamètre</span> est une corde particulière qui passe par le centre du cercle.</li>
-              <li><b><u><i>LE</i></u></b> <span class="CRed">diamètre</span> d'un cercle est la longueur commune à tous les diamètres.</li>
-              <li>Un <span class="CRed">arc de cercle</span> est une partie du cercle délimité par deux points.</li>
+              <li><div class="definition" definition="corde" objids="0"></div></li>
+              <li><div class="definition" definition="diamètre" objids="0"></div></li>
+              <li><div class="definition" definition="diamètre" objids="1"></div></li>
+              <li><div class="definition" definition="arc de cercle" objids="0"></div></li>
             </ul>
           </div>
           <p class="exemple">Exemple :</p>
@@ -95,9 +91,7 @@
           <p class="remarque">Remarque :</p>
           <ul><li>Il existe une infinité de diamètre.</li></ul>
   <h1>Propriétés :</h1>
-          <div class="definition">
-            Tous les points d'un cercle de centre O sont à la même distance du point O.
-          </div>
+          <div class="propriete" definition="cercle" objids="0"></div>
 
           <div class="flexobject">
             <div style="flex: 1 1 4cm; max-width: 6cm;">
@@ -119,9 +113,7 @@
           </div>
           <br>
 
-          <div class="definition">
-            Deux points situés à la même distance d'un point O appartient au un même cercle de centre O.
-          </div>
+          <div class="propriete" definition="cercle" objids="1"></div>
 
           <div class="flexobject">
             <div style="flex: 1 1 4cm; max-width: 6cm;">
