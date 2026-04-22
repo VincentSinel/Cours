@@ -136,6 +136,13 @@ function LoadFiles()
 			GetRound(rng)
 		]
 
+		document.getElementById("time_comp_1").innerHTML = "-";
+		document.getElementById("time_comp_2").innerHTML = "-";
+		document.getElementById("time_comp_3").innerHTML = "-";
+		document.getElementById("time_comp_4").innerHTML = "-";
+		document.getElementById("time_comp_5").innerHTML = "-";
+		document.getElementById("time_comp_M").innerHTML = "-";
+
 		let count_down_element = document.getElementById("countdowncompetition")
 		count_down_element.classList.remove("hidden")
 		count_down_element.innerHTML = "Début dans : <br>" + Math.ceil((beggin - Date.now()) / 1000).toString();
