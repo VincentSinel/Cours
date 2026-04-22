@@ -1,47 +1,47 @@
 
 function LoadFiles()
 {
-	var client = new XMLHttpRequest();
-	client.open('GET', "Images/Bal_Bras.svg");
-	client.onreadystatechange = function() {
-		if (client.readyState === 4){
-			svg_bras = client.responseText;
-			var client2 = new XMLHttpRequest();
-			client2.open('GET', "Images/Bal_Pied.svg");
-			client2.onreadystatechange = function() {
-				if (client2.readyState === 4){
-					svg_pied = client2.responseText;
-					var client3 = new XMLHttpRequest();
-					client3.open('GET', "Images/Bal_Plateau.svg");
-					client3.onreadystatechange = function() {
-						if (client3.readyState === 4){
-							svg_plateau = client3.responseText;
-							var client4 = new XMLHttpRequest();
-							client4.open('GET', "Images/Bal_Masse.svg");
-							client4.onreadystatechange = function() {
-								if (client4.readyState === 4){
-									svg_poids1 = client4.responseText;
-									var client5 = new XMLHttpRequest();
-									client5.open('GET', "Images/Bal_Masse2.svg");
-									client5.onreadystatechange = function() {
-										if (client5.readyState === 4){
-											svg_poids2 = client5.responseText;
-											CreateBalance();
-										}
-									}
-									client5.send();
-								}
-							}
-							client4.send();
-						}
-					}
-  				client3.send();
-				}
-			}
-  		client2.send();
-		}
-	}
-  client.send();
+	// var client = new XMLHttpRequest();
+	// client.open('GET', "Images/Bal_Bras.svg");
+	// client.onreadystatechange = function() {
+	// 	if (client.readyState === 4){
+	// 		svg_bras = client.responseText;
+	// 		var client2 = new XMLHttpRequest();
+	// 		client2.open('GET', "Images/Bal_Pied.svg");
+	// 		client2.onreadystatechange = function() {
+	// 			if (client2.readyState === 4){
+	// 				svg_pied = client2.responseText;
+	// 				var client3 = new XMLHttpRequest();
+	// 				client3.open('GET', "Images/Bal_Plateau.svg");
+	// 				client3.onreadystatechange = function() {
+	// 					if (client3.readyState === 4){
+	// 						svg_plateau = client3.responseText;
+	// 						var client4 = new XMLHttpRequest();
+	// 						client4.open('GET', "Images/Bal_Masse.svg");
+	// 						client4.onreadystatechange = function() {
+	// 							if (client4.readyState === 4){
+	// 								svg_poids1 = client4.responseText;
+	// 								var client5 = new XMLHttpRequest();
+	// 								client5.open('GET', "Images/Bal_Masse2.svg");
+	// 								client5.onreadystatechange = function() {
+	// 									if (client5.readyState === 4){
+	// 										svg_poids2 = client5.responseText;
+	// 										CreateBalance();
+	// 									}
+	// 								}
+	// 								client5.send();
+	// 							}
+	// 						}
+	// 						client4.send();
+	// 					}
+	// 				}
+  // 				client3.send();
+	// 			}
+	// 		}
+  // 		client2.send();
+	// 	}
+	// }
+  // client.send();
 
 	
 	document.getElementById("modificateur").onkeydown = (event) => {
