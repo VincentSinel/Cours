@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="/CSS/MainPage.css"> 
   <link rel="stylesheet" href="Equations.css"> 
   <script src="Equations.js"></script>
+  <script src="Confettis.js"></script>
 
 	<script src="/JS/Svg.js/svg.min.js" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
@@ -27,53 +28,72 @@
 
 			</div>
 			<div class="modes">
-				<div class="icon_button" onclick="StartRandomEquation()">
-					<img src="/Images/Icons/Shuffle.svg">
-					<label>Nouvelle équation aléatoire</label>
+				<div class="title_column">
+						<label>Résolution d'équations</label>
 				</div>
-				<div class="icon_button" onclick="StartCompetition()">
-					<img src="/Images/Icons/Reward.svg">
-					<label>Démarrer une compétition</label>
+				<div class="modes" style="flex-grow: 0;">
+					<div class="icon_button" onclick="StartRandomEquation()">
+						<img src="/Images/Icons/Shuffle.svg">
+						<label>Nouvelle équation aléatoire (N)</label>
+					</div>
+					<div class="info">
+						<div class="flexline">
+							<label>Dernier temps :</label>
+							<label id="time_last" class="info_change">-</label>
+						</div>
+						<div class="flexline" style="background-color: var(--HeadMenuButton);">
+							<label>Meilleur temps :</label>
+							<label id="time_best" class="info_change">-</label>
+						</div>
+						<div class="flexline">
+							<label>Temps moyen :</label>
+							<label id="time_average" class="info_change">-</label>
+						</div>
+						<div class="flexline" style="background-color: var(--HeadMenuButton);">
+							<label>Temps moyen (5 derniers calcul) :</label>
+							<label id="time_average5" class="info_change">-</label>
+						</div>
+					</div>
 				</div>
-				<div class="param">
-					<label>Marge d'accueille de la compétition :</label>
-					<input id="margeaccueille" type="number" value="5" min="1">
-					<label>s</label>
-				</div>
-				<div class="info">
-					<label>Meilleur temps :</label>
-					<label id="time_best" class="info_change">-</label>
-					<label>Temps moyen :</label>
-					<label id="time_average" class="info_change">-</label>
-					<label>Temps moyen (5 derniers calcul) :</label>
-					<label id="time_average5" class="info_change">-</label>
-					<label>Dernière compétition :</label>
-					<table>
-						<tr>
-							<th>Calcul n°1 :</th>
-							<td id="time_comp_1">-</td>
-						</tr>
-						<tr>
-							<th>Calcul n°2 :</th>
-							<td id="time_comp_2">-</td>
-						</tr>
-						<tr>
-							<th>Calcul n°3 :</th>
-							<td id="time_comp_3">-</td>
-						</tr>
-						<tr>
-							<th>Calcul n°4 :</th>
-							<td id="time_comp_4">-</td>
-						</tr>
-						<tr>
-							<th>Calcul n°5 :</th>
-							<td id="time_comp_5">-</td>
-						</tr>
-						<tr>
-							<th>Moyenne :</th>
-							<td id="time_comp_M">-</td>
-						</tr>
-					</table>
+				<div class="modes hidden" id="competiton_holder">
+					<div class="icon_button" onclick="StartCompetition()">
+						<img src="/Images/Icons/Reward.svg">
+						<label>Démarrer une compétition (C)</label>
+					</div>
+					<div class="param">
+						<label>Marge d'accueil de la compétition :</label>
+						<input id="margeaccueille" type="number" value="5" min="1">
+						<label>s</label>
+					</div>
+					<div class="info">
+						<label><b>Dernière compétition :</b></label>
+						<table>
+							<tr>
+								<th>Calcul n°1 :</th>
+								<td id="time_comp_1">-</td>
+							</tr>
+							<tr>
+								<th>Calcul n°2 :</th>
+								<td id="time_comp_2">-</td>
+							</tr>
+							<tr>
+								<th>Calcul n°3 :</th>
+								<td id="time_comp_3">-</td>
+							</tr>
+							<tr>
+								<th>Calcul n°4 :</th>
+								<td id="time_comp_4">-</td>
+							</tr>
+							<tr>
+								<th>Calcul n°5 :</th>
+								<td id="time_comp_5">-</td>
+							</tr>
+							<tr>
+								<th>Moyenne :</th>
+								<td id="time_comp_M">-</td>
+							</tr>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -122,5 +142,34 @@
 
 	<label id="countdowncompetition" class="menu_value hidden">
 	</label>
+
+	<div id="messageunlock" class="menu_value hidden">
+		<div>
+			Félicitations !
+		</div>
+		<label>
+			Tu as débloqué le mode compétitif. Tu peux maintenant lancer une série de 5 équations qu'il faut résoudre le plus vite possible. Lorsqu'une équation est résolue, la suivante se lance automatiquement. Tu peux défier un camarade car les équations sont générées en fonction de l'heure actuelle avec une marge modifiable. Par défaut, il suffit que les deux ordinateurs aient moins de 5 secondes de décalage pour pouvoir lancer la même compétition. Sinon, il suffit de changer cette marge.
+		</label>
+		<div class="icon_button" onclick="ValidationUnlock()" style="width: 150px; margin-bottom: 5px;">
+			<img src="/Images/Icons/Ok.svg">
+			<label>Valider</label>
+		</div>
+	</div>
+
+	<div id="messagefincompetition" class="menu_value hidden">
+		<div>
+			Fin de la compétition !<br>
+			
+		</div>
+		<label>
+			Ton temps moyen est de<br><span id="temps_moyen_compet">37,064</span> s<br> Bravo !
+		</label>
+		<div class="icon_button" onclick="ValidationUnlock()" style="width: 150px; margin-bottom: 5px;">
+			<img src="/Images/Icons/Ok.svg">
+			<label>Valider</label>
+		</div>
+	</div>
+
+	<canvas id="drawing_canvas" class="hide"></canvas>
 </body>
 </html>

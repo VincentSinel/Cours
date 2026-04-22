@@ -28,6 +28,11 @@
 	--ButtonBack_Hover: #CFCFD3;
 	--ButtonBack_Active: #FFFFFF;
 
+	--MButton: #0D64AB70;
+	--MButtonHover: #56DCFF70;
+	--MButtonActive: #2189C770;
+	--MButtonDark1: #07385f;
+	--MButtonDark2: #041d31;
 	
 	--MBack: #3C295B;
 	--MBack2T: #7030A055;
@@ -200,7 +205,7 @@ body{
 	display: flex;
 	flex-direction: row;
 	gap: 5px;
-	background-color: var(--HeadMenuButton);
+	background-color: var(--MButton);
 	color: var(--WBackText);
 
 }
@@ -220,10 +225,22 @@ body{
 }
 
 .icon_button:hover{
-	background-color: var(--WBackHover);
+	background-color: var(--MButtonHover);
 }
 .icon_button:active{
-	background-color: var(--WBackActive);
+	background-color: var(--MButtonActive);
+}
+
+.title_column{
+	height: 82px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: var(--WBackText);
+	font-size: 30pt;
+	font-weight: bold;
 }
 
 .info{
@@ -264,6 +281,7 @@ body{
 	text-align: right;
 	font-weight: bold;
 	border: solid #7030A0 2px;
+	padding-right: 5px;
 }
 .info table th{
 	text-align: left;
@@ -277,9 +295,9 @@ body{
 
 
 .menu_value{
-	background-color: #E24D12;
+	background-color: var(--MButtonDark1);/*  #E24D12;*/
 	color: var(--WBackText);
-	border: solid 5px #C1440F;
+	border: solid 5px var(--MButtonDark2);/*#C1440F;*/
 	border-radius: 20px;
 	padding: 10px;
 	position: fixed;
@@ -316,21 +334,59 @@ body{
             user-select: none;
 }
 
+#messageunlock,
+#messagefincompetition,
 #countdowncompetition{
-	background-color: #E24D12;
-	color: var(--WBackText);
-	border: solid 5px #C1440F;
-	border-radius: 20px;
-	padding: 10px;
-	position: fixed;
-	z-index: 50;
-	height: 110px;
-	width: 250px;
-	top: calc(50% - 55px);
-	left: calc(50% - 125px);
 	font-weight: bold;
 	font-size: 30pt;
 	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#countdowncompetition{
+	height: 110px;
+	width: 240px;
+	top: calc(50% - 55px);
+	left: calc(50% - 120px);
+}
+#messagefincompetition,
+#messageunlock{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+}
+#messagefincompetition,
+#messageunlock{
+	height: 230px;
+	width: 480px;
+	top: calc(50% - 115px);
+	left: calc(50% - 240px);
+}
+#messageunlock > div{
+	width: 100%;
+	height: 60px;
+}
+#messagefincompetition > label{
+	font-size: 20pt;
+	line-height: 24pt;
+	text-align: center;
+}
+#messageunlock > label{
+	font-size: 10pt;
+	line-height: 12pt;
+	text-align: justify;
+}
+
+.flexline{
+	display: flex;
+	height: 25px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.flexline > label{
+	flex-grow: 2;
+}
+.flexline > .info_change{
+	flex-grow: 1;
 }
 
 .param{
@@ -338,6 +394,9 @@ body{
 	gap: 5px;
 	background-color: var(--HeadMenuButton);
 	color: var(--WBackText);
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 5px;
 }
 
 .param > label:first-child{
@@ -361,4 +420,20 @@ body{
 	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	flex-shrink: 1;
 	width: 2cm;
+}
+#drawing_canvas {
+    position: absolute;
+		z-index: 5;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+		cursor: not-allowed;
+    pointer-events: none;
+}
+.hide{
+	display: none;
 }

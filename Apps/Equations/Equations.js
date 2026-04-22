@@ -1,6 +1,3 @@
-var TempsMargeCompetition = 5
-
-
 
 function LoadFiles()
 {
@@ -60,6 +57,19 @@ function LoadFiles()
 			return;
 		switch(event.key)
 		{
+			case "n":
+			case "N":
+				event.preventDefault()
+				StartRandomEquation()
+				break 
+			case "c":
+			case "C":
+				if (CountEquation >= 5)
+				{
+					event.preventDefault()
+					StartCompetition()
+				}
+				break 
 			case "p":
 			case "P":
 				ShowValueChoice('+x')
@@ -107,6 +117,9 @@ function LoadFiles()
 
 
 { // Game mode
+
+	var TempsMargeCompetition = 5
+	var CountEquation = 0;
 
 	var PreviousTimes = [];
 	var RoundStartTime = 0;
@@ -200,6 +213,7 @@ function LoadFiles()
 	{
 		let time = Date.now() - RoundStartTime;
 		PreviousTimes.push(time);
+		CountEquation++;
 
 		if (competition_mode)
 		{
@@ -216,7 +230,10 @@ function LoadFiles()
 
 				document.getElementById("time_comp_M").innerText = (average_time / 1000).toFixed(3) + "s";
 
-				alert("Fin de la compétition ! Votre temps moyen est " + (average_time / 1000).toFixed(3) + "s");
+				StartConfettis()
+				document.getElementById("messagefincompetition").classList.remove("hidden");
+				document.getElementById("temps_moyen_compet").innerHTML = (average_time / 1000).toFixed(3);
+				// alert("Fin de la compétition ! Votre temps moyen est " +  + "s");
 			}
 			else
 			{
@@ -226,9 +243,35 @@ function LoadFiles()
 			}
 		}
 
+		SetLastTime(time)
 		SetBestTime()
 		SetAverageTime()
 		SetAverageTime5()
+
+		if (!competition_mode && CountEquation == 5)
+		{
+			CheckCountEquation()
+		}
+
+	}
+
+	function CheckCountEquation()
+	{
+		CountEquation = 5;
+		document.getElementById("messageunlock").classList.remove("hidden");
+		StartConfettis()
+	}
+
+	function ValidationUnlock()
+	{
+		document.getElementById("competiton_holder").classList.remove("hidden");
+		document.getElementById("messageunlock").classList.add("hidden");
+		document.getElementById("messagefincompetition").classList.add("hidden");
+	}
+
+	function SetLastTime(time)
+	{
+		document.getElementById("time_last").innerText = (time / 1000).toFixed(3) + "s";
 	}
 
 	function SetBestTime()
