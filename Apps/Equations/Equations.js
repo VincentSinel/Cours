@@ -1,3 +1,6 @@
+var TempsMargeCompetition = 5
+
+
 
 function LoadFiles()
 {
@@ -55,41 +58,48 @@ function LoadFiles()
 		let value = document.getElementById("modificateur")
 		if (document.activeElement === value)
 			return;
-		console.log(event)
-		event.preventDefault()
 		switch(event.key)
 		{
 			case "p":
 			case "P":
 				ShowValueChoice('+x')
+				event.preventDefault()
 				break 
 			case "m":
 			case "M":
 				ShowValueChoice('-x')
+				event.preventDefault()
 				break 
 			case "+":
 				ShowValueChoice('+')
+				event.preventDefault()
 				break 
 			case "-":
 				ShowValueChoice('-')
+				event.preventDefault()
 				break 
 			case "*":
 				ShowValueChoice('*')
+				event.preventDefault()
 				break 
 			case "/":
 				ShowValueChoice('/')
+				event.preventDefault()
 				break 
 			case "z":
 			case "Z":
 				Undo()
+				event.preventDefault()
 				break 
 			case "n":
 			case "N":
 				StartRandomEquation()
+				event.preventDefault()
 				break 
 			case "c":
 			case "C":
 				StartCompetition()
+				event.preventDefault()
 				break 
 		}
 	})
@@ -113,8 +123,11 @@ function LoadFiles()
 		current_round = 1;
 		competition_mode = true;
 
-		let beggin = (Math.ceil(Date.now() / 5_000) + 1) * 5_000;
-		let rng = new RNG(beggin / 5_000)
+		TempsMargeCompetition = document.getElementById("margeaccueille").valueAsNumber
+
+		let tmc = TempsMargeCompetition * 1_000
+		let beggin = Math.ceil(Date.now() / tmc) * tmc + 5_000;
+		let rng = new RNG(beggin / tmc)
 		competition_rounds = [
 			GetRound(rng),
 			GetRound(rng),

@@ -332,3 +332,33 @@ body{
 	font-size: 30pt;
 	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.param{
+	display: flex;
+	gap: 5px;
+	background-color: var(--HeadMenuButton);
+	color: var(--WBackText);
+}
+
+.param > label:first-child{
+	flex-grow: 1;
+}
+
+.param > label{
+	font-weight: bold;
+	font-size: 12pt;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin-right: 10px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+	
+}
+
+.param > input {
+	font-weight: bold;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	flex-shrink: 1;
+	width: 2cm;
+}
