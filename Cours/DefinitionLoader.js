@@ -28,8 +28,23 @@ function SetDefinitions()
 		var name = def.getAttribute("definition");
 		if (name != null && name in Definitions)
 		{
-			var id = parseInt(def.getAttribute("objids"));
-			def.innerHTML = Definitions[name].definitions[id];
+			if ("definitions" in Definitions[name])
+			{
+				let ids = def.getAttribute("objids").split(" ")
+				if (ids.length == 1)
+				{
+					def.innerHTML = Definitions[name].definitions[parseInt(ids[0])];
+				}
+				else
+				{
+					let result = "<ul>"
+					ids.forEach(id => {
+						let int_id = parseInt(id)
+						result += "<li>" + Definitions[name].definitions[int_id]; + "</li>"
+					})
+					def.innerHTML = result + "</ul>";
+				}
+			}
 		}
 	});
 	document.querySelectorAll(".propriete").forEach(def => {

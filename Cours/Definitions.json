@@ -24,6 +24,13 @@
 		"definitions": [
 			"Un <span class=\"CRed\">angle</span> est une partie du plan limitée par deux demi-droites de même origine."
 		]
+	},"antécédent": {
+		"tags": [],
+		"definitions": [
+			"Dans une fonction qui à $x$ associe $f(x)$ on dit que :<ul><li>$f(x)$ est l'<span class=\"CRed\">image</span> de $x$ par la fonction $f$.</li><li>$x$ est un <span class=\"CRed\">antécédent</span> de $f(x)$ par la fonction $f$</li></ul>"
+		],
+		"proprietes": [
+		]
 	},"amplitude": {
 		"tags": [],
 		"definitions": [
@@ -49,6 +56,14 @@
 		"definitions": [
 			""
 		]
+	},"boule": {
+		"tags": [],
+		"definitions": [
+			"Une <span class=\"CRed\">boule</span> de centre O et de rayon <span class=\"CBlue\">$r$</span> est l'ensemble des points M de l'espace tels que $OM\\leq\\textcolor{#039be5}{r}$."
+		],
+		"proprietes": [
+			"Le volume d'une boule de rayon <span class=\"CBlue\">$r$</span> est obtenu ainsi :<br><span class=\"formule\">$V=\\frac{4}{3}\\pi \\textcolor{#039be5}{r}^3$</span>"
+		]
 	},"carré": {
 		"tags": [],
 		"definitions": [
@@ -71,7 +86,7 @@
 	},"coefficient directeur": {
 		"tags": [],
 		"definitions": [
-			""
+			"Soit M et N deux points de coordonnées respectives ($x_1$ ; $y_1$) et ($x_2$ ; $y_2$) tels que $x_1 \\neq x_2$.<br>Le coefficient directeur de la droite passant par M et N se calcule ainsi :<br><span class=\"frac\">$\\textcolor{#039be5}{a}=\\frac{y_1 - y_2}{x_1 - x_2}$</span>"
 		]
 	},"comparer": {
 		"tags": [],
@@ -187,6 +202,11 @@
 			"La <b>distance</b> d'un point à une droite est <b>longueur du plus court chemin</b> entre ce point et la droite.",
 			"La distance d'un point A à une droite $(d)$ est la longueur du segment reliant le point A au <b>pied de la perpendiculaire</b> à $(d)$ passant par A."
 		]
+	},"distributivité": {
+		"tags": [],
+		"definitions": [
+			"La distributivité $k\\times(m+n) = k\\times m + k\\times n$ permet d'écrire un produit  entre un nombre et une somme comme une somme de deux produits.  <table class=\"center\"> <tr> <td colspan=\"3\" class=\"CRed\">Factorisation</td> </tr> <tr style=\"line-height: 9px;\"> <td colspan=\"3\"> <img style=\"transform: scaleX(-1)\" height=\"20px\" src=\"Images/Fleche.svg\"> </td> </tr> <tr> <td>$\\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$</td> <td style=\"width: 2cm;\">=</td> <td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{m}+ \\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{n}$</td> </tr> <tr style=\"line-height: 9px;\"> <td colspan=\"3\"> <img height=\"20px\" src=\"Images/Fleche.svg\"> </td> </tr> <tr> <td colspan=\"3\" class=\"CRed\">Développement</td> </tr> </table> <span class=\"CRed\">Développer</span> une expression c'est transformer un produit en somme.  Dans l'autre sens on dit que l'on <span class=\"CRed\">factorise</span> une expression.  Le facteur k est alors appelé <span class=\"CRed\">facteur commun</span>. "
+		]
 	},"diviseur": {
 		"tags": [],
 		"definitions": [
@@ -220,6 +240,14 @@
 		"definitions": [
 			"Une <b>division euclidienne</b> est une division ou l'on ne parle que d'entier. Elle fait intervenir quatre nombres : le <span class=\"CBlue\"><b>dividende</b></span>, le <span class=\"CRed\"><b>diviseur</b></span>, le <span class=\"CGreen\"><b>quotient</b></span> et le <span class=\"CViolet\"><b>reste</b></span>, tel que :<br><span class=\"CBlue\"><b>dividende</b></span> = <span class=\"CRed\"><b>diviseur</b></span> × <span class=\"CGreen\"><b>quotient</b></span> + <span class=\"CViolet\"><b>reste</b></span> avec <span class=\"CViolet\"><b>reste</b></span> < <span class=\"CRed\"><b>diviseur</b></span>"
 		]
+	},"double distributivité": {
+		"tags": [],
+		"definitions": [
+			"<p> La distributivité s'applique aussi lorsque l'on multiplie deux expressions entre parenthèses:<br> $(\\textcolor{#e53935}{k}+\\textcolor{#e53935}{l})\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n}) = \\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})+ \\textcolor{#e53935}{l}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$ $ = \\textcolor{#e53935}{k}\\times\\textcolor{#039be5}{m} + \\textcolor{#e53935}{k}\\times\\textcolor{#039be5}{n} +  \\textcolor{#e53935}{l}\\times\\textcolor{#039be5}{m} + \\textcolor{#e53935}{l}\\times\\textcolor{#039be5}{n}$<br> </p> <div class=\"behindparent\"> <p style=\"display: inline; margin-left: 3px;\"> $(\\ \\textcolor{#e53935}{k}\\ +\\ \\textcolor{#e53935}{l}\\ )\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$ </p> <img class=\"behindobj\" style=\"top: -15px; left: 4px;\" height=\"60px\" src=\"Images/Developpement2.svg\"> </div> <div style=\"height: 20px;\"></div>",
+			"$(\\textcolor{#e53935}{a}+\\textcolor{#039be5}{b})^2=\\textcolor{#e53935}{a}^2 + 2\\textcolor{#e53935}{a}\\textcolor{#039be5}{b} +\\textcolor{#039be5}{b}^2$",
+			"$(\\textcolor{#e53935}{a}-\\textcolor{#039be5}{b})^2=\\textcolor{#e53935}{a}^2 - 2\\textcolor{#e53935}{a}\\textcolor{#039be5}{b} +\\textcolor{#039be5}{b}^2$",
+			"$(\\textcolor{#e53935}{a}-\\textcolor{#039be5}{b})(\\textcolor{#e53935}{a}+\\textcolor{#039be5}{b})=\\textcolor{#e53935}{a}^2 -\\textcolor{#039be5}{b}^2$"
+		]
 	},"droite": {
 		"tags": [],
 		"definitions": [
@@ -240,6 +268,12 @@
 		"definitions": [
 			"L'<span class='CRed'>écriture décimale</span> d'une fraction décimale est son écriture sous forme de nombre à virgule."
 		]
+	},"effectif": {
+		"tags": [],
+		"definitions": [
+			"L'<span class=\"CRed\">effectif</span> d'une valeur est le nombre de fois où celle-ci apparait dans la série de valeurs.",
+			"L'<span class=\"CRed\">effectif total</span> est le nombre total de valeurs d'une série."
+		]
 	},"encadrer": {
 		"tags": [],
 		"definitions": [
@@ -249,11 +283,60 @@
 		"tags": [],
 		"definitions": [
 			"Une <span class=\"CRed\">équation</span> est une <b>égalité</b> comportant un ou plusieurs nombres inconnus désignés par des lettres (que l'on nomme <span class=\"CRed\">inconnues</span> de l'équation)."
+		],
+		"proprietes": [
+			"Soit <span class=\"CBlue\">$a$</span> un nombre entier positif. Les solutions de l'équation $x^2-\\textcolor{#039be5}{a}^2=0$ sont <span class=\"CBlue\">$a$</span> et <span class=\"CBlue\">$-a$</span>."
+		]
+	},"équiprobabilité": {
+		"tags": [],
+		"definitions": [
+			"<b>Si</b> dans une expérience aléatoire, <b>toutes les issues ont la même probabilité</b> d'apparaître, <b>alors</b> on parle de situation d'<span class=\"CRed\">équiprobabilité</span>."
+		]
+	},"étendue": {
+		"tags": [],
+		"definitions": [
+			"L' <span class=\"CRed\">étendue</span> d'une série de valeurs est la différence entre la valeur maximale et la valeur minimale :<br>$\\text{Etendue} = \\text{valeur max} - \\text{valeur min}$"
+		]
+	},"événement": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">événement</span> est constitué d'un ensemble d'issues (zéro, une ou plusieurs). Il <b>peut</b> ou <b>ne peut pas</b> être <u>réalisé</u>."
+		]
+	},"expérience aléatoire": {
+		"tags": [],
+		"definitions": [
+			"Une <span class=\"CRed\">expérience aléatoire</span> est une expérience dont on connait tous les résultats possibles sans pouvoir déterminer de manière certaine lequel va se produire.<br>Chaque résultat possible est appelé une <span class=\"CRed\">issue</span>.",
+			"Une expérience à deux épreuves étudie le résultat obtenu après avoir effectué deux fois la même expérience aléatoire."
 		]
 	},"facteur": {
 		"tags": [],
 		"definitions": [
 			"Les éléments qui composent une multiplication sont appelés <span class=\"CRed\">facteurs</span>."
+		]
+	},"fonction": {
+		"tags": [],
+		"definitions": [
+			"Un processus qui, à un nombre de départ, associe un unique nombre d'arrivée s'appelle une fonction.<br>Si on note $x$ le nombre de départ et $f$ la fonction, on note alors $f(x)$ (lu « $f$ de $x$ ») le nombre d'arrivée."
+		]
+	},"fonction linéaire": {
+		"tags": [],
+		"definitions": [
+			"Soit <span class=\"CBlue\">$a$</span> un nombre quelconque. Une <span class=\"CRed\">fonction linéaire</span> est une fonction qui, à un nombre $x$, fait correspondre le nombre $\\textcolor{#039be5}{a}\\times x$. On la note $f(x)=\\textcolor{#039be5}{a}\\times x$"
+		],
+		"proprietes": [
+			"Un tableau de valeurs d'une fonction linéaire est un <span class=\"CRed\"> tableau de proportionnalité</span> de coefficient de proportionnalité <span class=\"CBlue\">$a$</span>.",
+			"Dans un repère, la représentation graphique d'une fonction linéaire $f(x)=\\textcolor{#039be5}{a}x$ est une droite qui passe par l'origine du repère."
+		]
+	},"fonction affine": {
+		"tags": [],
+		"definitions": [
+			"Une <span class=\"CRed\">fonction affine</span> est une fonction du type $\\textcolor{#039be5}{a}\\times x + \\textcolor{#039be5}{b}$ où <span class=\"CBlue\">$a$</span> et <span class=\"CBlue\">$b$</span> sont des nombres quelconques."
+		],
+		"proprietes": [
+			"Une fonction <b>linéaire</b> est une fonction <b>affine</b> particulière. (<span class=\"CBlue\">$b$</span> = 0)",
+			"Une fonction affine est une droite non verticale et inversement.",
+			"Si <span class=\"CBlue\">$a$</span> = 0 on dit que la fonction est <b>constante</b>. C'est alors une droite horizontale.",
+			"Une fonction affine coupe l'axe vertical en ordonnée <span class=\"CBlue\">$b$</span>."
 		]
 	},"forme fractionnaire": {
 		"tags": [],
@@ -278,6 +361,16 @@
 		"definitions": [
 			"Une fraction est dite <span class=\"CRed\">irréductible</span> lorsque le numérateur et le dénominateur sont premiers entre eux."
 		]
+	},"fréquence": {
+		"tags": [],
+		"definitions": [
+			"La <span class=\"CRed\">fréquence</span> d'une valeur est égale à :<br><span class=\"frac\">$\\text{Fréquence}=\\frac{\\text{effectif de la valeur}}{\\text{effectif total}}$</span>",
+			"Lorsqu'on effectue un très grand nombre de fois une expérience aléatoire de façon indépendante et dans les mêmes conditions, la fréquence de réalisation d'une issue ou d'un événement se rapproche de la probabilité de celle ou celui-ci."
+		],
+		"proprietes": [
+			"La fréquence d'une valeur est toujours comprise entre 0 et 1.",
+			"La somme de toutes les fréquences est égale à 1. "
+		]
 	},"hauteur": {
 		"tags": [],
 		"definitions": [
@@ -286,7 +379,24 @@
 	},"histogramme": {
 		"tags": [],
 		"definitions": [
-			""
+			"Un <span class=\"CRed\">histogramme</span> est un diagramme permettant de représenter une série de données regroupées en <b>classes</b>.<br>Chaque classe est représentée par un rectangle dont la largeur représente l'intervalle de la classe et la hauteur de l'effectif."
+		]
+	},"homothétie": {
+		"tags": [],
+		"definitions": [
+			"Une <span class=\"CRed\">homothétie</span> de rapport $k$ permet d'agrandir ou réduire une figure à partir d'un point choisi comme centre. $k$ correspond alors au « taux » d'agrandissement."
+		],
+		"proprietes": [
+			"Dans une homothétie, un point, son image et le centre de l'homothétie sont toujours alignés.",
+			"Une homothétie de rapport $k\\ =\\ 1$ n'effectue aucune transformation.",
+			"Une homothétie de rapport $k\\ =\\ -1$ correspond à une symétrie centrale."
+		]
+	},"image": {
+		"tags": [],
+		"definitions": [
+			"Dans une fonction qui à $x$ associe $f(x)$ on dit que :<ul><li>$f(x)$ est l'<span class=\"CRed\">image</span> de $x$ par la fonction $f$.</li><li>$x$ est un <span class=\"CRed\">antécédent</span> de $f(x)$ par la fonction $f$</li></ul>"
+		],
+		"proprietes": [
 		]
 	},"longueur": {
 		"tags": [],
@@ -297,6 +407,11 @@
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">losange</span> est un quadrilatère qui a quatre côtés de même longueur."
+		]
+	},"médiane": {
+		"tags": [],
+		"definitions": [
+			"La <span class=\"CRed\">médiane</span> d'une série de valeurs est une valeur telle qu'il y a :<ul><li>Au moins 50% des valeurs inférieures ou égales à cette médiane</li><li>Au moins 50% des valeurs supérieures ou égales à cette médiane.</li></ul>"
 		]
 	},"médiatrice": {
 		"tags": [],
@@ -312,6 +427,11 @@
 		"definitions": [
 			"Le <span class=\"CRed\">milieu</span> I d'un segment [RS] est le point tel que :<br><ul><li>I appartient au segment [RS]</li><li>I est à égale distance des points R et S</li></ul>"
 		]
+	},"moyenne": {
+		"tags": [],
+		"definitions": [
+			"La <span class=\"CRed\">moyenne</span> d'une série de valeurs est égale à :<br><span class=\"frac\">$\\text{Moyenne} = \\frac{\\text{Somme de toutes les valeurs}}{\\text{Effectif total}}$</span>"
+		]
 	},"multiple": {
 		"tags": [],
 		"definitions": [
@@ -322,6 +442,11 @@
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">nombre premier</span> est un nombre qui possède exactement deux diviseurs, 1 et lui-même."
+		]
+	},"notation scientifique": {
+		"tags": [],
+		"definitions": [
+			"<p>La <span class=\"CRed\">notation scientifique</span> d'un nombre décimal est la seule écriture de ce nombre de la forme $\\textcolor{#e53935}{a}\\times10^{\\textcolor{#039be5}{n}}$ tel :</p><ul><li>$\\textcolor{#e53935}{a}$ un nombre décimal tel que $1\\le |\\textcolor{#e53935}{a}| &lt; 10$ ou $|\\textcolor{#e53935}{a}|$ est la valeur absolue de $\\textcolor{#e53935}{a}$</li><li>$\\textcolor{#039be5}{n}$ est un entier relatif (positif ou négatif).</li></ul>"
 		]
 	},"numérateur": {
 		"tags": [],
@@ -356,6 +481,10 @@
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">parallélépipède rectangle</span> (aussi appelé <span class=\"CRed\">pavé droit</span>) est un solide composé de six faces rectangulaires."
+		],
+		"proprietes": [
+			"Le volume $V$ d'un pavé droit, de dimension L, 𝓁 et <i>h</i>, est :<br> $V\\ =\\ L\\ \\times\\ 𝓁\\ \\times\\ h$",
+			"$V = \\text{Longueur} \\times \\text{Largeur} \\times \\text{Hauteur}$"
 		]
 	},"périmètre": {
 		"tags": [],
@@ -405,10 +534,24 @@
 		"definitions": [
 			""
 		]
+	},"probabilité": {
+		"tags": [],
+		"definitions": [
+			"La <span class=\"CRed\">probabilité</span> d'une issue représente la chance qu'elle apparaisse lors d'une expérience aléatoire."
+		],
+		"proprietes": [
+			"La probabilité d'une issue est un nombre compris entre 0 et 1.",
+			"La somme des probabilités de toutes les issues d'une expérience aléatoire est égale à 1.",
+			"La probabilité d'un événement A est la somme des probabilités des issues qui le réalisent.<br>On note cette probabilité P(A).",
+			"Si A et B sont <b>deux événements incompatibles</b>, la probabilité que <b>l'un <u>ou</u> l'autre</b> se réalise est <b>la somme de leurs probabilités</b> : $P\\left(A\\ ou\\ B\\right)=P\\left(A\\right)+P(B)$."
+		]
 	},"produit": {
 		"tags": [],
 		"definitions": [
 			"Le résultat d'une multiplication est appelé <span class=\"CRed\">produit</span>."
+		],
+		"proprietes": [
+			"Dire qu'un produit est nul signifie que l'un de ses facteurs est nul."
 		]
 	},"produit de facteurs premiers": {
 		"tags": [],
@@ -425,6 +568,22 @@
 			"Pour calculer une quatrième proportionnelle, on peut effectuer un passage par l'unité.",
 			"Pour calculer une quatrième proportionnelle, on peut calculer le coefficient de proportionnalité."
 		]
+	},"puissance": {
+		"tags": [],
+		"definitions": [
+			"<span class=\"CRed\">$a$</span> puissance <span class=\"CBlue\">$n$</span> noté $\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}$ désigne le produit de <span class=\"CBlue\">$n$</span> facteurs tous égaux à <span class=\"CRed\">$a$</span> : <br><div class=\"center\"><table style=\"margin: auto;\"><tr><td>$\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}=$</td><td>$\\textcolor{#e53935}{a}\\times\\textcolor{#e53935}{a}\\times ... \\times\\textcolor{#e53935}{a}\\times \\textcolor{#e53935}{a}$</td></tr><tr style=\"line-height: 4px;\"><td></td><td><image src=\"Images/Accolade1.svg\"></image></td></tr><tr><td></td><td><span class=\"CBlue\">$n$</span> facteurs</td></tr></table></div>",
+			"<span class=\"CRed\">$a$</span> puissance <span class=\"CBlue\">$-n$</span> noté $\\textcolor{#e53935}{a}^\\textcolor{#039be5}{-n}$ désigne le produit de <span class=\"CBlue\">$n$</span> facteurs tous égaux à $\\frac{1}{\\textcolor{#e53935}{a}}$ : <br> <div class=\"center\"> <table style=\"margin: auto;\"> <tr> <td>$\\textcolor{#e53935}{a}^\\textcolor{#039be5}{-n}=$</td> <td>$\\frac{1}{\\textcolor{#e53935}{a}}\\times\\frac{1}{\\textcolor{#e53935}{a}}\\times ... \\times \\frac{1}{\\textcolor{#e53935}{a}}\\times\\frac{1}{\\textcolor{#e53935}{a}}$</td> <td>$=\\frac{1}{\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}}$</td> </tr> <tr style=\"line-height: 4px;\"> <td></td> <td> <image src=\"Images/Accolade1.svg\"></image> </td> <td></td> </tr> <tr> <td></td> <td><span class=\"CBlue\">$n$</span> facteurs</td> <td></td> </tr> </table> </div>",
+			"<div class=\"center\"> <table style=\"margin: auto;\"> <tr> <td>$10^\\textcolor{#039be5}{n}=$</td> <td>$10\\times10\\times ... \\times10\\times10$</td> <td>$=1$</td> <td>$00 ... 00$</td> </tr> <tr style=\"line-height: 9px;\"> <td></td> <td> <image src=\"Images/Accolade1.svg\"></image> </td> <td></td> <td> <image src=\"Images/Accolade2.svg\"></image> </td> </tr> <tr> <td></td> <td><span class=\"CBlue\">$n$</span> facteurs</td> <td></td> <td><span class=\"CBlue\">$n$</span> zéros</td> </tr> </table> </div>",
+			"<div class=\"center\"><table style=\"margin: auto;\"><tr><td>$10^\\textcolor{#039be5}{-n}=$</td><td>$\\frac{1}{10}\\times\\frac{1}{10}\\times ... \\times\\frac{1}{10}\\times\\frac{1}{10}$</td><td>$=$</td><td>$0,0 ... 00$</td><td>$1$</td></tr><tr style=\"line-height: 9px;\"><td></td><td> <image src=\"Images/Accolade1.svg\"></image> </td><td></td><td> <image src=\"Images/Accolade2.svg\"></image> </td><td></td></tr><tr><td></td><td><span class=\"CBlue\">$n$</span> facteurs</td><td></td><td><span class=\"CBlue\">$n$</span> zéros</td><td></td></tr></table></div>"
+		],
+		"proprietes": [
+			"$\\textcolor{#e53935}{a}^1 = \\textcolor{#e53935}{a}$",
+			"Si $\\textcolor{#e53935}{a} \\ne 0$, $\\textcolor{#e53935}{a}^0 = 1$",
+			"$\\textcolor{#e53935}{(\\frac{a}{b})}^\\textcolor{#039be5}{-n}=\\textcolor{#e53935}{(\\frac{b}{a})}^\\textcolor{#039be5}{n}$",
+			"$\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}\\times\\textcolor{#e53935}{a}^\\textcolor{#039be5}{m}=\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n+m}$",
+			"$\\frac{\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}}{\\textcolor{#e53935}{a}^\\textcolor{#039be5}{m}}=\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n-m}$",
+			"$(\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n})^\\textcolor{#039be5}{m}=\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n\\times m}$"
+		]
 	},"quadrilatère": {
 		"tags": [],
 		"definitions": [
@@ -435,6 +594,17 @@
 		"definitions": [
 			"Le quotient de deux nombre <span class=\"CBlue\">▲</span> et <span class=\"CGreen\">●</span> est le nombre qui multiplié par <span class=\"CGreen\">●</span> donne <span class=\"CBlue\">▲</span>. On le note <span style=\"font-size: 16pt;\">$(\\frac{\\textcolor{#039be5}{▲}}{\\textcolor{#43a047}{●}})$</span>",
 			"Le résultat d'une division est appelé <span class=\"CRed\">quotient</span>."
+		],
+		"proprietes": [
+			"Dans une égalité de quotient, on a égalité des produits en croix :<br><b>Si</b> <span class=\"frac\">$\\frac{a}{b} = \\frac{c}{d}$</span>, <b>alors</b> $a\\times d = b \\times c$"
+		]
+	},"ratio": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">ratio</span> exprime une comparaison entre deux ou plusieurs quantités."
+		],
+		"proprietes": [
+			"L'écriture d'un ratio n'est pas unique.<br>Deux ratios, <span class=\"CRed\">$a_1:b_1:c_1$</span> et <span class=\"CBlue\">$a_2:b_2:c_2$</span> sont identiques si :<br><span class=\"frac\">$\\frac{\\textcolor{#e53935}{a_1}}{\\textcolor{#039be5}{a_2}}=\\frac{\\textcolor{#e53935}{b_1}}{\\textcolor{#039be5}{b_2}}=\\frac{\\textcolor{#e53935}{c_1}}{\\textcolor{#039be5}{c_2}}$</span>"
 		]
 	},"rectangle": {
 		"tags": [],
@@ -446,6 +616,16 @@
 		"definitions": [
 			"Pour calculer une quatrième proportionnelle, on peut utiliser la <span class=\"CRed\">règle de trois</span>.<br><i>« On multiplie la diagonale et on divise par la troisième valeur. »</i>"
 		]
+	},"repère": {
+		"tags": [],
+		"definitions": [
+			"",
+			"Dans un <b>parallélépipède rectangle</b>, on forme un <span class=\"CRed\">repère</span> à partir d'un sommet et des trois arêtes qui en sont issues.<br> On repère alors un point par trois nombres, ses <b>coordonnées</b> :<br> l'<span class=\"CRed\">abscisse</span>, l'<span class=\"CBlue\">ordonnée</span> et l'<span class=\"CGreen\">altitude</span>."
+		],
+		"proprietes": [
+			"Une égalité reste vraie quand on ajoute (ou soustrait) un même nombre aux deux membres.",
+			"Une égalité reste vraie quand on multiplie (ou divise) les deux membres par un même nombre <b>non nul</b>."
+		]
 	},"résoudre": {
 		"tags": [],
 		"definitions": [
@@ -456,10 +636,30 @@
 			"Une égalité reste vraie quand on ajoute (ou soustrait) un même nombre aux deux membres.",
 			"Une égalité reste vraie quand on multiplie (ou divise) les deux membres par un même nombre <b>non nul</b>."
 		]
+	},"rotation": {
+		"tags": [],
+		"definitions": [
+			"Transformer un point (ou une figure) par <span class=\"CRed\">rotation</span>, c'est faire tourner ce point (ou cette figure) par rapport à un <b><u>centre de rotation</u></b>,d'un certain <b><u>angle</u></b> et dans une <b><u>direction</u></b> donnée."
+		],
+		"proprietes": []
 	},"sécantes": {
 		"tags": [],
 		"definitions": [
 			"Lorsque des droites ; segments ou demi-droites se coupent en un point on dit qu'elles sont <span class=\"CRed\">sécantes</span>."
+		]
+	},"section": {
+		"tags": [],
+		"definitions": [
+			"Une <span class=\"CRed\">section</span> d'un solide est la figure obtenue par intersection entre ce solide et un plan."
+		],
+		"proprietes": [
+			"La section d'un cube par un plan parallèle à l'une de ses faces est un carré de même dimension que cette face.",
+			"La section d'un parallélépipède rectangle par un plan parallèle à l'une de ses faces est un rectangle de même dimension que cette face.",
+			"La section d'un cylindre de révolution par un plan parallèle à sa base est un disque identique au disque de base.",
+			"La section d'un cylindre de révolution par un plan perpendiculaire à sa base est un rectangle.",
+			"La section d'un cône de révolution par un plan parallèle à sa base est un disque réduction du disque de base.",
+			"La section d'une pyramide par un plan parallèle à sa base est un polygone réduction du polygone de base.",
+			"La section d'une boule par un plan est un disque."
 		]
 	},"segment": {
 		"tags": [],
@@ -471,19 +671,26 @@
 		"definitions": [
 			"Le résultat d'une addition est appelé <span class=\"CRed\">somme</span>."
 		]
+	},"sphère": {
+		"tags": [],
+		"definitions": [
+			"Une <span class=\"CRed\">sphère</span> de centre O et de rayon <span class=\"CBlue\">$r$</span> est l'ensemble des points M de l'espace tels que $OM=\\textcolor{#039be5}{r}$."
+		],
+		"proprietes": [
+			"L'aire d'une sphère de rayon <span class=\"CBlue\">$r$</span> est obtenue ainsi :<br><span class=\"formule\">$A=4\\pi \\textcolor{#039be5}{r}²$</span>"
+		]
 	},"symétrie axiale": {
 		"tags": [],
 		"definitions": [
-			" Dire que deux figures sont <span class=\"CRed\">symétriques par rapport à une droite</span> signifie que, en effectuant un pliage le long de la droite, les figures se superposent."
+			"Dire que deux figures sont <span class=\"CRed\">symétriques par rapport à une droite</span> signifie que, en effectuant un pliage le long de la droite, les figures se superposent."
 		],
 		"proprietes": [
-			"Lors d'une symétrie axiale les longueurs, les alignements et les angles sont conservés.",
-			""
+			"Lors d'une symétrie axiale les longueurs, les alignements et les angles sont conservés."
 		]
 	},"symétrie centrale": {
 		"tags": [],
 		"definitions": [
-			""
+			"Dire que deux figures sont <span class=\"CRed\">symétriques par rapport à un point</span> signifie que, en effectuant un demi-tour autour de ce point, les figures se superposent."
 		]
 	},"système décimal":{
 		"tags": ["chiffre", "décimal", "nombres"],
@@ -493,12 +700,28 @@
 	},"tableau": {
 		"tags": [],
 		"definitions": [
-			" Les <span class=\"CRed\">tableaux</span> permettent de rassembler un grand nombre de données et de les présenter de façon organisé. Il en existe deux types :<ul><li>A simple entré</li><li>A double entrés</li></ul>"
+			"Les <span class=\"CRed\">tableaux</span> permettent de rassembler un grand nombre de données et de les présenter de façon organisé. Il en existe deux types :<ul><li>A simple entré</li><li>A double entrés</li></ul>"
 		]
 	},"terme": {
 		"tags": [],
 		"definitions": [
 			"Les nombres qui composent une addition ou une soustraction sont appelés les <span class=\"CRed\">termes</span>."
+		]
+	},"théorème de pythagore": {
+		"tags": [],
+		"definitions": [
+			""
+		]
+	},"théorème de thalès": {
+		"tags": [],
+		"definitions": [
+			"<b><u>Théorème de Thalès :</u></b><br> <b>Si</b>, dans un triangle ABC, où M est un point de (AB) et N un point de (AC), les droites (BC) et (MN) sont parallèles, <b>alors</b> on a l'égalité des rapports suivants :<br> <span class=\"frac\"> $\\frac{AB}{AM}=\\frac{AC}{AN}=\\frac{BC}{MN}$ </span>",
+			"Soit (BM) et (CN) deux droites sécantes en A.<br> <div class=\"flexobject\" style=\"gap: 15px;\"> <span class=\"CRed\" style=\"font-size: 24px;\">SI</span> <span>$\\frac{A\\textcolor{#039be5}{M}}{A\\textcolor{#e53935}{B}}=\\frac{A\\textcolor{#039be5}{N}}{A\\textcolor{#e53935}{C}}$</span> <span>et</span> <div> les points A ; <span class=\"CRed\">B</span> ; <span class=\"CBlue\">M</span> et les points A ; <span class=\"CRed\">C</span> ; <span class=\"CBlue\">N</span> sont alignés <b><i><u>dans le même ordre</u></i></b> </div> <span class=\"CRed\" style=\"font-size: 24px;\">ALORS</span> <span>Les droites (<span class=\"CRed\">BC</span>) et (<span class=\"CBlue\">MN</span>) sont parallèles.</span> </div>"
+		]
+	},"translation": {
+		"tags": [],
+		"definitions": [
+			"Transformer un point ou une figure par <span class=\"CRed\">translation</span> c'est faire glisser ce point ou cette figure selon une <b><u>direction</u></b>, un <b><u>sens</u></b> et une <b><u>distance</u></b> donnés."
 		]
 	},"triangle": {
 		"tags": [],
@@ -526,13 +749,27 @@
 		"definitions": [
 			"Un triangle <span class=\"CRed\">rectangle</span> est un triangle qui a deux côtés perpendiculaires."
 		]
+	},"trigonométrie": {
+		"tags": [],
+		"definitions": [
+			"Dans un triangle <b>rectangle</b>, pour chaque angle aigu, on définit trois rapports de longueurs :<br><ul style=\"list-style-type: '►'; line-height: 4em;\"><li>Le <b>sinus</b> de cet angle est égal au quotient : <span style=\"font-size: x-large;\">$\\frac{côté\\ \\textcolor{#039be5}{opposé}\\ à\\ l'angle}{\\textcolor{#43a047}{hypoténuse}}$</span></li><li>Le <b>cosinus</b> de cet angle est égal au quotient : <span style=\"font-size: x-large;\">$\\frac{côté\\ \\textcolor{#e53935}{adjacent}\\ à\\ l'angle}{\\textcolor{#43a047}{hypoténuse}}$</span></li><li>La <b>tangente</b> de cet angle est égale au quotient : <span style=\"font-size: x-large;\">$\\frac{côté\\ \\textcolor{#039be5}{opposé}\\ à\\ l'angle}{côté\\ \\textcolor{#e53935}{adjacent}\\ à\\ l'angle}$</span></li></ul>"
+		],
+		"proprietes": [
+			"Pour tout angle aigu de mesure $\\theta$ :&#160;&#160;&#160; $\\sin(\\theta)^{2}+\\cos(\\theta)^{2}=1$",
+			"Pour tout angle aigu de mesure $\\theta$ :&#160;&#160;&#160; $\\tan(\\theta)=\\frac{\\sin(\\theta)}{\\cos(\\theta)}$"
+		]
 	},"volume": {
 		"tags": [],
 		"definitions": [
 			"Le <span class=\"CRed\">volume</span> est une grandeur représentant la contenance d'un solide. Il existe deux unités usuelles utilisé, le <b>mètre cube</b> noté <b>m³</b> et le <b>litre</b> noté <b>L</b>."
 		],
 		"proprietes": [
-			"Le volume $V$ d'un pavé droit, de dimension L, 𝓁 et <i>h</i>, est :<br> $V\\ =\\ L\\ \\times\\ 𝓁\\ \\times\\ h$"
+			"$V = \\text{Longueur} \\times \\text{Largeur} \\times \\text{Hauteur}$",
+			"$V = \\text{côté}^3$",
+			"$V = \\pi \\times \\text{rayon}^2 \\times \\text{hauteur}$",
+			"$V = \\text{Aire}_{\\text{Base}} \\times \\text{hauteur}$",
+			"$V =$<span class=\"formule\">$\\frac{\\text{Aire}_{\\text{Base}} \\times \\text{hauteur}}{3}$</span>",
+			"$V =$<span class=\"formule\">$\\frac{\\pi \\times \\text{rayon}^2 \\times \\text{hauteur}}{3}$</span>"
 		]
 	}
 }
