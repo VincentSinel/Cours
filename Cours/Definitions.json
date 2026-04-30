@@ -398,6 +398,16 @@
 		],
 		"proprietes": [
 		]
+	},"latitude": {
+		"tags": [],
+		"definitions": [
+			"La <span class=\"CRed\">latitude</span> exprime la position Nord-Sud par rapport à <b>l'équateur</b>."
+		]
+	},"longitude": {
+		"tags": [],
+		"definitions": [
+			"La <span class=\"CRed\">longitude</span> exprime la position Est-Ouest par rapport au <b>méridien de Greenwich</b>."
+		]
 	},"longueur": {
 		"tags": [],
 		"definitions": [
@@ -659,7 +669,8 @@
 			"La section d'un cylindre de révolution par un plan perpendiculaire à sa base est un rectangle.",
 			"La section d'un cône de révolution par un plan parallèle à sa base est un disque réduction du disque de base.",
 			"La section d'une pyramide par un plan parallèle à sa base est un polygone réduction du polygone de base.",
-			"La section d'une boule par un plan est un disque."
+			"La section d'une boule par un plan est un disque.",
+			"La section d'une sphère par un plan est un cercle."
 		]
 	},"segment": {
 		"tags": [],
