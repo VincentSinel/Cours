@@ -67,7 +67,13 @@
 	},"carré": {
 		"tags": [],
 		"definitions": [
-			"Un <span class=\"CRed\">carré</span> est un quadrilatère qui a quatre côtés de même longueur et quatre angle droit."
+			"Un <span class=\"CRed\">carré</span> est un quadrilatère qui a quatre côtés de même longueur et quatre angle droit.",
+			"Le carré d'un nombre <span class=\"CRed\">$a$</span> est le produit de ce nombre par lui-même. On le note $\\textcolor{#e53935}{a}^2=\\textcolor{#e53935}{a}\\times \\textcolor{#e53935}{a}$ &nbsp;&nbsp; lu \"<span class=\"CRed\">$a$</span> au carré\""
+		]
+	},"carré parfait": {
+		"tags": [],
+		"definitions": [
+			"On appelle <span class=\"CRed\">carré parfait</span>, le carré d'un entier $a^2$."
 		]
 	},"cercle": {
 		"tags": [],
@@ -104,10 +110,20 @@
 		"definitions": [
 			"Lorsque plusieurs droite se croisent en un même point, on dit qu'elles sont <span class=\"CRed\">concourante</span>."
 		]
+	},"cône": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">cône de révolution</span> est composé d'un disque formants la base. La surface latérale lorsqu'elle est dépliée est un arc de disque dont l'arc de cercle à la même longueur que le périmètre du disque."
+		]
 	},"corde": {
 		"tags": [],
 		"definitions": [
 			"Une <span class=\"CRed\">corde</span> est un segment dont les deux extrémités appartiennent au cercle."
+		]
+	},"cosinus": {
+		"tags": [],
+		"definitions": [
+			"Dans un triangle <b>rectangle</b>, pour un angle « $\\theta$ » aigu donné, on a :<br><span style=\"font-size: x-large;\">$\\cos(\\theta)=\\frac{côté\\ \\textcolor{#e53935}{adjacent}\\ à\\ l'angle}{\\textcolor{#43a047}{hypoténuse}}$</span>"
 		]
 	},"critère de divisibilité": {
 		"tags": [],
@@ -126,12 +142,13 @@
 	},"cube": {
 		"tags": [],
 		"definitions": [
-			"Un <span class=\"CRed\">cube</span> est un parallélépipède rectangle particulier dont toutes les faces sont des <b>carrés</b>."
+			"Un <span class=\"CRed\">cube</span> est un <b>pavé droit</b> particulier dont toutes les faces sont des <b>carrés</b>.",
+			"Le cube d'un nombre <span class=\"CRed\">$a$</span> est le produit de ce nombre par lui-même, par lui-même. On le note $\\textcolor{#e53935}{a}^3=\\textcolor{#e53935}{a}\\times \\textcolor{#e53935}{a}\\times \\textcolor{#e53935}{a}$ &nbsp;&nbsp; lu \"<span class=\"CRed\">$a$</span> au cube\""
 		]
 	},"cylindre": {
 		"tags": [],
 		"definitions": [
-			""
+			"Un <span class=\"CRed\">cylindre de révolution</span> est composé de 2 disques formants les bases, parallèles entre eux. La surface latérale lorsqu'elle est dépliée est un rectangle ayant la même largeur que le périmètre des disques."
 		]
 	},"décomposer": {
 		"tags": [],
@@ -163,6 +180,11 @@
 		"tags": [],
 		"definitions": [
 			"Sur une demi-droite graduée on trouve :<ul><li>Une <span class=\"CRed\">unité de longueur</span></li><li>Une <span class=\"CRed\">origine</span></li></ul>On peut repérer la position de point à l'aide d'un nombre appelé <span class=\"CRed\">abscisse</span>."
+		]
+	},"développer": {
+		"tags": [],
+		"definitions": [
+			"Lorsque l'on passe d'un produit à une somme, on <span class=\"CRed\">développe</span>.<br><table class=\"center\"><tr><td>$\\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$</td><td style=\"width: 2cm;\">=</td><td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{m}+\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{n}$</td></tr><tr style=\"line-height: 9px;\"><td colspan=\"3\"><img height=\"20px\" src=\"Images/Fleche.svg\"></td></tr><tr><td colspan=\"3\" class=\"CRed\">Développement</td></tr></table>"
 		]
 	},"diagramme cartésien": {
 		"tags": [],
@@ -202,10 +224,16 @@
 			"La <b>distance</b> d'un point à une droite est <b>longueur du plus court chemin</b> entre ce point et la droite.",
 			"La distance d'un point A à une droite $(d)$ est la longueur du segment reliant le point A au <b>pied de la perpendiculaire</b> à $(d)$ passant par A."
 		]
+	},"distance à zéro": {
+		"tags": ["valeur absolue"],
+		"definitions": [
+			"La <span class=\"CRed\">distance à zéro</span> d'un nombre relatif correspond à la distance sur axe gradué entre ce nombre et l'origine.<br> On parle aussi de <span class=\"CRed\">valeur absolue</span>."
+		]
 	},"distributivité": {
 		"tags": [],
 		"definitions": [
-			"La distributivité $k\\times(m+n) = k\\times m + k\\times n$ permet d'écrire un produit  entre un nombre et une somme comme une somme de deux produits.  <table class=\"center\"> <tr> <td colspan=\"3\" class=\"CRed\">Factorisation</td> </tr> <tr style=\"line-height: 9px;\"> <td colspan=\"3\"> <img style=\"transform: scaleX(-1)\" height=\"20px\" src=\"Images/Fleche.svg\"> </td> </tr> <tr> <td>$\\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$</td> <td style=\"width: 2cm;\">=</td> <td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{m}+ \\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{n}$</td> </tr> <tr style=\"line-height: 9px;\"> <td colspan=\"3\"> <img height=\"20px\" src=\"Images/Fleche.svg\"> </td> </tr> <tr> <td colspan=\"3\" class=\"CRed\">Développement</td> </tr> </table> <span class=\"CRed\">Développer</span> une expression c'est transformer un produit en somme.  Dans l'autre sens on dit que l'on <span class=\"CRed\">factorise</span> une expression.  Le facteur k est alors appelé <span class=\"CRed\">facteur commun</span>. "
+			"La distributivité $k\\times(m+n) = k\\times m + k\\times n$ permet d'écrire un produit  entre un nombre et une somme comme une somme de deux produits.  <table class=\"center\"> <tr> <td colspan=\"3\" class=\"CRed\">Factorisation</td> </tr> <tr style=\"line-height: 9px;\"> <td colspan=\"3\"> <img style=\"transform: scaleX(-1)\" height=\"20px\" src=\"Images/Fleche.svg\"> </td> </tr> <tr> <td>$\\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$</td> <td style=\"width: 2cm;\">=</td> <td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{m}+ \\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{n}$</td> </tr> <tr style=\"line-height: 9px;\"> <td colspan=\"3\"> <img height=\"20px\" src=\"Images/Fleche.svg\"> </td> </tr> <tr> <td colspan=\"3\" class=\"CRed\">Développement</td> </tr> </table> <span class=\"CRed\">Développer</span> une expression c'est transformer un produit en somme.  Dans l'autre sens on dit que l'on <span class=\"CRed\">factorise</span> une expression.  Le facteur k est alors appelé <span class=\"CRed\">facteur commun</span>. ",
+			"La distributivité $k\\times(m+n)=k\\times m+k\\times n$ permet d'écrire un produit entre un nombre et une somme comme une somme de deux produits.<table class=\"center\"><tr><td style=\"text-align: right;\"><spawn class=\"CRed\">$k$</spawn></td><td>$\\times($</td><td><spawn class=\"CBlue\">$m$</spawn> $+$ <spawn class=\"CBlue\">$n$</spawn></td><td>$)$</td><td style=\"width: 2cm;\">=</td><td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{m}$</td><td>$+$</td><td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{n}$</td></tr><tr style=\"line-height: 9px;\"><td colspan=\"2\"></td><td><img height=\"9px\" width=\"50px\" src=\"Images/Accolade_200.svg\"></td><td colspan=\"2\"></td><td><img height=\"9px\" width=\"50px\" src=\"Images/Accolade_200.svg\"></td><td></td><td><img height=\"9px\" width=\"50px\" src=\"Images/Accolade_200.svg\"></td></tr><tr><td style=\"text-align: right;\"><spawn class=\"CRed\">nombre</spawn></td><td>$\\times$</td><td><spawn class=\"CBlue\">somme</spawn></td><td colspan=\"2\"></td><td>produit</td><td>$+$</td><td>produit</td></tr><tr style=\"line-height: 9px;\"><td colspan=\"4\"><img height=\"9px\" width=\"135px\" src=\"Images/Accolade_200.svg\"></td><td></td><td colspan=\"3\"><img height=\"9px\" width=\"130px\" src=\"Images/Accolade_200.svg\"></td></tr><tr><td colspan=\"4\">produit</td><td></td><td colspan=\"3\">somme</td></tr></table>"
 		]
 	},"diviseur": {
 		"tags": [],
@@ -302,16 +330,51 @@
 		"definitions": [
 			"Un <span class=\"CRed\">événement</span> est constitué d'un ensemble d'issues (zéro, une ou plusieurs). Il <b>peut</b> ou <b>ne peut pas</b> être <u>réalisé</u>."
 		]
+	},"événement élémentaire": {
+		"tags": [],
+		"definitions": [
+			"On appelle <span class=\"CRed\">événement élémentaire</span>, un événement qui ne contient qu'<b>une seule issue</b>."
+		]
+	},"événement impossible": {
+		"tags": [],
+		"definitions": [
+			"On appelle <span class=\"CRed\">événement impossible</span> un événement qui n'est constitué d'<b>aucune issue</b>, qui ne peut se réaliser."
+		]
+	},"événement certain": {
+		"tags": [],
+		"definitions": [
+			"On appelle <span class=\"CRed\">événement certain</span> un événement qui se réalise toujours, il contient <b>toutes les issues</b>."
+		]
+	},"événement contraire": {
+		"tags": [],
+		"definitions": [
+			"L' <span class=\"CRed\">événement contraire</span> d'un événement A contient toutes les issues qui ne réalise pas A. On le note « non A » ou encore $\\bar{\\mathbf{A}}$."
+		]
+	},"événement incompatible": {
+		"tags": [],
+		"definitions": [
+			"Deux événements sont dits <span class=\"CRed\">incompatibles</span> s'ils ne peuvent se réaliser en même temps."
+		]
 	},"expérience aléatoire": {
 		"tags": [],
 		"definitions": [
 			"Une <span class=\"CRed\">expérience aléatoire</span> est une expérience dont on connait tous les résultats possibles sans pouvoir déterminer de manière certaine lequel va se produire.<br>Chaque résultat possible est appelé une <span class=\"CRed\">issue</span>.",
 			"Une expérience à deux épreuves étudie le résultat obtenu après avoir effectué deux fois la même expérience aléatoire."
 		]
+	},"expression littérale": {
+		"tags": [],
+		"definitions": [
+			"Deux expressions littérales sont égales si elles prennent toujours la même valeur quand on remplace les variables par des valeurs numériques."
+		]
 	},"facteur": {
 		"tags": [],
 		"definitions": [
 			"Les éléments qui composent une multiplication sont appelés <span class=\"CRed\">facteurs</span>."
+		]
+	},"factoriser": {
+		"tags": [],
+		"definitions": [
+			"Lorsque l'on passe d'une somme à un produit, on <span class=\"CRed\">factorise</span>.<br><table class=\"center\"><tr><td>$\\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$</td><td style=\"width: 2cm;\">=</td><td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{m}+\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{n}$</td></tr><tr style=\"line-height: 9px;\"><td colspan=\"3\"><img style=\"transform: scaleX(-1)\" height=\"20px\" src=\"Images/Fleche.svg\"></td></tr><tr><td colspan=\"3\" class=\"CRed\">Factorisation</td></tr></table>"
 		]
 	},"fonction": {
 		"tags": [],
@@ -350,6 +413,13 @@
 			"Une fraction permet de représenter un partage de l'unité.",
 			"Les fractions sont utilisées pour se repérer sur une demi-droite graduée.",
 			"Prendre une fraction d'une quantité, c'est multiplier cette quantité par la fraction."
+		],
+		"proprietes": [
+			"Si $a$ et $b$ désignent des nombres entiers relatifs alors le signe de la fraction $\\frac{a}{b}$ est :<ul><li><b>Positif</b> si les deux nombres sont du même signe.</li><li><b>Négatif</b> si les deux nombres sont de signes contraires.</li></ul>",
+			"Pour effectuer la <b>somme</b> (ou la <b>différence</b>) de deux nombres en écriture fractionnaire de <b>même dénominateur</b> :<ul><li>On garde le dénominateur commun.</li><li>On additionne (ou on soustrait) les numérateurs.</li></ul>",
+			"Pour effectuer la <b>somme</b> (ou la <b>différence</b>) de deux nombres en écriture fractionnaire de <b>dénominateur quelconque</b>, il faut tout d'abord <b>les mettre au même dénominateur</b> avant d'utiliser la propriété précédente.",
+			"Pour multiplier deux nombres en écriture fractionnaire on :<br><ul><li>Multiplie les numérateurs entre eux.</li><li>Multiplie les dénominateurs entre eux.</li></ul><p>Soient <span class=\"CRed\">$a$</span>, <span class=\"CRed\">$b$</span>, <span class=\"CBlue\">$c$</span> et <span class=\"CBlue\">$d$</span> quatres nombres (avec $\\textcolor{#e53935}{b}\\ne0$ et $\\textcolor{#039be5}{d}\\ne0$) :</p><p class=\"formule\">$\\frac{\\textcolor{#e53935}{a}}{\\textcolor{#e53935}{b}}\\times\\frac{\\textcolor{#039be5}{c}}{\\textcolor{#039be5}{d}}=\\frac{\\textcolor{#e53935}{a}\\times\\textcolor{#039be5}{c}}{\\textcolor{#e53935}{b}\\times\\textcolor{#039be5}{d}}$</p>",
+			"<b>Diviser</b> par un nombre non nul revient à <b>multiplier par son inverse</b>.<br>Soient <span class=\"CRed\">$a$</span> et <span class=\"CBlue\">$b$</span> avec $\\textcolor{#039be5}{b}\\ne0$, alors $\\textcolor{#e53935}{a}\\div\\textcolor{#039be5}{b}=\\textcolor{#e53935}{a}\\times\\frac{1}{\\textcolor{#039be5}{b}}$"
 		]
 	},"fraction décimale":{
 		"tags": ["fraction", "fractionnaire"],
@@ -395,8 +465,15 @@
 		"tags": [],
 		"definitions": [
 			"Dans une fonction qui à $x$ associe $f(x)$ on dit que :<ul><li>$f(x)$ est l'<span class=\"CRed\">image</span> de $x$ par la fonction $f$.</li><li>$x$ est un <span class=\"CRed\">antécédent</span> de $f(x)$ par la fonction $f$</li></ul>"
+		]
+	},"inverse": {
+		"tags": [],
+		"definitions": [
+			"Dire que deux nombres sont l'<span class=\"CRed\">inverse</span> l'un de l'autre signifie que leur produit est égal à 1."
 		],
 		"proprietes": [
+			"Soit <span class=\"CRed\">$a$</span> un nombre non nul, l'inverse de <span class=\"CRed\">$a$</span> est $\\frac{1}{\\textcolor{#e53935}{a}}$.",
+			"Soient <span class=\"CRed\">$a$</span> et <span class=\"CBlue\">$b$</span> deux nombres non nuls, l'inverse de $\\frac{\\textcolor{#e53935}{a}}{\\textcolor{#039be5}{b}}$ est $\\frac{\\textcolor{#039be5}{b}}{\\textcolor{#e53935}{a}}$."
 		]
 	},"latitude": {
 		"tags": [],
@@ -456,12 +533,17 @@
 	},"notation scientifique": {
 		"tags": [],
 		"definitions": [
-			"<p>La <span class=\"CRed\">notation scientifique</span> d'un nombre décimal est la seule écriture de ce nombre de la forme $\\textcolor{#e53935}{a}\\times10^{\\textcolor{#039be5}{n}}$ tel :</p><ul><li>$\\textcolor{#e53935}{a}$ un nombre décimal tel que $1\\le |\\textcolor{#e53935}{a}| &lt; 10$ ou $|\\textcolor{#e53935}{a}|$ est la valeur absolue de $\\textcolor{#e53935}{a}$</li><li>$\\textcolor{#039be5}{n}$ est un entier relatif (positif ou négatif).</li></ul>"
+			"La <span class=\"CRed\">notation scientifique</span> d'un nombre décimal est la seule écriture de ce nombre de la forme $\\textcolor{#e53935}{a}\\times10^{\\textcolor{#039be5}{n}}$ tel que :<ul><li>$\\textcolor{#e53935}{a}$ un nombre décimal tel que $1\\le |\\textcolor{#e53935}{a}| &lt; 10$ ou $|\\textcolor{#e53935}{a}|$ est la valeur absolue de $\\textcolor{#e53935}{a}$</li><li>$\\textcolor{#039be5}{n}$ est un entier relatif (positif ou négatif).</li></ul>"
 		]
 	},"numérateur": {
 		"tags": [],
 		"definitions": [
 			"Dans une <b>écriture fractionnaire</b> le nombre du haut se nomme le <span class=\"CRed\">numérateur</span>."
+		]
+	},"opposé": {
+		"tags": [],
+		"definitions": [
+			"L'<span class=\"CRed\">opposé</span> d'un nombre relatif est le nombre de signe contraire et de même <b>valeur absolue</b>."
 		]
 	},"ordonnée": {
 		"tags": [],
@@ -542,7 +624,7 @@
 	},"prisme": {
 		"tags": [],
 		"definitions": [
-			""
+			"Un <span class=\"CRed\">prisme</span> est composé de deux bases polygonales, parallèles entre elles. Les faces latérales sont des rectangles."
 		]
 	},"probabilité": {
 		"tags": [],
@@ -552,8 +634,8 @@
 		"proprietes": [
 			"La probabilité d'une issue est un nombre compris entre 0 et 1.",
 			"La somme des probabilités de toutes les issues d'une expérience aléatoire est égale à 1.",
-			"La probabilité d'un événement A est la somme des probabilités des issues qui le réalisent.<br>On note cette probabilité P(A).",
-			"Si A et B sont <b>deux événements incompatibles</b>, la probabilité que <b>l'un <u>ou</u> l'autre</b> se réalise est <b>la somme de leurs probabilités</b> : $P\\left(A\\ ou\\ B\\right)=P\\left(A\\right)+P(B)$."
+			"La probabilité d'un événement A est la somme des probabilités des issues qui le réalisent.<br>On note cette probabilité $P(A)$.",
+			"Si A et B sont <b>deux événements incompatibles</b>, la probabilité que <b>l'un <u>ou</u> l'autre</b> se réalise est <b>la somme de leurs probabilités</b> : $P\\left(A\\ \\text{ou}\\ B\\right)=P\\left(A\\right)+P(B)$."
 		]
 	},"produit": {
 		"tags": [],
@@ -576,15 +658,27 @@
 		"proprietes": [
 			"Pour calculer une quatrième proportionnelle, on peut utiliser :<br><ul><li>L'addition de quantité (ou de colonne)</li><li>La multiplication de quantité  par un nombre non nul</li></ul>",
 			"Pour calculer une quatrième proportionnelle, on peut effectuer un passage par l'unité.",
-			"Pour calculer une quatrième proportionnelle, on peut calculer le coefficient de proportionnalité."
+			"Pour calculer une quatrième proportionnelle, on peut calculer le coefficient de proportionnalité.",
+			"Dans un tableau de proportionnalité il y a égalité des produits en croix.",
+			"<b>Si</b> dans un tableau il y a égalité des produits en croix, <b>alors</b> c'est un tableau de proportionnalité.",
+			"Une situation de proportionnalité est représentée graphiquement dans un repère par une droite passant par l'origine du repère.",
+			"Si une situation est représentée graphiquement par une droite passant par l'origine du repère, alors c'est une situation de proportionnalité."
+		]
+	},"pyramide": {
+		"tags": [],
+		"definitions": [
+			"Une <span class=\"CRed\">pyramide</span> est un solide possédant une base polygonale et des faces latérales triangulaires qui se rejoignent en un même sommet."
+		],
+		"proprietes": [
+			"Une pyramide est <span class=\"CRed\">régulière</span> si sa base est un polygone régulier et l'ensemble de toutes ces faces latérales sont des triangles isocèles identiques."
 		]
 	},"puissance": {
 		"tags": [],
 		"definitions": [
 			"<span class=\"CRed\">$a$</span> puissance <span class=\"CBlue\">$n$</span> noté $\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}$ désigne le produit de <span class=\"CBlue\">$n$</span> facteurs tous égaux à <span class=\"CRed\">$a$</span> : <br><div class=\"center\"><table style=\"margin: auto;\"><tr><td>$\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}=$</td><td>$\\textcolor{#e53935}{a}\\times\\textcolor{#e53935}{a}\\times ... \\times\\textcolor{#e53935}{a}\\times \\textcolor{#e53935}{a}$</td></tr><tr style=\"line-height: 4px;\"><td></td><td><image src=\"Images/Accolade1.svg\"></image></td></tr><tr><td></td><td><span class=\"CBlue\">$n$</span> facteurs</td></tr></table></div>",
-			"<span class=\"CRed\">$a$</span> puissance <span class=\"CBlue\">$-n$</span> noté $\\textcolor{#e53935}{a}^\\textcolor{#039be5}{-n}$ désigne le produit de <span class=\"CBlue\">$n$</span> facteurs tous égaux à $\\frac{1}{\\textcolor{#e53935}{a}}$ : <br> <div class=\"center\"> <table style=\"margin: auto;\"> <tr> <td>$\\textcolor{#e53935}{a}^\\textcolor{#039be5}{-n}=$</td> <td>$\\frac{1}{\\textcolor{#e53935}{a}}\\times\\frac{1}{\\textcolor{#e53935}{a}}\\times ... \\times \\frac{1}{\\textcolor{#e53935}{a}}\\times\\frac{1}{\\textcolor{#e53935}{a}}$</td> <td>$=\\frac{1}{\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}}$</td> </tr> <tr style=\"line-height: 4px;\"> <td></td> <td> <image src=\"Images/Accolade1.svg\"></image> </td> <td></td> </tr> <tr> <td></td> <td><span class=\"CBlue\">$n$</span> facteurs</td> <td></td> </tr> </table> </div>",
+			"<span class=\"CRed\">$a$</span> puissance <span class=\"CBlue\">$-n$</span> noté $\\textcolor{#e53935}{a}^\\textcolor{#039be5}{-n}$ désigne le produit de <span class=\"CBlue\">$n$</span> facteurs tous égaux à $\\frac{1}{\\textcolor{#e53935}{a}}$ : <br> <div class=\"center\"> <table style=\"margin: auto;\"> <tr> <td>$\\textcolor{#e53935}{a}^\\textcolor{#039be5}{-n}=$</td><td>$(\\frac{1}{\\textcolor{#e53935}{a}})^\\textcolor{#039be5}{n}=$</td><td>$\\frac{1}{\\textcolor{#e53935}{a}}\\times\\frac{1}{\\textcolor{#e53935}{a}}\\times ... \\times \\frac{1}{\\textcolor{#e53935}{a}}\\times\\frac{1}{\\textcolor{#e53935}{a}}$</td> <td>$=\\frac{1}{\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}}$</td> </tr> <tr style=\"line-height: 4px;\"><td></td><td></td><td><image src=\"Images/Accolade1.svg\"></image></td><td></td></tr><tr><td></td><td></td><td><span class=\"CBlue\">$n$</span> facteurs</td><td></td></tr></table></div>",
 			"<div class=\"center\"> <table style=\"margin: auto;\"> <tr> <td>$10^\\textcolor{#039be5}{n}=$</td> <td>$10\\times10\\times ... \\times10\\times10$</td> <td>$=1$</td> <td>$00 ... 00$</td> </tr> <tr style=\"line-height: 9px;\"> <td></td> <td> <image src=\"Images/Accolade1.svg\"></image> </td> <td></td> <td> <image src=\"Images/Accolade2.svg\"></image> </td> </tr> <tr> <td></td> <td><span class=\"CBlue\">$n$</span> facteurs</td> <td></td> <td><span class=\"CBlue\">$n$</span> zéros</td> </tr> </table> </div>",
-			"<div class=\"center\"><table style=\"margin: auto;\"><tr><td>$10^\\textcolor{#039be5}{-n}=$</td><td>$\\frac{1}{10}\\times\\frac{1}{10}\\times ... \\times\\frac{1}{10}\\times\\frac{1}{10}$</td><td>$=$</td><td>$0,0 ... 00$</td><td>$1$</td></tr><tr style=\"line-height: 9px;\"><td></td><td> <image src=\"Images/Accolade1.svg\"></image> </td><td></td><td> <image src=\"Images/Accolade2.svg\"></image> </td><td></td></tr><tr><td></td><td><span class=\"CBlue\">$n$</span> facteurs</td><td></td><td><span class=\"CBlue\">$n$</span> zéros</td><td></td></tr></table></div>"
+			"<div class=\"center\"><table style=\"margin: auto;\"><tr><td>$10^\\textcolor{#039be5}{-n}=$</td><td>$(\\frac{1}{10})^\\textcolor{#039be5}{n}=$</td><td>$\\frac{1}{10}\\times\\frac{1}{10}\\times ... \\times\\frac{1}{10}\\times\\frac{1}{10}$</td><td>$=$</td><td>$0,0 ... 00$</td><td>$1$</td></tr><tr style=\"line-height: 9px;\"><td></td><td></td><td> <image src=\"Images/Accolade1.svg\"></image> </td><td></td><td> <image src=\"Images/Accolade2.svg\"></image> </td><td></td><td></td><td></td></tr><tr><td></td><td></td><td><span class=\"CBlue\">$n$</span> facteurs</td><td></td><td><span class=\"CBlue\">$n$</span> zéros</td><td></td></tr></table></div>"
 		],
 		"proprietes": [
 			"$\\textcolor{#e53935}{a}^1 = \\textcolor{#e53935}{a}$",
@@ -606,7 +700,13 @@
 			"Le résultat d'une division est appelé <span class=\"CRed\">quotient</span>."
 		],
 		"proprietes": [
-			"Dans une égalité de quotient, on a égalité des produits en croix :<br><b>Si</b> <span class=\"frac\">$\\frac{a}{b} = \\frac{c}{d}$</span>, <b>alors</b> $a\\times d = b \\times c$"
+			"Dans une égalité de quotient, on a égalité des produits en croix :<br><b>Si</b> <span class=\"frac\">$\\frac{a}{b} = \\frac{c}{d}$</span>, <b>alors</b> $a\\times d = b \\times c$",
+			"Soient $\\textcolor{#e53935}{a}$, $\\textcolor{#039be5}{b}$, $\\textcolor{#43a047}{c}$ et $\\textcolor{#EEBB00}{d}$ des nombres relatifs ($\\textcolor{#039be5}{b}\\ne0, \\textcolor{#EEBB00}{d}\\ne0$).<br><b>Si</b> <span class=\"frac\">$\\frac{\\textcolor{#e53935}{a}}{\\textcolor{#039be5}{b}} = \\frac{\\textcolor{#43a047}{c}}{\\textcolor{#EEBB00}{d}}$</span>, <b>alors</b> $\\textcolor{#e53935}{a}\\times \\textcolor{#EEBB00}{d}=\\textcolor{#039be5}{b}\\times \\textcolor{#43a047}{c}$ <br>et<br> <b>Si</b> $\\textcolor{#e53935}{a}\\times \\textcolor{#EEBB00}{d}=\\textcolor{#039be5}{b}\\times \\textcolor{#43a047}{c}$, <b>alors</b> <span class=\"frac\">$\\frac{\\textcolor{#e53935}{a}}{\\textcolor{#039be5}{b}} = \\frac{\\textcolor{#43a047}{c}}{\\textcolor{#EEBB00}{d}}$</span>"
+		]
+	},"racine carrée": {
+		"tags": [],
+		"definitions": [
+			"Soit $a$ un nombre positif. On appelle « <span class=\"CRed\">racine carrée de $a$</span> » le nombre positif dont le carré est égal à <span class=\"CRed\">$a$</span>. On le note $\\textcolor{red}{\\sqrt{a}}$."
 		]
 	},"ratio": {
 		"tags": [],
@@ -621,10 +721,28 @@
 		"definitions": [
 			"Un <span class=\"CRed\">rectangle</span> est un quadrilatère qui a quatre angle droit."
 		]
+	},"réduire": {
+		"tags": [],
+		"definitions": [
+			"<span class=\"CRed\"><b>Réduire</b></span> une expression littérale, c'est l'écrire avec <b>le moins de termes</b> possibles."
+		]
 	},"règle de trois": {
 		"tags": [],
 		"definitions": [
 			"Pour calculer une quatrième proportionnelle, on peut utiliser la <span class=\"CRed\">règle de trois</span>.<br><i>« On multiplie la diagonale et on divise par la troisième valeur. »</i>"
+		]
+	},"relatif": {
+		"tags": [],
+		"definitions": [
+			""
+		],
+		"proprietes": [
+			"La somme de deux nombres relatifs de <span style=\"text-decoration: underline\">même signe</span> a le <span style=\"text-decoration: underline\">même signe</span> que ces deux nombres. On ajoute alors les <span class=\"CRed\">valeurs absolues</span>.",
+			"La somme de deux nombres relatifs de <span style=\"text-decoration: underline\">signes contraires</span> a le <span style=\"text-decoration: underline\">signe du nombre relatif qui a la plus grande valeur absolue</span>. On effectue la différence des <span class=\"CRed\">valeurs absolues</span>.",
+			"Pour soustraire un nombre relatif, on ajoute son <span  class=\"CRed\">opposé</span>.",
+			"Pour calculer le produit de deux nombres relatifs, on multiplie les valeurs absolues et :<br><ul><li>Si les deux nombres sont de <b>même signe</b>, le produit est <b>positif</b>.</li><li>Si les deux nombres sont de <b>signes contraires</b>, le produit est <b>négatif</b>.</li></ul>",
+			"Lorsqu'on multiplie plusieurs nombres relatifs, on multiplie les valeurs absolues des facteurs.<br><ul><li>Le produit est <b>positif</b> si le nombre de facteurs négatifs est <b>pair</b>.</li><li>Le produit est <b>négatif</b> si le nombre de facteurs négatifs est <b>impair</b>.</li></ul>",
+			"Le quotient de deux nombres relatifs a le <b>même signe que leur produit</b>.<br>La valeur absolue du quotient est égale au quotient des valeurs absolues."
 		]
 	},"repère": {
 		"tags": [],
@@ -651,7 +769,11 @@
 		"definitions": [
 			"Transformer un point (ou une figure) par <span class=\"CRed\">rotation</span>, c'est faire tourner ce point (ou cette figure) par rapport à un <b><u>centre de rotation</u></b>,d'un certain <b><u>angle</u></b> et dans une <b><u>direction</u></b> donnée."
 		],
-		"proprietes": []
+		"proprietes": [
+			"La rotation conserve les longueurs et les angles.",
+			"L'image du centre de rotation est lui-même quels que soient l'angle et le sens de rotation.",
+			"Une rotation de 180° correspond à une symétrie centrale."
+		]
 	},"sécantes": {
 		"tags": [],
 		"definitions": [
@@ -677,10 +799,23 @@
 		"definitions": [
 			"Un <span class=\"CRed\">segment</span> est composé de deux points relié entre eux en ligne droite."
 		]
+	},"simplifier": {
+		"tags": [],
+		"definitions": [
+			"<span class=\"CRed\">Simplifier une fraction</span>, c'est trouver une fraction qui lui est égale, ayant un <b>dénominateur plus petit</b>."
+		]
+	},"sinus": {
+		"tags": [],
+		"definitions": [
+			"Dans un triangle <b>rectangle</b>, pour un angle « $\\theta$ » aigu donné, on a :<br><span style=\"font-size: x-large;\">$\\sin(\\theta)=\\frac{côté\\ \\textcolor{#039be5}{opposé}\\ à\\ l'angle}{\\textcolor{#43a047}{hypoténuse}}$</span>"
+		]
 	},"somme": {
 		"tags": [],
 		"definitions": [
 			"Le résultat d'une addition est appelé <span class=\"CRed\">somme</span>."
+		],
+		"proprietes": [
+			"Dans une somme ou une différence, on peut supprimer un couple de parenthèses et le signe qui le précède à condition :<br><ul><li>de ne <b>rien changer</b> lorsque le signe qui précède les parenthèses est <b>« $+$ »</b>.</li><li>de <b>prendre l'opposé de tous les nombres</b> situés à l'intérieur de ces parenthèses lorsque le signe qui les précède est <b>« $-$ »</b>.</li></ul>"
 		]
 	},"sphère": {
 		"tags": [],
@@ -713,6 +848,11 @@
 		"definitions": [
 			"Les <span class=\"CRed\">tableaux</span> permettent de rassembler un grand nombre de données et de les présenter de façon organisé. Il en existe deux types :<ul><li>A simple entré</li><li>A double entrés</li></ul>"
 		]
+	},"tangente": {
+		"tags": [],
+		"definitions": [
+			"Dans un triangle <b>rectangle</b>, pour un angle « $\\theta$ » aigu donné, on a :<br><span style=\"font-size: x-large;\">$\\tan(\\theta)=\\frac{côté\\ \\textcolor{#039be5}{opposé}\\ à\\ l'angle}{côté\\ \\textcolor{#e53935}{adjacent}\\ à\\ l'angle}$</span>"
+		]
 	},"terme": {
 		"tags": [],
 		"definitions": [
@@ -721,7 +861,9 @@
 	},"théorème de pythagore": {
 		"tags": [],
 		"definitions": [
-			""
+			"<b><u>Théorème de Pythagore :</u></b><br><span style=\"font-weight: bold;\">Si</span> un triangle est rectangle, <span style=\"font-weight: bold;\">alors</span> le carré de la longueur de l'<span style=\"text-decoration: underline;\">hypoténuse</span> est égal à la somme des carrés des longueurs des <span style=\"text-decoration: underline;\">deux autres côtés</span>.",
+			"<b><u>Réciproque du théorème de Pythagore :</u></b><br><b>Si</b> le carré de la longueur du plus grand côté d'un triangle <u>est égal</u> à la somme des carrés des longueurs des deux autres côtés, <b>alors</b> ce triangle <u>est rectangle</u>.",
+			"<b><u>Contraposée du théorème de Pythagore :</u></b><br><b>Si</b> le carré de la longueur du plus grand côté d'un triangle <u>n'est pas égal</u> à la somme des carrés des longueurs des deux autres côtés, <b>alors</b> ce triangle <u>n'est pas rectangle</u>."
 		]
 	},"théorème de thalès": {
 		"tags": [],
@@ -738,6 +880,16 @@
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">triangle</span> est un <b>polygone</b> à trois côtés."
+		]
+	},"triangle égaux": {
+		"tags": [],
+		"definitions": [
+			"Des <span class=\"CRed\">triangles égaux</span> sont des <u>triangles superposables</u>, c'est-à-dire qui ont des côtés deux à deux de même longueur et des angles deux à deux de même mesure."
+		],
+		"proprietes": [
+			"<b>Si</b> deux triangles ont un côté de même longueur et deux angles adjacents à ce côté deux à deux de même mesure, <b>alors</b> ces deux triangles sont égaux.",
+			"<b>Si</b> deux triangles ont un angle de même mesure compris entre des côtés deux à deux de mêmes longueurs, <b>alors</b> ces deux triangles sont égaux.",
+			"<b>Si</b> deux triangles ont leurs côtés deux à deux de même longueur, <b>alors</b> ces deux triangles sont égaux."
 		]
 	},"triangle équilatéral": {
 		"tags": [],
@@ -759,6 +911,15 @@
 		"tags": [],
 		"definitions": [
 			"Un triangle <span class=\"CRed\">rectangle</span> est un triangle qui a deux côtés perpendiculaires."
+		]
+	},"triangle semblable": {
+		"tags": [],
+		"definitions": [
+			"On dit que deux triangles sont <span class=\"CRed\">semblables</span> lorsque leurs angles sont égaux deux à deux. On dit aussi que ces deux triangles sont de <b>même forme</b>."
+		],
+		"proprietes": [
+			"<b>Si</b> deux triangles ont deux angles égaux deux à deux, <b>alors</b> ces deux triangles sont semblables.",
+			"<b>Si</b> deux triangles sont semblables, <b>alors</b> les côtés opposés aux angles égaux ont leurs longueurs proportionnelles."
 		]
 	},"trigonométrie": {
 		"tags": [],

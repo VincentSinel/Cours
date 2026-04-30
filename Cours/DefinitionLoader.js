@@ -56,7 +56,10 @@ function SetDefinitions()
 				let ids = def.getAttribute("objids").split(" ")
 				if (ids.length == 1)
 				{
-					def.innerHTML = "<b><u>Propriété :</u></b><br>" + Definitions[name].proprietes[parseInt(ids[0])];
+					if (def.getAttribute("notitle") != null)
+						def.innerHTML = Definitions[name].proprietes[parseInt(ids[0])];
+					else
+						def.innerHTML = "<b><u>Propriété :</u></b><br>" + Definitions[name].proprietes[parseInt(ids[0])];
 				}
 				else
 				{
