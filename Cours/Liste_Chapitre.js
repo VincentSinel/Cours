@@ -684,6 +684,7 @@ var quatrieme_saintexupery = [
 				pdf:  		 "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (Complet).pdf",
 				docx_trou: "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (A trou).docx",
 				pdf_trou:  "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Coordonnées sphériques (A trou).pdf",
+				img:			 "/Cours/4eme/Base/Chapitre_10/Documents/Chapitre 10 - Images.pdf",
 			},
 			ready : true,
 			page : "Base/Chapitre_10/Cours.html"
@@ -1170,6 +1171,7 @@ var cinquieme_saintexupery = [
 				pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (Complet).pdf",
 				docx_trou: "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (A trou).docx",
 				pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (A trou).pdf",
+				img:			 "/Cours/4eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Images.pdf",
 			},
 			ready : true,
 			page : "SaintExupery/Chapitre_13/Cours.html"
@@ -2695,6 +2697,7 @@ var sixieme_saintexupery = [
 			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_4_4/Documents/Chapitre 4 - Partie 4 - Représentations à l'échelle (A trou).pdf",
 			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 4 - Activité d'introduction.docx",
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 4 - Activité d'introduction.pdf",
+			img:			 "/Cours/4eme/SaintExupery/Chapitre_4_4/Documents/Chapitre 4 - Partie 4 - Images.pdf",
 		},
 		ready : true,
 		page : "SaintExupery/Chapitre_4_4/Cours.html",
