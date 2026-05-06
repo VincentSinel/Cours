@@ -303,7 +303,7 @@
 	},"double distributivité": {
 		"tags": [],
 		"definitions": [
-			"<p> La distributivité s'applique aussi lorsque l'on multiplie deux expressions entre parenthèses:<br> $(\\textcolor{#e53935}{k}+\\textcolor{#e53935}{l})\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n}) = \\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})+ \\textcolor{#e53935}{l}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$ $ = \\textcolor{#e53935}{k}\\times\\textcolor{#039be5}{m} + \\textcolor{#e53935}{k}\\times\\textcolor{#039be5}{n} +  \\textcolor{#e53935}{l}\\times\\textcolor{#039be5}{m} + \\textcolor{#e53935}{l}\\times\\textcolor{#039be5}{n}$<br> </p> <div class=\"behindparent\"> <p style=\"display: inline; margin-left: 3px;\"> $(\\ \\textcolor{#e53935}{k}\\ +\\ \\textcolor{#e53935}{l}\\ )\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$ </p> <img class=\"behindobj\" style=\"top: -15px; left: 4px;\" height=\"60px\" src=\"/Images/Cours/Developpement2.svg\"> </div> <div style=\"height: 20px;\"></div>",
+			"<p> La distributivité s'applique aussi lorsque l'on multiplie deux expressions entre parenthèses:<br> $(\\textcolor{#e53935}{k}+\\textcolor{#e53935}{l})\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n}) = \\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})+ \\textcolor{#e53935}{l}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$ $ = \\textcolor{#e53935}{k}\\times\\textcolor{#039be5}{m} + \\textcolor{#e53935}{k}\\times\\textcolor{#039be5}{n} +  \\textcolor{#e53935}{l}\\times\\textcolor{#039be5}{m} + \\textcolor{#e53935}{l}\\times\\textcolor{#039be5}{n}$<br> </p> <div style=\"display: inline;position: relative;\"> <p style=\"display: inline; margin-left: 3px;\"> $(\\ \\textcolor{#e53935}{k}\\ +\\ \\textcolor{#e53935}{l}\\ )\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$ </p> <img style=\"z-index: -1; left: 0; position: absolute; top: -15px; left: 4px;\" height=\"60px\" src=\"/Images/Cours/Developpement2.svg\"> </div> <div style=\"height: 20px;\"></div>",
 			"$(\\textcolor{#e53935}{a}+\\textcolor{#039be5}{b})^2=\\textcolor{#e53935}{a}^2 + 2\\textcolor{#e53935}{a}\\textcolor{#039be5}{b} +\\textcolor{#039be5}{b}^2$",
 			"$(\\textcolor{#e53935}{a}-\\textcolor{#039be5}{b})^2=\\textcolor{#e53935}{a}^2 - 2\\textcolor{#e53935}{a}\\textcolor{#039be5}{b} +\\textcolor{#039be5}{b}^2$",
 			"$(\\textcolor{#e53935}{a}-\\textcolor{#039be5}{b})(\\textcolor{#e53935}{a}+\\textcolor{#039be5}{b})=\\textcolor{#e53935}{a}^2 -\\textcolor{#039be5}{b}^2$"
@@ -586,7 +586,7 @@
 	},"ordonnée": {
 		"tags": [],
 		"definitions": [
-			""
+			"L'<span class=\"CRed\">ordonnée</span> d'un point, dans un repère gradué, est la position verticale de celui-ci."
 		]
 	},"parallèle": {
 		"tags": [],
