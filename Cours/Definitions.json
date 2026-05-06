@@ -2,22 +2,38 @@
 	"00": {
 		"tags": [],
 		"definitions": [
-			""
+			"Une définition"
 		],
 		"proprietes": [
-			""
+			"Une propriété"
+		],
+		"exemples": [
+			"Un exemple"
+		],
+		"remarques": [
+			"Une remarque"
 		]
 	},
 
 	  "abscisse": {
 		"tags": [],
 		"definitions": [
-			""
+			"Sur un axe gradué, chaque point est repéré par un nombre <i>unique</i> appelé l'<span class=\"CRed\">abscisse</span> de ce point."
 		]
 	},"aire": {
 		"tags": [],
 		"definitions": [
 			"L'<span class=\"CRed\">aire</span> d'une figure est la mesure de sa surface."
+		]
+	},"algorithme": {
+		"tags": [],
+		"definitions": [
+			"Un <span class=\"CRed\">algorithme</span> est une liste ordonnée d'instructions très simples permettant de résoudre un problème.",
+			"Un algorithme se décompose en trois grandes parties :<ul><li>Un première partie d'<span class=\"CRed\">initialisation</span> qui permet de définir les informations dont on a besoin au départ (aussi appelé les <span class=\"CRed\">conditions initiales</span>)</li><li>Une seconde partie de traitement des données qui est composé d'une succession d'instruction à appliquer. C'est le coeur de l'algorithme.</li><li>Une troisième partie appelée sortie. C'est la réponse (visuel, textuel, sonore, etc...) que nous renvoie l'algorithme, le résultat recherché.</li></ul>",
+			"Pour démarrer un programme, il faut un point d'entrée, d'un déclenchement. Cela peut-être l'appui sur le drapeau dans scratch, l'appui sur une touche, etc...",
+			"Les blocs boucles permettent de répéter un groupe d'action. Il en existe plusieurs sortes :<ul><li>A répétitions fixe (on connaît le nombre de répétitions)</li><li>A répétitions conditionnelles (on ne sait pas à l'avance combien de fois va s'effectuer la boucle)</li><li>A répétitions infinies (la boucle ne s'arrête pas)</li></ul>",
+			"Les conditions permettent d'effectuer certaines actions avec des conditions définies.",
+			"Un <span class=\"CRed\">variable</span> est une « case mémoire » dans laquelle on stocke une information pour pouvoir la réutiliser ensuite. On peut la modifier, extraire et utiliser sa valeur."
 		]
 	},"angle": {
 		"tags": [],
@@ -51,6 +67,12 @@
 		"definitions": [
 			"On dit qu'une droite est un <span class=\"CRed\">axe de symétrie</span> d'une figure lorsque la figure et son symétrique par rapport à cette droite sont confondus. "
 		]
+	},"axe gradué": {
+		"tags": [],
+		"definitions": [
+			"Sur une demi-droite graduée on trouve :<ul><li>Une <span class=\"CRed\">unité de longueur</span></li><li>Une <span class=\"CRed\">origine</span></li></ul>On peut repérer la position de point à l'aide d'un nombre appelé <span class=\"CRed\">abscisse</span>.",
+			"Une <span class=\"CRed\">droite graduée</span> de façon régulière est une droite qui possède un <b>sens</b>, une <b>origine</b> et une <b>unité de longueur</b>."
+		]
 	},"bissectrice": {
 		"tags": [],
 		"definitions": [
@@ -75,6 +97,11 @@
 		"definitions": [
 			"On appelle <span class=\"CRed\">carré parfait</span>, le carré d'un entier $a^2$."
 		]
+	},"centre de symétrie": {
+		"tags": [],
+		"definitions": [
+			"On dit qu'un point est un <span class=\"CRed\">centre de symétrie</span> d'une figure lorsque la figure et son symétrique par rapport à ce point sont confondus. "
+		]
 	},"cercle": {
 		"tags": [],
 		"definitions": [
@@ -98,6 +125,11 @@
 		"tags": [],
 		"definitions": [
 			"<span class=\"CRed\">Comparer</span> deux nombres c'est dire si l'un <u>plus petit</u> ; <u>plus grand</u> ou <u>égal</u> à l'autre."
+		],
+		"proprietes": [
+			"Un nombre <b>négatif</b> est toujours plus petit qu'un nombre <b>positif</b>.",
+			"De deux nombres <b>positifs</b>, le plus grand est celui qui a la plus <i>grande</i> <b>distance à zéro</b>.",
+			"De deux nombres <b>négatifs</b>, le plus grand est celui qui à la plus <i>petite</i> <b>distance à zéro</b>."
 		]
 	},"commutative": {
 		"tags": [],
@@ -114,6 +146,11 @@
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">cône de révolution</span> est composé d'un disque formants la base. La surface latérale lorsqu'elle est dépliée est un arc de disque dont l'arc de cercle à la même longueur que le périmètre du disque."
+		]
+	},"coordonnées": {
+		"tags": [],
+		"definitions": [
+			"Dans un repère, la position d'un point est donnée par deux nombres relatifs :<ul><li>Le premier, appelé <span class=\"CRed\">abscisse</span> se lit sur l'axe horizontal.</li><li>Le second, appelé <span class=\"CRed\">ordonnée</span> se lit sur l'axe vertical.</li></ul>Ces deux nombres représentent les <span class=\"CRed\">coordonnées</span> de ce point."
 		]
 	},"corde": {
 		"tags": [],
@@ -176,30 +213,25 @@
 		"definitions": [
 			"Une <span class=\"CRed\">demi-droite</span> commence d'un point et se prolonge dans une seul direction."
 		]
-	},"demi-droite graduée": {
-		"tags": [],
-		"definitions": [
-			"Sur une demi-droite graduée on trouve :<ul><li>Une <span class=\"CRed\">unité de longueur</span></li><li>Une <span class=\"CRed\">origine</span></li></ul>On peut repérer la position de point à l'aide d'un nombre appelé <span class=\"CRed\">abscisse</span>."
-		]
 	},"développer": {
 		"tags": [],
 		"definitions": [
-			"Lorsque l'on passe d'un produit à une somme, on <span class=\"CRed\">développe</span>.<br><table class=\"center\"><tr><td>$\\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$</td><td style=\"width: 2cm;\">=</td><td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{m}+\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{n}$</td></tr><tr style=\"line-height: 9px;\"><td colspan=\"3\"><img height=\"20px\" src=\"Images/Fleche.svg\"></td></tr><tr><td colspan=\"3\" class=\"CRed\">Développement</td></tr></table>"
+			"Lorsque l'on passe d'un produit à une somme, on <span class=\"CRed\">développe</span>.<br><table class=\"center\"><tr><td>$\\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$</td><td style=\"width: 2cm;\">=</td><td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{m}+\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{n}$</td></tr><tr style=\"line-height: 9px;\"><td colspan=\"3\"><img height=\"20px\" src=\"/Images/Cours/Fleche.svg\"></td></tr><tr><td colspan=\"3\" class=\"CRed\">Développement</td></tr></table>"
 		]
 	},"diagramme cartésien": {
 		"tags": [],
 		"definitions": [
-			"Dans un <span class=\"CRed\">diagramme cartésien</span>, on représente les valeur par des points relier entre-eux."
+			"Un <span class=\"CRed\">diagramme cartésien</span> est un repère dans lequel on représente les valeurs par des points reliés entre eux."
 		]
 	},"diagramme circulaire": {
 		"tags": [],
 		"definitions": [
-			"Dans un <span class=\"CRed\">diagramme circulaire</span>, la taille des sections est proportionnelle à la quantité représentée."
+			"Un <span class=\"CRed\">diagramme en circulaires</span> est composé d'un disque découpé en secteurs dont l'angle est proportionnel à l'effectif qu'il représente."
 		]
 	},"diagramme en bâtons": {
 		"tags": [],
 		"definitions": [
-			"Dans un <span class=\"CRed\">diagramme en bâtons</span>, la hauteur des batôns est proportionnelle à la quantité représentée."
+			"Un <span class=\"CRed\">diagramme en bâtons</span> (ou en barres) est composé de bâtons de même largeur et de hauteur proportionnelle aux effectifs qu'ils représentent."
 		]
 	},"diamètre": {
 		"tags": [],
@@ -232,8 +264,8 @@
 	},"distributivité": {
 		"tags": [],
 		"definitions": [
-			"La distributivité $k\\times(m+n) = k\\times m + k\\times n$ permet d'écrire un produit  entre un nombre et une somme comme une somme de deux produits.  <table class=\"center\"> <tr> <td colspan=\"3\" class=\"CRed\">Factorisation</td> </tr> <tr style=\"line-height: 9px;\"> <td colspan=\"3\"> <img style=\"transform: scaleX(-1)\" height=\"20px\" src=\"Images/Fleche.svg\"> </td> </tr> <tr> <td>$\\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$</td> <td style=\"width: 2cm;\">=</td> <td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{m}+ \\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{n}$</td> </tr> <tr style=\"line-height: 9px;\"> <td colspan=\"3\"> <img height=\"20px\" src=\"Images/Fleche.svg\"> </td> </tr> <tr> <td colspan=\"3\" class=\"CRed\">Développement</td> </tr> </table> <span class=\"CRed\">Développer</span> une expression c'est transformer un produit en somme.  Dans l'autre sens on dit que l'on <span class=\"CRed\">factorise</span> une expression.  Le facteur k est alors appelé <span class=\"CRed\">facteur commun</span>. ",
-			"La distributivité $k\\times(m+n)=k\\times m+k\\times n$ permet d'écrire un produit entre un nombre et une somme comme une somme de deux produits.<table class=\"center\"><tr><td style=\"text-align: right;\"><spawn class=\"CRed\">$k$</spawn></td><td>$\\times($</td><td><spawn class=\"CBlue\">$m$</spawn> $+$ <spawn class=\"CBlue\">$n$</spawn></td><td>$)$</td><td style=\"width: 2cm;\">=</td><td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{m}$</td><td>$+$</td><td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{n}$</td></tr><tr style=\"line-height: 9px;\"><td colspan=\"2\"></td><td><img height=\"9px\" width=\"50px\" src=\"Images/Accolade_200.svg\"></td><td colspan=\"2\"></td><td><img height=\"9px\" width=\"50px\" src=\"Images/Accolade_200.svg\"></td><td></td><td><img height=\"9px\" width=\"50px\" src=\"Images/Accolade_200.svg\"></td></tr><tr><td style=\"text-align: right;\"><spawn class=\"CRed\">nombre</spawn></td><td>$\\times$</td><td><spawn class=\"CBlue\">somme</spawn></td><td colspan=\"2\"></td><td>produit</td><td>$+$</td><td>produit</td></tr><tr style=\"line-height: 9px;\"><td colspan=\"4\"><img height=\"9px\" width=\"135px\" src=\"Images/Accolade_200.svg\"></td><td></td><td colspan=\"3\"><img height=\"9px\" width=\"130px\" src=\"Images/Accolade_200.svg\"></td></tr><tr><td colspan=\"4\">produit</td><td></td><td colspan=\"3\">somme</td></tr></table>"
+			"La distributivité $k\\times(m+n) = k\\times m + k\\times n$ permet d'écrire un produit  entre un nombre et une somme comme une somme de deux produits.  <table class=\"center\"> <tr> <td colspan=\"3\" class=\"CRed\">Factorisation</td> </tr> <tr style=\"line-height: 9px;\"> <td colspan=\"3\"> <img style=\"transform: scaleX(-1)\" height=\"20px\" src=\"/Images/Cours/Fleche.svg\"> </td> </tr> <tr> <td>$\\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$</td> <td style=\"width: 2cm;\">=</td> <td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{m}+ \\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{n}$</td> </tr> <tr style=\"line-height: 9px;\"> <td colspan=\"3\"> <img height=\"20px\" src=\"/Images/Cours/Fleche.svg\"> </td> </tr> <tr> <td colspan=\"3\" class=\"CRed\">Développement</td> </tr> </table> <span class=\"CRed\">Développer</span> une expression c'est transformer un produit en somme.  Dans l'autre sens on dit que l'on <span class=\"CRed\">factorise</span> une expression.  Le facteur k est alors appelé <span class=\"CRed\">facteur commun</span>. ",
+			"La distributivité $k\\times(m+n)=k\\times m+k\\times n$ permet d'écrire un produit entre un nombre et une somme comme une somme de deux produits.<table class=\"center\"><tr><td style=\"text-align: right;\"><spawn class=\"CRed\">$k$</spawn></td><td>$\\times($</td><td><spawn class=\"CBlue\">$m$</spawn> $+$ <spawn class=\"CBlue\">$n$</spawn></td><td>$)$</td><td style=\"width: 2cm;\">=</td><td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{m}$</td><td>$+$</td><td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{n}$</td></tr><tr style=\"line-height: 9px;\"><td colspan=\"2\"></td><td><img height=\"9px\" width=\"50px\" src=\"/Images/Cours/Accolade_200.svg\"></td><td colspan=\"2\"></td><td><img height=\"9px\" width=\"50px\" src=\"/Images/Cours/Accolade_200.svg\"></td><td></td><td><img height=\"9px\" width=\"50px\" src=\"/Images/Cours/Accolade_200.svg\"></td></tr><tr><td style=\"text-align: right;\"><spawn class=\"CRed\">nombre</spawn></td><td>$\\times$</td><td><spawn class=\"CBlue\">somme</spawn></td><td colspan=\"2\"></td><td>produit</td><td>$+$</td><td>produit</td></tr><tr style=\"line-height: 9px;\"><td colspan=\"4\"><img height=\"9px\" width=\"135px\" src=\"/Images/Cours/Accolade_200.svg\"></td><td></td><td colspan=\"3\"><img height=\"9px\" width=\"130px\" src=\"/Images/Cours/Accolade_200.svg\"></td></tr><tr><td colspan=\"4\">produit</td><td></td><td colspan=\"3\">somme</td></tr></table>"
 		]
 	},"diviseur": {
 		"tags": [],
@@ -271,7 +303,7 @@
 	},"double distributivité": {
 		"tags": [],
 		"definitions": [
-			"<p> La distributivité s'applique aussi lorsque l'on multiplie deux expressions entre parenthèses:<br> $(\\textcolor{#e53935}{k}+\\textcolor{#e53935}{l})\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n}) = \\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})+ \\textcolor{#e53935}{l}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$ $ = \\textcolor{#e53935}{k}\\times\\textcolor{#039be5}{m} + \\textcolor{#e53935}{k}\\times\\textcolor{#039be5}{n} +  \\textcolor{#e53935}{l}\\times\\textcolor{#039be5}{m} + \\textcolor{#e53935}{l}\\times\\textcolor{#039be5}{n}$<br> </p> <div class=\"behindparent\"> <p style=\"display: inline; margin-left: 3px;\"> $(\\ \\textcolor{#e53935}{k}\\ +\\ \\textcolor{#e53935}{l}\\ )\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$ </p> <img class=\"behindobj\" style=\"top: -15px; left: 4px;\" height=\"60px\" src=\"Images/Developpement2.svg\"> </div> <div style=\"height: 20px;\"></div>",
+			"<p> La distributivité s'applique aussi lorsque l'on multiplie deux expressions entre parenthèses:<br> $(\\textcolor{#e53935}{k}+\\textcolor{#e53935}{l})\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n}) = \\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})+ \\textcolor{#e53935}{l}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$ $ = \\textcolor{#e53935}{k}\\times\\textcolor{#039be5}{m} + \\textcolor{#e53935}{k}\\times\\textcolor{#039be5}{n} +  \\textcolor{#e53935}{l}\\times\\textcolor{#039be5}{m} + \\textcolor{#e53935}{l}\\times\\textcolor{#039be5}{n}$<br> </p> <div class=\"behindparent\"> <p style=\"display: inline; margin-left: 3px;\"> $(\\ \\textcolor{#e53935}{k}\\ +\\ \\textcolor{#e53935}{l}\\ )\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$ </p> <img class=\"behindobj\" style=\"top: -15px; left: 4px;\" height=\"60px\" src=\"/Images/Cours/Developpement2.svg\"> </div> <div style=\"height: 20px;\"></div>",
 			"$(\\textcolor{#e53935}{a}+\\textcolor{#039be5}{b})^2=\\textcolor{#e53935}{a}^2 + 2\\textcolor{#e53935}{a}\\textcolor{#039be5}{b} +\\textcolor{#039be5}{b}^2$",
 			"$(\\textcolor{#e53935}{a}-\\textcolor{#039be5}{b})^2=\\textcolor{#e53935}{a}^2 - 2\\textcolor{#e53935}{a}\\textcolor{#039be5}{b} +\\textcolor{#039be5}{b}^2$",
 			"$(\\textcolor{#e53935}{a}-\\textcolor{#039be5}{b})(\\textcolor{#e53935}{a}+\\textcolor{#039be5}{b})=\\textcolor{#e53935}{a}^2 -\\textcolor{#039be5}{b}^2$"
@@ -364,6 +396,7 @@
 	},"expression littérale": {
 		"tags": [],
 		"definitions": [
+			"Une <span class=\"CRed\">expression littérale</span> est une expression (un calcul) qui fait intervenir une ou plusieurs lettres.",
 			"Deux expressions littérales sont égales si elles prennent toujours la même valeur quand on remplace les variables par des valeurs numériques."
 		]
 	},"facteur": {
@@ -374,7 +407,7 @@
 	},"factoriser": {
 		"tags": [],
 		"definitions": [
-			"Lorsque l'on passe d'une somme à un produit, on <span class=\"CRed\">factorise</span>.<br><table class=\"center\"><tr><td>$\\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$</td><td style=\"width: 2cm;\">=</td><td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{m}+\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{n}$</td></tr><tr style=\"line-height: 9px;\"><td colspan=\"3\"><img style=\"transform: scaleX(-1)\" height=\"20px\" src=\"Images/Fleche.svg\"></td></tr><tr><td colspan=\"3\" class=\"CRed\">Factorisation</td></tr></table>"
+			"Lorsque l'on passe d'une somme à un produit, on <span class=\"CRed\">factorise</span>.<br><table class=\"center\"><tr><td>$\\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$</td><td style=\"width: 2cm;\">=</td><td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{m}+\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{n}$</td></tr><tr style=\"line-height: 9px;\"><td colspan=\"3\"><img style=\"transform: scaleX(-1)\" height=\"20px\" src=\"/Images/Cours/Fleche.svg\"></td></tr><tr><td colspan=\"3\" class=\"CRed\">Factorisation</td></tr></table>"
 		]
 	},"fonction": {
 		"tags": [],
@@ -525,6 +558,11 @@
 			"Lorsque le reste de la division euclidienne est <b>nul</b> on dit alors que le <b>dividende</b> est un <span class=\"CRed\">multiple</span> du <b>diviseur</b>. On dit aussi que le <b>dividende</b> est <span class=\"CRed\">divisible</span> par le <b>diviseur</b>.",
 			"Un nombre entier $\\textcolor{#43a047}{a}$ est un <span class=\"CRed\">multiple</span> d'un nombre entier $\\textcolor{#039be5}{b}$ ($\\textcolor{#039be5}{b}\\ne0$) lorsque le reste de la division euclidienne de $\\textcolor{#43a047}{a}$ par $\\textcolor{#039be5}{b}$ est 0. <br>On dit aussi que $\\textcolor{#039be5}{b}$ est le <span class=\"CRed\">diviseur</span> de $\\textcolor{#43a047}{a}$ ou que $\\textcolor{#43a047}{a}$ est <span class=\"CRed\">divisible</span> par $\\textcolor{#039be5}{b}$."
 		]
+	},"négatif": {
+		"tags": [],
+		"definitions": [
+			"Les nombres <span class=\"CRed\">négatifs</span> sont les nombres <b>inférieurs ou égaux à zéro</b>. Ils s'écrivent avec le signe « - » placé devant eux."
+		]
 	},"nombre premier": {
 		"tags": [],
 		"definitions": [
@@ -543,7 +581,7 @@
 	},"opposé": {
 		"tags": [],
 		"definitions": [
-			"L'<span class=\"CRed\">opposé</span> d'un nombre relatif est le nombre de signe contraire et de même <b>valeur absolue</b>."
+			"L'<span class=\"CRed\">opposé</span> d'un nombre relatif est le nombre de <b>signe contraire</b> et de même <b>distance à zéro</b>."
 		]
 	},"ordonnée": {
 		"tags": [],
@@ -608,6 +646,11 @@
 		"definitions": [
 			"Un <span class=\"CRed\">polygone</span> est une figure géomètrique à plusieurs côtés."
 		]
+	},"positif": {
+		"tags": [],
+		"definitions": [
+			"Les nombres <span class=\"CRed\">positifs</span> sont les nombres <b>supérieurs ou égaux à zéro</b>. Ils s'écrivent seul ou avec le signe « + » placé devant eux."
+		]
 	},"pourcentage": {
 		"tags": [],
 		"definitions": [
@@ -619,7 +662,8 @@
 			"Pour calculer une suite d'additions et de soustractions sans parenthèses, on fait les opérations une par une dans l'ordre où elles sont écrites.",
 			"Pour calculer une suite multiplications et de divisions sans parenthèses, on fait les opérations une par une dans l'ordre où elles sont écrites.",
 			"La multiplication et la division sont <b><u>prioritaires</u></b> par rapport à l'addition et à la soustraction.",
-			"Dans une suite de calculs comprenant des parenthèses, on effectue d'abord les calculs entre parenthèses."
+			"Dans une suite de calculs comprenant des parenthèses, on effectue d'abord les calculs entre parenthèses.",
+			"Lorsqu'on veut calculer un quotient, on commence par calculer le numérateur et le dénominateur avant d'effectuer le calcul du quotient."
 		]
 	},"prisme": {
 		"tags": [],
@@ -675,10 +719,10 @@
 	},"puissance": {
 		"tags": [],
 		"definitions": [
-			"<span class=\"CRed\">$a$</span> puissance <span class=\"CBlue\">$n$</span> noté $\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}$ désigne le produit de <span class=\"CBlue\">$n$</span> facteurs tous égaux à <span class=\"CRed\">$a$</span> : <br><div class=\"center\"><table style=\"margin: auto;\"><tr><td>$\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}=$</td><td>$\\textcolor{#e53935}{a}\\times\\textcolor{#e53935}{a}\\times ... \\times\\textcolor{#e53935}{a}\\times \\textcolor{#e53935}{a}$</td></tr><tr style=\"line-height: 4px;\"><td></td><td><image src=\"Images/Accolade1.svg\"></image></td></tr><tr><td></td><td><span class=\"CBlue\">$n$</span> facteurs</td></tr></table></div>",
-			"<span class=\"CRed\">$a$</span> puissance <span class=\"CBlue\">$-n$</span> noté $\\textcolor{#e53935}{a}^\\textcolor{#039be5}{-n}$ désigne le produit de <span class=\"CBlue\">$n$</span> facteurs tous égaux à $\\frac{1}{\\textcolor{#e53935}{a}}$ : <br> <div class=\"center\"> <table style=\"margin: auto;\"> <tr> <td>$\\textcolor{#e53935}{a}^\\textcolor{#039be5}{-n}=$</td><td>$(\\frac{1}{\\textcolor{#e53935}{a}})^\\textcolor{#039be5}{n}=$</td><td>$\\frac{1}{\\textcolor{#e53935}{a}}\\times\\frac{1}{\\textcolor{#e53935}{a}}\\times ... \\times \\frac{1}{\\textcolor{#e53935}{a}}\\times\\frac{1}{\\textcolor{#e53935}{a}}$</td> <td>$=\\frac{1}{\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}}$</td> </tr> <tr style=\"line-height: 4px;\"><td></td><td></td><td><image src=\"Images/Accolade1.svg\"></image></td><td></td></tr><tr><td></td><td></td><td><span class=\"CBlue\">$n$</span> facteurs</td><td></td></tr></table></div>",
-			"<div class=\"center\"> <table style=\"margin: auto;\"> <tr> <td>$10^\\textcolor{#039be5}{n}=$</td> <td>$10\\times10\\times ... \\times10\\times10$</td> <td>$=1$</td> <td>$00 ... 00$</td> </tr> <tr style=\"line-height: 9px;\"> <td></td> <td> <image src=\"Images/Accolade1.svg\"></image> </td> <td></td> <td> <image src=\"Images/Accolade2.svg\"></image> </td> </tr> <tr> <td></td> <td><span class=\"CBlue\">$n$</span> facteurs</td> <td></td> <td><span class=\"CBlue\">$n$</span> zéros</td> </tr> </table> </div>",
-			"<div class=\"center\"><table style=\"margin: auto;\"><tr><td>$10^\\textcolor{#039be5}{-n}=$</td><td>$(\\frac{1}{10})^\\textcolor{#039be5}{n}=$</td><td>$\\frac{1}{10}\\times\\frac{1}{10}\\times ... \\times\\frac{1}{10}\\times\\frac{1}{10}$</td><td>$=$</td><td>$0,0 ... 00$</td><td>$1$</td></tr><tr style=\"line-height: 9px;\"><td></td><td></td><td> <image src=\"Images/Accolade1.svg\"></image> </td><td></td><td> <image src=\"Images/Accolade2.svg\"></image> </td><td></td><td></td><td></td></tr><tr><td></td><td></td><td><span class=\"CBlue\">$n$</span> facteurs</td><td></td><td><span class=\"CBlue\">$n$</span> zéros</td><td></td></tr></table></div>"
+			"<span class=\"CRed\">$a$</span> puissance <span class=\"CBlue\">$n$</span> noté $\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}$ désigne le produit de <span class=\"CBlue\">$n$</span> facteurs tous égaux à <span class=\"CRed\">$a$</span> : <br><div class=\"center\"><table style=\"margin: auto;\"><tr><td>$\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}=$</td><td>$\\textcolor{#e53935}{a}\\times\\textcolor{#e53935}{a}\\times ... \\times\\textcolor{#e53935}{a}\\times \\textcolor{#e53935}{a}$</td></tr><tr style=\"line-height: 4px;\"><td></td><td><image src=\"/Images/Cours/Accolade1.svg\"></image></td></tr><tr><td></td><td><span class=\"CBlue\">$n$</span> facteurs</td></tr></table></div>",
+			"<span class=\"CRed\">$a$</span> puissance <span class=\"CBlue\">$-n$</span> noté $\\textcolor{#e53935}{a}^\\textcolor{#039be5}{-n}$ désigne le produit de <span class=\"CBlue\">$n$</span> facteurs tous égaux à $\\frac{1}{\\textcolor{#e53935}{a}}$ : <br> <div class=\"center\"> <table style=\"margin: auto;\"> <tr> <td>$\\textcolor{#e53935}{a}^\\textcolor{#039be5}{-n}=$</td><td>$(\\frac{1}{\\textcolor{#e53935}{a}})^\\textcolor{#039be5}{n}=$</td><td>$\\frac{1}{\\textcolor{#e53935}{a}}\\times\\frac{1}{\\textcolor{#e53935}{a}}\\times ... \\times \\frac{1}{\\textcolor{#e53935}{a}}\\times\\frac{1}{\\textcolor{#e53935}{a}}$</td> <td>$=\\frac{1}{\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}}$</td> </tr> <tr style=\"line-height: 4px;\"><td></td><td></td><td><image src=\"/Images/Cours/Accolade1.svg\"></image></td><td></td></tr><tr><td></td><td></td><td><span class=\"CBlue\">$n$</span> facteurs</td><td></td></tr></table></div>",
+			"<div class=\"center\"> <table style=\"margin: auto;\"> <tr> <td>$10^\\textcolor{#039be5}{n}=$</td> <td>$10\\times10\\times ... \\times10\\times10$</td> <td>$=1$</td> <td>$00 ... 00$</td> </tr> <tr style=\"line-height: 9px;\"> <td></td> <td> <image src=\"/Images/Cours/Accolade1.svg\"></image> </td> <td></td> <td> <image src=\"/Images/Cours/Accolade2.svg\"></image> </td> </tr> <tr> <td></td> <td><span class=\"CBlue\">$n$</span> facteurs</td> <td></td> <td><span class=\"CBlue\">$n$</span> zéros</td> </tr> </table> </div>",
+			"<div class=\"center\"><table style=\"margin: auto;\"><tr><td>$10^\\textcolor{#039be5}{-n}=$</td><td>$(\\frac{1}{10})^\\textcolor{#039be5}{n}=$</td><td>$\\frac{1}{10}\\times\\frac{1}{10}\\times ... \\times\\frac{1}{10}\\times\\frac{1}{10}$</td><td>$=$</td><td>$0,0 ... 00$</td><td>$1$</td></tr><tr style=\"line-height: 9px;\"><td></td><td></td><td> <image src=\"/Images/Cours/Accolade1.svg\"></image> </td><td></td><td> <image src=\"/Images/Cours/Accolade2.svg\"></image> </td><td></td><td></td><td></td></tr><tr><td></td><td></td><td><span class=\"CBlue\">$n$</span> facteurs</td><td></td><td><span class=\"CBlue\">$n$</span> zéros</td><td></td></tr></table></div>"
 		],
 		"proprietes": [
 			"$\\textcolor{#e53935}{a}^1 = \\textcolor{#e53935}{a}$",
@@ -734,7 +778,7 @@
 	},"relatif": {
 		"tags": [],
 		"definitions": [
-			""
+			"Les nombres <span class=\"CRed\">relatifs</span> regroupent les nombres positifs et négatifs."
 		],
 		"proprietes": [
 			"La somme de deux nombres relatifs de <span style=\"text-decoration: underline\">même signe</span> a le <span style=\"text-decoration: underline\">même signe</span> que ces deux nombres. On ajoute alors les <span class=\"CRed\">valeurs absolues</span>.",
@@ -747,7 +791,7 @@
 	},"repère": {
 		"tags": [],
 		"definitions": [
-			"",
+			"Un <span class=\"CRed\">repère orthogonal</span> du plan est composé de deux droites graduées perpendiculaires et de même origine.<ul><li>Une première horizontale qui est appelée axe des <span class=\"CRed\">abscisses</span>.</li><li>Une seconde verticale qui est appelée axe des <span class=\"CRed\">ordonnées</span>.</li></ul>",
 			"Dans un <b>parallélépipède rectangle</b>, on forme un <span class=\"CRed\">repère</span> à partir d'un sommet et des trois arêtes qui en sont issues.<br> On repère alors un point par trois nombres, ses <b>coordonnées</b> :<br> l'<span class=\"CRed\">abscisse</span>, l'<span class=\"CBlue\">ordonnée</span> et l'<span class=\"CGreen\">altitude</span>."
 		],
 		"proprietes": [
@@ -802,7 +846,8 @@
 	},"simplifier": {
 		"tags": [],
 		"definitions": [
-			"<span class=\"CRed\">Simplifier une fraction</span>, c'est trouver une fraction qui lui est égale, ayant un <b>dénominateur plus petit</b>."
+			"<span class=\"CRed\">Simplifier une fraction</span>, c'est trouver une fraction qui lui est égale, ayant un <b>dénominateur plus petit</b>.",
+			"Il existe des <b>conventions de simplification</b> d'expression. On peut sous-entendre le signe multiplier entre :<ul><li>Un nombre et une lettre : $3 \\textcolor{#e53935}{\\times} a = 3a$</li><li>Deux lettres : $a\\textcolor{#e53935}{\\times} b = ab$</li><li>Une lettre (ou un chiffre) et une parenthèse : $a\\textcolor{#e53935}{\\times} (2 + b) = a(2+b)$</li><li>Entre deux parenthèses : $(a + 2)\\textcolor{#e53935}{\\times}(b + 3)=(a+2)(b+3)$</li></ul>"
 		]
 	},"sinus": {
 		"tags": [],
@@ -831,12 +876,24 @@
 			"Dire que deux figures sont <span class=\"CRed\">symétriques par rapport à une droite</span> signifie que, en effectuant un pliage le long de la droite, les figures se superposent."
 		],
 		"proprietes": [
+			"Une symétrie axiale conserve les longueurs et les angles.",
+			"Si trois points sont alignés, alors leurs symétriques par rapport à une droite sont aussi alignés.",
+			"Si deux angles sont symétriques par rapport à une droite, alors ils ont la même mesure.",
+			"Si deux figures sont symétriques par rapport à une droite, alors elles ont même aire et même périmètre",
 			"Lors d'une symétrie axiale les longueurs, les alignements et les angles sont conservés."
 		]
 	},"symétrie centrale": {
 		"tags": [],
 		"definitions": [
 			"Dire que deux figures sont <span class=\"CRed\">symétriques par rapport à un point</span> signifie que, en effectuant un demi-tour autour de ce point, les figures se superposent."
+		],
+		"proprietes": [
+			"Dire que deux points M et M' sont symétriques par rapport à un point O signifie que le point O est le <b>milieu</b> du segment [MM'].",
+			"Une symétrie centrale conserve les longueurs et les angles.",
+			"Si trois points sont alignés, alors leurs symétriques par rapport à un point sont aussi alignés.",
+			"Si deux segments sont symétriques par rapport à un point, alors ils sont parallèles et de même longueur.",
+			"Si deux angles sont symétriques par rapport à un point, alors ils ont la même mesure.",
+			"Si deux figures sont symétriques par rapport à un point, alors elles ont même aire et même périmètre"
 		]
 	},"système décimal":{
 		"tags": ["chiffre", "décimal", "nombres"],
@@ -880,6 +937,10 @@
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">triangle</span> est un <b>polygone</b> à trois côtés."
+		],
+		"proprietes": [
+			"Pour pouvoir construire un triangle à partir de trois longueurs données, il faut vérifier que la longueur du côté le plus long est inférieure ou égale à la somme des longueurs des deux autres côtés.",
+			"Dans un triangle, la longueur d'un côté est toujours inférieure à la somme des longueurs des deux autres côtés."
 		]
 	},"triangle égaux": {
 		"tags": [],
@@ -929,6 +990,19 @@
 		"proprietes": [
 			"Pour tout angle aigu de mesure $\\theta$ :&#160;&#160;&#160; $\\sin(\\theta)^{2}+\\cos(\\theta)^{2}=1$",
 			"Pour tout angle aigu de mesure $\\theta$ :&#160;&#160;&#160; $\\tan(\\theta)=\\frac{\\sin(\\theta)}{\\cos(\\theta)}$"
+		]
+	},"variable": {
+		"tags": [],
+		"definitions": [
+			"Dans une <b>expression littérale</b> les lettres sont appelées des <span class=\"CRed\">variables</span>. Une variable représente un nombre dont la valeur peut changer (varier)."
+		],
+		"proprietes": [
+			"$V = \\text{Longueur} \\times \\text{Largeur} \\times \\text{Hauteur}$",
+			"$V = \\text{côté}^3$",
+			"$V = \\pi \\times \\text{rayon}^2 \\times \\text{hauteur}$",
+			"$V = \\text{Aire}_{\\text{Base}} \\times \\text{hauteur}$",
+			"$V =$<span class=\"formule\">$\\frac{\\text{Aire}_{\\text{Base}} \\times \\text{hauteur}}{3}$</span>",
+			"$V =$<span class=\"formule\">$\\frac{\\pi \\times \\text{rayon}^2 \\times \\text{hauteur}}{3}$</span>"
 		]
 	},"volume": {
 		"tags": [],

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/CSS/Cours.css">
+  <script src="/Cours/DefinitionLoader.js"></script>
+
+	<script>
+		document.addEventListener("definitionsLoaded", CreateList)
+
+		function CreateList()
+		{
+			var body = document.body
+			Object.keys(Definitions).forEach(key => {
+				let title = document.createElement("h1")
+				title.innerText = key
+				body.appendChild(title)
+				let data = Definitions[key]
+
+				if ("definitions" in data)
+				{
+					let subtitle = document.createElement("h2")
+					subtitle.innerText = "Définition(s) :"
+					body.appendChild(subtitle)
+
+					data["definitions"].forEach( def => {
+						let div = document.createElement("div");
+						div.classList.add("definition")
+						div.innerHTML = def
+						body.appendChild(div)
+					})
+				}
+
+				if ("proprietes" in data)
+				{
+					let subtitle = document.createElement("h2")
+					subtitle.innerText = "Propriété(s) :"
+					body.appendChild(subtitle)
+
+					if (data["proprietes"].length == 1)
+					{
+						let div = document.createElement("div");
+						div.classList.add("definition")
+						div.innerHTML = "<b><u>Propriété :</u></b><br>" + data["proprietes"][0];
+						body.appendChild(div)
+					}
+					else
+					{
+						let div = document.createElement("div");
+						div.classList.add("definition")
+						let result = "<b><u>Propriétés :</u></b><br><ul>"
+						data["proprietes"].forEach(prop => {
+							result += "<li>" + prop + "</li>"
+						})
+						div.innerHTML = result + "</ul>";
+						body.appendChild(div)
+					}
+				}
+
+				if ("exemples" in data)
+				{
+					let subtitle = document.createElement("h2")
+					subtitle.innerText = "Exemple(s) :"
+					body.appendChild(subtitle)
+
+					let p = document.createElement("p")
+					p.classList.add("exemple")
+					if (data["exemples"].length > 1)
+						p.innerHTML = "Exemples :"
+					else
+						p.innerHTML = "Exemple :"
+					body.appendChild(p)
+
+					data["exemples"].forEach( exemple => {
+						let div = document.createElement("div");
+						div.innerHTML = exemple
+						body.appendChild(div)
+					})
+				}
+
+				if ("remarques" in data)
+				{
+					let subtitle = document.createElement("h2")
+					subtitle.innerText = "Remarque(s) :"
+					body.appendChild(subtitle)
+
+					let p = document.createElement("p")
+					p.classList.add("remarque")
+					if (data["remarques"].length > 1)
+						p.innerHTML = "Remarques :"
+					else
+						p.innerHTML = "Remarque :"
+					body.appendChild(p)
+
+					let ul = document.createElement("ul")
+					body.append(ul)
+					data["remarques"].forEach( remarque => {
+						let li = document.createElement("li");
+						li.innerHTML = remarque
+						ul.appendChild(li)
+					})
+				}
+				
+			})
+			MathJax.typesetPromise();
+		}
+	</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Définitions</title>
+
+  <style>
+		h1::marker {
+				display: list-item;
+				content: counter(h1count, decimal) ") ";
+				text-decoration: underline;
+				color: var(--SectionPrincipale);
+				font-weight: bold;
+		}
+  </style>
+
+</head>
+
+<body>
+
+</body>
+</html>

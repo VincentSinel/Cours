@@ -1,5 +1,5 @@
 var Definitions = {};
-
+const definitionsLoaded = new CustomEvent("definitionsLoaded");
 
 window.addEventListener("load", LoadData);
 
@@ -20,6 +20,7 @@ function End_load(json)
 {
 	Definitions = JSON.parse(json);
 	SetDefinitions()
+	document.dispatchEvent(definitionsLoaded);
 }
 
 function SetDefinitions()
