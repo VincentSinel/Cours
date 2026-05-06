@@ -3000,6 +3000,7 @@ var sixieme_saintexupery = [
 			pdf_trou:  "/Cours/6eme/SaintExupery/Chapitre_11_3/Documents/Chapitre 11 - Partie 3 - Volumes (A trou).pdf",
 			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 11 - Activité d'introduction.docx",
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 11 - Activité d'introduction.pdf",
+			img: 			 "/Cours/6eme/SaintExupery/Chapitre_11_3/Documents/Chapitre 11 - Partie 3 - Images.pdf",
 		},
 		ready : true,
 		page : "SaintExupery/Chapitre_11_3/Cours.html",
