@@ -1,0 +1,72 @@
+{
+	"styles": "",
+	"activité": "<ol><li>Ecrire en chiffres les deux nombres en gras :</li></ol><div class=\"citation\">La Terre s'est formée il y a environ <b>quatre milliards cinq cents millions</b> d'années et on estime queles premiers êtres humains, les <i>Homo habilis</i>,sont apparus il y a environ <b>deux millions trois cent mille</b> ans.</div><ol start=\"2\"><li>Ecrire en lettres les deux nombres en gras :</li></ol><div class=\"citation\">La Terre est située à environ <b>150 000 000</b> de km du Soleil. Son diamètre est environ <b>12 742</b>km.</div>",
+	"content": [{
+			"type": "title", "name": "Nombres entiers",
+			"content": [
+				{
+					"type": "title", "name": "Chiffres et nombres :",
+					"content": [
+						{ "type": "definition", "source": [{"name": "système décimal", "indexes": [0]}]},
+						{ "type": "remarque", "source": [{"name": "système décimal", "indexes": [0, 1]}]},
+						{ "type": "info", "source": [{"name": "entier", "indexes": [0]}]},
+						{ "type": "exemple", "source": [{"name": "entier", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Décompositions",
+					"content": [
+						{"type": "definition", "source": [{"name": "décomposer", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "décomposer", "indexes": [0]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Écriture d'un nombre",
+			"content": [
+				{
+					"type": "title", "name": "Premiers nombres",
+					"content": [
+						{ "type": "info", "source": [{"name": "entier", "indexes": [1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Nombres particuliers",
+					"content": [
+						{ "type": "info", "source": [{"name": "entier", "indexes": [2]}]},
+						{ "type": "remarque", "source": [{"name": "entier", "indexes": [0, 1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Règles particulières pour le cent et le vingt",
+					"content": [
+						{ "type": "definition", "source": [{"name": "entier", "indexes": [0]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Nombres décimaux",
+			"content": [
+				{
+					"type": "title", "name": "Fraction décimale",
+					"content": [
+						{ "type": "definition", "source": [{"name": "fraction décimale", "indexes": [0]}]},
+						{ "type": "exemple", "source": [{"name": "fraction décimale", "indexes": [0], "multiple": 1}]},
+						{ "type": "remarque", "source": [{"name": "fraction décimale", "indexes": [0]}]},
+						{ "type": "exemple", "source": [{"name": "fraction décimale", "indexes": [1], "multiple": 1}]}
+					]
+				},
+				{
+					"type": "title", "name": "Écriture décimale",
+					"content": [
+						{"type": "definition", "source": [{"name": "écriture décimale", "indexes": [0]}]},
+						{"type": "info", "source": [{"name": "écriture décimale", "indexes": [0, 1]}]},
+						{"type": "remarque", "source": [{"name": "écriture décimale", "indexes": [0, 1]}]}
+					]
+				}
+			]
+		}
+	]
+}

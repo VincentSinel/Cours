@@ -12,6 +12,9 @@
 		],
 		"remarques": [
 			"Une remarque"
+		],
+		"infos": [
+			"Autre information"
 		]
 	},
 
@@ -192,6 +195,9 @@
 		"definitions": [
 			"Il est possible de décomposer un nombre pour mettre en évidence le rôle de chaque chiffre ou ensemble de chiffre.",
 			"On peut décomposer un nombre décimal en séparent sa <span class=\"CGreen\"><b>partie entière</b></span> et sa <span class=\"CViolet\"><b>partie décimal</b></span>."
+		],
+		"exemples": [
+			"On peut décomposer $5\\ 713$ de la manière suivante :<ul><li>$5\\ 713=(\\textcolor{#CB2F4C}{5}\\times1\\ 000)+(\\textcolor{#E29B31}{7}\\times100)+(\\textcolor{#34D15B}{1}\\times10)+\\textcolor{#2189C7}{3}$<br>On met en avant le chiffre des <span style=\"color: #CB2F4C\">milliers</span>, <span style=\"color: #E29B31\">centaines</span>, <span style=\"color: #34D15B\">dizaines</span>, <span style=\"color: #2189C7\">unités</span>.</li><li>$5\\ 713=(\\textcolor{#34D15B}{571}\\times10)+3$<br>571 est le nombre de <span style=\"color: #34D15B\">dizaines</span>.</li><li>$5\\ 713=(\\textcolor{#E29B31}{57}\\times100)+13$<br>57 est le nombre de <span style=\"color: #E29B31\">centaines</span>.</li></ul>"
 		]
 	},"décroissant": {
 		"tags": [],
@@ -276,6 +282,16 @@
 		"tags": [],
 		"definitions": [
 			"Dire qu'un nombre entier <span class=\"CBlue\">$d$</span> est un <span = class=\"CRed\">diviseur commun</span> à deux nombres, entiers $a$ et $b$ signifie que $a$ et $b$ sont divisibles par <span class=\"CBlue\">$d$</span>"
+		],
+		"exemples": [
+			"Les diviseurs communs de 12 et 18 sont : 1,2,3 et 6.<br>6 est appelé plus grand diviseur commun de 12 et 18 (noté <b>PGCD</b>). Tous les diviseurs de ce nombre sont les diviseurs communs de 12 et 18."
+		],
+		"remarques": [
+			"1 est un diviseur commun à tous les nombres.",
+			"Si le seul diviseur commun à deux nombres est 1, on dit que ces deux nombres sont <span class=\"CRed\">premiers entre eux</span>."
+		],
+		"infos": [
+			"Pour trouver le plus grand diviseur de deux nombres, on peut utiliser la décomposition en produit de facteurs premiers :<br>$360 = \\textcolor{#e53935}{2}^\\textcolor{#039be5}{3}\\times\\textcolor{#e53935}{3}^2\\times5$<br>$336 = \\textcolor{#e53935}{2}^4\\times\\textcolor{#e53935}{3}\\times7$<br><br>On garde les facteurs communs avec la puissance la plus petite :<br>$\\textcolor{#e53935}{2}^\\textcolor{#039be5}{3}\\times\\textcolor{#e53935}{3} = 24$<br>24 est le plus grand diviseur commun de 360 et 336."
 		]
 	},"divisible": {
 		"tags": [],
@@ -327,6 +343,14 @@
 		"tags": [],
 		"definitions": [
 			"L'<span class='CRed'>écriture décimale</span> d'une fraction décimale est son écriture sous forme de nombre à virgule."
+		],
+		"remarques": [
+			"La barre rouge indique la position de la virgule.",
+			"Dans le tableau est inscrit le nombre $516,762$ :<br>$516,762=(\\textcolor{#3CB3E3}{5}\\times100)+(\\textcolor{#56DCFF}{1}\\times10)+\\textcolor{#82FFFF}{6}+(\\textcolor{#ABDBFF}{7}\\times\\frac{1}{10})+(\\textcolor{#D5B7FF}{6}\\times\\frac{1}{100})+(\\textcolor{#FF93FF}{2}\\times\\frac{1}{1\\ 000})$<br>516 est alors la <b>partie entière</b> et 0,762 la <b>partie décimale</b>."
+		],
+		"infos": [
+			"<p>Il est possible d'agrandir le tableau vu précédemment :</p>",
+			"<div class=\"tableau_numeration decimaux\"><div>Classe des Milliers</div><div>Classe des Unités</div><div>Classe des Millièmes</div><div style=\"background-color: #5FF26F;\">Centaines</div><div style=\"background-color: #88FF87;\">Dizaines</div><div style=\"background-color: #C6FFAC;\">Unités</div><div style=\"background-color: #3CB3E3;\">Centaines</div><div style=\"background-color: #56DCFF;\">Dizaines</div><div style=\"background-color: #82FFFF;\">Unités</div><div style=\"background-color: #ABDBFF;\">Dixièmes</div><div style=\"background-color: #D5B7FF;\">Centièmes</div><div style=\"background-color: #FF93FF;\">Unités</div><div style=\"background-color: #D261FD;\">Dixièmes</div><div style=\"background-color: #A546E0;\">Centièmes</div><div>100 000</div><div>10 000</div><div>1 000</div><div>100</div><div>10</div><div>1</div><div>0,1 $=\\frac{1}{10}$</div><div>0,01 $=\\frac{1}{100}$</div><div>0,00 1 $=\\frac{1}{1\\ 000}$</div><div>0,00 01 $=\\frac{1}{10\\ 000}$</div><div>0,00 001 $=\\frac{1}{100\\ 000}$</div><div></div><div></div><div></div><div>5</div><div>1</div><div>6</div><div>7</div><div>6</div><div>2</div><div></div><div></div><div>Partie entière</div><div>Partie décimale</div></div>"
 		]
 	},"effectif": {
 		"tags": [],
@@ -338,6 +362,23 @@
 		"tags": [],
 		"definitions": [
 			"<span class=\"CRed\">Encadrer</span> un nombre, c'est trouver un nombre plus petit et un nombre plus grand que ce nombre."
+		]
+	},"entier": {
+		"tags": [],
+		"definitions": [
+			"Les mots <b>vingt</b> et <b>cent</b> prennent la marque du pluriel à trois conditions :<ul><li>Ils doivent être multipliés (<b>cinq-cent<u>s</u></b> = $5 \\times 100$);</li><li>Ils doivent terminer le nombre (<b>quatre-vingt<u>s</u></b>, mais <b>quatre-vingt-sept</b>); </li></ul>"
+		],
+		"exemples": [
+			"Le nombre : <span style=\"color: #CB2F4C\">3</span> <span style=\"color: #E29B31\">723</span> <span style=\"color: #34D15B\">496</span> <span style=\"color: #2189C7\">017</span> est lu <span style=\"color: #CB2F4C\">trois-milliards</span>-<span style=\"color: #E29B31\">sept-cent-vingt-trois-millions</span>-<span style=\"color: #34D15B\">quatre-cent-quatre-vingt-seize-mille</span>-<span style=\"color: #2189C7\">dix-sept</span><br>Le premier 7 correspond aux centaines de millions.<br>Le 7 suivant correspond aux unités."
+		],
+		"remarques": [
+			"Million et milliard prennent un \"s\" lorsqu'on en a plusieurs :<br>Un-milliard &nbsp; et &nbsp; trois-milliard<b>s</b><br>Cinq-milliards-un-million &nbsp; et &nbsp; cinq-milliards-deux-cent-million<b>s</b>",
+			"Mille est invariable, il ne prend <b>jamais</b> de \"s\" &nbsp; (milles correspond à une unité de longueur maritime)"
+		],
+		"infos": [
+			"<div class=\"tableau_numeration entier\"><div>Classe des Milliards</div><div>Classe des Millions</div><div>Classe des Milliers</div><div>Classe des Unités</div><div style=\"background-color: #E14A49\">Centaines</div><div style=\"background-color: #FF7463\">Dizaines</div><div style=\"background-color: #FFB993\">Unités</div><div style=\"background-color: #F2BA4D\">Centaines</div><div style=\"background-color: #FFDF68\">Dizaines</div><div style=\"background-color: #FFFF8F\">Unités</div><div style=\"background-color: #5FF26F\">Centaines</div><div style=\"background-color: #88FF87\">Dizaines</div><div style=\"background-color: #C6FFAC\">Unités</div><div style=\"background-color: #3CB3E3\">Centaines</div><div style=\"background-color: #56DCFF\">Dizaines</div><div style=\"background-color: #82FFFF\">Unités</div><div>100 000 000 000</div><div>10 000 000 000</div><div>1 000 000 000</div><div>100 000 000</div><div>10 000 000</div><div>1 000 000</div><div>100 000</div><div>10 000</div><div>1 000</div><div>100</div><div>10</div><div>1</div><div></div><div></div><div>3</div><div>7</div><div>2</div><div>3</div><div>4</div><div>9</div><div>6</div><div>0</div><div>1</div><div>8</div></div>",
+			"<div class=\"list_nombre\"><table><tr><td>0</td><td>zéro</td></tr></table><table><tr><td>1</td><td>un</td></tr></table><table><tr><td>2</td><td>deux</td></tr></table><table><tr><td>3</td><td>trois</td></tr></table><table><tr><td>4</td><td>quatre</td></tr></table><table><tr><td>5</td><td>cinq</td></tr></table><table><tr><td>6</td><td>six</td></tr></table><table><tr><td>7</td><td>sept</td></tr></table><table><tr><td>8</td><td>huit</td></tr></table><table><tr><td>9</td><td>neuf</td></tr></table><table><tr><td>10</td><td>dix</td></tr></table><table><tr><td>11</td><td>onze</td></tr></table><table><tr><td>12</td><td>douze</td></tr></table><table><tr><td>13</td><td>treize</td></tr></table><table><tr><td>14</td><td>quatorze</td></tr></table><table><tr><td>15</td><td>quinze</td></tr></table><table><tr><td>16</td><td>seize</td></tr></table><table><tr><td>17</td><td>dix-sept</td></tr></table><table><tr><td>18</td><td>dix-huit</td></tr></table><table><tr><td>19</td><td>dix-neuf</td></tr></table><table><tr><td>20</td><td>vingt</td></tr></table><table><tr><td>21</td><td>vingt-et-un</td></tr></table><table><tr><td>22</td><td>vingt-deux</td></tr></table><table><tr><td>23</td><td>vingt-trois</td></tr></table></div>",
+			"<div class=\"list_nombre\"><table><tr><td>100</td><td>cent</td></tr></table><table><tr><td>1 000</td><td>mille</td></tr></table><table><tr><td>1 000 000</td><td>million</td></tr></table><table><tr><td>1 000 000 000</td><td>milliard</td></tr></table></div>"
 		]
 	},"équation": {
 		"tags": [],
@@ -458,11 +499,28 @@
 		"tags": ["fraction", "fractionnaire"],
 		"definitions": [
 			"Une <span class='CRed'>fraction décimale</span> est une fraction d'un entier \"sur\" 10, 100, 1 000 etc.."
+		],
+		"remarques": [
+			"Une fraction décimale admet <b>plusieurs</b> écritures."
+		],
+		"exemples": [
+			"<div class=\"flexobject\"><ul><li>$0,\\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{10}}$ un <span class=\"CRed\">dixième</span></li><li>$0,00\\ \\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{1\\ 000}}$ un <span class=\"CRed\">millième<span></li></ul><ul><li>$0,0\\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{100}}$ un <span class=\"CRed\">centième</span><li><li>$0,00\\ 0\\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{10\\ 000}}$ un <spanclass=\"CRed\">dix-millième</span></li></ul></div>",
+			"<ul><li>$\\frac{10}{10}=\\frac{100}{100}=\\frac{1\\ 000}{1\\ 000}=\\frac{10\\ 000}{10\\ 000}$</li><li>$\\frac{1}{10}=\\frac{10}{100}=\\frac{100}{1\\ 000}=\\frac{1\\ 000}{10\\ 000}$</li><li>$\\frac{42}{100}=\\frac{40}{100}+\\frac{2}{100}=\\frac{4}{10}+ \\frac{2}{100}$</li></ul>"
 		]
 	},"fraction irréductible":{
 		"tags": ["fraction", "fractionnaire"],
 		"definitions": [
 			"Une fraction est dite <span class=\"CRed\">irréductible</span> lorsque le numérateur et le dénominateur sont premiers entre eux."
+		],
+		"exemples": [
+			"<span class=\"frac\">$\\frac{15}{14}$</span> est une fraction irréductible car 15 et 14 sont <b>premiers entre eux</b> (cela ne veut pas dire que 14 ou 15 sont premiers !).",
+			"<span class=\"frac\">$\\frac{120}{84} = \\frac{2\\times2\\times2\\times3\\times5}{2\\times2\\times3\\times7}$$= \\frac{\\textcolor{#e53935}{\\cancel{2}}\\times\\textcolor{#e53935}{\\cancel{2}}\\times2\\times\\textcolor{#e53935}{\\cancel{3}}\\times5}{\\textcolor{#e53935}{\\cancel{2}}\\times\\textcolor{#e53935}{\\cancel{2}}\\times\\textcolor{#e53935}{\\cancel{3}}\\times7}$$=\\frac{2\\times5}{7}$$=\\frac{10}{7}$<br>$\\frac{10}{7}$</span>est une fraction irréductible."
+		],
+		"remarques": [
+			"Rendre irréductible revient à diviser le numérateur et le dénominateur par leur plus grand diviseur commun."
+		],
+		"infos": [
+			"Rendre une fraction irréductible, c'est la simplifier autant que possible.<br>Cela revient à trouver des diviseurs communs au numérateur et dénominateur et simplifier.<br>Pour cela on utilise la décomposition en produit de facteur premiers."
 		]
 	},"fréquence": {
 		"tags": [],
@@ -557,7 +615,10 @@
 		"definitions": [
 			"Lorsque le reste de la division euclidienne est <b>nul</b> on dit alors que le <b>dividende</b> est un <span class=\"CRed\">multiple</span> du <b>diviseur</b>. On dit aussi que le <b>dividende</b> est <span class=\"CRed\">divisible</span> par le <b>diviseur</b>.",
 			"Un nombre entier $\\textcolor{#43a047}{a}$ est un <span class=\"CRed\">multiple</span> d'un nombre entier $\\textcolor{#039be5}{b}$ ($\\textcolor{#039be5}{b}\\ne0$) lorsque le reste de la division euclidienne de $\\textcolor{#43a047}{a}$ par $\\textcolor{#039be5}{b}$ est 0. <br>On dit aussi que $\\textcolor{#039be5}{b}$ est le <span class=\"CRed\">diviseur</span> de $\\textcolor{#43a047}{a}$ ou que $\\textcolor{#43a047}{a}$ est <span class=\"CRed\">divisible</span> par $\\textcolor{#039be5}{b}$."
-		]
+		],
+		"exemples":[[
+			"512 est un multiple de 16 car $512 = 16\\times32$."
+		]]
 	},"négatif": {
 		"tags": [],
 		"definitions": [
@@ -567,6 +628,15 @@
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">nombre premier</span> est un nombre qui possède exactement deux diviseurs, 1 et lui-même."
+		],
+		"exemples": [
+			"Le nombre 11 est premier car 11 n'est divisible que par 1 et 11.",
+			"Le nombre 12 n'est pas premier car il est divisible par 1, 2, 3, 4, 6 et 12.",
+			"<p style=\"font-style: italic;\"> Les nombres premiers compris entre 1 et 50 sont :</p><div style=\"display: flex; gap: 5px;\"><div>❤️</div><div style=\"border: 2px solid var(--Cred); padding: 0 5px;\">2 ; 3 ; 5 ; 7 ; 11 ; 13 ; 17 ; 19 </div><div style=\"border: 2px solid transparent;\">; 23 ; 29 ; 31 ; 37 ; 41 ; 43 ; 47</div></div>"
+		],
+		"remarques": [
+			"Le nombre 1 n'est pas un nombre premier car il n'a qu'un seul diviseur : lui-même.",
+			"Il existe un nombre infini de nombres premiers."
 		]
 	},"notation scientifique": {
 		"tags": [],
@@ -693,6 +763,12 @@
 		"tags": [],
 		"definitions": [
 			"Décomposer un nombre en <span class=\"CRed\">produit de facteurs premiers</span>, c'est l'écrire sous forme d'une multiplication de nombres premiers."
+		],
+		"exemples": [
+			"$360 = 36\\times10 = 6\\times6\\times2\\times5$ $= 2\\times3\\times2\\times3\\times2\\times5$ $= 2^3\\times3^2\\times5$"
+		],
+		"infos": [
+			"La décomposition en produit de facteurs premiers permet de trouver rapidement dans quelles tables se trouve un nombre."
 		]
 	},"proportionnelle": {
 		"tags": [],
@@ -899,6 +975,10 @@
 		"tags": ["chiffre", "décimal", "nombres"],
 		"definitions": [
 			"Le <b>système décimal</b> utilise dix <span class='CRed'>chiffres</span> : <br> $0,1,2,3,4,5,6,7,8,9$<br> On peut écrire tous les nombres à l'aide de ces chiffres."
+		],
+		"remarques": [
+			"Dans le système décimal, la position d'un chiffre détermine sa signification.",
+			"On écris les nombres en regroupant les chiffres par paquet de 3 en commençant par l'unité. Ex : $12\\ 047\\ 249$"
 		]
 	},"tableau": {
 		"tags": [],

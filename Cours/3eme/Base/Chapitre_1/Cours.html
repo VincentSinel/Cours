@@ -19,15 +19,6 @@
   <title>Chapitre 1 - Nombres premiers</title>
 
   <style>
-    .tableau tr td { border: 1px solid black; }
-    .one { background-color: palevioletred; }
-    .prime { background-color: yellow; }
-    .notprime { background-color: black; }
-    .cribletable tr td { background-color: white!important; }
-    .division tr {border: none;}
-    .division {border: none;}
-    .division td { width: 40px; font-size: 16pt; padding: 0px 5px;}
-    .borderdivision { text-align: right; border-right: 2px solid black;}
     .center { margin-left: auto; margin-right: auto;}
   </style>
 
@@ -68,46 +59,20 @@
 
   
 
-  	<h1>Nombres premiers :</h1>
+	<h1>Nombres premiers :</h1>
       <h2>Multiples et diviseurs :</h2>
-					
           <div class="definition" definition="multiple" objids="1"></div>
-
-            <p class="exemple">Exemple :</p>
-            <p>512 est un multiple de 16 car $512 = 16\times32$.</p>
+          <div class="exemple" definition="multiple: 0"></div>
 
       <h2>Nombres premiers</h2>
-
           <div class="definition" definition="nombre premier" objids="0"></div>
+          <div class="remarque" definition="nombre premier: 0 1"></div>
+          <div class="exemple" definition="nombre premier: 0 1 2"></div>
 
-              <p class="remarque">Remarque :</p>
-              <ul>
-                <li>Le nombre 1 n'est pas un nombre premier !</li>
-                <li>Il existe un nombre infini de nombres premiers.</li>
-              </ul>
-              <p class="exemple">Exemple :</p>
-              <p>
-                Le nombre 11 est premier car 11 n'est divisible que par 1 et 11.<br>
-                Le nombre 12 n'est pas premier car il est divisible par 1, 2, 3, 4, 6 et 12.
-              </p>
-              <p style="font-style: italic;"> Les nombres premiers compris entre 1 et 50 sont :</p>
-
-              <div style="display: flex; gap: 5px;">
-                <div>
-                  ❤️
-                </div>
-                <div style="border: 2px solid var(--Dred); padding: 0 5px;">
-                  2 ; 3 ; 5 ; 7 ; 11 ; 13 ; 17 ; 19 
-                </div>
-                <div style="border: 2px solid transparent;">
-                  ; 23 ; 29 ; 31 ; 37 ; 41 ; 43 ; 47
-                </div>
-              </div>
-
-
-  	<h1>Décomposition en produit de facteurs premiers :</h1>
-		<h2>Décomposition :</h2>
+	<h1>Décomposition en produit de facteurs premiers :</h1>
+			<h2>Décomposition :</h2>
           <div class="definition" definition="produit de facteurs premiers" objids="0"></div>
+          <div class="exemple" definition="produit de facteurs premiers: 0"></div>
 			<p class="exemple">Exemple :</p>
 			<p>
 				$360 = 36\times10 = 6\times6\times2\times5$ $= 2\times3\times2\times3\times2\times5$<br>
@@ -144,7 +109,7 @@
           <div class="definition" definition="fraction irréductible" objids="0"></div>
 			<p class="exemple">Exemple :</p>
 			<p>
-				<span class="frac">$\frac{15}{14}$</span> est une fraction irréductible car 15 et 14 sont premiers entre eux (cela ne veut pas dire que 14 ou 15 sont premiers !).
+				<span class="frac">$\frac{15}{14}$</span> est une fraction irréductible car 15 et 14 sont <b>premiers entre eux</b> (cela ne veut pas dire que 14 ou 15 sont premiers !).
 			</p>
 		<h2>Simplification :</h2>
 			<p>

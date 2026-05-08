@@ -1,0 +1,68 @@
+{
+	"styles": "",
+	"scripts": ["JS/Animations.js"],
+	"activité": "<p> Retrouver les nombres premiers à partir du crible d'Erathostène ci-dessous :</p><ul><li>1 est mis à part car il divise tous les nombres</li><li>On garde le nombre suivant donc 2. Tous les multiples de 2 sont ensuite enlevés.</li><li>On garde le nombre suivant donc 3. Tous les multiples de 3 sont ensuite enlevés.</li><li>On garde le nombre suivant donc 5. Tous les multiples de 5 sont ensuite enlevés.</li><li>Etc...</li></ul> <p> Les nombres restants sont ainsi des nombres premiers.</p><div id=\"Animation1\" class=\"animation center\" width=\"480\" height=\"360\"></div>",
+	"content": [{
+			"type": "title", "name": "Nombres premiers",
+			"content": [
+				{
+					"type": "title", "name": "Multiples et diviseurs",
+					"content": [
+						{ "type": "definition", "source": [{"name": "multiple", "indexes": [1]}]},
+						{ "type": "exemple", "source": [{"name": "multiple", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Nombres premiers",
+					"content": [
+						{"type": "definition", "source": [{"name": "nombre premier", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "nombre premier", "indexes": [0, 1]}]},
+						{"type": "exemple", "source": [{"name": "nombre premier", "indexes": [0, 1, 2]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Décomposition en produit de facteurs premiers",
+			"content": [
+				{
+					"type": "title", "name": "Décomposition",
+					"content": [
+						{"type": "definition", "source": [{"name": "produit de facteurs premiers", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "produit de facteurs premiers", "indexes": [0]}]},
+						{"type": "info", "source": [{"name": "produit de facteurs premiers", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Diviseurs communs",
+					"content": [
+						{"type": "definition", "source": [{"name": "diviseur commun", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "diviseur commun", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "diviseur commun", "indexes": [0, 1]}]},
+						{"type": "info", "source": [{"name": "diviseur commun", "indexes": [0]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Fraction irréductible",
+			"content": [
+				{
+					"type": "title", "name": "Définition",
+					"content": [
+						{ "type": "definition", "source": [{"name": "fraction irréductible", "indexes": [0]}]},
+						{ "type": "exemple", "source": [{"name": "fraction irréductible", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Simplification",
+					"content": [
+						{"type": "info", "source": [{"name": "fraction irréductible", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "fraction irréductible", "indexes": [1]}]},
+						{"type": "remarque", "source": [{"name": "fraction irréductible", "indexes": [0]}]}
+					]
+				}
+			]
+		}
+	]
+}

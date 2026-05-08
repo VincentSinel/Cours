@@ -18,12 +18,12 @@ for (let s = 0; s < Scripts.length; s++)
 {
     document.write('<script src="' + "/JS/Animation/" + Scripts[s] + '" charset="utf-8"></script>')
 }
-document.write('<script src="JS/Animations.js" charset="utf-8"></script>')
+// document.write('<script src="JS/Animations.js" charset="utf-8"></script>')
 let link = document.createElement("link");
 link.rel = "stylesheet";
 link.href = "/CSS/Animation.css"
 document.head.appendChild(link);
-window.addEventListener("load", () => {CreateAnimationObject()})
+window.addEventListener("page_content_loaded", () => {CreateAnimationObject()})
 
 class Animation_Gestionnaire
 {

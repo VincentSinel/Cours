@@ -10,6 +10,8 @@
 	<script>
 		document.addEventListener("definitionsLoaded", CreateList)
 
+		const folded = false;
+
 		function CreateList()
 		{
 			var body = document.body
@@ -19,17 +21,33 @@
 				body.appendChild(title)
 				let data = Definitions[key]
 
+				let main = document.createElement("div")
+				if (folded) main.classList.add("hidden");
+				body.append(main)
+
+				title.addEventListener("click", () => {
+					main.classList.toggle("hidden")
+				})
+
 				if ("definitions" in data)
 				{
 					let subtitle = document.createElement("h2")
 					subtitle.innerText = "Définition(s) :"
-					body.appendChild(subtitle)
+					main.appendChild(subtitle)
+
+					let sub = document.createElement("div")
+					if (folded) sub.classList.add("hidden");
+					main.append(sub)
+
+					subtitle.addEventListener("click", () => {
+						sub.classList.toggle("hidden")
+					})
 
 					data["definitions"].forEach( def => {
 						let div = document.createElement("div");
 						div.classList.add("definition")
 						div.innerHTML = def
-						body.appendChild(div)
+						sub.appendChild(div)
 					})
 				}
 
@@ -37,14 +55,22 @@
 				{
 					let subtitle = document.createElement("h2")
 					subtitle.innerText = "Propriété(s) :"
-					body.appendChild(subtitle)
+					main.appendChild(subtitle)
+
+					let sub = document.createElement("div")
+					if (folded) sub.classList.add("hidden");
+					main.append(sub)
+
+					subtitle.addEventListener("click", () => {
+						sub.classList.toggle("hidden")
+					})
 
 					if (data["proprietes"].length == 1)
 					{
 						let div = document.createElement("div");
 						div.classList.add("definition")
 						div.innerHTML = "<b><u>Propriété :</u></b><br>" + data["proprietes"][0];
-						body.appendChild(div)
+						sub.appendChild(div)
 					}
 					else
 					{
@@ -55,7 +81,7 @@
 							result += "<li>" + prop + "</li>"
 						})
 						div.innerHTML = result + "</ul>";
-						body.appendChild(div)
+						sub.appendChild(div)
 					}
 				}
 
@@ -63,7 +89,15 @@
 				{
 					let subtitle = document.createElement("h2")
 					subtitle.innerText = "Exemple(s) :"
-					body.appendChild(subtitle)
+					main.appendChild(subtitle)
+
+					let sub = document.createElement("div")
+					if (folded) sub.classList.add("hidden");
+					main.append(sub)
+
+					subtitle.addEventListener("click", () => {
+						sub.classList.toggle("hidden")
+					})
 
 					let p = document.createElement("p")
 					p.classList.add("exemple")
@@ -71,12 +105,12 @@
 						p.innerHTML = "Exemples :"
 					else
 						p.innerHTML = "Exemple :"
-					body.appendChild(p)
+					sub.appendChild(p)
 
 					data["exemples"].forEach( exemple => {
 						let div = document.createElement("div");
 						div.innerHTML = exemple
-						body.appendChild(div)
+						sub.appendChild(div)
 					})
 				}
 
@@ -84,7 +118,15 @@
 				{
 					let subtitle = document.createElement("h2")
 					subtitle.innerText = "Remarque(s) :"
-					body.appendChild(subtitle)
+					main.appendChild(subtitle)
+
+					let sub = document.createElement("div")
+					if (folded) sub.classList.add("hidden");
+					main.append(sub)
+
+					subtitle.addEventListener("click", () => {
+						sub.classList.toggle("hidden")
+					})
 
 					let p = document.createElement("p")
 					p.classList.add("remarque")
@@ -92,14 +134,35 @@
 						p.innerHTML = "Remarques :"
 					else
 						p.innerHTML = "Remarque :"
-					body.appendChild(p)
+					sub.appendChild(p)
 
 					let ul = document.createElement("ul")
-					body.append(ul)
+					sub.append(ul)
 					data["remarques"].forEach( remarque => {
 						let li = document.createElement("li");
 						li.innerHTML = remarque
 						ul.appendChild(li)
+					})
+				}
+
+				if ("infos" in data)
+				{
+					let subtitle = document.createElement("h2")
+					subtitle.innerText = "Info(s) :"
+					main.appendChild(subtitle)
+
+					let sub = document.createElement("div")
+					if (folded) sub.classList.add("hidden");
+					main.append(sub)
+
+					subtitle.addEventListener("click", () => {
+						sub.classList.toggle("hidden")
+					})
+
+					data["infos"].forEach( info => {
+						let div = document.createElement("div");
+						div.innerHTML = info
+						sub.appendChild(div)
 					})
 				}
 				
@@ -121,7 +184,7 @@
   <style>
 		h1::marker {
 				display: list-item;
-				content: counter(h1count, decimal) ") ";
+				content: counter(h1count, decimal) ") " !important;
 				text-decoration: underline;
 				color: var(--SectionPrincipale);
 				font-weight: bold;
