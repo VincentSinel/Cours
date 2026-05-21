@@ -549,6 +549,10 @@ ol > li::marker {
     width: 100px;
     background-color: var(--TableHeader);
 }
+.proportionnaltable.width td
+{
+    width: 150px;
+}
 
 
 .u_lat{
@@ -620,7 +624,11 @@ ol > li::marker {
     border: solid 1px black;
 }
 
-
+table th.crossed
+{
+    background-image: linear-gradient(to bottom left,  transparent calc(50% - 1px), black, transparent calc(50% + 1px)); 
+    min-width: 120px;
+}
 
 .tableau_numeration{
     display: grid;
@@ -778,4 +786,20 @@ ol > li::marker {
     .tableau_numeration.decimaux > div:nth-child(n + 4):nth-child(-n + 14){
         writing-mode: vertical-rl;
     }
+}
+
+.fleche_propriete{
+    position: relative; 
+    width: 210px; 
+    height: 100px;
+}
+.fleche_propriete img{
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.fleche_propriete p{
+    padding: 3px 20px 19px 0px;
+    text-align: center;
 }
