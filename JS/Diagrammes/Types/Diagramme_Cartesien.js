@@ -72,6 +72,7 @@ class Diagramme_Cartesien
         if (this.element_id != "")
         {
             let e = document.getElementById(this.element_id);
+            if (e == null) return;
             e.style.border = "solid black 1px";
             e.style.width = "fit-content"
             this.draw = SVG().addTo("#" + this.element_id).size(this.Canvas_width, this.Canvas_height)

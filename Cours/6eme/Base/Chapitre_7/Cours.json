@@ -1,0 +1,50 @@
+{
+	"scripts": [{"name": "JS/Animations.js"}],
+	"activité": "<div class=\"flexobject\"><div style=\"flex: 1 1 4cm;\">En utilisant le rapporteur et une règle, on souhaite tracer le triangle ci-contre.<ol><li>Trace un segment [AC] de 6cm.</li><li>Place le centre de ton rapporteur sur le point A et aligne le \"zéro\" avec le segment.<ol type=\"a\"><li>En partant du zero aligné avec le segment, place une graduation à 61°</li><li>Retire ton rapporteur et trace la droite passant par A et la marque que tu vient de construire.</li></ol></li><li>Faire de même à partir du point C avec l'angle de 43°.</li><li>Placer le point B à l'intersection des deux droites.</li></ol></div><img src=\"/Images/Cours/Triangle1.svg\" style=\"max-width: 5cm;\"></div><div id=\"Animation_TriangleAnglesLongueur\" class=\"animation center\" width=\"480\" height=\"360\"></div>",
+	"content": [{
+			"type": "title", "name": "Définitions",
+			"content": [
+				{
+					"type": "title", "name": "Angles",
+					"content": [
+						{"type": "definition", "source": [{"name": "angle", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "angle", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Angles particuliers",
+					"content": [
+						{"type": "info", "source": [{"name": "angle", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "angle", "indexes": [0]}]},
+						{"type": "info", "source": [{"name": "angle", "indexes": [1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Notation",
+					"content": [
+						{"type": "info", "source": [{"name": "angle", "indexes": [2]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Mesure et construction",
+			"content": [
+				{
+					"type": "title", "name": "Mesure d'un angle",
+					"content": [
+						{"type": "definition", "source": [{"name": "degré", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "angle", "indexes": [1]}]},
+						{"type": "info", "source": [{"name": "angle", "indexes": [3]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Construction d'un angle",
+					"content": [
+						{"type": "info", "source": [{"name": "angle", "indexes": [4, 5]}]}
+					]
+				}
+			]
+		}
+	]
+}

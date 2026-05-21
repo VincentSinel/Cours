@@ -1,0 +1,40 @@
+{
+	"activité": "<div class=\"flexobject\"><img src=\"/Images/Cours/Act_Cercle.svg\" style=\"flex: 1 1 6.4cm; max-width: 10cm;\"><div style=\"flex: 1 1 12cm\">Après avoir reproduit la figure ci-contre, on s'intéresse au segment [AD].<ol><li>Quels sont tous les points situé à la distance AD du point A ?</li><li>Citer tous les points situés à une distance inférieur à AD du point A.</li><li>Le point B appartient-il au cercle de centre G et de rayon GM ?</li><li>Comment s'appelle le segment [MJ] pour le cercle de centre G et de rayon GM ?</li></ol></div></div>",
+	"content": [{
+			"type": "title", "name": "Définitions",
+			"content": [
+				{
+					"type": "title", "name": "Cercle et disque",
+					"content": [
+						{"type": "definition", "source": [{"name": "cercle", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "cercle", "indexes": [0]}]},
+						{"type": "definition", "source": [{"name": "disque", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "disque", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "disque", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Vocabulaire",
+					"content": [
+						{"type": "definition", "source": [
+									{"name": "corde", "indexes": [0]},
+									{"name": "diamètre", "indexes": [0, 1]},
+									{"name": "arc de cercle", "indexes": [0]}
+						]},
+						{"type": "exemple", "source": [{"name": "cercle", "indexes": [1]}]},
+						{"type": "remarque", "source": [{"name": "diamètre", "indexes": [0]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Propriétés",
+			"content": [
+				{"type": "propriete", "source": [{"name": "cercle", "indexes": [0]}]},
+				{"type": "info", "source": [{"name": "cercle", "indexes": [0]}]},
+				{"type": "propriete", "source": [{"name": "cercle", "indexes": [1]}]},
+				{"type": "info", "source": [{"name": "cercle", "indexes": [1]}]}
+			]
+		}
+	]
+}

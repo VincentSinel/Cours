@@ -9,7 +9,8 @@
 					"type": "title", "name": "Multiples et diviseurs",
 					"content": [
 						{ "type": "definition", "source": [{"name": "multiple", "indexes": [1]}]},
-						{ "type": "exemple", "source": [{"name": "multiple", "indexes": [0]}]}
+						{ "type": "exemple", "source": [{"name": "multiple", "indexes": [0]}]},
+						{ "type": "autre", "source": [{"data": "Content HTML"}]}
 					]
 				},
 				{

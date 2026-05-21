@@ -1,4 +1,4 @@
-class Animation1 extends Animation_Data
+class Animation_TriangleAnglesLongueur extends Animation_Data
 {
 
   CreateObjects()
@@ -84,7 +84,7 @@ class Animation1 extends Animation_Data
 
   }
 }
-class Animation2 extends Animation_Data
+class Animation_Angle extends Animation_Data
 {
 
   CreateObjects()

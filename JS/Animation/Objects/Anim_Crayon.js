@@ -43,7 +43,6 @@ class Anim_Crayon
 		this.CurrentData.px = p.x
 		this.CurrentData.py = p.y
 		this.CurrentData.angle = angle;
-		console.log(p.x, p.y)
 	}
 
 	Move(p, angle = 0, delay, duration, ease = '<>')

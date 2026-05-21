@@ -1,0 +1,72 @@
+{
+	"scripts": [{"name": "JS/Animations.js"}],
+	"styles": ".intro div{flex: 1 1 4cm; text-align: center;}.intro p{padding: 10px;}",
+	"activité": "<p>Les figures ci-dessous représentent cinq étapes successives permettant de construire, par pliage, la droite $(d_2)$ <b>perpendiculaire</b> à la droite $(d_1)$ et passant par le point A.</p><div class=\"flexobject intro\"><div><img src=\"/Images/Cours/Intro_Paralleles1.svg\" style=\"max-width: 8cm;\"><p>Sur un papier uni, tracer une droite $(d_1)$ et placer un point A n'appartenant pas à la droite.</p></div><div><img src=\"/Images/Cours/Intro_Paralleles2.svg\" style=\"max-width: 6.5cm;\"><p>Plier la feuille selon la droite $(d_1)$.</p></div><div><img src=\"/Images/Cours/Intro_Paralleles3.svg\" style=\"max-width: 8cm;\"><p>Plier une seconde fois la feuille selon un pli passant par A, en faisant coïncider les deux demi-droites rouges.</p></div><div><img src=\"/Images/Cours/Intro_Paralleles4.svg\" style=\"max-width: 6cm;\"><p>Marquer les plis puis déplier la feuille.</p></div><div><img src=\"/Images/Cours/Intro_Paralleles5.svg\" style=\"max-width: 8cm;\"><p>Tracer la droite $(d_2)$ à l'aide du pli passant par A.<br>On note l'angle droit à l'aide d'un carré rouge.</p></div></div><ol><li>Réaliser chacune de ces étapes en suivant les consignes indiquées.</li><li>Construire, de même, la droite $(d_3)$ perpendiculaire à $(d_2)$ et passant par A.</li><li><ol type=\"a\"><li>Que peut-on dire de la position de la droite $(d_1)$ par rapport à la droite $(d_3)$ ?</li><li>Compléter la phrase suivante à l'aide des symboles $\\perp$ (perpendiculaire) ou $\\parallel$ (parallèle)<br>Par construction, nous avons $(d_1)$ <span class=\"CYellow\">.....</span> $(d_2)$ et $(d_3)$  <span class=\"CYellow\">.....</span> $(d_2)$, donc $(d_1)$  <span class=\"CYellow\">.....</span> $(d_3)$.</li></ol></li></ol>",
+	"content": [{
+			"type": "title", "name": "Définition",
+			"content": [
+				{
+					"type": "title", "name": "Droites perpendiculaires",
+					"content": [
+						{"type": "definition", "source": [{"name": "perpendiculaire", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "perpendiculaire", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "perpendiculaire", "indexes": [0, 1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Droites parallèles",
+					"content": [
+						{"type": "definition", "source": [{"name": "parallèle", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "parallèle", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "parallèle", "indexes": [0]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Propriétés",
+			"content": [
+				{
+					"type": "title", "name": "Parallèles",
+					"content": [
+						{"type": "propriete", "source": [{"name": "parallèle", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "parallèle", "indexes": [1]}]},
+						{"type": "propriete", "source": [{"name": "parallèle", "indexes": [1]}]},
+						{"type": "exemple", "source": [{"name": "parallèle", "indexes": [2]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Perpendiculaires",
+					"content": [
+						{"type": "propriete", "source": [{"name": "perpendiculaire", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "perpendiculaire", "indexes": [1]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Distance d'un point à une droite",
+			"content": [
+				{"type": "definition", "source": [{"name": "distance", "indexes": [1, 2]}]},
+				{"type": "exemple", "source": [{"name": "distance", "indexes": [1]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Constructions",
+			"content": [
+				{
+					"type": "title", "name": "Parallèles",
+					"content": [
+						{ "type": "autre", "source": [{"data": "<div class=\"flexobject\"><div id=\"Animation_Parallele1\" class=\"animation center\" width=\"480\" height=\"360\"></div><div id=\"Animation_Parallele2\" class=\"animation center\" width=\"480\" height=\"360\"></div></div>"}]}
+					]
+				},
+				{
+					"type": "title", "name": "Perpendiculaires",
+					"content": [
+						{ "type": "autre", "source": [{"data": "<div class=\"flexobject\"><div id=\"Animation_Perpendiculaire1\" class=\"animation center\" width=\"480\" height=\"360\"></div><div id=\"Animation_Perpendiculaire2\" class=\"animation center\" width=\"480\" height=\"360\"></div></div>"}]}
+					]
+				}
+			]
+		}
+	]
+}

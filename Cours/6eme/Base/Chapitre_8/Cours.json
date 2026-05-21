@@ -1,0 +1,80 @@
+{
+	"scripts": [{"name": "https://cdn.geogebra.org/apps/deployggb.js"}, {"name": "JS/Geogebra.js"}],
+	"activité": "<p style=\"font-size: 12px;\">Créer par Jean-Paul Berroir</p><p>A partir de ses différentes pièces de puzzle, construire un carré, un losange, un rectangle et un parallèlogramme.</p><div id=\"ggbApplet\">Impossible de charger le fichier géogébra</div>",
+	"content": [{
+			"type": "title", "name": "Quadrilatères",
+			"content": [
+				{"type": "definition", "source": [{"name": "polygone", "indexes": [0]}]},
+				{"type": "info", "source": [{"name": "polygone", "indexes": [0]}]},
+				{"type": "definition", "source": [{"name": "triangle", "indexes": [0]},{"name": "quadrilatère", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "quadrilatère", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Quadrilatères particuliers",
+			"content": [
+				{
+					"type": "title", "name": "Parallèlogramme",
+					"content": [
+						{
+							"type": "container",
+							"class": "flexobject",
+							"content": [
+								{"type": "definition", "source": [{"name": "parallèlogramme", "indexes": [0]}], "style": "flex: 1 1 5cm;"},
+								{"type": "exemple", "source": [{"name": "parallèlogramme", "indexes": [0]}], "style": "flex: 1 1 5cm;"}
+							]
+						}
+					]
+				},
+				{
+					"type": "title", "name": "Losange",
+					"content": [
+						{
+							"type": "container",
+							"class": "flexobject",
+							"content": [
+								{"type": "definition", "source": [{"name": "losange", "indexes": [0]}], "style": "flex: 1 1 5cm;"},
+								{"type": "exemple", "source": [{"name": "losange", "indexes": [0]}], "style": "flex: 1 1 5cm;"}
+							]
+						},
+						{"type": "remarque", "source": [{"name": "losange", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Rectangle",
+					"content": [
+						{
+							"type": "container",
+							"class": "flexobject",
+							"content": [
+								{"type": "definition", "source": [{"name": "rectangle", "indexes": [0]}], "style": "flex: 1 1 5cm;"},
+								{"type": "exemple", "source": [{"name": "rectangle", "indexes": [0]}], "style": "flex: 1 1 5cm;"}
+							]
+						},
+						{"type": "remarque", "source": [{"name": "rectangle", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Carré",
+					"content": [
+						{
+							"type": "container",
+							"class": "flexobject",
+							"content": [
+								{"type": "definition", "source": [{"name": "carré", "indexes": [0]}], "style": "flex: 1 1 5cm;"},
+								{"type": "exemple", "source": [{"name": "carré", "indexes": [0]}], "style": "flex: 1 1 5cm;"}
+							]
+						},
+						{"type": "remarque", "source": [{"name": "carré", "indexes": [0]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Propriétés sur les quadrilatères",
+			"content": [
+				{"type": "propriete", "source": [{"name": "quadrilatère", "indexes": [0], "multiple": true}]}
+			]
+		}
+	]
+}

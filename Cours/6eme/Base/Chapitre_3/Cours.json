@@ -1,0 +1,46 @@
+{
+	"activité": "<div class=\"flexobject\"><img src=\"/Images/Cours/Act_Colis.svg\" style=\"flex: 1 2 10cm; max-width: 14cm;\"><div style=\"flex: 1 1 12cm;\"><p>Le facteur doit livrer huit colis. Leur masse est inscrite sur chacun d'eux.<ol><li>Quel est le colis le plus lourd ? Le plus léger ?</li><li>Aide le facteur à ranger ces paquets du plus léger au plus lourd.</li></ol></p></div></div>",
+	"content": [{
+			"type": "title", "name": "Comparaison",
+			"content": [
+				{
+					"type": "title", "name": "Repère gradué",
+					"content": [
+						{"type": "definition", "source": [{"name": "axe gradué", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "axe gradué", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "axe gradué", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Comparer",
+					"content": [
+						{"type": "definition", "source": [{"name": "comparer", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "comparer", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "comparer", "indexes": [0, 1]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Classer et encadrer",
+			"content": [
+				{
+					"type": "title", "name": "Classement",
+					"content": [
+						{"type": "definition", "source": [{"name": "croissant", "indexes": [0]}, {"name": "décroissant", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "classer", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Encadrement",
+					"content": [
+						{"type": "definition", "source": [{"name": "encadrer", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "encadrer", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "encadrer", "indexes": [0]}]},
+						{"type": "info", "source": [{"name": "encadrer", "indexes": [0]}]}
+					]
+				}
+			]
+		}
+	]
+}

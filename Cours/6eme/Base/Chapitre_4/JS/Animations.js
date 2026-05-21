@@ -3,7 +3,7 @@
  */
 
 // Animation perpendiculaire à l'equerre
-class Animation1 extends Animation_Data
+class Animation_Perpendiculaire1 extends Animation_Data
 {
 
     CreateObjects()
@@ -37,7 +37,7 @@ class Animation1 extends Animation_Data
 }
 
 // Animation perpendiculaire au compas
-class Animation2 extends Animation_Data
+class Animation_Perpendiculaire2 extends Animation_Data
 {
 
     CreateObjects()
@@ -99,7 +99,7 @@ class Animation2 extends Animation_Data
 }
 
 // Animation parallèle à l'equerre
-class Animation3 extends Animation_Data
+class Animation_Parallele1 extends Animation_Data
 {
 
     CreateObjects()
@@ -132,7 +132,7 @@ class Animation3 extends Animation_Data
 }
 
 // Animation parallèle au compas
-class Animation4 extends Animation_Data
+class Animation_Parallele2 extends Animation_Data
 {
     CreateObjects()
     {

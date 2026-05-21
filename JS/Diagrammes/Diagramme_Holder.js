@@ -6,14 +6,25 @@ var Scripts = [
 ]
 for (let s = 0; s < Scripts.length; s++) 
 {
-    document.write('<script src="' + "/JS/Diagrammes/" + Scripts[s] + '" charset="utf-8"></script>')
+    let script_node = document.createElement("script");
+    script_node.src = "/JS/Diagrammes/" + Scripts[s];
+    // script_node.async = false;
+    script_node.charset = "utf-8";
+    document.head.appendChild(script_node);
 }
-document.write('<script src="JS/Diagramme.js" charset="utf-8"></script>')
-window.addEventListener("load", function()
-{
-    CreateDiagrammes();
-})
-
+// document.write('<script src="JS/Diagramme.js" charset="utf-8"></script>')
+window.addEventListener("page_content_loaded", () => {
+    if (typeof CreateDiagrammes === "function") {
+        CreateDiagrammes();
+    }
+});
+// window.addEventListener("load", function()
+// {
+//     CreateDiagrammes();
+// })
+// function CreateDiagrammes()
+// {
+// }
 
 function Create_Histogramme(config)
 {

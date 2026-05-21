@@ -1,4 +1,4 @@
-document.write('<script src="/JS/Svg.js/svg.min.js" charset="utf-8"></script>')
+// document.write('<script src="/JS/Svg.js/svg.min.js" charset="utf-8"></script>')
 var Scripts = [
     "Animation_Data.js",
     // "Objects/Anim_Object.js",
@@ -16,14 +16,18 @@ var Scripts = [
 ]
 for (let s = 0; s < Scripts.length; s++) 
 {
-    document.write('<script src="' + "/JS/Animation/" + Scripts[s] + '" charset="utf-8"></script>')
+    let script_node = document.createElement("script");
+    script_node.src = "/JS/Animation/" + Scripts[s];
+    script_node.async = false;
+    script_node.charset = "utf-8";
+    document.head.appendChild(script_node);
 }
 // document.write('<script src="JS/Animations.js" charset="utf-8"></script>')
 let link = document.createElement("link");
 link.rel = "stylesheet";
 link.href = "/CSS/Animation.css"
 document.head.appendChild(link);
-window.addEventListener("page_content_loaded", () => {CreateAnimationObject()})
+window.addEventListener("page_content_loaded", () => {CreateAnimationObject();})
 
 class Animation_Gestionnaire
 {

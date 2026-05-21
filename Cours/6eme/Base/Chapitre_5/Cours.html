@@ -53,29 +53,7 @@
     .DebutTable td:last-child{
       border-right: dashed 1px black;
     }
-    .tableau_simple td, th{
-      border: solid 1px black;
-      width: auto;
-      text-align: center;
-      min-width: 80px;
-    }
-    .tableau_simple th{
-      background-color: #99da9c;
-    }
-    table th.crossed
-    {
-      background-image: linear-gradient(to bottom left,  transparent calc(50% - 1px), black, transparent calc(50% + 1px)); 
-      min-width: 120px;
-    }
-    .tableau_double td, th{
-      border: solid 1px black;
-      width: auto;
-      text-align: center;
-      min-width: 80px;
-    }
-    .tableau_double th{
-      background-color: #ec7b78;
-    }
+    
   </style>
 
 </head>
@@ -296,6 +274,17 @@
       <p>
         Tableau à simple entrée (Population en 2013) :
       </p>
+      <style>
+        .tableau_simple td, th{
+          border: solid 1px black;
+          width: auto;
+          text-align: center;
+          min-width: 80px;
+        }
+        .tableau_simple th{
+          background-color: #99da9c;
+        }
+      </style>
       <table class="tableau_simple">
         <tr>
           <th>Ville</th>
@@ -314,6 +303,17 @@
       </table>
 
       <p>Tableau à double entrée (Résultats des JO de 2016):</p>
+      <style>
+        .tableau_double td, th{
+          border: solid 1px black;
+          width: auto;
+          text-align: center;
+          min-width: 80px;
+        }
+        .tableau_double th{
+          background-color: #ec7b78;
+        }
+      </style>
       <table class="tableau_double">
         <tr>
           <th class="crossed">

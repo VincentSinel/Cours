@@ -4,7 +4,7 @@ var troisieme_base = [
 		nom: "Nombres premiers",
 		icone: 1,
 		ready : true,
-		page : "Base/Chapitre_1/Cours.html"
+		page : "Base/Chapitre_1/Cours.json"
 	},
 	{
 		id: 2,
@@ -1660,28 +1660,28 @@ var sixieme_base = [
 			nom: "Entier et décimaux",
 			icone: 1,
 			ready : true,
-			page : "Base/Chapitre_1/Cours.html"
+			page : "Base/Chapitre_1/Cours.json"
 	},
 	{
 			id: 2,
 			nom: "Premiers objets de géométrie",
 			icone: 2,
 			ready : true,
-			page : "Base/Chapitre_2/Cours.html"
+			page : "Base/Chapitre_2/Cours.json"
 	},
 	{
 			id: 3,
 			nom: "Comparaison de nombres décimaux",
 			icone: 1,
 			ready : true,
-			page : "Base/Chapitre_3/Cours.html"
+			page : "Base/Chapitre_3/Cours.json"
 	},
 	{
 			id: 4,
 			nom: "Parallèles et perpendiculaires",
 			icone: 2,
 			ready : true,
-			page : "Base/Chapitre_4/Cours.html"
+			page : "Base/Chapitre_4/Cours.json"
 	},
 	{
 			id: 5,
@@ -2447,6 +2447,7 @@ var sixieme_rogervailland = [
 var sixieme_saintexupery = [
 	{
 		id: 1,
+		group: "Chapitre 1",
 		chapter: "Partie 1",
 		nom: "Nombres entiers",
 		download: {
@@ -2463,6 +2464,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 1 Partie 1
 	{
 		id: 2,
+		group: "Chapitre 1",
 		chapter: "Partie 2",
 		nom: "Nombres décimaux",
 		icone: 16,
@@ -2479,6 +2481,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 1 Partie 2
 	{
 		id: 3,
+		group: "Chapitre 1",
 		chapter: "Partie 3",
 		nom: "Repérage et comparaison",
 		icone: 16,
@@ -2495,6 +2498,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 1 Partie 3
 	{
 		id: 4,
+		group: "Chapitre 1",
 		chapter: "Partie 4",
 		nom: "Encadrement",
 		icone: 16,
@@ -2511,6 +2515,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 1 Partie 4
 	{
 		id: 5,
+		group: "Chapitre 2",
 		chapter: "Partie 1",
 		nom: "Addition et soustraction",
 		icone: 17,
@@ -2527,6 +2532,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 2 Partie 1
 	{
 		id: 6,
+		group: "Chapitre 2",
 		chapter: "Partie 2",
 		nom: "Multiplication",
 		icone: 17,
@@ -2543,6 +2549,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 2 Partie 2
 	{
 		id: 7,
+		group: "Chapitre 2",
 		chapter: "Partie 3",
 		nom: "Division euclidienne",
 		icone: 17,
@@ -2559,6 +2566,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 2 Partie 3
 	{
 		id: 8,
+		group: "Chapitre 2",
 		chapter: "Partie 4",
 		nom: "Division décimale",
 		icone: 17,
@@ -2575,6 +2583,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 2 Partie 4
 	{
 		id: 9,
+		group: "Chapitre 3",
 		chapter: "Partie 1",
 		nom: "Fractions : Partage et repérage",
 		icone: 18,
@@ -2591,6 +2600,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 3 Partie 1
 	{
 		id: 10,
+		group: "Chapitre 3",
 		chapter: "Partie 2",
 		nom: "Fractions égales",
 		icone: 18,
@@ -2607,6 +2617,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 3 Partie 2
 	{
 		id: 11,
+		group: "Chapitre 3",
 		chapter: "Partie 3",
 		nom: "Additions de fractions",
 		icone: 18,
@@ -2623,6 +2634,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 3 Partie 3
 	{
 		id: 12,
+		group: "Chapitre 3",
 		chapter: "Partie 4",
 		nom: "Fractions d'une quantité",
 		icone: 18,
@@ -2639,6 +2651,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 3 Partie 4
 	{
 		id: 13,
+		group: "Chapitre 4",
 		chapter: "Partie 1",
 		nom: "Reconnaître une situation de proportionnalité",
 		icone: 19,
@@ -2655,6 +2668,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 4 Partie 1
 	{
 		id: 14,
+		group: "Chapitre 4",
 		chapter: "Partie 2",
 		nom: "Utiliser les propriétés de la proportionnalité",
 		icone: 19,
@@ -2671,6 +2685,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 4 Partie 2
 	{
 		id: 15,
+		group: "Chapitre 4",
 		chapter: "Partie 3",
 		nom: "Pourcentages",
 		icone: 19,
@@ -2687,6 +2702,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 4 Partie 3
 	{
 		id: 16,
+		group: "Chapitre 4",
 		chapter: "Partie 4",
 		nom: "Représentations à l'échelle",
 		icone: 19,
@@ -2704,6 +2720,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 4 Partie 4
 	{
 		id: 17,
+		group: "Chapitre 5",
 		chapter: "Partie 1",
 		nom: "Droites et segments",
 		icone: 20,
@@ -2720,6 +2737,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 5 Partie 1
 	{
 		id: 18,
+		group: "Chapitre 5",
 		chapter: "Partie 2",
 		nom: "Position relatives de droites",
 		icone: 20,
@@ -2736,6 +2754,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 5 Partie 2
 	{
 		id: 19,
+		group: "Chapitre 6",
 		chapter: "Partie 1",
 		nom: "Cercles et disques",
 		icone: 21,
@@ -2752,6 +2771,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 6 Partie 1
 	{
 		id: 20,
+		group: "Chapitre 6",
 		chapter: "Partie 2",
 		nom: "Périmètre du cercle",
 		icone: 21,
@@ -2768,6 +2788,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 6 Partie 2
 	{
 		id: 21,
+		group: "Chapitre 6",
 		chapter: "Partie 3",
 		nom: "Médiatrice",
 		icone: 21,
@@ -2784,6 +2805,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 6 Partie 3
 	{
 		id: 22,
+		group: "Chapitre 7",
 		chapter: "Partie 1",
 		nom: "Angles",
 		icone: 22,
@@ -2800,6 +2822,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 7 Partie 1
 	{
 		id: 23,
+		group: "Chapitre 7",
 		chapter: "Partie 2",
 		nom: "Angles particuliers et bissectrice",
 		icone: 22,
@@ -2816,6 +2839,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 7 Partie 2
 	{
 		id: 24,
+		group: "Chapitre 8",
 		chapter: "Partie 1",
 		nom: "Symétrie axiale",
 		icone: 23,
@@ -2832,6 +2856,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 8 Partie 1
 	{
 		id: 25,
+		group: "Chapitre 8",
 		chapter: "Partie 2",
 		nom: "Propriétés de la symétrie axiale",
 		icone: 23,
@@ -2848,6 +2873,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 8 Partie 2
 	{
 		id: 26,
+		group: "Chapitre 8",
 		chapter: "Partie 3",
 		nom: "Axes de symétrie",
 		icone: 23,
@@ -2864,6 +2890,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 8 Partie 3
 	{
 		id: 27,
+		group: "Chapitre 9",
 		chapter: "Partie 1",
 		nom: "Tracer un triangle (Avec 3 longueurs)",
 		icone: 24,
@@ -2878,6 +2905,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 9 Partie 1
 	{
 		id: 28,
+		group: "Chapitre 9",
 		chapter: "Partie 2",
 		nom: "Tracer un triangle (Avec deux grandeurs)",
 		icone: 24,
@@ -2892,6 +2920,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 9 Partie 2
 	{
 		id: 29,
+		group: "Chapitre 9",
 		chapter: "Partie 3",
 		nom: "Triangles particuliers",
 		icone: 24,
@@ -2908,6 +2937,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 9 Partie 3
 	{
 		id: 30,
+		group: "Chapitre 9",
 		chapter: "Partie 4",
 		nom: "Médiatrices dans le triangle",
 		icone: 24,
@@ -2924,6 +2954,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 9 Partie 4
 	{
 		id: 31,
+		group: "Chapitre 10",
 		chapter: "Partie 1",
 		nom: "Périmètre et aire",
 		icone: 25,
@@ -2941,6 +2972,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 10 Partie 1
 	{
 		id: 32,
+		group: "Chapitre 10",
 		chapter: "Partie 2",
 		nom: "Formulaire des périmètres et aires",
 		icone: 25,
@@ -2957,6 +2989,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 10 Partie 2
 	{
 		id: 33,
+		group: "Chapitre 11",
 		chapter: "Partie 1",
 		nom: "Se repérer dans l'espace",
 		icone: 26,
@@ -2974,6 +3007,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 11 Partie 1
 	{
 		id: 34,
+		group: "Chapitre 11",
 		chapter: "Partie 2",
 		nom: "Solides",
 		icone: 26,
@@ -2990,6 +3024,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 11 Partie 2
 	{
 		id: 35,
+		group: "Chapitre 11",
 		chapter: "Partie 3",
 		nom: "Volumes",
 		icone: 26,
@@ -3007,6 +3042,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 11 Partie 3
 	{
 		id: 36,
+		group: "Chapitre 12",
 		chapter: "Partie 1",
 		nom: "Longueurs",
 		icone: 27,
@@ -3023,6 +3059,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 12 Partie 1
 	{
 		id: 37,
+		group: "Chapitre 12",
 		chapter: "Partie 2",
 		nom: "Masse",
 		icone: 27,
@@ -3039,6 +3076,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 12 Partie 2
 	{
 		id: 39,
+		group: "Chapitre 12",
 		chapter: "Partie 3",
 		nom: "Durées",
 		icone: 27,
@@ -3055,6 +3093,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 12 Partie 3
 	{
 		id: 40,
+		group: "Chapitre 13",
 		chapter: "Partie 1",
 		nom: "Tableau de données",
 		icone: 28,
@@ -3072,6 +3111,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 13 Partie 1
 	{
 		id: 41,
+		group: "Chapitre 13",
 		chapter: "Partie 2",
 		nom: "Diagrammes",
 		icone: 28,
@@ -3088,6 +3128,7 @@ var sixieme_saintexupery = [
 	}, // Chapitre 13 Partie 2
 	{
 		id: 42,
+		group: "Chapitre 13",
 		chapter: "Partie 3",
 		nom: "Probabilité",
 		icone: 28,

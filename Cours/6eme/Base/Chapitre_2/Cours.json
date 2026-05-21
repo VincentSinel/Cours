@@ -1,0 +1,60 @@
+{
+	"activité": "<div class=\"flexobject\"><div style=\"flex: 1 2 10cm; max-width: 14cm;\"><img src=\"/Images/Cours/Act_Terrain_football.svg\"></div><div style=\"flex: 1 1 12cm;\"><p><ol><li>Les points A, B, C et D représentent les positions de quatre élèves sur le terrain de football.<ol type=\"a\"><li>Un joueur E peut-il être aligné avec B et D ? Si oui, où est-il possible de le placer ? Placer le point E.</li><li>Un joueur F peut-il être aligné avec A et D ainsi qu'avec B et C ? Si oui, placer le joueur. On dit alors que (AD) et (BC) sont _______ en F.</li><li>Placer le joueur G aligné avec A et B ainsi qu'avec C et D.</li></ol></li><li>Que signifie les notations suivantes :<ol type=\"a\"><li>$[MN]$</li><li>$(MN)$</li><li>$(MN]$</li><li>$[MN)$</li><li>$MN$</li></ol></li></ol></p></div></div>",
+	"content": [{
+			"type": "title", "name": "Vocabulaire",
+			"content": [
+				{
+					"type": "title", "name": "Points et segments",
+					"content": [
+						{"type": "definition", "source": [{"name": "point", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "point", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "point", "indexes": [0]}]},
+						{"type": "definition", "source": [{"name": "segment", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "segment", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "segment", "indexes": [0,1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Droites et demi-droites",
+					"content": [
+						{"type": "definition", "source": [{"name": "droite", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "droite", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "droite", "indexes": [0, 1, 2, 3]}]},
+						{"type": "definition", "source": [{"name": "demi-droite", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "demi-droite", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "demi-droite", "indexes": [0, 1, 2, 3]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Points particuliers",
+			"content": [
+				{
+					"type": "title", "name": "Droite sécante",
+					"content": [
+						{"type": "definition", "source": [{"name": "sécantes", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "sécantes", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "sécantes", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Distance et milieu",
+					"content": [
+						{"type": "definition", "source": [{"name": "distance", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "distance", "indexes": [0]}]},
+						{"type": "definition", "source": [{"name": "milieu", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "milieu", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Appartenance",
+					"content": [
+						{ "type": "definition", "source": [{"name": "appartient", "indexes": [0]}]},
+						{ "type": "exemple", "source": [{"name": "appartient", "indexes": [0]}]}
+					]
+				}
+			]
+		}
+	]
+}

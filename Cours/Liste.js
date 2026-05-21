@@ -10,7 +10,8 @@ var lastselected = null;
 
 var SelectedChapter = null
     
-frame.addEventListener("load", function() { ReajustIframe() })
+frame.addEventListener("load", function() { LoadFrame() })
+frame.contentWindow.addEventListener("page_content_loaded", function() { ReajustIframe(); })
 window.addEventListener("load", function(){ ShowCollegeSelect(); CreatePDFButton(); GetCurrentHash(); })
 window.addEventListener("resize", function() { ReajustIframe() })
 
@@ -20,39 +21,68 @@ function ReajustIframe()
     frame.style.height = frame.contentWindow.document.body.scrollHeight + 120 + 'px';
 }
 
-function ClicChapter(path, a, element, folder)
+function ClicChapter(folder, a, element)
 {
     document.location.hash = College_Selected + "#" + folder + "#" + element.id.toString();
 
     SelectedChapter = element;
     document.getElementById("noiframe").style.display = "none"
-    frame.src = path
+
+    if (element.page.endsWith(".html"))
+        frame.src = '/Cours/' + folder + '/' + element.page
+    else
+        frame.src = '/Cours/PageCours.html#' + folder + '/' + element.page.substr(0, element.page.length - 11)
+
+    let iframedoc = frame.contentDocument || frame.contentWindow.document;
+    if (iframedoc.readyState == "complete")
+        LoadFrame();
+
     if (lastselected != null)
         lastselected.classList.remove("selected")
     lastselected = a
     lastselected.classList.add("selected")
     window.scrollTo(0, 0);
     menu.classList.remove("asideshow");
-    frame.addEventListener( "load", function() {
-        SetDownloadButton(path, element);
-        SetTitle(element)
-    });
+}
+
+function LoadFrame()
+{
+    if (SelectedChapter == null) return;
+    SetDownloadButton(SelectedChapter.page, SelectedChapter);
+    SetTitle(SelectedChapter)
+    ReajustIframe()
+    frame.contentWindow.addEventListener("page_content_loaded", function() { ReajustIframe(); })
 }
 
 function SetTitle(chapter)
 {
     let title = "";
     if (chapter.hasOwnProperty("chapter"))
-    {
         title = chapter.chapter;
+    else
+        title = "Chapitre " + chapter.id.toString();
+    let iframedoc = frame.contentDocument || frame.contentWindow.document;
+    iframedoc.getElementById("ChapitreNumero").innerHTML = title;
+    iframedoc.getElementById("ChapitreNom").innerHTML = "- " + chapter.nom;
+    let element = iframedoc.getElementById("ChapitreParent")
+    if (chapter.hasOwnProperty("group"))
+    {
+        if (element)
+        {
+            element.innerHTML = chapter.group;
+            element.classList.remove("hidden");
+        }
+        else
+            element.classList.add("hidden");
     }
     else
     {
-        title = "Chapitre " + chapter.id.toString();
+        if (element)
+        {
+            element.classList.add("hidden");
+        }
     }
-    frame.contentDocument.getElementById("ChapitreNumero").innerHTML = title;
-    frame.contentDocument.getElementById("ChapitreNom").innerHTML = "- " + chapter.nom;
-    frame.contentDocument.title = title + " - " + chapter.nom;
+    iframedoc.title = title + " - " + chapter.nom;
 }
 
 function CreatePDFButton()
@@ -236,10 +266,10 @@ function SetDownloadButton(path, element)
     }
     else
     {
-    var pageUrl = encodeURIComponent("https://vsinel.fr" + path);
-    var opts = ['save-link=' + pageUrl, 'pageOrientation=portrait', 'pageSize=a4', 'pageMargin=2cm'];
-    but_default.href = 'https://www.sejda.com/html-to-pdf?' + opts.join('&');
-    but_default.classList.remove("deactivate")
+        var pageUrl = encodeURIComponent("https://vsinel.fr" + path);
+        var opts = ['save-link=' + pageUrl, 'pageOrientation=portrait', 'pageSize=a4', 'pageMargin=2cm'];
+        but_default.href = 'https://www.sejda.com/html-to-pdf?' + opts.join('&');
+        but_default.classList.remove("deactivate")
     }
 }
 
@@ -261,6 +291,9 @@ function ShowCollegeSelect()
     document.getElementById("HoverMenu").style.display = "flex";
 
     document.getElementById("noiframe").style.display = "block"
+
+    SelectedChapter = null;
+
     frame.src = ""
     frame.style.height = 0 + 'px';
 }
@@ -341,7 +374,8 @@ function CreateDiv(parent, name, folder)
         if (element.ready)
         {
             a.onclick = function() { 
-                ClicChapter('/Cours/' + folder + '/' + element.page, this, element, folder); }
+                ClicChapter(folder, this, element);
+            }
         }
         
         var b = document.createElement("div");
@@ -408,7 +442,7 @@ function SelectChapter(classe, folder, id)
         if (cours.id == id)
         {
             let element = document.getElementById("Cours" + folder).children[i];
-            ClicChapter('/Cours/' + folder + '/' + cours.page, element, cours, folder); 
+            ClicChapter(folder, element, cours); 
             return
         }
     }

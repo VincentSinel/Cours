@@ -5,7 +5,7 @@
 			"type": "title", "name": "Nombres entiers",
 			"content": [
 				{
-					"type": "title", "name": "Chiffres et nombres :",
+					"type": "title", "name": "Chiffres et nombres",
 					"content": [
 						{ "type": "definition", "source": [{"name": "système décimal", "indexes": [0]}]},
 						{ "type": "remarque", "source": [{"name": "système décimal", "indexes": [0, 1]}]},

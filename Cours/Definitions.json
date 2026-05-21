@@ -42,6 +42,21 @@
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">angle</span> est une partie du plan limitée par deux demi-droites de même origine."
+		],
+		"exemples": [
+			"<img src=\"/Images/Cours/Angle1.svg\" style=\"max-width: 7cm;\">"
+		],
+		"remarques": [
+			"Dans chacun des cas, le <b>sommet</b> de l'angle est <span class=\"CRed\">O</span> et les deux <b>demi-droites</b> qui forme l'angle sont [<span class=\"CRed\">O</span>A) et [<span class=\"CRed\">O</span>B).",
+			"Pour mesurer un angle, on utilise un rapporteur."
+		],
+		"infos": [
+			"<table class=\"proportionnaltable width\"><tr><th>Angle plat</th><th>Angle droit</th><th>Angle nul</th></tr><tr><td><img src=\"/Images/Cours/Angle2.svg\" style=\"max-width: 7cm;\"></td> <td><img src=\"/Images/Cours/Angle3.svg\" style=\"max-height: 3cm;\"></td> <td><img src=\"/Images/Cours/Angle4.svg\" style=\"max-width: 7cm;\"></td> </tr><tr><td>180°</td><td>90°</td><td>0°</td></tr></table>",
+			"<p>Dans le cas générales, on classe les angles en deux catégories :</p><table class=\"proportionnaltable width\"><tr><th>Angle <span class=\"CBlue\">Aigu</span></th><th>Angle <span class=\"CRed\">Obtus</span></th></tr><tr><td style=\"width: 200px;\"><img src=\"/Images/Cours/Angle5.svg\" style=\"max-height: 3.5cm;\"></td><td style=\"width: 200px;\"><img src=\"/Images/Cours/Angle6.svg\" style=\"max-height: 3.5cm;\"></td></tr><tr><td>Angle de moins de 90°</td><td>Angle de plus de 90°</td></tr></table>",
+			"<p>Il existe deux notation d'angle en fonction de la partie du plan que l'on souhaite nommer. Lorsque l'angle est plus petit ou égale à un angle plat et lorsque qu'il est plus grand.</p><table class=\"proportionnaltable width\"><tr><th>Angle inférieur à un demi-tour</th><th>Angle supérieur à un demi-tour</th></tr><tr><td><img src=\"/Images/Cours/Angle7.svg\" style=\"max-height: 4cm;\"></td><td><img src=\"/Images/Cours/Angle8.svg\" style=\"max-height: 4cm;\"></td></tr><tr><td><img src=\"/Images/Cours/Nom_Angle1.svg\" style=\"max-width: 1cm;\"></td><td><img src=\"/Images/Cours/Nom_Angle2.svg\" style=\"max-width: 1cm;\"></td></tr></table>",
+			"<p>Lorsque l'on souhaite mesure un angle, on place le centre du rapporteur sur le sommet de l'angle ; On aligne l'un des 0° avec l'un des côté de l'angle et on mesure à partir de la position de la seconde demi-droite.</p><div class=\"flexobject\"><img src=\"/Images/Cours/Rapporteur1.svg\" style=\"flex: 1 1 4cm;max-width: 12cm;\"><img src=\"/Images/Cours/Rapporteur2.svg\" style=\"flex: 1 1 4cm;max-width: 12cm;\"></div><p>En fonction du 0° choisi, la mesure de l'angle se mesure avec les graduation à l'intérieur ou à l'extérieur du rapporteur.</p>",
+			"<div class=\"flexobject\"><div style=\"flex: 1 1 4cm;max-width: 12cm;\"><ol><li value=\"1\">On place le rapporteur sur le sommet</li></ol><img src=\"/Images/Cours/Construction1.svg\" ></div><div style=\"flex: 1 1 4cm;max-width: 10cm;\"><ol><li value=\"2\">On aligne le rapporteur avec la demi-droite et on mesure 70°</li></ol><img src=\"/Images/Cours/Construction2.svg\"></div><div><ol><li value=\"3\">On trace la demi droite.</li></ol><img src=\"/Images/Cours/Construction3.svg\" style=\"flex: 1 1 4cm;max-width: 6cm;\"></div></div>",
+			"<div style=\"text-align: center; border: solid 3px black; border-radius: 10px;width: fit-content; background-color: #FFFF8F33;\">Construction d'un angle de 61° :<div id=\"Animation_Angle\" class=\"animation\" width=\"480\" height=\"360\"></div></div>"
 		]
 	},"antécédent": {
 		"tags": [],
@@ -59,6 +74,9 @@
 		"tags": [],
 		"definitions": [
 			"Lorsqu'un point <b>appartient</b> à une figure géométrique, on note cela avec le symbole $\\in$ ou si il <b>n'appartient pas</b>, on note $\\notin$"
+		],
+		"exemples": [
+			"<style>.appartient div{display: inline-block;width: 8cm;}.appartient div:first-child{display: inline-block;width: 3cm;}</style><div class=\"flexobject\"><img src=\"/Images/Cours/Appartenance.svg\" style=\"flex: 1 1 4cm; max-width: 7cm;\"><div style=\"flex: 1 1 4cm\">Ici on peut dire que :<br><ul><li><div class=\"appartient\"><div>$C \\in (AB)$</div><div>C appartient à la droite (AB)</div></div></li><li><div class=\"appartient\"><div>$B \\in [AC]$</div><div>B appartient au segment [AC]</div></div></li><li><div class=\"appartient\"><div>$C \\notin (AB]$</div><div>C n'appartient pas à la demi-droite (AB]</div></div></li><li><div class=\"appartient\"><div>$D \\notin (AB)$</div><div>D n'appartient pas à la droite (AB)</div></div></li><li><div class=\"appartient\"><div>$A \\notin [BC]$</div><div>A n'appartient pas au segment [BC]</div></div></li></ul></div></div>"
 		]
 	},"arc de cercle": {
 		"tags": [],
@@ -75,6 +93,12 @@
 		"definitions": [
 			"Sur une demi-droite graduée on trouve :<ul><li>Une <span class=\"CRed\">unité de longueur</span></li><li>Une <span class=\"CRed\">origine</span></li></ul>On peut repérer la position de point à l'aide d'un nombre appelé <span class=\"CRed\">abscisse</span>.",
 			"Une <span class=\"CRed\">droite graduée</span> de façon régulière est une droite qui possède un <b>sens</b>, une <b>origine</b> et une <b>unité de longueur</b>."
+		],
+		"remarques": [
+			"Sur la droite gradué, plus un nombre est à droite, plus il est grand."
+		],
+		"exemples": [
+			"<img src=\"/Images/Cours/Axe graduee 1.svg\"><p>L'origine de cette demi-droite graduée a pour abscisse 0.<ul><li>Le point A a pour abscisse 2,0 : on écrit $A(2)$.</li><li>Le point B a pour abscisse 3,5 : on écrit $B(3,5)$.</li><li>Le point C a pour abscisse 2,8 : on écrit $C(2,8)$.</li></ul></p>"
 		]
 	},"bissectrice": {
 		"tags": [],
@@ -94,6 +118,12 @@
 		"definitions": [
 			"Un <span class=\"CRed\">carré</span> est un quadrilatère qui a quatre côtés de même longueur et quatre angle droit.",
 			"Le carré d'un nombre <span class=\"CRed\">$a$</span> est le produit de ce nombre par lui-même. On le note $\\textcolor{#e53935}{a}^2=\\textcolor{#e53935}{a}\\times \\textcolor{#e53935}{a}$ &nbsp;&nbsp; lu \"<span class=\"CRed\">$a$</span> au carré\""
+		],
+		"exemples":[
+			"<img src=\"/Images/Cours/Quad5.svg\" style=\"max-height: 4cm;\">"
+		],
+		"remarques": [
+			"Un carré est un losange et un rectangle particulier."
 		]
 	},"carré parfait": {
 		"tags": [],
@@ -113,6 +143,19 @@
 		"proprietes": [
 			"Tous les points d'un cercle de centre O sont à la même distance du point O.",
 			"Deux points situés à la même distance d'un point O appartient au un même cercle de centre O."
+		],
+		"exemples": [
+			"<img src=\"/Images/Cours/Cercle1.svg\" style=\"max-width: 5cm;\"><br>",
+			"<img src=\"/Images/Cours/Cercle2.svg\" style=\"max-width: 5cm;\"><br>"
+		],
+		"infos": [
+			"<div class=\"flexobject\"><div style=\"flex: 1 1 4cm; max-width: 6cm;\"><img src=\"/Images/Cours/Cercle4.svg\"><div style=\"text-align: center;\"><b>On sait que</b> les points M et N sont sur le cercle.</div></div><div class=\"fleche_propriete\"><image src=\"/Images/Cours/Fleche_propriete.svg\"></image><p>D'après la propriété précédente </p></div><div style=\"flex: 1 1 4cm; max-width: 6cm;\"><img src=\"/Images/Cours/Cercle5.svg\" ><div style=\"text-align: center;\">OM = ON</div></div></div><br>",
+			"<div class=\"flexobject\"><div style=\"flex: 1 1 4cm; max-width: 6cm;\"><img src=\"/Images/Cours/Cercle6.svg\"><div style=\"text-align: center;\"><b>On sait que</b> OM = ON.</div></div><div class=\"fleche_propriete\"><image src=\"/Images/Cours/Fleche_propriete.svg\"></image><p>D'après la propriété précédente </p></div><div style=\"flex: 1 1 4cm; max-width: 6cm;\"><img src=\"/Images/Cours/Cercle4.svg\" ><div style=\"text-align: center;\">M et N appartiennent au même cercle de centre O.</div></div></div><br>"
+		]
+	},"classer": {
+		"tags": [],
+		"exemples": [
+			"On peut ranger les valeurs suivantes : 0,89 ; 0,7 ; 2,47 ; 1,5 ; 1,03<br><ul><li>Par ordre <b>croissant</b> :<br>$0,7<0,89<1,03<1,5<2,47$</li><li>Par ordre <b>décroissant</b> :<br>$2,47>1,5>1,03>0,89>0,7$</li></ul>"
 		]
 	},"coefficient de proportionnalité": {
 		"tags": [],
@@ -133,6 +176,13 @@
 			"Un nombre <b>négatif</b> est toujours plus petit qu'un nombre <b>positif</b>.",
 			"De deux nombres <b>positifs</b>, le plus grand est celui qui a la plus <i>grande</i> <b>distance à zéro</b>.",
 			"De deux nombres <b>négatifs</b>, le plus grand est celui qui à la plus <i>petite</i> <b>distance à zéro</b>."
+		],
+		"remarques": [
+			"Pour comparer, on utilise les symboles suivants :<ul><li>$>$  &emsp; Supérieur (Strict)</li><li>$<$  &emsp; Inférieur (Strict)</li><li>$=$  &emsp; Égale</li><li>$\\neq$ &emsp; Non égale</li><li>$\\ge$ &emsp; Supérieur ou égale</li><li>$\\le$ &emsp; Inférieur ou égale</li></ul>"
+		],
+		"exemples": [
+			"$2<15$ &emsp; se lit \"2 est <b>inférieur</b> à 15\".",
+			"$3>2,5$ &emsp; se lit \"3 est <b>supérieur</b> à 2,5\"."
 		]
 	},"commutative": {
 		"tags": [],
@@ -207,7 +257,7 @@
 	},"degré": {
 		"tags": [],
 		"definitions": [
-			"Pour mesurer un angle, on utilise le <span class=\"CRed\">degré</span> comme unité. Il se note avec le symbole <b>°</b>."
+			"Pour mesurer un angle, on utilise le <span class=\"CRed\">degré</span> comme unité. Il se note avec le symbole <span class=\"CRed\"><b>°</b></span>."
 		]
 	},"dénominateur": {
 		"tags": [],
@@ -218,6 +268,15 @@
 		"tags": [],
 		"definitions": [
 			"Une <span class=\"CRed\">demi-droite</span> commence d'un point et se prolonge dans une seul direction."
+		],
+		"remarques": [
+			"Une demi-droite se note avec un crochet et une parenthèses : [GH) ou (HG]",
+			"Le point de départ est appelé <b>origine</b> de la demi-droite. Ici c'est G.",
+			"Le crochet \"[\" représente l'arrêt de la demi-droite et la parenthèse \")\" sa continuité.",
+			"Il existe plusieurs manière de définir une demi-droite.<ul><li style=\"min-height: 2cm;\"><div class=\"flexobject\" style=\"justify-content: flex-start;\"><div style=\"flex: 0 1 6cm; max-width: 6cm;\">A partir de deux points, on la note $[GH)$.</div><img src=\"/Images/Cours/DemiDroite1.svg\" style=\"flex: 0 1 4cm; max-width: 6cm;\"></div></li><li style=\"min-height: 2cm;\"><div class=\"flexobject\" style=\"justify-content: flex-start;\"><div style=\"flex: 0 1 6cm; max-width: 6cm;\">A partir d'un point et d'une <b>direction</b> $[Ts)$.</div><img src=\"/Images/Cours/DemiDroite2.svg\" style=\"flex: 0 1 4cm; max-width: 6cm;\"></div></li></ul>"
+		],
+		"exemples": [
+			"<img src=\"/Images/Cours/DemiDroite1.svg\" style=\"flex: 1 1 4cm; max-height: 1cm;\">"
 		]
 	},"développer": {
 		"tags": [],
@@ -228,22 +287,43 @@
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">diagramme cartésien</span> est un repère dans lequel on représente les valeurs par des points reliés entre eux."
+		],
+		"exemples": [
+			"<div class=\"flexobject\"><div id=\"cartesien1\" style=\"flex: 0 1 5cm;\"></div><div style=\"flex: 1 1 5cm;\">Diagramme cartésien montrant l'évolution de la vitesse d'Usain Bolt en fonction de la distance parcourue en 2009 sur 100 m.<br>On peut lire par exemple que à 30 m, sa vitesse était de 11 m/s.</div></div>"
+		],
+		"remarques": [
+			"Ce type de diagramme permet de représenter un tableau à simple entrée."
 		]
 	},"diagramme circulaire": {
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">diagramme en circulaires</span> est composé d'un disque découpé en secteurs dont l'angle est proportionnel à l'effectif qu'il représente."
+		],
+		"exemples": [
+			"<div class=\"flexobject\"><div id=\"circulaire1\" style=\"flex: 0 1 5cm;\"></div><div style=\"flex: 1 1 5cm;\">Diagramme circulaire de la population mondiale par continent en 2022.<br>Ici on peut voir que c'est l'Asie qui regroupe la plus grande partie de la population mondiale.</div></div>"
+		],
+		"remarques": [
+			"Ce type de diagramme permet de représenter un tableau à simple entrée."
 		]
 	},"diagramme en bâtons": {
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">diagramme en bâtons</span> (ou en barres) est composé de bâtons de même largeur et de hauteur proportionnelle aux effectifs qu'ils représentent."
+		],
+		"exemples": [
+			"<div class=\"flexobject\"><div id=\"baton1\" style=\"flex: 1 1 5cm;\"></div><div style=\"flex: 1 1 5cm;\">Diagramme en bâtons de la répartition de la population de la france et des pays voisin en 2018.</div></div>"
+		],
+		"remarques": [
+			"Ce type de diagramme permet de représenter un tableau à simple entrée."
 		]
 	},"diamètre": {
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">diamètre</span> est une corde particulière qui passe par le centre du cercle.",
 			"<b><u><i>LE</i></u></b> <span class=\"CRed\">diamètre</span> d'un cercle est la longueur commune à tous les diamètres."
+		],
+		"remarques": [
+			"Il existe une infinité de diamètre."
 		]
 	},"différence": {
 		"tags": [],
@@ -254,6 +334,12 @@
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">disque</span> de centre O est formé de tous les points à une distance inférieur ou égale à un certain rayon du point O."
+		],
+		"remarques": [
+			"Cela correspond à l'intérieur du cercle."
+		],
+		"exemples": [
+			"<img src=\"/Images/Cours/Cercle3.svg\" style=\"max-width: 5cm;\">"
 		]
 	},"distance": {
 		"tags": [],
@@ -261,6 +347,10 @@
 			"La <span class=\"CRed\">distance</span> entre deux points est la longueur du plus court chemin entre ces deux points. C'est la longueur du segment qui joint ces deux points.",
 			"La <b>distance</b> d'un point à une droite est <b>longueur du plus court chemin</b> entre ce point et la droite.",
 			"La distance d'un point A à une droite $(d)$ est la longueur du segment reliant le point A au <b>pied de la perpendiculaire</b> à $(d)$ passant par A."
+		],
+		"exemples": [
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Distance.svg\" style=\"flex: 1 1 4cm; max-width: 7cm;\"><div style=\"flex: 1 1 4cm;\">La distance entre le point A et B est 2,5cm.<br>On note la longeur : AB = 2,5cm</div></div><br>",
+			"<div class=\"flexobject\"><div style=\"flex: 1 1 6cm; max-width: 10cm;\">La distance du point A à la droite $(d)$ est la longueur AH.</div><img src=\"/Images/Cours/Distance_Perpendiculaire.svg\" style=\"flex: 1 1 3cm; max-width: 6cm;\"></div>"
 		]
 	},"distance à zéro": {
 		"tags": ["valeur absolue"],
@@ -328,6 +418,15 @@
 		"tags": [],
 		"definitions": [
 			"Une <span class=\"CRed\">droite</span> est une ligne <b>illimitée</b> qui se prolonge des deux côtés."
+		],
+		"remarques": [
+			"Une droite se note avec des parenthèses : (MN)",
+			"Une droite a deux <b>directions</b> que l'on définit avec des lettres minuscules.",
+			"Il existe plusieurs manière de définir une droite.<ul><li style=\"min-height: 2cm;\"><div class=\"flexobject\" style=\"justify-content: flex-start;\"><div style=\"flex: 0 1 6cm; max-width: 6cm;\">A partir de deux points, on la note (MN).</div><img src=\"/Images/Cours/Droite1.svg\" style=\"flex: 0 1 4cm; max-width: 6cm;\"></div></li><li style=\"min-height: 2cm;\"><div class=\"flexobject\" style=\"justify-content: flex-start;\"><div style=\"flex: 0 1 6cm; max-width: 6cm;\">A partir d'un nom, ici $(d)$.</div><img src=\"/Images/Cours/Droite4.svg\" style=\"flex: 0 1 4cm; max-width: 6cm;\"></div></li><li style=\"min-height: 2cm;\"><div class=\"flexobject\" style=\"justify-content: flex-start;\"><div style=\"flex: 0 1 6cm; max-width: 6cm;\">A partir de deux <b>directions</b>, ici $(zp)$.</div><img src=\"/Images/Cours/Droite2.svg\" style=\"flex: 0 1 4cm; max-width: 6cm;\"></div></li><li style=\"min-height: 2cm;\"><div class=\"flexobject\" style=\"justify-content: flex-start;\"><div style=\"flex: 0 1 6cm; max-width: 6cm;\">A partir d'une <b>direction</b> et d'un point, ici $(wK)$.</div><img src=\"/Images/Cours/Droite3.svg\" style=\"flex: 0 1 4cm; max-width: 6cm;\"></div></li></ul>",
+			"Par deux points distincts passe une <b>unique</b> droite."
+		],
+		"exemples": [
+			"<img src=\"/Images/Cours/Droite1.svg\" style=\"flex: 1 1 4cm; max-height: 1cm;\">"
 		]
 	},"durée": {
 		"tags": [],
@@ -362,6 +461,15 @@
 		"tags": [],
 		"definitions": [
 			"<span class=\"CRed\">Encadrer</span> un nombre, c'est trouver un nombre plus petit et un nombre plus grand que ce nombre."
+		],
+		"remarques": [
+			"La différence entre les deux nombres trouvé est appelé l'<span class=\"CRed\">amplitude</span>."
+		],
+		"exemples": [
+			"On peut encadrer 56 a la dizaine près entre 50 et 60 :<br>$50<56<60$"
+		],
+		"infos": [
+			"<style>.encadrement{text-align: center;}.encadrement th{border: solid 3px var(--SectionSecondaire);background-color: var(--Cviolet);color: white;}.encadrement td{border: solid 3px var(--SectionSecondaire);}.encadrement td,th{width: auto;line-height: 40px;}</style><table class=\"encadrement\"><tr><th>Encadrement de 7,846</th><th>Amplitude</th><th>Valeurs approchées</th></tr><tr><td>$\\textcolor{#e53935}{7}<7,846<\\textcolor{#e53935}{8}$</td><td>1</td><td><span class=\"CRed\">7</span> et <span class=\"CRed\">8</span> (approchées à l'unité près)</td></tr><tr><td>$\\textcolor{#039be5}{7,8}<7,846<\\textcolor{#039be5}{7,9}$</td><td>0,1</td><td><span class=\"CBlue\">7,8</span> et <span class=\"CBlue\">7,9</span> (approchées au dixième près)</td></tr><tr><td>$\\textcolor{#43a047}{7,84}<7,846<\\textcolor{#43a047}{7,85}$</td><td>0,01</td><td><span class=\"CGreen\">7,84</span> et <span class=\"CGreen\">7,85</span> (approchées au centième près)</td></tr></table>"
 		]
 	},"entier": {
 		"tags": [],
@@ -585,6 +693,12 @@
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">losange</span> est un quadrilatère qui a quatre côtés de même longueur."
+		],
+		"exemples": [
+			"<img src=\"/Images/Cours/Quad3.svg\" style=\"max-height: 4cm;\">"
+		],
+		"remarques": [
+			"Un losange est un parallèlogramme particulier."
 		]
 	},"médiane": {
 		"tags": [],
@@ -604,6 +718,9 @@
 		"tags": [],
 		"definitions": [
 			"Le <span class=\"CRed\">milieu</span> I d'un segment [RS] est le point tel que :<br><ul><li>I appartient au segment [RS]</li><li>I est à égale distance des points R et S</li></ul>"
+		],
+		"exemples": [
+			"<img src=\"/Images/Cours/Milieu.svg\" style=\"flex: 1 1 4cm; max-width: 4cm;\">"
 		]
 	},"moyenne": {
 		"tags": [],
@@ -666,11 +783,22 @@
 		"proprietes": [
 			"<b>Si</b> deux droites sont parallèles à une même troisième droite, <b>alors</b> ces droites sont parallèles entre elles.",
 			"<b>Si</b> deux droites sont perpendiculaires à une même troisième droite, <b>alors</b> ces droites sont parallèles entre elles."
+		],
+		"remarques": [
+			"Lorsque deux droites sont confondues (qu'elles sont superposées), on dit aussi qu'elles sont parallèles."
+		],
+		"exemples": [
+			"<div class=\"flexobject\"><div style=\"flex: 1 1 6cm; max-width: 10cm;\">$(d)$ et $(d')$ sont parallèles, on note cela $(d)\\parallel(d')$</div><img src=\"/Images/Cours/Parallèles.svg\" style=\"flex: 1 1 2cm; max-width: 4cm;\"></div>",
+			"<div class=\"flexobject\"><div style=\"flex: 1 1 6cm; max-width: 10cm;\">$\\textcolor{#43a047}{(d_1)}\\parallel\\textcolor{#7C4DA5}{(d_3)}$ et $\\textcolor{#e53935}{(d_2)}\\parallel\\textcolor{#7C4DA5}{(d_3)}$ donc $\\textcolor{#43a047}{(d_1)}\\parallel\\textcolor{#e53935}{(d_2)}$</div><img src=\"/Images/Cours/Propriete_parallele1.svg\" style=\"flex: 1 1 3cm; max-width: 6cm; padding-bottom: 10px;\"></div>",
+			"<div class=\"flexobject\"><div style=\"flex: 1 1 6cm; max-width: 10cm;\">$\\textcolor{#43a047}{(d_1)}\\perp\\textcolor{#7C4DA5}{(d_3)}$ et $\\textcolor{#e53935}{(d_2)}\\perp\\textcolor{#7C4DA5}{(d_3)}$ donc $\\textcolor{#43a047}{(d_1)}\\parallel\\textcolor{#e53935}{(d_2)}$</div><img src=\"/Images/Cours/Propriete_parallele2.svg\" style=\"flex: 1 1 3cm; max-width: 6cm;\"></div>"
 		]
 	},"parallèlogramme": {
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">parallèlogramme</span> est un quadrilatère dont les côtés opposés sont parallèles."
+		],
+		"exemples": [
+			"<img src=\"/Images/Cours/Quad2.svg\" style=\"max-height: 4cm;\">"
 		]
 	},"patron": {
 		"tags": [],
@@ -700,6 +828,14 @@
 		],
 		"proprietes": [
 			"<b>Si</b> deux droites sont parallèles et que l'une d'elle est perpendiculaire a une troisième droite, <b>alors</b> cette troisième droite est aussi perpendiculaire à l'autre."
+		],
+		"remarques": [
+			"$(d')$ se lit \"d prime\".",
+			"Pour noter deux droites perpendiculaires, on utilise le symbole $\\perp$<br>Ici $(d)\\perp(d')$"
+		],
+		"exemples": [
+			"<div class=\"flexobject\"><div style=\"flex: 1 1 6cm; max-width: 10cm;\">H est appelé <span class=\"CRed\">pied de la perpendiculaire</span> à $(d)$.</div><img src=\"/Images/Cours/Perpendiculaire.svg\" style=\"flex: 1 1 2cm; max-width: 4cm;\"></div>",
+			"<div class=\"flexobject\"><div style=\"flex: 1 1 6cm; max-width: 10cm;\">$\\textcolor{#43a047}{(d_1)}\\parallel\\textcolor{#e53935}{(d_2)}$ et $\\textcolor{#43a047}{(d_1)}\\perp\\textcolor{#7C4DA5}{(d_3)}$ donc $\\textcolor{#e53935}{(d_2)}\\perp\\textcolor{#7C4DA5}{(d_3)}$</div><img src=\"/Images/Cours/Propriete_perpendiculaire1.svg\" style=\"flex: 1 1 3cm; max-width: 6cm;\"></div>"
 		]
 	},"perspective cavalière": {
 		"tags": [],
@@ -710,11 +846,20 @@
 		"tags": [],
 		"definitions": [
 			"En géométrie, un <span class=\"CRed\">point</span> est représenté par une croix. On peut alors lui donner un nom en utilisant une lettre majuscule en batons."
+		],
+		"remarques": [
+			"Sur une figure, deux points <b>distincts</b> (c'est-à-dire qui ne sont pas confondus) ont une nom différents"
+		],
+		"exemples": [
+			"<img src=\"/Images/Cours/Point.svg\" style=\"max-height: 1.5cm;\">"
 		]
 	},"polygone": {
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">polygone</span> est une figure géomètrique à plusieurs côtés."
+		],
+		"infos": [
+			"<table><tr style=\"font-weight: bold; font-size: 14pt;\"><th style=\"text-align: right;\">POLY</th><th>-</th><th>GONE</th></tr><tr><td style=\"text-align: right;\">Plusieurs</td><td></td><td>Côtés</td></tr></table><br>"
 		]
 	},"positif": {
 		"tags": [],
@@ -812,6 +957,12 @@
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">quadrilatère</span> est un <b>polygone</b> à quatre côtés"
+		],
+		"proprietes": [
+			"<p>Pour identifier un quadrilatères, on utilise des propriétés géométriques :</p><img src=\"/Images/Cours/Quadrilatères.svg\" style=\"max-width: 19cm;\">"
+		],
+		"exemples": [
+			"<img src=\"/Images/Cours/Quad1.svg\" style=\"max-height: 4cm;\">"
 		]
 	},"quotient": {
 		"tags": [],
@@ -840,6 +991,12 @@
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">rectangle</span> est un quadrilatère qui a quatre angle droit."
+		],
+		"exemples": [
+			"<img src=\"/Images/Cours/Quad4.svg\" style=\"max-height: 4cm;\">"
+		],
+		"remarques": [
+			"Un rectangle est un parallèlogramme particulier."
 		]
 	},"réduire": {
 		"tags": [],
@@ -898,6 +1055,12 @@
 		"tags": [],
 		"definitions": [
 			"Lorsque des droites ; segments ou demi-droites se coupent en un point on dit qu'elles sont <span class=\"CRed\">sécantes</span>."
+		],
+		"remarques": [
+			"Les points C, E et D sont <span class=\"CRed\">alignés</span>."
+		],
+		"exemples": [
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Secantes.svg\" style=\"flex: 1 1 4cm; max-width: 7cm;\"><div style=\"flex: 1 1 4cm\">Ici les droites $(AB)$ et $(CD)$ sont sécantes en E.</div></div>"
 		]
 	},"section": {
 		"tags": [],
@@ -918,6 +1081,13 @@
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">segment</span> est composé de deux points relié entre eux en ligne droite."
+		],
+		"remarques": [
+			"Un segment se note avec des crochet : [BC]",
+			"Les points B et C sont les <b>extrémités</b> du segment"
+		],
+		"exemples": [
+			"<img src=\"/Images/Cours/Segment.svg\" style=\"max-height: 2cm;\">"
 		]
 	},"simplifier": {
 		"tags": [],
@@ -984,6 +1154,10 @@
 		"tags": [],
 		"definitions": [
 			"Les <span class=\"CRed\">tableaux</span> permettent de rassembler un grand nombre de données et de les présenter de façon organisé. Il en existe deux types :<ul><li>A simple entré</li><li>A double entrés</li></ul>"
+		],
+		"exemples": [
+			"<p>Tableau à simple entrée (Population en 2013) :</p><style>.tableau_simple td, th{border: solid 1px black;width: auto;text-align: center;min-width: 80px;}.tableau_simple th{background-color: #99da9c;}</style><table class=\"tableau_simple\"><tr><th>Ville</th><td>Paris</td><td>Marseille</td><td>Lyon</td><td>Toulouse</td></tr><tr><th>Population</th><td>2 229 621</td><td>855 393</td><td>500 715</td><td>458 298</td></tr></table>",
+			"<p>Tableau à double entrée (Résultats des JO de 2016):</p><style>.tableau_double td, th{border: solid 1px black;width: auto;text-align: center;min-width: 80px;}.tableau_double th{background-color: #ec7b78;}</style><table class=\"tableau_double\"><tr><th class=\"crossed\"><div style=\"text-align: right;\">Médaille</div><div style=\"text-align: left;\">Pays</div></th><th>Or</th><th>Argent</th><th>Bronze</th></tr><tr><th>Russie</th><td>24</td><td>25</td><td>33</td></tr><tr><th>France</th><td>11</td><td>11</td><td>12</td></tr><tr><th>Chine</th><td>38</td><td>27</td><td>22</td></tr><tr><th>Etats-Unis</th><td>46</td><td>29</td><td>29</td></tr></table>"
 		]
 	},"tangente": {
 		"tags": [],
