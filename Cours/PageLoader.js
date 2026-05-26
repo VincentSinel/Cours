@@ -109,7 +109,7 @@ function LoadScript(script)
 	else
 		script_node.src = json_location + name;
 	script_node.async = false;
-	script_node.onload = () => { 
+	script_node.onload = (e) => { 
 		if (after.length > 0)
 		{
 			after.forEach(dep => {
@@ -242,6 +242,7 @@ function SetDefinition(data, parent, style = null)
 	holder.style.cssText = style;
 
 	data.forEach(def => {
+		console.log(JSON_definitions[def.name], def.name)
 		if (!("definitions" in JSON_definitions[def.name])) {console.log("no definition with name " + def.name); return;}
 		def.indexes.forEach(index => {
 			let def_div = document.createElement(count > 1 ? "li" : "div");

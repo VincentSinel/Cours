@@ -3,7 +3,7 @@
  */
 
 // Animation perpendiculaire à l'equerre
-class Animation1 extends Animation_Data
+class Triangles_Longueurs extends Animation_Data
 {
 
     CreateObjects()

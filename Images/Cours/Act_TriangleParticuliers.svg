@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 455.2 341.57">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-2" points="28.31 227.34 2.15 113.83 173.21 193.94 28.31 227.34"/>
+  <polygon class="cls-2" points="453.58 209.07 449.27 263.38 342.64 200.25 453.58 209.07"/>
+  <polygon class="cls-2" points="318.26 322.91 201.81 310.78 327.75 231.82 318.26 322.91"/>
+  <polygon class="cls-1" points="305.92 182.44 209.94 274.26 218.45 141.71 305.92 182.44"/>
+  <polygon class="cls-1" points="39.44 36.02 218.99 20.84 75.8 130.23 39.44 36.02"/>
+  <polygon class="cls-2" points="341.72 339.01 345.09 215.71 450.19 280.28 341.72 339.01"/>
+  <polygon class="cls-2" points="117.16 108.79 220.9 69.3 203.23 178.88 117.16 108.79"/>
+  <polygon class="cls-2" points="352.34 134.24 233.84 104.69 318.68 16.84 352.34 134.24"/>
+  <polygon class="cls-2" points="141.82 282.42 186.8 245.57 196.23 302.95 141.82 282.42"/>
+  <polygon class="cls-2" points="195.48 208.53 16.58 255.26 108.4 265.46 195.48 208.53"/>
+  <polygon class="cls-2" points="342.64 186.36 412.34 7.13 418.47 135.81 342.64 186.36"/>
+</svg>

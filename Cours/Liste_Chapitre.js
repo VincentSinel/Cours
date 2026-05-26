@@ -1688,49 +1688,49 @@ var sixieme_base = [
 			nom: "Gestion de données",
 			icone: 5,
 			ready : true,
-			page : "Base/Chapitre_5/Cours.html"
+			page : "Base/Chapitre_5/Cours.json"
 	},
 	{
 			id: 6,
 			nom: "Cercle et disque",
 			icone: 2,
 			ready : true,
-			page : "Base/Chapitre_6/Cours.html"
+			page : "Base/Chapitre_6/Cours.json"
 	},
 	{
 			id: 7,
 			nom: "Angles",
 			icone: 2,
 			ready : true,
-			page : "Base/Chapitre_7/Cours.html"
+			page : "Base/Chapitre_7/Cours.json"
 	},
 	{
 			id: 8,
 			nom: "Polygones et quadrilatères particuliers",
 			icone: 2,
 			ready : true,
-			page : "Base/Chapitre_8/Cours.html"
+			page : "Base/Chapitre_8/Cours.json"
 	},
 	{
 			id: 9,
 			nom: "Divisions",
 			icone: 1,
 			ready : true,
-			page : "Base/Chapitre_9/Cours.html"
+			page : "Base/Chapitre_9/Cours.json"
 	},
 	{
 			id: 10,
 			nom: "Triangles",
 			icone: 2,
 			ready : true,
-			page : "Base/Chapitre_10/Cours.html"
+			page : "Base/Chapitre_10/Cours.json"
 	},
 	{
 			id: 11,
 			nom: "Nombres en écritures fractionnaires",
 			icone: 1,
 			ready : true,
-			page : "Base/Chapitre_11/Cours.html"
+			page : "Base/Chapitre_11/Cours.json"
 	},
 	{
 			id: 12,

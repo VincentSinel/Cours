@@ -1,0 +1,56 @@
+{
+	"styles": ".borderfull2 th{width: 1cm;font-size: 16pt;}.introtable{border: solid var(--TableBorder) 2px;}.introtable td,.introtable th{padding: 5px;border: solid var(--TableBorder) 1px;align-content: center;align-items: center;text-align: center;width: 1cm;height: 0.7cm;}",
+	"activité": "<ol><li><div class=\"flexobject\"><div style=\"flex: 1 1 7cm\">Reproduire et compléter le tableau ci-dessous en coloriant chaque case de la couleur correspondant à celle de la figure.<br><br><table class=\"borderfull2\"><tr><th>$\\frac{1}{8}$</th><th>$\\frac{1}{2}$</th><th>$\\frac{4}{8}$</th><th>$\\frac{2}{4}$</th><th>$\\frac{3}{8}$</th></tr><tr style=\"height: 1cm;\"><td style=\"background-color: #039be5;\"></td><td></td><td></td><td></td><td></td></tr></table></div><img src=\"/Images/Cours/Cercle_fraction1.svg\" style=\"max-height: 5cm;\"></div></li><li><div class=\"flexobject\"><div style=\"flex: 1 1 7cm\">Reproduire le rectangle ci-contre et le compléter avec les bonnes couleurs en utilisant le tableau ci-dessous<br><br><table class=\"borderfull2\"><tr><th>$\\frac{2}{18}$</th><th>$\\frac{1}{3}$</th><th>$\\frac{2}{9}$</th><th>$\\frac{1}{6}$</th><th>$\\frac{3}{18}$</th></tr><tr style=\"height: 1cm;\"><td style=\"background-color: #FF0000;\"></td><td style=\"background-color: #00FF00;\"></td><td style=\"background-color: #039be5;\"></td><td style=\"background-color: #FFFF00;\"></td><td style=\"background-color: #FF00FF;\"></td></tr></table></div><div style=\"width: 6cm\"><table class=\"introtable\"><tr><td style=\"background-color: #FF0000;\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr></tr><td style=\"background-color: #FF0000;\"></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr></table></div></div></li><li>Sur la demi-droite graduée ci-dessous, on a placé les fractions $\\frac{1}{6}$ et $\\frac{1}{3}$<br><img src=\"/Images/Cours/Axe graduee 2.svg\" style=\"max-height: 2.5cm;\"><ol type=\"a\"><li>Reproduire la demi-droite et y placer les fractions $\\frac{2}{3}$ et $\\frac{5}{6}$.</li><li>Placer la fraction $\\frac{4}{6}$. Que constate-t-on ? Expliquer.</li></ol></li></ol>",
+	"content": [
+		{
+			"type": "title", "name": "Fraction et partage",
+			"content": [
+				{
+					"type": "title", "name": "Vocabulaire",
+					"content": [
+						{"type": "definition", "source": [{"name": "forme fractionnaire", "indexes": [0]}]},
+						{"type": "container", "class": "flexobject", "content": [
+							{"type": "info", "source": [{"name": "forme fractionnaire", "indexes": [0]}]},
+							{"type": "info", "source": [{"name": "forme fractionnaire", "indexes": [1]}]}
+						]}
+					]
+				},
+				{
+					"type": "title", "name": "Partage",
+					"content": [
+						{"type": "definition", "source": [{"name": "fraction", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "fraction", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Demi-droite graduée",
+					"content": [
+						{"type": "definition", "source": [{"name": "fraction", "indexes": [2]}]},
+						{"type": "exemple", "source": [{"name": "fraction", "indexes": [1]}]},
+						{"type": "remarque", "source": [{"name": "fraction", "indexes": [0, 1]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Quotient",
+			"content": [
+				{
+					"type": "title", "name": "Définition",
+					"content": [
+						{"type": "definition", "source": [{"name": "quotient", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "quotient", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "quotient", "indexes": [0, 1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Fraction d'une quantité",
+					"content": [
+						{"type": "definition", "source": [{"name": "fraction", "indexes": [3]}]},
+						{"type": "exemple", "source": [{"name": "fraction", "indexes": [2]}]}
+					]
+				}
+			]
+		}
+	]
+}

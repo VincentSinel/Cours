@@ -1,0 +1,61 @@
+{
+	"scripts": [{"name": "/JS/Animation/Animations/Triangle_AngleLongueurs1.js"},{"name": "/JS/Animation/Animations/Triangle_AngleLongueurs2.js"},{"name": "/JS/Animation/Animations/Triangle_Longueurs.js"},{"name": "/JS/Animation/Animations/Triangle_AnglesLongueur2.js"}],
+	"styles": ".tableintro td{border: solid 2px black;padding: 5px;}",
+	"activité": "<img src=\"/Images/Cours/Act_TriangleParticuliers.svg\" style=\"max-height: 9cm;\"><ol><li>Colorier en rouge les triangles ayant 3 côtés de mêmes longueurs.</li><li>Colorier en vert les triangles ayant seulement 2 côtés de mêmes longueurs.</li><li>Colorier en bleu les triangles ayant un angle droit.</li><li>Colorier en violet les triangles restants.</li><li>Associer chacun des termes suivants à la bonne couleur de triangle :<br><table class=\"tableintro\"><tr><td>Triangle isocèle</td><td>Triangle rectangle</td><td>Triangle quelconque</td><td>Triangle équilatéral</td></tr></table></li></ol>",
+	"content": [
+		{
+			"type": "title", "name": "Triangles",
+			"content": [
+				{"type": "definition", "source": [{"name": "triangle", "indexes": [0]}]},
+				{
+					"type": "title", "name": "Triangle isocèle",
+					"content": [
+						{"type": "definition", "source": [{"name": "triangle isocèle", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "triangle isocèle", "indexes": [0]}]},
+						{"type": "propriete", "source": [{"name": "triangle isocèle", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "triangle isocèle", "indexes": [1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Triangle équilatéral",
+					"content": [
+						{"type": "definition", "source": [{"name": "triangle équilatéral", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "triangle équilatéral", "indexes": [0]}]},
+						{"type": "propriete", "source": [{"name": "triangle équilatéral", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "triangle équilatéral", "indexes": [1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Triangle rectangle",
+					"content": [
+						{"type": "definition", "source": [{"name": "triangle rectangle", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "triangle rectangle", "indexes": [0]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Constructions",
+			"content": [
+				{
+					"type": "title", "name": "Avec trois longueurs",
+					"content": [
+						{"type": "info", "source": [{"name": "triangle", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Avec deux longueurs et un angle",
+					"content": [
+						{"type": "info", "source": [{"name": "triangle", "indexes": [1, 2]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Avec une longueur et deux angles",
+					"content": [
+						{"type": "info", "source": [{"name": "triangle", "indexes": [3]}]}
+					]
+				}
+			]
+		}
+	]
+}

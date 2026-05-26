@@ -184,7 +184,6 @@ class Anim_Compas
         this.Parent.AddAnimation(this.Head, {transform: transform, plot: this._GetHead_Path()}, delay + duration - 1, 1, easy);
     
         if (!draw) return;
-
         
         let total = Math.abs(Math.floor(Angle * this.GetLength(this.P1, this.P2) / 200))
         let lastpoint = old_p2;

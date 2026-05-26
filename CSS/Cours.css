@@ -303,6 +303,7 @@ table, th, td, tr {
     padding: 10px;
     font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial;
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 .definition .definition{ /* Annule les effets si les définitions sont emboités */
     border: none;
