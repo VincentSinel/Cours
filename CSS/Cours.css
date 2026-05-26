@@ -804,3 +804,22 @@ table th.crossed
     padding: 3px 20px 19px 0px;
     text-align: center;
 }
+
+.tableau_unite{
+    display: grid;
+    text-align: center;
+    border: solid 1px black;
+    grid-template-columns: repeat(2, 1fr);
+}
+.tableau_unite div {
+    border: solid 1px black;
+}
+
+.tableau_unite > div:nth-child(2n)
+{
+    background-color: #ffcc99;
+}
+.tableau_unite > div:nth-child(n + 2):nth-child(2n+1)
+{
+    background-color: #99ff99;
+}

@@ -1,0 +1,70 @@
+{
+	"scripts": [{"name": "JS/Transformation.js"}, {"name": "/JS/Animation/Animations/Mediatrice.js"}, {"name": "/JS/Animation/Animations/Symetrie_Axiale_Equerre.js"}, {"name": "/JS/Animation/Animations/Symetrie_Axiale_Compas.js"}],
+	"styles": ".intro div{flex: 1 1 4cm; text-align: center;}.intro p{padding: 10px;}",
+	"activité": "<p>Les figures ci-dessous représentent trois étapes successives permettant de construire, par pliage, le symétrique A' de A par rapport à la droite $(d)$.</p><div class=\"flexobject intro\"><div><img src=\"/Images/Cours/Act_Symetrie_1.svg\" style=\"max-width: 8cm;\"><p>Sur un papier uni, tracer une droite $(d)$ et placer un point A n'appartenant pas à la droite.</p></div><div><img src=\"/Images/Cours/Act_Symetrie_2.svg\" style=\"max-width: 6.5cm;\"><p>Plier la feuille selon la droite $(d)$ et marqué le point A' par transparence de A de l'autre côté de la page.</p></div><div><img src=\"/Images/Cours/Act_Symetrie_3.svg\" style=\"max-width: 8cm;\"><p>Déplier la feuille et tracer le segment [AA'].</p></div></div><ol><li>Noter O le point d'intersection entre [AA'] et $(d)$. Quelle est la particularité de ce point vis-à-vis de [AA'] ?</li><li>Que peut-on dire de la droite (AA') et $(d)$</li><li>Placer un point I sur la droite $(d)$ distinct de O.<ol type=\"a\"><li>Mesurer [AI] et [A'I]. Que remarque-t-on ?</li><li>En déduire la nature du triangle AIA'.</li></ol></li><li>Placer un point B n'appartenant pas à la droite $(d)$.<ol type=\"a\"><li>En utilisant l'équerre et les propriétés vue précédement pour le segment [AA'], construire B' le symétrique du point B par rapport à la droite $(d)$.</li><li>Tracer [AB] et [A'B'].</li><li>Expliquer l'affirmation suitantes : <i>Une symétrie axiale correspond à ce que l'on retrouve dans un mirroir.</i></li></ol></li></ol>",
+	"content": [
+		{
+			"type": "title", "name": "Médiatrice",
+			"content": [
+				{
+					"type": "title", "name": "Définition",
+					"content": [
+						{"type": "definition", "source": [{"name": "médiatrice", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "médiatrice", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Propriétés",
+					"content": [
+						{"type": "propriete", "source": [{"name": "médiatrice", "indexes": [0, 1]}]},
+						{"type": "exemple", "source": [{"name": "médiatrice", "indexes": [1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Construction",
+					"content": [
+						{"type": "info", "source": [{"name": "médiatrice", "indexes": [0]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Symétrie axiale",
+			"content": [
+				{
+					"type": "title", "name": "Définition",
+					"content": [
+						{"type": "definition", "source": [{"name": "symétrie axiale", "indexes": [0]}]},
+						{
+							"type": "container", 
+							"class": "flexobject",
+							"content": [
+								{"type": "exemple", "style":"max-width: 8cm; margin-right: 1cm;", "source": [{"name": "symétrie axiale", "indexes": [0]}]},
+								{"type": "remarque", "style": "flex: 1 1 6cm;", "source": [{"name": "symétrie axiale", "indexes": [0]}]}
+						]},
+						{"type": "propriete", "source": [{"name": "symétrie axiale", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Constructions",
+					"content": [
+						{
+							"type": "container", 
+							"class": "flexobject",
+							"content": [
+								{"type": "info", "source": [{"name": "symétrie axiale", "indexes": [0]}]},
+								{"type": "info", "source": [{"name": "symétrie axiale", "indexes": [1]}]}
+						]}
+					]
+				},
+				{
+					"type": "title", "name": "Axe de symétrie",
+					"content": [
+						{"type": "definition", "source": [{"name": "axe de symétrie", "indexes": [0, 1]}]},
+						{"type": "exemple", "source": [{"name": "axe de symétrie", "indexes": [0]}]}
+					]
+				}
+			]
+		}
+	]
+}

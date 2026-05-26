@@ -87,6 +87,9 @@
 		"tags": [],
 		"definitions": [
 			"On dit qu'une droite est un <span class=\"CRed\">axe de symétrie</span> d'une figure lorsque la figure et son symétrique par rapport à cette droite sont confondus. "
+		],
+		"exemples": [
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Avion.svg\" style=\"max-height: 6cm;\"><div style=\"flex: 1 1 5cm;\">Le droite <i>(d)</i> est un axe de symétrie de la figure.</div></div>"
 		]
 	},"axe gradué": {
 		"tags": [],
@@ -715,6 +718,13 @@
 		"tags": [],
 		"definitions": [
 			"Dans le système métrique, l'unité usuelle de <b>longueur</b> est le <span class=\"CRed\">mètre</span> noté « <span class=\"CRed\">m</span> »."
+		],
+		"infos": [
+			"<div class=\"tableau_unite\"><div style=\"grid-column: 1 / 3; font-weight: bold; font-size: 20px;\">Unités de longueur</div><div class=\"CRed\" style=\"font-weight: bold;\">Multiples</div><div class=\"CGreen\" style=\"font-weight: bold;\">Sous-Multiples</div><div><b>Décamètre</b><br>1 dam = 10 m</div><div><b>Décimètre</b><br>1 dm = 0,1 m</div><div><b>Hectomètre</b><br>1 hm = 10 dam = 100 m</div><div><b>Centimètre</b><br>1 cm = 0,1 dm = 0,01 m</div><div><b>Kilomètre</b><br>1 km = 10 hm = 100 dam = 1 000 m</div><div><b>Millimètre</b><br>1 mm = 0,1 cm = 0,01 dm = 0,001 m</div></div>",
+			"<style>.p-table {display: grid;grid-template-columns: repeat(7, 1fr);grid-template-rows: auto repeat(2, 30px);align-content: center;vertical-align: middle;text-align: center;border: solid 1px black;}.p-table > div:nth-child(-n + 7){background-color: #ccc0da;font-size: 8pt;font-weight: bold;}.p-table div{border: solid 1px black;align-content: center;font-size: 12pt;}</style><div class=\"p-table\"><div>Kilomètre<br><span style=\"font-size: 16pt;\">km</span></div><div>Hectomètre<br><span style=\"font-size: 16pt;\">hm</span></div><div>Decamètre<br><span style=\"font-size: 16pt;\">dam</span></div><div>Mètre<br><span style=\"font-size: 16pt;\">m</span></div><div>Décimètre<br><span style=\"font-size: 16pt;\">dm</span></div><div>Centimètre<br><span style=\"font-size: 16pt;\">cm</span></div><div>Millimètre<br><span style=\"font-size: 16pt;\">mm</span></div><div></div><div>2</div><div>7</div><div>0</div><div>0</div><div></div><div></div><div></div><div></div><div>0,</div><div>0</div><div>0</div><div>5</div><div></div></div>"
+		],
+		"exemples": [
+			"<table style=\"width: 100%; text-align: center;\"><tr><td>2,7 hm = 2 700 dm</td><td>5 cm = 0,005 dam</td></tr></table>"
 		]
 	},"losange": {
 		"tags": [],
@@ -740,6 +750,13 @@
 		"proprietes": [
 			"Si un point est situé sur la médiatrice d'un segment, alors ce point est équidistant des extrémités de ce segment.",
 			"Si un point est équidistant des extrémités d'un segment, alors ce point appartient à la médiatrice de ce segment."
+		],
+		"exemples": [
+			"<img src=\"/Images/Cours/Mediatrice1.svg\" style=\"max-height: 5cm;\">",
+			"<img src=\"/Images/Cours/Mediatrice2.svg\" style=\"max-height: 5cm;\">"
+		],
+		"infos": [
+			"<p>Pour construire une médiatrice, on utilise le compas. .</p><div class=\"flexobject\"><div id=\"Mediatrice\" class=\"animation center\" width=\"480\" height=\"360\"></div><div style=\"flex: 1 1 8cm;\">On construit un <i>oeil de chat</i>.<ul><li>On prend un écartement du compas plus grand que la moitié du segment.</li><li>On pointe sur A et on construit un arc de cercle.</li><li>On pointe sur B et on construit un arc de cercle avec le même écartement que précédement.</li><li>On relie les deux points d'intersections obtenus pour obtenir la <b>médiatrice</b>.</li></ul></div></div>"
 		]
 	},"milieu": {
 		"tags": [],
@@ -849,6 +866,15 @@
 			" Le <span class=\"CRed\">périmètre</span> d'une figure plane est la <b>longueur</b> du contour de celle-ci. (On le note souvent $\\mathscr{P}$)",
 			"Le périmètre d'un polygone est égal à la somme de la longueur de tous ses côtés.",
 			"Le périmètre d'un cercle est égal au produit de son diamètre par le nombre <span class=\"CRed\">π</span> (pi)"
+		],
+		"exemples": [
+			"<div class=\"flexobject\"><div style=\"flex: 0 1 5cm\">Ici le polygone ABCDE a pour périmètre $\\mathscr{P}=4+4,5+4+2,5+3=18 cm$ </div><img src=\"/Images/Cours/Polygone.svg\" style=\"max-height: 5cm;\"></div>",
+			"Le périmètre d'un cercle de diamètre 6cm est $\\mathscr{P}=6\\times \\pi \\approx 18,8 cm$."
+		],
+		"infos": [
+			"<table class=\"borderfull2\"><tr style=\"background-color: #b6dde8;\"><td><b>Carré de côté c.</b><br>$\\mathscr{P}=4\times c$</td><td><b>Rectangle de longueur L et largeur 𝓁.</b><br>$\\mathscr{P}=2\\times L+2\\times \\mathscr{l}=2\\times(L+\\mathscr{l})$</td></tr><tr><td><img src=\"/Images/Cours/Carre.svg\"></td><td><img src=\"/Images/Cours/Rectangle.svg\"></td></tr></table>",
+			"<table class=\"borderfull2\"><tr style=\"background-color: #b6dde8;\"><td><b>Avec un diamètre D</b><br>$\\mathscr{P}=D\\times \\pi$</td><td><b>Avec un rayon R</b><br>$\\mathscr{P}=2\\times R\\times \\pi$</td></tr><tr><td><img src=\"/Images/Cours/Cercle8.svg\" style=\"height: 4cm;\"></td><td><img src=\"/Images/Cours/Cercle7.svg\" style=\"height: 4cm;\"></td></tr></table>",
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Attention.svg\" style=\"max-height: 4cm;\"><p style=\"flex: 1 1 5cm;\">Attention, toutes les longueurs doivent être exprimés avec la même unité (ou sous unité).</p></div>"
 		]
 	},"perpendiculaire": {
 		"tags": [],
@@ -870,6 +896,12 @@
 		"tags": [],
 		"definitions": [
 			"La <span class=\"CRed\">perspective cavalière</span> est une représentation plane d'un solide avec :<ul><li>La face avant en vraie grandeur ;</li><li>Conservation des parallèlisme et des alignements ;</li><li>La profondeur représenté par des arêtes <b>obliques</b> et plus courte que la réalité ;</li><li>Les arêtes cachés en pointillés.</li></ul>"
+		]
+	},"pi": {
+		"tags": [],
+		"remarques": [
+			"$\\pi$ représente un nombre particulier. $\\pi \\approx 3,1415$.",
+			"Il existe la journée de <b>PI</b> le 14 mars (en anglais 03/14)."
 		]
 	},"point": {
 		"tags": [],
@@ -1163,6 +1195,16 @@
 			"Si deux angles sont symétriques par rapport à une droite, alors ils ont la même mesure.",
 			"Si deux figures sont symétriques par rapport à une droite, alors elles ont même aire et même périmètre",
 			"Lors d'une symétrie axiale les longueurs, les alignements et les angles sont conservés."
+		],
+		"exemples": [
+			"<div id=\"symetrieaxiale\"></div>"
+		],
+		"remarques": [
+			"Dans une symétrie axiale, l'axe de symétrie est la médiatrice de tous les segments reliant un point et son image."
+		],
+		"infos": [
+			"<div style=\"flex: 1 1 500px;\"><div style=\"text-align: center;\"><b>A la règle et l'équerre :</b></div><div id=\"Symetrie_Axiale_Equerre\" class=\"animation center\" width=\"480\" height=\"360\"></div></div>",
+			"<div style=\"flex: 1 1 500px;\"><div style=\"text-align: center;\"><b>Au compas :</b></div><div id=\"Symetrie_Axiale_Compas\" class=\"animation center\" width=\"480\" height=\"360\"></div></div>"
 		]
 	},"symétrie centrale": {
 		"tags": [],
@@ -1278,7 +1320,7 @@
 			"Un triangle <span class=\"CRed\">rectangle</span> est un triangle qui a deux côtés perpendiculaires."
 		],
 		"exemples": [
-			"<div class=\"flexobject\"><img src=\"/Images/Cours/Rectangle.svg\" style=\"max-height: 4cm;\"><div style=\"flex: 1 1 5cm;\">Le triangle GHI est <b>rectangle</b> en H.<br>Le segment $[GI]$ est appelé <span class=\"CRed\">hypoténuse</span> du triangle GHI. (C'est le côté le plus long d'un triangle <b>rectangle</b>)<br></div></div>"
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Triangle_Rectangle.svg\" style=\"max-height: 4cm;\"><div style=\"flex: 1 1 5cm;\">Le triangle GHI est <b>rectangle</b> en H.<br>Le segment $[GI]$ est appelé <span class=\"CRed\">hypoténuse</span> du triangle GHI. (C'est le côté le plus long d'un triangle <b>rectangle</b>)<br></div></div>"
 		]
 	},"triangle semblable": {
 		"tags": [],

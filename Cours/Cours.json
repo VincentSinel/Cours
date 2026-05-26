@@ -18,7 +18,15 @@
 					"content": [
 						{"type": "definition", "source": [{"name": "nombre premier", "indexes": [0]}]},
 						{"type": "remarque", "source": [{"name": "nombre premier", "indexes": [0, 1]}]},
-						{"type": "exemple", "source": [{"name": "nombre premier", "indexes": [0, 1, 2]}]}
+						{"type": "exemple", "source": [{"name": "nombre premier", "indexes": [0, 1, 2]}]},
+						{
+							"type": "container",
+							"class": "flexobject",
+							"content": [
+								{"type": "definition", "source": [{"name": "parallèlogramme", "indexes": [0]}], "style": "flex: 1 1 5cm;"},
+								{"type": "exemple", "source": [{"name": "parallèlogramme", "indexes": [0]}], "style": "flex: 1 1 5cm;"}
+							]
+						}
 					]
 				}
 			]
