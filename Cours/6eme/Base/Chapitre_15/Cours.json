@@ -1,0 +1,54 @@
+{
+	"styles": ".proportionnaltable td{width: 50px !important;}",
+	"activité": "<div class=\"flexobject\"><div style=\"flex: 1 1 5cm; max-width: 10cm;\">Romain a trouvé un petit boulot pour les vacances, payé à l'heure.<br>Il travaille une première fois 5 heures et gagne 47€.<br>Il travaille ensuite 3 heures et gagne 28,2€.</div><img src=\"/Images/Cours/Illustration1.png\" style=\"max-height: 4cm; border-radius: 0.5cm; box-shadow: 2px 2px 5px#000;\"></div><ol><li>Il effectue ensuite une journée de travail de 8 heures. Combien sera-t-il payé ce jour-là ?</li><li>Enfin il fait une session de 4 heures. Combien est-t-il payé ?</li><li>Le salaire minimum horaire est d'environ 9€23. Romain gagne-t-il plus que le salaire minimum ?</li><li>Combien gagnera-t-il pour une semaine de travail de 35 heures ?</li></ol>",
+	"content": [
+		{
+			"type": "title", "name": "Proportionnalité",
+			"content": [
+				{
+					"type": "title", "name": "Définition",
+					"content": [
+						{"type": "definition", "source": [{"name": "proportionnelle", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "proportionnelle", "indexes": [0]}]},
+						{"type": "autre", "source": [{"data": "<p>Le tableau de proportionnalité permet de représenter cette proportionnalité.</p>"}]},
+						{"type": "exemple", "source": [{"name": "proportionnelle", "indexes": [1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Calcul d'une quatrième proportionnelle",
+					"content": [
+						{
+							"type": "title", "name": "Linéarité",
+							"content": [
+								{"type": "propriete", "source": [{"name": "proportionnelle", "indexes": [0]}]},
+								{"type": "exemple", "source": [{"name": "proportionnelle", "indexes": [2]}]}
+							]
+						},
+						{
+							"type": "title", "name": "Passage par l'unité",
+							"content": [
+								{"type": "propriete", "source": [{"name": "proportionnelle", "indexes": [1]}]},
+								{"type": "exemple", "source": [{"name": "proportionnelle", "indexes": [3]}]}
+							]
+						},
+						{
+							"type": "title", "name": "Coefficient de proportionnalité",
+							"content": [
+								{"type": "propriete", "source": [{"name": "proportionnelle", "indexes": [2]}]},
+								{"type": "exemple", "source": [{"name": "proportionnelle", "indexes": [4]}]}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Pourcentage",
+			"content": [
+				{"type": "definition", "source": [{"name": "pourcentage", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "pourcentage", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "pourcentage", "indexes": [0]}]}
+			]
+		}
+	]
+}

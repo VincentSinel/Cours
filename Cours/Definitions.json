@@ -27,6 +27,20 @@
 		"tags": [],
 		"definitions": [
 			"L'<span class=\"CRed\">aire</span> d'une figure est la mesure de sa surface."
+		],
+		"infos": [
+			"<div class=\"tableau_unite\"><div style=\"grid-column: 1 / 3; font-weight: bold; font-size: 20px;\">Unités d'aire</div><div class=\"CRed\" style=\"font-weight: bold;\">Multiples</div><div class=\"CGreen\" style=\"font-weight: bold;\">Sous-Multiples</div><div><b>Décamètre carré</b><br>1 dam² = 100 m²</div><div><b>Décimètre carré</b><br>1 dm² = 0,01 m²</div><div><b>Hectomètre carré</b><br>1 hm² = 100 dam² = 10 000 m²</div><div><b>Centimètre carré</b><br>1 cm² = 0,01 dm² = 0,00 01 m²</div><div><b>Kilomètre carré</b><br>1 km² = 100 hm² = 10 000 dam² = 10 000 000 m²</div><div><b>Millimètre carré</b><br>1 mm² = 0,01 cm² = 0,00 01 dm² = 0,00 000 1 m²</div></div>",
+			"<style>.p-table2 {display: grid;grid-template-columns: repeat(14, 1fr);grid-template-rows: auto auto repeat(2, 30px);align-content: center;vertical-align: middle;text-align: center;border: solid 1px black;}.p-table2 > div{border: solid 1px black;align-content: center;font-size: 12pt;}.p-table2 > div:nth-child(-n + 21){background-color: #ccc0da;font-size: 8pt;font-weight: bold;/* font-size: 16pt !important; */}.p-table2 > div:nth-child(-n + 21) > span{font-size: 16pt !important;}</style><div class=\"p-table2\"><div style=\"grid-column: 1 / 3;\">Kilomètre carré<br><span>km²</span></div><div style=\"grid-column: 3 / 5;\">Hectomètre carré<br><span>hm²</span></div><div style=\"grid-column: 5 / 7;\">Decamètre carré<br><span>dam²</span></div><div style=\"grid-column: 7 / 9;\">Mètre carré<br><span>m²</span></div><div style=\"grid-column: 9 / 11;\">Décimètre carré<br><span>dm²</span></div><div style=\"grid-column: 11 / 13;\">Centimètre carré<br><span>cm²</span></div><div style=\"grid-column: 13 / 15;\">Millimètre carré<br><span>mm²</span></div><div>-</div><div>-</div><div>-</div><div>Hectare<br><span>ha</span></div><div>-</div><div>Are<br><span>a</span></div><div>-</div><div>Centiare<br><span>ca</span></div><div>-</div><div>-</div><div>-</div><div>-</div><div>-</div><div>-</div><div></div><div></div><div></div><div>2</div><div>7</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div>0,</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>5</div><div></div><div></div></div>",
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Attention.svg\" style=\"max-height: 4cm;\"><p style=\"flex: 1 1 5cm;\">Attention, toutes les longueurs doivent être exprimés avec la même unité (ou sous unité).</p></div>",
+			"<table class=\"borderfull2\"><tr style=\"background-color: #b6dde8;\"><td><b>Carré de côté c.</b><br>$\\mathscr{A}=c\\times c=c²$</td><td><b>Rectangle de longueur L et largeur 𝓁.</b><br>$\\mathscr{A}=L\\times \\mathscr{l}$</td></tr><tr><td><img src=\"/Images/Cours/Carre.svg\" style=\"max-height: 4cm;\"></td><td><img src=\"/Images/Cours/Rectangle.svg\" style=\"max-height: 4cm;\"></td></tr></table>",
+			"<table class=\"borderfull2\"><tr style=\"background-color: #b6dde8;\"><td><b>Dans un triangle rectangle</b><br>$\\mathscr{A}=\\frac{a\\times b}{2}$</td><td><b>Dans un triangle quelconque</b><br>$\\mathscr{A}=\\frac{Base\\times Hauteur}{2}$</td></tr><tr><td><img src=\"/Images/Cours/Triangle3.svg\" style=\"max-height: 4cm;\"></td><td><img src=\"/Images/Cours/Triangle2.svg\" style=\"max-height: 4cm;\"></td></tr></table>",
+			"<table class=\"borderfull2\"><tr style=\"background-color: #b6dde8;\"><td><b>Avec un rayon R</b><br>$\\mathscr{A}=\\pi \\times r²$</td><td><b>Avec un diamètre D</td></tr><tr><td><img src=\"/Images/Cours/Cercle7.svg\" style=\"max-height: 5cm;\"></td><td>Il faut calculer le rayon (en divisant par 2) et utiliser la formule précédente.</td></tr></table>"
+		],
+		"exemples": [
+			"<table style=\"width: 100%; text-align: center;\"><tr><td>2,7 hm² = 2 700 000 dm²</td><td>5 cm² = 0,00 000 5 dam²</td></tr></table>",
+			"L'aire d'un carré de côté 6cm est $\\mathscr{A}=6\\times6 = 36 cm²$.",
+			"L'aire d'un triangle rectangle dont les côtés de l'angle droit mesurent 6cm et 8cm est $\\mathscr{A}=\\frac{6\\times8}{2}=\\frac{48}{2}=24 cm²$.",
+			"L'aire d'un cercle de rayon 5cm est $\\mathscr{A}=\\pi\\times5²=25\\pi \\approx 78,5 cm²$."
 		]
 	},"algorithme": {
 		"tags": [],
@@ -237,6 +251,13 @@
 		"definitions": [
 			"Un <span class=\"CRed\">cube</span> est un <b>pavé droit</b> particulier dont toutes les faces sont des <b>carrés</b>.",
 			"Le cube d'un nombre <span class=\"CRed\">$a$</span> est le produit de ce nombre par lui-même, par lui-même. On le note $\\textcolor{#e53935}{a}^3=\\textcolor{#e53935}{a}\\times \\textcolor{#e53935}{a}\\times \\textcolor{#e53935}{a}$ &nbsp;&nbsp; lu \"<span class=\"CRed\">$a$</span> au cube\""
+		],
+		"exemples": [
+			"<img src=\"/Images/Cours/Cube3.svg\" style=\"max-height: 4cm;\">",
+			"Un cube de 4 cm de côté a pour volume $4\\times4\\times4 = 64 cm^3$"
+		],
+		"remarques": [
+			"Un cube a toutes ses arêtes de même longueur."
 		]
 	},"cylindre": {
 		"tags": [],
@@ -449,6 +470,21 @@
 		"tags": [],
 		"definitions": [
 			"Une <span class=\"CRed\">durée</span> est la mesure du temps entre deux instants. L'unité de durée couramment utilisée est la <b>seconde</b> (s)."
+		],
+		"exemples": [
+			"Temps à l'instant 1 : 17 seconde.<br>Temps à l'instant 2 : 48 seconde.<br>La durée entre ces deux instant est 48-17 = 31 secondes.",
+			"Une séance de cinéma commence à 18h20 et se termine à 20h10. Combien de temps à durée la séance ?<br><br>On regarde le temps nécessaire pour aller à l'heure suivante :<br>18h20 + <b>40min</b> = 19h<br>On calcul ensuite le temps restant pour atteindre le temps final :<br>19h + <b>1h10</b> = 20h10<br>On regroupe enfin les deux durées précédentes :<br>1 h 10 min + 40 min = 1h50<br>La séance à donc durée 1h50.",
+			"Un train mets 1h56 pour aller de Paris à Lyon. Il part de Paris à 11h25. A quelle heure arrive-t-il ?<br><br>On ajoute les heures et les minutes ensemble :<br><br><div class=\"flexobject\"><table style=\"text-align: right;\"><tr><td></td><td>11</td><td>h</td><td>25</td></tr><tr><td>+</td><td>1</td><td>h</td><td>56</td></tr><tr style=\"border-top: solid 2px black;\"><td></td><td>12</td><td>h</td><td>81</td></tr></table><div>Le nombre de minutes dépasse 60 (1 heure) on peut donc convertir : 12 h 81 min = 12 h + 60 min + 21 min = 12 h + 1 h + 21 min = 13 h 21 min</div></div>Le train arrive donc à 13h21.",
+			"Une voiture mets 4h29 pour aller de Paris à Lyon. On souhaite arrivé à Lyon à 15h12. A quelle heure doit-on partir ?<br><br>On doit ici faire une soustraction, on commence donc par convertir des heures en minutes pour pouvoir l'effectuer :<br>15h12 = 14 h + 1 h + 12 min = 14 h + 60 min + 12 min = 14h72<br>On effectue ensuite la soustraction :<br><br><div class=\"flexobject\"><table style=\"text-align: right;\"><tr><td></td><td>14</td><td>h</td><td>72</td></tr><tr><td>-</td><td>4</td><td>h</td><td>29</td></tr><tr style=\"border-top: solid 2px black;\"><td></td><td>10</td><td>h</td><td>43</td></tr></table></div>La voiture doit donc partir à 10h43"
+		],
+		"remarques": [
+			"Il existe d'autre unité de durée."
+		],
+		"infos": [
+			"<style>.table_seconde{display: grid;grid-template-columns: repeat(4, 1fr);grid-template-rows: repeat(2, auto);align-content: center;vertical-align: middle;text-align: center;border: solid 1px black;}.table_seconde div {border: solid 1px black;}.table_seconde div:nth-child(-n + 4){background-color: #C6FFAC;}.time_unit{flex-direction: column;border: solid 2px black;padding: 5px;}.time_unit div:first-child{font-weight: bold;}</style><div class=\"table_seconde\"><div><b>Seconde</b> (s)</div><div>Dixième de <b>seconde</b></div><div>Centième de <b>seconde</b></div><div>Millième de <b>seconde</b> (ms)</div><div>1 s</div><div>0,1 s</div><div>0,01 s</div><div>0,001 s = 1ms</div></div><br><div class=\"flexobject\"><div class=\"flexobject time_unit\"><div>Minute</div><div>1 min = 60 s</div></div><div class=\"flexobject time_unit\"><div>Heure</div><div>1 h = 60 min = 3 600 s</div></div><div class=\"flexobject time_unit\"><div>Jour</div><div>1 jour = 24 h = 1 440 min = 86 400 s</div></div><div class=\"flexobject time_unit\"><div>Semaine</div><div>1 semaine = 7 jour</div></div><div class=\"flexobject time_unit\"><div>Mois</div><div>1 mois peut avoir 28, 29, 30 ou 31 jours</div></div><div class=\"flexobject time_unit\"><div>Année</div><div>1 an peut avoir 365 ou 366 jours</div></div><div class=\"flexobject time_unit\"><div>Siècle</div><div>1 siècle = 100 ans</div></div><div class=\"flexobject time_unit\"><div>Millénaire</div><div>1 millénaire = 10 siècles = 1 000 ans</div></div></div>",
+			"On peut calculer la durée entre deux instants.",
+			"A partir d'un instant initial et d'une durée, on peut calculer l'instant final.",
+			"A partir d'un instant final et d'une durée, on peut calculer l'instant initial."
 		]
 	},"échelle": {
 		"tags": [],
@@ -850,6 +886,13 @@
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">patron</span> est un dessin du plan permettant de construire un solide par découpage et pliage."
+		],
+		"exemples": [
+			"<p>Le patron d'un cube est composé de six carré collé les uns aux autres.</p><img src=\"/Images/Cours/Cube4.svg\" style=\"max-height: 5cm;\">"
+		],
+		"remarques": [
+			"Il est possible de créer plusieurs patron différents pour un même solide.",
+			"Certain solide n'ont pas de patron, par exemple la sphère."
 		]
 	},"pavé droit": {
 		"tags": [],
@@ -859,6 +902,16 @@
 		"proprietes": [
 			"Le volume $V$ d'un pavé droit, de dimension L, 𝓁 et <i>h</i>, est :<br> $V\\ =\\ L\\ \\times\\ 𝓁\\ \\times\\ h$",
 			"$V = \\text{Longueur} \\times \\text{Largeur} \\times \\text{Hauteur}$"
+		],
+		"exemples": [
+			"<p>ABCDEFGH est un pavé droit représenté en perspective cavalière.</p><img src=\"/Images/Cours/Pave3.svg\" style=\"max-height: 4cm;\">",
+			"Un pavé droit de 5 cm par 7 cm par 6 cm a pour volume $5\\times7\\times6 = 210 cm^3$"
+		],
+		"remarques": [
+			"Les points sont appelés <span class=\"CRed\">sommets</span>. Par exemple le sommet D.",
+			"Les segments reliant deux sommets sur le bord du solide sont appelés <span class=\"CRed\">arêtes</span>. Par exemple l'arêtes [BC].",
+			"Les polygones (ici rectangle) formé par les arêtes sont appelés <span class=\"CRed\">faces</span>. Par exemple la face ABFE.",
+			"Les solides composés de faces polygonales sont appelés <b>polyèdres</b>."
 		]
 	},"périmètre": {
 		"tags": [],
@@ -896,6 +949,9 @@
 		"tags": [],
 		"definitions": [
 			"La <span class=\"CRed\">perspective cavalière</span> est une représentation plane d'un solide avec :<ul><li>La face avant en vraie grandeur ;</li><li>Conservation des parallèlisme et des alignements ;</li><li>La profondeur représenté par des arêtes <b>obliques</b> et plus courte que la réalité ;</li><li>Les arêtes cachés en pointillés.</li></ul>"
+		],
+		"exemples": [
+			"<p>La figure ci-dessous représente le parallélépipède rectangle ABCDEFGH en perspective cavalière.</p><img src=\"/Images/Cours/Perspective1.svg\" style=\"max-height: 7cm;\">"
 		]
 	},"pi": {
 		"tags": [],
@@ -931,6 +987,12 @@
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">pourcentage</span> est une proportion par rapport à 100.  $\\textcolor{#e53935}{t} \\% = \\frac{ \\textcolor{#e53935}{t} }{100}$"
+		],
+		"exemples": [
+			"<div>L'eau de la Mer Noir contient 2% de sel. Cela signifie que :<ul><li>La proportion de sel dans l'eau est de $\\frac{4}{100}$.</li><li>100kg d'eau contient 4kg de sel.</li><li>La masse d'eau et de sel sont proportionnel avec un coefficient de proportionnalité de $4\\%=\\frac{4}{100}= 0,04$</li></ul></div><div class=\"proportionnaltable_coef\"><table class=\"proportionnaltable samewidth\"><tr><th>Masse d'eau (kg)</th><td>100</td><td>360</td></tr><tr><th>Masse de sel (kg)</th><td>4</td><td>?</td></tr></table><img src=\"/Images/Cours/Coef3.svg\" style=\"max-height: 50px;\"></div><p>Pour calculer la quantité de sel dans 360kg, on multiplie : $360\\times 4\\% = 360 \\times 0,04 = 14,4 kg$</p>"
+		],
+		"remarques": [
+			"Le symbole % est un opérateur."
 		]
 	},"priorités opératoires": {
 		"tags": [],
@@ -940,6 +1002,14 @@
 			"La multiplication et la division sont <b><u>prioritaires</u></b> par rapport à l'addition et à la soustraction.",
 			"Dans une suite de calculs comprenant des parenthèses, on effectue d'abord les calculs entre parenthèses.",
 			"Lorsqu'on veut calculer un quotient, on commence par calculer le numérateur et le dénominateur avant d'effectuer le calcul du quotient."
+		],
+		"exemples": [
+			"$23-12+9=11+9=20$",
+			"$27\\div3\\times9=9\\times9=81$",
+			"$4\\ + $ <div class=\"u_lat\">$3\\times7$</div>$=4+21=25$",
+			"<div class=\"u_lat\">$36\\div3$</div> $-$ <div class=\"u_lat\">$5\\times2$</div>$=12-10=2$",
+			"$25\\ - ($ <div class=\"u_lat\">$12+9$</div> $)=25-21=4$",
+			"$36\\ -(5 + 2\\times($<div class=\"u_lat\">$15-9$</div>$)) = 36\\ - (5 + $<div class=\"u_lat\">$2\\times6$</div>$) =36-($<div class=\"u_lat\">$5+12$</div>$)=36-17=24$"
 		]
 	},"prisme": {
 		"tags": [],
@@ -989,6 +1059,13 @@
 			"<b>Si</b> dans un tableau il y a égalité des produits en croix, <b>alors</b> c'est un tableau de proportionnalité.",
 			"Une situation de proportionnalité est représentée graphiquement dans un repère par une droite passant par l'origine du repère.",
 			"Si une situation est représentée graphiquement par une droite passant par l'origine du repère, alors c'est une situation de proportionnalité."
+		],
+		"exemples": [
+			"<p>Une voiture roule à 80km/h, la distance parcourue est alors proportionnelle au temps de trajet :</p><table style=\"text-align: center;\"><tr><td></td><td>× 80</td></tr><tr><td>2h de trajet</td><td style=\"padding: 0px 10px;\">────►</td><td>160 km parcouru</td></tr><tr style=\"height: 0.5cm;\"></tr><tr><td></td><td>× 80</td></tr><tr><td>5h de trajet</td><td>────►</td><td>400 km parcouru</td></tr></table>",
+			"<div class=\"proportionnaltable_coef\"><table class=\"proportionnaltable\"><tr><th>Temps de trajet (h)</th><td>1</td><td>2</td><td>5</td></tr><tr><th>Distance parcourue (km)</th><td>80</td><td>160</td><td>400</td></tr></table><img src=\"/Images/Cours/Coef1.svg\" style=\"max-height: 50px;\"></div>",
+			"Un robinet fuit et la quantité d'eau perdue est proportionnelle au temps qui passe :<table class=\"proportionnaltable samewidth\"><tr><th>Temps (h)</th><td>2</td><td>6</td><td>7</td><td>9</td></tr><tr><th>Quantité d'eau (L)</th><td>5</td><td>?</td><td>17,5</td><td>?</td></tr></table><ul><li>Pour obtenir la quantité d'eau perdu en 9h, on peut ajouter la quantité perdu en 2h et 7h (2 + 7 = 9) : $5 + 17,5 =22,5 L$</li><li>La quantité d'eau perdue en 6h peut être obtenu en multipliant la quantité perdue en 2h par 3 (2 × 3 = 6) : $5\\times3=15L$</li></ul>",
+			"Le prix d'une quantité de pomme est proportionnel a la masse de pomme :<table class=\"proportionnaltable samewidth\"><tr><th>Quantité de pomme (kg)</th><td>2</td><td class=\"CRed\"><b>1</b></td><td>5</td></tr><tr><th>Prix (€)</th><td>2,8</td><td class=\"CRed\"><b>1,4</b></td><td>?</td></tr></table>Le prix de 5 kg de pomme peut-être obtenue en passant par le prix de 1kg (passage à l'unité).<br>1kg de pomme coûte $2,8 \\div 2 = 1,40$€.<br>5kg de pomme coûte donc $1,40\\times5=7$€",
+			"Le prix du carburant est proportionnel à son volume :<div class=\"proportionnaltable_coef\"><table class=\"proportionnaltable samewidth\"><tr><th>Volume (L)</th><td>18</td><td>53</td></tr><tr><th>Prix (€)</th><td>29,52</td><td>?</td></tr></table><img src=\"/Images/Cours/Coef2.svg\" style=\"max-height: 50px;\"></div>Pour calculer le coefficient de proportionnalité, on divise une valeur de la ligne du bas par la quantité correspondante dans la ligne du haut.<br>Ici $29,52\\div18 = 1,64$.<br>On peut alors trouver le prix de 53 L de carburant : $53\\times1,64=86,92$€"
 		]
 	},"pyramide": {
 		"tags": [],
@@ -1036,7 +1113,8 @@
 			"Soient $\\textcolor{#e53935}{a}$, $\\textcolor{#039be5}{b}$, $\\textcolor{#43a047}{c}$ et $\\textcolor{#EEBB00}{d}$ des nombres relatifs ($\\textcolor{#039be5}{b}\\ne0, \\textcolor{#EEBB00}{d}\\ne0$).<br><b>Si</b> <span class=\"frac\">$\\frac{\\textcolor{#e53935}{a}}{\\textcolor{#039be5}{b}} = \\frac{\\textcolor{#43a047}{c}}{\\textcolor{#EEBB00}{d}}$</span>, <b>alors</b> $\\textcolor{#e53935}{a}\\times \\textcolor{#EEBB00}{d}=\\textcolor{#039be5}{b}\\times \\textcolor{#43a047}{c}$ <br>et<br> <b>Si</b> $\\textcolor{#e53935}{a}\\times \\textcolor{#EEBB00}{d}=\\textcolor{#039be5}{b}\\times \\textcolor{#43a047}{c}$, <b>alors</b> <span class=\"frac\">$\\frac{\\textcolor{#e53935}{a}}{\\textcolor{#039be5}{b}} = \\frac{\\textcolor{#43a047}{c}}{\\textcolor{#EEBB00}{d}}$</span>"
 		],
 		"exemples": [
-			"<div class=\"flexobject\"><img src=\"/Images/Cours/Multiplication.svg\" style=\"max-height: 2cm;\"><div style=\"flex: 1 1 5cm;\">Par quoi doit-on multiplier 3 pour obtenir 5 ?<br>Soit $3\\times\\textcolor{#e53935}{?} = 5$. Le nombre est ainsi $\\frac{5}{3}$ : $3\\times \\textcolor{#e53935}{\\frac{5}{3}} = 5$.</div></div>"
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Multiplication.svg\" style=\"max-height: 2cm;\"><div style=\"flex: 1 1 5cm;\">Par quoi doit-on multiplier 3 pour obtenir 5 ?<br>Soit $3\\times\\textcolor{#e53935}{?} = 5$. Le nombre est ainsi $\\frac{5}{3}$ : $3\\times \\textcolor{#e53935}{\\frac{5}{3}} = 5$.</div></div>",
+			"Cas particulier de la division euclidienne :<br>La division euclidienne ne s'effectue qu'avec des nombres entiers."
 		],
 		"remarques": [
 			"Plusieurs quotients peuvent être égales.",
@@ -1365,6 +1443,18 @@
 			"$V = \\text{Aire}_{\\text{Base}} \\times \\text{hauteur}$",
 			"$V =$<span class=\"formule\">$\\frac{\\text{Aire}_{\\text{Base}} \\times \\text{hauteur}}{3}$</span>",
 			"$V =$<span class=\"formule\">$\\frac{\\pi \\times \\text{rayon}^2 \\times \\text{hauteur}}{3}$</span>"
+		],
+		"remarques": [
+			"1 m³ c'est le volume d'un cube dont tous les côtés font 1 m.",
+			"1 L correspond à 1 dm³",
+			"En m³, pour passer d'une sous-unité à l'autre, on multiplie ou divise par 1 000."
+		],
+		"infos": [
+			"<style>.p-table3 {display: grid;grid-template-columns: repeat(21, 1fr);grid-template-rows: auto auto repeat(2, 30px);align-content: center;vertical-align: middle;text-align: center;border: solid 1px black;}.p-table3 > div{border: solid 1px black;align-content: center;font-size: 12pt;}.p-table3 > div:nth-child(-n + 28){font-size: 8pt;font-weight: bold;}.p-table3 > div:nth-child(-n + 7){background-color: #88FF87;}.p-table3 > div:nth-child(n + 8):nth-child(-n + 28){background-color: #3CB3E3;}.p-table3 > div:nth-child(-n + 28) > span{font-size: 16pt !important;}</style><div class=\"p-table3\"><div style=\"grid-column: 1 / 4;\">Kilomètre cube<br><span>km³</span></div><div style=\"grid-column: 4 / 7;\">Hectomètre cube<br><span>hm³</span></div><div style=\"grid-column: 7 / 10;\">Decamètre cube<br><span>dam³</span></div><div style=\"grid-column: 10 / 13;\">Mètre cube<br><span>m³</span></div><div style=\"grid-column: 13 / 16;\">Décimètre cube<br><span>dm³</span></div><div style=\"grid-column: 16 / 19;\">Centimètre cube<br><span>cm³</span></div><div style=\"grid-column: 19 / 22;\">Millimètre cube<br><span>mm³</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div>Kilolitre<br><span>kL</span></div><div>Hectolitre<br><span>hL</span></div><div>Decalitre<br><span>daL</span></div><div>Litre<br><span>L</span></div><div>Décilitre<br><span>dL</span></div><div>Centilitre<br><span>cL</span></div><div>Millilitre<br><span>mL</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div></div><div></div><div></div><div>4</div><div>2</div><div>6</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div>0,</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>5</div></div>"
+		],
+		"exemples": [
+			"426 hm³ = 426 000 000 000 dm³",
+			"5 mm³ = 0,00 000 5 L"
 		]
 	}
 }

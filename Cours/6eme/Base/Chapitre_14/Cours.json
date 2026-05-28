@@ -1,0 +1,42 @@
+{
+	"activité": "<img src=\"/Images/Cours/Act_Aire.svg\"><ol><li>Reproduire sur ton cahier les figure 1 et 3.<ol type=\"a\"><li>Calculer le périmétre et l'aire des deux figures</li><li>Comparer les périmètres puis les aires</li><li>Que dire de l'affirmation : <i>\"Plus le périmètre d'une figure est grand, plus l'aire est grande\"</i></li></ol></li><li>Reproduire les figures 2 et 4 et reprendre les questions précédentes.</li></ol>",
+	"content": [
+		{
+			"type": "title", "name": "Aires",
+			"content": [
+				{"type": "definition", "source": [{"name": "aire", "indexes": [0]}]},
+				{"type": "info", "source": [{"name": "aire", "indexes": [0]}]},
+				{"type": "autre", "source": [{"data": "<p>Tableau de conversion :</p>"}]},
+				{"type": "info", "source": [{"name": "aire", "indexes": [1]}]},
+				{"type": "exemple", "source": [{"name": "aire", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Aires de figures usuels",
+			"content": [
+				{"type": "info", "source": [{"name": "aire", "indexes": [2]}]},
+				{
+					"type": "title", "name": "Rectangle et carré",
+					"content": [
+						{"type": "info", "source": [{"name": "aire", "indexes": [3]}]},
+						{"type": "exemple", "source": [{"name": "aire", "indexes": [1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Triangle",
+					"content": [
+						{"type": "info", "source": [{"name": "aire", "indexes": [4]}]},
+						{"type": "exemple", "source": [{"name": "aire", "indexes": [2]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Cercle",
+					"content": [
+						{"type": "info", "source": [{"name": "aire", "indexes": [5]}]},
+						{"type": "exemple", "source": [{"name": "aire", "indexes": [3]}]}
+					]
+				}
+			]
+		}
+	]
+}

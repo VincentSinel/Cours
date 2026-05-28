@@ -1737,49 +1737,49 @@ var sixieme_base = [
 			nom: "Longueur et périmètres",
 			icone: 6,
 			ready : true,
-			page : "Base/Chapitre_12/Cours.html"
+			page : "Base/Chapitre_12/Cours.json"
 	},
 	{
 			id: 13,
 			nom: "Symétrie axiale",
 			icone: 2,
 			ready : true,
-			page : "Base/Chapitre_13/Cours.html"
+			page : "Base/Chapitre_13/Cours.json"
 	},
 	{
 			id: 14,
 			nom: "Aires de figures planes usuelles",
 			icone: 6,
 			ready : true,
-			page : "Base/Chapitre_14/Cours.html"
+			page : "Base/Chapitre_14/Cours.json"
 	},
 	{
 			id: 15,
 			nom: "Proportionnalité et pourcentages",
 			icone: 1,
 			ready : true,
-			page : "Base/Chapitre_15/Cours.html"
+			page : "Base/Chapitre_15/Cours.json"
 	},
 	{
 			id: 16,
 			nom: "Pavé droit",
 			icone: 2,
 			ready : true,
-			page : "Base/Chapitre_16/Cours.html"
+			page : "Base/Chapitre_16/Cours.json"
 	},
 	{
 			id: 17,
 			nom: "Priorités opératoires",
 			icone: 1,
 			ready : true,
-			page : "Base/Chapitre_17/Cours.html"
+			page : "Base/Chapitre_17/Cours.json"
 	},
 	{
 			id: 18,
 			nom: "Se repérer dans le temps",
 			icone: 5,
 			ready : true,
-			page : "Base/Chapitre_18/Cours.html",
+			page : "Base/Chapitre_18/Cours.json",
 	},
 ]
 

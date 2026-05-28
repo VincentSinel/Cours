@@ -1,0 +1,40 @@
+{
+	"activité": "<div class=\"flexobject\"></div><img src=\"/Images/Cours/Calculatrice.png\" style=\"max-width: 10cm;\"><div style=\"flex: 1 1 7cm;\">Louis utilise une calculatrice 4 opération comme celle ci-contre pour faire un exercice de mathématiques.<br>Il doit effectuer le calcul suivant : $8 - 3\\times2 + 6$<br>En écrivant se calcul dans l'ordre sur sa calculatrice il obtient 16.<br>Effectue ce calcul en une seul opération sur ta calculatrice collège.<br><ul><li>Que remarques-tu ?</li><li>Quel est le problème avec le calcul de Louis ?</li></ul></div></div>",
+	"content": [
+		{
+			"type": "title", "name": "Vocabulaire des opérations",
+			"content": [
+				{"type": "definition", "source": [{"name": "somme", "indexes": [0]}]},
+				{"type": "definition", "source": [{"name": "différence", "indexes": [0]}]},
+				{"type": "definition", "source": [{"name": "terme", "indexes": [0]}]},
+				{"type": "definition", "source": [{"name": "produit", "indexes": [0]}, {"name": "facteur", "indexes": [0]}]},
+				{"type": "definition", "source": [{"name": "quotient", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "quotient", "indexes": [1]}]},
+				{"type": "info", "source": [{"name": "division euclidienne", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Enchaînement d'opérations",
+			"content": [
+				{
+					"type": "title", "name": "Calcul sans parenthèses",
+					"content": [
+						{"type": "propriete", "source": [{"name": "priorités opératoires", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "priorités opératoires", "indexes": [0]}]},
+						{"type": "propriete", "source": [{"name": "priorités opératoires", "indexes": [1]}]},
+						{"type": "exemple", "source": [{"name": "priorités opératoires", "indexes": [1]}]},
+						{"type": "propriete", "source": [{"name": "priorités opératoires", "indexes": [2]}]},
+						{"type": "exemple", "source": [{"name": "priorités opératoires", "indexes": [2, 3]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Utilisation des parenthèses",
+					"content": [
+						{"type": "propriete", "source": [{"name": "priorités opératoires", "indexes": [3]}]},
+						{"type": "exemple", "source": [{"name": "priorités opératoires", "indexes": [4, 5]}]}
+					]
+				}
+			]
+		}
+	]
+}

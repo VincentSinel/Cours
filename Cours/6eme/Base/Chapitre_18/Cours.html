@@ -18,32 +18,6 @@
   <title>Chapitre 18 - Se repérer dans le temps</title>
 
   <style>
-    .table_seconde{
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, auto);
-      align-content: center;
-      vertical-align: middle;
-      text-align: center;
-      border: solid 1px black;
-    }
-    .table_seconde div {
-      border: solid 1px black;
-    }
-    .ts_head{
-      background-color: #88FF87;
-    }
-    .ts_head2{
-      background-color: #C6FFAC;
-    }
-    .time_unit{
-      flex-direction: column;
-      border: solid 2px black;
-      padding: 5px;
-    }
-    .time_unit div:first-child{
-      font-weight: bold;
-    }
   </style>
 
 </head>
@@ -72,8 +46,8 @@
         <p style="font-weight: bold;">Film 1</p>
         <p>1h 35 min</p>
       </div>
-      <a href="https://fr.vecteezy.com/vecteur-libre/affiche-cinema">
-        <img src="Images/Affiche1.svg" style="max-width: 7cm;">
+      <a href="https://fr.vecteezy.com/vecteur-libre/affiche-cinema" target="_blank">
+        <img src="Images/Act_Temps_Affiche1.svg" style="max-width: 7cm;">
       </a>
     </div>
     <div style="flex: 0 1 7cm; border: solid 2px black; padding: 5px;">
@@ -81,8 +55,8 @@
         <p style="font-weight: bold;">Film 2</p>
         <p>93 min</p>
       </div>
-      <a href="https://fr.vecteezy.com/vecteur-libre/affiche-cinema">
-        <img src="Images/Film2.jpg" style="max-width: 7cm;">
+      <a href="https://fr.vecteezy.com/vecteur-libre/affiche-cinema" target="_blank">
+        <img src="Images/Act_Temps_Affiche2.jpg" style="max-width: 7cm;">
       </a>
     </div>
     <div style="flex: 0 1 7cm; border: solid 2px black; padding: 5px;">
@@ -90,8 +64,8 @@
         <p style="font-weight: bold;">Film 3</p>
         <p>2h 35min</p>
       </div>
-      <a href="https://fr.vecteezy.com/vecteur-libre/affiche-cinema">
-        <img src="Images/Affiche3.svg" style="max-width: 7cm;">
+      <a href="https://fr.vecteezy.com/vecteur-libre/affiche-cinema" target="_blank">
+        <img src="Images/Act_Temps_Affiche3.svg" style="max-width: 7cm;">
       </a>
     </div>
     <div style="flex: 0 1 7cm; border: solid 2px black; padding: 5px;">
@@ -99,8 +73,8 @@
         <p style="font-weight: bold;">Film 4</p>
         <p>55 min</p>
       </div>
-      <a href="https://fr.vecteezy.com/vecteur-libre/affiche-cinema">
-        <img src="Images/Film4.jpg" style="max-width: 7cm;">
+      <a href="https://fr.vecteezy.com/vecteur-libre/affiche-cinema" target="_blank">
+        <img src="Images/Act_Temps_Affiche4.jpg" style="max-width: 7cm;">
       </a>
     </div>
   </div>
@@ -136,11 +110,36 @@
     </p>
     <p class="remarque">Remarques :</p>
     <p>Il existe d'autre unité de durée.</p>
+    <style>
+      .table_seconde{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        align-content: center;
+        vertical-align: middle;
+        text-align: center;
+        border: solid 1px black;
+      }
+      .table_seconde div {
+        border: solid 1px black;
+      }
+      .table_seconde div:nth-child(-n + 4){
+        background-color: #C6FFAC;
+      }
+      .time_unit{
+        flex-direction: column;
+        border: solid 2px black;
+        padding: 5px;
+      }
+      .time_unit div:first-child{
+        font-weight: bold;
+      }
+    </style>
     <div class="table_seconde">
-      <div class="ts_head2"><b>Seconde</b> (s)</div>
-      <div class="ts_head2">Dixième de <b>seconde</b></div>
-      <div class="ts_head2">Centième de <b>seconde</b></div>
-      <div class="ts_head2">Millième de <b>seconde</b> (ms)</div>
+      <div><b>Seconde</b> (s)</div>
+      <div>Dixième de <b>seconde</b></div>
+      <div>Centième de <b>seconde</b></div>
+      <div>Millième de <b>seconde</b> (ms)</div>
       <div>1 s</div>
       <div>0,1 s</div>
       <div>0,01 s</div>

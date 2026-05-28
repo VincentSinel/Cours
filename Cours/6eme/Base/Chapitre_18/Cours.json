@@ -1,0 +1,40 @@
+{
+	"activité": "<div class=\"flexobject\" style=\"flex-direction: row; flex-wrap: wrap;\"><div style=\"flex: 0 1 7cm; border: solid 2px black; padding: 5px;\"><div style=\"text-align: center; line-height: 0%;\"><p style=\"font-weight: bold;\">Film 1</p><p>1h 35 min</p></div><a href=\"https://fr.vecteezy.com/vecteur-libre/affiche-cinema\" target=\"_blank\"><img src=\"/Images/Cours/Act_Temps_Affiche1.svg\" style=\"max-width: 7cm;\"></a></div><div style=\"flex: 0 1 7cm; border: solid 2px black; padding: 5px;\"><div style=\"text-align: center; line-height: 0%;\"><p style=\"font-weight: bold;\">Film 2</p><p>93 min</p></div><a href=\"https://fr.vecteezy.com/vecteur-libre/affiche-cinema\" target=\"_blank\"><img src=\"/Images/Cours/Act_Temps_Affiche2.jpg\" style=\"max-width: 7cm;\"></a></div><div style=\"flex: 0 1 7cm; border: solid 2px black; padding: 5px;\"><div style=\"text-align: center; line-height: 0%;\"><p style=\"font-weight: bold;\">Film 3</p><p>2h 35min</p></div><a href=\"https://fr.vecteezy.com/vecteur-libre/affiche-cinema\" target=\"_blank\"><img src=\"/Images/Cours/Act_Temps_Affiche3.svg\" style=\"max-width: 7cm;\"></a></div><div style=\"flex: 0 1 7cm; border: solid 2px black; padding: 5px;\"><div style=\"text-align: center; line-height: 0%;\"><p style=\"font-weight: bold;\">Film 4</p><p>55 min</p></div><a href=\"https://fr.vecteezy.com/vecteur-libre/affiche-cinema\" target=\"_blank\"><img src=\"/Images/Cours/Act_Temps_Affiche4.jpg\" style=\"max-width: 7cm;\"></a></div></div><p>Dans un cinéma sont proposé quatre film au spectateur.</p><ol><li>Convertir la durée, en minutes, de chacune de ces séances.</li><li>Aziz souhaite voir les films 2 et 4.<ol type=\"a\"><li>Combien de temps au total cela va-t-il prendre. Donner ce temps en minutes puis en heure et minutes.</li><li>Il arrive au cinéma à 18h45. A quelle heure va-t-il sortir ?</li></ol></li><li>Jacque est lui allé voir un film de 20h45 à 22h20. Quel film a-t-il vu ?</li></ol>",
+	"content": [
+		{
+			"type": "title", "name": "Durée",
+			"content": [
+				{"type": "definition", "source": [{"name": "durée", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "durée", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "durée", "indexes": [0]}]},
+				{"type": "info", "source": [{"name": "durée", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Calculs d'horaires",
+			"content": [
+				{
+					"type": "title", "name": "Calcul d'une durée",
+					"content": [
+						{"type": "info", "source": [{"name": "durée", "indexes": [1]}]},
+						{"type": "exemple", "source": [{"name": "durée", "indexes": [1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "A partir d'un temps initial",
+					"content": [
+						{"type": "info", "source": [{"name": "durée", "indexes": [2]}]},
+						{"type": "exemple", "source": [{"name": "durée", "indexes": [2]}]}
+					]
+				},
+				{
+					"type": "title", "name": "A partir d'un temps final",
+					"content": [
+						{"type": "info", "source": [{"name": "durée", "indexes": [3]}]},
+						{"type": "exemple", "source": [{"name": "durée", "indexes": [3]}]}
+					]
+				}
+			]
+		}
+	]
+}

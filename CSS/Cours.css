@@ -554,6 +554,10 @@ ol > li::marker {
 {
     width: 150px;
 }
+.proportionnaltable_coef{
+    display: flex;
+    align-items: center;
+}
 
 
 .u_lat{

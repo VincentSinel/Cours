@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.43 30.39">
+  <g>
+    <path d="m0,1.5c8.7,0,15.74,5.63,15.74,12.58,0,5.95-5.18,10.94-12.13,12.25" style="fill: none; stroke: #1d1d1b; stroke-miterlimit: 10; stroke-width: 3px;"/>
+    <polygon points="4.61 30.39 3.73 22.05 0 26.66 4.61 30.39" style="fill: #1d1d1b; stroke-width: 0px;"/>
+    <ellipse cx="26.36" cy="15.27" rx="23.06" ry="12.58" style="fill: #fff; stroke: #1d1d1b; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    <text x="9.51" y="20" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 14.17px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;">X 80</text>
+  </g>
+</svg>

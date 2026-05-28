@@ -18,35 +18,6 @@
   <title>Chapitre 16 - Pavé droit</title>
 
   <style>
-    .p-table {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      grid-template-rows: auto auto repeat(2, 50px);
-      align-content: center;
-      vertical-align: middle;
-      text-align: center;
-      border: solid 1px black;
-    }
-    .line_title3 {
-      background-color: #3CB3E3;
-      font-size: 12pt;
-      font-weight: bold;
-    }
-    .line_title4 {
-      background-color: #88FF87;
-      font-size: 12pt;
-      font-weight: bold;
-    }
-
-    .p-table div{
-      border: solid 1px black;
-      align-content: center;
-    }
-
-    .p-table p {
-      font-size: 12pt;
-      font-weight: bold;
-    }
   </style>
 
 </head>
@@ -180,38 +151,67 @@
       <li>En m³, pour passer d'une sous-unité à l'autre, on multiplie ou divise par 1 000.</li>
     </ul>
     <p>Tableau de conversion d'un volume</p>
-    <div class="p-table" style="grid-template-columns: repeat(21, 1fr);">
-      <div class="line_title4" style="grid-column: 1 / 4;">Kilomètre cube<br><span style="font-size: 20pt;">km³</span></div>
-      <div class="line_title4" style="grid-column: 4 / 7;">Hectomètre cube<br><span style="font-size: 20pt;">hm³</span></div>
-      <div class="line_title4" style="grid-column: 7 / 10;">Decamètre cube<br><span style="font-size: 20pt;">dam³</span></div>
-      <div class="line_title4" style="grid-column: 10 / 13;">Mètre cube<br><span style="font-size: 20pt;">m³</span></div>
-      <div class="line_title4" style="grid-column: 13 / 16;">Décimètre cube<br><span style="font-size: 20pt;">dm³</span></div>
-      <div class="line_title4" style="grid-column: 16 / 19;">Centimètre cube<br><span style="font-size: 20pt;">cm³</span></div>
-      <div class="line_title4" style="grid-column: 19 / 22;">Millimètre cube<br><span style="font-size: 20pt;">mm³</span></div>
+    <style>
+      .p-table3 {
+        display: grid;
+        grid-template-columns: repeat(21, 1fr);
+        grid-template-rows: auto auto repeat(2, 30px);
+        align-content: center;
+        vertical-align: middle;
+        text-align: center;
+        border: solid 1px black;
+      }
+      .p-table3 > div{
+        border: solid 1px black;
+        align-content: center;
+        font-size: 12pt;
+      }
+      .p-table3 > div:nth-child(-n + 28){
+        font-size: 8pt;
+        font-weight: bold;
+      }
+      .p-table3 > div:nth-child(-n + 7){
+        background-color: #88FF87;
+      }
+      .p-table3 > div:nth-child(n + 8):nth-child(-n + 28){
+        background-color: #3CB3E3;
+      }
+      .p-table3 > div:nth-child(-n + 28) > span{
+        font-size: 16pt !important;
+      }
+    </style>
+    <div class="p-table3">
+      <div style="grid-column: 1 / 4;">Kilomètre cube<br><span>km³</span></div>
+      <div style="grid-column: 4 / 7;">Hectomètre cube<br><span>hm³</span></div>
+      <div style="grid-column: 7 / 10;">Decamètre cube<br><span>dam³</span></div>
+      <div style="grid-column: 10 / 13;">Mètre cube<br><span>m³</span></div>
+      <div style="grid-column: 13 / 16;">Décimètre cube<br><span>dm³</span></div>
+      <div style="grid-column: 16 / 19;">Centimètre cube<br><span>cm³</span></div>
+      <div style="grid-column: 19 / 22;">Millimètre cube<br><span>mm³</span></div>
 
-      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
-      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
-      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
-      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
-      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
-      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
-      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
-      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
-      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
-      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
-      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
-      <div class="line_title3">Kilolitre<br><span style="font-size: 20pt;">kL</span></div>
-      <div class="line_title3">Hectolitre<br><span style="font-size: 20pt;">hL</span></div>
-      <div class="line_title3">Decalitre<br><span style="font-size: 20pt;">daL</span></div>
-      <div class="line_title3">Litre<br><span style="font-size: 20pt;">L</span></div>
-      <div class="line_title3">Décilitre<br><span style="font-size: 20pt;">dL</span></div>
-      <div class="line_title3">Centilitre<br><span style="font-size: 20pt;">cL</span></div>
-      <div class="line_title3">Millilitre<br><span style="font-size: 20pt;">mL</span></div>
-      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
-      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
-      <div class="line_title3"><span style="font-size: 20pt;">-</span></div>
+      <div><span>-</span></div>
+      <div><span>-</span></div>
+      <div><span>-</span></div>
+      <div><span>-</span></div>
+      <div><span>-</span></div>
+      <div><span>-</span></div>
+      <div><span>-</span></div>
+      <div><span>-</span></div>
+      <div><span>-</span></div>
+      <div><span>-</span></div>
+      <div><span>-</span></div>
+      <div>Kilolitre<br><span>kL</span></div>
+      <div>Hectolitre<br><span>hL</span></div>
+      <div>Decalitre<br><span>daL</span></div>
+      <div>Litre<br><span>L</span></div>
+      <div>Décilitre<br><span>dL</span></div>
+      <div>Centilitre<br><span>cL</span></div>
+      <div>Millilitre<br><span>mL</span></div>
+      <div><span>-</span></div>
+      <div><span>-</span></div>
+      <div><span>-</span></div>
       <div></div><div></div><div></div><div>4</div><div>2</div><div>6</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div></div><div></div><div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>5</div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div>0,</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>5</div>
     </div>
     <p class="exemple">Exemples :</p>
     <ul>

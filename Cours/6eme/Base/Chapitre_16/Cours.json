@@ -1,0 +1,53 @@
+{
+	"activité": "<p>Un polyèdres est un <b>solide</b> dont toutes les faces sont des polygones. En voici quatre :</p><table class=\"proportionnaltable\"><tr><th>Solide</th><td><b>Cube</b></td><td><b>Pyramide</b></td><td><b>Parallélépipède rectangle</b></td><td><b>Prisme droit</b></td></tr><tr><th>Représentation en perspective cavalière</th><td><img src=\"/Images/Cours/Cube1.svg\" style=\"max-width: 4cm;\"></td><td><img src=\"/Images/Cours/Pyramide1.svg\" style=\"max-width: 4cm;\"></td><td><img src=\"/Images/Cours/Pave1.svg\" style=\"max-width: 4cm;\"></td><td><img src=\"/Images/Cours/Prisme1.svg\" style=\"max-width: 4cm;\"></td></tr><tr><th>Patron</th><td><img src=\"/Images/Cours/Cube2.svg\" style=\"max-width: 4cm;\"></td><td><img src=\"/Images/Cours/Pyramide2.svg\" style=\"max-width: 4cm;\"></td><td><img src=\"/Images/Cours/Pave2.svg\" style=\"max-width: 4cm;\"></td><td><img src=\"/Images/Cours/Prisme2.svg\" style=\"max-width: 4cm;\"></td></tr><tr><th>Nombres de faces</th><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><th>Nombres de sommets</th><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><th>Nombres d'arêtes</th><td>...</td><td>...</td><td>...</td><td>...</td></tr></table><ol><li>Completer les trois dernières lignes du tableau.</li><li>On se concentre sur le cube et le parallélépipède rectangle.<ol type=\"a\"><li>Qu'ont-ils en commun ?</li><li>Quelle est la forme des faces d'un parallélépipède rectangle ?</li><li>Construire le patron d'un cube de côté 4cm.</li></ol></li></ol>",
+	"content": [
+		{
+			"type": "title", "name": "Cube et parallélépipède rectangle",
+			"content": [
+				{
+					"type": "title", "name": "Perspective cavalière",
+					"content": [
+						{"type": "definition", "source": [{"name": "perspective cavalière", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "perspective cavalière", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Parallélépipède rectangle",
+					"content": [
+						{
+							"type": "title", "name": "Définition",
+							"content": [
+								{"type": "definition", "source": [{"name": "pavé droit", "indexes": [0]}]},
+								{"type": "exemple", "source": [{"name": "pavé droit", "indexes": [0]}]},
+								{"type": "remarque", "source": [{"name": "pavé droit", "indexes": [0,1,2,3]}]},
+								{"type": "definition", "source": [{"name": "cube", "indexes": [0]}]},
+								{"type": "exemple", "source": [{"name": "cube", "indexes": [0]}]},
+								{"type": "remarque", "source": [{"name": "cube", "indexes": [0]}]}
+							]
+						},
+						{
+							"type": "title", "name": "Patron",
+							"content": [
+								{"type": "definition", "source": [{"name": "patron", "indexes": [0]}]},
+								{"type": "exemple", "source": [{"name": "patron", "indexes": [0]}]},
+								{"type": "remarque", "source": [{"name": "patron", "indexes": [0, 1]}]}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Volume",
+			"content": [
+				{"type": "definition", "source": [{"name": "volume", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "volume", "indexes": [0, 1, 2]}]},
+				{"type": "autre", "source": [{"data": "<p>Tableau de conversion d'un volume :</p>"}]},
+				{"type": "info", "source": [{"name": "volume", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "volume", "indexes": [0, 1]}]},
+				{"type": "propriete", "source": [{"name": "pavé droit", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "pavé droit", "indexes": [1]}, {"name": "cube", "indexes": [1]}]}
+			]
+		}
+	]
+}

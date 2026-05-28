@@ -115,7 +115,17 @@
 				if (chapitre.hasOwnProperty("chapter"))
 					name = chapitre.chapter;
 				name += " - " + chapitre.nom;
-				var link = "/Cours/" + classe + "/" + chapitre.page
+				var link = "/Cours/" 
+				if (chapitre.page.endsWith("json"))
+				{
+					link += "PageCours.html#" + classe + "/" + chapitre.page.substring(0, chapitre.page.length - 11)
+				}
+				else
+				{
+					link += + classe + "/" + chapitre.page
+				}
+				
+				
 				var li = document.createElement("li");
 				var a1 = document.createElement("a");
 				a1.href = link;
