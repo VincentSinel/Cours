@@ -1,0 +1,19 @@
+{
+	"content": [{
+			"type": "title", "name": "Classement",
+			"content": [
+				{"type": "definition", "source": [{"name": "croissant", "indexes": [0]}, {"name": "décroissant", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "classer", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Encadrement",
+			"content": [
+				{"type": "definition", "source": [{"name": "encadrer", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "encadrer", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "encadrer", "indexes": [0]}]},
+				{"type": "info", "source": [{"name": "encadrer", "indexes": [0]}]}
+			]
+		}
+	]
+}

@@ -1,0 +1,32 @@
+{
+	"content": [{
+			"type": "title", "name": "Vocabulaire",
+			"content": [
+				{"type": "definition", "source": [{"name": "forme fractionnaire", "indexes": [0]}]},
+				{
+					"type": "container",
+					"class": "flexobject",
+					"content": [
+						{"type": "info", "source": [{"name": "forme fractionnaire", "indexes": [0]}]},
+						{"type": "info", "source": [{"name": "forme fractionnaire", "indexes": [1]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Partage",
+			"content": [
+				{"type": "definition", "source": [{"name": "fraction", "indexes": [1]}]},
+				{"type": "exemple", "source": [{"name": "fraction", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Demi-droite graduée",
+			"content": [
+				{"type": "definition", "source": [{"name": "fraction", "indexes": [2]}]},
+				{"type": "exemple", "source": [{"name": "fraction", "indexes": [1]}]},
+				{"type": "remarque", "source": [{"name": "fraction", "indexes": [0,1]}]}
+			]
+		}
+	]
+}

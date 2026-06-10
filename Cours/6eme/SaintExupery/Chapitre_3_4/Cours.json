@@ -1,0 +1,18 @@
+{
+	"content": [{
+			"type": "title", "name": "Quotient",
+			"content": [
+				{"type": "definition", "source": [{"name": "quotient", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "quotient", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "quotient", "indexes": [0, 1]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Fraction d'une quantité",
+			"content": [
+				{"type": "definition", "source": [{"name": "fraction", "indexes": [3]}]},
+				{"type": "exemple", "source": [{"name": "fraction", "indexes": [2]}]}
+			]
+		}
+	]
+}

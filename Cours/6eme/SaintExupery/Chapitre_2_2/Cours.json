@@ -1,0 +1,21 @@
+{
+	"content": [{
+			"type": "title", "name": "Définition",
+			"content": [
+				{"type": "definition", "source": [{"name": "produit", "indexes": [0]}, {"name": "facteur", "indexes": [0]}]},
+				{"type": "info", "source": [{"name": "produit", "indexes": [0]}]},
+				{"type": "definition", "source": [{"name": "commutative", "indexes": [1]}]},
+				{"type": "exemple", "source": [{"name": "commutative", "indexes": [2, 3]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Calculs astucieux",
+			"content": [
+				{"type": "definition", "source": [{"name": "produit", "indexes": [1]}]},
+				{"type": "exemple", "source": [{"name": "produit", "indexes": [0,1, 2]}]},
+				{"type": "info", "source": [{"name": "produit", "indexes": [1]}]},
+				{"type": "exemple", "source": [{"name": "produit", "indexes": [3, 4]}]}
+			]
+		}
+	]
+}

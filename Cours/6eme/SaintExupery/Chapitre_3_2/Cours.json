@@ -1,0 +1,17 @@
+{
+	"content": [{
+			"type": "title", "name": "Fractions égales",
+			"content": [
+				{"type": "propriete", "source": [{"name": "quotient", "indexes": [2]}]},
+				{"type": "exemple", "source": [{"name": "fraction", "indexes": [3, 4]}]},
+				{"type": "info", "source": [{"name": "quotient", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Droites graduées",
+			"content": [
+				{"type": "info", "source": [{"name": "axe gradué", "indexes": [1]}]}
+			]
+		}
+	]
+}

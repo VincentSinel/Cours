@@ -1,0 +1,25 @@
+{
+	"content": [{
+			"type": "title", "name": "Définition",
+			"content": [
+				{"type": "definition", "source": [{"name": "division euclidienne", "indexes": [0]}]},
+				{"type": "info", "source": [{"name": "division euclidienne", "indexes": [0]}]},
+				{"type": "definition", "source": [{"name": "multiple", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "multiple", "indexes": [1, 2]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Critères de divisibilités",
+			"content": [
+				{"type": "definition", "source": [{"name": "critère de divisibilité", "indexes": [0]}]},
+				{"type": "definition", "source": [{"name": "critère de divisibilité", "indexes": [2]}]},
+				{"type": "definition", "source": [{"name": "critère de divisibilité", "indexes": [4]}]},
+				{"type": "exemple", "source": [{"name": "critère de divisibilité", "indexes": [0]}]},
+				{"type": "definition", "source": [{"name": "critère de divisibilité", "indexes": [1]}]},
+				{"type": "definition", "source": [{"name": "critère de divisibilité", "indexes": [3]}]},
+				{"type": "exemple", "source": [{"name": "critère de divisibilité", "indexes": [1, 2]}]},
+				{"type": "remarque", "source": [{"name": "critère de divisibilité", "indexes": [0]}]}
+			]
+		}
+	]
+}

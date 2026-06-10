@@ -1,0 +1,41 @@
+{
+	"content": [{
+			"type": "title", "name": "Fraction décimale",
+			"content": [
+				{"type": "definition", "source": [{"name": "fraction décimale", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "fraction décimale", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "fraction décimale", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "fraction décimale", "indexes": [1]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Ecriture décimale",
+			"content": [
+				{"type": "definition", "source": [{"name": "écriture décimale", "indexes": [0]}]},
+				{"type": "info", "source": [{"name": "écriture décimale", "indexes": [0, 1]}]},
+				{"type": "remarque", "source": [{"name": "écriture décimale", "indexes": [0, 1, 2, 3]}]},
+				{"type": "exemple", "source": [{"name": "écriture décimale", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Ecriture fractionnaire",
+			"content": [
+				{"type": "definition", "source": [{"name": "fraction décimale", "indexes": [1]}]},
+				{"type": "exemple", "source": [{"name": "fraction décimale", "indexes": [2, 3]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Partie entière et partie décimale",
+			"content": [
+				{"type": "definition", "source": [{"name": "décomposer", "indexes": [1]}]},
+				{"type": "exemple", "source": [{"name": "décomposer", "indexes": [1, 2]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Autres décompositions",
+			"content": [
+				{"type": "info", "source": [{"name": "décomposer", "indexes": [0]}]}
+			]
+		}
+	]
+}

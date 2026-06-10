@@ -14,20 +14,16 @@
     };
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
-
+  
   <style>
     .division td{
       padding: 0px 3px;
       border-collapse: collapse;
     }
     .virgule{
-      padding: 0px 0px !important;
-    }
-    .partiedecimale td.virgule{
-      border-right: green dashed 1px;
     }
     .partiedecimale2{
-      background-color: var(--Color_Green5);
+      /* background-color: var(--Color_Green5); */
     }
   </style>
 
@@ -200,16 +196,26 @@
     <ul>
       <li>Certaines divisions ne s'arrêtent  pas, on s'arrête donc lorsque l'un des reste dans la partie décimal est identique à l'un des précédents.</li>
     </ul>
+    <style>
+      .partiedecimale td:nth-child(3){
+        padding: 0px 0px !important;
+        border-right: green dashed 1px;
+      }
+      .partiedecimale td:nth-child(n + 4):nth-child(-n + 6)
+      {
+        background-color: var(--Color_Green5);
+      }
+    </style>
     <div class="flexobject">
       <div style="flex: 3cm 0 1;">
         <table class="division partiedecimale" style="text-align: right;">
           <tr>
             <td></td>
             <td>7</td>
-            <td class="virgule">,</td>
-            <td class="partiedecimale2">0</td>
-            <td class="partiedecimale2">0</td>
-            <td class="partiedecimale2" style="border-right: solid 2px black;">0</td>
+            <td>,</td>
+            <td>0</td>
+            <td>0</td>
+            <td style="border-right: solid 2px black;">0</td>
             <td style="border-bottom: solid 2px black;">6</td>
             <td style="border-bottom: solid 2px black;"></td>
             <td style="border-bottom: solid 2px black;"></td>
@@ -219,10 +225,10 @@
           <tr>
             <td style="border-bottom: solid 2px black;">-</td>
             <td style="border-bottom: solid 2px black;">6</td>
-            <td class="virgule"></td>
-            <td class="partiedecimale2" style="border-bottom: solid 2px transparent;"></td>
-            <td class="partiedecimale2"></td>
-            <td class="partiedecimale2" style="border-right: solid 2px black;"></td>
+            <td></td>
+            <td style="border-bottom: solid 2px transparent;"></td>
+            <td></td>
+            <td style="border-right: solid 2px black;"></td>
             <td>1</td>
             <td>,</td>
             <td>1</td>
@@ -232,10 +238,10 @@
           <tr>
             <td></td>
             <td>1</td>
-            <td class="virgule"></td>
-            <td class="partiedecimale2">0</td>
-            <td class="partiedecimale2"></td>
-            <td class="partiedecimale2" style="border-right: solid 2px black;"></td>
+            <td></td>
+            <td>0</td>
+            <td></td>
+            <td style="border-right: solid 2px black;"></td>
             <td></td>
             <td></td>
             <td></td>
@@ -243,7 +249,7 @@
           <tr>
             <td style="border-bottom: solid 2px black;">-</td>
             <td style="border-bottom: solid 2px black;"></td>
-            <td class="virgule" style="border-bottom: solid 2px black;"></td>
+            <td style="border-bottom: solid 2px black;"></td>
             <td class="partiedecimale2" style="border-bottom: solid 2px black;">6</td>
             <td class="partiedecimale2" style="border-bottom: solid 2px transparent;"></td>
             <td class="partiedecimale2" style="border-right: solid 2px"></td>
@@ -254,7 +260,7 @@
           <tr>
             <td></td>
             <td></td>
-            <td class="virgule" ></td>
+            <td></td>
             <td class="partiedecimale2 CRed"><b>4</b></td>
             <td class="partiedecimale2"><b>0</b></td>
             <td class="partiedecimale2" style="border-right: solid 2px black;"></td>
@@ -265,7 +271,7 @@
           <tr>
             <td></td>
             <td style="border-bottom: solid 2px black;">-</td>
-            <td class="virgule" style="border-bottom: solid 2px black;"></td>
+            <td style="border-bottom: solid 2px black;"></td>
             <td class="partiedecimale2" style="border-bottom: solid 2px black;">3</td>
             <td class="partiedecimale2" style="border-bottom: solid 2px black;">6</td>
             <td class="partiedecimale2" style="border-right: solid 2px black; border-bottom: solid 2px transparent;"></td>
@@ -276,7 +282,7 @@
           <tr>
             <td></td>
             <td></td>
-            <td class="virgule" ></td>
+            <td></td>
             <td class="partiedecimale2"></td>
             <td class="partiedecimale2 CRed"><b>4</b></td>
             <td class="partiedecimale2" style="border-right: solid 2px black;"><b>0</b></td>
@@ -287,7 +293,7 @@
           <tr>
             <td></td>
             <td></td>
-            <td class="virgule"></td>
+            <td></td>
             <td class="partiedecimale2" style="border-bottom: solid 2px black;">-</td>
             <td class="partiedecimale2" style="border-bottom: solid 2px black;">3</td>
             <td class="partiedecimale2" style="border-bottom: solid 2px black; border-right: solid 2px black;">6</td>
@@ -299,7 +305,7 @@
           <tr>
             <td></td>
             <td></td>
-            <td class="virgule" ></td>
+            <td></td>
             <td class="partiedecimale2"></td>
             <td class="partiedecimale2"></td>
             <td class="partiedecimale2" style="border-right: solid 2px black;">4</td>

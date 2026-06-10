@@ -115,7 +115,11 @@
 			"Sur la droite gradué, plus un nombre est à droite, plus il est grand."
 		],
 		"exemples": [
-			"<img src=\"/Images/Cours/Axe graduee 1.svg\"><p>L'origine de cette demi-droite graduée a pour abscisse 0.<ul><li>Le point A a pour abscisse 2,0 : on écrit $A(2)$.</li><li>Le point B a pour abscisse 3,5 : on écrit $B(3,5)$.</li><li>Le point C a pour abscisse 2,8 : on écrit $C(2,8)$.</li></ul></p>"
+			"<style>.text_accolade,.accolade_top{width: 17.5%;padding-left: 5.7%;}.text_accolade{text-align: center;font-size: 8pt;color: var(--Cred);}</style><table><tr><td><img src=\"/Images/Cours/Axe graduee 1.svg\"></td></tr><tr><td><div class=\"accolade_top\"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></td></tr><tr><td><div class=\"text_accolade\">Unité de longueur</div></td></tr></table><p>L'origine de cette demi-droite graduée a pour abscisse 0.<ul><li>Le point A a pour abscisse 2,0 : on écrit $A(2)$.</li><li>Le point B a pour abscisse 3,5 : on écrit $B(3,5)$.</li><li>Le point C a pour abscisse 2,8 : on écrit $C(2,8)$.</li></ul></p>"
+		],
+		"infos": [
+			"<p>Pour trouver le « pas » de graduation, on regarde le nombre de morceaux qui compose l'unité et on fait la division.<br> Ci-dessus l'unité est coupé en 10 morceaux donc chacun représente $\\frac{1}{10}$ de l'unité soit 0,1.<br>Ci-dessous l'unité est coupé en 4 morceaux donc chacun représente $\\frac{1}{4}$ de l'unité soit 0,25. Le point A a donc une abscisse de 2,75.</p><img src=\"/Images/Cours/Axe graduee 4.svg\">",
+			"<style>.frac{display: flex;flex-direction: row;flex-wrap: wrap;gap: 2cm;}.frac img{flex: 8cm 1 1;max-width: 18cm;min-width: 8cm;}.frac p {font-weight: bold;font-size: 20pt;min-width: 3cm;width: 3cm;}</style><p>Selon le choix des graduations d'un axe gradué, on peut utiliser différentes fractions pour définir l'abscisse d'un même point.</p><div style=\"display: flex; flex-direction: column;\"><div class=\"frac\"><img src=\"/Images/Cours/Axe graduee 5.svg\"><p>$A(\\frac{4}{3})$</p></div><div class=\"frac\"><img src=\"/Images/Cours/Axe graduee 6.svg\"><p>$A(\\frac{8}{6})$</p></div><div class=\"frac\"><img src=\"/Images/Cours/Axe graduee 7.svg\"><p>$A(\\frac{12}{9})$</p></div><div class=\"frac\"><img src=\"/Images/Cours/Axe graduee 8.svg\"><p>$A(\\frac{20}{15})$</p></div></div>"
 		]
 	},"bissectrice": {
 		"tags": [],
@@ -206,6 +210,12 @@
 		"definitions": [
 			"Une addition est dite <span class=\"CRed\">commutative</span>, cela signifie que l'on peut intervertir les termes sans changer le résultat.",
 			"Une multiplication est dite <span class=\"CRed\">commutative</span>, cela signifie que l'on peut intervertir les facteurs sans changer le résultat."
+		],
+		"exemples": [
+			"5 + 8 = 8 + 5",
+			"3,478 + 142,3 = 142,3 + 3,478",
+			"$5 \\times 8 = 8 \\times 5$",
+			"$325,4\\times46,8=46,8\\times325,4$"
 		]
 	},"concourante": {
 		"tags": [],
@@ -240,6 +250,14 @@
 			"Un nombre est <b>divisible par 5</b> lorsque son chiffre des unités est 0 ou 5.",
 			"Un nombre est <b>divisible par 9</b> lorsque la somme de ses chiffres est divisible par 9.",
 			"Un nombre est <b>divisible par 10</b> lorsque son chiffre des unités est 0."
+		],
+		"exemples": [
+			"240 est divisible par 2, 5 et 10.",
+			"7 293 138 → $7+2+9+3+1+3+8 = 33$ qui est divisible par 3 ($3\times11$) donc 7 293 138 est divisible par 3.",
+			"240 111 → $2+4+0+1+1+1=9$ qui est divisible par 9 et 3 donc 240 111 est divisible par 9 et 3."
+		],
+		"remarques": [
+			"Un nombre divisible par 9 est toujours divisible par 3."
 		]
 	},"croissant": {
 		"tags": [],
@@ -271,7 +289,12 @@
 			"On peut décomposer un nombre décimal en séparent sa <span class=\"CGreen\"><b>partie entière</b></span> et sa <span class=\"CViolet\"><b>partie décimal</b></span>."
 		],
 		"exemples": [
-			"On peut décomposer $5\\ 713$ de la manière suivante :<ul><li>$5\\ 713=(\\textcolor{#CB2F4C}{5}\\times1\\ 000)+(\\textcolor{#E29B31}{7}\\times100)+(\\textcolor{#34D15B}{1}\\times10)+\\textcolor{#2189C7}{3}$<br>On met en avant le chiffre des <span style=\"color: #CB2F4C\">milliers</span>, <span style=\"color: #E29B31\">centaines</span>, <span style=\"color: #34D15B\">dizaines</span>, <span style=\"color: #2189C7\">unités</span>.</li><li>$5\\ 713=(\\textcolor{#34D15B}{571}\\times10)+3$<br>571 est le nombre de <span style=\"color: #34D15B\">dizaines</span>.</li><li>$5\\ 713=(\\textcolor{#E29B31}{57}\\times100)+13$<br>57 est le nombre de <span style=\"color: #E29B31\">centaines</span>.</li></ul>"
+			"On peut décomposer $5\\ 713$ de la manière suivante :<ul><li>$5\\ 713=(\\textcolor{#CB2F4C}{5}\\times1\\ 000)+(\\textcolor{#E29B31}{7}\\times100)+(\\textcolor{#34D15B}{1}\\times10)+\\textcolor{#2189C7}{3}$<br>On met en avant le chiffre des <span style=\"color: #CB2F4C\">milliers</span>, <span style=\"color: #E29B31\">centaines</span>, <span style=\"color: #34D15B\">dizaines</span>, <span style=\"color: #2189C7\">unités</span>.</li><li>$5\\ 713=(\\textcolor{#34D15B}{571}\\times10)+3$<br>571 est le nombre de <span style=\"color: #34D15B\">dizaines</span>.</li><li>$5\\ 713=(\\textcolor{#E29B31}{57}\\times100)+13$<br>57 est le nombre de <span style=\"color: #E29B31\">centaines</span>.</li></ul>",
+			"$35,25 = \\textcolor{#43a047}{35} + \\textcolor{#7C4DA5}{0,25} = \\textcolor{#43a047}{35} + \\textcolor{#7C4DA5}{\\frac{25}{100}}$",
+			"$102,027 = \\textcolor{#43a047}{102} + \\textcolor{#7C4DA5}{0,027} = \\textcolor{#43a047}{102} + \\textcolor{#7C4DA5}{\\frac{27}{1\\ 000}}$"
+		],
+		"infos": [
+			"Il existe de très nombreuses autre décomposition. Voici quelques exemples, dans tous les cas, il faudra suivre la consigne pour effectuer la bonne décomposition dans les exercices :<br><ul><li><b>Décomposition additive :</b><br><ul><li>$35,25 = 30 + 5 + 0,2 + 0,05$</li><li>$35,25 = 30 + 5 + \\frac{2}{10} + \\frac{5}{100}$</li></ul></li><li><b>Décomposition multiplicative :</b><br><ul><li>$35,25 = (3\\times 10) + 5 + (2\\times 0,1) + (5\\times 0,01)$</li><li>$35,25 = (3\\times 10) + 5 + (2\\times \\frac{1}{10}) + (5\\times \\frac{1}{100})$</li></ul></li></ul>"
 		]
 	},"décroissant": {
 		"tags": [],
@@ -353,6 +376,15 @@
 		"tags": [],
 		"definitions": [
 			"Le résultat d'une soustraction est appelé <span class=\"CRed\">différence</span>."
+		],
+		"remarques": [
+			"On soustrait toujours le plus petit des deux termes au plus grand, donc <b>on ne peut pas modifier l'ordre des termes d'une soustraction</b>."
+		],
+		"infos": [
+			"Pour poser une soustraction en colonne, on aligne les nombres selon le rang de leurs chiffres. On commence ensuite la soustraction par la droite et on remonte petit à petit. Lorsqu'une soustraction n'est pas possible (que l'on soustrait plus que disponible), on prend une dizaine supplémentaire et on indique que l'on soustrait 1 de plus au rang suivant."
+		],
+		"exemples": [
+			"<style>.soustraction td{min-width: 20px;text-align: center;vertical-align: middle;font-size: 16pt;}.soustraction tr:last-child{border-top: solid 2px black;}.retenu_soustraction{color: red;font-size: 10pt;font-weight: bold;font-family: 'Courier New', Courier, monospace;font-variant-position: sub;}</style><div class=\"flexobject\"><div class=\"flexobject\"><div><p><b>Avec des entiers</b></p><table class=\"soustraction\"><tr><th></th><td>1</td><td><span class=\"retenu_soustraction\">1</span>4</td><td>8</td></tr><tr><th>-</th><td><span class=\"retenu_soustraction\">+1</span></td><td>8</td><td>6</td></tr><tr></tr><tr><th></th><td>0</td><td>6</td><td>2</td></tr></table></div><div style=\"max-width: 5cm;\">Ici on ne peut pas retirer 8 à 4. On prend donc <span class=\"CRed\">1</span>4 et on ajoute <span class=\"CRed\">1</span> dans la soustraction au rang des centaines.</div></div><div class=\"flexobject\"><div><p><b>Avec des nombres décimaux</b></p><table class=\"soustraction\"><tr><th></th><td>8</td><td><span class=\"retenu_soustraction\">1</span>3</td><td style=\"min-width: auto;\">,</td><td><span class=\"retenu_soustraction\">1</span>0</td><td>4</td><td>9</td></tr><tr><th>-</th><td><span class=\"retenu_soustraction\">+1</span></td><td>7<span class=\"retenu_soustraction\">+1</span></td><td style=\"min-width: auto;\">,</td><td>6</td><td>3</td><td><span class=\"CBlue\">0</span></td></tr><tr><th></th><td>7</td><td>5</td><td style=\"min-width: auto;\">,</td><td>9</td><td>1</td><td>9</td></tr></table></div><div style=\"max-width: 5cm;\">On aligne correctement les chiffres de même rang et on effectue la soustraction comme avec des entiers.</div></div></div>"
 		]
 	},"disque": {
 		"tags": [],
@@ -431,10 +463,18 @@
 	},"division décimale": {
 		"tags": [],
 		"definitions": [
-			"Une <span class=\"CRed\">division décimale</span> est la recherche d'un <span class=\"CGreen\">quotient</span> (qui peut être décimal) tel que :<br><span class=\"CRed\">$dividende$</span> $=$ <span class=\"CBlue\">$diviseur$</span> $\\times$ <span class=\"CGreen\">$quotient$</span>"
+			"Une <span class=\"CRed\">division décimale</span> est la recherche d'un <span class=\"CGreen\">quotient</span> (qui peut être décimal) tel que :<br><span class=\"CRed\">$dividende$</span> $=$ <span class=\"CBlue\">$diviseur$</span> $\\times$ <span class=\"CGreen\">$quotient$</span>",
+			"<div class=\"definition\">Il existe des divisions particulières :<ul><li>Division par 1 : le quotient est égal au dividende.</li><li>Division par 10 : on déplace la virgule d'un rang vers la gauche.</li><li>Division par 100 : on déplace la virgule de deux rangs vers la gauche.</li><li>Division par 1 000 : on déplace la virgule de trois rangs vers la gauche.</li><li>...</li></ul></div>"
 		],
 		"exemples": [
-			"<style>.division td{padding: 0px 3px;}</style><div class=\"flexobject\"><div style=\"flex: 1 1 5cm; max-width: 7cm;\"><p>Cette division se termine</p><table class=\"division\" style=\"text-align: right;\"><tr><td></td><td>3</td><td>2</td><td>,</td><td style=\"border-right: solid 2px black;\">0</td><td style=\"border-bottom: solid 2px black;\">5</td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\"></td></tr><tr><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\">3</td><td style=\"border-bottom: solid 2px black;\">0</td><td></td><td style=\"border-right: solid 2px black;\">↓</td><td>6</td><td>,</td><td>4</td></tr><tr><td></td><td></td><td>2</td><td></td><td style=\"border-right: solid 2px black;\">0</td><td></td><td></td><td></td></tr><tr><td></td><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\">2</td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-right: solid 2px black; border-bottom: solid 2px black;\">0</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td style=\"border-right: solid 2px black;\">0</td><td></td><td></td><td></td></tr></table></div><div style=\"flex: 1 1 5cm; max-width: 8cm;\"><p>Cette division ne se termine pas car le reste est identique deux fois de suite.</p><table class=\"division\" style=\"text-align: center;\"><tr><td></td><td>1</td><td>4</td><td>,</td><td>0</td><td style=\"border-right: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\">3</td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\"></td></tr><tr><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\">1</td><td style=\"border-bottom: solid 2px black;\">2</td><td></td><td>↓</td><td style=\"border-right: solid 2px black;\"></td><td>4</td><td>,</td><td>6</td></tr><tr><td></td><td></td><td class=\"CRed\">2</td><td></td><td>0</td><td style=\"border-right: solid 2px black;\"></td></tr><tr><td></td><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\">1</td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\">8</td><td style=\"border-right: solid 2px black;\"></td></tr><tr><td></td><td></td><td></td><td></td><td class=\"CRed\">2</td><td style=\"border-right: solid 2px black;\"></td></tr></table></div></div>"
+			"<style>.division td{padding: 0px 3px;}</style><div class=\"flexobject\"><div style=\"flex: 1 1 5cm; max-width: 7cm;\"><p>Cette division se termine</p><table class=\"division\" style=\"text-align: right;\"><tr><td></td><td>3</td><td>2</td><td>,</td><td style=\"border-right: solid 2px black;\">0</td><td style=\"border-bottom: solid 2px black;\">5</td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\"></td></tr><tr><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\">3</td><td style=\"border-bottom: solid 2px black;\">0</td><td></td><td style=\"border-right: solid 2px black;\">↓</td><td>6</td><td>,</td><td>4</td></tr><tr><td></td><td></td><td>2</td><td></td><td style=\"border-right: solid 2px black;\">0</td><td></td><td></td><td></td></tr><tr><td></td><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\">2</td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-right: solid 2px black; border-bottom: solid 2px black;\">0</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td style=\"border-right: solid 2px black;\">0</td><td></td><td></td><td></td></tr></table></div><div style=\"flex: 1 1 5cm; max-width: 8cm;\"><p>Cette division ne se termine pas car le reste est identique deux fois de suite.</p><table class=\"division\" style=\"text-align: center;\"><tr><td></td><td>1</td><td>4</td><td>,</td><td>0</td><td style=\"border-right: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\">3</td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\"></td></tr><tr><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\">1</td><td style=\"border-bottom: solid 2px black;\">2</td><td></td><td>↓</td><td style=\"border-right: solid 2px black;\"></td><td>4</td><td>,</td><td>6</td></tr><tr><td></td><td></td><td class=\"CRed\">2</td><td></td><td>0</td><td style=\"border-right: solid 2px black;\"></td></tr><tr><td></td><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\">1</td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\">8</td><td style=\"border-right: solid 2px black;\"></td></tr><tr><td></td><td></td><td></td><td></td><td class=\"CRed\">2</td><td style=\"border-right: solid 2px black;\"></td></tr></table></div></div>",
+			"<style>.division td{padding: 0px 3px;}</style><div style=\"flex: 1 1 5cm; max-width: 7cm;\"><p>Cette division se termine</p><table class=\"division\" style=\"text-align: right;\"><tr><td></td><td>3</td><td>2</td><td>,</td><td style=\"border-right: solid 2px black;\">0</td><td style=\"border-bottom: solid 2px black;\">5</td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\"></td></tr><tr><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\">3</td><td style=\"border-bottom: solid 2px black;\">0</td><td></td><td style=\"border-right: solid 2px black;\">↓</td><td>6</td><td>,</td><td>4</td></tr><tr><td></td><td></td><td>2</td><td></td><td style=\"border-right: solid 2px black;\">0</td><td></td><td></td><td></td></tr><tr><td></td><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\">2</td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-right: solid 2px black; border-bottom: solid 2px black;\">0</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td style=\"border-right: solid 2px black;\">0</td><td></td><td></td><td></td></tr></table></div>",
+			"$54,7 \\div 10 = 5,47$",
+			"$54,7 \\div 100 = 0,547$"
+		],
+		"remarques": [
+			"Certaines divisions ne s'arrêtent  pas, on s'arrête donc lorsque l'un des reste dans la partie décimal est identique à l'un des précédents.<style>.partiedecimale td:nth-child(3){padding: 0px 0px !important;border-right: green dashed 1px;}.partiedecimale td:nth-child(n + 4):nth-child(-n + 6){background-color: var(--Color_Green5);}</style><div class=\"flexobject\"><div style=\"flex: 3cm 0 1;\"><table class=\"division partiedecimale\" style=\"text-align: right;\"><tr><td></td><td>7</td><td>,</td><td>0</td><td>0</td><td style=\"border-right: solid 2px black;\">0</td><td style=\"border-bottom: solid 2px black;\">6</td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\"></td></tr><tr><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\">6</td><td></td><td style=\"border-bottom: solid 2px transparent;\"></td><td></td><td style=\"border-right: solid 2px black;\"></td><td>1</td><td>,</td><td>1</td><td>6</td><td>6</td></tr><tr><td></td><td>1</td><td></td><td>0</td><td></td><td style=\"border-right: solid 2px black;\"></td><td></td><td></td><td></td></tr><tr><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\"></td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px black;\">6</td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px transparent;\"></td><td class=\"partiedecimale2\" style=\"border-right: solid 2px\"></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td class=\"partiedecimale2 CRed\"><b>4</b></td><td class=\"partiedecimale2\"><b>0</b></td><td class=\"partiedecimale2\" style=\"border-right: solid 2px black;\"></td><td></td><td></td><td></td></tr><tr><td></td><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\"></td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px black;\">3</td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px black;\">6</td><td class=\"partiedecimale2\" style=\"border-right: solid 2px black; border-bottom: solid 2px transparent;\"></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td class=\"partiedecimale2\"></td><td class=\"partiedecimale2 CRed\"><b>4</b></td><td class=\"partiedecimale2\" style=\"border-right: solid 2px black;\"><b>0</b></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px black;\">-</td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px black;\">3</td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px black; border-right: solid 2px black;\">6</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td class=\"partiedecimale2\"></td><td class=\"partiedecimale2\"></td><td class=\"partiedecimale2\" style=\"border-right: solid 2px black;\">4</td><td></td><td></td><td></td></tr></table></div><div style=\"flex: 5cm 1 1;\">Ici la division ne se termine jamais car le reste est identique deux fois de suite dans la <span class=\"partiedecimale2\">partie décimale</span><br>Le quotient de 7 par 6 n'est donc pas un nombre décimal.</div>",
+			"De manière générale dans ce type de division, on déplace la virgule d'autant de rang qu'il y a de zéro."
 		]
 	},"division euclidienne": {
 		"tags": [],
@@ -498,11 +538,16 @@
 		],
 		"remarques": [
 			"La barre rouge indique la position de la virgule.",
-			"Dans le tableau est inscrit le nombre $516,762$ :<br>$516,762=(\\textcolor{#3CB3E3}{5}\\times100)+(\\textcolor{#56DCFF}{1}\\times10)+\\textcolor{#82FFFF}{6}+(\\textcolor{#ABDBFF}{7}\\times\\frac{1}{10})+(\\textcolor{#D5B7FF}{6}\\times\\frac{1}{100})+(\\textcolor{#FF93FF}{2}\\times\\frac{1}{1\\ 000})$<br>516 est alors la <b>partie entière</b> et 0,762 la <b>partie décimale</b>."
+			"Dans le tableau est inscrit le nombre $516,762$ :<br>$516,762=(\\textcolor{#3CB3E3}{5}\\times100)+(\\textcolor{#56DCFF}{1}\\times10)+\\textcolor{#82FFFF}{6}+(\\textcolor{#ABDBFF}{7}\\times\\frac{1}{10})+(\\textcolor{#D5B7FF}{6}\\times\\frac{1}{100})+(\\textcolor{#FF93FF}{2}\\times\\frac{1}{1\\ 000})$<br>516 est alors la <span style=\"color: #FF7463\"><b>partie entière</b></span> et 0,762 la <span style=\"color: #FFDF68\"><b>partie décimale</b></span>.",
+			"Un nombre entier est un nombre dont la partie décimal est 0 (Ex : $5 = 5,0 = 5,00 = ...$)",
+			"Les zéro supplémentaire derrière la virgule <b>et</b> le dernier chiffre ne sont pas utile (Ex : $2,405\\textcolor{#e53935}{00}=2,405$)"
 		],
 		"infos": [
 			"<p>Il est possible d'agrandir le tableau vu précédemment :</p>",
 			"<div class=\"tableau_numeration decimaux\"><div>Classe des Milliers</div><div>Classe des Unités</div><div>Classe des Millièmes</div><div style=\"background-color: #5FF26F;\">Centaines</div><div style=\"background-color: #88FF87;\">Dizaines</div><div style=\"background-color: #C6FFAC;\">Unités</div><div style=\"background-color: #3CB3E3;\">Centaines</div><div style=\"background-color: #56DCFF;\">Dizaines</div><div style=\"background-color: #82FFFF;\">Unités</div><div style=\"background-color: #ABDBFF;\">Dixièmes</div><div style=\"background-color: #D5B7FF;\">Centièmes</div><div style=\"background-color: #FF93FF;\">Unités</div><div style=\"background-color: #D261FD;\">Dixièmes</div><div style=\"background-color: #A546E0;\">Centièmes</div><div>100 000</div><div>10 000</div><div>1 000</div><div>100</div><div>10</div><div>1</div><div>0,1 $=\\frac{1}{10}$</div><div>0,01 $=\\frac{1}{100}$</div><div>0,00 1 $=\\frac{1}{1\\ 000}$</div><div>0,00 01 $=\\frac{1}{10\\ 000}$</div><div>0,00 001 $=\\frac{1}{100\\ 000}$</div><div></div><div></div><div></div><div>5</div><div>1</div><div>6</div><div>7</div><div>6</div><div>2</div><div></div><div></div><div>Partie entière</div><div>Partie décimale</div></div>"
+		],
+		"exemples": [
+			"Dans le tableau est inscrit le nombre $516,762$ :<br>$516,762=(\\textcolor{#3CB3E3}{5}\\times100)+(\\textcolor{#56DCFF}{1}\\times10)+\\textcolor{#82FFFF}{6}+(\\textcolor{#ABDBFF}{7}\\times\\frac{1}{10})+(\\textcolor{#D5B7FF}{6}\\times\\frac{1}{100})+(\\textcolor{#FF93FF}{2}\\times\\frac{1}{1\\ 000})$<br>516 est alors la <b>partie entière</b> et 0,762 la <b>partie décimale</b>."
 		]
 	},"effectif": {
 		"tags": [],
@@ -663,7 +708,13 @@
 		"exemples": [
 			"<div><span class=\"center\">Unité</span><div class=\"accolade_bottom\"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><table class=\"borderfull\" style=\"width: 100%; border: solid 2px black;\"><tr style=\"height: 30px;\"><td style=\"background-color: #7B29C1;\"></td><td></td><td></td><td></td></tr></table><div style=\"width: 100%; display: grid; grid-template-columns: repeat(4, 1fr);\"><div class=\"accolade_top\" style=\"grid-column: 2;\"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><div style=\"grid-column: 2; grid-row: 2; text-align: center;\">Découpage régulier</div></div><p>Ici la partie violette correspond à $\\frac{1}{4}$ de l'unité.</p><table><tr><td style=\"border-bottom: solid 2px black; padding: 0px 5px;\">1</td><td>←</td><td>Nombre de part colorié</td></tr><tr><td style=\"padding: 0px 5px;\">4</td><td>←</td><td>Nombre de part total</td></tr></table><table class=\"borderfull\" style=\"width: 100%;border: solid 2px black;\"><tr style=\"height: 15px;\"><td style=\"background-color: #7B29C1;\"></td><td></td><td></td><td></td></tr><tr style=\"height: 15px;\"><td style=\"background-color: #7B29C1;\"></td><td></td><td></td><td></td></tr></table><p>Ici la partie violette correspond à $\\frac{2}{8}$ de l'unité. Cette fraction représente la même quantité que $\\frac{1}{4}$.</p></div>",
 			"<p>L'unité (ici la baguette de pain) est partagée en 5 parts égales.</p><img src=\"/Images/Cours/Axe graduee 3.svg\" style=\"max-height: 2cm;\"><p>La position du point M est $\\frac{3}{5}$. Celle du point N est $\\frac{7}{5}$.</p>",
-			"Léa a 20€. Elle en dépense les $\\frac{3}{4}$ pour acheter un DVD. Combien a-t-elle dépensé ?<br>On effectue la multiplication : $20 \\times \\frac{3}{4} = 20 \\times 0,75 = 15$, Elle aura donc  dépensé 15€."
+			"Léa a 20€. Elle en dépense les $\\frac{3}{4}$ pour acheter un DVD. Combien a-t-elle dépensé ?<br>On effectue la multiplication : $20 \\times \\frac{3}{4} = 20 \\times 0,75 = 15$, Elle aura donc  dépensé 15€.",
+			"<div class=\"frac\">$\\frac{6}{7}=\\frac{6\\ \\times\\ \\textcolor{#e53935}{4}}{7\\ \\times\\ \\textcolor{#e53935}{4}}=\\frac{24}{28}$</div>",
+			"<div class=\"frac\">$\\frac{32}{24}=\\frac{32\\ \\div\\ \\textcolor{#e53935}{8}}{24\\ \\div\\ \\textcolor{#e53935}{8}}=\\frac{4}{3}$</div>",
+			"<table><tr style=\"text-align: center;\"><td class=\"frac\">$\\frac{2}{4}$</td><td class=\"frac\">+</td><td class=\"frac\">$\\frac{1}{4}$</td><td class=\"frac\">=</td><td class=\"frac\">$\\frac{2+1}{4}=\\frac{3}{4}$</td></tr><tr><td><img src=\"/Images/Cours/Disque Fraction4.svg\" style=\"max-width: 3cm;\"></td><td class=\"frac\">+</td><td><img src=\"/Images/Cours/Disque Fraction5.svg\" style=\"max-width: 3cm;\"></td><td class=\"frac\">=</td><td><img src=\"/Images/Cours/Disque Fraction6.svg\" style=\"max-width: 3cm;\"></td></tr></table>",
+			"<span class=\"frac\">$\\frac{7}{31}+\\frac{16}{31}=\\frac{7+16}{31}=\\frac{23}{31}$</span>",
+			"<span class=\"frac\">$\\frac{7}{8}+\\frac{33}{24}=\\frac{7}{8}+\\frac{33\\ \\textcolor{#e53935}{\\div\\ 3}}{24\\ \\textcolor{#e53935}{\\div\\ 3}}=\\frac{7}{8}+\\frac{11}{8}=\\frac{7 + 11}{8}=\\frac{18}{8}$</span>",
+			"<span class=\"frac\">$\\frac{5}{3}+\\frac{8}{15}=\\frac{5\\ \\textcolor{#e53935}{\\times\\ 5}}{3\\ \\textcolor{#e53935}{\\times\\ 5}}+\\frac{8}{15}=\\frac{25}{15}+\\frac{8}{15}=\\frac{25 + 8}{15}=\\frac{33}{15}$</span>"
 		],
 		"remarques": [
 			"La position d'un point sur un axe gradué est appelé <b>abscisse</b>.",
@@ -672,14 +723,17 @@
 	},"fraction décimale":{
 		"tags": ["fraction", "fractionnaire"],
 		"definitions": [
-			"Une <span class='CRed'>fraction décimale</span> est une fraction d'un entier \"sur\" 10, 100, 1 000 etc.."
+			"Une <span class='CRed'>fraction décimale</span> est une fraction d'un entier \"sur\" 10, 100, 1 000 etc..",
+			"Un nombre décimal peut s'écrire comme fraction décimale. Il suffit de prendre le dénominateur correspondant au rang du dernier chiffre après la virgule."
 		],
 		"remarques": [
 			"Une fraction décimale admet <b>plusieurs</b> écritures."
 		],
 		"exemples": [
-			"<div class=\"flexobject\"><ul><li>$0,\\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{10}}$ un <span class=\"CRed\">dixième</span></li><li>$0,00\\ \\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{1\\ 000}}$ un <span class=\"CRed\">millième<span></li></ul><ul><li>$0,0\\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{100}}$ un <span class=\"CRed\">centième</span><li><li>$0,00\\ 0\\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{10\\ 000}}$ un <spanclass=\"CRed\">dix-millième</span></li></ul></div>",
-			"<ul><li>$\\frac{10}{10}=\\frac{100}{100}=\\frac{1\\ 000}{1\\ 000}=\\frac{10\\ 000}{10\\ 000}$</li><li>$\\frac{1}{10}=\\frac{10}{100}=\\frac{100}{1\\ 000}=\\frac{1\\ 000}{10\\ 000}$</li><li>$\\frac{42}{100}=\\frac{40}{100}+\\frac{2}{100}=\\frac{4}{10}+ \\frac{2}{100}$</li></ul>"
+			"<div class=\"flexobject\"><ul><li>$0,\\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{10}}$ un <span class=\"CRed\">dixième</span></li><li>$0,00\\ \\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{1\\ 000}}$ un <span class=\"CRed\">millième<span></li></ul><ul><li>$0,0\\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{100}}$ un <span class=\"CRed\">centième</span></li><li>$0,00\\ 0\\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{10\\ 000}}$ un <spanclass=\"CRed\">dix-millième</span></li></ul></div>",
+			"<ul><li>$\\frac{10}{10}=\\frac{100}{100}=\\frac{1\\ 000}{1\\ 000}=\\frac{10\\ 000}{10\\ 000}$</li><li>$\\frac{1}{10}=\\frac{10}{100}=\\frac{100}{1\\ 000}=\\frac{1\\ 000}{10\\ 000}$</li><li>$\\frac{42}{100}=\\frac{40}{100}+\\frac{2}{100}=\\frac{4}{10}+ \\frac{2}{100}$</li></ul>",
+			"Dans 35,2<b>5</b> le dernier chiffre est le chiffre des <b>centièmes</b>.<br>On utilise donc 100 comme dénominateur pour la fraction décimal.<br><ul><li>$35,25 = \\frac{3\\ 525}{100}$</li></ul>",
+			"Dans 102,02<b>7</b> le dernier chiffre est le chiffre des <b>millièmes</b>.<br>On utilise donc 1 000 comme dénominateur pour la fraction décimal.<br><ul><li>$102,027 = \\frac{102\\ 027}{1\\ 000}$</li></ul>"
 		]
 	},"fraction irréductible":{
 		"tags": ["fraction", "fractionnaire"],
@@ -1030,10 +1084,22 @@
 	},"produit": {
 		"tags": [],
 		"definitions": [
-			"Le résultat d'une multiplication est appelé <span class=\"CRed\">produit</span>."
+			"Le résultat d'une multiplication est appelé <span class=\"CRed\">produit</span>.",
+			"Lorsque l'on multiplie par <b>10 ; 100 ; 1 000 ; ...</b> on décale la virgule d'<b>un, deux, trois, ...</b> rang vers la <b>droite</b>.<br>Lorsque l'on multiplie par <b>0,1 ; 0,01 ; 0,001 ; ...</b> on décale la virgule d'<b>un, deux, trois, ...</b> rang vers la <b>gauche</b>."
 		],
 		"proprietes": [
 			"Dire qu'un produit est nul signifie que l'un de ses facteurs est nul."
+		],
+		"infos": [
+			"<style>.multiplication{text-align: center;}.multiplication th{padding-right: 20px;}.multiplication_tr td{border-top: solid 2px black;}.multiplication td{padding: 5px;}</style><p>Pour poser une multiplication, il n'est pas nécessaire d'aligner les chiffres selon leur rang.<br><span class=\"CGreen\">On multiplie tous les chiffres du premier par chacun des chiffres du second en commençant par la droite</span>. On écrit chaque résultat les uns à la suite des autres <span class=\"CRed\">en décalant à chaque fois d'un rang</span>. On effectue ensuite une addition pour obtenir le produit. On place ensuite la virgule <span class=\"CBlue\">en fonction du nombre de chiffres après la virgule dans les facteurs</span>.</p><table class=\"multiplication\"> <!-- 702,5 x 47,3--><tr><th></th><td></td><td></td><td></td><td>7</td><td>0</td><td>2,</td><td class=\"CBlue\">5</td></tr><tr><th></th><td>×</td><td></td><td></td><td></td><td>4</td><td>7,</td><td class=\"CBlue\">3</td></tr><tr class=\"multiplication_tr\"><th class=\"CGreen\">$3\\times 7\\ 025=$</th><td></td><td></td><td>2</td><td>1</td><td>0</td><td>7</td><td>5</td></tr><tr><th class=\"CGreen\">$7\\times 7\\ 025=$</th><td></td><td>4</td><td>9</td><td>1</td><td>7</td><td>5</td><td class=\"CRed\"><b>●</b></td></tr><tr><th class=\"CGreen\">$4\\times 7\\ 025=$</th><td>2</td><td>8</td><td>2</td><td>0</td><td>0</td><td class=\"CRed\"><b>●</b></td><td class=\"CRed\"><b>●</b></td></tr><tr class=\"multiplication_tr\"><th></th><td>3</td><td>3</td><td>3</td><td>2</td><td>8,</td><td class=\"CBlue\">2</td><td class=\"CBlue\">5</td></tr></table>",
+			"Dans une suite de multiplication, on peut effectuer les calculs dans l'ordre que l'on veut. On peut donc regrouper les multiplications astucieusement pour faciliter le calcul."
+		],
+		"exemples": [
+			"<ul><li>$8,492 \\times 10 = 84,92$</li><li>$8,492 \\times 100 = 849,2$</li><li>$8,492 \\times 1\\ 000 = 8\\ 492$</li></ul>",
+			"<ul><li>$72 \\times 10 = 720$</li><li>$426 \\times 100 = 42\\ 600$</li><li>$705 \\times 1\\ 000 = 705\\ 000$</li></ul>",
+			"<ul><li>$873 \\times 0,1 = 87,3$</li><li>$873 \\times 0,01 = 8,73$</li><li>$873 \\times 0,001 = 0,873$</li></ul>",
+			"$4\\times34\\times25 = 4\\times25\\times34=100\\times34=3\\ 400$",
+			"$0,1\\times58\\times2\\times5 = 2\\times5\\times0,1\\times58=10\\times0,1\\times58=1\\times 58=58$"
 		]
 	},"produit de facteurs premiers": {
 		"tags": [],
@@ -1105,12 +1171,13 @@
 	},"quotient": {
 		"tags": [],
 		"definitions": [
-			"Le quotient de deux nombre <span class=\"CBlue\">▲</span> et <span class=\"CGreen\">●</span> est le nombre qui multiplié par <span class=\"CGreen\">●</span> donne <span class=\"CBlue\">▲</span>. On le note <span style=\"font-size: 16pt;\">$(\\frac{\\textcolor{#039be5}{▲}}{\\textcolor{#43a047}{●}})$</span>",
+			"Le quotient de deux nombre <span class=\"CBlue\">▲</span> et <span class=\"CGreen\">●</span> est le nombre qui multiplié par <span class=\"CGreen\">●</span> donne <span class=\"CBlue\">▲</span>. On le note <span style=\"font-size: 16pt;\">$(\\frac{\\textcolor{#039be5}{▲}}{\\textcolor{#43a047}{●}})$</span><br><span class=\"formule\">$\\textcolor{#43a047}{●}\\times\\frac{\\textcolor{#039be5}{▲}}{\\textcolor{#43a047}{●}} = \\textcolor{#039be5}{▲}$</span>",
 			"Le résultat d'une division est appelé <span class=\"CRed\">quotient</span>."
 		],
 		"proprietes": [
 			"Dans une égalité de quotient, on a égalité des produits en croix :<br><b>Si</b> <span class=\"frac\">$\\frac{a}{b} = \\frac{c}{d}$</span>, <b>alors</b> $a\\times d = b \\times c$",
-			"Soient $\\textcolor{#e53935}{a}$, $\\textcolor{#039be5}{b}$, $\\textcolor{#43a047}{c}$ et $\\textcolor{#EEBB00}{d}$ des nombres relatifs ($\\textcolor{#039be5}{b}\\ne0, \\textcolor{#EEBB00}{d}\\ne0$).<br><b>Si</b> <span class=\"frac\">$\\frac{\\textcolor{#e53935}{a}}{\\textcolor{#039be5}{b}} = \\frac{\\textcolor{#43a047}{c}}{\\textcolor{#EEBB00}{d}}$</span>, <b>alors</b> $\\textcolor{#e53935}{a}\\times \\textcolor{#EEBB00}{d}=\\textcolor{#039be5}{b}\\times \\textcolor{#43a047}{c}$ <br>et<br> <b>Si</b> $\\textcolor{#e53935}{a}\\times \\textcolor{#EEBB00}{d}=\\textcolor{#039be5}{b}\\times \\textcolor{#43a047}{c}$, <b>alors</b> <span class=\"frac\">$\\frac{\\textcolor{#e53935}{a}}{\\textcolor{#039be5}{b}} = \\frac{\\textcolor{#43a047}{c}}{\\textcolor{#EEBB00}{d}}$</span>"
+			"Soient $\\textcolor{#e53935}{a}$, $\\textcolor{#039be5}{b}$, $\\textcolor{#43a047}{c}$ et $\\textcolor{#EEBB00}{d}$ des nombres relatifs ($\\textcolor{#039be5}{b}\\ne0, \\textcolor{#EEBB00}{d}\\ne0$).<br><b>Si</b> <span class=\"frac\">$\\frac{\\textcolor{#e53935}{a}}{\\textcolor{#039be5}{b}} = \\frac{\\textcolor{#43a047}{c}}{\\textcolor{#EEBB00}{d}}$</span>, <b>alors</b> $\\textcolor{#e53935}{a}\\times \\textcolor{#EEBB00}{d}=\\textcolor{#039be5}{b}\\times \\textcolor{#43a047}{c}$ <br>et<br> <b>Si</b> $\\textcolor{#e53935}{a}\\times \\textcolor{#EEBB00}{d}=\\textcolor{#039be5}{b}\\times \\textcolor{#43a047}{c}$, <b>alors</b> <span class=\"frac\">$\\frac{\\textcolor{#e53935}{a}}{\\textcolor{#039be5}{b}} = \\frac{\\textcolor{#43a047}{c}}{\\textcolor{#EEBB00}{d}}$</span>",
+			"Un quotient ne change pas lorsque l'on multiplie (ou divise) son numérateur et son dénominateur par un même nombre (non nul).<br>Soit <span class=\"CRed\">k</span>$\\neq0$ :<br><span class=\"formule\">$\\frac{a}{b}=\\frac{a\\ \\times\\ \\textcolor{#e53935}{k}}{b\\ \\times\\ \\textcolor{#e53935}{k}}$</span>et <span class=\"formule\">$\\frac{a}{b}=\\frac{a\\ \\div\\ \\textcolor{#e53935}{k}}{b\\ \\div\\ \\textcolor{#e53935}{k}}$</span>"
 		],
 		"exemples": [
 			"<div class=\"flexobject\"><img src=\"/Images/Cours/Multiplication.svg\" style=\"max-height: 2cm;\"><div style=\"flex: 1 1 5cm;\">Par quoi doit-on multiplier 3 pour obtenir 5 ?<br>Soit $3\\times\\textcolor{#e53935}{?} = 5$. Le nombre est ainsi $\\frac{5}{3}$ : $3\\times \\textcolor{#e53935}{\\frac{5}{3}} = 5$.</div></div>",
@@ -1119,6 +1186,9 @@
 		"remarques": [
 			"Plusieurs quotients peuvent être égales.",
 			"Un quotient ne change pas lorsque l'on multiplie (ou divise) son numérateur <b>et</b> son dénominateur par un même nombre (non nul)<br><b>Exemple :</b><br><table style=\"width: 100%; text-align: center;\"><tr><td style=\"font-size: 18pt;\">$\\frac{1,2}{8}=\\frac{1,2\\times\\textcolor{#e53935}{10}}{8\\times\\textcolor{#e53935}{10}}= \\frac{12}{80}$</td><td><span style=\"font-size: 18pt;\">$\\frac{12}{80}=\\frac{12\\div\\textcolor{#e53935}{4}}{8\\div\\textcolor{#e53935}{4}}= \\frac{3}{20}$<br></span>C'est une simplification</td></tr></table>"
+		],
+		"infos": [
+			"<style>.equal{max-width: 1cm;font-size: 40pt;font-weight: bold;text-align: center;}</style><p>On peut voir cela comme un « redécoupage » des différents morceaux :</p><div class=\"flexobject\"><p class=\"equal\">$\\frac{3}{4}$</p><img src=\"/Images/Cours/Disque Fraction1.svg\" style=\"max-width: 4cm;\"><p class=\"equal\">=</p><p class=\"equal\">$\\frac{6}{8}$</p><img src=\"/Images/Cours/Disque Fraction2.svg\" style=\"max-width: 4cm;\"><p class=\"equal\">=</p><p class=\"equal\">$\\frac{9}{12}$</p><img src=\"/Images/Cours/Disque Fraction3.svg\" style=\"max-width: 4cm;\"></div>"
 		]
 	},"racine carrée": {
 		"tags": [],
@@ -1253,6 +1323,12 @@
 		],
 		"proprietes": [
 			"Dans une somme ou une différence, on peut supprimer un couple de parenthèses et le signe qui le précède à condition :<br><ul><li>de ne <b>rien changer</b> lorsque le signe qui précède les parenthèses est <b>« $+$ »</b>.</li><li>de <b>prendre l'opposé de tous les nombres</b> situés à l'intérieur de ces parenthèses lorsque le signe qui les précède est <b>« $-$ »</b>.</li></ul>"
+		],
+		"infos": [
+			"<p>Pour poser une addition en colonne, on aligne les nombres selon le rang de leurs chiffres. On commence ensuite l'addition par la droite et on remonte petit à petit en prenant en compte les éventuelles retenues. </p>"
+		],
+		"exemples": [
+			"<style>.addition td{min-width: 20px;text-align: center;vertical-align: middle;}.addition tr:first-child{writing-mode: vertical-rl;}.addition tr:first-child td{vertical-align: top;}.addition tr:last-child{border-top: solid 2px black;}.retenu{min-height: 20px;max-height: 20px;min-width: 20px;max-width: 20px;display: flex;align-items: center;justify-content: center;font-size: 8pt;font-weight: bold;font-family: 'Courier New', Courier, monospace;border-radius: 50%;border: solid 1px red;color: red;}</style><div class=\"flexobject\"><div><p>Avec des entiers</p><table class=\"addition\"><tr><th></th><td>Chiffre des centaine</td><td>Chiffre des dizaine</td><td>Chiffre des unités</td></tr><tr><th></th><td><div class=\"retenu\">+1</div></td><td><div class=\"retenu\">+1</div></td><td></td></tr><tr><th></th><td>1</td><td>4</td><td>3</td></tr><tr><th>+</th><td></td><td>8</td><td>9</td></tr><tr><th></th><td>2</td><td>3</td><td>2</td></tr></table></div><div><p>Avec des nombres décimaux</p><table class=\"addition\"><tr><th></th><td>Chiffre des dizaine</td><td>Chiffre des unités</td><td style=\"min-width: auto;\"></td><td>Chiffre des dixième</td><td>Chiffre des centième</td><td>Chiffre des millième</td></tr><tr><th></th><td><div class=\"retenu\">+1</div></td><td></td><td style=\"min-width: auto;\"></td><td><div class=\"retenu\">+1</div></td><td></td><td></td></tr><tr><th></th><td>8</td><td>3</td><td style=\"min-width: auto;\">,</td><td>0</td><td>4</td><td>9</td></tr><tr><th>+</th><td></td><td>7</td><td style=\"min-width: auto;\">,</td><td>8</td><td>8</td><td><span class=\"CBlue\">0</span></td></tr><tr><th></th><td>9</td><td>0</td><td style=\"min-width: auto;\">,</td><td>9</td><td>2</td><td>9</td></tr></table></div></div>"
 		]
 	},"sphère": {
 		"tags": [],

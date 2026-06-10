@@ -1,0 +1,48 @@
+{
+	"content": [{
+			"type": "title", "name": "Système décimal",
+			"content": [
+				{
+					"type": "title", "name": "Chiffres et nombres",
+					"content": [
+						{"type": "definition", "source": [{"name": "système décimal", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "système décimal", "indexes": [0, 1]}]},
+						{"type": "info", "source": [{"name": "entier", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "entier", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Décomposition",
+					"content": [
+						{"type": "definition", "source": [{"name": "décomposer", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "décomposer", "indexes": [0]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Ecriture d'un nombre",
+			"content": [
+				{
+					"type": "title", "name": "Premiers nombres",
+					"content": [
+						{"type": "info", "source": [{"name": "entier", "indexes": [1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Nombres particuliers",
+					"content": [
+						{"type": "info", "source": [{"name": "entier", "indexes": [2]}]},
+						{"type": "remarque", "source": [{"name": "entier", "indexes": [0,1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Règles particulières pour le cent et le vingt",
+					"content": [
+						{ "type": "definition", "source": [{"name": "entier", "indexes": [0]}]}
+					]
+				}
+			]
+		}
+	]
+}

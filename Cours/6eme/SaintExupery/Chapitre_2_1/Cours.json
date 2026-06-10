@@ -1,0 +1,32 @@
+{
+	"content": [{
+			"type": "title", "name": "Addition posée",
+			"content": [
+				{"type": "definition", "source": [{"name": "somme", "indexes": [0]}, {"name": "terme", "indexes": [0]}]},
+				{"type": "info", "source": [{"name": "somme", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "somme", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Commutativité de l'addition",
+			"content": [
+				{"type": "definition", "source": [{"name": "commutative", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "commutative", "indexes": [0, 1]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Soustraction",
+			"content": [
+				{"type": "definition", "source": [{"name": "différence", "indexes": [0]}, {"name": "terme", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "différence", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Soustraction posée",
+			"content": [
+				{"type": "info", "source": [{"name": "différence", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "différence", "indexes": [0]}]}
+			]
+		}
+	]
+}

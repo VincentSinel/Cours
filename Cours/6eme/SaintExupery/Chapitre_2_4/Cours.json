@@ -1,0 +1,19 @@
+{
+	"content": [{
+			"type": "title", "name": "Définition",
+			"content": [
+				{"type": "definition", "source": [{"name": "division décimale", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "division décimale", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "division décimale", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Divisions particulières",
+			"content": [
+				{"type": "definition", "source": [{"name": "division décimale", "indexes": [1]}]},
+				{"type": "exemple", "source": [{"name": "division décimale", "indexes": [2, 3]}]},
+				{"type": "remarque", "source": [{"name": "division décimale", "indexes": [1]}]}
+			]
+		}
+	]
+}

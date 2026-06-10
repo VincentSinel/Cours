@@ -1,0 +1,20 @@
+{
+	"content": [{
+			"type": "title", "name": "Repèrage",
+			"content": [
+				{"type": "definition", "source": [{"name": "axe gradué", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "axe gradué", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "axe gradué", "indexes": [0]}]},
+				{"type": "info", "source": [{"name": "axe gradué", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Comparaison",
+			"content": [
+				{"type": "definition", "source": [{"name": "comparer", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "comparer", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "comparer", "indexes": [0, 1]}]}
+			]
+		}
+	]
+}
