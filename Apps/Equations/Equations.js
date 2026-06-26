@@ -135,6 +135,7 @@ function LoadFiles()
 		clearInterval(countInterval)
 		current_round = 1;
 		competition_mode = true;
+		competition_times = [];
 
 		TempsMargeCompetition = document.getElementById("margeaccueille").valueAsNumber
 
