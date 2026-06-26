@@ -1,25 +1,40 @@
 {
+	"scripts": [{"name": "/JS/Animation/Animations/Parallele_Compas.js"},{"name": "/JS/Animation/Animations/Parallele_Equerre.js"},{"name": "/JS/Animation/Animations/Perpendiculaire_Compas.js"},{"name": "/JS/Animation/Animations/Perpendiculaire_Equerre.js"}],
+	
 	"content": [{
-			"type": "title", "name": "Rappels",
-			"content": [
-				{"type": "propriete", "source": [{"name": "quotient", "indexes": [2]}]}
-			]
-		},
-		{
-			"type": "title", "name": "Somme de fractions",
+			"type": "title", "name": "Définition",
 			"content": [
 				{
-					"type": "title", "name": "Même dénominateur",
+					"type": "title", "name": "Droites perpendiculaires",
 					"content": [
-						{"type": "propriete", "source": [{"name": "fraction", "indexes": [1]}]},
-						{"type": "exemple", "source": [{"name": "fraction", "indexes": [5, 6]}]}
+						{"type": "definition", "source": [{"name": "perpendiculaire", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "perpendiculaire", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "perpendiculaire", "indexes": [0, 1]}]}
 					]
 				},
 				{
-					"type": "title", "name": "Dénominateurs différents",
+					"type": "title", "name": "Droites parallèles",
 					"content": [
-						{"type": "propriete", "source": [{"name": "fraction", "indexes": [2]}]},
-						{"type": "exemple", "source": [{"name": "fraction", "indexes": [7, 8]}]}
+						{"type": "definition", "source": [{"name": "parallèle", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "parallèle", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "parallèle", "indexes": [0]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Constructions",
+			"content": [
+				{
+					"type": "title", "name": "Parallèles",
+					"content": [
+						{ "type": "autre", "source": [{"data": "<div class=\"flexobject\"><div id=\"Parallele_Equerre\" class=\"animation center\" width=\"480\" height=\"360\"></div><div id=\"Parallele_Compas\" class=\"animation center\" width=\"480\" height=\"360\"></div></div>"}]}
+					]
+				},
+				{
+					"type": "title", "name": "Perpendiculaires",
+					"content": [
+						{ "type": "autre", "source": [{"data": "<div class=\"flexobject\"><div id=\"Perpendiculaire_Equerre\" class=\"animation center\" width=\"480\" height=\"360\"></div><div id=\"Perpendiculaire_Compas\" class=\"animation center\" width=\"480\" height=\"360\"></div></div>"}]}
 					]
 				}
 			]

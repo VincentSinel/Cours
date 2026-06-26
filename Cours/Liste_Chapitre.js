@@ -2749,8 +2749,8 @@ var sixieme_saintexupery = [
 			actx: 		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 5 - Activité d'introduction.docx",
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 5 - Activité d'introduction.pdf",
 		},
-		ready : false,
-		page : "SaintExupery/Chapitre_5_2/Cours.html",
+		ready : true,
+		page : "SaintExupery/Chapitre_5_2/Cours.json",
 	}, // Chapitre 5 Partie 2
 	{
 		id: 19,
