@@ -48,7 +48,153 @@
       </td>
     </tr>
   </table>
-    
-</body>
 
+  <p>
+    Pour construire notre jeu, nous allons utiliser différents <span class="info">noeuds</span>, ceux-ci sont des briques de base que l'on va assembler et améliorer par la suite à l'aide de <span class="info">script</span> pour créer des objets complexes et des éléments de Gameplay. Ils permettent de gérer automatiquement différents éléments de notre jeu (Les collisions, les sons, l'affichage de texture, etc...). Comme leur objectif est d'être le plus polyvalent possible, s'ils sont seuls, ils n'apportent pas beaucoup et c'est à nous de concevoir leur interaction à l'aide d'un <span class="info">script</span>.
+    Dernière remarque, la majorité des noeuds n'ont pas de représentation graphique, cela est limité à un petit nombre d'entre eux.
+  </p>
+  <h1>Node2D (<img src="Images/Noeuds/Node2D.png">)</h1>
+      <p>
+        Pour les jeux en 2 dimensions, c'est le noeud de base, il sert à placer un objet dans le monde à un emplacement précis. Voici quelques exemples de son utilisation :
+        <ul>
+          <li>
+            Il servira par exemple de <span class="info bleu">Noeud racine</span> dans les différentes <span class="info">Scène</span> de notre jeu.
+          </li>
+          <li>
+            On peut aussi l'utiliser pour contenir une liste d'autres noeuds et organiser notre <span class="info">Scène</span>.
+          </li>
+          <li>
+            Il permet de positionner des éléments dans un objet et ainsi retrouver sa position après des modifications telles que rotation et translation. Par exemple, sur notre joueur, on peut placer un point relatif à celui-ci au bout de son arme pour avoir un point d'apparition des balles précis.<br>
+            <div class="flexobject">
+              <div style="flex: 4cm 1 1;">
+                <p>Avec l'organisation suivante et lorsqu'on fait tourner l'arme, le point de départ de la balle tourne avec et permet d'avoir la position :</p>
+                <img src="Images/UtilisationNode2D.png">
+              </div>
+              <video src="UtilisationNode2D.mp4" autoplay muted loop width="300"></video>
+            </div>
+          </li>
+        </ul>
+      </p>
+  <h1>Sprite2D (<img src="Images/Noeuds/Sprite2D.png">)</h1>
+      <p>
+        Ce noeud est le noeud de base pour afficher une texture. Il est principalement utilisé pour des objets non animés car la texture affichée est fixe. Dans l'inspecteur, il est possible d'utiliser différents types de <span class="info vert">Ressource</span> au lieu d'un fichier image pour afficher une texture :
+        <div class="flexobject">
+          <img src="Images/Sprite2D_Inspecteur.png" style="max-width: 3cm 1 1 ;">
+          <img src="Images/Sprite2D_Ressources.png" style="max-width: 3cm 1 1 ;">
+        </div><br>
+        Une <span class="info vert">Ressource</span> particulière peut être très utile, l'<span class="info">AtlasTexture</span>. Celle-ci permet de n'afficher qu'une portion d'une image plus grande.
+      </p>
+  <h1>AnimatedSprite2D (<img src="Images/Noeuds/AnimatedSprite2D.png">)</h1>
+      <p>
+        Ce noeud permet d'afficher des textures simples mais animées telle une image GIF. Il permet de créer plusieurs animations et de gérer l'exécution de celles-ci.<br>
+        Pour utiliser ce noeud, il faut d'abord créer un <span class="info">SpriteFrames</span> depuis l'inspecteur. Celui-ci, une fois sélectionné, ouvre un nouveau menu en bas d'écran permettant de créer les différentes animations.
+        <div class="flexobject">
+          <img src="Images/AnimatedSprite2D - Inspecteur.png" style="flex: 3cm 0 1;">
+          <img src="Images/AnimatedSprite2D - SpriteFrame.png" style="flex: 3cm 0 1;">
+        </div>
+        Menu des animations :
+        <img src="Images/AnimatedSprite2D - Panneau de gestion.png" style="flex: 4cm 1 1;">
+        L'un des boutons importants de ce menu est celui permettant de récupérer des morceaux d'un <span class="info bleu">Spritesheet</span> (Une seule image contenant toutes les frames de notre animation).
+        <img src="Images/AnimatedSprite2D - Selection Spritesheet.png"><br>
+        Voici un exemple d'utilisation :
+        <video src="UtilisationAnimatedSprite2D.mp4" autoplay muted loop width="100%"></video>
+      </p>
+  <h1>CollisionShape2D (<img src="Images/Noeuds/CollisionShape2D.png">)</h1>
+      <p>
+        Ce noeud permet de définir une forme de collision qui sera utile dans les noeuds suivants. Seul, il ne fait rien. Vous pouvez définir plusieurs types de formes de collision avec leurs différents paramètres. Chaque forme peut aussi se voir attribuer une couleur, mais cela n'est utile que dans l'éditeur car les collisions ne sont pas visibles en jeu.
+        <div class="flexobject">
+          <img src="Images/CollisionShape2D - Inspecteur.png" style="flex: 3cm 0 1;">
+          <img src="Images/CollisionShape2D - Formes.png" style="flex: 3cm 0 1;">
+        </div>
+      </p>
+  <h1>CharacterBody2D (<img src="Images/Noeuds/CharactedBody2D.png">)</h1>
+      <p>
+        Ce noeud est le coeur de notre jeu. Il permet de gérer le déplacement d'un objet en respectant les collisions et en lui assignant une vitesse de déplacement. Il permet en particulier de créer un personnage jouable/contrôlable. Ce noeud seul ne fait rien, il doit obligatoirement être accompagné d'un script pour définir les actions et les interactions de celui-ci. Lorsque ce noeud est seul, il indique une erreur car il doit être accompagné d'une forme de collision pour pouvoir les détecter. Il est possible de définir plusieurs formes de collision pour un même objet et ainsi construire une collision globale plus complexe. Chaque forme de collision, un noeud <span class="info">CollisionShape2D</span> doit être mis comme enfant de notre <span class="info">CharacterBody2D</span>. Voici un exemple très simple d'un personnage jouable sur une plateforme :
+        <div class="flexobject">
+          <div style="flex: 4cm 1 1">
+            Organisation des noeuds :<br>
+            <img src="Images/CharacterBody2D - ArbreObjet.png">
+          </div>
+          <div style="flex: 10cm 1 1">
+            Scène (On peut voir un rectangle bleu, qui correspond à la zone visible lorsque le jeu est lancé):
+            <img src="Images/CharacterBody2D - Scene.png" style="flex: 12cm 0 1">
+          </div>
+        </div>
+        Un script a été ajouté à notre joueur. Lors de l'ajout, il est possible d'utiliser un modèle déjà programmé pour les mouvements de base
+        <img src="Images/CharacterBody2D - Script.png"><br>
+        En voici une version modifiée et expliquée en français :
+        <pre><code class="language-gdscript light_mode">extends CharacterBody2D
+
+
+@export var vitesse = 300.0
+@export var force_saut = -400.0
+
+
+# Par default, les touches liés a l'interface utilisateur (UI) sont utilisées.
+# 	-> ui_accept	ui_left		ui_right
+# Il est préférable de créer nos propres touches personnalisées.
+func _physics_process(delta: float) -> void:
+	# Ajout de la gravité.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	# Gestion du saut.
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		velocity.y = force_saut
+
+	# Récupération des touches gauche et droite, et gestion des mouvements.
+	var direction := Input.get_axis("ui_left", "ui_right")
+	if direction:
+		velocity.x = direction * vitesse
+	else:
+		velocity.x = move_toward(velocity.x, 0, vitesse)
+
+	move_and_slide()
+        </code></pre>
+      </p>
+  <h1>StaticBody2D (<img src="Images/Noeuds/StaticBody2D.png">)</h1>
+      <p>
+        Ce noeud permet de créer un objet solide mais statique (qui ne bouge pas). Il doit contenir une <span class="info">CollisionShape2D</span> pour fonctionner et comme pour le <span class="info">CharactedBody2D</span>, il est possible d'en assigner plusieurs pour définir une collision plus complexe. Cet objet n'a aucun rendu graphique, il est donc souvent nécessaire de lui ajouter un <span class="info">Sprite2D</span> pour être visible. Un exemple est présent avec la plateforme précédente.
+      </p>
+  <h1>Area2D (<img src="Images/Noeuds/Area2D.png">)</h1>
+      <p>
+        Ce noeud ne définit pas un objet solide mais permet de détecter lorsqu'un objet physique entre à l'intérieur de sa zone de collision. Il doit contenir une <span class="info">CollisionShape2D</span> pour fonctionner et comme pour le <span class="info">CharactedBody2D</span>, il est possible d'en assigner plusieurs pour définir une collision plus complexe. Seul, il ne fait rien et nécessite un script pour définir des actions à effectuer lorsqu'il détecte un objet. Il faut pour cela utiliser les <span class="info vert">signaux</span> qu'il possède :<br>
+        <img src="Images/Area2D - Signaux.png">
+      </p>
+  <h1>TileMapLayer (<img src="Images/Noeuds/TileMapLayer.png">)</h1>
+      <p>
+        Ce noeud est particulièrement utile pour construire des mondes et des environnements utilisant plusieurs fois les mêmes ressources graphiques. Il permet de créer un monde composé de tuiles :
+        <div class="flexobject">
+          <div style="flex: 4cm 1 1">
+            Tileset (Image contenant chaque tuile possible) :<br>
+            <img src="Images/TilePlateformertile.png">
+          </div>
+          <div style="flex: 10cm 1 1">
+            Exemple de niveau créé avec les tuiles :
+            <img src="Images/TilePlateformer.png" style="flex: 12cm 0 1">
+          </div>
+        </div>
+        L'intérêt premier est de définir des caractéristiques à chaque tuile et ne pas avoir à gérer tout le niveau. Par exemple, définir si une tuile est solide ou pas. Plus de détails sur ce noeud sont traités dans une autre section.
+      </p>
+  <h1>AudioStreamPlayer2D (<img src="Images/Noeuds/AudioStreamPlayer2D.png">)</h1>
+      <p>
+        Ce noeud permet de jouer des sons spécialisé (qui ont une position dans notre jeu). Cela permet d'avoir une atténuation avec la distance et une différence sur la provenance (Gauche, droite, dessus, dessous).
+      </p>
+  <h1>Camera2D (<img src="Images/Noeuds/Camera2D.png">)</h1>
+      <p>
+        Ce noeud permet de définir une caméra. Cela permet de déplacer la zone visible de l'écran de jeu, de zoomer et dézoomer, ou encore de passer d'un plan de visibilité à un autre. Elle peut être attachée à un objet pour se déplacer avec lui, typiquement à un joueur.
+        <div class="flexobject">
+          <div style="flex: 4cm 1 1">
+            Organisation des noeuds :<br>
+            <img src="Images/Camera2D - Arbre.png">
+          </div>
+          <div style="flex: 10cm 1 1">
+            Scène (On peut voir un rectangle rose, qui correspond à la zone visible de la caméra lorsque le jeu est lancé) :
+            <img src="Images/Camera2D - Scene.png" style="flex: 12cm 0 1">
+          </div>
+        </div>
+        Rendu en jeu :
+        <video src="UtilisationCamera2D.mp4" autoplay muted loop width="100%"></video>
+      </p>
+</body>
 </html>

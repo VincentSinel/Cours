@@ -25,7 +25,7 @@ var MenuContent = [
 			{
 				name: "Quelques noeuds de base",
 				path: "Pages/Interface/Noeuds_Base.html",
-				ready: false,
+				ready: true,
 			},
 		]
 	},
