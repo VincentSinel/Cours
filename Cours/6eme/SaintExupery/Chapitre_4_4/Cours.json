@@ -1,0 +1,17 @@
+{
+	"content": [{
+			"type": "title", "name": "Définition",
+			"content": [
+				{"type": "definition", "source": [{"name": "échelle", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "échelle", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Calcul",
+			"content": [
+				{"type": "info", "source": [{"name": "échelle", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "échelle", "indexes": [1]}]}
+			]
+		}
+	]
+}

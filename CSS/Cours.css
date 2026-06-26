@@ -249,6 +249,10 @@ p.exemple,
     font-weight: bold;
 }
 
+.exemple > div{
+    margin-left: 2em;
+}
+
 p.remarque,
 .remarque > p:first-child {
     font-size: 14pt;
@@ -315,6 +319,14 @@ table, th, td, tr {
 .definition > ul {
     margin: 0;
 }
+
+.flexobject .definition{
+    margin-bottom: 10px;
+}
+.flexobject .exemple > p:first-child{
+    margin-top: 0;
+}
+
 
 .rotate30 {
     -webkit-transform: rotate(30deg) translateZ(0);
@@ -826,4 +838,7 @@ table th.crossed
 .tableau_unite > div:nth-child(n + 2):nth-child(2n+1)
 {
     background-color: #99ff99;
+}
+.autre{
+    margin-top: 1em;
 }

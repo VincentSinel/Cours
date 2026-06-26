@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 201 102.75">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 22.68px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #1d1d1b;
+        font-family: Bahnschrift, Bahnschrift;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4, .cls-5, .cls-7 {
+        fill: none;
+        stroke-linecap: round;
+      }
+
+      .cls-2 {
+        font-size: 25.51px;
+      }
+
+      .cls-5 {
+        stroke-dasharray: 0 0 6.04 6.04;
+      }
+
+      .cls-6 {
+        fill: #f6a117;
+      }
+
+      .cls-7 {
+        stroke-dasharray: 0 0 4.9 4.9;
+      }
+
+      .cls-8 {
+        fill: #e5064a;
+        opacity: .39;
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        font-size: 39.69px;
+      }
+
+      .cls-9 {
+        letter-spacing: -.02em;
+      }
+    </style>
+  </defs>
+  <rect class="cls-6" x=".5" y=".5" width="200" height="60"/>
+  <text class="cls-3" transform="translate(49.95 42.83)"><tspan x="0" y="0">80%</tspan></text>
+  <g>
+    <rect class="cls-8" x="160.5" y=".5" width="40" height="60"/>
+    <g>
+      <polyline class="cls-4" points="200.5 57.67 200.5 60.5 197.67 60.5"/>
+      <line class="cls-7" x1="192.76" y1="60.5" x2="165.79" y2="60.5"/>
+      <polyline class="cls-4" points="163.33 60.5 160.5 60.5 160.5 57.67"/>
+      <line class="cls-5" x1="160.5" y1="51.63" x2="160.5" y2="6.35"/>
+      <polyline class="cls-4" points="160.5 3.33 160.5 .5 163.33 .5"/>
+      <line class="cls-7" x1="168.24" y1=".5" x2="195.21" y2=".5"/>
+      <polyline class="cls-4" points="197.67 .5 200.5 .5 200.5 3.33"/>
+      <line class="cls-5" x1="200.5" y1="9.37" x2="200.5" y2="54.65"/>
+    </g>
+  </g>
+  <text class="cls-2" transform="translate(172.32 1.99) rotate(90)"><tspan x="0" y="0">-20%</tspan></text>
+  <path class="cls-4" d="m.5,65.14h0c0,2.54,1.58,4.6,3.54,4.6h91.01c1.04,0,2.04.49,2.82,1.39l2.64,3.03,2.64-3.03c.78-.89,1.78-1.39,2.82-1.39h91.01c1.95,0,3.54-2.06,3.54-4.6h0"/>
+  <text class="cls-1" transform="translate(76.65 96.62)"><tspan x="0" y="0">1</tspan><tspan class="cls-9" x="7.54" y="0">0</tspan><tspan x="19.61" y="0">0%</tspan></text>
+  <rect class="cls-4" x=".5" y=".5" width="200" height="60"/>
+</svg>

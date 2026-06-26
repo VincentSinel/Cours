@@ -1,0 +1,69 @@
+{
+	"content": [{
+			"type": "title", "name": "Vocabulaire",
+			"content": [
+				{
+					"type": "title", "name": "Points et segments",
+					"content": [
+						{ "type": "container", "class": "flexobject", "content": [
+							{"type": "definition", "source": [{"name": "point", "indexes": [0]}], "style": "flex: 1 1 5cm;"},
+							{"type": "exemple", "source": [{"name": "point", "indexes": [0]}], "style": "flex: 1 1 5cm;"}
+						]},
+						{"type": "remarque", "source": [{"name": "point", "indexes": [0]}]},
+						{ "type": "container", "class": "flexobject", "content": [
+							{"type": "definition", "source": [{"name": "segment", "indexes": [0]}], "style": "flex: 1 1 5cm;"},
+							{"type": "exemple", "source": [{"name": "segment", "indexes": [0]}], "style": "flex: 1 1 5cm;"}
+						]},
+						{"type": "remarque", "source": [{"name": "segment", "indexes": [0,1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Droites et demi-droites",
+					"content": [
+						{ "type": "container", "class": "flexobject", "content": [
+							{"type": "definition", "source": [{"name": "droite", "indexes": [0]}], "style": "flex: 1 1 5cm;"},
+							{"type": "exemple", "source": [{"name": "droite", "indexes": [0]}], "style": "flex: 1 1 5cm;"}
+						]},
+						{"type": "remarque", "source": [{"name": "droite", "indexes": [0, 1, 2, 3]}]},
+						{ "type": "container", "class": "flexobject", "content": [
+							{"type": "definition", "source": [{"name": "demi-droite", "indexes": [0]}], "style": "flex: 1 1 5cm;"},
+							{"type": "exemple", "source": [{"name": "demi-droite", "indexes": [0]}], "style": "flex: 1 1 5cm;"}
+						]},
+						{"type": "remarque", "source": [{"name": "demi-droite", "indexes": [0, 1, 2, 3]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Points particuliers",
+			"content": [
+				{
+					"type": "title", "name": "Droite sécante",
+					"content": [
+						{"type": "definition", "source": [{"name": "sécantes", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "sécantes", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "sécantes", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Distance et milieu",
+					"content": [
+						{"type": "definition", "source": [{"name": "distance", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "distance", "indexes": [0]}]},
+						{ "type": "container", "class": "flexobject", "content": [
+							{"type": "definition", "source": [{"name": "milieu", "indexes": [0]}], "style": "flex: 1 1 5cm;"},
+							{"type": "exemple", "source": [{"name": "milieu", "indexes": [0]}], "style": "flex: 1 1 5cm;"}
+						]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Appartenance",
+			"content": [
+				{ "type": "definition", "source": [{"name": "appartient", "indexes": [0]}]},
+				{ "type": "exemple", "source": [{"name": "appartient", "indexes": [0]}]}
+			]
+		}
+	]
+}

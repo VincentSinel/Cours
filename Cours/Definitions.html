@@ -177,7 +177,13 @@
       tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
     };
   </script>
+	
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+	<script id="Animation" src="/JS/Animation/animation_holder.js"></script>
+  <script src="/JS/Svg.js/svg.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script> -->
+	<script src="/JS/Diagrammes/Diagramme_Holder.js"></script> 
+	<script src="/JS/Animation_Transformations.js"></script>
 
   <title>Définitions</title>
 
@@ -196,4 +202,52 @@
 <body>
 
 </body>
+<script>
+	const page_content_loaded = new CustomEvent("page_content_loaded");
+	var script_load_count = 0;
+	function LoadAnimations()
+	{
+		var list = [
+			"/JS/Animation/Animations/Construction_Angle.js",
+			"/JS/Animation/Animations/Mediatrice.js",
+			"/JS/Animation/Animations/Parallele_Compas.js",
+			"/JS/Animation/Animations/Parallele_Equerre.js",
+			"/JS/Animation/Animations/Perpendiculaire_Compas.js",
+			"/JS/Animation/Animations/Perpendiculaire_Equerre.js",
+			"/JS/Animation/Animations/Regle_de_trois.js",
+			"/JS/Animation/Animations/Symetrie_Axiale_Compas.js",
+			"/JS/Animation/Animations/Symetrie_Axiale_Equerre.js",
+			"/JS/Animation/Animations/Triangle_AngleLongueurs1.js",
+			"/JS/Animation/Animations/Triangle_AngleLongueurs2.js",
+			"/JS/Animation/Animations/Triangle_AnglesLongueur1.js",
+			"/JS/Animation/Animations/Triangle_AnglesLongueur2.js",
+			"/JS/Animation/Animations/Triangle_Longueurs.js"
+		]
+		script_load_count++
+		list.forEach(script => {
+			script_load_count++
+			let script_node = document.createElement("script");
+			script_node.src = script;
+			script_node.async = false;
+			script_node.onload = (e) => {
+				script_load_count--; 
+				EndLoadScript()
+			}
+			document.head.appendChild(script_node)
+		})
+		script_load_count--
+		EndLoadScript();
+	}
+	function EndLoadScript()
+	{
+		if (script_load_count <= 0)
+		{
+			window.dispatchEvent(page_content_loaded);
+			document.dispatchEvent(page_content_loaded);
+			document.body.dispatchEvent(page_content_loaded);
+		}
+	}
+
+	window.addEventListener("load", LoadAnimations);
+</script>
 </html>

@@ -1,0 +1,31 @@
+{
+	"content": [{
+			"type": "title", "name": "Proportionnalité",
+			"content": [
+				{"type": "definition", "source": [{"name": "proportionnelle", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "proportionnelle", "indexes": [0]}]},
+				{"type": "autre", "source": [{"data": "Le tableau de proportionnalité permet de représenter cette proportionnalité."}]},
+				{"type": "exemple", "source": [{"name": "proportionnelle", "indexes": [1]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Coefficient de proportionnalité",
+			"content": [
+				{
+					"type": "title", "name": "Calcul",
+					"content": [
+						{"type": "definition", "source": [{"name": "coefficient de proportionnalité", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "coefficient de proportionnalité", "indexes": [1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Vérification",
+					"content": [
+						{"type": "propriete", "source": [{"name": "coefficient de proportionnalité", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "coefficient de proportionnalité", "indexes": [2]}]}
+					]
+				}
+			]
+		}
+	]
+}

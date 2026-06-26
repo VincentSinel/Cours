@@ -1,0 +1,30 @@
+{
+	"content": [{
+			"type": "title", "name": "Pourcentage",
+			"content": [
+				{"type": "definition", "source": [{"name": "pourcentage", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "pourcentage", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "pourcentage", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Augmentation et réduction",
+			"content": [
+				{
+					"type": "title", "name": "Augmentation",
+					"content": [
+						{"type": "definition", "source": [{"name": "pourcentage", "indexes": [1]}]},
+						{"type": "exemple", "source": [{"name": "pourcentage", "indexes": [1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Réduction",
+					"content": [
+						{"type": "definition", "source": [{"name": "pourcentage", "indexes": [2]}]},
+						{"type": "exemple", "source": [{"name": "pourcentage", "indexes": [2]}]}
+					]
+				}
+			]
+		}
+	]
+}

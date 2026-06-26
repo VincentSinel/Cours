@@ -1,5 +1,5 @@
 // Construction d'un angle
-class Animation_Angle extends Animation_Data
+class Construction_Angle extends Animation_Data
 {
 
   CreateObjects()

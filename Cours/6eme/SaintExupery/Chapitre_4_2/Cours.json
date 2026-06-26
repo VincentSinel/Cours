@@ -1,0 +1,32 @@
+{
+	"scripts": [{"name": "/JS/Animation/Animations/Regle_de_trois.js"}],
+	"content": [{
+			"type": "title", "name": "Linéarité",
+			"content": [
+				{"type": "propriete", "source": [{"name": "proportionnelle", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "proportionnelle", "indexes": [2]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Passage par l'unité",
+			"content": [
+				{"type": "propriete", "source": [{"name": "proportionnelle", "indexes": [1]}]},
+				{"type": "exemple", "source": [{"name": "proportionnelle", "indexes": [3]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Coefficient de proportionnalité",
+			"content": [
+				{"type": "propriete", "source": [{"name": "proportionnelle", "indexes": [2]}]},
+				{"type": "exemple", "source": [{"name": "proportionnelle", "indexes": [4]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Règle de trois",
+			"content": [
+				{"type": "definition", "source": [{"name": "règle de trois", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "règle de trois", "indexes": [0]}]}
+			]
+		}
+	]
+}

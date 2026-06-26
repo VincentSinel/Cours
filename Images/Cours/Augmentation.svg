@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 261 102.57">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 22.68px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #1d1d1b;
+        font-family: Bahnschrift, Bahnschrift;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-4, .cls-5 {
+        fill: none;
+        stroke-linecap: round;
+      }
+
+      .cls-4, .cls-5, .cls-6 {
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        font-size: 25.51px;
+      }
+
+      .cls-5 {
+        stroke-dasharray: 0 0 6.04 6.04;
+      }
+
+      .cls-7 {
+        fill: #b5d1ef;
+        stroke-width: 0px;
+      }
+
+      .cls-6 {
+        fill: #f6a117;
+      }
+
+      .cls-8 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-3 {
+        font-size: 39.69px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-6" x=".5" y=".5" width="200" height="60"/>
+  <text class="cls-3" transform="translate(58.76 42.83)"><tspan x="0" y="0">1</tspan><tspan class="cls-8" x="13.2" y="0">0</tspan><tspan x="34.32" y="0">0%</tspan></text>
+  <g>
+    <rect class="cls-7" x="200.5" y=".5" width="60" height="60"/>
+    <g>
+      <polyline class="cls-4" points="260.5 57.67 260.5 60.5 257.67 60.5"/>
+      <line class="cls-5" x1="251.63" y1="60.5" x2="206.35" y2="60.5"/>
+      <polyline class="cls-4" points="203.33 60.5 200.5 60.5 200.5 57.67"/>
+      <line class="cls-5" x1="200.5" y1="51.63" x2="200.5" y2="6.35"/>
+      <polyline class="cls-4" points="200.5 3.33 200.5 .5 203.33 .5"/>
+      <line class="cls-5" x1="209.37" y1=".5" x2="254.65" y2=".5"/>
+      <polyline class="cls-4" points="257.67 .5 260.5 .5 260.5 3.33"/>
+      <line class="cls-5" x1="260.5" y1="9.37" x2="260.5" y2="54.65"/>
+    </g>
+  </g>
+  <text class="cls-2" transform="translate(201.21 40.28)"><tspan x="0" y="0">+30%</tspan></text>
+  <path class="cls-4" d="m.5,65.14h0c0,2.54,2.06,4.6,4.6,4.6h118.31c1.35,0,2.65.49,3.66,1.39l3.43,3.03,3.43-3.03c1.01-.89,2.31-1.39,3.66-1.39h118.31c2.54,0,4.6-2.06,4.6-4.6h0"/>
+  <text class="cls-1" transform="translate(106.69 96.44)"><tspan x="0" y="0">130%</tspan></text>
+</svg>
