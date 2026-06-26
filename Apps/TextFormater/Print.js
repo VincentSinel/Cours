@@ -175,7 +175,7 @@ function PDFCreation(buffer1, buffer2, buffer3)
 	let y = doc.y;
 	doc.text(txt_auteur +",", lp - w1 - w2 - w3 - 3, y, {align: "right", width: w1})
 	doc.font('verdana-bold-italic')
-	doc.text(txt_titre,  lp - w2 - w3, y, {align: "right", width: w2})
+	doc.text(txt_titre,  lp - w2 - w3, y, {align: "right", width: w2, underline: "true"})
 	doc.font('verdana-bold')
 	doc.text(", " + txt_complement,  lp - w3, y, {align: "right", width: w3})
 	
