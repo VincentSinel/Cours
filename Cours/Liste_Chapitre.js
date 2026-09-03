@@ -1005,7 +1005,7 @@ var cinquieme_base = [
 	}
 ]
 
-var cinquieme_saintexupery = [
+var cinquieme_saintexupery_ancien = [
 	{
 			id: 1,
 			nom: "Nombres Relatifs - Comparaison et repérage",
@@ -1015,6 +1015,7 @@ var cinquieme_saintexupery = [
 				pdf:  		 "/Cours/5eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres Relatifs (Complet).pdf",
 				docx_trou: "/Cours/5eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres Relatifs (A trou).docx",
 				pdf_trou:  "/Cours/5eme/Base/Chapitre_1/Documents/Chapitre 1 - Nombres Relatifs (A trou).pdf",
+				img:			 "/Cours/5eme/Base/Chapitre_1/Documents/Chapitre 1 - Images.pdf",
 			},
 			ready : true,
 			page : "Base/Chapitre_1/Cours.html",
@@ -1240,6 +1241,284 @@ var cinquieme_saintexupery = [
 			},
 			ready : true,
 			page : "Base/Chapitre_13/Cours.html"
+	},
+]
+
+var cinquieme_saintexupery = [
+	{
+			id: 1,
+			nom: "Nombres Relatifs - Comparaison et repérage",
+			icone: 1,
+			download: {
+				docx: 		 "/Cours/5eme/Saintexupery_v2/Chapitre_1/Documents/Chapitre 1 - Nombres Relatifs (Complet).docx",
+				pdf:  		 "/Cours/5eme/Saintexupery_v2/Chapitre_1/Documents/Chapitre 1 - Nombres Relatifs (Complet).pdf",
+				docx_trou: "/Cours/5eme/Saintexupery_v2/Chapitre_1/Documents/Chapitre 1 - Nombres Relatifs (A trou).docx",
+				pdf_trou:  "/Cours/5eme/Saintexupery_v2/Chapitre_1/Documents/Chapitre 1 - Nombres Relatifs (A trou).pdf",
+				img:			 "/Cours/5eme/Base/Chapitre_1/Documents/Chapitre 1 - Images.pdf",
+			},
+			ready : true,
+			page : "SaintExupery_V2/Chapitre_1/Cours.json",
+	},
+	{
+			id: 2,
+			nom: "Symétries",
+			icone: 2,
+			download: {
+				docx: 		 "/Cours/5eme/Base/Chapitre_2/Documents/Chapitre 2 - Symétries (Complet).docx",
+				pdf:  		 "/Cours/5eme/Base/Chapitre_2/Documents/Chapitre 2 - Symétries (Complet).pdf",
+				docx_trou: "/Cours/5eme/Base/Chapitre_2/Documents/Chapitre 2 - Symétries (A trou).docx",
+				pdf_trou:  "/Cours/5eme/Base/Chapitre_2/Documents/Chapitre 2 - Symétries (A trou).pdf",
+			},
+			ready : true,
+			page : "Base/Chapitre_2/Cours.html"
+	},
+	{
+			id: 3,
+			nom: "Utiliser les nombres décimaux",
+			icone: 1,
+			download: {
+				// docx: 		 "/Cours/5eme/Base/Chapitre_3/Documents/Chapitre 3 - Priorités opératoires (Complet).docx",
+				// pdf:  		 "/Cours/5eme/Base/Chapitre_3/Documents/Chapitre 3 - Priorités opératoires (Complet).pdf",
+				// docx_trou: "/Cours/5eme/Base/Chapitre_3/Documents/Chapitre 3 - Priorités opératoires (A trou).docx",
+				// pdf_trou:  "/Cours/5eme/Base/Chapitre_3/Documents/Chapitre 3 - Priorités opératoires (A trou).pdf",
+			},
+			ready : false,
+			page : "Base/Chapitre_3/Cours.html"
+	},
+	{
+			id: 4,
+			nom: "Angles particuliers",
+			icone: 2,
+			download: {
+				docx: 		 "/Cours/5eme/SaintExupery/Chapitre_4/Documents/Chapitre 4 - Angles particuliers (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_4/Documents/Chapitre 4 - Angles particuliers (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery/Chapitre_4/Documents/Chapitre 4 - Angles particuliers (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_4/Documents/Chapitre 4 - Angles particuliers (A trou).pdf",
+			},
+			ready : true,
+			page : "SaintExupery/Chapitre_4/Cours.html"
+	},
+	{
+			id: 5,
+			nom: "Additions et Soustractions de nombres relatifs",
+			icone: 1,
+			download: {
+				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (Complet).docx",
+				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (Complet).pdf",
+				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).docx",
+				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).pdf",
+			},
+			ready : false,
+			page : "Base/Chapitre_11/Cours.html"
+	},
+	{
+			id: 6,
+			nom: "Calcul littéral",
+			icone: 3,
+			download: {
+				// docx: 		 "/Cours/5eme/Base/Chapitre_5/Documents/Chapitre 5 - Introduction au calcul littéral (Complet).docx",
+				// pdf:  		 "/Cours/5eme/Base/Chapitre_5/Documents/Chapitre 5 - Introduction au calcul littéral (Complet).pdf",
+				// docx_trou: "/Cours/5eme/Base/Chapitre_5/Documents/Chapitre 5 - Introduction au calcul littéral (A trou).docx",
+				// pdf_trou:  "/Cours/5eme/Base/Chapitre_5/Documents/Chapitre 5 - Introduction au calcul littéral (A trou).pdf",
+			},
+			ready : false,
+			page : "Base/Chapitre_5/Cours.html"
+	},
+	{
+			id: 7,
+			nom: "Angles d'un triangle",
+			icone: 2,
+			download: {
+				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_6/Documents/Chapitre 6 - Angles d'un triangle (Complet).docx",
+				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_6/Documents/Chapitre 6 - Angles d'un triangle (Complet).pdf",
+				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_6/Documents/Chapitre 6 - Angles d'un triangle (A trou).docx",
+				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_6/Documents/Chapitre 6 - Angles d'un triangle (A trou).pdf",
+			},
+			ready : false,
+			page : "SaintExupery/Chapitre_6/Cours.html"
+	},
+	{
+			id: 8,
+			nom: "Fraction - Proportion et quotient",
+			icone: 1,
+			download: {
+				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_12/Documents/Chapitre 12 - Fraction - Proportion et quotient (Complet).docx",
+				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_12/Documents/Chapitre 12 - Fraction - Proportion et quotient (Complet).pdf",
+				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_12/Documents/Chapitre 12 - Fraction - Proportion et quotient (A trou).docx",
+				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_12/Documents/Chapitre 12 - Fraction - Proportion et quotient (A trou).pdf",
+			},
+			ready : false,
+			page : "SaintExupery/Chapitre_12/Cours.html"
+	},
+	{
+			id: 9,
+			nom: "Proportionnalité",
+			icone: 5,
+			download: {
+				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (Complet).docx",
+				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (Complet).pdf",
+				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (A trou).docx",
+				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (A trou).pdf",
+				// img:			 "/Cours/4eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Images.pdf",
+			},
+			ready : false,
+			page : "SaintExupery/Chapitre_13/Cours.html"
+	},
+	{
+			id: 10,
+			nom: "Triangles - Droites remarquables et aire",
+			icone: 2,
+			download: {
+				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (Complet).docx",
+				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (Complet).pdf",
+				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (A trou).docx",
+				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (A trou).pdf",
+			},
+			ready : false,
+			page : "SaintExupery/Chapitre_11/Cours.html"
+	},
+	{
+			id: 11,
+			nom: "Distributivité simple",
+			icone: 3,
+			download: {
+				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_7/Documents/Chapitre 7 - Distributivité simple (Complet).docx",
+				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_7/Documents/Chapitre 7 - Distributivité simple (Complet).pdf",
+				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_7/Documents/Chapitre 7 - Distributivité simple (A trou).docx",
+				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_7/Documents/Chapitre 7 - Distributivité simple (A trou).pdf",
+			},
+			ready : false,
+			page : "SaintExupery/Chapitre_7/Cours.html"
+	},
+	{
+			id: 12,
+			nom: "Volume",
+			icone: 2,
+			download: {
+				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (Complet).docx",
+				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (Complet).pdf",
+				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (A trou).docx",
+				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (A trou).pdf",
+			},
+			ready : false,
+			page : "SaintExupery/Chapitre_8/Cours.html"
+	},
+	{
+			id: 13,
+			nom: "Multiples et diviseurs",
+			icone: 1,
+			download: {
+				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_10/Documents/Chapitre 10 - Multiples et diviseurs (Complet).docx",
+				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_10/Documents/Chapitre 10 - Multiples et diviseurs (Complet).pdf",
+				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_10/Documents/Chapitre 10 - Multiples et diviseurs (A trou).docx",
+				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_10/Documents/Chapitre 10 - Multiples et diviseurs (A trou).pdf",
+			},
+			ready : false,
+			page : "Base/Chapitre_8/Cours.html"
+	},
+	{
+			id: 14,
+			nom: "Statistiques",
+			icone: 5,
+			download: {
+				docx: 		 "/Cours/5eme/SaintExupery/Chapitre_14/Documents/Chapitre 14 - Statistiques (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_14/Documents/Chapitre 14 - Statistiques (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery/Chapitre_14/Documents/Chapitre 14 - Statistiques (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_14/Documents/Chapitre 14 - Statistiques (A trou).pdf",
+			},
+			ready : true,
+			page : "SaintExupery/Chapitre_14/Cours.html"
+	},
+	{
+			id: 15,
+			nom: "Fraction - Comparaison, somme et différence",
+			icone: 1,
+			download: {
+				docx: 		 "/Cours/5eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Fraction - Comparaison, somme et différence (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Fraction - Comparaison, somme et différence (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Fraction - Comparaison, somme et différence (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_15/Documents/Chapitre 15 - Fraction - Comparaison, somme et différence (A trou).pdf",
+			},
+			ready : true,
+			page : "SaintExupery/Chapitre_15/Cours.html"
+	},
+	{
+			id: 16,
+			nom: "Médiane du triangle",
+			icone: 2,
+			download: {
+				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (Complet).docx",
+				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (Complet).pdf",
+				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).docx",
+				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).pdf",
+			},
+			ready : false,
+			page : "Base/Chapitre_11/Cours.html"
+	},
+	{
+			id: 17,
+			nom: "En fonction de ...",
+			icone: 3,
+			download: {
+				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (Complet).docx",
+				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (Complet).pdf",
+				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).docx",
+				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).pdf",
+			},
+			ready : false,
+			page : "Base/Chapitre_11/Cours.html"
+	},
+	{
+			id: 18,
+			nom: "Equations simple",
+			icone: 3,
+			download: {
+				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (Complet).docx",
+				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (Complet).pdf",
+				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).docx",
+				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).pdf",
+			},
+			ready : false,
+			page : "Base/Chapitre_11/Cours.html"
+	},
+	{
+			id: 19,
+			nom: "Prismes et cylindres",
+			icone: 2,
+			download: {
+				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (Complet).docx",
+				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (Complet).pdf",
+				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (A trou).docx",
+				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (A trou).pdf",
+			},
+			ready : false,
+			page : "SaintExupery/Chapitre_8/Cours.html"
+	},
+	{
+			id: 20,
+			nom: "Probabilités",
+			icone: 4,
+			download: {
+				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (Complet).docx",
+				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (Complet).pdf",
+				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (A trou).docx",
+				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (A trou).pdf",
+			},
+			ready : false,
+			page : "Base/Chapitre_13/Cours.html"
+	},
+	{
+			id: 21,
+			nom: "Parallélogrammes",
+			icone: 2,
+			download: {
+				// pdf: 			 "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (Complet).pdf",
+				// docx:		 	 "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (Complet).docx",
+				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (A trou).docx",
+				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (A trou).pdf",
+			},
+			ready : false,
+			page : "Base/Chapitre_19/Cours.html"
 	},
 ]
 
@@ -2767,7 +3046,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 6 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_6_1/Cours.html",
+		page : "SaintExupery/Chapitre_6_1/Cours.json",
 	}, // Chapitre 6 Partie 1
 	{
 		id: 20,
@@ -3171,21 +3450,25 @@ var ListeCours = {
 	troisieme: {
 		"roger_vailland" : troisieme_base,
 		"saint_exupery" : troisième_saintexupery,
+		"saint_exupery_old" : troisième_saintexupery,
 		"madame_de_lafayette" : troisieme_base,
 	},
 	quatrieme: {
 		"roger_vailland" : quatrieme_base,
 		"saint_exupery" : quatrieme_saintexupery,
+		"saint_exupery_old" : quatrieme_saintexupery,
 		"madame_de_lafayette" : quatrieme_base,
 	},
 	cinquieme: {
 		"roger_vailland" : cinquieme_rogervailland,
 		"saint_exupery" : cinquieme_saintexupery,
+		"saint_exupery_old" : cinquieme_saintexupery_ancien,
 		"madame_de_lafayette" : cinquieme_base,
 	},
 	sixieme: {
 		"roger_vailland" : sixieme_rogervailland,
 		"saint_exupery" : sixieme_saintexupery,
+		"saint_exupery_old" : sixieme_saintexupery,
 		"madame_de_lafayette" : sixieme_base,
 	},
 }

@@ -29,16 +29,33 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
       text-align: left; 
       width: calc(100% - 45px);}
+
+    .hidden{
+      display: none;
+    }
   </style>
+
+  <script>
+    function toggledButtons()
+    {
+      for(var i = 2; i < document.getElementById("HoverMenu").childElementCount; i++)
+      {
+        document.getElementById("HoverMenu").getElementsByClassName("hovermenu_block")[i].classList.remove("hidden");
+      }
+      document.getElementById("HoverMenu").getElementsByClassName("hovermenu_block")[1].classList.add("hidden")
+    }
+  </script>
 
 </head>
 
 <body>
 
   <div id="HoverMenu" class="HoverMenu">
-    <div class="hovermenu_block" onclick="SelectCollege('saint_exupery')"><span>Collège Antoine de Saint-Exupéry<br><span style="font-size: 10pt; font-weight: 100;">2024-2026</span></span></div>
-    <div class="hovermenu_block" onclick="SelectCollege('roger_vailland')"><span>Collège Roger Vailland<br><span style="font-size: 10pt; font-weight: 100;">2024-2025</span></span></div>
-    <div class="hovermenu_block" onclick="SelectCollege('madame_de_lafayette')"><span>Collège Madame de Lafayette<br><span style="font-size: 10pt; font-weight: 100;">2018-2024</span></span></div>
+    <div class="hovermenu_block" onclick="SelectCollege('saint_exupery')"><span>Collège Antoine de Saint-Exupéry<br><span style="font-size: 10pt; font-weight: 100;">2026-2027</span></span></div>
+    <div class="hovermenu_block" onclick="toggledButtons();"><span>Autre établissements / Cours / Années</span></div>
+    <div class="hovermenu_block hidden" onclick="SelectCollege('saint_exupery_old')"><span>Collège Antoine de Saint-Exupéry (Ancien programme)<br><span style="font-size: 10pt; font-weight: 100;">2024-2026</span></span></div>
+    <div class="hovermenu_block hidden" onclick="SelectCollege('roger_vailland')"><span>Collège Roger Vailland<br><span style="font-size: 10pt; font-weight: 100;">2024-2025</span></span></div>
+    <div class="hovermenu_block hidden" onclick="SelectCollege('madame_de_lafayette')"><span>Collège Madame de Lafayette<br><span style="font-size: 10pt; font-weight: 100;">2018-2024</span></span></div>
   </div>
 
   <div class="nav-header">

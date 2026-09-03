@@ -22,6 +22,9 @@
 		"tags": [],
 		"definitions": [
 			"Sur un axe gradué, chaque point est repéré par un nombre <i>unique</i> appelé l'<span class=\"CRed\">abscisse</span> de ce point."
+		],
+		"exemples": [
+			"<div class=\"flexobject\"><div style=\"flex: 1 1 5cm\"><ul><li>Le point <span class=\"CViolet\">B</span> a pour abscisse +2.<br>On note : <span class=\"CViolet\">B</span>(+2).</li><li>Le point <span class=\"CBlue\">C</span> a pour abscisse -4,3.<br>On note : <span class=\"CBlue\">C</span>(-4,3).</li></ul></div><img src=\"/Images/Cours/Axe graduee 11.svg\" style=\"max-height: 2cm;\"></div>"
 		]
 	},"aire": {
 		"tags": [],
@@ -96,6 +99,9 @@
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">arc de cercle</span> est une partie du cercle délimité par deux points."
+		],
+		"remarques": [
+			"On note l'arc de cercle : $\\overset{\\displaystyle\\frown}{DE}$"
 		]
 	},"axe de symétrie": {
 		"tags": [],
@@ -119,7 +125,8 @@
 		],
 		"infos": [
 			"<p>Pour trouver le « pas » de graduation, on regarde le nombre de morceaux qui compose l'unité et on fait la division.<br> Ci-dessus l'unité est coupé en 10 morceaux donc chacun représente $\\frac{1}{10}$ de l'unité soit 0,1.<br>Ci-dessous l'unité est coupé en 4 morceaux donc chacun représente $\\frac{1}{4}$ de l'unité soit 0,25. Le point A a donc une abscisse de 2,75.</p><img src=\"/Images/Cours/Axe graduee 4.svg\">",
-			"<style>.frac{display: flex;flex-direction: row;flex-wrap: wrap;gap: 2cm;}.frac img{flex: 8cm 1 1;max-width: 18cm;min-width: 8cm;}.frac p {font-weight: bold;font-size: 20pt;min-width: 3cm;width: 3cm;}</style><p>Selon le choix des graduations d'un axe gradué, on peut utiliser différentes fractions pour définir l'abscisse d'un même point.</p><div style=\"display: flex; flex-direction: column;\"><div class=\"frac\"><img src=\"/Images/Cours/Axe graduee 5.svg\"><p>$A(\\frac{4}{3})$</p></div><div class=\"frac\"><img src=\"/Images/Cours/Axe graduee 6.svg\"><p>$A(\\frac{8}{6})$</p></div><div class=\"frac\"><img src=\"/Images/Cours/Axe graduee 7.svg\"><p>$A(\\frac{12}{9})$</p></div><div class=\"frac\"><img src=\"/Images/Cours/Axe graduee 8.svg\"><p>$A(\\frac{20}{15})$</p></div></div>"
+			"<style>.frac{display: flex;flex-direction: row;flex-wrap: wrap;gap: 2cm;}.frac img{flex: 8cm 1 1;max-width: 18cm;min-width: 8cm;}.frac p {font-weight: bold;font-size: 20pt;min-width: 3cm;width: 3cm;}</style><p>Selon le choix des graduations d'un axe gradué, on peut utiliser différentes fractions pour définir l'abscisse d'un même point.</p><div style=\"display: flex; flex-direction: column;\"><div class=\"frac\"><img src=\"/Images/Cours/Axe graduee 5.svg\"><p>$A(\\frac{4}{3})$</p></div><div class=\"frac\"><img src=\"/Images/Cours/Axe graduee 6.svg\"><p>$A(\\frac{8}{6})$</p></div><div class=\"frac\"><img src=\"/Images/Cours/Axe graduee 7.svg\"><p>$A(\\frac{12}{9})$</p></div><div class=\"frac\"><img src=\"/Images/Cours/Axe graduee 8.svg\"><p>$A(\\frac{20}{15})$</p></div></div>",
+			"<img src=\"/Images/Cours/Axe graduee 10.svg\">"
 		]
 	},"bissectrice": {
 		"tags": [],
@@ -203,15 +210,20 @@
 		],
 		"proprietes": [
 			"Un nombre <b>négatif</b> est toujours plus petit qu'un nombre <b>positif</b>.",
-			"De deux nombres <b>positifs</b>, le plus grand est celui qui a la plus <i>grande</i> <b>distance à zéro</b>.",
-			"De deux nombres <b>négatifs</b>, le plus grand est celui qui à la plus <i>petite</i> <b>distance à zéro</b>."
+			"De deux nombres <b>positifs</b>, le plus grand est celui qui a la plus <i>grande</i> <b>valeur absolue</b>.",
+			"De deux nombres <b>négatifs</b>, le plus grand est celui qui à la plus <i>petite</i> <b>valeur absolue</b>."
 		],
 		"remarques": [
-			"Pour comparer, on utilise les symboles suivants :<ul><li>$>$  &emsp; Supérieur (Strict)</li><li>$<$  &emsp; Inférieur (Strict)</li><li>$=$  &emsp; Égale</li><li>$\\neq$ &emsp; Non égale</li><li>$\\ge$ &emsp; Supérieur ou égale</li><li>$\\le$ &emsp; Inférieur ou égale</li></ul>"
+			"Pour comparer, on utilise les symboles suivants :<ul><li>$>$  &emsp; Supérieur (Strict)</li><li>$<$  &emsp; Inférieur (Strict)</li><li>$=$  &emsp; Égale</li><li>$\\neq$ &emsp; Non égale</li><li>$\\ge$ &emsp; Supérieur ou égale</li><li>$\\le$ &emsp; Inférieur ou égale</li></ul>",
+			"Sur une droite graduée, les nombres sont rangés dans l'ordre croissant de la gauche vers la droite.",
+			"Pour deux nombres négatifs celui le plus à gauche est le plus petit."
 		],
 		"exemples": [
 			"$2<15$ &emsp; se lit \"2 est <b>inférieur</b> à 15\".",
-			"$3>2,5$ &emsp; se lit \"3 est <b>supérieur</b> à 2,5\"."
+			"$3>2,5$ &emsp; se lit \"3 est <b>supérieur</b> à 2,5\".",
+			"<div class=\"flexobject\"><div>$-12 < +3$</div><div>$-27 < 15$</div><div>$-99,24 < +1,2$</div></div>",
+			"<div class=\"flexobject\"><div>$+7 < +16$</div><div>$9 < 63$</div><div>$+14,3 < 26,2$</div></div>",
+			"<div class=\"flexobject\"><div>$-12 < -5$</div><div>$-74 < -2,1$</div><div>$-1,2 < -1,1$</div></div>"
 		]
 	},"commutative": {
 		"tags": [],
@@ -239,6 +251,16 @@
 		"tags": [],
 		"definitions": [
 			"Dans un repère, la position d'un point est donnée par deux nombres relatifs :<ul><li>Le premier, appelé <span class=\"CRed\">abscisse</span> se lit sur l'axe horizontal.</li><li>Le second, appelé <span class=\"CRed\">ordonnée</span> se lit sur l'axe vertical.</li></ul>Ces deux nombres représentent les <span class=\"CRed\">coordonnées</span> de ce point."
+		],
+		"remarques": [
+			"Tous les points de l'axe des abscisses ont une ordonnée égale à 0.",
+			"Tous les points de l'axe des ordonnées ont une abscisse égale à 0."
+		],
+		"exemples": [
+			"<img src=\"/Images/Cours/Coordonnées.svg\" style=\"max-height: 2cm;\"><ul><li>F(-2 ; 2)</li><li>G(-1 ; -1)</li><li>H(0 ; -2)</li><li><span class=\"CRed\">O(0 ; 0)</span></li></ul>"
+		],
+		"infos": [
+			"<img src=\"/Images/Cours/Repère 2.svg\" style=\"max-height: 10cm;\">"
 		]
 	},"corde": {
 		"tags": [],
@@ -400,7 +422,7 @@
 			"Un <span class=\"CRed\">disque</span> de centre O est formé de tous les points à une distance inférieur ou égale à un certain rayon du point O."
 		],
 		"remarques": [
-			"Cela correspond à l'intérieur du cercle."
+			"Cela correspond à l'intérieur du cercle ainsi qu'à son extérieur."
 		],
 		"exemples": [
 			"<img src=\"/Images/Cours/Cercle3.svg\" style=\"max-width: 5cm;\">"
@@ -890,7 +912,10 @@
 	},"négatif": {
 		"tags": [],
 		"definitions": [
-			"Les nombres <span class=\"CRed\">négatifs</span> sont les nombres <b>inférieurs ou égaux à zéro</b>. Ils s'écrivent avec le signe « - » placé devant eux."
+			"Les nombres <span class=\"CRed\">négatifs</span> sont les nombres <b>inférieurs ou égaux à zéro</b> ($\\le 0$).<br>Ils s'écrivent avec le signe « - » placé devant eux."
+		],
+		"exemples": [
+			"-8 ; -17 ; -6,3 ; -42,72 ; -2025 ; etc..."
 		]
 	},"nombre premier": {
 		"tags": [],
@@ -920,6 +945,9 @@
 		"tags": [],
 		"definitions": [
 			"L'<span class=\"CRed\">opposé</span> d'un nombre relatif est le nombre de <b>signe contraire</b> et de même <b>distance à zéro</b>."
+		],
+		"exemples": [
+			"<div class=\"flexobject\"><div style=\"flex: 1 1 5cm; max-width: 7cm;\">-3,2 est l'opposé de +3,2.</div><img src=\"/Images/Cours/Distance à zéro.svg\" style=\"max-height: 2cm;\"></div>"
 		]
 	},"ordonnée": {
 		"tags": [],
@@ -1050,7 +1078,10 @@
 	},"positif": {
 		"tags": [],
 		"definitions": [
-			"Les nombres <span class=\"CRed\">positifs</span> sont les nombres <b>supérieurs ou égaux à zéro</b>. Ils s'écrivent seul ou avec le signe « + » placé devant eux."
+			"Les nombres <span class=\"CRed\">positifs</span> sont les nombres <b>supérieurs ou égaux à zéro</b> ($\\ge 0$).<br>Ils s'écrivent seul ou avec le signe « + » placé devant eux."
+		],
+		"exemples": [
+			"2 ; 7 ; 3,5 ; +4 ; +6 ; +31,62 ; 2024 ; etc..."
 		]
 	},"pourcentage": {
 		"tags": [],
@@ -1258,6 +1289,11 @@
 			"Pour calculer le produit de deux nombres relatifs, on multiplie les valeurs absolues et :<br><ul><li>Si les deux nombres sont de <b>même signe</b>, le produit est <b>positif</b>.</li><li>Si les deux nombres sont de <b>signes contraires</b>, le produit est <b>négatif</b>.</li></ul>",
 			"Lorsqu'on multiplie plusieurs nombres relatifs, on multiplie les valeurs absolues des facteurs.<br><ul><li>Le produit est <b>positif</b> si le nombre de facteurs négatifs est <b>pair</b>.</li><li>Le produit est <b>négatif</b> si le nombre de facteurs négatifs est <b>impair</b>.</li></ul>",
 			"Le quotient de deux nombres relatifs a le <b>même signe que leur produit</b>.<br>La valeur absolue du quotient est égale au quotient des valeurs absolues."
+		],
+		"remarques": [
+			"Le nombre 0 est à la fois négatif et positif.",
+			"Si un point est <b>strictement supérieur</b> à zéro, il est <b>strictement positif</b>. (<b>></b> 0)",
+			"Si un point est <b>strictement inférieur</b> à zéro, il est <b>strictement négatif</b>. (<b><</b> 0)"
 		]
 	},"repère": {
 		"tags": [],
@@ -1268,6 +1304,15 @@
 		"proprietes": [
 			"Une égalité reste vraie quand on ajoute (ou soustrait) un même nombre aux deux membres.",
 			"Une égalité reste vraie quand on multiplie (ou divise) les deux membres par un même nombre <b>non nul</b>."
+		],
+		"exemples": [
+			""
+		],
+		"remarques": [
+			"Le point O est appelée <u>origine du repère</u>."
+		],
+		"infos": [
+			"<img src=\"/Images/Cours/Repère 1.svg\" style=\"max-height: 10cm;\">"
 		]
 	},"résoudre": {
 		"tags": [],
@@ -1515,6 +1560,19 @@
 		"proprietes": [
 			"Pour tout angle aigu de mesure $\\theta$ :&#160;&#160;&#160; $\\sin(\\theta)^{2}+\\cos(\\theta)^{2}=1$",
 			"Pour tout angle aigu de mesure $\\theta$ :&#160;&#160;&#160; $\\tan(\\theta)=\\frac{\\sin(\\theta)}{\\cos(\\theta)}$"
+		]
+	},"valeur absolue": {
+		"tags": ["distance à zéro"],
+		"definitions": [
+			"La <span class=\"CRed\">valeur absolue</span> d'un nombre relatif <span class=\"CBlue\">$a$</span> (notée $|\\textcolor{#039be5}{a}|$) est :<ul><li><span class=\"CBlue\">$a$</span> si <span class=\"CBlue\">$a$</span> est <b>positif</b>.</li><li><span class=\"CBlue\">$-a$</span> si <span class=\"CBlue\">$a$</span> est <b>négatif</b>.</li></ul>On parle aussi de <span class=\"CRed\">distance à zéro</span>."
+		],
+		"exemples": [
+			"<img src=\"/Images/Cours/Valeur absolue 1.svg\" style=\"max-height: 2cm;\">",
+			"<img src=\"/Images/Cours/Valeur absolue 2.svg\" style=\"max-height: 2cm;\">",
+			"<img src=\"/Images/Cours/Valeur absolue 3.svg\" style=\"max-height: 2cm;\">"
+		],
+		"remarques": [
+			"La valeur absolue est toujours positive."
 		]
 	},"variable": {
 		"tags": [],

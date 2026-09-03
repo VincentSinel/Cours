@@ -11,6 +11,9 @@
 						{ "type": "definition", "source": [{"name": "multiple", "indexes": [1]}]},
 						{ "type": "exemple", "source": [{"name": "multiple", "indexes": [0]}]},
 						{ "type": "autre", "source": [{"data": "Content HTML"}]}
+					],
+					"automatisme": [
+						{"name" : "Niveau 1", "link": ""}
 					]
 				},
 				{

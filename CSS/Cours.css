@@ -283,6 +283,38 @@ table, th, td, tr {
     transition: 0.5s;
 }
 
+.automatisme{
+    border-radius: 10px;
+    background-color: var(--Color_BlueGray2);
+    border: solid 1px var(--Color_BlueGray1);
+    color: var(--Color_BlueGray4);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: max-content;
+    min-width: 26px;
+    height: 26px;
+}
+.automatisme:hover{
+    background-color: var(--Color_BlueGray3);
+    border: solid 1px var(--Color_BlueGray1);
+    color: var(--Color_BlueGray2);
+}
+.automatisme:active{
+    background-color: var(--Color_BlueGray4);
+    border: solid 1px var(--Color_BlueGray1);
+    color: var(--Color_BlueGray2);
+}
+.automatisme img{
+    width: 24px;
+    height: 24px;
+    color: var(--Color_BlueGray5);
+}
+
 .borderfull td, 
 .borderfull th{
     padding: 5px;

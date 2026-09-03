@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111.49 40.21">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #74bd83;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-4, .cls-5 {
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 12px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-5, .cls-6 {
+        fill: #44ace2;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+
+      .cls-8 {
+        stroke-width: 0px;
+      }
+
+      .cls-8, .cls-9 {
+        fill: #1d1d1b;
+      }
+    </style>
+  </defs>
+  <text class="cls-4" transform="translate(34.34 10.26)"><tspan class="cls-9" x="0" y="0">E(</tspan><tspan class="cls-6" x="11.24" y="0">2</tspan><tspan class="cls-9" x="17.44" y="0" xml:space="preserve"> ; </tspan><tspan class="cls-1" x="26.61" y="0">1</tspan><tspan class="cls-9" x="30.6" y="0">)</tspan></text>
+  <g>
+    <line class="cls-3" x1="43.15" y1="27.34" x2="46.1" y2="18.86"/>
+    <polygon class="cls-8" points="48.43 12.19 48.99 22.93 45.93 19.36 41.32 20.25 48.43 12.19"/>
+  </g>
+  <text class="cls-5" transform="translate(0 36.88)"><tspan x="0" y="0">Abscisse</tspan></text>
+  <g>
+    <line class="cls-3" x1="66.04" y1="27.34" x2="64.38" y2="19.11"/>
+    <polygon class="cls-8" points="62.98 12.19 68.94 21.14 64.48 19.63 60.97 22.75 62.98 12.19"/>
+  </g>
+  <text class="cls-2" transform="translate(59.46 36.96)"><tspan x="0" y="0">O</tspan><tspan class="cls-7" x="7.75" y="0">r</tspan><tspan x="12.75" y="0">donnée</tspan></text>
+</svg>

@@ -137,6 +137,26 @@ function EndLoadScript()
 	}
 }
 
+function CreerAutomatisme(data)
+{
+	let a = document.createElement("a");
+	a.classList.add("automatisme");
+	a.target = "_blank";
+	a.href = data.link;
+
+	let img = document.createElement("img")
+	img.src = "/Images/Icons/Automatisme.svg";
+	a.appendChild(img);
+
+	if (data.hasOwnProperty("name"))
+	{
+		let span = document.createElement("span")
+		span.innerText = data.name;
+		a.appendChild(span);
+	}
+
+	return a;
+}
 
 function CreateElement(element, parent, depth = 1)
 {
@@ -145,6 +165,13 @@ function CreateElement(element, parent, depth = 1)
 		let title = document.createElement("h" + depth);
 		title.innerHTML = element.name + " :";
 		parent.appendChild(title);
+
+		if (element.hasOwnProperty("automatisme"))
+		{
+			element.automatisme.forEach(el => {
+				title.appendChild(CreerAutomatisme(el))
+			});
+		}
 
 		let content = document.createElement("div");
 
@@ -188,7 +215,7 @@ function CreateElement(element, parent, depth = 1)
 	}
 	if (element.type == "exemple")
 	{
-		return SetExemple(element.source, parent, element.hasOwnProperty("style") ? element.style : null);
+		return SetExemple(element.source, parent, element.hasOwnProperty("style") ? element.style : null, element.hasOwnProperty("flex") ? true : false);
 	}
 	if (element.type == "remarque")
 	{
@@ -201,6 +228,16 @@ function CreateElement(element, parent, depth = 1)
 	if (element.type == "autre")
 	{
 		return SetAutre(element.source, parent, element.hasOwnProperty("style") ? element.style : null);
+	}
+	if (element.type == "automatisme")
+	{
+		let div = document.createElement("div");
+		parent.appendChild(div);
+
+		element.data.forEach(el => {
+			div.appendChild(CreerAutomatisme(el))
+		});
+		return;
 	}
 	let div = document.createElement("div");
 }
@@ -242,7 +279,6 @@ function SetDefinition(data, parent, style = null)
 	holder.style.cssText = style;
 
 	data.forEach(def => {
-		console.log(JSON_definitions[def.name], def.name)
 		if (!("definitions" in JSON_definitions[def.name])) {console.log("no definition with name " + def.name); return;}
 		def.indexes.forEach(index => {
 			let def_div = document.createElement(count > 1 ? "li" : "div");
@@ -294,7 +330,7 @@ function SetPropriete(data, parent, style = null)
 	});
 }
 
-function SetExemple(data, parent, style = null)
+function SetExemple(data, parent, style = null, flex = false)
 {
 	let count = CountSources(data);
 	if (count == 0) return;
@@ -307,6 +343,12 @@ function SetExemple(data, parent, style = null)
 	content.appendChild(div_title);
 	let holder = document.createElement("div");
 	content.appendChild(holder);
+
+	if (flex)
+	{
+		holder.classList.add("flexobject");
+	}
+		// holder.style.cssText = "display: flex; flex-direction"; 
 
 	content.style.cssText = style;
 	

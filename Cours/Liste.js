@@ -292,6 +292,12 @@ function ShowCollegeSelect()
 
     document.getElementById("noiframe").style.display = "block"
 
+    for(var i = 2; i < document.getElementById("HoverMenu").childElementCount; i++)
+    {
+        document.getElementById("HoverMenu").getElementsByClassName("hovermenu_block")[i].classList.add("hidden");
+    }
+    document.getElementById("HoverMenu").getElementsByClassName("hovermenu_block")[1].classList.remove("hidden")
+
     SelectedChapter = null;
 
     frame.src = ""

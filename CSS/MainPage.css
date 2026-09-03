@@ -38,6 +38,9 @@
 .titrepagecollege_saint_exupery span::before{
 	content: "Collège Saint Exupéry";
 }
+.titrepagecollege_saint_exupery_old span::before{
+	content: "Collège Saint Exupéry";
+}
 .titrepagecollege_madame_de_lafayette span::before{
 	content: "Collège Madame de Lafayette";
 }
@@ -45,6 +48,9 @@
 	content: "2024-2025";
 }
 .titrepagedate_saint_exupery span::before{
+	content: "2026-2027";
+}
+.titrepagedate_saint_exupery_old span::before{
 	content: "2024-2026";
 }
 .titrepagedate_madame_de_lafayette span::before{

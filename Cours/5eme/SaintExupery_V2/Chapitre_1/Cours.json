@@ -1,0 +1,78 @@
+{
+	"activité": "<div class=\"flexobject\"><div style=\"flex: 1 1 12cm;\"><p>Voici une carte de prévision météorologique.</p><ol><li><ol type=\"a\"><li>A priori, à quelle saison les températures prévues correspondent-elles ?</li><li>Quelle est la température la plus basse ?<br>La température la plus haute ?</li><li>Classer ces températures en deux catégories en justifiant le choix des catégories.</li></ol></li><li>Placer ces températures sur la droite graduée puis placer l'initiale de chaque ville de la carte en fonction de la température prévue.<span style=\"font-size: 8pt;\"><i>(P pour Paris, N pour Nice, ...)</i></span><br><img src=\"/Images/Cours/Axe graduee 9.svg\" style=\"max-height: 2cm;\"></li><li><ol type=\"a\"><li>Quelle est la différence de températures prévue entre Paris et Marseille ? Entre Nice et Marseille ?</li><li>Comment cela se traduit-il sur la droite graduée les points P et N ?</li></ol></li><li>Où fera-t-il le plus chaud :<ol type=\"a\"><li>À Strasbourg ou à Lille ?</li><li>À Dijon ou à Brest ?</li><li>À Dijon ou à Paris ?</li></ol></li><li> En utilisant ce qui vient d'être fait, indique le plus grand des deux nombres :<ol type=\"a\"><li>-12 et -7</li><li>-9 et 2</li><li>-9 et -4</li></ol></li><li>Ranger les températures de la plus froide à la plus chaude.</li></ol></div><img src=\"/Images/Cours/Carte france.svg\" style=\"max-height: 10cm;\"></div>",
+	"content": [{
+			"type": "title", "name": "Les nombres relatifs",
+			"content": [
+				{
+					"type": "container",
+					"class": "flexobject",
+					"content": [
+						{"type": "definition", "source": [{"name": "positif", "indexes": [0]}], "style": "flex: 2 1 5cm;"},
+						{"type": "exemple", "source": [{"name": "positif", "indexes": [0]}], "style": "flex: 1 1 5cm;"}
+					]
+				},
+				{
+					"type": "container",
+					"class": "flexobject",
+					"content": [
+						{"type": "definition", "source": [{"name": "négatif", "indexes": [0]}], "style": "flex: 2 1 5cm;"},
+						{"type": "exemple", "source": [{"name": "négatif", "indexes": [0]}], "style": "flex: 1 1 5cm;"}
+					]
+				},
+				{"type": "definition", "source": [{"name": "relatif", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "relatif", "indexes": [0, 1, 2]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Représentation",
+			"content": [
+				{
+					"type": "title", "name": "Repérage sur une droite graduée",
+					"content": [
+						{"type": "definition", "source": [{"name": "axe gradué", "indexes": [1]}]},
+						{"type": "info", "source": [{"name": "axe gradué", "indexes": [2]}]},
+						{"type": "definition", "source": [{"name": "abscisse", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "abscisse", "indexes": [0]}]},
+						{"type": "definition", "source": [{"name": "valeur absolue", "indexes": [0]}]},
+						{"type": "exemple", "flex": true, "source": [{"name": "valeur absolue", "indexes": [0,1,2], "style": "flex: 5cm 1 1"}]},
+						{"type": "remarque", "source": [{"name": "valeur absolue", "indexes": [0]}]},
+						{"type": "definition", "source": [{"name": "opposé", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "opposé", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Comparaison de nombres relatifs",
+					"content": [
+						{"type": "propriete", "source": [{"name": "comparer", "indexes": [0,1,2]}]},
+						{"type": "exemple", "source": [{"name": "comparer", "indexes": [2,3,4]}]},
+						{"type": "remarque", "source": [{"name": "comparer", "indexes": [1,2]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Repérage dans le plan",
+					"content": [
+						{"type": "definition", "source": [{"name": "repère", "indexes": [0]}]},
+						{
+							"type": "container",
+							"class": "flexobject",
+							"content": [
+								{"type": "info", "source": [{"name": "repère", "indexes": [0]}], "style": "flex: 1 1 5cm;"},
+								{"type": "remarque", "source": [{"name": "repère", "indexes": [0]}], "style": "flex: 1 1 5cm;"}
+							]
+						},
+						{"type": "definition", "source": [{"name": "coordonnées", "indexes": [0]}]},
+						{
+							"type": "container",
+							"class": "flexobject",
+							"content": [
+								{"type": "info", "source": [{"name": "coordonnées", "indexes": [0]}], "style": "flex: 1 1 5cm;"},
+								{"type": "exemple", "source": [{"name": "coordonnées", "indexes": [0]}], "style": "flex: 1 1 5cm;"}
+							]
+						},
+						{"type": "remarque", "source": [{"name": "coordonnées", "indexes": [0, 1]}]}
+					]
+				}
+			]
+		}
+	]
+}
