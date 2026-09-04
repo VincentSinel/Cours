@@ -50,6 +50,7 @@
 				},
 				{
 					"type": "title", "name": "Repérage dans le plan",
+					"automatisme": [{"link": "https://mathsmentales.net/diaporama.html?a=,fs=serif,i=321,e=correction,o=no,s=1,so=h,f=n,colors=,snd=null&p=0~t=Diapo%201~c=1~o=true~d=normal~at=10~sl=0_i=5GR1~o=0~q=0.0,1,2~t=18~n=5"}],
 					"content": [
 						{"type": "definition", "source": [{"name": "repère", "indexes": [0]}]},
 						{
