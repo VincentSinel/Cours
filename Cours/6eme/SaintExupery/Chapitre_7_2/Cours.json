@@ -1,25 +1,79 @@
 {
-	"content": [{
-			"type": "title", "name": "Rappels",
-			"content": [
-				{"type": "propriete", "source": [{"name": "quotient", "indexes": [2]}]}
-			]
-		},
+	"content": [
 		{
-			"type": "title", "name": "Somme de fractions",
+			"type": "title",
+			"name": "Angles particuliers",
 			"content": [
 				{
-					"type": "title", "name": "Même dénominateur",
-					"content": [
-						{"type": "propriete", "source": [{"name": "fraction", "indexes": [1]}]},
-						{"type": "exemple", "source": [{"name": "fraction", "indexes": [5, 6]}]}
+					"type": "remarque",
+					"source": [
+						{
+							"name": "angles particuliers chapitre_7_2",
+							"indexes": [
+								0
+							]
+						}
 					]
 				},
 				{
-					"type": "title", "name": "Dénominateurs différents",
-					"content": [
-						{"type": "propriete", "source": [{"name": "fraction", "indexes": [2]}]},
-						{"type": "exemple", "source": [{"name": "fraction", "indexes": [7, 8]}]}
+					"type": "definition",
+					"source": [
+						{
+							"name": "angles particuliers chapitre_7_2",
+							"indexes": [
+								0
+							]
+						}
+					]
+				},
+				{
+					"type": "exemple",
+					"source": [
+						{
+							"name": "angles particuliers chapitre_7_2",
+							"indexes": [
+								0
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "title",
+			"name": "Bissectrice",
+			"content": [
+				{
+					"type": "definition",
+					"source": [
+						{
+							"name": "bissectrice chapitre_7_2",
+							"indexes": [
+								0
+							]
+						}
+					]
+				},
+				{
+					"type": "exemple",
+					"source": [
+						{
+							"name": "bissectrice chapitre_7_2",
+							"indexes": [
+								0
+							]
+						}
+					]
+				},
+				{
+					"type": "remarque",
+					"source": [
+						{
+							"name": "bissectrice chapitre_7_2",
+							"indexes": [
+								0
+							]
+						}
 					]
 				}
 			]

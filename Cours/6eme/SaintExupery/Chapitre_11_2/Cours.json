@@ -1,25 +1,186 @@
 {
-	"content": [{
-			"type": "title", "name": "Rappels",
-			"content": [
-				{"type": "propriete", "source": [{"name": "quotient", "indexes": [2]}]}
-			]
-		},
+	"content": [
 		{
-			"type": "title", "name": "Somme de fractions",
+			"type": "title",
+			"name": "Vocabulaire",
 			"content": [
 				{
-					"type": "title", "name": "Même dénominateur",
+					"type": "title",
+					"name": "Solide",
 					"content": [
-						{"type": "propriete", "source": [{"name": "fraction", "indexes": [1]}]},
-						{"type": "exemple", "source": [{"name": "fraction", "indexes": [5, 6]}]}
+						{
+							"type": "definition",
+							"source": [
+								{
+									"name": "solide chapitre_11_2",
+									"indexes": [
+										0
+									]
+								}
+							]
+						},
+						{
+							"type": "remarque",
+							"source": [
+								{
+									"name": "solide chapitre_11_2",
+									"indexes": [
+										0
+									]
+								}
+							]
+						}
 					]
 				},
 				{
-					"type": "title", "name": "Dénominateurs différents",
+					"type": "title",
+					"name": "Perspective cavalière",
 					"content": [
-						{"type": "propriete", "source": [{"name": "fraction", "indexes": [2]}]},
-						{"type": "exemple", "source": [{"name": "fraction", "indexes": [7, 8]}]}
+						{
+							"type": "definition",
+							"source": [
+								{
+									"name": "perspective cavaliere chapitre_11_2",
+									"indexes": [
+										0
+									]
+								}
+							]
+						},
+						{
+							"type": "exemple",
+							"source": [
+								{
+									"name": "perspective cavaliere chapitre_11_2",
+									"indexes": [
+										0
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "title",
+					"name": "Patron",
+					"content": [
+						{
+							"type": "definition",
+							"source": [
+								{
+									"name": "patron chapitre_11_2",
+									"indexes": [
+										0
+									]
+								}
+							]
+						},
+						{
+							"type": "exemple",
+							"source": [
+								{
+									"name": "patron chapitre_11_2",
+									"indexes": [
+										0
+									]
+								}
+							]
+						},
+						{
+							"type": "remarque",
+							"source": [
+								{
+									"name": "patron chapitre_11_2",
+									"indexes": [
+										0
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "title",
+			"name": "Parallélépipède rectangle",
+			"content": [
+				{
+					"type": "title",
+					"name": "Pavé droit",
+					"content": [
+						{
+							"type": "definition",
+							"source": [
+								{
+									"name": "pave droit chapitre_11_2",
+									"indexes": [
+										0
+									]
+								}
+							]
+						},
+						{
+							"type": "exemple",
+							"source": [
+								{
+									"name": "pave droit chapitre_11_2",
+									"indexes": [
+										0
+									]
+								}
+							]
+						},
+						{
+							"type": "remarque",
+							"source": [
+								{
+									"name": "pave droit chapitre_11_2",
+									"indexes": [
+										0
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "title",
+					"name": "Cube",
+					"content": [
+						{
+							"type": "definition",
+							"source": [
+								{
+									"name": "cube chapitre_11_2",
+									"indexes": [
+										0
+									]
+								}
+							]
+						},
+						{
+							"type": "exemple",
+							"source": [
+								{
+									"name": "cube chapitre_11_2",
+									"indexes": [
+										0
+									]
+								}
+							]
+						},
+						{
+							"type": "remarque",
+							"source": [
+								{
+									"name": "cube chapitre_11_2",
+									"indexes": [
+										0
+									]
+								}
+							]
+						}
 					]
 				}
 			]

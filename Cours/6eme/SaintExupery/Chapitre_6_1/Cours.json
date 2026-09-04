@@ -1,38 +1,132 @@
 {
-	"content": [{
-			"type": "title", "name": "Définitions",
+	"content": [
+		{
+			"type": "title",
+			"name": "Définition",
 			"content": [
 				{
-					"type": "title", "name": "Cercle et disque",
+					"type": "title",
+					"name": "Cercle",
 					"content": [
-						{"type": "definition", "source": [{"name": "cercle", "indexes": [0]}]},
-						{"type": "exemple", "source": [{"name": "cercle", "indexes": [0]}]},
-						{"type": "definition", "source": [{"name": "disque", "indexes": [0]}]},
-						{"type": "exemple", "source": [{"name": "disque", "indexes": [0]}]},
-						{"type": "remarque", "source": [{"name": "disque", "indexes": [0]}]}
+						{
+							"type": "definition",
+							"source": [
+								{
+									"name": "cercle chapitre_6_1",
+									"indexes": [
+										0
+									]
+								}
+							]
+						},
+						{
+							"type": "exemple",
+							"source": [
+								{
+									"name": "cercle chapitre_6_1",
+									"indexes": [
+										0
+									]
+								}
+							]
+						}
 					]
 				},
 				{
-					"type": "title", "name": "Vocabulaire",
+					"type": "title",
+					"name": "Disque",
 					"content": [
-						{"type": "definition", "source": [
-									{"name": "corde", "indexes": [0]},
-									{"name": "diamètre", "indexes": [0, 1]},
-									{"name": "arc de cercle", "indexes": [0]}
-						]},
-						{"type": "exemple", "source": [{"name": "cercle", "indexes": [1]}]},
-						{"type": "remarque", "source": [{"name": "diamètre", "indexes": [0]},{"name": "arc de cercle", "indexes": [0]}]}
+						{
+							"type": "definition",
+							"source": [
+								{
+									"name": "disque chapitre_6_1",
+									"indexes": [
+										0
+									]
+								}
+							]
+						},
+						{
+							"type": "exemple",
+							"source": [
+								{
+									"name": "disque chapitre_6_1",
+									"indexes": [
+										0
+									]
+								}
+							]
+						}
 					]
 				}
 			]
 		},
 		{
-			"type": "title", "name": "Propriétés",
+			"type": "title",
+			"name": "Vocabulaire",
 			"content": [
-				{"type": "propriete", "source": [{"name": "cercle", "indexes": [0]}]},
-				{"type": "info", "source": [{"name": "cercle", "indexes": [0]}]},
-				{"type": "propriete", "source": [{"name": "cercle", "indexes": [1]}]},
-				{"type": "info", "source": [{"name": "cercle", "indexes": [1]}]}
+				{
+					"type": "definition",
+					"source": [
+						{
+							"name": "vocabulaire chapitre_6_1",
+							"indexes": [
+								0
+							]
+						}
+					]
+				},
+				{
+					"type": "exemple",
+					"source": [
+						{
+							"name": "vocabulaire chapitre_6_1",
+							"indexes": [
+								0
+							]
+						}
+					]
+				},
+				{
+					"type": "remarque",
+					"source": [
+						{
+							"name": "vocabulaire chapitre_6_1",
+							"indexes": [
+								0
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "title",
+			"name": "Propriétés",
+			"content": [
+				{
+					"type": "definition",
+					"source": [
+						{
+							"name": "proprietes chapitre_6_1",
+							"indexes": [
+								0
+							]
+						}
+					]
+				},
+				{
+					"type": "definition",
+					"source": [
+						{
+							"name": "proprietes chapitre_6_1",
+							"indexes": [
+								1
+							]
+						}
+					]
+				}
 			]
 		}
 	]

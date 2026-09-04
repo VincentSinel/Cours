@@ -1,28 +1,70 @@
 {
-	"content": [{
-			"type": "title", "name": "Rappels",
-			"content": [
-				{"type": "propriete", "source": [{"name": "quotient", "indexes": [2]}]}
-			]
-		},
+	"content": [
 		{
-			"type": "title", "name": "Somme de fractions",
+			"type": "title",
+			"name": "Représentation d'un solide",
 			"content": [
 				{
-					"type": "title", "name": "Même dénominateur",
-					"content": [
-						{"type": "propriete", "source": [{"name": "fraction", "indexes": [1]}]},
-						{"type": "exemple", "source": [{"name": "fraction", "indexes": [5, 6]}]}
+					"type": "definition",
+					"source": [
+						{
+							"name": "representation d un solide chapitre_11_1",
+							"indexes": [
+								0
+							]
+						}
 					]
 				},
 				{
-					"type": "title", "name": "Dénominateurs différents",
-					"content": [
-						{"type": "propriete", "source": [{"name": "fraction", "indexes": [2]}]},
-						{"type": "exemple", "source": [{"name": "fraction", "indexes": [7, 8]}]}
+					"type": "exemple",
+					"source": [
+						{
+							"name": "representation d un solide chapitre_11_1",
+							"indexes": [
+								0
+							]
+						}
+					]
+				},
+				{
+					"type": "definition",
+					"source": [
+						{
+							"name": "representation d un solide chapitre_11_1",
+							"indexes": [
+								1
+							]
+						}
+					]
+				},
+				{
+					"type": "exemple",
+					"source": [
+						{
+							"name": "representation d un solide chapitre_11_1",
+							"indexes": [
+								1
+							]
+						}
+					]
+				},
+				{
+					"type": "remarque",
+					"source": [
+						{
+							"name": "representation d un solide chapitre_11_1",
+							"indexes": [
+								0
+							]
+						}
 					]
 				}
 			]
+		},
+		{
+			"type": "title",
+			"name": "Assemblage de cube",
+			"content": []
 		}
 	]
 }

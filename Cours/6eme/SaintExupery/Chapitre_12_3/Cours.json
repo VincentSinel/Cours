@@ -1,25 +1,97 @@
 {
-	"content": [{
-			"type": "title", "name": "Rappels",
-			"content": [
-				{"type": "propriete", "source": [{"name": "quotient", "indexes": [2]}]}
-			]
-		},
+	"content": [
 		{
-			"type": "title", "name": "Somme de fractions",
+			"type": "title",
+			"name": "Durée",
 			"content": [
 				{
-					"type": "title", "name": "Même dénominateur",
-					"content": [
-						{"type": "propriete", "source": [{"name": "fraction", "indexes": [1]}]},
-						{"type": "exemple", "source": [{"name": "fraction", "indexes": [5, 6]}]}
+					"type": "definition",
+					"source": [
+						{
+							"name": "duree chapitre_12_3",
+							"indexes": [
+								0
+							]
+						}
 					]
 				},
 				{
-					"type": "title", "name": "Dénominateurs différents",
+					"type": "exemple",
+					"source": [
+						{
+							"name": "duree chapitre_12_3",
+							"indexes": [
+								0
+							]
+						}
+					]
+				},
+				{
+					"type": "remarque",
+					"source": [
+						{
+							"name": "duree chapitre_12_3",
+							"indexes": [
+								0
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "title",
+			"name": "Calculs d'horaires",
+			"content": [
+				{
+					"type": "title",
+					"name": "Calcul d'une durée",
 					"content": [
-						{"type": "propriete", "source": [{"name": "fraction", "indexes": [2]}]},
-						{"type": "exemple", "source": [{"name": "fraction", "indexes": [7, 8]}]}
+						{
+							"type": "exemple",
+							"source": [
+								{
+									"name": "calcul d une duree chapitre_12_3",
+									"indexes": [
+										0
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "title",
+					"name": "A partir d'un temps initial",
+					"content": [
+						{
+							"type": "exemple",
+							"source": [
+								{
+									"name": "a partir d un temps initial chapitre_12_3",
+									"indexes": [
+										0
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "title",
+					"name": "A partir d'un temps final",
+					"content": [
+						{
+							"type": "exemple",
+							"source": [
+								{
+									"name": "a partir d un temps final chapitre_12_3",
+									"indexes": [
+										0
+									]
+								}
+							]
+						}
 					]
 				}
 			]

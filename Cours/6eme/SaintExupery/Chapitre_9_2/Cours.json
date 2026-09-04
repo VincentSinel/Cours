@@ -1,25 +1,46 @@
 {
-	"content": [{
-			"type": "title", "name": "Rappels",
-			"content": [
-				{"type": "propriete", "source": [{"name": "quotient", "indexes": [2]}]}
-			]
-		},
+	"content": [
 		{
-			"type": "title", "name": "Somme de fractions",
+			"type": "title",
+			"name": "Avec deux longueurs et un angle",
 			"content": [
 				{
-					"type": "title", "name": "Même dénominateur",
-					"content": [
-						{"type": "propriete", "source": [{"name": "fraction", "indexes": [1]}]},
-						{"type": "exemple", "source": [{"name": "fraction", "indexes": [5, 6]}]}
+					"type": "remarque",
+					"source": [
+						{
+							"name": "avec deux longueurs et un angle chapitre_9_2",
+							"indexes": [
+								0
+							]
+						}
 					]
 				},
 				{
-					"type": "title", "name": "Dénominateurs différents",
-					"content": [
-						{"type": "propriete", "source": [{"name": "fraction", "indexes": [2]}]},
-						{"type": "exemple", "source": [{"name": "fraction", "indexes": [7, 8]}]}
+					"type": "exemple",
+					"source": [
+						{
+							"name": "avec deux longueurs et un angle chapitre_9_2",
+							"indexes": [
+								0
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "title",
+			"name": "Avec une longueur et deux angles",
+			"content": [
+				{
+					"type": "exemple",
+					"source": [
+						{
+							"name": "avec une longueur et deux angles chapitre_9_2",
+							"indexes": [
+								0
+							]
+						}
 					]
 				}
 			]

@@ -1,25 +1,18 @@
 {
-	"content": [{
-			"type": "title", "name": "Rappels",
-			"content": [
-				{"type": "propriete", "source": [{"name": "quotient", "indexes": [2]}]}
-			]
-		},
+	"content": [
 		{
-			"type": "title", "name": "Somme de fractions",
+			"type": "title",
+			"name": "Construction d'un triangle avec 3 longueurs",
 			"content": [
 				{
-					"type": "title", "name": "Même dénominateur",
-					"content": [
-						{"type": "propriete", "source": [{"name": "fraction", "indexes": [1]}]},
-						{"type": "exemple", "source": [{"name": "fraction", "indexes": [5, 6]}]}
-					]
-				},
-				{
-					"type": "title", "name": "Dénominateurs différents",
-					"content": [
-						{"type": "propriete", "source": [{"name": "fraction", "indexes": [2]}]},
-						{"type": "exemple", "source": [{"name": "fraction", "indexes": [7, 8]}]}
+					"type": "exemple",
+					"source": [
+						{
+							"name": "construction d un triangle avec 3 longueurs chapitre_9_1",
+							"indexes": [
+								0
+							]
+						}
 					]
 				}
 			]

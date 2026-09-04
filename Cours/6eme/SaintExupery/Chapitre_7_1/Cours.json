@@ -1,26 +1,74 @@
 {
-	"content": [{
-			"type": "title", "name": "Rappels",
-			"content": [
-				{"type": "propriete", "source": [{"name": "quotient", "indexes": [2]}]}
-			]
-		},
+	"content": [
 		{
-			"type": "title", "name": "Somme de fractions",
+			"type": "title",
+			"name": "Angles",
 			"content": [
 				{
-					"type": "title", "name": "Même dénominateur",
-					"content": [
-						{"type": "propriete", "source": [{"name": "fraction", "indexes": [1]}]},
-						{"type": "exemple", "source": [{"name": "fraction", "indexes": [5, 6]}]}
+					"type": "definition",
+					"source": [
+						{
+							"name": "angles chapitre_7_1",
+							"indexes": [
+								0
+							]
+						}
 					]
 				},
 				{
-					"type": "title", "name": "Dénominateurs différents",
-					"content": [
-						{"type": "propriete", "source": [{"name": "fraction", "indexes": [2]}]},
-						{"type": "exemple", "source": [{"name": "fraction", "indexes": [7, 8]}]}
+					"type": "remarque",
+					"source": [
+						{
+							"name": "angles chapitre_7_1",
+							"indexes": [
+								0
+							]
+						}
 					]
+				}
+			]
+		},
+		{
+			"type": "title",
+			"name": "Notation",
+			"content": []
+		},
+		{
+			"type": "title",
+			"name": "Mesure et construction",
+			"content": [
+				{
+					"type": "title",
+					"name": "Mesure d'un angle",
+					"content": [
+						{
+							"type": "definition",
+							"source": [
+								{
+									"name": "mesure d un angle chapitre_7_1",
+									"indexes": [
+										0
+									]
+								}
+							]
+						},
+						{
+							"type": "Remarque",
+							"source": [
+								{
+									"name": "mesure d un angle chapitre_7_1",
+									"indexes": [
+										0
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "title",
+					"name": "Construction d'un angle",
+					"content": []
 				}
 			]
 		}
