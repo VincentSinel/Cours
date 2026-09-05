@@ -1,59 +1,21 @@
 {
+	"scripts": [{"name": "JS/Transformation.js"}],
 	"content": [
 		{
 			"type": "title",
 			"name": "Propriétés",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "proprietes chapitre_8_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "proprietes chapitre_8_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "proprietes chapitre_8_2",
-							"indexes": [
-								1
-							]
-						}
-					]
-				}
+				{"type": "propriete", "source": [{"name": "symétrie axiale", "indexes": [4,1,2,3]}]},
+				{"type": "exemple", "source": [{"name": "symétrie axiale", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "symétrie axiale", "indexes": [1]}]}
 			]
 		},
 		{
 			"type": "title",
 			"name": "Application",
 			"content": [
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "application chapitre_8_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "info", "source": [{"name": "symétrie axiale", "indexes": [2]}]},
+				{"type": "exemple", "source": [{"name": "symétrie axiale", "indexes": [3]}]}
 			]
 		}
 	]

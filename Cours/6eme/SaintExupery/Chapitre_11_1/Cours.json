@@ -1,70 +1,24 @@
 {
+	"styles": ".exemple_perspec div {flex-direction: column;align-items: center;}.exemple_perspec img {max-width: 4cm;max-height: 3cm;}",
 	"content": [
 		{
 			"type": "title",
 			"name": "Représentation d'un solide",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "representation d un solide chapitre_11_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "representation d un solide chapitre_11_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "representation d un solide chapitre_11_1",
-							"indexes": [
-								1
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "representation d un solide chapitre_11_1",
-							"indexes": [
-								1
-							]
-						}
-					]
-				},
-				{
-					"type": "remarque",
-					"source": [
-						{
-							"name": "representation d un solide chapitre_11_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "solide", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "solide", "indexes": [0,1,2,3,4], "style": "flex: 4cm 1 1"}], "flex": true},
+				{"type": "definition", "source": [{"name": "solide", "indexes": [1]}]},
+				{"type": "exemple", "source": [{"name": "solide", "indexes": [5,6,7,8,9]}], "class": "exemple_perspec", "flex": true},
+				{"type": "remarque", "source": [{"name": "solide", "indexes": [0]}]}
 			]
 		},
 		{
 			"type": "title",
 			"name": "Assemblage de cube",
-			"content": []
+			"content": [
+				{"type": "info", "source": [{"name": "solide", "indexes": [0]}]},
+				{"type": "info", "source": [{"name": "solide", "indexes": [1]}]}
+			]
 		}
 	]
 }

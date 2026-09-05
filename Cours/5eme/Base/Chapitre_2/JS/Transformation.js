@@ -1,13 +1,3 @@
-var lobster1img = "";
-var lobster2img = "";
-
-
-function Init()
-{
-    Draw_SymAxial();
-    Draw_SymCentral();
-}
-
 function Draw_SymAxial()
 {
     let margin = 30;
@@ -84,3 +74,7 @@ function Draw_SymCentral()
         .plot(cx + margin, margin, cx + margin, h + margin)
         .loop(true, true, 1000)
 }
+
+
+Draw_SymAxial();
+Draw_SymCentral();

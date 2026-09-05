@@ -1,59 +1,22 @@
 {
+	"scripts": [{"name": "JS/Intro.js"}],
 	"content": [
 		{
 			"type": "title",
 			"name": "Définition",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "definition chapitre_11_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "definition chapitre_11_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "volume", "indexes": [1]}]},
+				{"type": "exemple", "source": [{"name": "volume", "indexes": [2]}]},
+				{"type": "info", "source": [{"name": "volume", "indexes": [1]}]}
 			]
 		},
 		{
 			"type": "title",
 			"name": "Mesure",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "mesure chapitre_11_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "remarque",
-					"source": [
-						{
-							"name": "mesure chapitre_11_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "volume", "indexes": [2]}]},
+				{"type": "remarque", "source": [{"name": "volume", "indexes": [3,1]}]},
+				{"type": "info", "source": [{"name": "volume", "indexes": [2]}]}
 			]
 		}
 	]

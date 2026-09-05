@@ -323,6 +323,15 @@ table, th, td, tr {
     align-items: center;
     text-align: center;
 }
+.borderfull2{
+    margin-left: auto;
+    margin-right: auto;
+}
+.borderfull2 th{
+    background-color: #b6dde8;
+    font-size: 18pt;
+    width: 9.5cm;
+}
 .borderfull2 td, 
 .borderfull2 th{
     padding: 5px;

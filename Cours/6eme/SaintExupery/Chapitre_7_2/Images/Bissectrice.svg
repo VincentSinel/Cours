@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.45 106.3">
+  <path d="m71.79,54.59c1.62,5.69,2.49,11.7,2.49,17.91,0,4.16-.39,8.23-1.13,12.17l-64.06-12.17,62.7-17.91Z" style="fill: rgba(54, 169, 225, 1); fill-opacity: 0.5; stroke: #009fe3; stroke-linejoin: round;"/>
+  <path d="m57.05,58.76c-2.16-7.58-6.07-14.43-11.26-20.08L9.1,72.5l47.96-13.74" style="fill: rgba(54, 169, 225, 1); fill-opacity: 0.5; stroke: #009fe3; stroke-linejoin: round;"/>
+  <polyline points="87.22 .5 9.1 72.5 121.95 93.95" style="fill: none; stroke: #1d1d1b; stroke-linecap: round; stroke-linejoin: round;"/>
+  <line x1="9.1" y1="72.5" x2="104.05" y2="45.37" style="fill: none; stroke: #1d1d1b; stroke-linecap: round; stroke-miterlimit: 10;"/>
+  <line x1="47.72" y1="49.61" x2="56.18" y2="44.84" style="fill: none; stroke: #009fe3; stroke-linecap: round; stroke-linejoin: round;"/>
+  <line x1="69.44" y1="69.18" x2="79.73" y2="69.01" style="fill: none; stroke: #009fe3; stroke-linecap: round; stroke-linejoin: round;"/>
+  <text transform="translate(93.42 58.94)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 12px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">B</tspan></text>
+  <text transform="translate(94.79 103.06)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 12px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">P</tspan></text>
+  <text transform="translate(53.73 17.03)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 12px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">C</tspan></text>
+  <text transform="translate(0 81.3)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 12px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">I</tspan></text>
+  <line x1="91.49" y1="46.71" x2="92.76" y2="50.84" style="fill: none; stroke: #1d1d1b; stroke-linecap: round; stroke-miterlimit: 10;"/>
+  <line x1="65.8" y1="17.49" x2="68.7" y2="20.7" style="fill: none; stroke: #1d1d1b; stroke-linecap: round; stroke-miterlimit: 10;"/>
+  <line x1="99.24" y1="87.17" x2="98.5" y2="91.43" style="fill: none; stroke: #1d1d1b; stroke-linecap: round; stroke-miterlimit: 10;"/>
+</svg>

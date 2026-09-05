@@ -4,122 +4,22 @@
 			"type": "title",
 			"name": "Vocabulaires",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "vocabulaires chapitre_13_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "vocabulaires chapitre_13_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "vocabulaires chapitre_13_3",
-							"indexes": [
-								1
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "vocabulaires chapitre_13_3",
-							"indexes": [
-								1
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "expérience aléatoire", "indexes": [0]}]},
+				{"type": "exemple", "multiple": true, "source": [{"name": "expérience aléatoire", "indexes": [0]}]},
+				{"type": "definition", "source": [{"name": "événement", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "événement", "indexes": [0]}]}
 			]
 		},
 		{
 			"type": "title",
 			"name": "Calcul de probabilité",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "calcul de probabilite chapitre_13_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "calcul de probabilite chapitre_13_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "calcul de probabilite chapitre_13_3",
-							"indexes": [
-								1
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "calcul de probabilite chapitre_13_3",
-							"indexes": [
-								1
-							]
-						}
-					]
-				},
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "calcul de probabilite chapitre_13_3",
-							"indexes": [
-								2
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "calcul de probabilite chapitre_13_3",
-							"indexes": [
-								2
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "probabilité", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "probabilité", "indexes": [0]}]},
+				{"type": "propriete", "source": [{"name": "probabilité", "indexes": [0,1]}]},
+				{"type": "exemple", "source": [{"name": "probabilité", "indexes": [1]}]},
+				{"type": "definition", "source": [{"name": "équiprobabilité", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "équiprobabilité", "indexes": [0]}]}
 			]
 		}
 	]

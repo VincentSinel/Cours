@@ -1,48 +1,21 @@
 {
+	"scripts": [{"name": "/JS/Animation/Animations/Triangle_AngleLongueurs1.js"},{"name": "/JS/Animation/Animations/Triangle_AngleLongueurs2.js"},{"name": "/JS/Animation/Animations/Triangle_AnglesLongueur1.js"},{"name": "/JS/Animation/Animations/Triangle_AnglesLongueur2.js"}],
 	"content": [
 		{
 			"type": "title",
 			"name": "Avec deux longueurs et un angle",
 			"content": [
-				{
-					"type": "remarque",
-					"source": [
-						{
-							"name": "avec deux longueurs et un angle chapitre_9_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "avec deux longueurs et un angle chapitre_9_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "info", "source": [{"name": "triangle", "indexes": [5]}]},
+				{"type": "remarque", "source": [{"name": "triangle", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "triangle", "indexes": [1,2]}], "flex": true}
 			]
 		},
 		{
 			"type": "title",
 			"name": "Avec une longueur et deux angles",
 			"content": [
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "avec une longueur et deux angles chapitre_9_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "info", "source": [{"name": "triangle", "indexes": [6]}]},
+				{"type": "exemple", "source": [{"name": "triangle", "indexes": [4, 3]}], "flex": true}
 			]
 		}
 	]

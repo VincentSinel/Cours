@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 171.04 107.78">
+  <path d="m47.51,74.49c1.06,4.27,1.37,8.53,1.02,12.69h0l-39.18-3.27,38.16-9.42Z" style="fill: rgba(103, 70, 149, 1); fill-opacity: 0.5; stroke: #674695; stroke-linejoin: round;"/>
+  <path d="m34.41,77.72l-25.06,6.19,17.26-19.23c3.4,3.01,6,7.02,7.42,11.67.14.46.27.92.38,1.38" style="fill: rgba(57, 181, 74, 1); fill-opacity: 0.5; stroke: #39b54a; stroke-linejoin: round;"/>
+  <polyline points="84.46 .33 9.35 83.9 115.17 92.69" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+  <line x1="9.35" y1="83.9" x2="170.92" y2="44.02" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+  <line x1="53.73" y1="29.47" x2="58.71" y2="34.07" style="fill: #fff; stroke: #000; stroke-miterlimit: 10;"/>
+  <line x1="121.13" y1="53.85" x2="122.28" y2="58.7" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+  <line x1="95.09" y1="88.83" x2="94.58" y2="93.68" style="fill: none; stroke: #000; stroke-miterlimit: 10;"/>
+  <text transform="translate(0 88.43)" style="font-family: Bahnschrift, Bahnschrift; font-size: 12px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">R</tspan></text>
+  <text transform="translate(45.63 30.17)" style="font-family: Bahnschrift, Bahnschrift; font-size: 12px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">J</tspan></text>
+  <text transform="translate(89.91 104.53)" style="font-family: Bahnschrift, Bahnschrift; font-size: 12px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">V</tspan></text>
+  <text transform="translate(116.37 51.47)" style="font-family: Bahnschrift, Bahnschrift; font-size: 12px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">N</tspan></text>
+</svg>

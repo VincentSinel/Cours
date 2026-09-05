@@ -4,50 +4,10 @@
 			"type": "title",
 			"name": "Propriétés des longueurs",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "proprietes des longueurs chapitre_6_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "proprietes des longueurs chapitre_6_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "proprietes des longueurs chapitre_6_2",
-							"indexes": [
-								1
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "proprietes des longueurs chapitre_6_2",
-							"indexes": [
-								1
-							]
-						}
-					]
-				}
+				{"type": "propriete", "source": [{"name": "inégalité triangulaire", "indexes": [0,1]}]},
+				{"type": "exemple", "source": [{"name": "inégalité triangulaire", "indexes": [0]}]},
+				{"type": "propriete", "source": [{"name": "inégalité triangulaire", "indexes": [2,3]}]},
+				{"type": "exemple", "source": [{"name": "inégalité triangulaire", "indexes": [1]}]}
 			]
 		},
 		{
@@ -58,73 +18,24 @@
 					"type": "title",
 					"name": "Périmètre",
 					"content": [
-						{
-							"type": "definition",
-							"source": [
-								{
-									"name": "perimetre chapitre_6_2",
-									"indexes": [
-										0
-									]
-								}
-							]
-						}
+						{"type": "definition", "source": [{"name": "périmètre", "indexes": [0]}]}
 					]
 				},
 				{
 					"type": "title",
 					"name": "Pi",
 					"content": [
-						{
-							"type": "definition",
-							"source": [
-								{
-									"name": "pi chapitre_6_2",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "remarque",
-							"source": [
-								{
-									"name": "pi chapitre_6_2",
-									"indexes": [
-										0
-									]
-								}
-							]
-						}
+						{"type": "definition", "source": [{"name": "pi", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "pi", "indexes": [2,3,1]}]},
+						{"type": "info", "source": [{"name": "pi", "indexes": [0]}]}
 					]
 				},
 				{
 					"type": "title",
 					"name": "Cercle",
 					"content": [
-						{
-							"type": "definition",
-							"source": [
-								{
-									"name": "cercle chapitre_6_2",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "exemple",
-							"source": [
-								{
-									"name": "cercle chapitre_6_2",
-									"indexes": [
-										0
-									]
-								}
-							]
-						}
+						{"type": "definition", "source": [{"name": "cercle", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "périmètre", "indexes": [1]}]}
 					]
 				}
 			]

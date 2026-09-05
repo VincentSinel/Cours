@@ -6,6 +6,8 @@ window.addEventListener("hashchange", () => { LoadPage(); });
 var load_count = 0;
 var script_load_count = 0;
 var json_location = "";
+var lobster1img = "";
+var lobster2img = "";
 
 var JSON_definitions = {};
 var JSON_page = {};
@@ -35,6 +37,25 @@ function LoadPage()
 			}
 		}
 		client_def.send();
+
+		let client_lob1 = new XMLHttpRequest();
+		client_lob1.open('GET', '/Images/Cours/Lobster.svg');
+		client_lob1.onreadystatechange = function(state) {
+				if (client_lob1.readyState == 4)
+				{
+					End_load(client_lob1.responseText, "lobster 1");
+				}
+		}
+		client_lob1.send();
+		let client_lob2 = new XMLHttpRequest();
+		client_lob2.open('GET', '/Images/Cours/Lobster2.svg');
+		client_lob2.onreadystatechange = function(state) {
+				if (client_lob2.readyState == 4)
+				{
+					End_load(client_lob2.responseText, "lobster 2");
+				}
+		}
+		client_lob2.send();
 }
 
 function End_load(json, name)
@@ -43,11 +64,15 @@ function End_load(json, name)
 		JSON_definitions = JSON.parse(json);
 	else if (name === "page")
 		JSON_page = JSON.parse(json);
+	else if (name === "lobster 1")
+		lobster1img = json;
+	else if (name === "page")
+		lobster2img = json;
 
 	load_count++;
 	
 	// Wait for all data to be loaded
-	if (load_count != 2) return;
+	if (load_count != 4) return;
 
 	script_load_count = 1
 
@@ -190,14 +215,12 @@ function CreateElement(element, parent, depth = 1)
 	{
 		let container = document.createElement("div");
 
+		if (element.hasOwnProperty("flex"))
+			container.classList.add("flexobject");
 		if (element.hasOwnProperty("style"))
-		{
 			container.style.cssText = element.style;
-		}
 		if (element.hasOwnProperty("class"))
-		{
 			container.className = element.class;
-		}
 
 		element.content.forEach(el => {
 			CreateElement(el, container, depth);
@@ -207,27 +230,27 @@ function CreateElement(element, parent, depth = 1)
 	}
 	if (element.type == "definition")
 	{
-		return SetDefinition(element.source, parent, element.hasOwnProperty("style") ? element.style : null);
+		return SetDefinition(element, parent);
 	}
 	if (element.type == "propriete")
 	{
-		return SetPropriete(element.source, parent, element.hasOwnProperty("style") ? element.style : null);
+		return SetPropriete(element, parent);
 	}
 	if (element.type == "exemple")
 	{
-		return SetExemple(element.source, parent, element.hasOwnProperty("style") ? element.style : null, element.hasOwnProperty("flex") ? true : false);
+		return SetExemple(element, parent);
 	}
 	if (element.type == "remarque")
 	{
-		return SetRemarque(element.source, parent, element.hasOwnProperty("style") ? element.style : null);
+		return SetRemarque(element, parent);
 	}
 	if (element.type == "info")
 	{
-		return SetInfo(element.source, parent, element.hasOwnProperty("style") ? element.style : null);
+		return SetInfo(element, parent);
 	}
 	if (element.type == "autre")
 	{
-		return SetAutre(element.source, parent, element.hasOwnProperty("style") ? element.style : null);
+		return SetAutre(element, parent);
 	}
 	if (element.type == "automatisme")
 	{
@@ -254,8 +277,9 @@ function CountSources(data)
 	return count;
 }
 
-function SetDefinition(data, parent, style = null)
+function SetDefinition(element, parent)
 {
+	let data = element.source;
 	let count = CountSources(data);
 	if (count == 0) return;
 	
@@ -276,7 +300,10 @@ function SetDefinition(data, parent, style = null)
 		content.appendChild(holder);
 	}
 
-	holder.style.cssText = style;
+	if (element.hasOwnProperty("style"))
+		holder.style.cssText = element.style;
+	if (element.hasOwnProperty("class"))
+		holder.classList.add(element.class);
 
 	data.forEach(def => {
 		if (!("definitions" in JSON_definitions[def.name])) {console.log("no definition with name " + def.name); return;}
@@ -292,8 +319,9 @@ function SetDefinition(data, parent, style = null)
 	});
 }
 
-function SetPropriete(data, parent, style = null)
+function SetPropriete(element, parent)
 {
+	let data = element.source;
 	let count = CountSources(data);
 	if (count == 0) return;
 	
@@ -315,7 +343,10 @@ function SetPropriete(data, parent, style = null)
 		content.appendChild(holder);
 	}
 
-	holder.style.cssText = style;
+	if (element.hasOwnProperty("style"))
+		holder.style.cssText = element.style;
+	if (element.hasOwnProperty("class"))
+		holder.classList.add(element.class);
 	
 	data.forEach(def => {
 		def.indexes.forEach(index => {
@@ -330,8 +361,9 @@ function SetPropriete(data, parent, style = null)
 	});
 }
 
-function SetExemple(data, parent, style = null, flex = false)
+function SetExemple(element, parent)
 {
+	let data = element.source;
 	let count = CountSources(data);
 	if (count == 0) return;
 	
@@ -340,17 +372,18 @@ function SetExemple(data, parent, style = null, flex = false)
 	parent.appendChild(content);
 	let div_title = document.createElement("p");
 	div_title.innerHTML = "Exemple" + (count == 1 ? "" : "s") + " :";
+	if (element.hasOwnProperty("title"))
+		div_title.innerHTML = element.title;
 	content.appendChild(div_title);
 	let holder = document.createElement("div");
 	content.appendChild(holder);
 
-	if (flex)
-	{
+	if (element.hasOwnProperty("flex"))
 		holder.classList.add("flexobject");
-	}
-		// holder.style.cssText = "display: flex; flex-direction"; 
-
-	content.style.cssText = style;
+	if (element.hasOwnProperty("style"))
+		content.style.cssText = element.style;
+	if (element.hasOwnProperty("class"))
+		holder.classList.add(element.class);
 	
 	data.forEach(def => {
 		def.indexes.forEach(index => {
@@ -365,8 +398,9 @@ function SetExemple(data, parent, style = null, flex = false)
 	});
 }
 
-function SetRemarque(data, parent, style = null)
+function SetRemarque(element, parent)
 {
+	let data = element.source;
 	let count = CountSources(data);
 	if (count == 0) return;
 	
@@ -379,7 +413,10 @@ function SetRemarque(data, parent, style = null)
 	let holder = document.createElement("ul");
 	content.appendChild(holder);
 
-	content.style.cssText = style;
+	if (element.hasOwnProperty("style"))
+		content.style.cssText = element.style;
+	if (element.hasOwnProperty("class"))
+		holder.classList.add(element.class);
 	
 	data.forEach(def => {
 		def.indexes.forEach(index => {
@@ -394,8 +431,9 @@ function SetRemarque(data, parent, style = null)
 	});
 }
 
-function SetInfo(data, parent, style = null)
+function SetInfo(element, parent)
 {
+	let data = element.source;
 	let count = CountSources(data);
 	if (count == 0) return;
 	
@@ -403,7 +441,12 @@ function SetInfo(data, parent, style = null)
 	holder.classList.add("info");
 	parent.appendChild(holder);
 
-	holder.style.cssText = style;
+	if (element.hasOwnProperty("flex"))
+		holder.classList.add("flexobject");
+	if (element.hasOwnProperty("style"))
+		holder.style.cssText = element.style;
+	if (element.hasOwnProperty("class"))
+		holder.classList.add(element.class);
 
 	data.forEach(def => {
 		def.indexes.forEach(index => {
@@ -418,13 +461,20 @@ function SetInfo(data, parent, style = null)
 	});
 }
 
-function SetAutre(data, parent, style = null)
+function SetAutre(element, parent)
 {
+	console.log("Autre donnée :", element)
+	let data = element.source;
 	let holder = document.createElement("div");
 	holder.classList.add("autre");
 	parent.appendChild(holder);
 
-	holder.style.cssText = style;
+	if (element.hasOwnProperty("flex"))
+		holder.classList.add("flexobject");
+	if (element.hasOwnProperty("style"))
+		holder.style.cssText = element.style;
+	if (element.hasOwnProperty("class"))
+		holder.classList.add(element.class);
 
 	data.forEach(def => {
 		let def_div = document.createElement("div");
@@ -436,3 +486,5 @@ function SetAutre(data, parent, style = null)
 		holder.appendChild(def_div);
 	});
 }
+
+

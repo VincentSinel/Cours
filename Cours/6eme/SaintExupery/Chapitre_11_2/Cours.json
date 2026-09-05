@@ -8,95 +8,26 @@
 					"type": "title",
 					"name": "Solide",
 					"content": [
-						{
-							"type": "definition",
-							"source": [
-								{
-									"name": "solide chapitre_11_2",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "remarque",
-							"source": [
-								{
-									"name": "solide chapitre_11_2",
-									"indexes": [
-										0
-									]
-								}
-							]
-						}
+						{"type": "definition", "source": [{"name": "solide", "indexes": [0,2,3]}]},
+						{"type": "exemple", "source": [{"name": "solide", "indexes": [10]}]},
+						{"type": "remarque", "source": [{"name": "solide", "indexes": [1]}]}
 					]
 				},
 				{
 					"type": "title",
 					"name": "Perspective cavalière",
 					"content": [
-						{
-							"type": "definition",
-							"source": [
-								{
-									"name": "perspective cavaliere chapitre_11_2",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "exemple",
-							"source": [
-								{
-									"name": "perspective cavaliere chapitre_11_2",
-									"indexes": [
-										0
-									]
-								}
-							]
-						}
+						{"type": "definition", "source": [{"name": "perspective cavalière", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "perspective cavalière", "indexes": [1,0]}]}
 					]
 				},
 				{
 					"type": "title",
 					"name": "Patron",
 					"content": [
-						{
-							"type": "definition",
-							"source": [
-								{
-									"name": "patron chapitre_11_2",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "exemple",
-							"source": [
-								{
-									"name": "patron chapitre_11_2",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "remarque",
-							"source": [
-								{
-									"name": "patron chapitre_11_2",
-									"indexes": [
-										0
-									]
-								}
-							]
-						}
+						{"type": "definition", "source": [{"name": "patron", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "patron", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "patron", "indexes": [0,1]}]}
 					]
 				}
 			]
@@ -109,78 +40,18 @@
 					"type": "title",
 					"name": "Pavé droit",
 					"content": [
-						{
-							"type": "definition",
-							"source": [
-								{
-									"name": "pave droit chapitre_11_2",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "exemple",
-							"source": [
-								{
-									"name": "pave droit chapitre_11_2",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "remarque",
-							"source": [
-								{
-									"name": "pave droit chapitre_11_2",
-									"indexes": [
-										0
-									]
-								}
-							]
-						}
+						{"type": "definition", "source": [{"name": "pavé droit", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "pavé droit", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "pavé droit", "indexes": [3]}]}
 					]
 				},
 				{
 					"type": "title",
 					"name": "Cube",
 					"content": [
-						{
-							"type": "definition",
-							"source": [
-								{
-									"name": "cube chapitre_11_2",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "exemple",
-							"source": [
-								{
-									"name": "cube chapitre_11_2",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "remarque",
-							"source": [
-								{
-									"name": "cube chapitre_11_2",
-									"indexes": [
-										0
-									]
-								}
-							]
-						}
+						{"type": "definition", "source": [{"name": "cube", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "cube", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "cube", "indexes": [0]}]}
 					]
 				}
 			]

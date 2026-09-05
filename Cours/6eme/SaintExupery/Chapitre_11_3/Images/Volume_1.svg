@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 334.55 306.62">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-5 {
+        font-size: 12px;
+      }
+
+      .cls-5, .cls-6 {
+        font-family: Bahnschrift, Bahnschrift;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-7 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-7, .cls-8, .cls-9, .cls-10 {
+        stroke: #000;
+      }
+
+      .cls-7, .cls-8, .cls-9, .cls-10, .cls-11 {
+        fill: none;
+      }
+
+      .cls-7, .cls-9 {
+        stroke-width: 1.42px;
+      }
+
+      .cls-2 {
+        fill: #c66363;
+      }
+
+      .cls-8 {
+        stroke-width: 2px;
+      }
+
+      .cls-8, .cls-9, .cls-10, .cls-11 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-6 {
+        font-size: 28.35px;
+      }
+
+      .cls-3 {
+        fill: #ff8080;
+      }
+
+      .cls-10, .cls-11 {
+        stroke-width: 2px;
+      }
+
+      .cls-11 {
+        stroke: #888;
+        stroke-dasharray: 0 0 14 8;
+      }
+
+      .cls-4 {
+        fill: #723939;
+      }
+    </style>
+  </defs>
+  <g id="Calque_3" data-name="Calque 3">
+    <path class="cls-3" d="m299.99,148.07l-180,.13v20l180-.13v-20Z"/>
+    <path class="cls-2" d="m127.06,140.87l179.6.27-7.07,7.07-179.6-.27,7.07-7.07Z"/>
+    <path class="cls-4" d="m307.07,141l-7.07,7.07v20l7.07-7.07v-20Z"/>
+    <path class="cls-3" d="m119.98,8.07h-20l.02,140.01h20l-.02-140.01Z"/>
+    <path class="cls-2" d="m107.05,1h20l-7.07,7.07h-20l7.07-7.07Z"/>
+    <path class="cls-4" d="m127.05,1l-7.07,7.07.02,140,7.07-7.07-.02-140Z"/>
+    <path class="cls-3" d="m21,247.07H1v20l20,.12v-20.12Z"/>
+    <path class="cls-2" d="m99.99,148.08h20L21,247.07H1l98.99-98.98Z"/>
+    <path class="cls-4" d="m119.99,148.08L21,247.07v20.12l98.99-99.12v-19.99Z"/>
+    <path class="cls-11" d="m22.82,27.05V7.05"/>
+    <path class="cls-11" d="m22.82,27.05h20"/>
+    <path class="cls-11" d="m22.82,27.05l-7.07,7.07"/>
+    <path class="cls-3" d="m35.75,14.12H15.75v20h20V14.12Z"/>
+    <path class="cls-2" d="m22.82,7.05h20l-7.07,7.07H15.75l7.07-7.07Z"/>
+    <path class="cls-4" d="m42.82,7.05l-7.07,7.07v20l7.07-7.07V7.05Z"/>
+    <path class="cls-10" d="m15.75,14.12l7.07-7.07"/>
+    <path class="cls-10" d="m15.75,14.12h20"/>
+    <path class="cls-10" d="m15.75,14.12v20"/>
+    <path class="cls-10" d="m42.82,7.05h-20"/>
+    <path class="cls-10" d="m42.82,7.05l-7.07,7.07"/>
+    <path class="cls-10" d="m42.82,7.05v20"/>
+    <path class="cls-10" d="m35.75,34.12H15.75"/>
+    <path class="cls-10" d="m35.75,34.12l7.07-7.07"/>
+    <path class="cls-10" d="m35.75,34.12V14.12"/>
+    <text class="cls-5" transform="translate(13.79 49.09)"><tspan x="0" y="0">Unité</tspan></text>
+  </g>
+  <g id="Calque_2" data-name="Calque 2">
+    <path class="cls-10" d="m147.07,141l-7.07,7.07"/>
+    <path class="cls-10" d="m140.09,168.21v-20"/>
+    <path class="cls-10" d="m139.99,148.07v20"/>
+    <path class="cls-10" d="m167.07,141l-7.07,7.07"/>
+    <path class="cls-10" d="m160.09,168.21v-20"/>
+    <path class="cls-10" d="m159.99,148.07v20"/>
+    <path class="cls-10" d="m187.07,141l-7.07,7.07"/>
+    <path class="cls-10" d="m180.09,168.21v-20"/>
+    <path class="cls-10" d="m179.99,148.07v20"/>
+    <path class="cls-10" d="m207.07,141l-7.07,7.07"/>
+    <path class="cls-10" d="m200.19,168.21v-20"/>
+    <path class="cls-10" d="m199.99,148.07v20"/>
+    <path class="cls-10" d="m227.07,141l-7.07,7.07"/>
+    <path class="cls-10" d="m220.19,168.21v-20"/>
+    <path class="cls-10" d="m219.99,148.07v20"/>
+    <path class="cls-10" d="m247.07,141l-7.07,7.07"/>
+    <path class="cls-10" d="m240.19,168.21v-20"/>
+    <path class="cls-10" d="m239.99,148.07v20"/>
+    <path class="cls-10" d="m267.07,141l-7.07,7.07"/>
+    <path class="cls-10" d="m260.19,168.21v-20"/>
+    <path class="cls-10" d="m259.99,148.07v20"/>
+    <path class="cls-10" d="m279.99,148.07l7.07-7.07"/>
+    <path class="cls-10" d="m279.99,148.07v20"/>
+    <path class="cls-10" d="m307.07,141l-7.07,7.07"/>
+    <path class="cls-10" d="m299.99,168.07v-20"/>
+    <path class="cls-10" d="m127.07,121l-7.07,7.07"/>
+    <path class="cls-10" d="m99.99,108.07h20"/>
+    <path class="cls-10" d="m127.07,101l-7.07,7.07"/>
+    <path class="cls-10" d="m119.99,128.07h-20"/>
+    <path class="cls-10" d="m127.07,81l-7.07,7.07"/>
+    <path class="cls-10" d="m99.99,68.07h20"/>
+    <path class="cls-10" d="m119.99,88.07h-20"/>
+    <path class="cls-10" d="m99.99,48.07h20"/>
+    <path class="cls-10" d="m127.07,41l-7.07,7.07"/>
+    <path class="cls-10" d="m119.99,68.07l7.07-7.07"/>
+    <path class="cls-10" d="m99.99,28.07h20"/>
+    <path class="cls-10" d="m127.07,21l-7.07,7.07"/>
+    <path class="cls-10" d="m99.99,8.07h20"/>
+    <path class="cls-10" d="m127.07,1l-7.07,7.07"/>
+    <path class="cls-10" d="m92.92,155.14h20"/>
+    <path class="cls-10" d="m112.92,175.14v-20"/>
+    <path class="cls-10" d="m85.85,162.21h20"/>
+    <path class="cls-10" d="m105.85,182.21v-20"/>
+    <path class="cls-10" d="m78.78,169.28h20"/>
+    <path class="cls-10" d="m98.78,189.28v-20"/>
+    <path class="cls-10" d="m71.71,176.36h20"/>
+    <path class="cls-10" d="m91.71,196.36v-20"/>
+    <path class="cls-10" d="m64.64,183.43h20"/>
+    <path class="cls-10" d="m84.64,203.43v-20"/>
+    <path class="cls-10" d="m57.57,190.5h20"/>
+    <path class="cls-10" d="m77.57,210.5v-20"/>
+    <path class="cls-10" d="m50.5,197.57h20"/>
+    <path class="cls-10" d="m70.5,217.57v-20"/>
+    <path class="cls-10" d="m43.43,204.64h20"/>
+    <path class="cls-10" d="m63.43,224.64v-20"/>
+    <path class="cls-10" d="m36.36,211.71h20"/>
+    <path class="cls-10" d="m56.36,231.71v-20"/>
+    <path class="cls-10" d="m29.28,218.78h20"/>
+    <path class="cls-10" d="m49.28,238.78v-20"/>
+    <path class="cls-10" d="m22.21,225.85h20"/>
+    <path class="cls-10" d="m42.21,245.85v-20"/>
+    <path class="cls-10" d="m15.14,232.92h20"/>
+    <path class="cls-10" d="m35.14,252.92v-20"/>
+    <path class="cls-10" d="m8.07,240h20"/>
+    <path class="cls-10" d="m28.07,260v-20"/>
+    <path class="cls-10" d="m1,247.07h20"/>
+    <path class="cls-10" d="m21,267.07v-20"/>
+  </g>
+  <g id="Calque_1" data-name="Calque 1">
+    <path class="cls-10" d="m1,107.07L107.07,1"/>
+    <path class="cls-10" d="m1,107.07v160"/>
+    <path class="cls-10" d="m307.07,1H107.07"/>
+    <path class="cls-10" d="m307.07,1l-106.07,106.07"/>
+    <path class="cls-8" d="m307.07,1v160"/>
+    <path class="cls-10" d="m201,267.07H1"/>
+    <path class="cls-10" d="m201,267.07l106.07-106.07"/>
+    <path class="cls-10" d="m1,107.07h200"/>
+    <path class="cls-10" d="m201,267.07V107.07"/>
+    <path class="cls-10" d="m99.99,8.08v140"/>
+    <path class="cls-10" d="m127.07,1v140"/>
+    <path class="cls-10" d="m119.99,8.07v160"/>
+    <line class="cls-10" x1="127.07" y1="141" x2="307.07" y2="141"/>
+    <line class="cls-10" x1="119.99" y1="168.07" x2="299.99" y2="168.07"/>
+    <path class="cls-10" d="m299.99,148.07H99.99"/>
+    <path class="cls-10" d="m127.07,141L21,247.07"/>
+    <path class="cls-10" d="m119.99,168.07l-98.99,98.99"/>
+    <path class="cls-10" d="m99.99,148.07L1,247.07"/>
+    <g>
+      <line class="cls-7" x1="313.47" y1="156" x2="313.47" y2="6"/>
+      <polygon class="cls-1" points="313.47 161 316.35 153.95 313.47 155.62 310.59 153.95 313.47 161"/>
+      <polygon class="cls-1" points="313.47 1 316.35 8.05 313.47 6.38 310.59 8.05 313.47 1"/>
+    </g>
+    <text class="cls-6" transform="translate(318.6 88.31)"><tspan x="0" y="0">8</tspan></text>
+    <g>
+      <line class="cls-9" x1="210.69" y1="263.53" x2="309.68" y2="164.54"/>
+      <polygon class="cls-1" points="207.16 267.07 214.18 264.12 210.96 263.26 210.11 260.04 207.16 267.07"/>
+      <polygon class="cls-1" points="313.22 161 310.27 168.02 309.42 164.8 306.2 163.95 313.22 161"/>
+    </g>
+    <text class="cls-6" transform="translate(271.1 225.85)"><tspan x="0" y="0">15</tspan></text>
+    <g>
+      <line class="cls-9" x1="196" y1="272.07" x2="6" y2="272.07"/>
+      <polygon class="cls-1" points="201 272.07 193.95 269.19 195.62 272.07 193.95 274.95 201 272.07"/>
+      <polygon class="cls-1" points="1 272.07 8.05 269.19 6.38 272.07 8.05 274.95 1 272.07"/>
+    </g>
+    <text class="cls-6" transform="translate(88.47 298.95)"><tspan x="0" y="0">10</tspan></text>
+  </g>
+</svg>

@@ -3,55 +3,28 @@
 		{
 			"type": "title",
 			"name": "Algèbre",
-			"content": []
+			"content": [
+				{"type": "info", "source": [{"name": "algèbre", "indexes": [0]}]}
+			]
 		},
 		{
 			"type": "title",
 			"name": "Schéma",
 			"content": [
+				{"type": "info", "source": [{"name": "algèbre", "indexes": [0]}]},
 				{
 					"type": "title",
 					"name": "Egalité",
 					"content": [
-						{
-							"type": "exemple",
-							"source": [
-								{
-									"name": "egalite chapitre_14_1",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "exemple",
-							"source": [
-								{
-									"name": "egalite chapitre_14_1",
-									"indexes": [
-										1
-									]
-								}
-							]
-						}
+						{"type": "exemple", "title": "Exemple 1", "source": [{"name": "algèbre", "indexes": [0]}]},
+						{"type": "exemple", "title": "Exemple 2", "source": [{"name": "algèbre", "indexes": [1]}]}
 					]
 				},
 				{
 					"type": "title",
 					"name": "Figure évolutive",
 					"content": [
-						{
-							"type": "exemple",
-							"source": [
-								{
-									"name": "figure evolutive chapitre_14_1",
-									"indexes": [
-										0
-									]
-								}
-							]
-						}
+						{"type": "exemple", "title": "Exemple 2", "source": [{"name": "algèbre", "indexes": [2]}]}
 					]
 				}
 			]

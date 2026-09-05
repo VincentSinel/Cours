@@ -846,7 +846,7 @@ var cinquieme_base = [
 				pdf_trou:  "/Cours/5eme/Base/Chapitre_2/Documents/Chapitre 2 - Symétries (A trou).pdf",
 			},
 			ready : true,
-			page : "Base/Chapitre_2/Cours.html"
+			page : "Base/Chapitre_2/Cours.json"
 	},
 	{
 			id: 3,
@@ -1031,7 +1031,7 @@ var cinquieme_saintexupery_ancien = [
 				pdf_trou:  "/Cours/5eme/Base/Chapitre_2/Documents/Chapitre 2 - Symétries (A trou).pdf",
 			},
 			ready : true,
-			page : "Base/Chapitre_2/Cours.html"
+			page : "Base/Chapitre_2/Cours.json"
 	},
 	{
 			id: 3,
@@ -1270,7 +1270,7 @@ var cinquieme_saintexupery = [
 				pdf_trou:  "/Cours/5eme/Base/Chapitre_2/Documents/Chapitre 2 - Symétries (A trou).pdf",
 			},
 			ready : true,
-			page : "Base/Chapitre_2/Cours.html"
+			page : "Base/Chapitre_2/Cours.json"
 	},
 	{
 			id: 3,
@@ -3063,7 +3063,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 6 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_6_2/Cours.html",
+		page : "SaintExupery/Chapitre_6_2/Cours.json",
 	}, // Chapitre 6 Partie 2
 	{
 		id: 21,
@@ -3080,7 +3080,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 6 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_6_3/Cours.html",
+		page : "SaintExupery/Chapitre_6_3/Cours.json",
 	}, // Chapitre 6 Partie 3
 	{
 		id: 22,
@@ -3097,7 +3097,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 7 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_7_1/Cours.html",
+		page : "SaintExupery/Chapitre_7_1/Cours.json",
 	}, // Chapitre 7 Partie 1
 	{
 		id: 23,
@@ -3114,7 +3114,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 7 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_7_2/Cours.html",
+		page : "SaintExupery/Chapitre_7_2/Cours.json",
 	}, // Chapitre 7 Partie 2
 	{
 		id: 24,
@@ -3131,7 +3131,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 8 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_8_1/Cours.html",
+		page : "SaintExupery/Chapitre_8_1/Cours.json",
 	}, // Chapitre 8 Partie 1
 	{
 		id: 25,
@@ -3148,7 +3148,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 8 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_8_2/Cours.html",
+		page : "SaintExupery/Chapitre_8_2/Cours.json",
 	}, // Chapitre 8 Partie 2
 	{
 		id: 26,
@@ -3165,7 +3165,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 8 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_8_3/Cours.html",
+		page : "SaintExupery/Chapitre_8_3/Cours.json",
 	}, // Chapitre 8 Partie 3
 	{
 		id: 27,
@@ -3180,7 +3180,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 9 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_9_1/Cours.html",
+		page : "SaintExupery/Chapitre_9_1/Cours.json",
 	}, // Chapitre 9 Partie 1
 	{
 		id: 28,
@@ -3195,7 +3195,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 9 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_9_2/Cours.html",
+		page : "SaintExupery/Chapitre_9_2/Cours.json",
 	}, // Chapitre 9 Partie 2
 	{
 		id: 29,
@@ -3212,7 +3212,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 9 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_9_3/Cours.html",
+		page : "SaintExupery/Chapitre_9_3/Cours.json",
 	}, // Chapitre 9 Partie 3
 	{
 		id: 30,
@@ -3229,7 +3229,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 9 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_9_4/Cours.html",
+		page : "SaintExupery/Chapitre_9_4/Cours.json",
 	}, // Chapitre 9 Partie 4
 	{
 		id: 31,
@@ -3247,7 +3247,7 @@ var sixieme_saintexupery = [
 			img:			 "/Cours/6eme/SaintExupery/Chapitre_10_1/Documents/Chapitre 10 - Partie 1 - Images.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_10_1/Cours.html",
+		page : "SaintExupery/Chapitre_10_1/Cours.json",
 	}, // Chapitre 10 Partie 1
 	{
 		id: 32,
@@ -3264,7 +3264,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 10 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_10_2/Cours.html",
+		page : "SaintExupery/Chapitre_10_2/Cours.json",
 	}, // Chapitre 10 Partie 2
 	{
 		id: 33,
@@ -3282,7 +3282,7 @@ var sixieme_saintexupery = [
 			img: 			 "/Cours/6eme/SaintExupery/Chapitre_11_1/Documents/Chapitre 11 - Partie 1 - Images.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_11_1/Cours.html",
+		page : "SaintExupery/Chapitre_11_1/Cours.json",
 	}, // Chapitre 11 Partie 1
 	{
 		id: 34,
@@ -3299,7 +3299,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 11 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_11_2/Cours.html",
+		page : "SaintExupery/Chapitre_11_2/Cours.json",
 	}, // Chapitre 11 Partie 2
 	{
 		id: 35,
@@ -3317,7 +3317,7 @@ var sixieme_saintexupery = [
 			img: 			 "/Cours/6eme/SaintExupery/Chapitre_11_3/Documents/Chapitre 11 - Partie 3 - Images.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_11_3/Cours.html",
+		page : "SaintExupery/Chapitre_11_3/Cours.json",
 	}, // Chapitre 11 Partie 3
 	{
 		id: 36,
@@ -3334,7 +3334,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_12_1/Cours.html",
+		page : "SaintExupery/Chapitre_12_1/Cours.json",
 	}, // Chapitre 12 Partie 1
 	{
 		id: 37,
@@ -3351,7 +3351,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_12_2/Cours.html",
+		page : "SaintExupery/Chapitre_12_2/Cours.json",
 	}, // Chapitre 12 Partie 2
 	{
 		id: 39,
@@ -3368,7 +3368,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 12 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_12_3/Cours.html",
+		page : "SaintExupery/Chapitre_12_3/Cours.json",
 	}, // Chapitre 12 Partie 3
 	{
 		id: 40,
@@ -3386,7 +3386,7 @@ var sixieme_saintexupery = [
 			img: 			 "/Cours/6eme/SaintExupery/Chapitre_13_1/Documents/Chapitre 13 - Partie 1 - Images.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_13_1/Cours.html",
+		page : "SaintExupery/Chapitre_13_1/Cours.json",
 	}, // Chapitre 13 Partie 1
 	{
 		id: 41,
@@ -3403,7 +3403,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 13 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_13_2/Cours.html",
+		page : "SaintExupery/Chapitre_13_2/Cours.json",
 	}, // Chapitre 13 Partie 2
 	{
 		id: 42,
@@ -3420,7 +3420,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 13 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_13_3/Cours.html",
+		page : "SaintExupery/Chapitre_13_3/Cours.json",
 	}, // Chapitre 13 Partie 3
 	{
 		id: 43,
@@ -3436,7 +3436,7 @@ var sixieme_saintexupery = [
 			act:  		 "/Cours/6eme/SaintExupery/Activités d'introductions/Chapitre 14 - Activité d'introduction.pdf",
 		},
 		ready : true,
-		page : "SaintExupery/Chapitre_14_1/Cours.html",
+		page : "SaintExupery/Chapitre_14_1/Cours.json",
 	}, // Chapitre 14 Partie 1
 ]
 

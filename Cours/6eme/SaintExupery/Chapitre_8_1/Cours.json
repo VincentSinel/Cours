@@ -1,48 +1,21 @@
 {
+	"scripts": [{"name": "/JS/Animation/Animations/Symetrie_Axiale_Compas.js"},{"name": "/JS/Animation/Animations/Symetrie_Axiale_Equerre.js"},{"name": "JS/Transformation.js"}],
 	"content": [
 		{
 			"type": "title",
 			"name": "Définition",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "definition chapitre_8_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "definition chapitre_8_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "remarque",
-					"source": [
-						{
-							"name": "definition chapitre_8_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "symétrie axiale", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "symétrie axiale", "indexes": [0,1,2]}], "flex": true},
+				{"type": "remarque", "source": [{"name": "symétrie axiale", "indexes": [0,2]}]}
 			]
 		},
 		{
 			"type": "title",
 			"name": "Constructions",
-			"content": []
+			"content": [
+				{"type": "info", "source": [{"name": "symétrie axiale", "indexes": [0, 1]}], "flex": true}
+			]
 		}
 	]
 }

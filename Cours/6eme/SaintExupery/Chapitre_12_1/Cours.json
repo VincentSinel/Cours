@@ -4,78 +4,21 @@
 			"type": "title",
 			"name": "Grandeurs et mesure",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "grandeurs et mesure chapitre_12_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "grandeurs et mesure chapitre_12_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "grandeurs et mesure chapitre_12_1",
-							"indexes": [
-								1
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "grandeurs et mesure chapitre_12_1",
-							"indexes": [
-								1
-							]
-						}
-					]
-				},
-				{
-					"type": "remarque",
-					"source": [
-						{
-							"name": "grandeurs et mesure chapitre_12_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "grandeur", "indexes": [0]}]},
+				{"type": "exemple", "multiple": true, "source": [{"name": "grandeur", "indexes": [0]}]},
+				{"type": "definition", "multiple": true, "source": [{"name": "unité", "indexes": [0]}]},
+				{"type": "exemple", "multiple": true, "source": [{"name": "unité", "indexes": [0,1,2,3]}]},
+				{"type": "remarque", "multiple": true, "source": [{"name": "unité", "indexes": [0,1]}]},
+				{"type": "info", "multiple": true, "source": [{"name": "unité", "indexes": [0]}]}
 			]
 		},
 		{
 			"type": "title",
 			"name": "Longueurs",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "longueurs chapitre_12_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "longueur", "indexes": [0]}]},
+				{"type": "info", "source": [{"name": "longueur", "indexes": [0,1]}]},
+				{"type": "exemple", "source": [{"name": "longueur", "indexes": [0]}]}
 			]
 		}
 	]

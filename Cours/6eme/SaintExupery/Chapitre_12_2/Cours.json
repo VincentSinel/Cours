@@ -4,45 +4,18 @@
 			"type": "title",
 			"name": "Définition",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "definition chapitre_12_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "masse", "indexes": [0]}]},
+				{"type": "info", "source": [{"name": "masse", "indexes": [0]}]}
 			]
 		},
 		{
 			"type": "title",
 			"name": "Tableau de conversion",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "tableau de conversion chapitre_12_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "remarque",
-					"source": [
-						{
-							"name": "tableau de conversion chapitre_12_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "info", "source": [{"name": "masse", "indexes": [1]}]},
+				{"type": "exemple", "source": [{"name": "masse", "indexes": [0]}]},
+				{"type": "definition", "source": [{"name": "masse", "indexes": [1]}]},
+				{"type": "remarque", "source": [{"name": "masse", "indexes": [0]}]}
 			]
 		}
 	]

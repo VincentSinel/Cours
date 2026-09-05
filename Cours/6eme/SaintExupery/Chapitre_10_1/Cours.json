@@ -4,82 +4,23 @@
 			"type": "title",
 			"name": "Périmètre",
 			"content": [
+				{"type": "definition", "source": [{"name": "périmètre", "indexes": [0]}]},
+				{"type": "info", "source": [{"name": "périmètre", "indexes": [2]}]},
 				{
 					"type": "title",
 					"name": "Polygone",
 					"content": [
-						{
-							"type": "definition",
-							"source": [
-								{
-									"name": "polygone chapitre_10_1",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "exemple",
-							"source": [
-								{
-									"name": "polygone chapitre_10_1",
-									"indexes": [
-										0
-									]
-								}
-							]
-						}
+						{"type": "definition", "source": [{"name": "périmètre", "indexes": [1]}]},
+						{"type": "exemple", "source": [{"name": "périmètre", "indexes": [0]}]}
 					]
 				},
 				{
 					"type": "title",
 					"name": "Cercle",
 					"content": [
-						{
-							"type": "definition",
-							"source": [
-								{
-									"name": "cercle chapitre_10_1",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "exemple",
-							"source": [
-								{
-									"name": "cercle chapitre_10_1",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "remarque",
-							"source": [
-								{
-									"name": "cercle chapitre_10_1",
-									"indexes": [
-										0
-									]
-								}
-							]
-						}
-					]
-				},
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "perimetre chapitre_10_1",
-							"indexes": [
-								0
-							]
-						}
+						{"type": "definition", "source": [{"name": "périmètre", "indexes": [2]}]},
+						{"type": "exemple", "source": [{"name": "périmètre", "indexes": [1]}]},
+						{"type": "remarque", "source": [{"name": "pi", "indexes": [0,1]}]}
 					]
 				}
 			]
@@ -88,28 +29,8 @@
 			"type": "title",
 			"name": "Aires",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "aires chapitre_10_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "aires chapitre_10_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "aire", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "aire", "indexes": [4]}]}
 			]
 		}
 	]

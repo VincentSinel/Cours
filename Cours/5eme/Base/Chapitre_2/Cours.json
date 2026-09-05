@@ -1,0 +1,89 @@
+{
+	"scripts": [{"name": "/JS/Animation/Animations/Symetrie_Axiale_Compas.js"},{"name": "/JS/Animation/Animations/Symetrie_Axiale_Equerre.js"},{"name": "/JS/Animation/Animations/Symetrie_Centrale.js"},{"name": "JS/Transformation.js"}],
+	
+	"activité": "<div class=\"flexobject\"><div style=\"max-height: 10cm;\"><div style=\"text-align: center;\"><b>Figure 1</b></div><img src=\"/Images/Cours/Act_Symetrie_4.svg\"></div><div style=\"flex: 1 1 6cm;\"><ol><li>Voici une première figure.<ol type=\"a\"><li>Reproduire sur une feuille quadrillée cette figure.</li> <li>Construire le point A' image du point A par la <b>symétrie</b> d'axe <i>(d)</i>.</li><li>En procédant de la même manière pour tous les sommets de la figure rose, construire son <b>symétrique</b> par rapport à l'axe <i>(d)</i>.</li></ol></li></ol></div></div><div class=\"flexobject\"><div style=\"flex: 1 1 6cm;\"><ol start=\"2\"><li>Voici une seconde figure.<ol type=\"a\"><li>Reproduire sur une feuille quadrillée cette figure.</li> <li>Construire le point A' image du point A par la <b>symétrie</b> de <i>centre O</i>.</li><li>En procédant de la même manière pour tous les sommets de la figure rose, construire son <b>symétrique</b> par rapport au <i>centre O</i>.</li><li>Que peut-on dire du point O pour le segment [AA']</li></ol></li></ol></div><div style=\"max-height: 10cm;\"><div style=\"text-align: center;\"><b>Figure 2</b></div><img src=\"/Images/Cours/Act_Symetrie_5.svg\"></div></div>",
+	"content": [{
+			"type": "title", "name": "Symétrie Axiale",
+			"content": [
+				{
+					"type": "title", "name": "Médiatrice",
+					"content": [
+						{"type": "definition", "source": [{"name": "médiatrice", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "médiatrice", "indexes": [0]}]},
+						{"type": "propriete", "source": [{"name": "médiatrice", "indexes": [0,1]}]},
+						{"type": "exemple", "source": [{"name": "médiatrice", "indexes": [1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Définition",
+					"content": [
+						{"type": "definition", "source": [{"name": "symétrie axiale", "indexes": [0]}]},
+						{
+							"type": "container",
+							"class": "flexobject",
+							"content": [
+								{"type": "exemple", "source": [{"name": "symétrie axiale", "indexes": [0]}], "style": "flex: 1 1 5cm;"},
+								{"type": "remarque", "source": [{"name": "symétrie axiale", "indexes": [0]}], "style": "flex: 1 1 5cm;"}
+							]
+						},
+						{"type": "autre", "source": [{"data": "<p class=\"exemple\">Constructions :</p>"}]},
+						{
+							"type": "container",
+							"class": "flexobject",
+							"content": [
+								{"type": "info", "source": [{"name": "symétrie axiale", "indexes": [0]}], "style": "flex: 1 1 5cm;"},
+								{"type": "info", "source": [{"name": "symétrie axiale", "indexes": [1]}], "style": "flex: 1 1 5cm;"}
+							]
+						},
+						{"type": "propriete", "source": [{"name": "symétrie axiale", "indexes": [4]}]},
+						{"type": "remarque", "source": [{"name": "symétrie axiale", "indexes": [1]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Symétrie centrale",
+			"content": [
+				{
+					"type": "title", "name": "Définition",
+					"content": [
+						{"type": "definition", "source": [{"name": "symétrie centrale", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "symétrie centrale", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Construction",
+					"content": [
+						{"type": "propriete", "source": [{"name": "symétrie centrale", "indexes": [0]}]},
+						{"type": "info", "source": [{"name": "symétrie centrale", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Propriétés",
+					"content": [
+						{"type": "propriete", "source": [{"name": "symétrie centrale", "indexes": [1,2,3,4,5]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Axe et centre de symétrie d'une figure",
+			"content": [
+				{
+					"type": "title", "name": "Axe de symétrie",
+					"content": [
+						{"type": "definition", "source": [{"name": "axe de symétrie", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "axe de symétrie", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Centre de symétrie",
+					"content": [
+						{"type": "definition", "source": [{"name": "centre de symétrie", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "centre de symétrie", "indexes": [0]}]}
+					]
+				}
+			]
+		}
+	]
+}

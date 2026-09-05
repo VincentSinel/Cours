@@ -1,87 +1,31 @@
 {
+	"scripts": [{"name": "JS/Diagramme.js"}],
 	"content": [
 		{
 			"type": "title",
 			"name": "Diagramme bâtons",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "diagramme batons chapitre_13_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "remarque",
-					"source": [
-						{
-							"name": "diagramme batons chapitre_13_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "diagramme en bâtons", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "diagramme en bâtons", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "diagramme en bâtons", "indexes": [0]}]}
 			]
 		},
 		{
 			"type": "title",
 			"name": "Diagramme cartésien",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "diagramme cartesien chapitre_13_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "remarque",
-					"source": [
-						{
-							"name": "diagramme cartesien chapitre_13_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "diagramme cartésien", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "diagramme cartésien", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "diagramme cartésien", "indexes": [0,1]}]}
 			]
 		},
 		{
 			"type": "title",
 			"name": "Diagramme circulaire",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "diagramme circulaire chapitre_13_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "remarque",
-					"source": [
-						{
-							"name": "diagramme circulaire chapitre_13_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "diagramme circulaire", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "diagramme circulaire", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "diagramme circulaire", "indexes": [0]}]}
 			]
 		}
 	]

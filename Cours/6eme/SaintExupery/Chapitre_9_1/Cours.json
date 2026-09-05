@@ -1,20 +1,12 @@
 {
+	"scripts": [{"name": "/JS/Animation/Animations/Triangle_Longueurs.js"}],
 	"content": [
 		{
 			"type": "title",
 			"name": "Construction d'un triangle avec 3 longueurs",
 			"content": [
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "construction d un triangle avec 3 longueurs chapitre_9_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "info", "source": [{"name": "triangle", "indexes": [4]}]},
+				{"type": "exemple", "source": [{"name": "triangle", "indexes": [0]}]}
 			]
 		}
 	]

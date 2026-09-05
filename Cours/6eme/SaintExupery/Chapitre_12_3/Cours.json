@@ -4,39 +4,10 @@
 			"type": "title",
 			"name": "Durée",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "duree chapitre_12_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "duree chapitre_12_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "remarque",
-					"source": [
-						{
-							"name": "duree chapitre_12_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "durée", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "durée", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "durée", "indexes": [0]}]},
+				{"type": "info", "source": [{"name": "durée", "indexes": [0]}]}
 			]
 		},
 		{
@@ -47,51 +18,24 @@
 					"type": "title",
 					"name": "Calcul d'une durée",
 					"content": [
-						{
-							"type": "exemple",
-							"source": [
-								{
-									"name": "calcul d une duree chapitre_12_3",
-									"indexes": [
-										0
-									]
-								}
-							]
-						}
+						{"type": "info", "source": [{"name": "durée", "indexes": [1]}]},
+						{"type": "exemple", "source": [{"name": "durée", "indexes": [1]}]}
 					]
 				},
 				{
 					"type": "title",
 					"name": "A partir d'un temps initial",
 					"content": [
-						{
-							"type": "exemple",
-							"source": [
-								{
-									"name": "a partir d un temps initial chapitre_12_3",
-									"indexes": [
-										0
-									]
-								}
-							]
-						}
+						{"type": "info", "source": [{"name": "durée", "indexes": [2]}]},
+						{"type": "exemple", "source": [{"name": "durée", "indexes": [2]}]}
 					]
 				},
 				{
 					"type": "title",
 					"name": "A partir d'un temps final",
 					"content": [
-						{
-							"type": "exemple",
-							"source": [
-								{
-									"name": "a partir d un temps final chapitre_12_3",
-									"indexes": [
-										0
-									]
-								}
-							]
-						}
+						{"type": "info", "source": [{"name": "durée", "indexes": [3]}]},
+						{"type": "exemple", "source": [{"name": "durée", "indexes": [3]}]}
 					]
 				}
 			]

@@ -4,28 +4,8 @@
 			"type": "title",
 			"name": "Angles du triangles",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "angles du triangles chapitre_9_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "angles du triangles chapitre_9_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "propriete", "source": [{"name": "triangle", "indexes": [2]}]},
+				{"type": "exemple", "source": [{"name": "triangle", "indexes": [5]}]}
 			]
 		},
 		{
@@ -36,117 +16,28 @@
 					"type": "title",
 					"name": "Triangle isocèle",
 					"content": [
-						{
-							"type": "definition",
-							"source": [
-								{
-									"name": "triangle isocele chapitre_9_3",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "exemple",
-							"source": [
-								{
-									"name": "triangle isocele chapitre_9_3",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "definition",
-							"source": [
-								{
-									"name": "triangle isocele chapitre_9_3",
-									"indexes": [
-										1
-									]
-								}
-							]
-						},
-						{
-							"type": "exemple",
-							"source": [
-								{
-									"name": "triangle isocele chapitre_9_3",
-									"indexes": [
-										1
-									]
-								}
-							]
-						}
+						{"type": "definition", "source": [{"name": "triangle isocèle", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "triangle isocèle", "indexes": [0]}]},
+						{"type": "propriete", "source": [{"name": "triangle isocèle", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "triangle isocèle", "indexes": [1]}]}
 					]
 				},
 				{
 					"type": "title",
 					"name": "Triangle équilatéral",
 					"content": [
-						{
-							"type": "definition",
-							"source": [
-								{
-									"name": "triangle equilateral chapitre_9_3",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "definition",
-							"source": [
-								{
-									"name": "triangle equilateral chapitre_9_3",
-									"indexes": [
-										1
-									]
-								}
-							]
-						},
-						{
-							"type": "exemple",
-							"source": [
-								{
-									"name": "triangle equilateral chapitre_9_3",
-									"indexes": [
-										0
-									]
-								}
-							]
-						}
+						{"type": "definition", "source": [{"name": "triangle équilatéral", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "triangle équilatéral", "indexes": [0]}]},
+						{"type": "propriete", "source": [{"name": "triangle équilatéral", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "triangle équilatéral", "indexes": [1]}]}
 					]
 				},
 				{
 					"type": "title",
 					"name": "Triangle rectangle",
 					"content": [
-						{
-							"type": "definition",
-							"source": [
-								{
-									"name": "triangle rectangle chapitre_9_3",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "exemple",
-							"source": [
-								{
-									"name": "triangle rectangle chapitre_9_3",
-									"indexes": [
-										0
-									]
-								}
-							]
-						}
+						{"type": "definition", "source": [{"name": "triangle rectangle", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "triangle rectangle", "indexes": [0]}]}
 					]
 				}
 			]

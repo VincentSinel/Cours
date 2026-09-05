@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 353.25 177.49">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        stroke: #e30613;
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5 {
+        fill: #1d1d1b;
+        font-family: Bahnschrift, Bahnschrift;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-5, .cls-6 {
+        font-size: 12px;
+      }
+
+      .cls-2 {
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-4 {
+        stroke: #1d71b8;
+      }
+
+      .cls-6 {
+        fill: #e30613;
+        font-family: Cambria-Italic, Cambria;
+        font-style: italic;
+      }
+    </style>
+  </defs>
+  <g>
+    <circle class="cls-3" cx="54.64" cy="64.14" r="54.13"/>
+    <text class="cls-5" transform="translate(50.76 62.76)"><tspan x="0" y="0">A</tspan></text>
+    <text class="cls-5" transform="translate(139.03 118.28)"><tspan x="0" y="0">B</tspan></text>
+    <path class="cls-3" d="m152.63,110.15c-12.7,27.06-35.17,46.41-61.23,55.82-26.06,9.41-55.71,8.87-82.77-3.83l23-49,23-49,49,23,49,23Z"/>
+    <text class="cls-5" transform="translate(16.12 160.52)"><tspan x="0" y="0">C</tspan></text>
+    <line class="cls-1" x1="82.89" y1="71.01" x2="75.66" y2="80.4"/>
+    <line class="cls-1" x1="133.72" y1="94.87" x2="126.49" y2="104.26"/>
+    <line class="cls-1" x1="49.12" y1="87.65" x2="37.36" y2="89.18"/>
+    <line class="cls-1" x1="25.7" y1="137.52" x2="13.95" y2="139.05"/>
+  </g>
+  <text class="cls-6" transform="translate(183.84 10)"><tspan x="0" y="0">(d)</tspan></text>
+  <line class="cls-2" x1="176.62" y1="5.93" x2="176.62" y2="176.49"/>
+  <g>
+    <circle class="cls-4" cx="298.61" cy="64.14" r="54.13"/>
+    <path class="cls-4" d="m200.61,110.15c12.7,27.06,35.17,46.41,61.23,55.82,26.06,9.41,55.71,8.87,82.77-3.83l-23-49-23-49-49,23-49,23Z"/>
+    <line class="cls-1" x1="270.36" y1="71.01" x2="277.59" y2="80.4"/>
+    <line class="cls-1" x1="219.53" y1="94.87" x2="226.76" y2="104.26"/>
+    <line class="cls-1" x1="304.13" y1="87.65" x2="315.88" y2="89.18"/>
+    <line class="cls-1" x1="327.54" y1="137.52" x2="339.3" y2="139.05"/>
+    <text class="cls-5" transform="translate(293.66 61.4)"><tspan x="0" y="0">A’</tspan></text>
+    <text class="cls-5" transform="translate(206.82 118.28)"><tspan x="0" y="0">B’</tspan></text>
+    <text class="cls-5" transform="translate(328.64 163.02)"><tspan x="0" y="0">C’</tspan></text>
+  </g>
+</svg>

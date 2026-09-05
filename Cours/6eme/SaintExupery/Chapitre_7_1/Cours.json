@@ -1,37 +1,20 @@
 {
+	"scripts": [{"name": "/JS/Animation/Animations/Construction_Angle.js"}],
 	"content": [
 		{
 			"type": "title",
 			"name": "Angles",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "angles chapitre_7_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "remarque",
-					"source": [
-						{
-							"name": "angles chapitre_7_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "angle", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "angle", "indexes": [0]}]}
 			]
 		},
 		{
 			"type": "title",
 			"name": "Notation",
-			"content": []
+			"content": [
+				{"type": "info", "source": [{"name": "angle", "indexes": [2]}]}
+			]
 		},
 		{
 			"type": "title",
@@ -41,34 +24,17 @@
 					"type": "title",
 					"name": "Mesure d'un angle",
 					"content": [
-						{
-							"type": "definition",
-							"source": [
-								{
-									"name": "mesure d un angle chapitre_7_1",
-									"indexes": [
-										0
-									]
-								}
-							]
-						},
-						{
-							"type": "Remarque",
-							"source": [
-								{
-									"name": "mesure d un angle chapitre_7_1",
-									"indexes": [
-										0
-									]
-								}
-							]
-						}
+						{"type": "definition", "source": [{"name": "degré", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "angle", "indexes": [1]}]},
+						{"type": "info", "source": [{"name": "angle", "indexes": [3]}]}
 					]
 				},
 				{
 					"type": "title",
 					"name": "Construction d'un angle",
-					"content": []
+					"content": [
+						{"type": "info", "source": [{"name": "angle", "indexes": [4,5]}]}
+					]
 				}
 			]
 		}

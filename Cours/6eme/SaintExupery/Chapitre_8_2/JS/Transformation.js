@@ -1,12 +1,3 @@
-var lobster1img = "";
-var lobster2img = "";
-
-
-function Init()
-{
-    Draw_SymAxial();
-}
-
 function Draw_SymAxial()
 {
     let margin = 30;
@@ -37,3 +28,4 @@ function Draw_SymAxial()
     .translate(w - 150, h - 150)
 	.loop(true, true, 1000)
 }
+Draw_SymAxial();

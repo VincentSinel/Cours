@@ -4,45 +4,17 @@
 			"type": "title",
 			"name": "Axe de symétrie d'une figure",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "axe de symetrie d une figure chapitre_8_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "axe de symetrie d une figure chapitre_8_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "remarque",
-					"source": [
-						{
-							"name": "axe de symetrie d une figure chapitre_8_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "axe de symétrie", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "axe de symétrie", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "axe de symétrie", "indexes": [0,1]}]}
 			]
 		},
 		{
 			"type": "title",
 			"name": "Figures usuelles",
-			"content": []
+			"content": [
+				{"type": "info", "source": [{"name": "axe de symétrie", "indexes": [0]}]}
+			]
 		}
 	]
 }

@@ -4,67 +4,19 @@
 			"type": "title",
 			"name": "Rappel",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "rappel chapitre_9_4",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "rappel chapitre_9_4",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "médiatrice", "indexes": [0]}]},
+				{"type": "propriete", "source": [{"name": "médiatrice", "indexes": [0,1]}]},
+				{"type": "exemple", "source": [{"name": "médiatrice", "indexes": [0,1], "style": "flex: 5cm 1 1"}], "flex": true}
 			]
 		},
 		{
 			"type": "title",
 			"name": "Dans le triangle",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "dans le triangle chapitre_9_4",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "dans le triangle chapitre_9_4",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "remarque",
-					"source": [
-						{
-							"name": "dans le triangle chapitre_9_4",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "propriete", "source": [{"name": "médiatrice", "indexes": [2]}]},
+				{"type": "exemple", "source": [{"name": "médiatrice", "indexes": [2, 3], "style": "flex: 5cm 1 1"}], "flex": true},
+				{"type": "remarque", "source": [{"name": "médiatrice", "indexes": [0,1]}]},
+				{"type": "info", "source": [{"name": "médiatrice", "indexes": [1]}]}
 			]
 		}
 	]

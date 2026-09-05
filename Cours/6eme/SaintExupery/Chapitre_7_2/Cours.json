@@ -4,78 +4,21 @@
 			"type": "title",
 			"name": "Angles particuliers",
 			"content": [
-				{
-					"type": "remarque",
-					"source": [
-						{
-							"name": "angles particuliers chapitre_7_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "angles particuliers chapitre_7_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "angles particuliers chapitre_7_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "info","source": [{"name": "angle","indexes": [0]}]},
+				{"type": "remarque","source": [{"name": "angle","indexes": [0]}]},
+				{"type": "info","source": [{"name": "angle","indexes": [1]}]},
+				{"type": "definition","source": [{"name": "angles adjacents","indexes": [0]}]},
+				{"type": "exemple","source": [{"name": "angles adjacents","indexes": [0]}]}
 			]
 		},
 		{
 			"type": "title",
 			"name": "Bissectrice",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "bissectrice chapitre_7_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "bissectrice chapitre_7_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "remarque",
-					"source": [
-						{
-							"name": "bissectrice chapitre_7_2",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "definition","source": [{"name": "bissectrice","indexes": [0]}]},
+				{"type": "exemple","source": [{"name": "bissectrice","indexes": [0]}]},
+				{"type": "remarque","source": [{"name": "bissectrice","indexes": [0, 1]}]},
+				{"type": "info","source": [{"name": "angle","indexes": [6]}]}
 			]
 		}
 	]

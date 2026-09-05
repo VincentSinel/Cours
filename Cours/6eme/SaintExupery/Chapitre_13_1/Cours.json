@@ -4,100 +4,21 @@
 			"type": "title",
 			"name": "Effectifs",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "effectifs chapitre_13_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "effectifs chapitre_13_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "effectifs chapitre_13_1",
-							"indexes": [
-								1
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "effectifs chapitre_13_1",
-							"indexes": [
-								1
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "série de valeur", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "série de valeur", "indexes": [0]}]},
+				{"type": "definition", "source": [{"name": "série de valeur", "indexes": [1]}]},
+				{"type": "exemple", "source": [{"name": "série de valeur", "indexes": [1]}]}
 			]
 		},
 		{
 			"type": "title",
 			"name": "Tableaux",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "tableaux chapitre_13_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "tableaux chapitre_13_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "remarque",
-					"source": [
-						{
-							"name": "tableaux chapitre_13_1",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "remarque",
-					"source": [
-						{
-							"name": "tableaux chapitre_13_1",
-							"indexes": [
-								1
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "tableau", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "tableau", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "tableau", "indexes": [0,1]}]},
+				{"type": "exemple", "source": [{"name": "tableau", "indexes": [1]}]},
+				{"type": "remarque", "source": [{"name": "tableau", "indexes": [2,3]}]}
 			]
 		}
 	]

@@ -1,65 +1,28 @@
 {
+	"scripts": [{"name": "/JS/Animation/Animations/Mediatrice.js"}],
 	"content": [
 		{
 			"type": "title",
 			"name": "Définition",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "definition chapitre_6_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "definition chapitre_6_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "definition", "source": [{"name": "médiatrice", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "médiatrice", "indexes": [0]}]}
 			]
 		},
 		{
 			"type": "title",
 			"name": "Propriétés",
 			"content": [
-				{
-					"type": "definition",
-					"source": [
-						{
-							"name": "proprietes chapitre_6_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				},
-				{
-					"type": "exemple",
-					"source": [
-						{
-							"name": "proprietes chapitre_6_3",
-							"indexes": [
-								0
-							]
-						}
-					]
-				}
+				{"type": "propriete", "source": [{"name": "médiatrice", "indexes": [0,1]}]},
+				{"type": "exemple", "source": [{"name": "médiatrice", "indexes": [1]}]}
 			]
 		},
 		{
 			"type": "title",
 			"name": "Construction",
-			"content": []
+			"content": [
+				{"type": "info", "source": [{"name": "médiatrice", "indexes": [0]}]}
+			]
 		}
 	]
 }

@@ -3,12 +3,16 @@
 		{
 			"type": "title",
 			"name": "Périmètre",
-			"content": []
+			"content": [
+				{"type": "info", "source": [{"name": "périmètre", "indexes": [3]}]}
+			]
 		},
 		{
 			"type": "title",
 			"name": "Aires",
-			"content": []
+			"content": [
+				{"type": "info", "source": [{"name": "aire", "indexes": [6]}]}
+			]
 		}
 	]
 }
