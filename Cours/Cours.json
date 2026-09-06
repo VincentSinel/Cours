@@ -26,8 +26,8 @@
 							"type": "container",
 							"class": "flexobject",
 							"content": [
-								{"type": "definition", "source": [{"name": "parallèlogramme", "indexes": [0]}], "style": "flex: 1 1 5cm;"},
-								{"type": "exemple", "source": [{"name": "parallèlogramme", "indexes": [0]}], "style": "flex: 1 1 5cm;"}
+								{"type": "definition", "source": [{"name": "parallélogramme", "indexes": [0]}], "style": "flex: 1 1 5cm;"},
+								{"type": "exemple", "source": [{"name": "parallélogramme", "indexes": [0]}], "style": "flex: 1 1 5cm;"}
 							]
 						}
 					]
