@@ -37,34 +37,34 @@
 			"<div class=\"flexobject\"><img src=\"/Images/Cours/Attention.svg\" style=\"max-height: 4cm;\"><p style=\"flex: 1 1 5cm;\">Attention, toutes les longueurs doivent être exprimées avec la même unité (ou sous unité).</p></div>",
 			"<table class=\"borderfull2\"><tr style=\"background-color: #b6dde8;\"><td><b>Carré de côté c.</b><br>$\\mathscr{A}=c\\times c=c²$</td><td><b>Rectangle de longueur L et largeur 𝓁.</b><br>$\\mathscr{A}=L\\times \\mathscr{l}$</td></tr><tr><td><img src=\"/Images/Cours/Carre.svg\" style=\"max-height: 4cm;\"></td><td><img src=\"/Images/Cours/Rectangle.svg\" style=\"max-height: 4cm;\"></td></tr></table>",
 			"<table class=\"borderfull2\"><tr style=\"background-color: #b6dde8;\"><td><b>Dans un triangle rectangle</b><br>$\\mathscr{A}=\\frac{a\\times b}{2}$</td><td><b>Dans un triangle quelconque</b><br>$\\mathscr{A}=\\frac{Base\\times Hauteur}{2}$</td></tr><tr><td><img src=\"/Images/Cours/Triangle3.svg\" style=\"max-height: 4cm;\"></td><td><img src=\"/Images/Cours/Triangle2.svg\" style=\"max-height: 4cm;\"></td></tr></table>",
-			"<table class=\"borderfull2\"><tr style=\"background-color: #b6dde8;\"><td><b>Avec un rayon $r$ :</b><br>$\\mathscr{A}=\\pi \\times r²$</td><td><b>Avec un diamètre D :</td></tr><tr><td><img src=\"/Images/Cours/Cercle7.svg\" style=\"max-height: 5cm;\"></td><td>Il faut calculer le rayon (en divisant par 2) et utiliser la formule précédente.</td></tr></table>",
+			"<table class=\"borderfull2\"><tr style=\"background-color: #b6dde8;\"><td><b>Avec un rayon $r$ :</b><br>$\\mathscr{A}=\\pi \\times r²$</td><td><b>Avec un diamètre D :</b></td></tr><tr><td><img src=\"/Images/Cours/Cercle7.svg\" style=\"max-height: 5cm;\"></td><td>Il faut calculer le rayon (en divisant par 2) et utiliser la formule précédente.</td></tr></table>",
 			"<table class=\"borderfull2\"><tr><th>Figure :</th><th>Formule de l'aire :</th></tr><tr><td><b>Carré de côté c.</b><br><img src=\"/Images/Cours/Carre.svg\" style=\"max-height: 4.5cm;\"></td><td class=\"formule\">$\\mathscr{A}=c\\times c=c²$</td></tr><tr><td><b>Rectangle de longueur L et largeur 𝓁.</b><br><img src=\"/Images/Cours/Rectangle.svg\" style=\"max-height: 4.5cm;\"></td><td class=\"formule\">$\\mathscr{A}=L\\times \\mathscr{l}$</td></tr><tr><td><b>Dans un triangle rectangle de côté de l'angle droit $a$ et $b$</b><br><img src=\"/Images/Cours/Triangle3.svg\" style=\"max-height: 4.5cm;\"></td><td class=\"formule\">$\\mathscr{A}=\\frac{a\\times b}{2}$</td></tr><tr><td><b>Dans un triangle quelconque</b><br><img src=\"/Images/Cours/Triangle2.svg\" style=\"max-height: 4.5cm;\"></td><td class=\"formule\">$\\mathscr{A}=\\frac{Base\\times Hauteur}{2}$</td></tr><tr><td><b>Cercle de rayon R.</b><br><img src=\"/Images/Cours/Cercle8.svg\" style=\"max-height: 4.5cm;\"></td><td class=\"formule\">$\\mathscr{A}=\\pi \\times R²$</td></tr></table>"
 		],
 		"exemples": [
 			"<table style=\"width: 100%; text-align: center;\"><tr><td>2,7 hm² = 2 700 000 dm²</td><td>5 cm² = 0,00 000 5 dam²</td></tr></table>",
-			"L'aire d'un carré de côté 6cm est $\\mathscr{A}=6\\times6 = 36 cm²$.",
-			"L'aire d'un triangle rectangle dont les côtés de l'angle droit mesurent 6cm et 8cm est $\\mathscr{A}=\\frac{6\\times8}{2}=\\frac{48}{2}=24 cm²$.",
-			"L'aire d'un cercle de rayon 5cm est $\\mathscr{A}=\\pi\\times5²=25\\pi \\approx 78,5 cm²$.",
-			"<p>On définit une unité de surface et on compte le nombre de fois que celle-ci peut être mise dans notre figure pour obtenir son aire.</p><div class=\"flexobject\"><div style=\"flex: 8cm 0 1; text-align: center;\"><img src=\"/Images/Cours/Aire_rectangle.svg\" style=\"height: 6cm;\"><p>Ici on peut mettre 5 par 8 carré d'unité d'aire, soit 5×8=40 unités.</p></div><div style=\"flex: 8cm 0 1; text-align: center;\"><img src=\"/Images/Cours/Aire_hexagone.svg\" style=\"height: 6cm;\"><p>Ici on peut mettre 4 par 6 hexagone d'unité d'aire, soit 4×6=24 unités.</p></div></div>"
+			"L'aire d'un carré de côté 6 cm est $\\mathscr{A}=6\\times6 = 36 cm²$.",
+			"L'aire d'un triangle rectangle dont les côtés de l'angle droit mesurent 6 cm et 8 cm est $\\mathscr{A}=\\frac{6\\times8}{2}=\\frac{48}{2}=24 cm²$.",
+			"L'aire d'un cercle de rayon 5 cm est $\\mathscr{A}=\\pi\\times5²=25\\pi \\approx 78,5 cm²$.",
+			"<p>On définit une unité de surface et on compte le nombre de fois que celle-ci peut être mise dans notre figure pour obtenir son aire.</p><div class=\"flexobject\"><div style=\"flex: 8cm 0 1; text-align: center;\"><img src=\"/Images/Cours/Aire_rectangle.svg\" style=\"height: 6cm;\"><p>Ici on peut mettre 5 par 8 carrés d'unité d'aire, soit 5×8=40 unités.</p></div><div style=\"flex: 8cm 0 1; text-align: center;\"><img src=\"/Images/Cours/Aire_hexagone.svg\" style=\"height: 6cm;\"><p>Ici on peut mettre 4 par 6 hexagones d'unité d'aire, soit 4×6=24 unités.</p></div></div>"
 		]
 	},"algèbre": {
 		"tags": [],
 		"infos": [
-			"<p>En mathématiques, pour résoudre des problèmes, il est souvent plus facile de représenter les informations sous forme de schéma. On utilise alors un dessin, un mot ou une lettre pour représenter les nombres que l'on ne connaît pas encore.</p><p>En sixième on utilise encore des symboles, par exemple : ⚽ + ⚽ = 34€<br>Cela permet de représenter le prix de deux ballons.</p>",
+			"<p>En mathématiques, pour résoudre des problèmes, il est souvent plus facile de représenter les informations sous forme de schéma. On utilise alors un dessin, un mot ou une lettre pour représenter les nombres que l'on ne connaît pas encore.</p><p>En sixième, on utilise encore des symboles, par exemple : ⚽ + ⚽ = 34€<br>Cela permet de représenter le prix de deux ballons.</p>",
 			"<p>Pour résoudre des problèmes, on utilise principalement les schémas suivants. Il est aussi possible de choisir son propre schéma, mais il ne faut oublier aucune information.</p>"
 		],
 		"exemples": [
 			"<p>Cinq poires identiques pèsent 600 g.<br>On peut représenter cela par l'égalité : 🍐 + 🍐 + 🍐 + 🍐 + 🍐 = 600 g.<br>On peut donc déterminer la masse d'une poire représentée par le symbole de poire dans ce calcul.<br>🍐 = 600 ÷ 5 = 120 g. Une poire pèse 120 g</p>",
-			"<p>On dispose de carton et de baril identiques (de même masse). Voici deux pesées effectuées sur deux chargements différents.<br>🛢️ + 📦️ = 90 kg<br>🛢️ + 🛢️ + 🛢️ + 📦️ = 198 kg<br>Pour connaître la masse d'un carton et d'un baril, on peut effectuer les calculs suivants :<br><img src=\"/Images/Cours/Algèbre_1.svg\" style=\"max-height: 3cm;\"><br>🛢️📦️ pèsent 90kg et 🛢️🛢️🛢️📦️ pèsent 198 kg. Donc 🛢️🛢️ pèsent 198 - 90 soit 108 kg.<br>Un baril pèse donc 108 ÷ 2 = 54 kg.<br>Un carton pèse donc 90 - 54 = 36 kg.</p>",
-			"<div class=\"flexobject\"><div class=\"flexobject\" style=\"flex-direction: column;\">Motif 0<img src=\"/Images/Cours/Algèbre_2.svg\" style=\"height: 2cm;\"></div><div class=\"flexobject\" style=\"flex-direction: column;\">Motif 1<img src=\"/Images/Cours/Algèbre_3.svg\" style=\"height: 2cm;\"></div><div class=\"flexobject\" style=\"flex-direction: column;\">Motif 2<img src=\"/Images/Cours/Algèbre_4.svg\" style=\"height: 2cm;\"></div><div class=\"flexobject\" style=\"flex-direction: column;\">............</div></div><p>Pour déterminer le nombre de segment composant un motif de numéro élevé, on cherche une relation entre le numéro du motif et le nombre de segment qui le composent. Pour cela, on peut organiser les valeurs dans un tableau et observer l'évolution du nombre de segments.</p><table class=\"proportionnaltable\"><tr><th>Motif</th><th>Nombre de segments</th><th>Calcul</th></tr><tr><td><span class=\"CRed\">0</span></td><td>4</td><td>= 4 + (3 × <span class=\"CRed\">0</span>)</td></tr><tr><td><span class=\"CRed\">1</span></td><td>7</td><td>= 4 + (3 × <span class=\"CRed\">1</span>)</td></tr><tr><td><span class=\"CRed\">2</span></td><td>10</td><td>= 4 + (3 × <span class=\"CRed\">2</span>)</td></tr><tr><td><span class=\"CRed\">3</span></td><td>13</td><td>= 4 + (3 × <span class=\"CRed\">3</span>)</td></tr><tr><td><span class=\"CRed\">4</span></td><td>16</td><td>= 4 + (3 × <span class=\"CRed\">4</span>)</td></tr><tr><td><span class=\"CRed\">...</span></td><td>...</td><td>= 4 + (3 × <span class=\"CRed\">...</span>)</td></tr></table><p>On obtient donc une formule permettant de trouver pour le motif 50, par exemple : <br>4 + (3 × 50) = 154 segments.<br>On utilise petit à petit des lettres. On note <span class=\"CRed\">M</span> le numéro du motif et la formule obtenue est 4 + (3 × <span class=\"CRed\">M</span>)</p>"
+			"<p>On dispose de carton et de baril identiques (de même masse). Voici deux pesées effectuées sur deux chargements différents.<br>🛢️ + 📦️ = 90 kg<br>🛢️ + 🛢️ + 🛢️ + 📦️ = 198 kg<br>Pour connaître la masse d'un carton et d'un baril, on peut effectuer les calculs suivants :<br><img src=\"/Images/Cours/Algèbre_1.svg\" style=\"max-height: 3cm;\"><br>🛢️📦️ pèsent 90 kg et 🛢️🛢️🛢️📦️ pèsent 198 kg. Donc 🛢️🛢️ pèsent 198 - 90 soit 108 kg.<br>Un baril pèse donc 108 ÷ 2 = 54 kg.<br>Un carton pèse donc 90 - 54 = 36 kg.</p>",
+			"<div class=\"flexobject\"><div class=\"flexobject\" style=\"flex-direction: column;\">Motif 0<img src=\"/Images/Cours/Algèbre_2.svg\" style=\"height: 2cm;\"></div><div class=\"flexobject\" style=\"flex-direction: column;\">Motif 1<img src=\"/Images/Cours/Algèbre_3.svg\" style=\"height: 2cm;\"></div><div class=\"flexobject\" style=\"flex-direction: column;\">Motif 2<img src=\"/Images/Cours/Algèbre_4.svg\" style=\"height: 2cm;\"></div><div class=\"flexobject\" style=\"flex-direction: column;\">............</div></div><p>Pour déterminer le nombre de segments composant un motif de numéro élevé, on cherche une relation entre le numéro du motif et le nombre de segments qui le composent. Pour cela, on peut organiser les valeurs dans un tableau et observer l'évolution du nombre de segments.</p><table class=\"proportionnaltable\"><tr><th>Motif</th><th>Nombre de segments</th><th>Calcul</th></tr><tr><td><span class=\"CRed\">0</span></td><td>4</td><td>= 4 + (3 × <span class=\"CRed\">0</span>)</td></tr><tr><td><span class=\"CRed\">1</span></td><td>7</td><td>= 4 + (3 × <span class=\"CRed\">1</span>)</td></tr><tr><td><span class=\"CRed\">2</span></td><td>10</td><td>= 4 + (3 × <span class=\"CRed\">2</span>)</td></tr><tr><td><span class=\"CRed\">3</span></td><td>13</td><td>= 4 + (3 × <span class=\"CRed\">3</span>)</td></tr><tr><td><span class=\"CRed\">4</span></td><td>16</td><td>= 4 + (3 × <span class=\"CRed\">4</span>)</td></tr><tr><td><span class=\"CRed\">...</span></td><td>...</td><td>= 4 + (3 × <span class=\"CRed\">...</span>)</td></tr></table><p>On obtient donc une formule permettant de trouver pour le motif 50, par exemple : <br>4 + (3 × 50) = 154 segments.<br>On utilise petit à petit des lettres. On note <span class=\"CRed\">M</span> le numéro du motif. La formule obtenue est 4 + (3 × <span class=\"CRed\">M</span>)</p>"
 		]
 	},"algorithme": {
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">algorithme</span> est une liste ordonnée d'instructions très simples permettant de résoudre un problème.",
-			"Un algorithme se décompose en trois grandes parties :<ul><li>Une première partie d'<span class=\"CRed\">initialisation</span> qui permet de définir les informations dont on a besoin au départ (aussi appelées les <span class=\"CRed\">conditions initiales</span>)</li><li>Une seconde partie de traitement des données qui est composée d'une succession d'instructions à appliquer. C'est le cœur de l'algorithme.</li><li>Une troisième partie appelée sortie. C'est la réponse (visuel, textuel, sonore, etc...) que nous renvoie l'algorithme, le résultat recherché.</li></ul>",
-			"Pour démarrer un programme, il faut un point d'entrée, d'un déclenchement. Cela peut-être l'appui sur le drapeau dans scratch, l'appui sur une touche, etc...",
-			"Les blocs boucles permettent de répéter un groupe d'action. Il en existe plusieurs sortes :<ul><li>À répétitions fixes (on connaît le nombre de répétitions)</li><li>À répétitions conditionnelles (on ne sait pas à l'avance combien de fois va s'effectuer la boucle)</li><li>À répétitions infinies (la boucle ne s'arrête pas)</li></ul>",
+			"Un algorithme se décompose en trois grandes parties :<ul><li>Une première partie d'<span class=\"CRed\">initialisation</span> qui permet de définir les informations dont on a besoin au départ (aussi appelées les <span class=\"CRed\">conditions initiales</span>)</li><li>Une seconde partie de traitement des données qui est composée d'une succession d'instructions à appliquer. C'est le cœur de l'algorithme.</li><li>Une troisième partie appelée sortie. C'est la réponse (visuelle, textuelle, sonore, etc...) que nous renvoie l'algorithme, le résultat recherché.</li></ul>",
+			"Pour démarrer un programme, il faut un point d'entrée, un déclenchement. Cela peut être l'appui sur le drapeau dans Scratch, l'appui sur une touche, etc...",
+			"Les blocs boucles permettent de répéter un groupe d'actions. Il en existe plusieurs sortes :<ul><li>À répétitions fixes (on connaît le nombre de répétitions)</li><li>À répétitions conditionnelles (on ne sait pas à l'avance combien de fois va s'effectuer la boucle)</li><li>À répétitions infinies (la boucle ne s'arrête pas)</li></ul>",
 			"Les conditions permettent d'effectuer certaines actions avec des conditions définies.",
 			"Une <span class=\"CRed\">variable</span> est une « case mémoire » dans laquelle on stocke une information pour pouvoir la réutiliser ensuite. On peut la modifier, extraire et utiliser sa valeur."
 		]
@@ -84,15 +84,15 @@
 			"<table class=\"proportionnaltable width\"><tr><th>Angle plat</th><th>Angle droit</th><th>Angle nul</th></tr><tr><td><img src=\"/Images/Cours/Angle2.svg\" style=\"max-width: 7cm;\"></td> <td><img src=\"/Images/Cours/Angle3.svg\" style=\"max-height: 3cm;\"></td> <td><img src=\"/Images/Cours/Angle4.svg\" style=\"max-width: 7cm;\"></td> </tr><tr><td>180°</td><td>90°</td><td>0°</td></tr></table>",
 			"<p>Dans le cas général, on classe les angles en deux catégories :</p><table class=\"proportionnaltable width\"><tr><th>Angle <span class=\"CBlue\">Aigu</span></th><th>Angle <span class=\"CRed\">Obtus</span></th></tr><tr><td style=\"width: 200px;\"><img src=\"/Images/Cours/Angle5.svg\" style=\"max-height: 3.5cm;\"></td><td style=\"width: 200px;\"><img src=\"/Images/Cours/Angle6.svg\" style=\"max-height: 3.5cm;\"></td></tr><tr><td>Angle de moins de 90°</td><td>Angle de plus de 90°</td></tr></table>",
 			"<p>Il existe deux notations d'angle en fonction de la partie du plan que l'on souhaite nommer. Lorsque l'angle est plus petit ou égal à un angle plat et lorsqu'il est plus grand.</p><table class=\"proportionnaltable width\"><tr><th>Angle inférieur à un demi-tour</th><th>Angle supérieur à un demi-tour</th></tr><tr><td><img src=\"/Images/Cours/Angle7.svg\" style=\"max-height: 4cm;\"></td><td><img src=\"/Images/Cours/Angle8.svg\" style=\"max-height: 4cm;\"></td></tr><tr><td><img src=\"/Images/Cours/Nom_Angle1.svg\" style=\"max-width: 1cm;\"></td><td><img src=\"/Images/Cours/Nom_Angle2.svg\" style=\"max-width: 1cm;\"></td></tr></table>",
-			"<p>Lorsque l'on souhaite mesure un angle, on place le centre du rapporteur sur le sommet de l'angle ; On aligne l'un des 0° avec l'un des côté de l'angle et on mesure à partir de la position de la seconde demi-droite.</p><div class=\"flexobject\"><img src=\"/Images/Cours/Rapporteur1.svg\" style=\"flex: 1 1 4cm;max-width: 12cm;\"><img src=\"/Images/Cours/Rapporteur2.svg\" style=\"flex: 1 1 4cm;max-width: 12cm;\"></div><p>En fonction du 0° choisi, la mesure de l'angle est déterminée avec les graduations à l'intérieur ou à l'extérieur du rapporteur.</p>",
-			"<div class=\"flexobject\"><div style=\"flex: 1 1 4cm;max-width: 12cm;\"><ol><li value=\"1\">On place le rapporteur sur le sommet</li></ol><img src=\"/Images/Cours/Construction1.svg\" ></div><div style=\"flex: 1 1 4cm;max-width: 10cm;\"><ol><li value=\"2\">On aligne le rapporteur avec la demi-droite et on mesure 70°</li></ol><img src=\"/Images/Cours/Construction2.svg\"></div><div><ol><li value=\"3\">On trace la demi droite.</li></ol><img src=\"/Images/Cours/Construction3.svg\" style=\"flex: 1 1 4cm;max-width: 6cm;\"></div></div>",
+			"<p>Lorsque l'on souhaite mesurer un angle, on place le centre du rapporteur sur le sommet de l'angle ; On aligne l'un des 0° avec l'un des côtés de l'angle et on mesure à partir de la position de la seconde demi-droite.</p><div class=\"flexobject\"><img src=\"/Images/Cours/Rapporteur1.svg\" style=\"flex: 1 1 4cm;max-width: 12cm;\"><img src=\"/Images/Cours/Rapporteur2.svg\" style=\"flex: 1 1 4cm;max-width: 12cm;\"></div><p>En fonction du 0° choisi, la mesure de l'angle est déterminée avec les graduations à l'intérieur ou à l'extérieur du rapporteur.</p>",
+			"<div class=\"flexobject\"><div style=\"flex: 1 1 4cm;max-width: 12cm;\"><ol><li value=\"1\">On place le rapporteur sur le sommet</li></ol><img src=\"/Images/Cours/Construction1.svg\" ></div><div style=\"flex: 1 1 4cm;max-width: 10cm;\"><ol><li value=\"2\">On aligne le rapporteur avec la demi-droite et on mesure 70°</li></ol><img src=\"/Images/Cours/Construction2.svg\"></div><div><ol><li value=\"3\">On trace la demi-droite.</li></ol><img src=\"/Images/Cours/Construction3.svg\" style=\"flex: 1 1 4cm;max-width: 6cm;\"></div></div>",
 			"<div style=\"text-align: center; border: solid 3px black; border-radius: 10px;width: fit-content; background-color: #FFFF8F33;\">Construction d'un angle de 61° :<div id=\"Construction_Angle\" class=\"animation\" width=\"480\" height=\"360\"></div></div>",
 			"<div class=\"flexobject\"><img src=\"/Images/Cours/Codage_angle_1.svg\" style=\"max-width: 3cm;\"><img src=\"/Images/Cours/Codage_angle_2.svg\" style=\"max-width: 3cm;\"><img src=\"/Images/Cours/Codage_angle_3.svg\" style=\"max-width: 3cm;\"><img src=\"/Images/Cours/Codage_angle_4.svg\" style=\"max-width: 3cm;\"><img src=\"/Images/Cours/Codage_angle_5.svg\" style=\"max-width: 3cm;\"><img src=\"/Images/Cours/Codage_angle_6.svg\" style=\"max-width: 3cm;\"></div>"
 		]
 	},"angles adjacents": {
 		"tags": [],
 		"definitions": [
-			"Deux angles <span class=\"CRed\">adjacents</span> partagent un côté commun. Ils ont donc le même sommet et se trouvent de part et d'autre d'une des demi-droites."
+			"Deux angles <span class=\"CRed\">adjacents</span> partagent un côté commun. Ils ont donc le même sommet et se trouvent de part et d'autre d'ue de leurs côtés."
 		],
 		"exemples": [
 			"<div class=\"flexobject\"><img src=\"/Images/Cours/Angles_adjacents.svg\" style=\"max-height: 3.5cm;\"><div style=\"flex: 5cm 1 1\">Les angles $\\widehat{NRJ}$ et $\\widehat{NRV}$ sont adjacents. Ils ont le même sommet R et sont situés de part et d'autre de $[RN)$</div></div>"
@@ -120,7 +120,7 @@
 	},"arc de cercle": {
 		"tags": [],
 		"definitions": [
-			"Un <span class=\"CRed\">arc de cercle</span> est une partie du cercle délimité par deux points."
+			"Un <span class=\"CRed\">arc de cercle</span> est une partie du cercle délimitée par deux points."
 		],
 		"remarques": [
 			"On note l'arc de cercle : $\\overset{\\displaystyle\\frown}{DE}$"
@@ -167,7 +167,7 @@
 		],
 		"remarques": [
 			"On utilise différents codages pour les angles. Deux angles avec le même codage sont égaux.",
-			"Un simple arc de cercle n'est pas considéré comme un codage"
+			"Un simple arc de cercle n'est pas considéré comme un codage."
 		]
 	},"boule": {
 		"tags": [],
@@ -181,7 +181,7 @@
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">carré</span> est un quadrilatère qui a quatre côtés de même longueur et quatre angles droits.",
-			"Le carré d'un nombre <span class=\"CRed\">$a$</span> est le produit de ce nombre par lui-même. On le note $\\textcolor{#e53935}{a}^2=\\textcolor{#e53935}{a}\\times \\textcolor{#e53935}{a}$ &nbsp;&nbsp; lu \"<span class=\"CRed\">$a$</span> au carré\""
+			"Le carré d'un nombre <span class=\"CRed\">$a$</span> est le produit de ce nombre par lui-même. On le note $\\textcolor{#e53935}{a}^2=\\textcolor{#e53935}{a}\\times \\textcolor{#e53935}{a}$ &nbsp;&nbsp; lu \"<span class=\"CRed\">$a$</span> au carré\"."
 		],
 		"exemples":[
 			"<img src=\"/Images/Cours/Quad5.svg\" style=\"max-height: 4cm;\">"
@@ -192,7 +192,7 @@
 	},"carré parfait": {
 		"tags": [],
 		"definitions": [
-			"On appelle <span class=\"CRed\">carré parfait</span>, le carré d'un entier $a^2$."
+			"On appelle <span class=\"CRed\">carré parfait</span> le carré d'un entier $a^2$."
 		]
 	},"centre de symétrie": {
 		"tags": [],
@@ -235,7 +235,7 @@
 		"exemples": [
 			"<div class=\"proportionnaltable_coef\"><table class=\"proportionnaltable\"><tr><th>Temps de trajet (h)</th><td>1</td><td>2</td><td>5</td></tr><tr><th>Distance parcourue (km)</th><td>80</td><td>160</td><td>400</td></tr></table><img src=\"/Images/Cours/Coef4.svg\" style=\"max-height: 50px;\"></div>",
 			"<div class=\"proportionnaltable_coef\"><table class=\"proportionnaltable\"><tr><th>Masse (kg)</th><td>3</td><td>7</td><td>12,2</td></tr><tr><th>Prix (€)</th><td>6,75</td><td>15,8</td><td>27,45</td></tr></table><img src=\"/Images/Cours/Coef4.svg\" style=\"max-height: 50px;\"></div><p>On cherche $3\\times ? = 6,75$ donc on divise <span class=\"frac\">$\\frac{6,75}{3} = 2,25$</span><br>Le coefficient de proportionnalité est donc 2,25.On retrouve la même valeur pour chaque colonne :<br><span class=\"frac\">$\\frac{15,8}{7} = 2,25$</span> et <span class=\"frac\">$\\frac{27,45}{12,2} = 2,25$</span></p>",
-			"<table class=\"proportionnaltable\"><tr><th>Nombre de pas</th><td>3</td><td>5</td><td>10</td><td>30</td></tr><tr><th>Distance (m)</th><td>1,8</td><td>2,8</td><td>6</td><td>18</td></tr></table><div class=\"flexobject\"><span class=\"frac\">$\\frac{1,8}{3}=0,6$</span><span class=\"frac\">$\\frac{2,8}{5}=\\textcolor{#e53935}{0,56}$</span><span class=\"frac\">$\\frac{6}{10}=0,6$</span><span class=\"frac\">$\\frac{18}{30}=0,6$</span></div><p>L'un des coefficient est différent donc le tableau n'est pas proportionnel."
+			"<table class=\"proportionnaltable\"><tr><th>Nombre de pas</th><td>3</td><td>5</td><td>10</td><td>30</td></tr><tr><th>Distance (m)</th><td>1,8</td><td>2,8</td><td>6</td><td>18</td></tr></table><div class=\"flexobject\"><span class=\"frac\">$\\frac{1,8}{3}=0,6$</span><span class=\"frac\">$\\frac{2,8}{5}=\\textcolor{#e53935}{0,56}$</span><span class=\"frac\">$\\frac{6}{10}=0,6$</span><span class=\"frac\">$\\frac{18}{30}=0,6$</span></div><p>L'un des coefficients est différent donc le tableau n'est pas proportionnel."
 		]
 	},"coefficient directeur": {
 		"tags": [],
@@ -245,17 +245,17 @@
 	},"comparer": {
 		"tags": [],
 		"definitions": [
-			"<span class=\"CRed\">Comparer</span> deux nombres c'est dire si l'un <u>plus petit</u> ; <u>plus grand</u> ou <u>égal</u> à l'autre."
+			"<span class=\"CRed\">Comparer</span> deux nombres c'est dire si l'un est <u>plus petit</u>, <u>plus grand</u> ou <u>égal</u> à l'autre."
 		],
 		"proprietes": [
 			"Un nombre <b>négatif</b> est toujours plus petit qu'un nombre <b>positif</b>.",
-			"De deux nombres <b>positifs</b>, le plus grand est celui qui a la plus <i>grande</i> <b>valeur absolue</b>.",
+			"De deux nombres <b>positifs</b>, le plus grand est celui qui à la plus <i>grande</i> <b>valeur absolue</b>.",
 			"De deux nombres <b>négatifs</b>, le plus grand est celui qui à la plus <i>petite</i> <b>valeur absolue</b>."
 		],
 		"remarques": [
-			"Pour comparer, on utilise les symboles suivants :<ul><li>$>$  &emsp; Supérieur (Strict)</li><li>$<$  &emsp; Inférieur (Strict)</li><li>$=$  &emsp; Égale</li><li>$\\neq$ &emsp; Non égale</li><li>$\\ge$ &emsp; Supérieur ou égale</li><li>$\\le$ &emsp; Inférieur ou égale</li></ul>",
+			"Pour comparer, on utilise les symboles suivants :<ul><li>$>$  &emsp; Supérieur (Strict)</li><li>$<$  &emsp; Inférieur (Strict)</li><li>$=$  &emsp; Égal</li><li>$\\neq$ &emsp; Non égal</li><li>$\\ge$ &emsp; Supérieur ou égal</li><li>$\\le$ &emsp; Inférieur ou égal</li></ul>",
 			"Sur une droite graduée, les nombres sont rangés dans l'ordre croissant de la gauche vers la droite.",
-			"Pour deux nombres négatifs celui le plus à gauche est le plus petit."
+			"Pour deux nombres négatifs celui qui est le plus à gauche est le plus petit."
 		],
 		"exemples": [
 			"$2<15$ &emsp; se lit \"2 est <b>inférieur</b> à 15\".",
@@ -279,17 +279,17 @@
 	},"concourante": {
 		"tags": [],
 		"definitions": [
-			"Lorsque plusieurs droite se croisent en un même point, on dit qu'elles sont <span class=\"CRed\">concourante</span>."
+			"Lorsque plusieurs droite se croisent en un même point, on dit qu'elles sont <span class=\"CRed\">concourantes</span>."
 		]
 	},"cône": {
 		"tags": [],
 		"definitions": [
-			"Un <span class=\"CRed\">cône de révolution</span> est composé d'un disque formants la base. La surface latérale lorsqu'elle est dépliée est un arc de disque dont l'arc de cercle à la même longueur que le périmètre du disque."
+			"Un <span class=\"CRed\">cône de révolution</span> est composé d'un disque formant la base. La surface latérale lorsqu'elle est dépliée est un secteur de disque dont l'arc de cercle a la même longueur que le périmètre du disque."
 		]
 	},"coordonnées": {
 		"tags": [],
 		"definitions": [
-			"Dans un repère, la position d'un point est donnée par deux nombres relatifs :<ul><li>Le premier, appelé <span class=\"CRed\">abscisse</span> se lit sur l'axe horizontal.</li><li>Le second, appelé <span class=\"CRed\">ordonnée</span> se lit sur l'axe vertical.</li></ul>Ces deux nombres représentent les <span class=\"CRed\">coordonnées</span> de ce point."
+			"Dans un repère, la position d'un point est donnée par deux nombres relatifs :<ul><li>Le premier, appelé <span class=\"CRed\">abscisse</span>, se lit sur l'axe horizontal.</li><li>Le second, appelé <span class=\"CRed\">ordonnée</span>, se lit sur l'axe vertical.</li></ul>Ces deux nombres représentent les <span class=\"CRed\">coordonnées</span> de ce point."
 		],
 		"remarques": [
 			"Tous les points de l'axe des abscisses ont une ordonnée égale à 0.",
@@ -341,7 +341,7 @@
 		],
 		"exemples": [
 			"<img src=\"/Images/Cours/Cube3.svg\" style=\"max-height: 4cm;\">",
-			"Un cube de 4 cm de côté a pour volume $4\\times4\\times4 = 64 cm^3$"
+			"Un cube de 4 cm de côté a pour volume $4\\times4\\times4 = 64 cm^3$."
 		],
 		"remarques": [
 			"Un cube a toutes ses arêtes de même longueur."
@@ -363,7 +363,7 @@
 			"$102,027 = \\textcolor{#43a047}{102} + \\textcolor{#7C4DA5}{0,027} = \\textcolor{#43a047}{102} + \\textcolor{#7C4DA5}{\\frac{27}{1\\ 000}}$"
 		],
 		"infos": [
-			"Il existe de très nombreuses autre décomposition. Voici quelques exemples, dans tous les cas, il faudra suivre la consigne pour effectuer la bonne décomposition dans les exercices :<br><ul><li><b>Décomposition additive :</b><br><ul><li>$35,25 = 30 + 5 + 0,2 + 0,05$</li><li>$35,25 = 30 + 5 + \\frac{2}{10} + \\frac{5}{100}$</li></ul></li><li><b>Décomposition multiplicative :</b><br><ul><li>$35,25 = (3\\times 10) + 5 + (2\\times 0,1) + (5\\times 0,01)$</li><li>$35,25 = (3\\times 10) + 5 + (2\\times \\frac{1}{10}) + (5\\times \\frac{1}{100})$</li></ul></li></ul>"
+			"Il existe de très nombreuses autres décompositions. Voici quelques exemples, dans tous les cas, il faudra suivre la consigne pour effectuer la bonne décomposition dans les exercices :<br><ul><li><b>Décomposition additive :</b><br><ul><li>$35,25 = 30 + 5 + 0,2 + 0,05$</li><li>$35,25 = 30 + 5 + \\frac{2}{10} + \\frac{5}{100}$</li></ul></li><li><b>Décomposition multiplicative :</b><br><ul><li>$35,25 = (3\\times 10) + 5 + (2\\times 0,1) + (5\\times 0,01)$</li><li>$35,25 = (3\\times 10) + 5 + (2\\times \\frac{1}{10}) + (5\\times \\frac{1}{100})$</li></ul></li></ul>"
 		]
 	},"décroissant": {
 		"tags": [],
@@ -378,18 +378,18 @@
 	},"dénominateur": {
 		"tags": [],
 		"definitions": [
-			"Dans une <b>écriture fractionnaire</b> le nombre du bas se nomme le <span class=\"CRed\">dénominateur</span>."
+			"Dans une <b>écriture fractionnaire</b>, le nombre du bas se nomme le <span class=\"CRed\">dénominateur</span>."
 		]
 	},"demi-droite": {
 		"tags": [],
 		"definitions": [
-			"Une <span class=\"CRed\">demi-droite</span> commence d'un point et se prolonge dans une seul direction."
+			"Une <span class=\"CRed\">demi-droite</span> commence d'un point et se prolonge dans une seule direction."
 		],
 		"remarques": [
-			"Une demi-droite se note avec un crochet et une parenthèses : [GH) ou (HG]",
+			"Une demi-droite se note avec un crochet et une parenthèse : [GH) ou (HG]",
 			"Le point de départ est appelé <b>origine</b> de la demi-droite. Ici c'est G.",
 			"Le crochet \"[\" représente l'arrêt de la demi-droite et la parenthèse \")\" sa continuité.",
-			"Il existe plusieurs manière de définir une demi-droite.<ul><li style=\"min-height: 2cm;\"><div class=\"flexobject\" style=\"justify-content: flex-start;\"><div style=\"flex: 0 1 6cm; max-width: 6cm;\">A partir de deux points, on la note $[GH)$.</div><img src=\"/Images/Cours/DemiDroite1.svg\" style=\"flex: 0 1 4cm; max-width: 6cm;\"></div></li><li style=\"min-height: 2cm;\"><div class=\"flexobject\" style=\"justify-content: flex-start;\"><div style=\"flex: 0 1 6cm; max-width: 6cm;\">A partir d'un point et d'une <b>direction</b> $[Ts)$.</div><img src=\"/Images/Cours/DemiDroite2.svg\" style=\"flex: 0 1 4cm; max-width: 6cm;\"></div></li></ul>"
+			"Il existe plusieurs manières de définir une demi-droite.<ul><li style=\"min-height: 2cm;\"><div class=\"flexobject\" style=\"justify-content: flex-start;\"><div style=\"flex: 0 1 6cm; max-width: 6cm;\">À partir de deux points, on la note $[GH)$.</div><img src=\"/Images/Cours/DemiDroite1.svg\" style=\"flex: 0 1 4cm; max-width: 6cm;\"></div></li><li style=\"min-height: 2cm;\"><div class=\"flexobject\" style=\"justify-content: flex-start;\"><div style=\"flex: 0 1 6cm; max-width: 6cm;\">À partir d'un point et d'une <b>direction</b> $[Ts)$.</div><img src=\"/Images/Cours/DemiDroite2.svg\" style=\"flex: 0 1 4cm; max-width: 6cm;\"></div></li></ul>"
 		],
 		"exemples": [
 			"<img src=\"/Images/Cours/DemiDroite1.svg\" style=\"flex: 1 1 4cm; max-height: 1cm;\">"
@@ -405,7 +405,7 @@
 			"Un <span class=\"CRed\">diagramme cartésien</span> est un repère dans lequel on représente les valeurs par des points reliés entre eux."
 		],
 		"exemples": [
-			"<div class=\"flexobject\"><div id=\"cartesien1\" style=\"flex: 0 1 5cm;\"></div><div style=\"flex: 1 1 5cm;\">Diagramme cartésien montrant l'évolution de la vitesse d'Usain Bolt en fonction de la distance parcourue en 2009 sur 100 m.<br>On peut lire par exemple que à 30 m, sa vitesse était de 11 m/s.<table class=\"proportionnaltable\"><tr><th>Distance (m)</th><td>0</td><td>10</td><td>20</td><td>30</td><td>40</td><td>50</td><td>60</td><td>70</td><td>80</td><td>90</td><td>100</td></tr><tr><th>Vitesse<br>(en m/s)</th><td>0</td><td>5,4</td><td>9,8</td><td>11</td><td>11,5</td><td>11,8</td><td>12,2</td><td>12,2</td><td>12,2</td><td>12</td><td>11,1</td></tr></table></div></div>"
+			"<div class=\"flexobject\"><div id=\"cartesien1\" style=\"flex: 0 1 5cm;\"></div><div style=\"flex: 1 1 5cm;\">Diagramme cartésien montrant l'évolution de la vitesse d'Usain Bolt en fonction de la distance parcourue en 2009 sur 100 m.<br>On peut lire par exemple qu'à 30 m, sa vitesse était de 11 m/s.<table class=\"proportionnaltable\"><tr><th>Distance (m)</th><td>0</td><td>10</td><td>20</td><td>30</td><td>40</td><td>50</td><td>60</td><td>70</td><td>80</td><td>90</td><td>100</td></tr><tr><th>Vitesse<br>(en m/s)</th><td>0</td><td>5,4</td><td>9,8</td><td>11</td><td>11,5</td><td>11,8</td><td>12,2</td><td>12,2</td><td>12,2</td><td>12</td><td>11,1</td></tr></table></div></div>"
 		],
 		"remarques": [
 			"Ce type de diagramme permet de représenter un tableau à simple entrée.",
@@ -428,7 +428,7 @@
 			"Un <span class=\"CRed\">diagramme en bâtons</span> (ou en barres) est composé de bâtons de même largeur et de hauteur proportionnelle aux effectifs qu'ils représentent."
 		],
 		"exemples": [
-			"<div class=\"flexobject\"><div id=\"baton1\" style=\"flex: 1 1 5cm;\"></div><div style=\"flex: 1 1 5cm;\">Diagramme en bâtons de la répartition de la population de la france et des pays voisin en 2018.<table class=\"proportionnaltable\"><tr><th>Pays</th><td>Allemagne</td><td>Belgique</td><td>Espagne</td><td>France</td><td>Italie</td><td>Luxembourg</td><td>Royaume-Uni</td><td>Suisse</td></tr><tr><th>Population<br>(en million)</th><td>84</td><td>11</td><td>47</td><td>67</td><td>60</td><td>1</td><td>67</td><td>9</td></tr></table></div></div>"
+			"<div class=\"flexobject\"><div id=\"baton1\" style=\"flex: 1 1 5cm;\"></div><div style=\"flex: 1 1 5cm;\">Diagramme en bâtons de la répartition de la population de la France et des pays voisins en 2018.<table class=\"proportionnaltable\"><tr><th>Pays</th><td>Allemagne</td><td>Belgique</td><td>Espagne</td><td>France</td><td>Italie</td><td>Luxembourg</td><td>Royaume-Uni</td><td>Suisse</td></tr><tr><th>Population<br>(en million)</th><td>84</td><td>11</td><td>47</td><td>67</td><td>60</td><td>1</td><td>67</td><td>9</td></tr></table></div></div>"
 		],
 		"remarques": [
 			"Ce type de diagramme permet de représenter un tableau à simple entrée."
@@ -448,7 +448,7 @@
 			"Le résultat d'une soustraction est appelé <span class=\"CRed\">différence</span>."
 		],
 		"remarques": [
-			"On soustrait toujours le plus petit des deux termes au plus grand, donc <b>on ne peut pas modifier l'ordre des termes d'une soustraction</b>."
+			"En sixième, on soustrait toujours le plus petit des deux termes au plus grand. <b>On ne peut pas modifier l'ordre des termes d'une soustraction</b>."
 		],
 		"infos": [
 			"Pour poser une soustraction en colonne, on aligne les nombres selon le rang de leurs chiffres. On commence ensuite la soustraction par la droite et on remonte petit à petit. Lorsqu'une soustraction n'est pas possible (que l'on soustrait plus que disponible), on prend une dizaine supplémentaire et on indique que l'on soustrait 1 de plus au rang suivant."
@@ -459,10 +459,10 @@
 	},"disque": {
 		"tags": [],
 		"definitions": [
-			"Un <span class=\"CRed\">disque</span> de centre O est formé de tous les points à une distance inférieur ou égale à un certain rayon du point O."
+			"Un <span class=\"CRed\">disque</span> de centre O est formé de tous les points à une distance inférieur ou égale au rayon du disque."
 		],
 		"remarques": [
-			"Cela correspond à l'intérieur du cercle ainsi qu'à son extérieur."
+			"Cela correspond à l'intérieur du cercle ainsi qu'à son contour."
 		],
 		"exemples": [
 			"<img src=\"/Images/Cours/Cercle3.svg\" style=\"max-width: 5cm;\">"
@@ -471,22 +471,22 @@
 		"tags": [],
 		"definitions": [
 			"La <span class=\"CRed\">distance</span> entre deux points est la longueur du plus court chemin entre ces deux points. C'est la longueur du segment qui joint ces deux points.",
-			"La <b>distance</b> d'un point à une droite est <b>longueur du plus court chemin</b> entre ce point et la droite.",
+			"La <b>distance</b> d'un point à une droite est la <b>longueur du plus court chemin</b> entre ce point et la droite.",
 			"La distance d'un point A à une droite $(d)$ est la longueur du segment reliant le point A au <b>pied de la perpendiculaire</b> à $(d)$ passant par A."
 		],
 		"exemples": [
-			"<div class=\"flexobject\"><img src=\"/Images/Cours/Distance.svg\" style=\"flex: 1 1 4cm; max-width: 7cm;\"><div style=\"flex: 1 1 4cm;\">La distance entre le point A et B est 2,5 cm.<br>On note la longueur : AB = 2,5 cm</div></div>",
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Distance.svg\" style=\"flex: 1 1 4cm; max-width: 7cm;\"><div style=\"flex: 1 1 4cm;\">La distance entre les points A et B est 2,5 cm.<br>On note la longueur : AB = 2,5 cm</div></div>",
 			"<div class=\"flexobject\"><div style=\"flex: 1 1 6cm; max-width: 10cm;\">La distance du point A à la droite $(d)$ est la longueur AH.</div><img src=\"/Images/Cours/Distance_Perpendiculaire.svg\" style=\"flex: 1 1 3cm; max-width: 6cm;\"></div>"
 		]
 	},"distance à zéro": {
 		"tags": ["valeur absolue"],
 		"definitions": [
-			"La <span class=\"CRed\">distance à zéro</span> d'un nombre relatif correspond à la distance sur axe gradué entre ce nombre et l'origine.<br> On parle aussi de <span class=\"CRed\">valeur absolue</span>."
+			"La <span class=\"CRed\">distance à zéro</span> d'un nombre relatif correspond à la distance sur un axe gradué entre ce nombre et l'origine.<br> On parle aussi de <span class=\"CRed\">valeur absolue</span>."
 		]
 	},"distributivité": {
 		"tags": [],
 		"definitions": [
-			"La distributivité $k\\times(m+n) = k\\times m + k\\times n$ permet d'écrire un produit  entre un nombre et une somme comme une somme de deux produits.  <table class=\"center\"> <tr> <td colspan=\"3\" class=\"CRed\">Factorisation</td> </tr> <tr style=\"line-height: 9px;\"> <td colspan=\"3\"> <img style=\"transform: scaleX(-1)\" height=\"20px\" src=\"/Images/Cours/Fleche.svg\"> </td> </tr> <tr> <td>$\\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$</td> <td style=\"width: 2cm;\">=</td> <td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{m}+ \\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{n}$</td> </tr> <tr style=\"line-height: 9px;\"> <td colspan=\"3\"> <img height=\"20px\" src=\"/Images/Cours/Fleche.svg\"> </td> </tr> <tr> <td colspan=\"3\" class=\"CRed\">Développement</td> </tr> </table> <span class=\"CRed\">Développer</span> une expression c'est transformer un produit en somme.  Dans l'autre sens on dit que l'on <span class=\"CRed\">factorise</span> une expression.  Le facteur k est alors appelé <span class=\"CRed\">facteur commun</span>. ",
+			"La distributivité $k\\times(m+n) = k\\times m + k\\times n$ permet d'écrire un produit entre un nombre et une somme comme une somme de deux produits.  <table class=\"center\"> <tr> <td colspan=\"3\" class=\"CRed\">Factorisation</td> </tr> <tr style=\"line-height: 9px;\"> <td colspan=\"3\"> <img style=\"transform: scaleX(-1)\" height=\"20px\" src=\"/Images/Cours/Fleche.svg\"> </td> </tr> <tr> <td>$\\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$</td> <td style=\"width: 2cm;\">=</td> <td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{m}+ \\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{n}$</td> </tr> <tr style=\"line-height: 9px;\"> <td colspan=\"3\"> <img height=\"20px\" src=\"/Images/Cours/Fleche.svg\"> </td> </tr> <tr> <td colspan=\"3\" class=\"CRed\">Développement</td> </tr> </table> <span class=\"CRed\">Développer</span> une expression c'est transformer un produit en somme.  Dans l'autre sens on dit que l'on <span class=\"CRed\">factorise</span> une expression.  Le facteur k est alors appelé <span class=\"CRed\">facteur commun</span>. ",
 			"La distributivité $k\\times(m+n)=k\\times m+k\\times n$ permet d'écrire un produit entre un nombre et une somme comme une somme de deux produits.<table class=\"center\"><tr><td style=\"text-align: right;\"><span class=\"CRed\">$k$</span></td><td>$\\times($</td><td><span class=\"CBlue\">$m$</span> $+$ <span class=\"CBlue\">$n$</span></td><td>$)$</td><td style=\"width: 2cm;\">=</td><td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{m}$</td><td>$+$</td><td>$\\textcolor{#e53935}{k}\\times \\textcolor{#039be5}{n}$</td></tr><tr style=\"line-height: 9px;\"><td colspan=\"2\"></td><td><img height=\"9px\" width=\"50px\" src=\"/Images/Cours/Accolade_200.svg\"></td><td colspan=\"2\"></td><td><img height=\"9px\" width=\"50px\" src=\"/Images/Cours/Accolade_200.svg\"></td><td></td><td><img height=\"9px\" width=\"50px\" src=\"/Images/Cours/Accolade_200.svg\"></td></tr><tr><td style=\"text-align: right;\"><span class=\"CRed\">nombre</span></td><td>$\\times$</td><td><span class=\"CBlue\">somme</span></td><td colspan=\"2\"></td><td>produit</td><td>$+$</td><td>produit</td></tr><tr style=\"line-height: 9px;\"><td colspan=\"4\"><img height=\"9px\" width=\"135px\" src=\"/Images/Cours/Accolade_200.svg\"></td><td></td><td colspan=\"3\"><img height=\"9px\" width=\"130px\" src=\"/Images/Cours/Accolade_200.svg\"></td></tr><tr><td colspan=\"4\">produit</td><td></td><td colspan=\"3\">somme</td></tr></table>"
 		]
 	},"diviseur": {
@@ -497,17 +497,17 @@
 	},"diviseur commun": {
 		"tags": [],
 		"definitions": [
-			"Dire qu'un nombre entier <span class=\"CBlue\">$d$</span> est un <span = class=\"CRed\">diviseur commun</span> à deux nombres entiers $a$ et $b$ signifie que $a$ et $b$ sont divisibles par <span class=\"CBlue\">$d$</span>"
+			"Dire qu'un nombre entier <span class=\"CBlue\">$d$</span> est un <span class=\"CRed\">diviseur commun</span> à deux nombres entiers $a$ et $b$ signifie que $a$ et $b$ sont divisibles par <span class=\"CBlue\">$d$</span>."
 		],
 		"exemples": [
-			"Les diviseurs communs de 12 et 18 sont : 1,2,3 et 6.<br>6 est appelé plus grand diviseur commun de 12 et 18 (noté <b>PGCD</b>). Tous les diviseurs de ce nombre sont les diviseurs communs de 12 et 18."
+			"Les diviseurs communs de 12 et 18 sont : 1, 2, 3 et 6.<br>6 est appelé le plus grand diviseur commun de 12 et 18 (noté <b>PGCD</b>). Tous les diviseurs de ce nombre sont les diviseurs communs de 12 et 18."
 		],
 		"remarques": [
 			"1 est un diviseur commun à tous les nombres.",
 			"Si le seul diviseur commun à deux nombres est 1, on dit que ces deux nombres sont <span class=\"CRed\">premiers entre eux</span>."
 		],
 		"infos": [
-			"Pour trouver le plus grand diviseur de deux nombres, on peut utiliser la décomposition en produit de facteurs premiers :<br>$360 = \\textcolor{#e53935}{2}^\\textcolor{#039be5}{3}\\times\\textcolor{#e53935}{3}^2\\times5$<br>$336 = \\textcolor{#e53935}{2}^4\\times\\textcolor{#e53935}{3}\\times7$<br><br>On garde les facteurs communs avec la puissance la plus petite :<br>$\\textcolor{#e53935}{2}^\\textcolor{#039be5}{3}\\times\\textcolor{#e53935}{3} = 24$<br>24 est le plus grand diviseur commun de 360 et 336."
+			"Pour trouver le plus grand diviseur commun de deux nombres, on peut utiliser la décomposition en produit de facteurs premiers :<br>$360 = \\textcolor{#e53935}{2}^\\textcolor{#039be5}{3}\\times\\textcolor{#e53935}{3}^2\\times5$<br>$336 = \\textcolor{#e53935}{2}^4\\times\\textcolor{#e53935}{3}\\times7$<br><br>On garde les facteurs communs avec la puissance la plus petite :<br>$\\textcolor{#e53935}{2}^\\textcolor{#039be5}{3}\\times\\textcolor{#e53935}{3} = 24$<br>24 est le plus grand diviseur commun de 360 et 336."
 		]
 	},"divisible": {
 		"tags": [],
@@ -517,7 +517,7 @@
 		"proprietes": [
 			"Un nombre est <b>divisible par 2</b> lorsque son chiffre des unités est 0, 2, 4, 6 ou 8.",
 			"Un nombre est <b>divisible par 3</b> lorsque la somme de ses chiffres est divisible par 3.",
-			"Un nombre est <b>divisible par 4</b> lorsque le nombre formé de ses 2 derniers chiffres est divisible par 4",
+			"Un nombre est <b>divisible par 4</b> lorsque le nombre formé de ses 2 derniers chiffres est divisible par 4.",
 			"Un nombre est <b>divisible par 5</b> lorsque son chiffre des unités est 0 ou 5.",
 			"Un nombre est <b>divisible par 9</b> lorsque la somme de ses chiffres est divisible par 9.",
 			"Un nombre est <b>divisible par 10</b> lorsque son chiffre des unités est 0."
@@ -525,7 +525,7 @@
 		"exemples": [
 			"240 est divisible par 2, 5 et 10.",
 			"7 293 138 → $7+2+9+3+1+3+8 = 33$ qui est divisible par 3 ($3\\times11$) donc 7 293 138 est divisible par 3.",
-			"240 111 → $2+4+0+1+1+1=9$ qui est divisible par 9 et 3 donc 240 111 est divisible par 9 et 3."
+			"240 111 → $2+4+0+1+1+1=9$ qui est divisible par 9 et 3, donc 240 111 est divisible par 9 et 3."
 		],
 		"remarques": [
 			"Un nombre divisible par 9 est toujours divisible par 3."
@@ -543,13 +543,13 @@
 			"$54,7 \\div 100 = 0,547$"
 		],
 		"remarques": [
-			"Certaines divisions ne s'arrêtent  pas, on s'arrête donc lorsque l'un des reste dans la partie décimal est identique à l'un des précédents.<style>.partiedecimale td:nth-child(3){padding: 0px 0px !important;border-right: green dashed 1px;}.partiedecimale td:nth-child(n + 4):nth-child(-n + 6){background-color: var(--Color_Green5);}</style><div class=\"flexobject\"><div style=\"flex: 3cm 0 1;\"><table class=\"division partiedecimale\" style=\"text-align: right;\"><tr><td></td><td>7</td><td>,</td><td>0</td><td>0</td><td style=\"border-right: solid 2px black;\">0</td><td style=\"border-bottom: solid 2px black;\">6</td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\"></td></tr><tr><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\">6</td><td></td><td style=\"border-bottom: solid 2px transparent;\"></td><td></td><td style=\"border-right: solid 2px black;\"></td><td>1</td><td>,</td><td>1</td><td>6</td><td>6</td></tr><tr><td></td><td>1</td><td></td><td>0</td><td></td><td style=\"border-right: solid 2px black;\"></td><td></td><td></td><td></td></tr><tr><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\"></td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px black;\">6</td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px transparent;\"></td><td class=\"partiedecimale2\" style=\"border-right: solid 2px\"></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td class=\"partiedecimale2 CRed\"><b>4</b></td><td class=\"partiedecimale2\"><b>0</b></td><td class=\"partiedecimale2\" style=\"border-right: solid 2px black;\"></td><td></td><td></td><td></td></tr><tr><td></td><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\"></td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px black;\">3</td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px black;\">6</td><td class=\"partiedecimale2\" style=\"border-right: solid 2px black; border-bottom: solid 2px transparent;\"></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td class=\"partiedecimale2\"></td><td class=\"partiedecimale2 CRed\"><b>4</b></td><td class=\"partiedecimale2\" style=\"border-right: solid 2px black;\"><b>0</b></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px black;\">-</td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px black;\">3</td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px black; border-right: solid 2px black;\">6</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td class=\"partiedecimale2\"></td><td class=\"partiedecimale2\"></td><td class=\"partiedecimale2\" style=\"border-right: solid 2px black;\">4</td><td></td><td></td><td></td></tr></table></div><div style=\"flex: 5cm 1 1;\">Ici la division ne se termine jamais car le reste est identique deux fois de suite dans la <span class=\"partiedecimale2\">partie décimale</span><br>Le quotient de 7 par 6 n'est donc pas un nombre décimal.</div>",
-			"De manière générale dans ce type de division, on déplace la virgule d'autant de rang qu'il y a de zéro."
+			"Certaines divisions ne s'arrêtent  pas, on s'arrête donc lorsque l'un des restes de la partie décimale est identique à l'un des précédents.<style>.partiedecimale td:nth-child(3){padding: 0px 0px !important;border-right: green dashed 1px;}.partiedecimale td:nth-child(n + 4):nth-child(-n + 6){background-color: var(--Color_Green5);}</style><div class=\"flexobject\"><div style=\"flex: 3cm 0 1;\"><table class=\"division partiedecimale\" style=\"text-align: right;\"><tr><td></td><td>7</td><td>,</td><td>0</td><td>0</td><td style=\"border-right: solid 2px black;\">0</td><td style=\"border-bottom: solid 2px black;\">6</td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\"></td></tr><tr><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\">6</td><td></td><td style=\"border-bottom: solid 2px transparent;\"></td><td></td><td style=\"border-right: solid 2px black;\"></td><td>1</td><td>,</td><td>1</td><td>6</td><td>6</td></tr><tr><td></td><td>1</td><td></td><td>0</td><td></td><td style=\"border-right: solid 2px black;\"></td><td></td><td></td><td></td></tr><tr><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\"></td><td style=\"border-bottom: solid 2px black;\"></td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px black;\">6</td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px transparent;\"></td><td class=\"partiedecimale2\" style=\"border-right: solid 2px\"></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td class=\"partiedecimale2 CRed\"><b>4</b></td><td class=\"partiedecimale2\"><b>0</b></td><td class=\"partiedecimale2\" style=\"border-right: solid 2px black;\"></td><td></td><td></td><td></td></tr><tr><td></td><td style=\"border-bottom: solid 2px black;\">-</td><td style=\"border-bottom: solid 2px black;\"></td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px black;\">3</td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px black;\">6</td><td class=\"partiedecimale2\" style=\"border-right: solid 2px black; border-bottom: solid 2px transparent;\"></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td class=\"partiedecimale2\"></td><td class=\"partiedecimale2 CRed\"><b>4</b></td><td class=\"partiedecimale2\" style=\"border-right: solid 2px black;\"><b>0</b></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px black;\">-</td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px black;\">3</td><td class=\"partiedecimale2\" style=\"border-bottom: solid 2px black; border-right: solid 2px black;\">6</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td class=\"partiedecimale2\"></td><td class=\"partiedecimale2\"></td><td class=\"partiedecimale2\" style=\"border-right: solid 2px black;\">4</td><td></td><td></td><td></td></tr></table></div><div style=\"flex: 5cm 1 1;\">Ici la division ne se termine jamais car le reste est identique deux fois de suite dans la <span class=\"partiedecimale2\">partie décimale</span><br>Le quotient de 7 par 6 n'est donc pas un nombre décimal.</div>",
+			"De manière générale dans ce type de division, on déplace la virgule d'autant de rangs qu'il y a de zéros."
 		]
 	},"division euclidienne": {
 		"tags": [],
 		"definitions": [
-			"Une <b>division euclidienne</b> est une division ou l'on ne parle que d'entier. Elle fait intervenir quatre nombres : le <span class=\"CBlue\"><b>dividende</b></span>, le <span class=\"CRed\"><b>diviseur</b></span>, le <span class=\"CGreen\"><b>quotient</b></span> et le <span class=\"CViolet\"><b>reste</b></span>, tel que :<br><span class=\"CBlue\"><b>dividende</b></span> = <span class=\"CRed\"><b>diviseur</b></span> × <span class=\"CGreen\"><b>quotient</b></span> + <span class=\"CViolet\"><b>reste</b></span> avec <span class=\"CViolet\"><b>reste</b></span> < <span class=\"CRed\"><b>diviseur</b></span>"
+			"Une <b>division euclidienne</b> est une division où l'on ne parle que d'entiers. Elle fait intervenir quatre nombres : le <span class=\"CBlue\"><b>dividende</b></span>, le <span class=\"CRed\"><b>diviseur</b></span>, le <span class=\"CGreen\"><b>quotient</b></span> et le <span class=\"CViolet\"><b>reste</b></span>, tels que :<br><span class=\"CBlue\"><b>dividende</b></span> = <span class=\"CRed\"><b>diviseur</b></span> × <span class=\"CGreen\"><b>quotient</b></span> + <span class=\"CViolet\"><b>reste</b></span> avec <span class=\"CViolet\"><b>reste</b></span> < <span class=\"CRed\"><b>diviseur</b></span>"
 		],
 		"infos": [
 			"<img src=\"/Images/Cours/Division euclidienne.svg\" style=\"max-height: 4cm;\"><p>Avec <span class=\"CViolet\"><b>Reste</b></span> &#60; <span class=\"CRed\"><b>Diviseur</b></span></p>"
@@ -557,7 +557,7 @@
 	},"double distributivité": {
 		"tags": [],
 		"definitions": [
-			"<p> La distributivité s'applique aussi lorsque l'on multiplie deux expressions entre parenthèses:<br> $(\\textcolor{#e53935}{k}+\\textcolor{#e53935}{l})\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n}) = \\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})+ \\textcolor{#e53935}{l}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$ $ = \\textcolor{#e53935}{k}\\times\\textcolor{#039be5}{m} + \\textcolor{#e53935}{k}\\times\\textcolor{#039be5}{n} +  \\textcolor{#e53935}{l}\\times\\textcolor{#039be5}{m} + \\textcolor{#e53935}{l}\\times\\textcolor{#039be5}{n}$<br> </p> <div style=\"display: inline;position: relative;\"> <p style=\"display: inline; margin-left: 3px;\"> $(\\ \\textcolor{#e53935}{k}\\ +\\ \\textcolor{#e53935}{l}\\ )\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$ </p> <img style=\"z-index: -1; left: 0; position: absolute; top: -15px; left: 4px;\" height=\"60px\" src=\"/Images/Cours/Developpement2.svg\"> </div> <div style=\"height: 20px;\"></div>",
+			"<p>La distributivité s'applique aussi lorsque l'on multiplie deux expressions entre parenthèses:<br> $(\\textcolor{#e53935}{k}+\\textcolor{#e53935}{l})\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n}) = \\textcolor{#e53935}{k}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})+ \\textcolor{#e53935}{l}\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$ $ = \\textcolor{#e53935}{k}\\times\\textcolor{#039be5}{m} + \\textcolor{#e53935}{k}\\times\\textcolor{#039be5}{n} +  \\textcolor{#e53935}{l}\\times\\textcolor{#039be5}{m} + \\textcolor{#e53935}{l}\\times\\textcolor{#039be5}{n}$<br> </p> <div style=\"display: inline;position: relative;\"> <p style=\"display: inline; margin-left: 3px;\"> $(\\ \\textcolor{#e53935}{k}\\ +\\ \\textcolor{#e53935}{l}\\ )\\times(\\textcolor{#039be5}{m}+\\textcolor{#039be5}{n})$ </p> <img style=\"z-index: -1; left: 0; position: absolute; top: -15px; left: 4px;\" height=\"60px\" src=\"/Images/Cours/Developpement2.svg\"> </div> <div style=\"height: 20px;\"></div>",
 			"$(\\textcolor{#e53935}{a}+\\textcolor{#039be5}{b})^2=\\textcolor{#e53935}{a}^2 + 2\\textcolor{#e53935}{a}\\textcolor{#039be5}{b} +\\textcolor{#039be5}{b}^2$",
 			"$(\\textcolor{#e53935}{a}-\\textcolor{#039be5}{b})^2=\\textcolor{#e53935}{a}^2 - 2\\textcolor{#e53935}{a}\\textcolor{#039be5}{b} +\\textcolor{#039be5}{b}^2$",
 			"$(\\textcolor{#e53935}{a}-\\textcolor{#039be5}{b})(\\textcolor{#e53935}{a}+\\textcolor{#039be5}{b})=\\textcolor{#e53935}{a}^2 -\\textcolor{#039be5}{b}^2$"
@@ -568,9 +568,9 @@
 			"Une <span class=\"CRed\">droite</span> est une ligne <b>illimitée</b> qui se prolonge des deux côtés."
 		],
 		"remarques": [
-			"Une droite se note avec des parenthèses : (MN)",
+			"Une droite se note entre parenthèses : (MN)",
 			"Une droite a deux <b>directions</b> que l'on définit avec des lettres minuscules.",
-			"Il existe plusieurs manières de définir une droite.<ul><li style=\"min-height: 2cm;\"><div class=\"flexobject\" style=\"justify-content: flex-start;\"><div style=\"flex: 0 1 6cm; max-width: 6cm;\">A partir de deux points, on la note (MN).</div><img src=\"/Images/Cours/Droite1.svg\" style=\"flex: 0 1 4cm; max-width: 6cm;\"></div></li><li style=\"min-height: 2cm;\"><div class=\"flexobject\" style=\"justify-content: flex-start;\"><div style=\"flex: 0 1 6cm; max-width: 6cm;\">A partir d'un nom, ici $(d)$.</div><img src=\"/Images/Cours/Droite4.svg\" style=\"flex: 0 1 4cm; max-width: 6cm;\"></div></li><li style=\"min-height: 2cm;\"><div class=\"flexobject\" style=\"justify-content: flex-start;\"><div style=\"flex: 0 1 6cm; max-width: 6cm;\">A partir de deux <b>directions</b>, ici $(zp)$.</div><img src=\"/Images/Cours/Droite2.svg\" style=\"flex: 0 1 4cm; max-width: 6cm;\"></div></li><li style=\"min-height: 2cm;\"><div class=\"flexobject\" style=\"justify-content: flex-start;\"><div style=\"flex: 0 1 6cm; max-width: 6cm;\">A partir d'une <b>direction</b> et d'un point, ici $(wK)$.</div><img src=\"/Images/Cours/Droite3.svg\" style=\"flex: 0 1 4cm; max-width: 6cm;\"></div></li></ul>",
+			"Il existe plusieurs manières de définir une droite.<ul><li style=\"min-height: 2cm;\"><div class=\"flexobject\" style=\"justify-content: flex-start;\"><div style=\"flex: 0 1 6cm; max-width: 6cm;\">À partir de deux points, on la note (MN).</div><img src=\"/Images/Cours/Droite1.svg\" style=\"flex: 0 1 4cm; max-width: 6cm;\"></div></li><li style=\"min-height: 2cm;\"><div class=\"flexobject\" style=\"justify-content: flex-start;\"><div style=\"flex: 0 1 6cm; max-width: 6cm;\">À partir d'un nom, ici $(d)$.</div><img src=\"/Images/Cours/Droite4.svg\" style=\"flex: 0 1 4cm; max-width: 6cm;\"></div></li><li style=\"min-height: 2cm;\"><div class=\"flexobject\" style=\"justify-content: flex-start;\"><div style=\"flex: 0 1 6cm; max-width: 6cm;\">À partir de deux <b>directions</b>, ici $(zp)$.</div><img src=\"/Images/Cours/Droite2.svg\" style=\"flex: 0 1 4cm; max-width: 6cm;\"></div></li><li style=\"min-height: 2cm;\"><div class=\"flexobject\" style=\"justify-content: flex-start;\"><div style=\"flex: 0 1 6cm; max-width: 6cm;\">À partir d'une <b>direction</b> et d'un point, ici $(wK)$.</div><img src=\"/Images/Cours/Droite3.svg\" style=\"flex: 0 1 4cm; max-width: 6cm;\"></div></li></ul>",
 			"Par deux points distincts passe une <b>unique</b> droite."
 		],
 		"exemples": [
@@ -582,28 +582,28 @@
 			"Une <span class=\"CRed\">durée</span> est la mesure du temps entre deux instants. L'unité de durée couramment utilisée est la <b>seconde</b> (s)."
 		],
 		"exemples": [
-			"Temps à l'instant 1 : 17 seconde.<br>Temps à l'instant 2 : 48 seconde.<br>La durée entre ces deux instant est 48-17 = 31 secondes.",
-			"Une séance de cinéma commence à 18h20 et se termine à 20h10. Combien de temps a duré la séance ?<br><br>On regarde le temps nécessaire pour aller à l'heure suivante :<br>18h20 + <b>40min</b> = 19h<br>On calcule ensuite le temps restant pour atteindre le temps final :<br>19h + <b>1h10</b> = 20h10<br>On regroupe enfin les deux durées précédentes :<br>1 h 10 min + 40 min = 1h50<br>La séance a donc duré 1h50.",
-			"Un train mets 1h56 pour aller de Paris à Lyon. Il part de Paris à 11h25. A quelle heure arrive-t-il ?<br><br>On ajoute les heures et les minutes ensemble :<br><br><div class=\"flexobject\"><table style=\"text-align: right;\"><tr><td></td><td>11</td><td>h</td><td>25</td></tr><tr><td>+</td><td>1</td><td>h</td><td>56</td></tr><tr style=\"border-top: solid 2px black;\"><td></td><td>12</td><td>h</td><td>81</td></tr></table><div>Le nombre de minutes dépasse 60 (1 heure) on peut donc convertir : 12 h 81 min = 12 h + 60 min + 21 min = 12 h + 1 h + 21 min = 13 h 21 min</div></div>Le train arrive donc à 13h21.",
-			"Une voiture mets 4h29 pour aller de Paris à Lyon. On souhaite arrivé à Lyon à 15h12. A quelle heure doit-on partir ?<br><br>On doit ici faire une soustraction, on commence donc par convertir des heures en minutes pour pouvoir l'effectuer :<br>15h12 = 14 h + 1 h + 12 min = 14 h + 60 min + 12 min = 14h72<br>On effectue ensuite la soustraction :<br><br><div class=\"flexobject\"><table style=\"text-align: right;\"><tr><td></td><td>14</td><td>h</td><td>72</td></tr><tr><td>-</td><td>4</td><td>h</td><td>29</td></tr><tr style=\"border-top: solid 2px black;\"><td></td><td>10</td><td>h</td><td>43</td></tr></table></div>La voiture doit donc partir à 10h43"
+			"Temps à l'instant 1 : 17 secondes.<br>Temps à l'instant 2 : 48 secondes.<br>La durée entre ces deux instants est 48 - 17 = 31 secondes.",
+			"Une séance de cinéma commence à 18h20 et se termine à 20 h 10. Combien de temps a duré la séance ?<br><br>On regarde le temps nécessaire pour aller à l'heure suivante :<br>18h20 + <b>40 min</b> = 19 h<br>On calcule ensuite le temps restant pour atteindre le temps final :<br>19 h + <b>1 h 10</b> = 20 h 10<br>On regroupe enfin les deux durées précédentes :<br>1 h 10 min + 40 min = 1 h 50<br>La séance a donc duré 1 h 50.",
+			"Un train met 1 h 56 pour aller de Paris à Lyon. Il part de Paris à 11 h 25. À quelle heure arrive-t-il ?<br><br>On ajoute les heures et les minutes ensemble :<br><br><div class=\"flexobject\"><table style=\"text-align: right;\"><tr><td></td><td>11</td><td>h</td><td>25</td></tr><tr><td>+</td><td>1</td><td>h</td><td>56</td></tr><tr style=\"border-top: solid 2px black;\"><td></td><td>12</td><td>h</td><td>81</td></tr></table><div>Le nombre de minutes dépasse 60 (1 heure) on peut donc convertir : 12 h 81 min = 12 h + 60 min + 21 min = 12 h + 1 h + 21 min = 13 h 21 min</div></div>Le train arrive donc à 13 h 21.",
+			"Une voiture met 4 h 29 pour aller de Paris à Lyon. On souhaite arriver à Lyon à 15 h 12. À quelle heure doit-on partir ?<br><br>On doit ici faire une soustraction, on commence donc par convertir des heures en minutes pour pouvoir l'effectuer :<br>15 h 12 = 14 h + 1 h + 12 min = 14 h + 60 min + 12 min = 14 h 72<br>On effectue ensuite la soustraction :<br><br><div class=\"flexobject\"><table style=\"text-align: right;\"><tr><td></td><td>14</td><td>h</td><td>72</td></tr><tr><td>-</td><td>4</td><td>h</td><td>29</td></tr><tr style=\"border-top: solid 2px black;\"><td></td><td>10</td><td>h</td><td>43</td></tr></table></div>La voiture doit donc partir à 10 h 43."
 		],
 		"remarques": [
-			"Il existe d'autre unité de durée."
+			"Il existe d'autres unités de durée."
 		],
 		"infos": [
 			"<style>.table_seconde{display: grid;grid-template-columns: repeat(4, 1fr);grid-template-rows: repeat(2, auto);align-content: center;vertical-align: middle;text-align: center;border: solid 1px black;}.table_seconde div {border: solid 1px black;}.table_seconde div:nth-child(-n + 4){background-color: #C6FFAC;}.time_unit{flex-direction: column;border: solid 2px black;padding: 5px;}.time_unit div:first-child{font-weight: bold;}</style><div class=\"table_seconde\"><div><b>Seconde</b> (s)</div><div>Dixième de <b>seconde</b></div><div>Centième de <b>seconde</b></div><div>Millième de <b>seconde</b> (ms)</div><div>1 s</div><div>0,1 s</div><div>0,01 s</div><div>0,001 s = 1ms</div></div><br><div class=\"flexobject\"><div class=\"flexobject time_unit\"><div>Minute</div><div>1 min = 60 s</div></div><div class=\"flexobject time_unit\"><div>Heure</div><div>1 h = 60 min = 3 600 s</div></div><div class=\"flexobject time_unit\"><div>Jour</div><div>1 jour = 24 h = 1 440 min = 86 400 s</div></div><div class=\"flexobject time_unit\"><div>Semaine</div><div>1 semaine = 7 jour</div></div><div class=\"flexobject time_unit\"><div>Mois</div><div>1 mois peut avoir 28, 29, 30 ou 31 jours</div></div><div class=\"flexobject time_unit\"><div>Année</div><div>1 an peut avoir 365 ou 366 jours</div></div><div class=\"flexobject time_unit\"><div>Siècle</div><div>1 siècle = 100 ans</div></div><div class=\"flexobject time_unit\"><div>Millénaire</div><div>1 millénaire = 10 siècles = 1 000 ans</div></div></div>",
 			"On peut calculer la durée entre deux instants.",
-			"A partir d'un instant initial et d'une durée, on peut calculer l'instant final.",
-			"A partir d'un instant final et d'une durée, on peut calculer l'instant initial."
+			"À partir d'un instant initial et d'une durée, on peut calculer l'instant final.",
+			"À partir d'un instant final et d'une durée, on peut calculer l'instant initial."
 		]
 	},"échelle": {
 		"tags": [],
 		"definitions": [
-			"Sur un plan dit « <i>à l'échelle</i> », les longueurs sont proportionnelles aux longueurs réelles.<br>Le coefficient de proportionnalité obtenu en divisant les longueurs sur la carte par les longueurs réelles, toutes exprimées dans <b>la même unité</b>, s'appelle l'<span class=\"CRed\">échelle</span> du plan.<br>Echelle = <span class=\"formule\">$\\frac{Taille\\ plan}{Taille\\ réel}$</span>"
+			"Sur un plan dit « <i>à l'échelle</i> », les longueurs sont proportionnelles aux longueurs réelles.<br>Le coefficient de proportionnalité obtenu en divisant les longueurs sur la carte par les longueurs réelles, toutes exprimées dans <b>la même unité</b>, s'appelle l'<span class=\"CRed\">échelle</span> du plan.<br>Échelle = <span class=\"formule\">$\\frac{Taille\\ plan}{Taille\\ réelle}$</span>"
 		],
 		"exemples": [
-			"<div class=\"flexobject\"><div style=\"max-width: 10cm;\"><p>Sur le plan de la région ci-contre, l'échelle est indiqué en bas à droite.<br><span class=\"formule\">$\\frac{1}{400\\ 000}$</span><br>Cela signifie que 1 cm sur le plan correspond à 400&#8239;000 cm dans la réalité soit 4 km.</p></div><img src=\"/Images/Cours/Plan.png\" style=\"border-radius: 1cm;\"></div>",
-			"<img src=\"/Images/Cours/Voiture.png\"><p>Sur cette petite voiture, on trouve sur le fond une indication de l'échelle. ici $\\frac{1}{41}$</p>On a donc le tableau suivant :<div class=\"proportionnaltable_coef\"><table class=\"proportionnaltable\"><tr><th>Taille réel (cm)</th><td>41</td><td>?</td></tr><tr><th>Taille sur le modèle réduit (cm)</th><td>1</td><td>13</td></tr></table><img src=\"/Images/Cours/Coef5.svg\" style=\"max-height: 50px;\"></div><p>La taille réelle de cette voiture est donc 41 fois plus grande. Par exemple, ici le modèle réduit fait environ 13 cm de long, l'original fait donc 13 × 41 = 533cm soit 5m33 de long.</p>"
+			"<div class=\"flexobject\"><div style=\"max-width: 10cm;\"><p>Sur le plan de la région ci-contre, l'échelle est indiquée en bas à droite.<br><span class=\"formule\">$\\frac{1}{400\\ 000}$</span><br>Cela signifie que 1 cm sur le plan correspond à 400&#8239;000 cm dans la réalité soit 4 km.</p></div><img src=\"/Images/Cours/Plan.png\" style=\"border-radius: 1cm;\"></div>",
+			"<img src=\"/Images/Cours/Voiture.png\"><p>Sur cette petite voiture, on trouve sur le fond une indication de l'échelle. Ici $\\frac{1}{41}$</p>On a donc le tableau suivant :<div class=\"proportionnaltable_coef\"><table class=\"proportionnaltable\"><tr><th>Taille réelle (cm)</th><td>41</td><td>?</td></tr><tr><th>Taille sur le modèle réduit (cm)</th><td>1</td><td>13</td></tr></table><img src=\"/Images/Cours/Coef5.svg\" style=\"max-height: 50px;\"></div><p>La taille réelle de cette voiture est donc 41 fois plus grande. Par exemple, ici le modèle réduit fait environ 13 cm de long, l'original fait donc 13 × 41 = 533 cm soit 5 m 33 de long.</p>"
 		],
 		"infos": [
 			"La relation entre une longueur réelle et une longueur sur le plan est une relation de proportionnalité. L'échelle est alors le coefficient de proportionnalité."
@@ -616,8 +616,8 @@
 		"remarques": [
 			"La barre rouge indique la position de la virgule.",
 			"Dans le tableau est inscrit le nombre $516,762$ :<br>$516,762=(\\textcolor{#3CB3E3}{5}\\times100)+(\\textcolor{#56DCFF}{1}\\times10)+\\textcolor{#82FFFF}{6}+(\\textcolor{#ABDBFF}{7}\\times\\frac{1}{10})+(\\textcolor{#D5B7FF}{6}\\times\\frac{1}{100})+(\\textcolor{#FF93FF}{2}\\times\\frac{1}{1\\ 000})$<br>516 est alors la <span style=\"color: #FF7463\"><b>partie entière</b></span> et 0,762 la <span style=\"color: #FFDF68\"><b>partie décimale</b></span>.",
-			"Un nombre entier est un nombre dont la partie décimal est 0 (Ex : $5 = 5,0 = 5,00 = ...$)",
-			"Les zéro supplémentaire derrière la virgule <b>et</b> le dernier chiffre ne sont pas utile (Ex : $2,405\\textcolor{#e53935}{00}=2,405$)"
+			"Un nombre entier est un nombre dont la partie décimale est 0 (Ex : $5 = 5,0 = 5,00 = ...$)",
+			"Les zéros supplémentaires derrière la virgule <b>et</b> le dernier chiffre ne sont pas utiles (Ex : $2,405\\textcolor{#e53935}{00}=2,405$)"
 		],
 		"infos": [
 			"<p>Il est possible d'agrandir le tableau vu précédemment :</p>",
@@ -629,13 +629,13 @@
 	},"effectif": {
 		"tags": [],
 		"definitions": [
-			"L'<span class=\"CRed\">effectif</span> d'une valeur est le nombre de fois où celle-ci apparait dans la série de valeurs.",
+			"L'<span class=\"CRed\">effectif</span> d'une valeur est le nombre de fois où celle-ci apparaît dans la série de valeurs.",
 			"L'<span class=\"CRed\">effectif total</span> est le nombre total de valeurs d'une série."
 		]
 	},"encadrer": {
 		"tags": [],
 		"definitions": [
-			"<span class=\"CRed\">Encadrer</span> un nombre, c'est trouver un nombre plus petit et un nombre plus grand que ce nombre."
+			"<span class=\"CRed\">Encadrer</span> un nombre, c'est trouver un nombre plus petit et un nombre plus grand lui."
 		],
 		"remarques": [
 			"La différence entre les deux nombres trouvés est appelée l'<span class=\"CRed\">amplitude</span>."
@@ -649,7 +649,7 @@
 	},"entier": {
 		"tags": [],
 		"definitions": [
-			"Les mots <b>vingt</b> et <b>cent</b> prennent la marque du pluriel à trois conditions :<ul><li>Ils doivent être multipliés (<b>cinq-cent<u>s</u></b> = $5 \\times 100$);</li><li>Ils doivent terminer le nombre (<b>quatre-vingt<u>s</u></b>, mais <b>quatre-vingt-sept</b>); </li></ul>"
+			"Les mots <b>vingt</b> et <b>cent</b> prennent la marque du pluriel à deux conditions :<ul><li>Ils doivent être multipliés (<b>cinq-cent<u>s</u></b> = $5 \\times 100$);</li><li>Ils doivent terminer le nombre (<b>quatre-vingt<u>s</u></b>, mais <b>quatre-vingt-sept</b>); </li></ul>"
 		],
 		"exemples": [
 			"Le nombre : <span style=\"color: #CB2F4C\">3</span> <span style=\"color: #E29B31\">723</span> <span style=\"color: #34D15B\">496</span> <span style=\"color: #2189C7\">017</span> est lu <span style=\"color: #CB2F4C\">trois-milliards</span>-<span style=\"color: #E29B31\">sept-cent-vingt-trois-millions</span>-<span style=\"color: #34D15B\">quatre-cent-quatre-vingt-seize-mille</span>-<span style=\"color: #2189C7\">dix-sept</span><br>Le premier 7 correspond aux centaines de millions.<br>Le 7 suivant correspond aux unités."
@@ -682,7 +682,7 @@
 	},"étendue": {
 		"tags": [],
 		"definitions": [
-			"L' <span class=\"CRed\">étendue</span> d'une série de valeurs est la différence entre la valeur maximale et la valeur minimale :<br>$\\text{Étendue} = \\text{valeur max} - \\text{valeur min}$"
+			"L'<span class=\"CRed\">étendue</span> d'une série de valeurs est la différence entre la valeur maximale et la valeur minimale :<br>$\\text{Étendue} = \\text{valeur max} - \\text{valeur min}$"
 		]
 	},"événement": {
 		"tags": [],
@@ -695,7 +695,7 @@
 	},"événement élémentaire": {
 		"tags": [],
 		"definitions": [
-			"On appelle <span class=\"CRed\">événement élémentaire</span>, un événement qui ne contient qu'<b>une seule issue</b>."
+			"On appelle <span class=\"CRed\">événement élémentaire</span> un événement qui ne contient qu'<b>une seule issue</b>."
 		]
 	},"événement impossible": {
 		"tags": [],
@@ -705,12 +705,12 @@
 	},"événement certain": {
 		"tags": [],
 		"definitions": [
-			"On appelle <span class=\"CRed\">événement certain</span> un événement qui se réalise toujours, il contient <b>toutes les issues</b>."
+			"On appelle <span class=\"CRed\">événement certain</span> un événement qui se réalise toujours : il contient <b>toutes les issues</b>."
 		]
 	},"événement contraire": {
 		"tags": [],
 		"definitions": [
-			"L' <span class=\"CRed\">événement contraire</span> d'un événement A contient toutes les issues qui ne réalise pas A. On le note « non A » ou encore $\\bar{\\mathbf{A}}$."
+			"L' <span class=\"CRed\">événement contraire</span> d'un événement A contient toutes les issues qui ne réalisent pas A. On le note « non A » ou encore $\\bar{\\mathbf{A}}$."
 		]
 	},"événement incompatible": {
 		"tags": [],
@@ -720,11 +720,11 @@
 	},"expérience aléatoire": {
 		"tags": [],
 		"definitions": [
-			"Une <span class=\"CRed\">expérience aléatoire</span> est une expérience dont on connait tous les résultats possibles sans pouvoir déterminer de manière certaine lequel va se produire.<br>Chaque résultat possible est appelé une <span class=\"CRed\">issue</span>.",
+			"Une <span class=\"CRed\">expérience aléatoire</span> est une expérience dont on connaît tous les résultats possibles sans pouvoir déterminer de manière certaine lequel va se produire.<br>Chaque résultat possible est appelé une <span class=\"CRed\">issue</span>.",
 			"Une expérience à deux épreuves étudie le résultat obtenu après avoir effectué deux fois la même expérience aléatoire."
 		],
 		"exemples": [
-			"<ul><li>Lancer de dé</li><li>Lancer de pièce</li><li>Loterie, Loto</li></ul>"
+			"<ul><li>Lancer d'un dé</li><li>Lancer d'une pièce</li><li>Loterie, Loto</li></ul>"
 		]
 	},"expression littérale": {
 		"tags": [],
@@ -750,10 +750,10 @@
 	},"fonction linéaire": {
 		"tags": [],
 		"definitions": [
-			"Soit <span class=\"CBlue\">$a$</span> un nombre quelconque. Une <span class=\"CRed\">fonction linéaire</span> est une fonction qui, à un nombre $x$, fait correspondre le nombre $\\textcolor{#039be5}{a}\\times x$. On la note $f(x)=\\textcolor{#039be5}{a}\\times x$"
+			"Soit <span class=\"CBlue\">$a$</span> un nombre quelconque. Une <span class=\"CRed\">fonction linéaire</span> est une fonction qui, à un nombre $x$, fait correspondre le nombre $\\textcolor{#039be5}{a}\\times x$. On la note $f(x)=\\textcolor{#039be5}{a}\\times x$."
 		],
 		"proprietes": [
-			"Un tableau de valeurs d'une fonction linéaire est un <span class=\"CRed\"> tableau de proportionnalité</span> de coefficient de proportionnalité <span class=\"CBlue\">$a$</span>.",
+			"Un tableau de valeurs d'une fonction linéaire est un <span class=\"CRed\">tableau de proportionnalité</span> de coefficient de proportionnalité <span class=\"CBlue\">$a$</span>.",
 			"Dans un repère, la représentation graphique d'une fonction linéaire $f(x)=\\textcolor{#039be5}{a}x$ est une droite qui passe par l'origine du repère."
 		]
 	},"fonction affine": {
@@ -763,14 +763,14 @@
 		],
 		"proprietes": [
 			"Une fonction <b>linéaire</b> est une fonction <b>affine</b> particulière. (<span class=\"CBlue\">$b$</span> = 0)",
-			"Une fonction affine est une droite non verticale et inversement.",
+			"Une fonction affine est représenter par une droite non verticale et une droite non verticale représente une fonction affine.",
 			"Si <span class=\"CBlue\">$a$</span> = 0 on dit que la fonction est <b>constante</b>. C'est alors une droite horizontale.",
 			"Une fonction affine coupe l'axe vertical en ordonnée <span class=\"CBlue\">$b$</span>."
 		]
 	},"forme fractionnaire": {
 		"tags": [],
 		"definitions": [
-			"Le <b>quotient</b> de deux nombre (<span class=\"CBlue\">▲</span> et <span class=\"CGreen\">●</span>) peut être représenté sous <span class=\"CRed\">forme fractionnaire</span> <span style=\"font-size: 16pt;\">$(\\frac{\\textcolor{#039be5}{▲}}{\\textcolor{#43a047}{●}})$</span>. Lorsque les nombres sont entiers on parle alors de <span class=\"CRed\">fraction</span>."
+			"Le <b>quotient</b> de deux nombres (<span class=\"CBlue\">▲</span> et <span class=\"CGreen\">●</span>) peut être représenté sous <span class=\"CRed\">forme fractionnaire</span> <span style=\"font-size: 16pt;\">$(\\frac{\\textcolor{#039be5}{▲}}{\\textcolor{#43a047}{●}})$</span>. Lorsque les nombres sont entiers on parle alors de <span class=\"CRed\">fraction</span>."
 		],
 		"infos": [
 			"<table><tr class=\"CRed\"><td style=\"border-bottom: solid 2px black; padding: 0px 5px;\">4</td><td>←</td><td>Numérateur</td></tr><tr class=\"CGreen\"><td style=\"padding: 0px 5px;\">5</td><td>←</td><td>Dénominateur</td></tr></table>",
@@ -788,13 +788,13 @@
 			"Si $a$ et $b$ désignent des nombres entiers relatifs alors le signe de la fraction $\\frac{a}{b}$ est :<ul><li><b>Positif</b> si les deux nombres sont du même signe.</li><li><b>Négatif</b> si les deux nombres sont de signes contraires.</li></ul>",
 			"Pour effectuer la <b>somme</b> (ou la <b>différence</b>) de deux nombres en écriture fractionnaire de <b>même dénominateur</b> :<ul><li>On garde le dénominateur commun.</li><li>On additionne (ou on soustrait) les numérateurs.</li></ul>",
 			"Pour effectuer la <b>somme</b> (ou la <b>différence</b>) de deux nombres en écriture fractionnaire de <b>dénominateur quelconque</b>, il faut tout d'abord <b>les mettre au même dénominateur</b> avant d'utiliser la propriété précédente.",
-			"Pour multiplier deux nombres en écriture fractionnaire on :<br><ul><li>Multiplie les numérateurs entre eux.</li><li>Multiplie les dénominateurs entre eux.</li></ul><p>Soient <span class=\"CRed\">$a$</span>, <span class=\"CRed\">$b$</span>, <span class=\"CBlue\">$c$</span> et <span class=\"CBlue\">$d$</span> quatres nombres (avec $\\textcolor{#e53935}{b}\\ne0$ et $\\textcolor{#039be5}{d}\\ne0$) :</p><p class=\"formule\">$\\frac{\\textcolor{#e53935}{a}}{\\textcolor{#e53935}{b}}\\times\\frac{\\textcolor{#039be5}{c}}{\\textcolor{#039be5}{d}}=\\frac{\\textcolor{#e53935}{a}\\times\\textcolor{#039be5}{c}}{\\textcolor{#e53935}{b}\\times\\textcolor{#039be5}{d}}$</p>",
+			"Pour multiplier deux nombres en écriture fractionnaire on :<br><ul><li>Multiplie les numérateurs entre eux.</li><li>Multiplie les dénominateurs entre eux.</li></ul><p>Soient <span class=\"CRed\">$a$</span>, <span class=\"CRed\">$b$</span>, <span class=\"CBlue\">$c$</span> et <span class=\"CBlue\">$d$</span> quatre nombres (avec $\\textcolor{#e53935}{b}\\ne0$ et $\\textcolor{#039be5}{d}\\ne0$) :</p><p class=\"formule\">$\\frac{\\textcolor{#e53935}{a}}{\\textcolor{#e53935}{b}}\\times\\frac{\\textcolor{#039be5}{c}}{\\textcolor{#039be5}{d}}=\\frac{\\textcolor{#e53935}{a}\\times\\textcolor{#039be5}{c}}{\\textcolor{#e53935}{b}\\times\\textcolor{#039be5}{d}}$</p>",
 			"<b>Diviser</b> par un nombre non nul revient à <b>multiplier par son inverse</b>.<br>Soient <span class=\"CRed\">$a$</span> et <span class=\"CBlue\">$b$</span> avec $\\textcolor{#039be5}{b}\\ne0$, alors $\\textcolor{#e53935}{a}\\div\\textcolor{#039be5}{b}=\\textcolor{#e53935}{a}\\times\\frac{1}{\\textcolor{#039be5}{b}}$"
 		],
 		"exemples": [
-			"<div><span class=\"center\">Unité</span><div class=\"accolade_bottom\"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><table class=\"borderfull\" style=\"width: 100%; border: solid 2px black;\"><tr style=\"height: 30px;\"><td style=\"background-color: #7B29C1;\"></td><td></td><td></td><td></td></tr></table><div style=\"width: 100%; display: grid; grid-template-columns: repeat(4, 1fr);\"><div class=\"accolade_top\" style=\"grid-column: 2;\"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><div style=\"grid-column: 2; grid-row: 2; text-align: center;\">Découpage régulier</div></div><p>Ici la partie violette correspond à $\\frac{1}{4}$ de l'unité.</p><table><tr><td style=\"border-bottom: solid 2px black; padding: 0px 5px;\">1</td><td>←</td><td>Nombre de part colorié</td></tr><tr><td style=\"padding: 0px 5px;\">4</td><td>←</td><td>Nombre de part total</td></tr></table><table class=\"borderfull\" style=\"width: 100%;border: solid 2px black;\"><tr style=\"height: 15px;\"><td style=\"background-color: #7B29C1;\"></td><td></td><td></td><td></td></tr><tr style=\"height: 15px;\"><td style=\"background-color: #7B29C1;\"></td><td></td><td></td><td></td></tr></table><p>Ici la partie violette correspond à $\\frac{2}{8}$ de l'unité. Cette fraction représente la même quantité que $\\frac{1}{4}$.</p></div>",
+			"<div><span class=\"center\">Unité</span><div class=\"accolade_bottom\"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><table class=\"borderfull\" style=\"width: 100%; border: solid 2px black;\"><tr style=\"height: 30px;\"><td style=\"background-color: #7B29C1;\"></td><td></td><td></td><td></td></tr></table><div style=\"width: 100%; display: grid; grid-template-columns: repeat(4, 1fr);\"><div class=\"accolade_top\" style=\"grid-column: 2;\"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><div style=\"grid-column: 2; grid-row: 2; text-align: center;\">Découpage régulier</div></div><p>Ici la partie violette correspond à $\\frac{1}{4}$ de l'unité.</p><table><tr><td style=\"border-bottom: solid 2px black; padding: 0px 5px;\">1</td><td>←</td><td>Nombre de parts coloriées</td></tr><tr><td style=\"padding: 0px 5px;\">4</td><td>←</td><td>Nombre de parts total</td></tr></table><table class=\"borderfull\" style=\"width: 100%;border: solid 2px black;\"><tr style=\"height: 15px;\"><td style=\"background-color: #7B29C1;\"></td><td></td><td></td><td></td></tr><tr style=\"height: 15px;\"><td style=\"background-color: #7B29C1;\"></td><td></td><td></td><td></td></tr></table><p>Ici la partie violette correspond à $\\frac{2}{8}$ de l'unité. Cette fraction représente la même quantité que $\\frac{1}{4}$.</p></div>",
 			"<p>L'unité (ici la baguette de pain) est partagée en 5 parts égales.</p><img src=\"/Images/Cours/Axe graduee 3.svg\" style=\"max-height: 2cm;\"><p>La position du point M est $\\frac{3}{5}$. Celle du point N est $\\frac{7}{5}$.</p>",
-			"Léa a 20€. Elle en dépense les $\\frac{3}{4}$ pour acheter un DVD. Combien a-t-elle dépensé ?<br>On effectue la multiplication : $20 \\times \\frac{3}{4} = 20 \\times 0,75 = 15$, Elle aura donc  dépensé 15€.",
+			"Léa a 20 €. Elle en dépense les $\\frac{3}{4}$ pour acheter un DVD. Combien a-t-elle dépensé ?<br>On effectue la multiplication : $20 \\times \\frac{3}{4} = 20 \\times 0,75 = 15$. Elle aura donc dépensé 15 €.",
 			"<div class=\"frac\">$\\frac{6}{7}=\\frac{6\\ \\times\\ \\textcolor{#e53935}{4}}{7\\ \\times\\ \\textcolor{#e53935}{4}}=\\frac{24}{28}$</div>",
 			"<div class=\"frac\">$\\frac{32}{24}=\\frac{32\\ \\div\\ \\textcolor{#e53935}{8}}{24\\ \\div\\ \\textcolor{#e53935}{8}}=\\frac{4}{3}$</div>",
 			"<table><tr style=\"text-align: center;\"><td class=\"frac\">$\\frac{2}{4}$</td><td class=\"frac\">+</td><td class=\"frac\">$\\frac{1}{4}$</td><td class=\"frac\">=</td><td class=\"frac\">$\\frac{2+1}{4}=\\frac{3}{4}$</td></tr><tr><td><img src=\"/Images/Cours/Disque Fraction4.svg\" style=\"max-width: 3cm;\"></td><td class=\"frac\">+</td><td><img src=\"/Images/Cours/Disque Fraction5.svg\" style=\"max-width: 3cm;\"></td><td class=\"frac\">=</td><td><img src=\"/Images/Cours/Disque Fraction6.svg\" style=\"max-width: 3cm;\"></td></tr></table>",
@@ -809,14 +809,14 @@
 	},"fraction décimale":{
 		"tags": ["fraction", "fractionnaire"],
 		"definitions": [
-			"Une <span class='CRed'>fraction décimale</span> est une fraction dont le dénominateur est 10, 100, 1 000 etc..",
+			"Une <span class='CRed'>fraction décimale</span> est une fraction dont le dénominateur est 10, 100, 1 000 etc.",
 			"Un nombre décimal peut s'écrire comme fraction décimale. Il suffit de prendre le dénominateur correspondant au rang du dernier chiffre après la virgule."
 		],
 		"remarques": [
 			"Une fraction décimale admet <b>plusieurs</b> écritures."
 		],
 		"exemples": [
-			"<div class=\"flexobject\"><ul><li>$0,\\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{10}}$ un <span class=\"CRed\">dixième</span></li><li>$0,00\\ \\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{1\\ 000}}$ un <span class=\"CRed\">millième<span></li></ul><ul><li>$0,0\\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{100}}$ un <span class=\"CRed\">centième</span></li><li>$0,00\\ 0\\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{10\\ 000}}$ un <spanclass=\"CRed\">dix-millième</span></li></ul></div>",
+			"<div class=\"flexobject\"><ul><li>$0,\\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{10}}$ un <span class=\"CRed\">dixième</span></li><li>$0,00\\ \\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{1\\ 000}}$ un <span class=\"CRed\">millième</span></li></ul><ul><li>$0,0\\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{100}}$ un <span class=\"CRed\">centième</span></li><li>$0,00\\ 0\\textcolor{#CB2F4C}{1}=\\frac{1}{\\textcolor{#CB2F4C}{10\\ 000}}$ un <span class=\"CRed\">dix-millième</span></li></ul></div>",
 			"<ul><li>$\\frac{10}{10}=\\frac{100}{100}=\\frac{1\\ 000}{1\\ 000}=\\frac{10\\ 000}{10\\ 000}$</li><li>$\\frac{1}{10}=\\frac{10}{100}=\\frac{100}{1\\ 000}=\\frac{1\\ 000}{10\\ 000}$</li><li>$\\frac{42}{100}=\\frac{40}{100}+\\frac{2}{100}=\\frac{4}{10}+ \\frac{2}{100}$</li></ul>",
 			"Dans 35,2<b>5</b> le dernier chiffre est le chiffre des <b>centièmes</b>.<br>On utilise donc 100 comme dénominateur pour la fraction décimale.<br><ul><li>$35,25 = \\frac{3\\ 525}{100}$</li></ul>",
 			"Dans 102,02<b>7</b> le dernier chiffre est le chiffre des <b>millièmes</b>.<br>On utilise donc 1 000 comme dénominateur pour la fraction décimale.<br><ul><li>$102,027 = \\frac{102\\ 027}{1\\ 000}$</li></ul>"
@@ -834,7 +834,7 @@
 			"Rendre irréductible revient à diviser le numérateur et le dénominateur par leur plus grand diviseur commun."
 		],
 		"infos": [
-			"Rendre une fraction irréductible, c'est la simplifier autant que possible.<br>Cela revient à trouver des diviseurs communs au numérateur et dénominateur et simplifier.<br>Pour cela on utilise la décomposition en produit de facteur premiers."
+			"Rendre une fraction irréductible, c'est la simplifier autant que possible.<br>Cela revient à trouver des diviseurs communs au numérateur et dénominateur et simplifier.<br>Pour cela on utilise la décomposition en produit de facteurs premiers."
 		]
 	},"fréquence": {
 		"tags": [],
@@ -852,7 +852,7 @@
 			"Une <span class=\"CRed\">grandeur</span> est la caractéristique chimique, physique ou biologique d'une substance, d'un corps, d'un phénomène."
 		],
 		"exemples": [
-			"<div class=\"flexobject\"><ul><li>Longueur</li><li>Masse</li><li>Temps</li></ul><ul><li>Volume</li><li>Angles</li><li>Superficie</li></ul><ul><li>Température</li><li>Prix</li><li>Etc...</li></ul></div>"
+			"<div class=\"flexobject\"><ul><li>Longueur</li><li>Masse</li><li>Temps</li></ul><ul><li>Volume</li><li>Angles</li><li>Superficie</li></ul><ul><li>Température</li><li>Prix</li><li>Etc.</li></ul></div>"
 		]
 	},"hauteur": {
 		"tags": [],
@@ -877,14 +877,14 @@
 	},"image": {
 		"tags": [],
 		"definitions": [
-			"Dans une fonction qui à $x$ associe $f(x)$ on dit que :<ul><li>$f(x)$ est l'<span class=\"CRed\">image</span> de $x$ par la fonction $f$.</li><li>$x$ est un <span class=\"CRed\">antécédent</span> de $f(x)$ par la fonction $f$</li></ul>"
+			"Dans une fonction qui à $x$ associe $f(x)$ on dit que :<ul><li>$f(x)$ est l'<span class=\"CRed\">image</span> de $x$ par la fonction $f$.</li><li>$x$ est un <span class=\"CRed\">antécédent</span> de $f(x)$ par la fonction $f$.</li></ul>"
 		]
 	},"inégalité triangulaire": {
 		"tags": [],
 		"proprietes": [
-			"<b>Si</b> le point M appartient au segment [AB], <b>alors</b>  AB = AM + MB.",
+			"<b>Si</b> le point M appartient au segment [AB], <b>alors</b> AB = AM + MB.",
 			"<b>Si</b> AB = AM + MB, <b>alors</b> le point M appartient au segment [AB].",
-			"<b>Si</b> le point N n'appartient pas au segment [AB], <b>alors</b>  AB < AN + NB.",
+			"<b>Si</b> le point N n'appartient pas au segment [AB], <b>alors</b> AB < AN + NB.",
 			"<b>Si</b> AB < AN + NB, <b>alors</b> le point N n'appartient pas au segment [AB]."
 		],
 		"exemples": [
@@ -936,18 +936,18 @@
 	},"masse": {
 		"tags": [],
 		"definitions": [
-			"Dans le système international, l'unité de masses est le <span class=\"CRed\">gramme</span> noté «<b><span class=\"CRed\">g</span></b>».",
+			"Dans le système international, l'unité de masse est le <span class=\"CRed\">gramme</span> noté «<b><span class=\"CRed\">g</span></b>».",
 			"Lorsque l’on utilise des masses très grandes, on passe régulièrement en <span class=\"CRed\">tonne</span> noté «<b><span class=\"CRed\">t</span></b>». Une tonne est égale à 1 000 kg. "
 		],
 		"infos": [
 			"<div class=\"tableau_unite\"><div style=\"grid-column: 1 / 3; font-weight: bold; font-size: 20px;\">Unités de masse</div><div class=\"CRed\" style=\"font-weight: bold;\">Multiples</div><div class=\"CGreen\" style=\"font-weight: bold;\">Sous-Multiples</div><div><b>Décagramme</b><br>1 dag = 10 g</div><div><b>Décigramme</b><br>1 dg = 0,1 g</div><div><b>Hectogramme</b><br>1 hg = 10 dag = 100 g</div><div><b>Centigramme</b><br>1 cg = 0,1 dg = 0,01 g</div><div><b>Kilogramme</b><br>1 kg = 10 hg = 100 dag = 1 000 g</div><div><b>Milligramme</b><br>1 mg = 0,1 cg = 0,01 dg = 0,001 g</div></div>",
-			"<p>Tableau de conversion :</p><style>.p-table {display: grid;grid-template-columns: repeat(7, 1fr);grid-template-rows: auto repeat(2, 30px);align-content: center;vertical-align: middle;text-align: center;border: solid 1px black;}.p-table > div:nth-child(-n + 7){background-color: #ccc0da;font-size: 8pt;font-weight: bold;}.p-table div{border: solid 1px black;align-content: center;font-size: 12pt;}</style><div class=\"p-table\"><div>Kilogramme<br><span style=\"font-size: 16pt;\">kg</span></div><div>Hectogramme<br><span style=\"font-size: 16pt;\">hg</span></div><div>Decagramme<br><span style=\"font-size: 16pt;\">dag</span></div><div>gramme<br><span style=\"font-size: 16pt;\">g</span></div><div>Décigramme<br><span style=\"font-size: 16pt;\">dg</span></div><div>Centigramme<br><span style=\"font-size: 16pt;\">cg</span></div><div>Milligramme<br><span style=\"font-size: 16pt;\">mg</span></div><div></div><div>2</div><div>7</div><div>0</div><div>0</div><div></div><div></div><div></div><div></div><div>0,</div><div>0</div><div>0</div><div>5</div><div></div></div>"
+			"<p>Tableau de conversion :</p><style>.p-table {display: grid;grid-template-columns: repeat(7, 1fr);grid-template-rows: auto repeat(2, 30px);align-content: center;vertical-align: middle;text-align: center;border: solid 1px black;}.p-table > div:nth-child(-n + 7){background-color: #ccc0da;font-size: 8pt;font-weight: bold;}.p-table div{border: solid 1px black;align-content: center;font-size: 12pt;}</style><div class=\"p-table\"><div>Kilogramme<br><span style=\"font-size: 16pt;\">kg</span></div><div>Hectogramme<br><span style=\"font-size: 16pt;\">hg</span></div><div>Décagramme<br><span style=\"font-size: 16pt;\">dag</span></div><div>gramme<br><span style=\"font-size: 16pt;\">g</span></div><div>Décigramme<br><span style=\"font-size: 16pt;\">dg</span></div><div>Centigramme<br><span style=\"font-size: 16pt;\">cg</span></div><div>Milligramme<br><span style=\"font-size: 16pt;\">mg</span></div><div></div><div>2</div><div>7</div><div>0</div><div>0</div><div></div><div></div><div></div><div></div><div>0,</div><div>0</div><div>0</div><div>5</div><div></div></div>"
 		],
 		"exemples": [
 			"<table style=\"width: 100%; text-align: center;\"><tr><td>2,7 hg = 2 700 dg</td><td>5 cg = 0,005 dag</td></tr></table>"
 		],
 		"remarques": [
-			"Il existe aussi le <span class=\"CRed\">quintal</span> qui représente 100kg. On le note «<b><span class=\"CRed\">q</span></b>»."
+			"Il existe aussi le <span class=\"CRed\">quintal</span> qui représente 100 kg. On le note «<b><span class=\"CRed\">q</span></b>»."
 		]
 	},"médiane": {
 		"tags": [],
@@ -977,7 +977,7 @@
 			"<img src=\"/Images/Cours/Mediatrice6.svg\" style=\"max-height: 5cm;\">"
 		],
 		"infos": [
-			"<p>Pour construire une médiatrice, on utilise le compas. .</p><div class=\"flexobject\"><div id=\"Mediatrice\" class=\"animation center\" width=\"480\" height=\"360\"></div><div style=\"flex: 1 1 8cm;\">On construit un <i>oeil de chat</i>.<ul><li>On prend un écartement du compas plus grand que la moitié du segment.</li><li>On pointe sur A et on construit un arc de cercle.</li><li>On pointe sur B et on construit un arc de cercle avec le même écartement que précédemment.</li><li>On relie les deux points d'intersections obtenus pour obtenir la <b>médiatrice</b>.</li></ul></div></div>",
+			"<p>Pour construire une médiatrice, on utilise le compas.</p><div class=\"flexobject\"><div id=\"Mediatrice\" class=\"animation center\" width=\"480\" height=\"360\"></div><div style=\"flex: 1 1 8cm;\">On construit un <i>oeil de chat</i>.<ul><li>On prend un écartement du compas plus grand que la moitié du segment.</li><li>On pointe sur A et on construit un arc de cercle.</li><li>On pointe sur B et on construit un arc de cercle avec le même écartement que précédemment.</li><li>On relie les deux points d'intersection obtenus pour obtenir la <b>médiatrice</b>.</li></ul></div></div>",
 			"<p><u><b><i>Démonstration :</i></b></u><br>Soit ABC un triangle. Soit M le point d'intersection des médiatrices de [AB] et de [BC].<br>On a donc AM = BM et BM = CM, donc AM = CM.<br>Donc M appartient à la médiatrice de [AC] et donc les trois médiatrices du triangle sont concourantes.</p>"
 		]
 	},"milieu": {
@@ -996,7 +996,7 @@
 	},"multiple": {
 		"tags": [],
 		"definitions": [
-			"Lorsque le reste de la division euclidienne est <b>nul</b> on dit alors que le <b>dividende</b> est un <span class=\"CRed\">multiple</span> du <b>diviseur</b>. On dit aussi que le <b>dividende</b> est <span class=\"CRed\">divisible</span> par le <b>diviseur</b>.",
+			"Lorsque le reste de la division euclidienne est <b>nul</b>, on dit alors que le <b>dividende</b> est un <span class=\"CRed\">multiple</span> du <b>diviseur</b>. On dit aussi que le <b>dividende</b> est <span class=\"CRed\">divisible</span> par le <b>diviseur</b>.",
 			"Un nombre entier $\\textcolor{#43a047}{a}$ est un <span class=\"CRed\">multiple</span> d'un nombre entier $\\textcolor{#039be5}{b}$ ($\\textcolor{#039be5}{b}\\ne0$) lorsque le reste de la division euclidienne de $\\textcolor{#43a047}{a}$ par $\\textcolor{#039be5}{b}$ est 0. <br>On dit aussi que $\\textcolor{#039be5}{b}$ est le <span class=\"CRed\">diviseur</span> de $\\textcolor{#43a047}{a}$ ou que $\\textcolor{#43a047}{a}$ est <span class=\"CRed\">divisible</span> par $\\textcolor{#039be5}{b}$."
 		],
 		"exemples":[
@@ -1010,7 +1010,7 @@
 			"Les nombres <span class=\"CRed\">négatifs</span> sont les nombres <b>inférieurs ou égaux à zéro</b> ($\\le 0$).<br>Ils s'écrivent avec le signe « - » placé devant eux."
 		],
 		"exemples": [
-			"-8 ; -17 ; -6,3 ; -42,72 ; -2025 ; etc..."
+			"-8 ; -17 ; -6,3 ; -42,72 ; -2025 ; etc."
 		]
 	},"nombre premier": {
 		"tags": [],
@@ -1020,7 +1020,7 @@
 		"exemples": [
 			"Le nombre 11 est premier car 11 n'est divisible que par 1 et 11.",
 			"Le nombre 12 n'est pas premier car il est divisible par 1, 2, 3, 4, 6 et 12.",
-			"<p style=\"font-style: italic;\"> Les nombres premiers compris entre 1 et 50 sont :</p><div style=\"display: flex; gap: 5px;\"><div>❤️</div><div style=\"border: 2px solid var(--Cred); padding: 0 5px;\">2 ; 3 ; 5 ; 7 ; 11 ; 13 ; 17 ; 19 </div><div style=\"border: 2px solid transparent;\">; 23 ; 29 ; 31 ; 37 ; 41 ; 43 ; 47</div></div>"
+			"<p style=\"font-style: italic;\"> Les nombres premiers inférieurs à 50 sont :</p><div style=\"display: flex; gap: 5px;\"><div>❤️</div><div style=\"border: 2px solid var(--Cred); padding: 0 5px;\">2 ; 3 ; 5 ; 7 ; 11 ; 13 ; 17 ; 19 </div><div style=\"border: 2px solid transparent;\">; 23 ; 29 ; 31 ; 37 ; 41 ; 43 ; 47</div></div>"
 		],
 		"remarques": [
 			"Le nombre 1 n'est pas un nombre premier car il n'a qu'un seul diviseur : lui-même.",
@@ -1128,7 +1128,7 @@
 			"Deux droites <span class=\"CRed\">perpendiculaires</span> sont deux droites qui se coupent en formant <span class=\"CRed\">quatre angles droits</span>."
 		],
 		"proprietes": [
-			"<b>Si</b> deux droites sont parallèles et que l'une d'elle est perpendiculaire a une troisième droite, <b>alors</b> cette troisième droite est aussi perpendiculaire à l'autre."
+			"<b>Si</b> deux droites sont parallèles et que l'une d'elles est perpendiculaire à une troisième droite, <b>alors</b> cette troisième droite est aussi perpendiculaire à l'autre."
 		],
 		"remarques": [
 			"$(d')$ se lit \"d prime\".",
@@ -1141,7 +1141,7 @@
 	},"perspective cavalière": {
 		"tags": [],
 		"definitions": [
-			"La <span class=\"CRed\">perspective cavalière</span> est une représentation plane d'un solide avec :<ul><li>La face avant en vraie grandeur ;</li><li>Conservation des parallélisme et des alignements ;</li><li>La profondeur représentée par des arêtes <b>obliques</b> et plus courte que la réalité ;</li><li>Les arêtes cachées en pointillés.</li></ul>"
+			"La <span class=\"CRed\">perspective cavalière</span> est une représentation plane d'un solide avec :<ul><li>La face avant en vraie grandeur ;</li><li>Conservation des parallélismes et des alignements ;</li><li>La profondeur représentée par des arêtes <b>obliques</b> et plus courtes que la réalité ;</li><li>Les arêtes cachées en pointillés.</li></ul>"
 		],
 		"exemples": [
 			"<p>La figure ci-dessous représente le parallélépipède rectangle ABCDEFGH en perspective cavalière.</p><img src=\"/Images/Cours/Perspective1.svg\" style=\"max-height: 7cm;\">",
@@ -1150,13 +1150,13 @@
 	},"pi": {
 		"tags": [],
 		"definitions": [
-			"Le nombre <span class=\"CRed\">pi</span> est une constante liée au cercle. Elle est égale au périmètre d'un cercle de diamètre 1. Ce nombre ne peut être écrit de manière exacte, on le note donc avec la lettre grec <b><span class=\"CRed\">π</span></b> (pi)."
+			"Le nombre <span class=\"CRed\">pi</span> est une constante liée au cercle. Elle est égale au périmètre d'un cercle de diamètre 1. Ce nombre ne peut être écrit de manière exacte, on le note donc avec la lettre grecque <b><span class=\"CRed\">π</span></b> (pi)."
 		],
 		"remarques": [
 			"$\\pi$ représente un nombre particulier. $\\pi \\approx 3,1415$.",
 			"Il existe la journée de <b>PI</b> le 14 mars (en anglais 03/14).",
 			"$\\pi \\approx 3,1415$.",
-			"π est un nombre décimal qui a une infinité de chiffre après la virgule. On dit que c'est un nombre univers car il contient tous les nombres possibles parmi ses décimales."
+			"π est un nombre décimal qui a une infinité de chiffres après la virgule. On dit que c'est un nombre univers car il contient tous les nombres possibles parmi ses décimales."
 		],
 		"infos": [
 			"<a href=\"http://www.lumni.fr/video/qu-est-ce-que-le-nombre-pi\" target=\"_blank\" class=\"external_link\">➤ Qu'est-ce que le nombre Pi ? - Vidéo Lumni (2 min 35)</a>"
@@ -1167,7 +1167,7 @@
 			"En géométrie, un <span class=\"CRed\">point</span> est représenté par une croix. On peut alors lui donner un nom en utilisant une lettre majuscule en bâtons."
 		],
 		"remarques": [
-			"Sur une figure, deux points <b>distincts</b> (c'est-à-dire qui ne sont pas confondus) ont un nom différent"
+			"Sur une figure, deux points <b>distincts</b> (c'est-à-dire qui ne sont pas confondus) ont un nom différents"
 		],
 		"exemples": [
 			"<img src=\"/Images/Cours/Point.svg\" style=\"max-height: 1.5cm;\">"
@@ -1175,7 +1175,7 @@
 	},"polygone": {
 		"tags": [],
 		"definitions": [
-			"Un <span class=\"CRed\">polygone</span> est une figure géomètrique à plusieurs côtés."
+			"Un <span class=\"CRed\">polygone</span> est une figure géométrique à plusieurs côtés."
 		],
 		"infos": [
 			"<table><tr style=\"font-weight: bold; font-size: 14pt;\"><th style=\"text-align: right;\">POLY</th><th>-</th><th>GONE</th></tr><tr><td style=\"text-align: right;\">Plusieurs</td><td></td><td>Côtés</td></tr></table>"
@@ -1183,22 +1183,22 @@
 	},"positif": {
 		"tags": [],
 		"definitions": [
-			"Les nombres <span class=\"CRed\">positifs</span> sont les nombres <b>supérieurs ou égaux à zéro</b> ($\\ge 0$).<br>Ils s'écrivent seul ou avec le signe « + » placé devant eux."
+			"Les nombres <span class=\"CRed\">positifs</span> sont les nombres <b>supérieurs ou égaux à zéro</b> ($\\ge 0$).<br>Ils s'écrivent seuls ou avec le signe « + » placé devant eux."
 		],
 		"exemples": [
-			"2 ; 7 ; 3,5 ; +4 ; +6 ; +31,62 ; 2024 ; etc..."
+			"2 ; 7 ; 3,5 ; +4 ; +6 ; +31,62 ; 2024 ; etc."
 		]
 	},"pourcentage": {
 		"tags": [],
 		"definitions": [
 			"Un <span class=\"CRed\">pourcentage</span> est une proportion par rapport à 100.  $\\textcolor{#e53935}{t} \\% = \\frac{ \\textcolor{#e53935}{t} }{100}$",
-			"Pour effectuer une augmentation, on part de 100% et on ajoute le pourcentage d'augmentation avant de faire la multiplication.",
-			"Pour effectuer une réduction, on part de 100% et on soustrait le pourcentage de réduction avant de faire la multiplication."
+			"Pour effectuer une augmentation, on part de 100 % et on ajoute le pourcentage d'augmentation avant de faire la multiplication.",
+			"Pour effectuer une réduction, on part de 100 % et on soustrait le pourcentage de réduction avant de faire la multiplication."
 		],
 		"exemples": [
-			"<div>L'eau de la Mer Noir contient 2% de sel. Cela signifie que :<ul><li>La proportion de sel dans l'eau est de $\\frac{4}{100}$.</li><li>100kg d'eau contient 4kg de sel.</li><li>La masse d'eau et de sel sont proportionnel avec un coefficient de proportionnalité de $4\\%=\\frac{4}{100}= 0,04$</li></ul></div><div class=\"proportionnaltable_coef\"><table class=\"proportionnaltable samewidth\"><tr><th>Masse d'eau (kg)</th><td>100</td><td>360</td></tr><tr><th>Masse de sel (kg)</th><td>4</td><td>?</td></tr></table><img src=\"/Images/Cours/Coef3.svg\" style=\"max-height: 50px;\"></div><p>Pour calculer la quantité de sel dans 360kg, on multiplie : $360\\times 4\\% = 360 \\times 0,04 = 14,4 kg$</p>",
-			"<p>Une augmentation de 30% correspond à prendre 130% de la valeur initiale.</p><img src=\"/Images/Cours/Augmentation.svg\" alt=\"Augmentation de 30%\" style=\"max-height: 4cm;\"><p>Par exemple si le prix d'un article est de 50€ et qu'il y a une augmentation de 30%, on calcule :$50 \\times 130\\% = 50 \\times \\frac{130}{100} = 65\\text{€}$.</p>",
-			"<p>Une réduction de 20% correspond à prendre 80% de la valeur initiale.</p><img src=\"/Images/Cours/Reduction.svg\" alt=\"Réduction de 20%\" style=\"max-height: 4cm;\"><p>Par exemple si le prix d'un article est de 50€ et qu'il y a une réduction de 20%, on calcule :$50 \\times 80\\% = 50 \\times \\frac{80}{100} = 40\\text{€}$.</p>"
+			"<div>L'eau de la Mer Noire contient 4 % de sel. Cela signifie que :<ul><li>La proportion de sel dans l'eau est de $\\frac{4}{100}$.</li><li>100kg d'eau contient 4 kg de sel.</li><li>La masse d'eau et de sel sont proportionnelle avec un coefficient de proportionnalité de $4\\%=\\frac{4}{100}= 0,04$</li></ul></div><div class=\"proportionnaltable_coef\"><table class=\"proportionnaltable samewidth\"><tr><th>Masse d'eau (kg)</th><td>100</td><td>360</td></tr><tr><th>Masse de sel (kg)</th><td>4</td><td>?</td></tr></table><img src=\"/Images/Cours/Coef3.svg\" style=\"max-height: 50px;\"></div><p>Pour calculer la quantité de sel dans 360 kg, on multiplie : $360\\times 4\\% = 360 \\times 0,04 = 14,4 kg$</p>",
+			"<p>Une augmentation de 30 % correspond à prendre 130 % de la valeur initiale.</p><img src=\"/Images/Cours/Augmentation.svg\" alt=\"Augmentation de 30 %\" style=\"max-height: 4cm;\"><p>Par exemple, si le prix d'un article est de 50 € et qu'il y a une augmentation de 30 %, on calcule :$50 \\times 130\\% = 50 \\times \\frac{130}{100} = 65\\text{€}$.</p>",
+			"<p>Une réduction de 20 % correspond à prendre 80% de la valeur initiale.</p><img src=\"/Images/Cours/Reduction.svg\" alt=\"Réduction de 20 %\" style=\"max-height: 4cm;\"><p>Par exemple, si le prix d'un article est de 50 € et qu'il y a une réduction de 20 %, on calcule :$50 \\times 80\\% = 50 \\times \\frac{80}{100} = 40\\text{€}$.</p>"
 		],
 		"remarques": [
 			"Le symbole % est un <b>opérateur</b> et non une unité, il peut être utilisé dans les calculs."
@@ -1237,7 +1237,7 @@
 			"Si A et B sont <b>deux événements incompatibles</b>, la probabilité que <b>l'un <u>ou</u> l'autre</b> se réalise est <b>la somme de leurs probabilités</b> : $P\\left(A\\ \\text{ou}\\ B\\right)=P\\left(A\\right)+P(B)$."
 		],
 		"exemples": [
-			"<div class=\"flexobject\"><img src=\"/Images/Cours/Solide_Dé.png\" style=\"max-width: 2cm;\"><div><p>On a une chance sur 6 d'obtenir 3. On dit que la probabilité d'obtenir 3 est de $\\frac{1}{6}\\ \\approx 0,13$. </p></div>",
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Solide_Dé.png\" style=\"max-width: 2cm;\"><div><p>On a une chance sur 6 d'obtenir un 3. On dit que la probabilité d'obtenir 3 est de $\\frac{1}{6}\\ \\approx 0,13$. </p></div>",
 			"<div class=\"flexobject\"><img src=\"/Images/Cours/Solide_Dé.png\" style=\"max-width: 2cm;\"><div><p>Chaque face a une probabilité de $\\frac{1}{6}$ d'être obtenue.<br>On a donc la somme des probabilités :<br>$\\frac{1}{6}+\\frac{1}{6}+\\frac{1}{6}+\\frac{1}{6}+\\frac{1}{6}+\\frac{1}{6}=\\ \\frac{6\times1}{6}=1$.</p></div></div>"
 		]
 	},"produit": {
@@ -1251,7 +1251,7 @@
 		],
 		"infos": [
 			"<style>.multiplication{text-align: center;}.multiplication th{padding-right: 20px;}.multiplication_tr td{border-top: solid 2px black;}.multiplication td{padding: 5px;}</style><p>Pour poser une multiplication, il n'est pas nécessaire d'aligner les chiffres selon leur rang.<br><span class=\"CGreen\">On multiplie tous les chiffres du premier par chacun des chiffres du second en commençant par la droite</span>. On écrit chaque résultat les uns à la suite des autres <span class=\"CRed\">en décalant à chaque fois d'un rang</span>. On effectue ensuite une addition pour obtenir le produit. On place ensuite la virgule <span class=\"CBlue\">en fonction du nombre de chiffres après la virgule dans les facteurs</span>.</p><table class=\"multiplication\"> <!-- 702,5 x 47,3--><tr><th></th><td></td><td></td><td></td><td>7</td><td>0</td><td>2,</td><td class=\"CBlue\">5</td></tr><tr><th></th><td>×</td><td></td><td></td><td></td><td>4</td><td>7,</td><td class=\"CBlue\">3</td></tr><tr class=\"multiplication_tr\"><th class=\"CGreen\">$3\\times 7\\ 025=$</th><td></td><td></td><td>2</td><td>1</td><td>0</td><td>7</td><td>5</td></tr><tr><th class=\"CGreen\">$7\\times 7\\ 025=$</th><td></td><td>4</td><td>9</td><td>1</td><td>7</td><td>5</td><td class=\"CRed\"><b>●</b></td></tr><tr><th class=\"CGreen\">$4\\times 7\\ 025=$</th><td>2</td><td>8</td><td>2</td><td>0</td><td>0</td><td class=\"CRed\"><b>●</b></td><td class=\"CRed\"><b>●</b></td></tr><tr class=\"multiplication_tr\"><th></th><td>3</td><td>3</td><td>3</td><td>2</td><td>8,</td><td class=\"CBlue\">2</td><td class=\"CBlue\">5</td></tr></table>",
-			"Dans une suite de multiplication, on peut effectuer les calculs dans l'ordre que l'on veut. On peut donc regrouper les multiplications astucieusement pour faciliter le calcul."
+			"Dans une suite de multiplications, on peut effectuer les calculs dans l'ordre que l'on veut. On peut donc regrouper les multiplications astucieusement pour faciliter le calcul."
 		],
 		"exemples": [
 			"<ul><li>$8,492 \\times 10 = 84,92$</li><li>$8,492 \\times 100 = 849,2$</li><li>$8,492 \\times 1\\ 000 = 8\\ 492$</li></ul>",
@@ -1277,7 +1277,7 @@
 			"Deux grandeurs sont <span class=\"CRed\">proportionnelles</span> si les valeurs de l'une s'obtiennent en multipliant les valeurs de l'autre par un même nombre non nul appelé <span class=\"CRed\">coefficient de proportionnalité</span>."
 		],
 		"proprietes": [
-			"Pour calculer une quatrième proportionnelle, on peut utiliser :<br><ul><li>L'addition de quantités (ou de colonne)</li><li>La multiplication de quantités par un nombre non nul</li></ul>",
+			"Pour calculer une quatrième proportionnelle, on peut utiliser :<br><ul><li>L'addition de quantités (ou de colonnes)</li><li>La multiplication de quantités par un nombre non nul</li></ul>",
 			"Pour calculer une quatrième proportionnelle, on peut effectuer un passage par l'unité.",
 			"Pour calculer une quatrième proportionnelle, on peut calculer le coefficient de proportionnalité.",
 			"Dans un tableau de proportionnalité les produits en croix sont égaux.",
@@ -1286,10 +1286,10 @@
 			"Si une situation est représentée graphiquement par une droite passant par l'origine du repère, alors c'est une situation de proportionnalité."
 		],
 		"exemples": [
-			"<p>Une voiture roule à 80km/h, la distance parcourue est alors proportionnelle au temps de trajet :</p><table style=\"text-align: center;\"><tr><td></td><td>× 80</td></tr><tr><td>2h de trajet</td><td style=\"padding: 0px 10px;\">────►</td><td>160 km parcouru</td></tr><tr style=\"height: 0.5cm;\"></tr><tr><td></td><td>× 80</td></tr><tr><td>5h de trajet</td><td>────►</td><td>400 km parcouru</td></tr></table>",
+			"<p>Une voiture roule à 80 km/h, la distance parcourue est alors proportionnelle au temps de trajet :</p><table style=\"text-align: center;\"><tr><td></td><td>× 80</td></tr><tr><td>2h de trajet</td><td style=\"padding: 0px 10px;\">────►</td><td>160 km parcourus</td></tr><tr style=\"height: 0.5cm;\"></tr><tr><td></td><td>× 80</td></tr><tr><td>5h de trajet</td><td>────►</td><td>400 km parcourus</td></tr></table>",
 			"<div class=\"proportionnaltable_coef\"><table class=\"proportionnaltable\"><tr><th>Temps de trajet (h)</th><td>1</td><td>2</td><td>5</td></tr><tr><th>Distance parcourue (km)</th><td>80</td><td>160</td><td>400</td></tr></table><img src=\"/Images/Cours/Coef1.svg\" style=\"max-height: 50px;\"></div>",
-			"Un robinet fuit et la quantité d'eau perdue est proportionnelle au temps qui passe :<table class=\"proportionnaltable samewidth\"><tr><th>Temps (h)</th><td>2</td><td>6</td><td>7</td><td>9</td></tr><tr><th>Quantité d'eau (L)</th><td>5</td><td>?</td><td>17,5</td><td>?</td></tr></table><ul><li>Pour obtenir la quantité d'eau perdu en 9h, on peut ajouter la quantité perdu en 2h et 7h (2 + 7 = 9) : $5 + 17,5 =22,5 L$</li><li>La quantité d'eau perdue en 6h peut être obtenu en multipliant la quantité perdue en 2h par 3 (2 × 3 = 6) : $5\\times3=15L$</li></ul>",
-			"Le prix d'une quantité de pomme est proportionnel a la masse de pomme :<table class=\"proportionnaltable samewidth\"><tr><th>Quantité de pomme (kg)</th><td>2</td><td class=\"CRed\"><b>1</b></td><td>5</td></tr><tr><th>Prix (€)</th><td>2,8</td><td class=\"CRed\"><b>1,4</b></td><td>?</td></tr></table>Le prix de 5 kg de pomme peut-être obtenue en passant par le prix de 1kg (passage à l'unité).<br>1kg de pomme coûte $2,8 \\div 2 = 1,40$€.<br>5kg de pomme coûte donc $1,40\\times5=7$€",
+			"Un robinet fuit et la quantité d'eau perdue est proportionnelle au temps qui passe :<table class=\"proportionnaltable samewidth\"><tr><th>Temps (h)</th><td>2</td><td>6</td><td>7</td><td>9</td></tr><tr><th>Quantité d'eau (L)</th><td>5</td><td>?</td><td>17,5</td><td>?</td></tr></table><ul><li>Pour obtenir la quantité d'eau perdue en 9 h, on peut ajouter la quantité perdue en 2 h et 7 h (2 + 7 = 9) : $5 + 17,5 =22,5 L$</li><li>La quantité d'eau perdue en 6 h peut être obtenue en multipliant la quantité perdue en 2 h par 3 (2 × 3 = 6) : $5\\times3=15\\ L$</li></ul>",
+			"Le prix d'une quantité de pomme est proportionnel à la masse de pomme :<table class=\"proportionnaltable samewidth\"><tr><th>Quantité de pomme (kg)</th><td>2</td><td class=\"CRed\"><b>1</b></td><td>5</td></tr><tr><th>Prix (€)</th><td>2,8</td><td class=\"CRed\"><b>1,4</b></td><td>?</td></tr></table>Le prix de 5 kg de pommes peut être obtenue en passant par le prix de 1 kg (passage à l'unité).<br>1 kg de pomme coûte $2,8 \\div 2 = 1,40$€.<br>5 kg de pomme coûte donc $1,40\\times5=7$€",
 			"Le prix du carburant est proportionnel à son volume :<div class=\"proportionnaltable_coef\"><table class=\"proportionnaltable samewidth\"><tr><th>Volume (L)</th><td>18</td><td>53</td></tr><tr><th>Prix (€)</th><td>29,52</td><td>?</td></tr></table><img src=\"/Images/Cours/Coef2.svg\" style=\"max-height: 50px;\"></div>Pour calculer le coefficient de proportionnalité, on divise une valeur de la ligne du bas par la quantité correspondante dans la ligne du haut.<br>Ici $29,52\\div18 = 1,64$.<br>On peut alors trouver le prix de 53 L de carburant : $53\\times1,64=86,92$€"
 		]
 	},"pyramide": {
@@ -1298,13 +1298,13 @@
 			"Une <span class=\"CRed\">pyramide</span> est un solide possédant une base polygonale et des faces latérales triangulaires qui se rejoignent en un même sommet."
 		],
 		"proprietes": [
-			"Une pyramide est <span class=\"CRed\">régulière</span> si sa base est un polygone régulier et l'ensemble de toutes ces faces latérales sont des triangles isocèles identiques."
+			"Une pyramide est <span class=\"CRed\">régulière</span> si sa base est un polygone régulier et toutes ses faces latérales sont des triangles isocèles identiques."
 		]
 	},"puissance": {
 		"tags": [],
 		"definitions": [
-			"<span class=\"CRed\">$a$</span> puissance <span class=\"CBlue\">$n$</span> noté $\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}$ désigne le produit de <span class=\"CBlue\">$n$</span> facteurs tous égaux à <span class=\"CRed\">$a$</span> : <br><div class=\"center\"><table style=\"margin: auto;\"><tr><td>$\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}=$</td><td>$\\textcolor{#e53935}{a}\\times\\textcolor{#e53935}{a}\\times ... \\times\\textcolor{#e53935}{a}\\times \\textcolor{#e53935}{a}$</td></tr><tr style=\"line-height: 4px;\"><td></td><td><image src=\"/Images/Cours/Accolade1.svg\"></image></td></tr><tr><td></td><td><span class=\"CBlue\">$n$</span> facteurs</td></tr></table></div>",
-			"<span class=\"CRed\">$a$</span> puissance <span class=\"CBlue\">$-n$</span> noté $\\textcolor{#e53935}{a}^\\textcolor{#039be5}{-n}$ désigne le produit de <span class=\"CBlue\">$n$</span> facteurs tous égaux à $\\frac{1}{\\textcolor{#e53935}{a}}$ : <br> <div class=\"center\"> <table style=\"margin: auto;\"> <tr> <td>$\\textcolor{#e53935}{a}^\\textcolor{#039be5}{-n}=$</td><td>$(\\frac{1}{\\textcolor{#e53935}{a}})^\\textcolor{#039be5}{n}=$</td><td>$\\frac{1}{\\textcolor{#e53935}{a}}\\times\\frac{1}{\\textcolor{#e53935}{a}}\\times ... \\times \\frac{1}{\\textcolor{#e53935}{a}}\\times\\frac{1}{\\textcolor{#e53935}{a}}$</td> <td>$=\\frac{1}{\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}}$</td> </tr> <tr style=\"line-height: 4px;\"><td></td><td></td><td><image src=\"/Images/Cours/Accolade1.svg\"></image></td><td></td></tr><tr><td></td><td></td><td><span class=\"CBlue\">$n$</span> facteurs</td><td></td></tr></table></div>",
+			"<span class=\"CRed\">$a$</span> puissance <span class=\"CBlue\">$n$</span> notée $\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}$ désigne le produit de <span class=\"CBlue\">$n$</span> facteurs tous égaux à <span class=\"CRed\">$a$</span> : <br><div class=\"center\"><table style=\"margin: auto;\"><tr><td>$\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}=$</td><td>$\\textcolor{#e53935}{a}\\times\\textcolor{#e53935}{a}\\times ... \\times\\textcolor{#e53935}{a}\\times \\textcolor{#e53935}{a}$</td></tr><tr style=\"line-height: 4px;\"><td></td><td><image src=\"/Images/Cours/Accolade1.svg\"></image></td></tr><tr><td></td><td><span class=\"CBlue\">$n$</span> facteurs</td></tr></table></div>",
+			"<span class=\"CRed\">$a$</span> puissance <span class=\"CBlue\">$-n$</span> notée $\\textcolor{#e53935}{a}^\\textcolor{#039be5}{-n}$ désigne le produit de <span class=\"CBlue\">$n$</span> facteurs tous égaux à $\\frac{1}{\\textcolor{#e53935}{a}}$ : <br> <div class=\"center\"> <table style=\"margin: auto;\"> <tr> <td>$\\textcolor{#e53935}{a}^\\textcolor{#039be5}{-n}=$</td><td>$(\\frac{1}{\\textcolor{#e53935}{a}})^\\textcolor{#039be5}{n}=$</td><td>$\\frac{1}{\\textcolor{#e53935}{a}}\\times\\frac{1}{\\textcolor{#e53935}{a}}\\times ... \\times \\frac{1}{\\textcolor{#e53935}{a}}\\times\\frac{1}{\\textcolor{#e53935}{a}}$</td> <td>$=\\frac{1}{\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}}$</td> </tr> <tr style=\"line-height: 4px;\"><td></td><td></td><td><image src=\"/Images/Cours/Accolade1.svg\"></image></td><td></td></tr><tr><td></td><td></td><td><span class=\"CBlue\">$n$</span> facteurs</td><td></td></tr></table></div>",
 			"<div class=\"center\"> <table style=\"margin: auto;\"> <tr> <td>$10^\\textcolor{#039be5}{n}=$</td> <td>$10\\times10\\times ... \\times10\\times10$</td> <td>$=1$</td> <td>$00 ... 00$</td> </tr> <tr style=\"line-height: 9px;\"> <td></td> <td> <image src=\"/Images/Cours/Accolade1.svg\"></image> </td> <td></td> <td> <image src=\"/Images/Cours/Accolade2.svg\"></image> </td> </tr> <tr> <td></td> <td><span class=\"CBlue\">$n$</span> facteurs</td> <td></td> <td><span class=\"CBlue\">$n$</span> zéros</td> </tr> </table> </div>",
 			"<div class=\"center\"><table style=\"margin: auto;\"><tr><td>$10^\\textcolor{#039be5}{-n}=$</td><td>$(\\frac{1}{10})^\\textcolor{#039be5}{n}=$</td><td>$\\frac{1}{10}\\times\\frac{1}{10}\\times ... \\times\\frac{1}{10}\\times\\frac{1}{10}$</td><td>$=$</td><td>$0,0 ... 00$</td><td>$1$</td></tr><tr style=\"line-height: 9px;\"><td></td><td></td><td> <image src=\"/Images/Cours/Accolade1.svg\"></image> </td><td></td><td> <image src=\"/Images/Cours/Accolade2.svg\"></image> </td><td></td><td></td><td></td></tr><tr><td></td><td></td><td><span class=\"CBlue\">$n$</span> facteurs</td><td></td><td><span class=\"CBlue\">$n$</span> zéros</td><td></td></tr></table></div>"
 		],
@@ -1319,10 +1319,10 @@
 	},"quadrilatère": {
 		"tags": [],
 		"definitions": [
-			"Un <span class=\"CRed\">quadrilatère</span> est un <b>polygone</b> à quatre côtés"
+			"Un <span class=\"CRed\">quadrilatère</span> est un <b>polygone</b> à quatre côtés."
 		],
 		"proprietes": [
-			"<p>Pour identifier un quadrilatères, on utilise des propriétés géométriques :</p><img src=\"/Images/Cours/Quadrilatères.svg\" style=\"max-width: 19cm;\">"
+			"<p>Pour identifier un quadrilatère, on utilise des propriétés géométriques :</p><img src=\"/Images/Cours/Quadrilatères.svg\" style=\"max-width: 19cm;\">"
 		],
 		"exemples": [
 			"<img src=\"/Images/Cours/Quad1.svg\" style=\"max-height: 4cm;\">"
@@ -1343,8 +1343,8 @@
 			"Cas particulier de la division euclidienne :<br>La division euclidienne ne s'effectue qu'avec des nombres entiers."
 		],
 		"remarques": [
-			"Plusieurs quotients peuvent être égales.",
-			"Un quotient ne change pas lorsque l'on multiplie (ou divise) son numérateur <b>et</b> son dénominateur par un même nombre (non nul)<br><b>Exemple :</b><br><table style=\"width: 100%; text-align: center;\"><tr><td style=\"font-size: 18pt;\">$\\frac{1,2}{8}=\\frac{1,2\\times\\textcolor{#e53935}{10}}{8\\times\\textcolor{#e53935}{10}}= \\frac{12}{80}$</td><td><span style=\"font-size: 18pt;\">$\\frac{12}{80}=\\frac{12\\div\\textcolor{#e53935}{4}}{8\\div\\textcolor{#e53935}{4}}= \\frac{3}{20}$<br></span>C'est une simplification</td></tr></table>"
+			"Plusieurs quotients peuvent être égaux.",
+			"Un quotient ne change pas lorsque l'on multiplie (ou divise) son numérateur <b>et</b> son dénominateur par un même nombre (non nul)<br><b>Exemple :</b><br><table style=\"width: 100%; text-align: center;\"><tr><td style=\"font-size: 18pt;\">$\\frac{1,2}{8}=\\frac{1,2\\times\\textcolor{#e53935}{10}}{8\\times\\textcolor{#e53935}{10}}= \\frac{12}{80}$</td><td><span style=\"font-size: 18pt;\">$\\frac{12}{80}=\\frac{12\\div\\textcolor{#e53935}{4}}{80\\div\\textcolor{#e53935}{4}}= \\frac{3}{20}$<br></span>C'est une simplification</td></tr></table>"
 		],
 		"infos": [
 			"<style>.equal{max-width: 1cm;font-size: 40pt;font-weight: bold;text-align: center;}</style><p>On peut voir cela comme un « redécoupage » des différents morceaux :</p><div class=\"flexobject\"><p class=\"equal\">$\\frac{3}{4}$</p><img src=\"/Images/Cours/Disque Fraction1.svg\" style=\"max-width: 4cm;\"><p class=\"equal\">=</p><p class=\"equal\">$\\frac{6}{8}$</p><img src=\"/Images/Cours/Disque Fraction2.svg\" style=\"max-width: 4cm;\"><p class=\"equal\">=</p><p class=\"equal\">$\\frac{9}{12}$</p><img src=\"/Images/Cours/Disque Fraction3.svg\" style=\"max-width: 4cm;\"></div>"
@@ -1376,7 +1376,7 @@
 	},"réduire": {
 		"tags": [],
 		"definitions": [
-			"<span class=\"CRed\"><b>Réduire</b></span> une expression littérale, c'est l'écrire avec <b>le moins de termes</b> possibles."
+			"<span class=\"CRed\"><b>Réduire</b></span> une expression littérale, c'est l'écrire avec <b>le moins de termes</b> possible."
 		]
 	},"règle de trois": {
 		"tags": [],
@@ -1384,7 +1384,7 @@
 			"Pour calculer une quatrième proportionnelle, on peut utiliser la <span class=\"CRed\">règle de trois</span>.<br><i>« On multiplie la diagonale et on divise par la troisième valeur. »</i>"
 		],
 		"exemples": [
-			"<style>.tableaud{display: grid;width: calc(5 * 80px);grid-template-columns: repeat(6, 80px);grid-auto-rows: minmax(30px, auto);border-top: 2px solid var(--TableBorder);border-left: 2px solid var(--TableBorder);}.tableaud_div{border-right: 2px solid var(--TableBorder);border-bottom: 2px solid var(--TableBorder);text-align: center;}</style><div class=\"tableaud\"><div class=\"tableaud_div\" style=\"grid-column: 1 / 4; grid-row: 1; background-color: var(--TableHeader);\"><b>Farine (g)</b></div><div class=\"tableaud_div\" style=\"grid-column: 1 / 4; grid-row: 2; background-color: var(--TableHeader);\"><b>Sucre (g)</b></div><div id=\"Regle_de_trois\" class=\"animation\"style=\"grid-column: 4 / 6; grid-row: 1 / 3; border: none;\"width=\"160\" height=\"60\" showmenu=\"false\" loop=\"true\"></div><div class=\"tableaud_div\" style=\"grid-column: 4; grid-row: 1\">625</div><div class=\"tableaud_div\" style=\"grid-column: 5; grid-row: 1\">925</div><div class=\"tableaud_div\" style=\"grid-column: 4; grid-row: 2\">350</div><div class=\"tableaud_div\" style=\"grid-column: 5; grid-row: 2\">?</div></div>Pour calculer, on utilise la règle de trois : $\\frac{925\\times 350}{625} = 518$<br>Pour 925 g de farine il faut donc 518 g de sucre."
+			"<style>.tableaud{display: grid;width: calc(5 * 80px);grid-template-columns: repeat(6, 80px);grid-auto-rows: minmax(30px, auto);border-top: 2px solid var(--TableBorder);border-left: 2px solid var(--TableBorder);}.tableaud_div{border-right: 2px solid var(--TableBorder);border-bottom: 2px solid var(--TableBorder);text-align: center;}</style><div class=\"tableaud\"><div class=\"tableaud_div\" style=\"grid-column: 1 / 4; grid-row: 1; background-color: var(--TableHeader);\"><b>Farine (g)</b></div><div class=\"tableaud_div\" style=\"grid-column: 1 / 4; grid-row: 2; background-color: var(--TableHeader);\"><b>Sucre (g)</b></div><div id=\"Regle_de_trois\" class=\"animation\" style=\"grid-column: 4 / 6; grid-row: 1 / 3; border: none;\"width=\"160\" height=\"60\" showmenu=\"false\" loop=\"true\"></div><div class=\"tableaud_div\" style=\"grid-column: 4; grid-row: 1\">625</div><div class=\"tableaud_div\" style=\"grid-column: 5; grid-row: 1\">925</div><div class=\"tableaud_div\" style=\"grid-column: 4; grid-row: 2\">350</div><div class=\"tableaud_div\" style=\"grid-column: 5; grid-row: 2\">?</div></div>Pour calculer, on utilise la règle de trois : $\\frac{925\\times 350}{625} = 518$<br>Pour 925 g de farine il faut donc 518 g de sucre."
 		]
 	},"relatif": {
 		"tags": [],
@@ -1446,7 +1446,7 @@
 	},"sécantes": {
 		"tags": [],
 		"definitions": [
-			"Lorsque des droites ; segments ou demi-droites se coupent en un point on dit qu'elles sont <span class=\"CRed\">sécantes</span>."
+			"Lorsque des droites, segments ou demi-droites se coupent en un point on dit qu'elles sont <span class=\"CRed\">sécantes</span>."
 		],
 		"remarques": [
 			"Les points C, E et D sont <span class=\"CRed\">alignés</span>."
@@ -1464,7 +1464,7 @@
 			"La section d'un parallélépipède rectangle par un plan parallèle à l'une de ses faces est un rectangle de même dimension que cette face.",
 			"La section d'un cylindre de révolution par un plan parallèle à sa base est un disque identique au disque de base.",
 			"La section d'un cylindre de révolution par un plan perpendiculaire à sa base est un rectangle.",
-			"La section d'un cône de révolution par un plan parallèle à sa base est un disque réduction du disque de base.",
+			"La section d'un cône de révolution par un plan parallèle à sa base est un disque réduit du disque de base.",
 			"La section d'une pyramide par un plan parallèle à sa base est un polygone réduction du polygone de base.",
 			"La section d'une boule par un plan est un disque.",
 			"La section d'une sphère par un plan est un cercle."
@@ -1476,7 +1476,7 @@
 		],
 		"remarques": [
 			"Un segment se note avec des crochets : [BC]",
-			"Les points B et C sont les <b>extrémités</b> du segment"
+			"Les points B et C sont les <b>extrémités</b> du segment."
 		],
 		"exemples": [
 			"<img src=\"/Images/Cours/Segment.svg\" style=\"max-height: 2cm;\">"
@@ -1485,7 +1485,7 @@
 		"tags": [],
 		"definitions": [
 			"Un ensemble d'objets ou de valeurs constitue une <span class=\"CRed\">série de valeur</span> que l'on peut compter ou classer en <b>catégories</b>, afin d'étudier cette information.",
-			"L'<span class=\"CRed\">effectif</span> d'une catégorie et le nombre d'éléments qui la compose."
+			"L'<span class=\"CRed\">effectif</span> d'une catégorie est le nombre d'éléments qui la compose."
 		],
 		"exemples": [
 			"<div class=\"flexobject\"><p style=\"flex: 10cm 0 1;\">Ci-contre on peut voir différentes formes avec différentes couleurs. Il y a en tout 36 formes. On peut alors les catégoriser, par exemple, selon leurs couleurs ou leurs formes. Il y a ainsi 12 formes rouges et 11 étoiles.</p><img src=\"/Images/Cours/Serie_valeur.svg\" style=\"max-width: 8cm;\"></div>",
@@ -1506,7 +1506,7 @@
 		"tags": [],
 		"definitions": [
 			" Un <span class=\"CRed\">solide</span> est une figure géométrique en trois dimensions.",
-			"Il existe plusieurs manières de représenter un solide dans le plan :<br><ul><li><b>La vue en perspective :</b> C'est une représentation qui permet de voir les différents côtés qui compose le solide donnant l'illusion d'un objet en 3 dimensions. Les traits cachés sont alors souvent représentés en pointillés.</li><li><b>Le patron :</b> C'est une représentation de l'objet dont toutes les faces ont été déplié et mise à plat dans le plan.</li><li><b>La vue directionnelle :</b> C'est une représentation de face particulière du solide vue dans leurs directions. (Vue de face, de droite, de dessus, etc...)</li></ul>",
+			"Il existe plusieurs manières de représenter un solide dans le plan :<br><ul><li><b>La vue en perspective :</b> C'est une représentation qui permet de voir les différents côtés qui composent le solide donnant l'illusion d'un objet en 3 dimensions. Les traits cachés sont alors souvent représentés en pointillés.</li><li><b>Le patron :</b> C'est une représentation de l'objet dont toutes les faces ont été dépliées et mises à plat dans le plan.</li><li><b>La vue directionnelle :</b> C'est une représentation de face particulière du solide vue dans leur directions. (Vue de face, de droite, de dessus, etc.)</li></ul>",
 			"On utilise une <span class=\"CRed\">perspective</span> pour le représenter dans le plan.",
 			"Un solide est composé de trois éléments :<ul><li>Des <span class=\"CRed\">sommets</span> (des points dans l'espace)</li><li>Des <span class=\"CRed\">arêtes</span> (les segments qui relient deux sommets)</li><li>Des <span class=\"CRed\">faces</span> (les polygones formés par les arêtes)</li></ul>"
 		],
@@ -1524,12 +1524,12 @@
 			"<div class=\"flexobject\"><img src=\"/Images/Cours/Sommets.svg\" style=\"max-width: 6cm;\"><img src=\"/Images/Cours/Aretes.svg\" style=\"max-width: 6cm;\"><img src=\"/Images/Cours/Faces.svg\" style=\"max-width: 6cm;\"></div>"
 		],
 		"remarques": [
-			"Il existe plusieurs types de vue en perspective. Les plus connu sont la perspective <span class=\"CRed\">cavalière</span> et la perspective <span class=\"CRed\">isométrique</span>.",
-			"Tous les points ne sont pas des sommets et certain solide n'en ont pas (et donc aucune arêtes). Par exemple la sphère."
+			"Il existe plusieurs types de vue en perspective. Les plus connus sont la perspective <span class=\"CRed\">cavalière</span> et la perspective <span class=\"CRed\">isométrique</span>.",
+			"Tous les points ne sont pas des sommets et certains solides n'en ont pas (et donc aucune arête). Par exemple la sphère."
 		],
 		"infos": [
-			"<p>Lorsque l'on assemble plusieurs cubes entre eux, on parle d'assemblage de cube. Il est possible d'utiliser plusieurs types de représentation pour se repérer dans ce type d'assemblage.</p><div class=\"flexobject\"><img src=\"/Images/Cours/Structuro_Vue_cavaliere.svg\"><img src=\"/Images/Cours/Structuro_Vue_isometrique.svg\"><img src=\"/Images/Cours/Structuro_Face_avant.svg\"><img src=\"/Images/Cours/Structuro_Face_dessus.svg\"><img src=\"/Images/Cours/Structuro_Face_droite.svg\"></div>",
-			"<p>Il est possible d'indiquer le nombre de cube sur les faces pour aider à la représentation</p><div class=\"flexobject\"><img src=\"/Images/Cours/Structuro_Face_avant2.svg\"><img src=\"/Images/Cours/Structuro_Face_dessus2.svg\"><img src=\"/Images/Cours/Structuro_Face_droite2.svg\"></div>"
+			"<p>Lorsque l'on assemble plusieurs cubes entre eux, on parle d'assemblage de cubes. Il est possible d'utiliser plusieurs types de représentation pour se repérer dans ce type d'assemblage.</p><div class=\"flexobject\"><img src=\"/Images/Cours/Structuro_Vue_cavaliere.svg\"><img src=\"/Images/Cours/Structuro_Vue_isometrique.svg\"><img src=\"/Images/Cours/Structuro_Face_avant.svg\"><img src=\"/Images/Cours/Structuro_Face_dessus.svg\"><img src=\"/Images/Cours/Structuro_Face_droite.svg\"></div>",
+			"<p>Il est possible d'indiquer le nombre de cubes sur les faces pour aider à la représentation</p><div class=\"flexobject\"><img src=\"/Images/Cours/Structuro_Face_avant2.svg\"><img src=\"/Images/Cours/Structuro_Face_dessus2.svg\"><img src=\"/Images/Cours/Structuro_Face_droite2.svg\"></div>"
 		]
 	},"somme": {
 		"tags": [],
@@ -1543,7 +1543,7 @@
 			"<p>Pour poser une addition en colonne, on aligne les nombres selon le rang de leurs chiffres. On commence ensuite l'addition par la droite et on remonte petit à petit en prenant en compte les éventuelles retenues. </p>"
 		],
 		"exemples": [
-			"<style>.addition td{min-width: 20px;text-align: center;vertical-align: middle;}.addition tr:first-child{writing-mode: vertical-rl;}.addition tr:first-child td{vertical-align: top;}.addition tr:last-child{border-top: solid 2px black;}.retenu{min-height: 20px;max-height: 20px;min-width: 20px;max-width: 20px;display: flex;align-items: center;justify-content: center;font-size: 8pt;font-weight: bold;font-family: 'Courier New', Courier, monospace;border-radius: 50%;border: solid 1px red;color: red;}</style><div class=\"flexobject\"><div><p>Avec des entiers</p><table class=\"addition\"><tr><th></th><td>Chiffre des centaine</td><td>Chiffre des dizaine</td><td>Chiffre des unités</td></tr><tr><th></th><td><div class=\"retenu\">+1</div></td><td><div class=\"retenu\">+1</div></td><td></td></tr><tr><th></th><td>1</td><td>4</td><td>3</td></tr><tr><th>+</th><td></td><td>8</td><td>9</td></tr><tr><th></th><td>2</td><td>3</td><td>2</td></tr></table></div><div><p>Avec des nombres décimaux</p><table class=\"addition\"><tr><th></th><td>Chiffre des dizaine</td><td>Chiffre des unités</td><td style=\"min-width: auto;\"></td><td>Chiffre des dixième</td><td>Chiffre des centième</td><td>Chiffre des millième</td></tr><tr><th></th><td><div class=\"retenu\">+1</div></td><td></td><td style=\"min-width: auto;\"></td><td><div class=\"retenu\">+1</div></td><td></td><td></td></tr><tr><th></th><td>8</td><td>3</td><td style=\"min-width: auto;\">,</td><td>0</td><td>4</td><td>9</td></tr><tr><th>+</th><td></td><td>7</td><td style=\"min-width: auto;\">,</td><td>8</td><td>8</td><td><span class=\"CBlue\">0</span></td></tr><tr><th></th><td>9</td><td>0</td><td style=\"min-width: auto;\">,</td><td>9</td><td>2</td><td>9</td></tr></table></div></div>"
+			"<style>.addition td{min-width: 20px;text-align: center;vertical-align: middle;}.addition tr:first-child{writing-mode: vertical-rl;}.addition tr:first-child td{vertical-align: top;}.addition tr:last-child{border-top: solid 2px black;}.retenu{min-height: 20px;max-height: 20px;min-width: 20px;max-width: 20px;display: flex;align-items: center;justify-content: center;font-size: 8pt;font-weight: bold;font-family: 'Courier New', Courier, monospace;border-radius: 50%;border: solid 1px red;color: red;}</style><div class=\"flexobject\"><div><p>Avec des entiers</p><table class=\"addition\"><tr><th></th><td>Chiffre des centaines</td><td>Chiffre des dizaines</td><td>Chiffre des unités</td></tr><tr><th></th><td><div class=\"retenu\">+1</div></td><td><div class=\"retenu\">+1</div></td><td></td></tr><tr><th></th><td>1</td><td>4</td><td>3</td></tr><tr><th>+</th><td></td><td>8</td><td>9</td></tr><tr><th></th><td>2</td><td>3</td><td>2</td></tr></table></div><div><p>Avec des nombres décimaux</p><table class=\"addition\"><tr><th></th><td>Chiffre des dizaines</td><td>Chiffre des unités</td><td style=\"min-width: auto;\"></td><td>Chiffre des dixièmes</td><td>Chiffre des centièmes</td><td>Chiffre des millièmes</td></tr><tr><th></th><td><div class=\"retenu\">+1</div></td><td></td><td style=\"min-width: auto;\"></td><td><div class=\"retenu\">+1</div></td><td></td><td></td></tr><tr><th></th><td>8</td><td>3</td><td style=\"min-width: auto;\">,</td><td>0</td><td>4</td><td>9</td></tr><tr><th>+</th><td></td><td>7</td><td style=\"min-width: auto;\">,</td><td>8</td><td>8</td><td><span class=\"CBlue\">0</span></td></tr><tr><th></th><td>9</td><td>0</td><td style=\"min-width: auto;\">,</td><td>9</td><td>2</td><td>9</td></tr></table></div></div>"
 		]
 	},"sphère": {
 		"tags": [],
@@ -1562,7 +1562,7 @@
 			"Une symétrie axiale conserve les longueurs et les angles.",
 			"Si trois points sont alignés, alors leurs symétriques par rapport à une droite sont aussi alignés.",
 			"Si deux angles sont symétriques par rapport à une droite, alors ils ont la même mesure.",
-			"Si deux figures sont symétriques par rapport à une droite, alors elles ont même aire et même périmètre",
+			"Si deux figures sont symétriques par rapport à une droite, alors elles ont même aire et même périmètre.",
 			"Lors d'une symétrie axiale les longueurs, les alignements et les angles sont conservés."
 		],
 		"exemples": [
@@ -1577,9 +1577,9 @@
 			"Avec un quadrillage, la construction peut se faire sans outils de géométrie à l'aide des carreaux."
 		],
 		"infos": [
-			"<div style=\"flex: 1 1 500px;\"><div style=\"text-align: center;\"><b>A la règle et l'équerre :</b></div><div id=\"Symetrie_Axiale_Equerre\" class=\"animation center\" width=\"480\" height=\"360\"></div></div>",
+			"<div style=\"flex: 1 1 500px;\"><div style=\"text-align: center;\"><b>À la règle et l'équerre :</b></div><div id=\"Symetrie_Axiale_Equerre\" class=\"animation center\" width=\"480\" height=\"360\"></div></div>",
 			"<div style=\"flex: 1 1 500px;\"><div style=\"text-align: center;\"><b>Au compas :</b></div><div id=\"Symetrie_Axiale_Compas\" class=\"animation center\" width=\"480\" height=\"360\"></div></div>",
-			"On peut utiliser les propriétés de la symétrie axiale pour construire le symétrique d'une figure en plus rapidement."
+			"On peut utiliser les propriétés de la symétrie axiale pour construire le symétrique d'une figure plus rapidement."
 		]
 	},"symétrie centrale": {
 		"tags": [],
@@ -1592,17 +1592,13 @@
 			"Si trois points sont alignés, alors leurs symétriques par rapport à un point sont aussi alignés.",
 			"Si deux segments sont symétriques par rapport à un point, alors ils sont parallèles et de même longueur.",
 			"Si deux angles sont symétriques par rapport à un point, alors ils ont la même mesure.",
-			"Si deux figures sont symétriques par rapport à un point, alors elles ont même aire et même périmètre"
+			"Si deux figures sont symétriques par rapport à un point, alors elles ont même aire et même périmètre."
 		],
 		"exemples": [
 			"<div class=\"flexobject\"><div style=\"max-width: 8cm; margin-right: 1cm;\"><div id=\"symetriecentrale\"></div></div><div style=\"flex: 1 1 5cm;\"><ul><li>Le point O est appelé le centre de symétrie</li><li>La figure bleue est le symétrique de la figure rouge par rapport à O</li></ul></div></div>"
 		],
-		"remarques": [
-			"Dans une symétrie axiale, l'axe de symétrie est la médiatrice de tous les segments reliant un point et son image.",
-			"Le symétrique d'un point se trouvant sur l'axe de symétrie est <b>lui-même</b>."
-		],
 		"infos": [
-			"<div style=\"flex: 1 1 500px;\"><div style=\"text-align: center;\"><b>Construction a la règle et au compas :</b></div><div id=\"Symetrie_Centrale\" class=\"animation center\" width=\"480\" height=\"360\"></div></div>"
+			"<div style=\"flex: 1 1 500px;\"><div style=\"text-align: center;\"><b>Construction à la règle et au compas :</b></div><div id=\"Symetrie_Centrale\" class=\"animation center\" width=\"480\" height=\"360\"></div></div>"
 		]
 	},"système décimal":{
 		"tags": ["chiffre", "décimal", "nombres"],
@@ -1616,11 +1612,11 @@
 	},"tableau": {
 		"tags": [],
 		"definitions": [
-			"Les <span class=\"CRed\">tableaux</span> permettent de rassembler un grand nombre de données et de les présenter de façon organisé. Il en existe deux types :<ul><li>A simple entré</li><li>A double entrés</li></ul>"
+			"Les <span class=\"CRed\">tableaux</span> permettent de rassembler un grand nombre de données et de les présenter de façon organisée. Il en existe deux types :<ul><li>À simple entré</li><li>À double entrés</li></ul>"
 		],
 		"exemples": [
 			"<p>Tableau à simple entrée (Population en 2013) :</p><style>.tableau_simple td,.tableau_simple th{border: solid 1px black;width: auto;text-align: center;min-width: 80px;}.tableau_simple th{background-color: #99da9c;}</style><table class=\"tableau_simple\"><tr><th>Ville</th><td>Paris</td><td>Marseille</td><td>Lyon</td><td>Toulouse</td></tr><tr><th>Population</th><td>2 229 621</td><td>855 393</td><td>500 715</td><td>458 298</td></tr></table>",
-			"<p>Tableau à double entrée (Résultats des JO de 2016):</p><style>.tableau_double td,.tableau_double th{border: solid 1px black;width: auto;text-align: center;min-width: 80px;}.tableau_double th{background-color: #ec7b78;}</style><table class=\"tableau_double\"><tr><th class=\"crossed\"><div style=\"text-align: right;\">Médaille</div><div style=\"text-align: left;\">Pays</div></th><th>Or</th><th>Argent</th><th>Bronze</th></tr><tr><th>Russie</th><td>24</td><td>25</td><td>33</td></tr><tr><th>France</th><td>11</td><td>11</td><td>12</td></tr><tr><th>Chine</th><td>38</td><td>27</td><td>22</td></tr><tr><th>Etats-Unis</th><td>46</td><td>29</td><td>29</td></tr></table>"
+			"<p>Tableau à double entrée (Résultats des JO de 2016):</p><style>.tableau_double td,.tableau_double th{border: solid 1px black;width: auto;text-align: center;min-width: 80px;}.tableau_double th{background-color: #ec7b78;}</style><table class=\"tableau_double\"><tr><th class=\"crossed\"><div style=\"text-align: right;\">Médaille</div><div style=\"text-align: left;\">Pays</div></th><th>Or</th><th>Argent</th><th>Bronze</th></tr><tr><th>Russie</th><td>24</td><td>25</td><td>33</td></tr><tr><th>France</th><td>11</td><td>11</td><td>12</td></tr><tr><th>Chine</th><td>38</td><td>27</td><td>22</td></tr><tr><th>États-Unis</th><td>46</td><td>29</td><td>29</td></tr></table>"
 		],
 		"remarques": [
 			"Un tableau simple permet de représenter une information chiffrée pour un seul type de valeur.",
@@ -1672,7 +1668,7 @@
 			"<p>Construire un triangle ABC tel que AB = 8cm, BC = 6cm et $\\widehat{BAC} = 30°$.</p><div id=\"Triangle_AngleLongueurs2\" class=\"animation\" width=\"480\" height=\"360\"></div>",
 			"<p>Construire un triangle ABC tel que AB = 8cm, $\\widehat{BAC} = 61°$ et $\\widehat{ABC} = 75°$.<br>(Donc $\\widehat{ACB}=180\\ -\\ 61\\ -\\ 75=44°$)</p><div id=\"Triangle_AnglesLongueur1\" class=\"animation\" width=\"480\" height=\"360\"></div>",
 			"<p>Construire un triangle ABC tel que AB = 8cm, $\\widehat{BAC} = 30°$ et $\\widehat{ABC} = 55°$.</p><div id=\"Triangle_AnglesLongueur2\" class=\"animation\" width=\"480\" height=\"360\"></div>",
-			"<div class=\"flexobject\"><img src=\"/Images/Cours/Triangle4.svg\" style=\"max-height: 4cm;\"><div style=\"flex: 1 1 5cm\">$\\textcolor{#EEBB00}{\\widehat{ABC}}+\\textcolor{#43a047}{\\widehat{BCA}}+\\textcolor{#7C4DA5}{\\widehat{CAB}} = 180°$</div></div"
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Triangle4.svg\" style=\"max-height: 4cm;\"><div style=\"flex: 1 1 5cm\">$\\textcolor{#EEBB00}{\\widehat{ABC}}+\\textcolor{#43a047}{\\widehat{BCA}}+\\textcolor{#7C4DA5}{\\widehat{CAB}} = 180°$</div></div>"
 		],
 		"remarques": [
 			"Lorsque l'on ne connaît la mesure que de l'un des deux côtés de l'angle, il y a deux triangles possibles."
@@ -1682,9 +1678,9 @@
 			"<div style=\"text-align: center; border: solid 3px black; border-radius: 10px;width: fit-content; background-color: #FFFF8F33;\">Construire un triangle ABC tel que AB = 8cm, AC = 5cm et $\\widehat{BAC} = 30°$.<div id=\"Triangle_AngleLongueurs1\" class=\"animation\" width=\"480\" height=\"360\"></div></div>",
 			"<div style=\"text-align: center; border: solid 3px black; border-radius: 10px;width: fit-content; background-color: #FFFF8F33;\">Construire un triangle ABC tel que AB = 8cm, BC = 6cm et $\\widehat{BAC} = 30°$.<div id=\"Triangle_AngleLongueurs2\" class=\"animation\" width=\"480\" height=\"360\"></div></div>",
 			"<div style=\"text-align: center; border: solid 3px black; border-radius: 10px;width: fit-content; background-color: #FFFF8F33;\">Construire un triangle ABC tel que AB = 8cm, $\\widehat{BAC} = 30°$ et $\\widehat{ABC} = 75°$.<div id=\"Triangle_AnglesLongueur2\" class=\"animation\" width=\"480\" height=\"360\"></div></div>",
-			"<p>Pour tracer un triangle à partir de 3 longueurs données, il faut utiliser une règle et un compas.<ol><li>On trace un des côté du triangle à la règle</li><li>On construit un arc de cercle de rayon la longueur du second côté en prenant pour centre l'une des extrémités du premier côté.</li><li>On construit un arc de cercle de rayon la longueur du troisième côté en prenant pour centre l'autre extrémité du premier côté.</li><li>Le troisième sommet du triangle est alors l'un des points d'intersection des deux arc de cercle</li></ol></p>",
-			"<p>Pour construire un triangle à partir de deux longueurs et un angle, il y deux cas possible :<ul><li>On connait les mesures des deux côté de l'angle.</li><li>On connait la mesure d'un des deux côté de l'angle.</li></ul>Dans tous les cas, il faut :<ol><li>Tracer le côté de longueur connu de l'angle.</li><li>Tracer la demi-droite formant l'angle donné avec le côté précédent.</li><li>Reporter la seconde longueur connu.</li><li>Le troisième sommet est alors le point d'intersection entre la demi-droite et l'arc de cercle.</li></ol></p>",
-			"<p>Pour construire un triangle connaissant la longueur d'un côté et deux angles, il faut connaître les deux angles aux extrémités du côté connu. Si ce n'est pas le cas, il faut calculer l'angle manquant en utilisant la propriété des triangles : <i>La somme des angles d'un triangle est égale à 180°</i>.<ol><li>Construire le côté connu</li><li>Construire la demi-droite formant l'un des angle connu avec le côté précédent.</li><li>Construire la demi-droite formant l'autre angle connu avec le côté précédent.</li><li>Le troisième sommet est alors le point d'intersection entre les deux demi-droites.</li></ol></p>"
+			"<p>Pour tracer un triangle à partir de 3 longueurs données, il faut utiliser une règle et un compas.<ol><li>On trace un des côtés du triangle à la règle</li><li>On construit un arc de cercle de rayon la longueur du second côté en prenant pour centre l'une des extrémités du premier côté.</li><li>On construit un arc de cercle de rayon la longueur du troisième côté en prenant pour centre l'autre extrémité du premier côté.</li><li>Le troisième sommet du triangle est alors l'un des points d'intersection des deux arcs de cercle</li></ol></p>",
+			"<p>Pour construire un triangle à partir de deux longueurs et un angle, il y deux cas possible :<ul><li>On connait les mesures des deux côtés de l'angle.</li><li>On connait la mesure d'un des deux côtés de l'angle.</li></ul>Dans tous les cas, il faut :<ol><li>Tracer le côté de longueur connue de l'angle.</li><li>Tracer la demi-droite formant l'angle donné avec le côté précédent.</li><li>Reporter la seconde longueur connue.</li><li>Le troisième sommet est alors le point d'intersection entre la demi-droite et l'arc de cercle.</li></ol></p>",
+			"<p>Pour construire un triangle connaissant la longueur d'un côté et deux angles, il faut connaître les deux angles aux extrémités du côté connu. Si ce n'est pas le cas, il faut calculer l'angle manquant en utilisant la propriété des triangles : <i>La somme des angles d'un triangle est égale à 180°</i>.<ol><li>Construire le côté connu</li><li>Construire la demi-droite formant l'un des angles connus avec le côté précédent.</li><li>Construire la demi-droite formant l'autre angle connu avec le côté précédent.</li><li>Le troisième sommet est alors le point d'intersection entre les deux demi-droites.</li></ol></p>"
 		]
 	},"triangle égaux": {
 		"tags": [],
@@ -1693,7 +1689,7 @@
 		],
 		"proprietes": [
 			"<b>Si</b> deux triangles ont un côté de même longueur et deux angles adjacents à ce côté deux à deux de même mesure, <b>alors</b> ces deux triangles sont égaux.",
-			"<b>Si</b> deux triangles ont un angle de même mesure compris entre des côtés deux à deux de mêmes longueurs, <b>alors</b> ces deux triangles sont égaux.",
+			"<b>Si</b> deux triangles ont un angle de même mesure compris entre des côtés deux à deux de mêmes longueur, <b>alors</b> ces deux triangles sont égaux.",
 			"<b>Si</b> deux triangles ont leurs côtés deux à deux de même longueur, <b>alors</b> ces deux triangles sont égaux."
 		]
 	},"triangle équilatéral": {
@@ -1702,7 +1698,7 @@
 			"Un triangle <span class=\"CRed\">équilatéral</span> est un triangle qui a trois côtés de même longueur. "
 		],
 		"proprietes": [
-			"Dans un triangle <b>équilatéral</b> tous les angles ont la même mesure : 60°."
+			"Dans un triangle <b>équilatéral</b>, tous les angles ont la même mesure : 60°."
 		],
 		"exemples": [
 			"<div class=\"flexobject\"><img src=\"/Images/Cours/Equilateral1.svg\" style=\"max-height: 4cm;\"><div style=\"flex: 1 1 5cm;\">Le triangle DEF ci-contre est équilatéral.</div></div>",
@@ -1714,7 +1710,7 @@
 			"Un triangle <span class=\"CRed\">isocèle</span> est un triangle qui a deux côtés de même longueur."
 		],
 		"proprietes": [
-			"Dans un triangle <b>isocèle</b> les angles à la base ont la même mesure."
+			"Dans un triangle <b>isocèle</b>, les angles à la base ont la même mesure."
 		],
 		"exemples": [
 			"<div class=\"flexobject\"><img src=\"/Images/Cours/Isocele1.svg\" style=\"max-height: 4cm;\"><div style=\"flex: 1 1 5cm\"><ul><li>Le triangle ABC ci-contre est <b>isocèle</b> en A.</li><li>A est appelé <b>sommet principal</b> du triangle ABC.</li><li>Le segment $[BC]$ est la <span class=\"CRed\">base</span> du triangle ABC.</li></ul></div></div>",
@@ -1743,13 +1739,13 @@
 			"Dans un triangle <b>rectangle</b>, pour chaque angle aigu, on définit trois rapports de longueurs :<br><ul style=\"list-style-type: '►'; line-height: 4em;\"><li>Le <b>sinus</b> de cet angle est égal au quotient : <span style=\"font-size: x-large;\">$\\frac{côté\\ \\textcolor{#039be5}{opposé}\\ à\\ l'angle}{\\textcolor{#43a047}{hypoténuse}}$</span></li><li>Le <b>cosinus</b> de cet angle est égal au quotient : <span style=\"font-size: x-large;\">$\\frac{côté\\ \\textcolor{#e53935}{adjacent}\\ à\\ l'angle}{\\textcolor{#43a047}{hypoténuse}}$</span></li><li>La <b>tangente</b> de cet angle est égale au quotient : <span style=\"font-size: x-large;\">$\\frac{côté\\ \\textcolor{#039be5}{opposé}\\ à\\ l'angle}{côté\\ \\textcolor{#e53935}{adjacent}\\ à\\ l'angle}$</span></li></ul>"
 		],
 		"proprietes": [
-			"Pour tout angle aigu de mesure $\\theta$ :&#160;&#160;&#160; $\\sin(\\theta)^{2}+\\cos(\\theta)^{2}=1$",
+			"Pour tout angle aigu de mesure $\\theta$ :&#160;&#160;&#160; $\\sin(\\theta)^{2}\\ +\\ \\cos(\\theta)^{2}=1$",
 			"Pour tout angle aigu de mesure $\\theta$ :&#160;&#160;&#160; $\\tan(\\theta)=\\frac{\\sin(\\theta)}{\\cos(\\theta)}$"
 		]
 	},"unité": {
 		"tags": [],
 		"definitions": [
-			"Pour chaque grandeur, on a défini une <span class=\"CRed\">unité</span> (un étalon) à partir duquel on <span class=\"CRed\">mesure</span> en regardant combien de fois on peut reporter cet unité."
+			"Pour chaque grandeur, on a défini une <span class=\"CRed\">unité</span> (un étalon) à partir de laquelle on <span class=\"CRed\">mesure</span> en regardant combien de fois on peut reporter cette unité."
 		],
 		"exemples": [
 			"Pour la longueur, on utilise le <b>mètre</b> comme unité.",
@@ -1758,8 +1754,8 @@
 			"Pour le volume, on utilise le <b>mètre cube</b> comme unité ou le <b>litre</b>."
 		],
 		"remarques": [
-			"En fonction du pays, certaine unité change. En Angleterre par exemple, l'unité de masse est le <b>pound</b> (1 lb = 0,453 592 37 kilogrammes).",
-			"Pour chaque unité, on définit des sous-unités en utilisant des préfixe (kilo, hecto, déca, déci, centi, milli)"
+			"En fonction du pays, certaines unités changent. En Angleterre par exemple, l'unité de masse est le <b>pound</b> (1 lb = 0,453 592 37 kilogrammes).",
+			"Pour chaque unité, on définit des sous-unités en utilisant des préfixes (kilo, hecto, déca, déci, centi, milli)"
 		],
 		"infos": [
 			"<a href=\"https://www.lumni.fr/video/le-metre-etalon#\" target=\"_blank\" class=\"external_link\">➤ Le mètre étalon - Vidéo Lumni (2 min 30)</a>"
@@ -1793,9 +1789,9 @@
 	},"volume": {
 		"tags": [],
 		"definitions": [
-			"Le <span class=\"CRed\">volume</span> est une grandeur représentant la contenance d'un solide. Il existe deux unités usuelles utilisé, le <b>mètre cube</b> noté <b>m³</b> et le <b>litre</b> noté <b>L</b>.",
-			"Le <span class=\"CRed\">volume</span> est la mesure du contenue d'un solide en trois dimensions.",
-			"Un <span class=\"CRed\">centimètre cube</span> est le volume d'un cube de 1cm de côté. On le note $cm^3$. C'est une des unités courantes du volume."
+			"Le <span class=\"CRed\">volume</span> est une grandeur représentant la contenance d'un solide. Il existe deux unités usuelles utilisées, le <b>mètre cube</b> noté <b>m³</b> et le <b>litre</b> noté <b>L</b>.",
+			"Le <span class=\"CRed\">volume</span> est la mesure du contenu d'un solide en trois dimensions.",
+			"Un <span class=\"CRed\">centimètre cube</span> est le volume d'un cube de 1 cm de côté. On le note $cm^3$. C'est une des unités courantes du volume."
 		],
 		"proprietes": [
 			"$V = \\text{Longueur} \\times \\text{Largeur} \\times \\text{Hauteur}$",
@@ -1807,9 +1803,9 @@
 		],
 		"remarques": [
 			"1 m³ c'est le volume d'un cube dont tous les côtés font 1 m.",
-			"1 décimètre cube (1 $dm^3$) = 1 Litre (1 L)",
+			"1 décimètre cube (1 $dm^3$) = 1 litre (1 L)",
 			"En m³, pour passer d'une sous-unité à l'autre, on multiplie ou divise par 1 000.",
-			"Il existe plusieurs unités de volumes, on utilise dans le système international le <b>mètre cube</b> et ses sous unités ou le <b>Litre</b>"
+			"Il existe plusieurs unités de volume, on utilise dans le système international le <b>mètre cube</b> et ses sous-unités ou le <b>litre</b>"
 		],
 		"infos": [
 			"<style>.p-table3 {display: grid;grid-template-columns: repeat(21, 1fr);grid-template-rows: auto auto repeat(2, 30px);align-content: center;vertical-align: middle;text-align: center;border: solid 1px black;}.p-table3 > div{border: solid 1px black;align-content: center;font-size: 12pt;}.p-table3 > div:nth-child(-n + 28){font-size: 8pt;font-weight: bold;}.p-table3 > div:nth-child(-n + 7){background-color: #88FF87;}.p-table3 > div:nth-child(n + 8):nth-child(-n + 28){background-color: #3CB3E3;}.p-table3 > div:nth-child(-n + 28) > span{font-size: 16pt !important;}</style><div class=\"p-table3\"><div style=\"grid-column: 1 / 4;\">Kilomètre cube<br><span>km³</span></div><div style=\"grid-column: 4 / 7;\">Hectomètre cube<br><span>hm³</span></div><div style=\"grid-column: 7 / 10;\">Décamètre cube<br><span>dam³</span></div><div style=\"grid-column: 10 / 13;\">Mètre cube<br><span>m³</span></div><div style=\"grid-column: 13 / 16;\">Décimètre cube<br><span>dm³</span></div><div style=\"grid-column: 16 / 19;\">Centimètre cube<br><span>cm³</span></div><div style=\"grid-column: 19 / 22;\">Millimètre cube<br><span>mm³</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div>Kilolitre<br><span>kL</span></div><div>Hectolitre<br><span>hL</span></div><div>Decalitre<br><span>daL</span></div><div>Litre<br><span>L</span></div><div>Décilitre<br><span>dL</span></div><div>Centilitre<br><span>cL</span></div><div>Millilitre<br><span>mL</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div></div><div></div><div></div><div>4</div><div>2</div><div>6</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div>0,</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>5</div></div>",
