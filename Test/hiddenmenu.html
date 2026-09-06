@@ -37,7 +37,7 @@
 		</style>
 	</head>
 	<body>
-		<p>Outils</p>
+		<h1>Outils</h1>
 		<ul>
 			<li><a href="/Test/AnimationTest.html">AnimationTest</a></li>
 			<li><a href="/Test/TestApp.html">Test d'application</a></li>
@@ -46,8 +46,12 @@
 			<li><a href="/Exerciseur/ListeExercices.html">Exerciseur</a></li>
 			<li><a href="/Cours/Definitions.html">Définitions</a></li>
 		</ul>
-		<p>Cours</p>
-		<p>3ème</p>
+		<h1>Applications</h1>
+		<ul id="Apps">
+
+		</ul>
+		<h1>Cours</h1>
+		<h2>3ème</h2>
 		<div class="flexobject">
 			<div>
 				<label>Madame de Lafayette :</label>
@@ -60,7 +64,7 @@
 					</ul>
 				</div>
 		</div>
-		<p>4ème</p>
+		<h2>4ème</h2>
 		<div class="flexobject">
 			<div>
 				<label>Madame de Lafayette :</label>
@@ -68,7 +72,7 @@
 				</ul>
 			</div>
 		</div>
-		<p>5ème</p>
+		<h2>5ème</h2>
 		<div class="flexobject">
 			<div>
 				<label>Madame de Lafayette :</label>
@@ -89,7 +93,7 @@
 				</ul>
 			</div>
 		</div>
-		<p>6ème</p>
+		<h2>6ème</h2>
 		<div class="flexobject">
 			<div>
 				<label>Madame de Lafayette :</label>
@@ -191,6 +195,26 @@
 		create_link(ListeCours.sixieme["madame_de_lafayette"], "6eme", sixieme_lafayette)
 		create_link(ListeCours.sixieme["saint_exupery"], "6eme", sixieme_exupery)
 		create_link(ListeCours.sixieme["roger_vailland"], "6eme", sixieme_vailland)
+
+		
+    var JSON_data;
+		var AppsList = document.getElementById("Apps")
+    var client = new XMLHttpRequest();
+		client.open('GET', '/Apps/Apps.json');
+		client.onreadystatechange = function() {
+			if (client.readyState === 4 && client.status === 200) {
+				JSON_data = JSON.parse(client.responseText);
+				Object.keys(JSON_data).forEach(key => {
+					let a = document.createElement("a");
+					a.innerHTML = key;
+					a.href = JSON_data[key]
+					let li = document.createElement("li")
+					li.appendChild(a);
+					AppsList.appendChild(li);
+				});
+			}
+		}
+		client.send();
 
 	</script>
 </html>
