@@ -39,7 +39,22 @@ Espace non sécable :
 
 
 Manques :
-	6ème	- Moyenne
+	6ème	- Découpage fraction 7/4 = 1 + 3/4
+				- Moyenne
+				- Comparaison de fractions
+				- Aires classiques (cm², dm², m²) avec lien du carré
+				- Proba -> approche fréquentiste
+				- Angle plein, opposées par le sommet et supplémentaires
+				- Triangles trois longueurs ne permettent pas toujours de construire un Triangles
+				- Le programme demande de savoir qu'une fraction peut représenter :
+					un entier ;
+					un nombre décimal non entier ;
+					un nombre non décimal.
+					Ton chapitre sur le quotient explique bien la fraction comme division, mais cette classification n'est pas explicitement institutionnalisée.	
+				- Quart, demi et trois quarts d'heure dans le chapitre sur les durées
+				- Solide : Ajouter image de boule et cône
+				- Supprimer la règle de trois en prop
+				- Ajouter schèma en barre pour l'algèbre
 	5ème	-
 	4ème	-
 	3ème	-

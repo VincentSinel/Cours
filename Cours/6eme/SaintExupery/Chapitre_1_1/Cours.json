@@ -1,4 +1,5 @@
 {
+	"scripts": [{"name": "/JS/Nombre_Lettre.js"},{"name": "JS/Jeu.js"}],
 	"content": [{
 			"type": "title", "name": "Système décimal",
 			"content": [
@@ -41,7 +42,8 @@
 					"content": [
 						{ "type": "definition", "source": [{"name": "entier", "indexes": [0]}]}
 					]
-				}
+				},
+				{ "type": "info", "source": [{"name": "entier", "indexes": [3]}]}
 			]
 		}
 	]

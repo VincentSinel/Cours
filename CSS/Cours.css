@@ -283,6 +283,42 @@ table, th, td, tr {
     transition: 0.5s;
 }
 
+.inline-button{
+    border-radius: 2px;
+    background-color: var(--Color_Orange4);
+    border: solid 1px var(--Color_Orange2);
+    color: var(--Color_BlueGray1);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: max-content;
+    min-width: 26px;
+    height: 26px;
+    cursor:pointer;
+}
+.inline-button:hover{
+    background-color: var(--Color_Orange5);
+    border: solid 1px var(--Color_Orange3);
+    color: var(--Color_BlueGray3);
+}
+.inline-button:active{
+    background-color: var(--Color_Orange3);
+    border: solid 1px var(--Color_Orange1);
+    color: var(--Color_BlueGray1);
+}
+.inline-button *{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .automatisme{
     border-radius: 10px;
     background-color: var(--Color_BlueGray2);
@@ -309,7 +345,8 @@ table, th, td, tr {
     border: solid 1px var(--Color_BlueGray1);
     color: var(--Color_BlueGray2);
 }
-.automatisme img{
+.automatisme img,
+.inline-button img{
     width: 24px;
     height: 24px;
     color: var(--Color_BlueGray5);

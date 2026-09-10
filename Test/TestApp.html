@@ -5,41 +5,62 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="content-language" content="en">
     <link rel="stylesheet" href="/CSS/MainPage.css"> 
-    <link rel="stylesheet" href="Boulier.css"> 
+    <link rel="stylesheet" href="/CSS/Cours.css"> 
+    <script src="/JS/Nombre_Lettre.js"></script>
+    <!-- <link rel="stylesheet" href="Boulier.css">  -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-    </style>
+    
+    
+    
+    
+
 
     </head>
 
     <body>
-        <div class="flexpage">
-            <div class="maintable">
-                <div id="numbers" class="line">
-                </div>
-                <div id="unitline" class="line">
-                </div>
-                <div id="line1" class="line">
-                </div>
-                <div id="line2" class="line">
-                </div>
-            </div>
-            <div class="options">
-                <div>
-                    <input class="tgl tgl-skewed" id="cb3" type="checkbox" onchange="ChangeType()"/>
-                    <label class="tgl-btn" data-tg-off="chinois" data-tg-on="japonais" for="cb3"></label>
-                </div>
-                <button onclick="RemiseZero()">Mise à zéro</button>
-                <button onclick="AfficherNombre()">Afficher / Cacher le nombre</button>
-                <label>Taille :</label>
-                <input id="bouliersize" value="12" step="1" min="6" max="21" type="number" onchange="ChangeSize(this.value)">
-                <button onclick="PleinEcran()">Plein Ecran</button>
+        <style>
+            .box_correct {
+                border: 2px solid var(--Color_Green3);
+            }
+            .box_incorrect {
+                border: 2px solid var(--Color_Red3);
+            }
+        </style>
+        <script>
+            var Reponse;
+            function Regenerer()
+            {
+                document.getElementById("reponse").classList.remove("box_correct");
+                document.getElementById("reponse").classList.remove("box_incorrect");
+                var nombre = Math.floor(Math.random() * 10_000_000)
+                document.getElementById("valeur").innerText = new Intl.NumberFormat().format(nombre);
+                Reponse = EnLettre(nombre);
+                console.log(nombre, Reponse)
+            }
+            function TestReponse()
+            {
+                document.getElementById("reponse").classList.remove("box_correct");
+                document.getElementById("reponse").classList.remove("box_incorrect");
+                if(document.getElementById("reponse").value == Reponse)
+                    document.getElementById("reponse").classList.add("box_correct")
+                else
+                    document.getElementById("reponse").classList.add("box_incorrect");
+            }
+            window.addEventListener("load", () => { Regenerer() })
+        </script>
+        <div style="padding: 5px; text-align: left; border: solid black 1px;">
+            <span><b>Ecrire en toutes lettres :</b></span><br>
+            <div class="flexobject" style="gap: 3px;">
+                <label id="valeur">Test</label> :
+                <input id="reponse" type="text" onsubmit="TestReponse()" style="flex: 3cm 1 1;">
+                <div onclick="TestReponse()" class="inline-button"><img src="/Images/Icons/Ok.svg"></div>
+                <div onclick="Regenerer()" class="inline-button"><img src="/Images/Icons/Rotation.svg"></div>
             </div>
         </div>
     </body>
 
-    <script src="Boulier.js"></script>
+    <!-- <script src="Boulier.js"></script> -->
 </html>
 
 
