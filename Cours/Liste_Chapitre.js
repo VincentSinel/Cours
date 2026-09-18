@@ -1296,7 +1296,7 @@ var cinquieme_saintexupery = [
 				pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_4/Documents/Chapitre 4 - Angles particuliers (A trou).pdf",
 			},
 			ready : true,
-			page : "SaintExupery/Chapitre_4/Cours.html"
+			page : "SaintExupery/Chapitre_4/Cours.json"
 	},
 	{
 			id: 5,

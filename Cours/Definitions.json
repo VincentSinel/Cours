@@ -97,6 +97,30 @@
 		"exemples": [
 			"<div class=\"flexobject\"><img src=\"/Images/Cours/Angles_adjacents.svg\" style=\"max-height: 3.5cm;\"><div style=\"flex: 5cm 1 1\">Les angles $\\widehat{NRJ}$ et $\\widehat{NRV}$ sont adjacents. Ils ont le même sommet R et sont situés de part et d'autre de $[RN)$</div></div>"
 		]
+	},"angles complémentaires": {
+		"tags": [],
+		"definitions": [
+			"Des angles dont la somme des mesures est égale à 90° sont dits <span class=\"CRed\">complémentaires.</span>"
+		],
+		"exemples": [
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Angles_complementaire.svg\" style=\"max-height: 3cm;\"><div style=\"flex: 1 1 5cm\">$\\widehat{AOB}$ et $\\widehat{BOC}$ sont <b>complémentaires</b> car $\\widehat{AOB} + \\widehat{BOC} =  54 + 36 = 90°$</div></div>"
+		]
+	},"angles opposés": {
+		"tags": [],
+		"definitions": [
+			"Deux droites sécantes forment 4 angles.Deux angles n'ayant que le sommet en commun, parmi les quatre, sont dits <span class=\"CRed\">opposés par le sommet</span>. Ils sont alors de même mesure."
+		],
+		"exemples": [
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Angles_opposes.svg\" style=\"max-height: 4cm;\"><div style=\"flex: 1 1 5cm\"><p>$\\widehat{AOB}$ et $\\widehat{MON}$ sont <b>opposés par le sommets</b>.<br>$\\widehat{AOM}$ et $\\widehat{BON}$ sont <b>opposés par le sommets</b>.</p></div></div>"
+		]
+	},"angles supplémentaires": {
+		"tags": [],
+		"definitions": [
+			"Des angles dont la somme des mesures est égale à 180° sont dits <span class=\"CRed\">supplémentaires.</span>"
+		],
+		"exemples": [
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Angles_supplementaire.svg\" style=\"max-height: 3cm;\"><div style=\"flex: 1 1 5cm\">$\\widehat{AOB}$ , $\\widehat{BOC}$ et $\\widehat{COD}$ sont <b>supplémentaires</b> car $\\widehat{AOB} + \\widehat{BOC} + \\widehat{COD} =  54 + 90 + 36 = 180°$</div></div>"
+		]
 	},"antécédent": {
 		"tags": [],
 		"definitions": [
@@ -310,6 +334,13 @@
 		"tags": [],
 		"definitions": [
 			"Dans un triangle <b>rectangle</b>, pour un angle « $\\theta$ » aigu donné, on a :<br><span style=\"font-size: x-large;\">$\\cos(\\theta)=\\frac{côté\\ \\textcolor{#e53935}{adjacent}\\ à\\ l'angle}{\\textcolor{#43a047}{hypoténuse}}$</span>"
+		]
+	},"couples d'angles": {
+		"tags": [],
+		"infos": [
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Couple_angles0.svg\" style=\"max-height: 4cm;\"><div style=\"flex: 1 1 5cm;\">On part d'une situation ou deux droites sont coupées par une sécante.<br>On peut alors identifier trois type de couple d'angles :<br><b><ul><li>Les angles alternes-internes</li><li>Les angles correspondants</li><li>Les angles alternes-externes <i>(hors programme)</i></li></ul></b></div></div>",
+			"<div class=\"flexobject\" style=\"text-align: center;\"><div style=\"flex: 1 1 5cm;\"><div style=\"margin-bottom: 10px;\">Les angles sont de part et d'autre de la sécante et entre les deux droites. </div><img src=\"/Images/Cours/Couple_angles1.svg\" style=\"max-height: 4cm;\"></div><div style=\"flex: 1 1 5cm;\"><div style=\"margin-bottom: 10px;\">On peut trouver deux couples d'angles <b>alternes-internes</b>. </div><img src=\"/Images/Cours/Couple_angles2.svg\" style=\"max-height: 4cm;\"></div><div style=\"flex: 1 1 5cm;\"><div style=\"margin-bottom: 10px;\">Lorsque les droites $(d_1)$ et $(d_2)$ sont parallèles, deux angles <b>alternes-internes</b> sont de même mesure. </div><img src=\"/Images/Cours/Couple_angles3.svg\" style=\"max-height: 4cm;\"></div></div>",
+			"<div class=\"flexobject\" style=\"text-align: center;\"><div style=\"flex: 1 1 5cm;\"><div style=\"margin-bottom: 10px;\">Les angles sont du même côté de la sécante et un à l'intérieur et l'autre à l'extérieur des deux droites. </div><img src=\"/Images/Cours/Couple_angles4.svg\" style=\"max-height: 4cm;\"></div><div style=\"flex: 1 1 5cm;\"><div style=\"margin-bottom: 10px;\">On peut trouver quatre couples d'angles <b>correspondants</b>. </div><img src=\"/Images/Cours/Couple_angles5.svg\" style=\"max-height: 4cm;\"></div><div style=\"flex: 1 1 5cm;\"><div style=\"margin-bottom: 10px;\">Lorsque les droites $(d_1)$ et $(d_2)$ sont parallèles, deux angles <b>correspondants</b> sont de même mesure. </div><img src=\"/Images/Cours/Couple_angles6.svg\" style=\"max-height: 4cm;\"></div></div>"
 		]
 	},"critère de divisibilité": {
 		"tags": [],
