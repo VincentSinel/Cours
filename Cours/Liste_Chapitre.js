@@ -1303,13 +1303,13 @@ var cinquieme_saintexupery = [
 			nom: "Additions et Soustractions de nombres relatifs",
 			icone: 1,
 			download: {
-				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (Complet).docx",
-				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (Complet).pdf",
-				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).docx",
-				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).pdf",
+				docx: 		 "/Cours/5eme/SaintExupery_v2/Chapitre_5/Documents/Chapitre 5 - Additions et Soustractions de nombres relatifs (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery_v2/Chapitre_5/Documents/Chapitre 5 - Additions et Soustractions de nombres relatifs (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery_v2/Chapitre_5/Documents/Chapitre 5 - Additions et Soustractions de nombres relatifs (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_5/Documents/Chapitre 5 - Additions et Soustractions de nombres relatifs (A trou).pdf",
 			},
-			ready : false,
-			page : "Base/Chapitre_11/Cours.html"
+			ready : true,
+			page : "saintexupery_v2/Chapitre_5/Cours.json"
 	},
 	{
 			id: 6,

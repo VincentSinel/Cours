@@ -1,0 +1,39 @@
+{
+	"activité": "<div class=\"flexobject\"><img src=\"/Images/Cours/Immeuble.svg\" style=\"max-width: 7cm;\"><div style=\"flex:7cm 1 1\"><p>Dans un immeuble les nombres relatifs sont souvent utilisés pour désigner les étages. On utilise alors les nombres négatifs pour indiquer les étages en sous-sol.<br> </p><ol><li> Depuis le rez-de-chaussée (étage 0) de combien d’étages dois-je monter pour arriver au :<br><ol type=\"a\"><li>1er étage ?</li><li>4ème étage ?</li><li>2ème parking ?</li></ol></li><li> Depuis le 2ème étage de combien d’étages dois-je descendre pour arriver au :<br><ol type=\"a\"><li>sous sol des caves ?</li><li>3ème étage ?</li></ol></li><li> A l'aide des questions précédentes, compléter les calculs suivants :<br><ol type=\"a\"><li>$0+\\qquad=1$</li><li>$0+\\qquad=4$</li><li>$0+\\qquad=-2$</li><li>$2-\\qquad=-1$</li><li>$2-\\qquad=3$</li></ol></li></ol></div></div>",
+	"content": [{
+			"type": "title", "name": "Somme de deux nombres relatifs",
+			"content": [
+				{
+					"type": "title", "name": "Nombres de même signes",
+					"content": [
+						{"type": "definition", "source": [{"name": "relatif", "indexes": [1]}]},
+						{"type": "exemple", "source": [{"name": "relatif", "indexes": [0,1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Nombres de signes contraires",
+					"content": [
+						{"type": "definition", "source": [{"name": "relatif", "indexes": [2]}]},
+						{"type": "exemple", "source": [{"name": "relatif", "indexes": [2,3]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Différence de deux nombres relatifs",
+			"content": [
+				{"type": "definition", "source": [{"name": "relatif", "indexes": [3]}]},
+				{"type": "exemple", "source": [{"name": "relatif", "indexes": [4,5,6,7]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Simplification d'une suite de sommes",
+			"content": [
+				{"type": "propriete", "source": [{"name": "relatif", "indexes": [6]}]},
+				{"type": "exemple", "source": [{"name": "relatif", "indexes": [8,9]}]},
+				{"type": "info", "source": [{"name": "relatif", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "relatif", "indexes": [10]}]}
+			]
+		}
+	]
+}
