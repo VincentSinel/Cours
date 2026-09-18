@@ -268,18 +268,19 @@ function CreateElement(element, parent, depth = 1)
 
 function CountSources(data)
 {
+	let sources = data.source
 	if ("multiple" in data) return 2;
 	let count = 0;
-	data.forEach(def => {
+	sources.forEach(def => {
 		if ("multiple" in def) count += 2;
 		count += def.indexes.length;
 	});
 	return count;
 }
 
-function SetDefinition(element, parent)
+function SetDefinition(data, parent)
 {
-	let data = element.source;
+	let sources = data.source;
 	let count = CountSources(data);
 	if (count == 0) return;
 	
@@ -300,12 +301,12 @@ function SetDefinition(element, parent)
 		content.appendChild(holder);
 	}
 
-	if (element.hasOwnProperty("style"))
-		holder.style.cssText = element.style;
-	if (element.hasOwnProperty("class"))
-		holder.classList.add(element.class);
+	if (data.hasOwnProperty("style"))
+		holder.style.cssText = data.style;
+	if (data.hasOwnProperty("class"))
+		holder.classList.add(data.class);
 
-	data.forEach(def => {
+	sources.forEach(def => {
 		if (!("definitions" in JSON_definitions[def.name])) {console.log("no definition with name " + def.name); return;}
 		def.indexes.forEach(index => {
 			let def_div = document.createElement(count > 1 ? "li" : "div");
@@ -319,9 +320,9 @@ function SetDefinition(element, parent)
 	});
 }
 
-function SetPropriete(element, parent)
+function SetPropriete(data, parent)
 {
-	let data = element.source;
+	let sources = data.source;
 	let count = CountSources(data);
 	if (count == 0) return;
 	
@@ -343,12 +344,12 @@ function SetPropriete(element, parent)
 		content.appendChild(holder);
 	}
 
-	if (element.hasOwnProperty("style"))
-		holder.style.cssText = element.style;
-	if (element.hasOwnProperty("class"))
-		holder.classList.add(element.class);
+	if (data.hasOwnProperty("style"))
+		holder.style.cssText = data.style;
+	if (data.hasOwnProperty("class"))
+		holder.classList.add(data.class);
 	
-	data.forEach(def => {
+	sources.forEach(def => {
 		def.indexes.forEach(index => {
 			let def_div = document.createElement(count > 1 ? "li" : "div");
 			if (def.hasOwnProperty("style"))
@@ -361,9 +362,9 @@ function SetPropriete(element, parent)
 	});
 }
 
-function SetExemple(element, parent)
+function SetExemple(data, parent)
 {
-	let data = element.source;
+	let sources = data.source;
 	let count = CountSources(data);
 	if (count == 0) return;
 	
@@ -372,20 +373,20 @@ function SetExemple(element, parent)
 	parent.appendChild(content);
 	let div_title = document.createElement("p");
 	div_title.innerHTML = "Exemple" + (count == 1 ? "" : "s") + " :";
-	if (element.hasOwnProperty("title"))
-		div_title.innerHTML = element.title;
+	if (data.hasOwnProperty("title"))
+		div_title.innerHTML = data.title;
 	content.appendChild(div_title);
 	let holder = document.createElement("div");
 	content.appendChild(holder);
 
-	if (element.hasOwnProperty("flex"))
+	if (data.hasOwnProperty("flex"))
 		holder.classList.add("flexobject");
-	if (element.hasOwnProperty("style"))
-		content.style.cssText = element.style;
-	if (element.hasOwnProperty("class"))
-		holder.classList.add(element.class);
+	if (data.hasOwnProperty("style"))
+		content.style.cssText = data.style;
+	if (data.hasOwnProperty("class"))
+		holder.classList.add(data.class);
 	
-	data.forEach(def => {
+	sources.forEach(def => {
 		def.indexes.forEach(index => {
 			let def_div = document.createElement("div");
 			if (def.hasOwnProperty("style"))
@@ -398,9 +399,9 @@ function SetExemple(element, parent)
 	});
 }
 
-function SetRemarque(element, parent)
+function SetRemarque(data, parent)
 {
-	let data = element.source;
+	let sources = data.source;
 	let count = CountSources(data);
 	if (count == 0) return;
 	
@@ -413,12 +414,12 @@ function SetRemarque(element, parent)
 	let holder = document.createElement("ul");
 	content.appendChild(holder);
 
-	if (element.hasOwnProperty("style"))
-		content.style.cssText = element.style;
-	if (element.hasOwnProperty("class"))
-		holder.classList.add(element.class);
+	if (data.hasOwnProperty("style"))
+		content.style.cssText = data.style;
+	if (data.hasOwnProperty("class"))
+		holder.classList.add(data.class);
 	
-	data.forEach(def => {
+	sources.forEach(def => {
 		def.indexes.forEach(index => {
 			let def_div = document.createElement("li");
 			if (def.hasOwnProperty("style"))
@@ -431,9 +432,9 @@ function SetRemarque(element, parent)
 	});
 }
 
-function SetInfo(element, parent)
+function SetInfo(data, parent)
 {
-	let data = element.source;
+	let sources = data.source;
 	let count = CountSources(data);
 	if (count == 0) return;
 	
@@ -441,14 +442,14 @@ function SetInfo(element, parent)
 	holder.classList.add("info");
 	parent.appendChild(holder);
 
-	if (element.hasOwnProperty("flex"))
+	if (data.hasOwnProperty("flex"))
 		holder.classList.add("flexobject");
-	if (element.hasOwnProperty("style"))
-		holder.style.cssText = element.style;
-	if (element.hasOwnProperty("class"))
-		holder.classList.add(element.class);
+	if (data.hasOwnProperty("style"))
+		holder.style.cssText = data.style;
+	if (data.hasOwnProperty("class"))
+		holder.classList.add(data.class);
 
-	data.forEach(def => {
+	sources.forEach(def => {
 		def.indexes.forEach(index => {
 			let def_div = document.createElement("p");
 			if (def.hasOwnProperty("style"))
@@ -461,22 +462,22 @@ function SetInfo(element, parent)
 	});
 }
 
-function SetAutre(element, parent)
+function SetAutre(data, parent)
 {
-	console.log("Autre donnée :", element)
-	let data = element.source;
+	console.log("Autre donnée :", data)
+	let sources = data.source;
 	let holder = document.createElement("div");
 	holder.classList.add("autre");
 	parent.appendChild(holder);
 
-	if (element.hasOwnProperty("flex"))
+	if (data.hasOwnProperty("flex"))
 		holder.classList.add("flexobject");
-	if (element.hasOwnProperty("style"))
-		holder.style.cssText = element.style;
-	if (element.hasOwnProperty("class"))
-		holder.classList.add(element.class);
+	if (data.hasOwnProperty("style"))
+		holder.style.cssText = data.style;
+	if (data.hasOwnProperty("class"))
+		holder.classList.add(data.class);
 
-	data.forEach(def => {
+	sources.forEach(def => {
 		let def_div = document.createElement("div");
 		if (def.hasOwnProperty("style"))
 		{

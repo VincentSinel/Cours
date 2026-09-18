@@ -1277,13 +1277,13 @@ var cinquieme_saintexupery = [
 			nom: "Utiliser les nombres décimaux",
 			icone: 1,
 			download: {
-				// docx: 		 "/Cours/5eme/Base/Chapitre_3/Documents/Chapitre 3 - Priorités opératoires (Complet).docx",
-				// pdf:  		 "/Cours/5eme/Base/Chapitre_3/Documents/Chapitre 3 - Priorités opératoires (Complet).pdf",
-				// docx_trou: "/Cours/5eme/Base/Chapitre_3/Documents/Chapitre 3 - Priorités opératoires (A trou).docx",
-				// pdf_trou:  "/Cours/5eme/Base/Chapitre_3/Documents/Chapitre 3 - Priorités opératoires (A trou).pdf",
+				docx: 		  "/Cours/5eme/Saintexupery_v2/Chapitre_3/Documents/Chapitre 3 - Utiliser les nombres décimaux (Complet).docx",
+				pdf:  		  "/Cours/5eme/Saintexupery_v2/Chapitre_3/Documents/Chapitre 3 - Utiliser les nombres décimaux (Complet).pdf",
+				docx_trou: "/Cours/5eme/Saintexupery_v2/Chapitre_3/Documents/Chapitre 3 - Utiliser les nombres décimaux (A trou).docx",
+				pdf_trou:  "/Cours/5eme/Saintexupery_v2/Chapitre_3/Documents/Chapitre 3 - Utiliser les nombres décimaux (A trou).pdf",
 			},
-			ready : false,
-			page : "Base/Chapitre_3/Cours.html"
+			ready : true,
+			page : "SaintExupery_V2/Chapitre_3/Cours.json",
 	},
 	{
 			id: 4,

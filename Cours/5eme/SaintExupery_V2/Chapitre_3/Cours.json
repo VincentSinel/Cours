@@ -1,0 +1,74 @@
+{
+	"activité": "<div class=\"flexobject\"><img src=\"/Images/Cours/Calculatrice.png\" style=\"max-width: 10cm;\"><div style=\"flex: 1 1 7cm;\">Louis utilise une calculatrice 4 opération comme celle ci-contre pour faire un exercice de mathématiques.<br>Il doit effectuer le calcul suivant : $8 - 3\\times2 + 6$<br>En écrivant se calcul dans l'ordre sur sa calculatrice il obtient 16.<br>Effectue ce calcul en une seul opération sur ta calculatrice collège.<br><ul><li>Que remarques-tu ?  </li><li>Quel est le problème avec le calcul de Louis ?</li></ul></div></div>",
+	"content": [{
+			"type": "title", "name": "Opérateurs",
+			"content": [
+				{
+					"type": "title",
+					"name": "Addition",
+					"content": [
+						{"type": "definition", "source": [{"name": "somme", "indexes": [0]}, {"name": "terme", "indexes": [0]}]},
+						{"type": "info", "source": [{"name": "somme", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "somme", "indexes": [2]}]}
+					]
+				},
+				{
+					"type": "title",
+					"name": "Soustraction",
+					"content": [
+						{"type": "definition", "source": [{"name": "différence", "indexes": [0]}, {"name": "terme", "indexes": [1]}]},
+						{"type": "info", "source": [{"name": "différence", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "différence", "indexes": [2]}]}
+					]
+				},
+				{
+					"type": "title",
+					"name": "Multiplication",
+					"content": [
+						{"type": "definition", "source": [{"name": "produit", "indexes": [0]}, {"name": "facteur", "indexes": [0]}]},
+						{"type": "info", "source": [{"name": "produit", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title",
+					"name": "Division",
+					"content": [
+						{"type": "definition", "source": [{"name": "division décimale", "indexes": [0]}, {"name": "quotient", "indexes": [1]}]},
+						{"type": "exemple", "source": [{"name": "division décimale", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "division décimale", "indexes": [0]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Priorités opératoires",
+			"content": [
+				{
+					"type": "title", "name": "Calcul sans parenthèses",
+					"content": [
+						{"type": "propriete", "source": [{"name": "priorités opératoires", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "priorités opératoires", "indexes": [0]}]},
+						{"type": "propriete", "source": [{"name": "priorités opératoires", "indexes": [1]}]},
+						{"type": "exemple", "source": [{"name": "priorités opératoires", "indexes": [1]}]},
+						{"type": "propriete", "source": [{"name": "priorités opératoires", "indexes": [2]}]},
+						{"type": "exemple", "source": [{"name": "priorités opératoires", "indexes": [2,3]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Utilisation des parenthèses",
+					"content": [
+						{"type": "propriete", "source": [{"name": "priorités opératoires", "indexes": [3]}]},
+						{"type": "exemple", "source": [{"name": "priorités opératoires", "indexes": [4, 5]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Calcul dans un quotient",
+					"content": [
+						{"type": "propriete", "source": [{"name": "priorités opératoires", "indexes": [4]}]},
+						{"type": "exemple", "source": [{"name": "priorités opératoires", "indexes": [6]}]}
+					]
+				}
+			]
+		}
+	]
+}

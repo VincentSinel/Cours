@@ -4,7 +4,7 @@
 			"content": [
 				{"type": "definition", "source": [{"name": "somme", "indexes": [0]}, {"name": "terme", "indexes": [0]}]},
 				{"type": "info", "source": [{"name": "somme", "indexes": [0]}]},
-				{"type": "exemple", "source": [{"name": "somme", "indexes": [0]}]}
+				{"type": "exemple", "multiple": true, "source": [{"name": "somme", "indexes": [0]}]}
 			]
 		},
 		{
@@ -25,7 +25,7 @@
 			"type": "title", "name": "Soustraction posée",
 			"content": [
 				{"type": "info", "source": [{"name": "différence", "indexes": [0]}]},
-				{"type": "exemple", "source": [{"name": "différence", "indexes": [0]}]}
+				{"type": "exemple", "multiple": true, "source": [{"name": "différence", "indexes": [0]}]}
 			]
 		}
 	]
