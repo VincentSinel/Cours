@@ -1,5 +1,4 @@
 {
-	"scripts": [{"name": "/JS/Animation/Animations/Regle_de_trois.js"}],
 	"content": [{
 			"type": "title", "name": "Linéarité",
 			"content": [
@@ -19,13 +18,6 @@
 			"content": [
 				{"type": "propriete", "source": [{"name": "proportionnelle", "indexes": [2]}]},
 				{"type": "exemple", "source": [{"name": "proportionnelle", "indexes": [4]}]}
-			]
-		},
-		{
-			"type": "title", "name": "Règle de trois",
-			"content": [
-				{"type": "definition", "source": [{"name": "règle de trois", "indexes": [0]}]},
-				{"type": "exemple", "source": [{"name": "règle de trois", "indexes": [0]}]}
 			]
 		}
 	]
