@@ -1505,7 +1505,7 @@
 			"Lorsque des droites, segments ou demi-droites se coupent en un point, on dit qu'elles sont <span class=\"CRed\">sécantes</span>."
 		],
 		"remarques": [
-			"Les points C, E et D sont <span class=\"CRed\">alignés</span>."
+			"Les points A, D et B sont <span class=\"CRed\">alignés</span>."
 		],
 		"exemples": [
 			"<div class=\"flexobject\"><img src=\"/Images/Cours/Secantes.svg\" style=\"flex: 1 1 4cm; max-width: 7cm;\"><div style=\"flex: 1 1 4cm\">Ici les droites $(AB)$ et $(CD)$ sont sécantes en D.</div></div>"
