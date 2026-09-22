@@ -7,7 +7,7 @@
 				{"type": "definition", "source": [{"name": "durée", "indexes": [0]}]},
 				{"type": "exemple", "source": [{"name": "durée", "indexes": [0]}]},
 				{"type": "remarque", "source": [{"name": "durée", "indexes": [0]}]},
-				{"type": "info", "source": [{"name": "durée", "indexes": [0]}]}
+				{"type": "info", "source": [{"name": "durée", "indexes": [0,4]}]}
 			]
 		},
 		{
