@@ -1508,7 +1508,7 @@
 			"Les points C, E et D sont <span class=\"CRed\">alignés</span>."
 		],
 		"exemples": [
-			"<div class=\"flexobject\"><img src=\"/Images/Cours/Secantes.svg\" style=\"flex: 1 1 4cm; max-width: 7cm;\"><div style=\"flex: 1 1 4cm\">Ici les droites $(AB)$ et $(CD)$ sont sécantes en E.</div></div>"
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Secantes.svg\" style=\"flex: 1 1 4cm; max-width: 7cm;\"><div style=\"flex: 1 1 4cm\">Ici les droites $(AB)$ et $(CD)$ sont sécantes en D.</div></div>"
 		]
 	},"section": {
 		"tags": [],
