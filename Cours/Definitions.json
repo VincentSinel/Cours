@@ -1577,7 +1577,9 @@
 			"<div class=\"flexobject\"><span>Vue en perspective isométrique :</span><img src=\"/Images/Cours/Vue_isometrique.svg\"></div>",
 			"<div class=\"flexobject\"><span>Vue de droite :</span><img src=\"/Images/Cours/Face_droite.svg\"></div>",
 			"<div class=\"flexobject\"><span>Vue de dessus :</span><img src=\"/Images/Cours/Face_dessus.svg\"></div>",
-			"<div class=\"flexobject\"><img src=\"/Images/Cours/Sommets.svg\" style=\"max-width: 6cm;\"><img src=\"/Images/Cours/Aretes.svg\" style=\"max-width: 6cm;\"><img src=\"/Images/Cours/Faces.svg\" style=\"max-width: 6cm;\"></div>"
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Sommets.svg\" style=\"max-width: 6cm;\"><img src=\"/Images/Cours/Aretes.svg\" style=\"max-width: 6cm;\"><img src=\"/Images/Cours/Faces.svg\" style=\"max-width: 6cm;\"></div>",
+			"<img src=\"/Images/Cours/Solide_Boule.png\" style=\"max-width: 4cm; max-height: 3cm;\">",
+			"<img src=\"/Images/Cours/Solide_Cône.png\" style=\"max-width: 4cm; max-height: 3cm;\">"
 		],
 		"remarques": [
 			"Il existe plusieurs types de vue en perspective. Les plus connus sont la perspective <span class=\"CRed\">cavalière</span> et la perspective <span class=\"CRed\">isométrique</span>.",

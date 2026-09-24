@@ -6,7 +6,7 @@
 			"name": "Représentation d'un solide",
 			"content": [
 				{"type": "definition", "source": [{"name": "solide", "indexes": [0]}]},
-				{"type": "exemple", "source": [{"name": "solide", "indexes": [0,1,2,3,4], "style": "flex: 4cm 1 1"}], "flex": true},
+				{"type": "exemple", "source": [{"name": "solide", "indexes": [0,1,2,3,4,11,12], "style": "flex: 4cm 1 1"}], "flex": true},
 				{"type": "definition", "source": [{"name": "solide", "indexes": [1]}]},
 				{"type": "exemple", "source": [{"name": "solide", "indexes": [5,6,7,8,9]}], "class": "exemple_perspec", "flex": true},
 				{"type": "remarque", "source": [{"name": "solide", "indexes": [0]}]}
