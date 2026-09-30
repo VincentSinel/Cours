@@ -20,6 +20,15 @@
 				{"type": "exemple", "source": [{"name": "tableau", "indexes": [1]}]},
 				{"type": "remarque", "source": [{"name": "tableau", "indexes": [2,3]}]}
 			]
+		},
+		{
+			"type": "title",
+			"name": "Moyenne",
+			"content": [
+				{"type": "definition", "source": [{"name": "moyenne", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "moyenne", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "moyenne", "indexes": [0]}]}
+			]
 		}
 	]
 }
