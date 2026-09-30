@@ -41,7 +41,6 @@ Espace non sécable :
 Manques :
 	6ème	- Découpage fraction 7/4 = 1 + 3/4
 				- Moyenne
-				- Comparaison de fractions
 				- Aires classiques (cm², dm², m²) avec lien du carré
 				- Proba -> approche fréquentiste
 				- Angle plein, opposées par le sommet et supplémentaires

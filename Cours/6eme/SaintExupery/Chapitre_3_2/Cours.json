@@ -12,6 +12,14 @@
 			"content": [
 				{"type": "info", "source": [{"name": "axe gradué", "indexes": [1]}]}
 			]
+		},
+		{
+			"type": "title", "name": "Comparaison de fraction",
+			"content": [
+				{"type": "propriete", "source": [{"name": "fraction", "indexes": [5]}]},
+				{"type": "exemple", "source": [{"name": "fraction", "indexes": [9,10]}]},
+				{"type": "remarque", "source": [{"name": "fraction", "indexes": [3,4]}]}
+			]
 		}
 	]
 }
