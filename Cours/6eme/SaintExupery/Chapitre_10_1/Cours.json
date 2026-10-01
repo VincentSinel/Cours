@@ -30,7 +30,10 @@
 			"name": "Aires",
 			"content": [
 				{"type": "definition", "source": [{"name": "aire", "indexes": [0]}]},
-				{"type": "exemple", "source": [{"name": "aire", "indexes": [4]}]}
+				{"type": "exemple", "source": [{"name": "aire", "indexes": [4]}]},
+				{"type": "definition", "source": [{"name": "aire", "indexes": [1]}]},
+				{"type": "exemple", "source": [{"name": "aire", "indexes": [5]}]},
+				{"type": "remarque", "source": [{"name": "aire", "indexes": [0,1]}]}
 			]
 		}
 	]

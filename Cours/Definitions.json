@@ -29,7 +29,8 @@
 	},"aire": {
 		"tags": [],
 		"definitions": [
-			"L'<span class=\"CRed\">aire</span> d'une figure plane est la mesure de sa surface."
+			"L'<span class=\"CRed\">aire</span> d'une figure plane est la mesure de sa surface.",
+			"Dans le système international, l'unité d'aire est le <span class=\"CRed\">mètre carré</span>, noté <span class=\"CRed\">$m^2$</span>"
 		],
 		"infos": [
 			"<div class=\"tableau_unite\"><div style=\"grid-column: 1 / 3; font-weight: bold; font-size: 20px;\">Unités d'aire</div><div class=\"CRed\" style=\"font-weight: bold;\">Multiples</div><div class=\"CGreen\" style=\"font-weight: bold;\">Sous-Multiples</div><div><b>Décamètre carré</b><br>1 dam² = 100 m²</div><div><b>Décimètre carré</b><br>1 dm² = 0,01 m²</div><div><b>Hectomètre carré</b><br>1 hm² = 100 dam² = 10 000 m²</div><div><b>Centimètre carré</b><br>1 cm² = 0,01 dm² = 0,00 01 m²</div><div><b>Kilomètre carré</b><br>1 km² = 100 hm² = 10 000 dam² = 10 000 000 m²</div><div><b>Millimètre carré</b><br>1 mm² = 0,01 cm² = 0,00 01 dm² = 0,00 000 1 m²</div></div>",
@@ -45,7 +46,12 @@
 			"L'aire d'un carré de côté 6 cm est $\\mathscr{A}=6\\times6 = 36 cm²$.",
 			"L'aire d'un triangle rectangle dont les côtés de l'angle droit mesurent 6 cm et 8 cm est $\\mathscr{A}=\\frac{6\\times8}{2}=\\frac{48}{2}=24 cm²$.",
 			"L'aire d'un cercle de rayon 5 cm est $\\mathscr{A}=\\pi\\times5²=25\\pi \\approx 78,5 cm²$.",
-			"<p>On définit une unité de surface et on compte le nombre de fois que celle-ci peut être mise dans notre figure pour obtenir son aire.</p><div class=\"flexobject\"><div style=\"flex: 8cm 0 1; text-align: center;\"><img src=\"/Images/Cours/Aire_rectangle.svg\" style=\"height: 6cm;\"><p>Ici on peut mettre 5 par 8 carrés d'unité d'aire, soit 5×8=40 unités.</p></div><div style=\"flex: 8cm 0 1; text-align: center;\"><img src=\"/Images/Cours/Aire_hexagone.svg\" style=\"height: 6cm;\"><p>Ici on peut mettre 4 par 6 hexagones d'unité d'aire, soit 4×6=24 unités.</p></div></div>"
+			"<p>On définit une unité de surface et on compte le nombre de fois que celle-ci peut être mise dans notre figure pour obtenir son aire.</p><div class=\"flexobject\"><div style=\"flex: 8cm 0 1; text-align: center;\"><img src=\"/Images/Cours/Aire_rectangle.svg\" style=\"height: 6cm;\"><p>Ici on peut mettre 5 par 8 carrés d'unité d'aire, soit 5×8=40 unités.</p></div><div style=\"flex: 8cm 0 1; text-align: center;\"><img src=\"/Images/Cours/Aire_hexagone.svg\" style=\"height: 6cm;\"><p>Ici on peut mettre 4 par 6 hexagones d'unité d'aire, soit 4×6=24 unités.</p></div></div>",
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Aire1.svg\" style=\"max-height: 4cm;\"><p>L'aire d'un carré de 1 m de côté est 1m². $1\\ m \\times 1\\ m = 1 \\times 1\\ m^2 = 1\\ m^2$</p></div>"
+		],
+		"remarques": [
+			"1 m² = 100 dm².<br><br><div class=\"flexobject\"><img src=\"/Images/Cours/Aire1.svg\" style=\"max-height: 4cm;\"><span>=</span><img src=\"/Images/Cours/Aire2.svg\" style=\"max-height: 4cm;\"></div>$1\\ m \\times 1\\ m = 10\\ dm \\times 10\\ dm = 10\\times10\\ dm^2=100\\ dm^2$<br><br>",
+			"1 dm² = 100 cm².<br><br><div class=\"flexobject\"><img src=\"/Images/Cours/Aire3.svg\" style=\"max-height: 4cm;\"><span>=</span><img src=\"/Images/Cours/Aire4.svg\" style=\"max-height: 4cm;\"></div>$1\\ dm \\times 1\\ dm = 10\\ cm \\times 10\\ cm = 10\\times10\\ cm^2=100\\ cm^2$"
 		]
 	},"algèbre": {
 		"tags": [],
