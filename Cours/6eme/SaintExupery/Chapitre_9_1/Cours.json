@@ -6,7 +6,8 @@
 			"name": "Construction d'un triangle avec 3 longueurs",
 			"content": [
 				{"type": "info", "source": [{"name": "triangle", "indexes": [4]}]},
-				{"type": "exemple", "source": [{"name": "triangle", "indexes": [0]}]}
+				{"type": "exemple", "source": [{"name": "triangle", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "triangle", "indexes": [1]}]}
 			]
 		}
 	]

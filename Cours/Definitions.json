@@ -1751,7 +1751,8 @@
 			"<div class=\"flexobject\"><img src=\"/Images/Cours/Triangle4.svg\" style=\"max-height: 4cm;\"><div style=\"flex: 1 1 5cm\">$\\textcolor{#EEBB00}{\\widehat{ABC}}+\\textcolor{#43a047}{\\widehat{BCA}}+\\textcolor{#7C4DA5}{\\widehat{CAB}} = 180°$</div></div>"
 		],
 		"remarques": [
-			"Lorsque l'on ne connaît la mesure que de l'un des deux côtés de l'angle, il y a deux triangles possibles."
+			"Lorsque l'on ne connaît la mesure que de l'un des deux côtés de l'angle, il y a deux triangles possibles.",
+			"A partir de 3 longueurs, un triangle n'est pas toujours constructible. (Exemple : 4 cm, 6 cm et 1 cm)"
 		],
 		"infos": [
 			"<div style=\"text-align: center; border: solid 3px black; border-radius: 10px;width: fit-content; background-color: #FFFF8F33;\">Construction d'un triangle ABC tel que AB = 8cm, AC = 6cm et BC = 4cm :<div id=\"Triangle_Longueurs\" class=\"animation\" width=\"480\" height=\"360\"></div></div>",
