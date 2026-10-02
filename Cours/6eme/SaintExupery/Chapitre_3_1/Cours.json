@@ -10,7 +10,8 @@
 						{"type": "info", "source": [{"name": "forme fractionnaire", "indexes": [0]}]},
 						{"type": "info", "source": [{"name": "forme fractionnaire", "indexes": [1]}]}
 					]
-				}
+				},
+				{"type": "remarque", "source": [{"name": "fraction", "indexes": [5]}]}
 			]
 		},
 		{
