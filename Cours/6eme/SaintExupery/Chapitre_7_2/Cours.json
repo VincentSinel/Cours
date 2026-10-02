@@ -8,7 +8,11 @@
 				{"type": "remarque","source": [{"name": "angle","indexes": [0]}]},
 				{"type": "info","source": [{"name": "angle","indexes": [1]}]},
 				{"type": "definition","source": [{"name": "angles adjacents","indexes": [0]}]},
-				{"type": "exemple","source": [{"name": "angles adjacents","indexes": [0]}]}
+				{"type": "exemple","source": [{"name": "angles adjacents","indexes": [0]}]},
+				{"type": "definition","source": [{"name": "angles opposés","indexes": [0]}]},
+				{"type": "exemple","source": [{"name": "angles opposés","indexes": [0]}]},
+				{"type": "definition","source": [{"name": "angles supplémentaires","indexes": [0]}]},
+				{"type": "exemple","source": [{"name": "angles supplémentaires","indexes": [0]}]}
 			]
 		},
 		{
