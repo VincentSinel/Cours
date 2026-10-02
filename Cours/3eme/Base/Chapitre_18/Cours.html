@@ -176,22 +176,29 @@
           <p>La fréquence est comprise entre 0 et 1.</p>
           <div class="definition" definition="fréquence" objids="1"></div>
           <div class="flexobject">
-            <div>
-              <p>
-                On simule le lancé d'un dé et on compte le nombre de faces 1 obtenues.<br>
-                En rouge est indiquée la probabilité. En vert la fréquence d'apparition en fonction du nombre de tirages.<br>
-                On peut voir que la courbe verte se rapproche de la droite rouge au fur et à mesure que les tirages augmentent.
-              </p>
-              <label>Nombre de tirages : </label>
-              <input id="nbr_tirage" type="number" min="100" max="10000" value="6000" step="100" onchange="Regenerate()"><br>
-              <label>Nombre de face :</label>
-              <input id="proba_tirage" type="number" min="1" max="100" value="6" step="1" onchange="Regenerate()"><br>
-              <button onclick="Regenerate()">Relancer</button>
+            <div style="flex: 6cm 1 1;">
+              On simule le lancé d'un dé et on compte le nombre de faces 1 obtenues.<br>
+              En rouge est indiquée la probabilité. En vert la fréquence d'apparition en fonction du nombre de tirages.<br>
+              On peut voir que la courbe verte se rapproche de la droite rouge au fur et à mesure que les tirages augmentent.
             </div>
-            <div style="width: 100%;">
-              fréquence<br>
-              <div id="preview" style="display: inline-block; width: calc(100% - 86px); max-width: 480px;"></div>
-              <div style="display: inline-block;">Nombre de<br>tirages<br> <br></div>
+            <div style="flex: 480px 2 1">
+              <div class="flexobject">
+                <div style="flex-grow: 0;">
+                  <label>Nombre de tirages : </label>
+                  <input id="nbr_tirage" type="number" min="100" max="10000" value="6000" step="100" onchange="Regenerate()"><br>
+                  <label>Nombre de face :</label>
+                  <input id="proba_tirage" type="number" min="1" max="100" value="6" step="1" onchange="Regenerate()"><br>
+                </div>
+                <div class="flex-grow: 1">
+                  <button onclick="Regenerate()">Relancer</button>
+                </div>
+              </div>
+              <br>
+              <div style="width: 100%">
+                <b>fréquence</b><br>
+                <div id="preview" style="display: inline-block; width: calc(100% - 86px); max-width: 480px;"></div>
+                <div style="display: inline-block;"><b>Nombre de<br>tirages<br></b> <br></div>
+              </div>
             </div>
           </div> 
 

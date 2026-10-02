@@ -1,4 +1,5 @@
 {
+	"scripts": [{"name": "/JS/Raphael/raphael.min.js"},{"name": "JS/Simulation.js"}],
 	"content": [
 		{
 			"type": "title",
@@ -19,7 +20,8 @@
 				{"type": "propriete", "source": [{"name": "probabilité", "indexes": [0,1]}]},
 				{"type": "exemple", "source": [{"name": "probabilité", "indexes": [1]}]},
 				{"type": "definition", "source": [{"name": "équiprobabilité", "indexes": [0]}]},
-				{"type": "exemple", "source": [{"name": "équiprobabilité", "indexes": [0]}]}
+				{"type": "exemple", "source": [{"name": "équiprobabilité", "indexes": [0]}]},
+				{"type": "info", "source": [{"name": "probabilité", "indexes": [0]}]}
 			]
 		}
 	]
