@@ -16,7 +16,7 @@
 					"type": "title",
 					"name": "Soustraction",
 					"content": [
-						{"type": "definition", "source": [{"name": "différence", "indexes": [0]}, {"name": "terme", "indexes": [1]}]},
+						{"type": "definition", "source": [{"name": "différence", "indexes": [0]}, {"name": "terme", "indexes": [0]}]},
 						{"type": "info", "source": [{"name": "différence", "indexes": [0]}]},
 						{"type": "exemple", "source": [{"name": "différence", "indexes": [2]}]}
 					]
