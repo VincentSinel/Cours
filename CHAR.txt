@@ -40,11 +40,6 @@ Espace non sécable :
 
 Manques :
 	6ème	
-		- Le programme demande de savoir qu'une fraction peut représenter :
-			un entier ;
-			un nombre décimal non entier ;
-			un nombre non décimal.
-			Ton chapitre sur le quotient explique bien la fraction comme division, mais cette classification n'est pas explicitement institutionnalisée.
 	5ème	-
 	4ème	-
 	3ème	-

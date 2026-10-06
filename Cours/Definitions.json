@@ -214,7 +214,9 @@
 			"Le carré d'un nombre <span class=\"CRed\">$a$</span> est le produit de ce nombre par lui-même. On le note $\\textcolor{#e53935}{a}^2=\\textcolor{#e53935}{a}\\times \\textcolor{#e53935}{a}$ &nbsp;&nbsp; lu \"<span class=\"CRed\">$a$</span> au carré\"."
 		],
 		"exemples":[
-			"<img src=\"/Images/Cours/Quad5.svg\" style=\"max-height: 4cm;\">"
+			"<img src=\"/Images/Cours/Quad5.svg\" style=\"max-height: 4cm;\">",
+			"5 au carré : $5^2 = 5\\times 5 = 25$",
+			"$a$ au carré : $a^2 = a\\times a$"
 		],
 		"remarques": [
 			"Un carré est un losange et un rectangle particulier."
@@ -378,7 +380,9 @@
 		],
 		"exemples": [
 			"<img src=\"/Images/Cours/Cube3.svg\" style=\"max-height: 4cm;\">",
-			"Un cube de 4 cm de côté a pour volume $4\\times4\\times4 = 64 cm^3$."
+			"Un cube de 4 cm de côté a pour volume $4\\times4\\times4 = 64 cm^3$.",
+			"5 au cube : $5^3=5\\times5\\times5=125$",
+			"$a$ au cube : $a^3=a\\times a\\times a$"
 		],
 		"remarques": [
 			"Un cube a toutes ses arêtes de même longueur."
@@ -772,6 +776,21 @@
 		"definitions": [
 			"Une <span class=\"CRed\">expression littérale</span> est une expression (un calcul) qui fait intervenir une ou plusieurs lettres.",
 			"Deux expressions littérales sont égales si elles prennent toujours la même valeur quand on remplace les variables par des valeurs numériques."
+		],
+		"exemples": [
+			"$c\\times c$",
+			"$L\\times 𝓁$",
+			"$2\\times L + 2\\times 𝓁$",
+			"<div class=\"flexobject\"><div class=\"programme_calcul\"><div><span><b>Programme 1</b></span></div><ul><li>Choisir un nombre.</li><li>Ajouter 5.</li><li>Multiplier par 6.</li></ul></div><div><div><span><b>Programme 1</b></span></div><ul><li>$x$</li><li>$x+5$</li><li>$(x+5)\times 6$</li></ul><p>Donc le programme 1 correspond à $(x+5)\times 6$</p></div></div>",
+			"<div class=\"flexobject\"><div class=\"programme_calcul\"><div><span><b>Programme 2</b></span></div><ul><li>Choisir un nombre.</li><li>Prendre son carré.</li><li>Ajouter le nombre de départ.</li></ul></div><div><div><span><b>Programme 2</b></span></div><ul><li>$x$</li><li>$x^2$</li><li>$x^2+x$</li></ul><p>Donc le programme 2 correspond à $x^2+x$</p></div></div>"
+		],
+		"remarques": [
+			"Les nombres seul sont appelés des <span class=\"CRed\">constante</span>.<br><b>Ex : $\\textcolor{#43a047}{4} + \\textcolor{#039be5}{5\\times a}$</b><br><span class=\"CGreen\">Constante</span>&#160;&#160;&#160; <span class=\"CBlue\">Variable</span>",
+			"Dans une expression, une variable si elle apparait plusieurs fois, représente le même nombre.",
+			"Lorsque l'on effectue le calcul en remplaçant la variable par une valeur on dit que l'on <b>évalue</b> l'expression en cette valeur."
+		],
+		"infos": [
+			"On utilise les expressions littérales pour traduire un programme de calcul en une seul expressions. Cela permet d'étudier le programme avec d'autre outils."
 		]
 	},"facteur": {
 		"tags": [],
@@ -1437,6 +1456,15 @@
 		"tags": [],
 		"definitions": [
 			"<span class=\"CRed\"><b>Réduire</b></span> une expression littérale, c'est l'écrire avec <b>le moins de termes</b> possible."
+		],
+		"exemples": [
+			"<p><div class=\"DGRound\">$3x$</div> &nbsp;<div class=\"DBRound\">$+2x^2$</div> &nbsp;<div class=\"DRRound\">$+8$</div>  &nbsp;<div class=\"DGRound\">$-2x$</div> &nbsp;<div class=\"DRRound\">$-5$</div>  &nbsp;<div class=\"DBRound\">$+7x^2$</div> &nbsp;<div class=\"DGRound\">$+7x$</div> = <div class=\"DBRound\">$9x^2$</div> &nbsp;<div class=\"DGRound\">$+8x$</div> &nbsp;<div class=\"DRRound\">$+3$</div></p><p><div></div>On regroupe les termes d'une même famille ensemble. Ici <div class=\"DBRound\">les $x^2$</div> , <div class=\"DGRound\">les $x$</div> et <div class=\"DRRound\">les constantes</div>.</p>"
+		],
+		"remarques": [
+			"<p><b>On ne peut pas ajouter deux éléments de famille différentes</b> : </p> Par exemple $8x + 3 ≠ 11x$ ou encore $2x^2 + 3x ≠ 5x$."
+		],
+		"infos": [
+			"<div class=\"flexobject\"><div><p class=\"DRed\">Famille des constantes.</p><p class=\"DGreen\">Famille des $x$.</p><p class=\"DBlue\">Famille des $x^2$.</p><p class=\"DViolet\">Famille des $x^3$.</p></div><div class=\"floating\" style=\"height: 90px;\"><div class=\"DGRound\" style=\"margin-left: 10px; margin-top: 0px\">$5x$</div><div class=\"DGRound\" style=\"margin-left: 40px; margin-top: 30px\">$-3x$</div><div class=\"DGRound\" style=\"margin-left: 90px; margin-top: 60px\">$x$</div><div class=\"DRRound\" style=\"margin-left: 0px; margin-top: 60px\">$7$</div><div class=\"DRRound\" style=\"margin-left: 47px; margin-top: 0px\">$-2$</div><div class=\"DRRound\" style=\"margin-left: 90px; margin-top: 30px\">$4$</div><div class=\"DBRound\" style=\"margin-left: 30px; margin-top: 60px\">$6x^2$</div><div class=\"DBRound\" style=\"margin-left: 0px; margin-top: 30px\">$2x^2$</div><div class=\"DBRound\" style=\"margin-left: 110px; margin-top: 30px\">$-3x^2$</div><div class=\"DVRound\" style=\"margin-left: 80px; margin-top: 0px\">$-5x^3$</div></div></div>"
 		]
 	},"règle de trois": {
 		"tags": [],
@@ -1752,7 +1780,10 @@
 			"<p>Construire un triangle ABC tel que AB = 8cm, BC = 6cm et $\\widehat{BAC} = 30°$.</p><div id=\"Triangle_AngleLongueurs2\" class=\"animation\" width=\"480\" height=\"360\"></div>",
 			"<p>Construire un triangle ABC tel que AB = 8cm, $\\widehat{BAC} = 61°$ et $\\widehat{ABC} = 75°$.<br>(Donc $\\widehat{ACB}=180\\ -\\ 61\\ -\\ 75=44°$)</p><div id=\"Triangle_AnglesLongueur1\" class=\"animation\" width=\"480\" height=\"360\"></div>",
 			"<p>Construire un triangle ABC tel que AB = 8cm, $\\widehat{BAC} = 30°$ et $\\widehat{ABC} = 55°$.</p><div id=\"Triangle_AnglesLongueur2\" class=\"animation\" width=\"480\" height=\"360\"></div>",
-			"<div class=\"flexobject\"><img src=\"/Images/Cours/Triangle4.svg\" style=\"max-height: 4cm;\"><div style=\"flex: 1 1 5cm\">$\\textcolor{#EEBB00}{\\widehat{ABC}}+\\textcolor{#43a047}{\\widehat{BCA}}+\\textcolor{#7C4DA5}{\\widehat{CAB}} = 180°$</div></div>"
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Triangle4.svg\" style=\"max-height: 4cm;\"><div style=\"flex: 1 1 5cm\">$\\textcolor{#EEBB00}{\\widehat{ABC}}+\\textcolor{#43a047}{\\widehat{BCA}}+\\textcolor{#7C4DA5}{\\widehat{CAB}} = 180°$</div></div>",
+			"Le triplet 11 cm ; 5cm et 9cm permet de construire un triangle car 5 + 9 = 14 et 14 > 11.",
+			"Le triplet 17cm ; 3cm et 10 cm ne permet pas de construire un triangle car 3 + 10 = 13 et 13 < 17.",
+			"<div class=\"flexobject\"><div>Dans le triangle ci-contre :<ul><li>$\\textcolor{#039be5}{a} \\leq \\textcolor{#e53935}{b} + \\textcolor{#dedc00}{c}$</li><li>$\\textcolor{#e53935}{b} \\leq \\textcolor{#039be5}{a} + \\textcolor{#dedc00}{c}$</li><li>$\\textcolor{#dedc00}{c} \\leq \\textcolor{#039be5}{a} + \\textcolor{#e53935}{b}$</li></ul></div><img src=\"/Images/Cours/InegaliteTriangulaire2.svg\" style=\"max-height: 4cm;\"></div>"
 		],
 		"remarques": [
 			"Lorsque l'on ne connaît la mesure que de l'un des deux côtés de l'angle, il y a deux triangles possibles.",
@@ -1765,7 +1796,8 @@
 			"<div style=\"text-align: center; border: solid 3px black; border-radius: 10px;width: fit-content; background-color: #FFFF8F33;\">Construire un triangle ABC tel que AB = 8cm, $\\widehat{BAC} = 30°$ et $\\widehat{ABC} = 75°$.<div id=\"Triangle_AnglesLongueur2\" class=\"animation\" width=\"480\" height=\"360\"></div></div>",
 			"<p>Pour tracer un triangle à partir de 3 longueurs données, il faut utiliser une règle et un compas.<ol><li>On trace un des côtés du triangle à la règle</li><li>On construit un arc de cercle de rayon la longueur du second côté en prenant pour centre l'une des extrémités du premier côté.</li><li>On construit un arc de cercle de rayon la longueur du troisième côté en prenant pour centre l'autre extrémité du premier côté.</li><li>Le troisième sommet du triangle est alors l'un des points d'intersection des deux arcs de cercle</li></ol></p>",
 			"<p>Pour construire un triangle à partir de deux longueurs et un angle, il y deux cas possibles :<ul><li>On connaît les mesures des deux côtés de l'angle.</li><li>On connaît la mesure d'un des deux côtés de l'angle.</li></ul>Dans tous les cas, il faut :<ol><li>Tracer le côté de longueur connue de l'angle.</li><li>Tracer la demi-droite formant l'angle donné avec le côté précédent.</li><li>Reporter la seconde longueur connue.</li><li>Le troisième sommet est alors le point d'intersection entre la demi-droite et l'arc de cercle.</li></ol></p>",
-			"<p>Pour construire un triangle connaissant la longueur d'un côté et deux angles, il faut connaître les deux angles aux extrémités du côté connu. Si ce n'est pas le cas, il faut calculer l'angle manquant en utilisant la propriété des triangles : <i>La somme des angles d'un triangle est égale à 180°</i>.<ol><li>Construire le côté connu</li><li>Construire la demi-droite formant l'un des angles connus avec le côté précédent.</li><li>Construire la demi-droite formant l'autre angle connu avec le côté précédent.</li><li>Le troisième sommet est alors le point d'intersection entre les deux demi-droites.</li></ol></p>"
+			"<p>Pour construire un triangle connaissant la longueur d'un côté et deux angles, il faut connaître les deux angles aux extrémités du côté connu. Si ce n'est pas le cas, il faut calculer l'angle manquant en utilisant la propriété des triangles : <i>La somme des angles d'un triangle est égale à 180°</i>.<ol><li>Construire le côté connu</li><li>Construire la demi-droite formant l'un des angles connus avec le côté précédent.</li><li>Construire la demi-droite formant l'autre angle connu avec le côté précédent.</li><li>Le troisième sommet est alors le point d'intersection entre les deux demi-droites.</li></ol></p>",
+			"<div class=\"flexobject\"><div style=\"flex: 1 1 6cm; max-width: 12cm;\">La ligne droite est toujours le chemin le plus court.<br>Le chemin en trait plein est plus court que celui en pointillé.</div><img src=\"/Images/Cours/InegaliteTriangulaire1.svg\" style=\"max-height: 6cm;\"></div>"
 		]
 	},"triangle égaux": {
 		"tags": [],

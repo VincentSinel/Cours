@@ -1,0 +1,55 @@
+{
+	"activité": "<div class=\"flexobject\"><img src=\"/Images/Cours/Act_calcul1.svg\" style=\"max-width: 6cm;\"><div style=\"flex: 1 1 5cm\"><p>Yazid fait l'achat de ses fournitures scolaires. Il a acheté 4 stylos valant 1€20 pièces. Il a aussi acheté 8 cahiers dont il ne se souvient plus le prix.</p><ol><li>En prenant pour le prix d'un cahier 2€ 30, écrire une expression permettant de calculer le montant payé et le calculer.</li><li>En prenant pour le prix d'un cahier 1€ 90, écrire une expression permettant de calculer le montant payé et le calculer.</li><li>En notant <i>\"c\"</i> le prix d'un cahier, écrire une formule en une expression permettant de calculer le prix payé.</li><li>Yazid se rappelle avoir payé 21€60. Quel est le prix d'un cahier ? (Utiliser le schéma ci-dessous)<br><img src=\"/Images/Cours/Act_calcul2.svg\" style=\"max-height: 2cm;\"></li></ol></div></div>",
+	"content": [{
+			"type": "title", "name": "Expressions littérales",
+			"content": [
+				{
+					"type": "title", "name": "Définition",
+					"content": [
+						{"type": "definition", "source": [{"name": "expression littérale", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "expression littérale", "indexes": [0,1,2]}]},
+						{"type": "definition", "source": [{"name": "variable", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "expression littérale", "indexes": [0,1,2]}]}
+
+					]
+				},
+				{
+					"type": "title", "name": "Programme de calcul",
+					"content": [
+						{"type": "info", "source": [{"name": "expression littérale", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "expression littérale", "indexes": [3,4]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Carré et cube",
+			"content": [
+				{"type": "definition", "source": [{"name": "carré", "indexes": [1]}]},
+				{"type": "exemple", "source": [{"name": "carré", "indexes": [1,2]}]},
+				{"type": "definition", "source": [{"name": "cube", "indexes": [1]}]},
+				{"type": "exemple", "source": [{"name": "cube", "indexes": [2,3]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Réduction",
+			"content": [
+				{
+					"type": "title", "name": "Conventions d'écritures",
+					"content": [
+						{"type": "definition", "source": [{"name": "simplifier", "indexes": [1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Réduction",
+					"content": [
+						{"type": "definition", "source": [{"name": "réduire", "indexes": [0]}]},
+						{"type": "info", "source": [{"name": "réduire", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "réduire", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "réduire", "indexes": [0]}]}
+					]
+				}
+			]
+		}
+	]
+}

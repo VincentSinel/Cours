@@ -1316,26 +1316,26 @@ var cinquieme_saintexupery = [
 			nom: "Calcul littéral",
 			icone: 3,
 			download: {
-				// docx: 		 "/Cours/5eme/Base/Chapitre_5/Documents/Chapitre 5 - Introduction au calcul littéral (Complet).docx",
-				// pdf:  		 "/Cours/5eme/Base/Chapitre_5/Documents/Chapitre 5 - Introduction au calcul littéral (Complet).pdf",
-				// docx_trou: "/Cours/5eme/Base/Chapitre_5/Documents/Chapitre 5 - Introduction au calcul littéral (A trou).docx",
-				// pdf_trou:  "/Cours/5eme/Base/Chapitre_5/Documents/Chapitre 5 - Introduction au calcul littéral (A trou).pdf",
+				docx: 		 "/Cours/5eme/SaintExupery_v2/Chapitre_6/Documents/Chapitre 6 - Calcul littéral (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery_v2/Chapitre_6/Documents/Chapitre 6 - Calcul littéral (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery_v2/Chapitre_6/Documents/Chapitre 6 - Calcul littéral (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_6/Documents/Chapitre 6 - Calcul littéral (A trou).pdf",
 			},
-			ready : false,
-			page : "Base/Chapitre_5/Cours.html"
+			ready : true,
+			page : "saintexupery_v2/Chapitre_6/Cours.json"
 	},
 	{
 			id: 7,
-			nom: "Angles d'un triangle",
+			nom: "Triangle (partie 1)",
 			icone: 2,
 			download: {
-				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_6/Documents/Chapitre 6 - Angles d'un triangle (Complet).docx",
-				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_6/Documents/Chapitre 6 - Angles d'un triangle (Complet).pdf",
-				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_6/Documents/Chapitre 6 - Angles d'un triangle (A trou).docx",
-				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_6/Documents/Chapitre 6 - Angles d'un triangle (A trou).pdf",
+				docx: 		 "/Cours/5eme/SaintExupery_v2/Chapitre_7/Documents/Chapitre 7 - Triangle (partie 1) (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery_v2/Chapitre_7/Documents/Chapitre 7 - Triangle (partie 1) (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery_v2/Chapitre_7/Documents/Chapitre 7 - Triangle (partie 1) (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_7/Documents/Chapitre 7 - Triangle (partie 1) (A trou).pdf",
 			},
-			ready : false,
-			page : "SaintExupery/Chapitre_6/Cours.html"
+			ready : true,
+			page : "saintexupery_v2/Chapitre_7/Cours.json"
 	},
 	{
 			id: 8,

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 82 58.67">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #1d1d1b;
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 12px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-4 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-5 {
+        fill: #f6a117;
+      }
+
+      .cls-5, .cls-6, .cls-7 {
+        stroke-width: 0px;
+      }
+
+      .cls-8 {
+        stroke-linejoin: round;
+      }
+
+      .cls-8, .cls-2, .cls-9 {
+        stroke: #1d1d1b;
+        stroke-width: 2px;
+      }
+
+      .cls-8, .cls-9 {
+        fill: none;
+      }
+
+      .cls-2, .cls-9 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-6 {
+        fill: #b44090;
+      }
+
+      .cls-10 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-7 {
+        fill: #74bd83;
+      }
+    </style>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="2"/>
+      <feGaussianBlur result="blur" stdDeviation="1"/>
+      <feFlood flood-color="#1d1d1b" flood-opacity=".75"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clippath">
+      <rect class="cls-2" x="1" y="1" width="80" height="42.23"/>
+    </clipPath>
+  </defs>
+  <g class="cls-4">
+    <g>
+      <rect class="cls-1" x="1" y="1" width="80" height="42.23"/>
+      <g class="cls-10">
+        <path class="cls-7" d="m28.25,33.34c-2.81,2.37-4.6,5.92-4.6,9.89h12.94l-8.34-9.89Z"/>
+        <path class="cls-5" d="m45.96,34.32c2.21,2.32,3.56,5.46,3.56,8.91h-12.94l9.37-8.91Z"/>
+        <path class="cls-6" d="m45.96,34.32c-2.36-2.48-5.69-4.02-9.37-4.02-3.18,0-6.08,1.14-8.34,3.04l8.34,9.89,9.37-8.91Z"/>
+      </g>
+      <rect class="cls-9" x="1" y="1" width="80" height="42.23"/>
+    </g>
+    <polyline class="cls-8" points="1 1 36.58 43.23 81 1"/>
+  </g>
+  <text class="cls-3" transform="translate(31.91 55.43)"><tspan x="0" y="0">M</tspan></text>
+</svg>
