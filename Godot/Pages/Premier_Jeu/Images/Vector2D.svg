@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.97 62.36">
+  <g id="c" data-name="Calque 1">
+    <g>
+      <line x1="28.94" y1="29.87" x2="45.04" y2="39.17" style="fill: none; stroke: #f9b233; stroke-linecap: round; stroke-miterlimit: 10; stroke-width: .75px;"/>
+      <polygon points="47.34 40.5 43.34 39.95 44.87 39.07 44.87 37.31 47.34 40.5" style="fill: #f9b233; stroke-width: 0px;"/>
+    </g>
+    <g>
+      <line y1="29.87" x2="54.1" y2="29.87" style="fill: none; stroke: #be1622; stroke-miterlimit: 10;"/>
+      <polygon points="59.74 29.87 51.79 33.12 53.67 29.87 51.79 26.62 59.74 29.87" style="fill: #be1622; stroke-width: 0px;"/>
+    </g>
+    <g>
+      <line x1="28.94" x2="28.94" y2="54.1" style="fill: none; stroke: #3aaa35; stroke-miterlimit: 10;"/>
+      <polygon points="28.94 59.74 25.68 51.79 28.94 53.67 32.19 51.79 28.94 59.74" style="fill: #3aaa35; stroke-width: 0px;"/>
+    </g>
+    <text transform="translate(54.98 25.29)" style="fill: #be1622; font-family: CascadiaMono-SemiBoldItalic, &apos;Cascadia Mono&apos;; font-size: 8.5px; font-style: italic; font-variation-settings: &apos;wght&apos; 600; font-weight: 600;"><tspan x="0" y="0">x</tspan></text>
+    <text transform="translate(34.05 59.24)" style="fill: #3aaa35; font-family: CascadiaMono-SemiBoldItalic, &apos;Cascadia Mono&apos;; font-size: 8.5px; font-style: italic; font-variation-settings: &apos;wght&apos; 600; font-weight: 600;"><tspan x="0" y="0">y</tspan></text>
+    <text transform="translate(30.37 35.35) rotate(30)" style="fill: #f39200; font-family: CascadiaMono-SemiBoldItalic, &apos;Cascadia Mono&apos;; font-size: 2.83px; font-style: italic; font-variation-settings: &apos;wght&apos; 600; font-weight: 600;"><tspan x="0" y="0">Vector2D</tspan></text>
+  </g>
+</svg>

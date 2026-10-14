@@ -12,8 +12,6 @@
   <script src="/JS/Highlight/highlight.js"></script>
   <script src="/JS/Highlight/languages/gdscript.min.js"></script>
   <script>hljs.highlightAll();</script>
-  
-  <script src="https://kit.fontawesome.com/5d8c762684.js" crossorigin="anonymous"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
@@ -23,12 +21,9 @@
   </script>
   <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
 
-  <title>Quelques noeuds de base</title>
+  <title>Mise en place</title>
 
   <style>
-    .link{
-      font-family: FontAwesome;
-    }
 		.red_list li::marker {
 			color: red;
 		}
@@ -41,14 +36,211 @@
   <table id="TitleTable">
     <tr>
       <td id="ChapitreNumero">
-        Interface
+        Premier jeu
       </td>
       <td id="ChapitreNom">
-        - Quelques noeuds de base
+        - Mise en place
       </td>
     </tr>
   </table>
-    
-</body>
 
+  <h1>Initialisation du projet :</h1>
+  <p>Pour construire notre premier projet, j'utilise l'ogranisation vue <a href="/Godot/Menu.html#2" target="_blank">précédement <span class="link"></span></a>.</p>
+  <p>
+    Dans le dossier texture, je vais pour commencer utiliser les images suivantes :
+    <div class="flexobject">
+      <img src="Images/Jeu_Balle.png" class="pixel" style="flex: 3cm 1 1; max-width: 3cm;">
+      <img src="Images/Jeu_Plateforme.png" class="pixel" style="flex: 5cm 1 1; max-width: 7cm;">
+    </div>
+    Nous allons ensuite démarrer avec une scène en 2D nommé <span class="info">Monde 1</span> que je met dans le dossier Scènes. On obtient pour démarrer les fichiers suivants :<br>
+    <img src="Images/Explorateur_fichier1.png">
+  </p>
+  <p>
+    Avant de démarrer la création, je vais faire des modification dans les <a href="/Godot/Menu.html#3" target="_blank">paramètres du projet <span class="link"></span></a> :<br>
+    <ul>
+      <li>
+        Je commence par définir une couleur de fond pour mon environnement :<br>
+        <img src="Images/Configuration_couleur_fond.png">
+      </li>
+      <li>
+        Je défini aussi le rendu pour que les images en pixel-art soit net :<br>
+        <img src="Images/Configuration_rendu.png">
+      </li>
+      <li>
+        Enfin de défini plusieurs touches que je pourrais utiliser par la suite pour contrôler mon personnage :<br>
+        <img src="Images/Configuration_touches.png">
+      </li>
+    </ul>
+  </p>
+  <h1>Création des premiers noeuds :</h1>
+  <p>
+    Nous pouvons enfin nous atteler la création. Pour commencer, je vais créer un personnage jouable et une plateforme très basique pour comprendre le principe de collision et de camera. Je commence par créer différents noeuds en utilisant le bouton d'ajout :<br>
+    <img src="Images/Scene_Add.png"><br>
+    En faisant bien attention à la hierarchie des noeuds (L'ordre dans lequel ils sont créer), j'obtiens l'organisation suivante :<br>
+    <img src="Images/Scene1.png"><br>
+    Si ce n'est pas le cas tu peut, en faisant des cliqué/glissé réorganiser tes noeuds. Pense a vérifier depuis l'<span class="info bleu">Inspecteur</span> que dans la partie <span class="info">Transform</span> rien n'a été modifié. Il suffit de cliquer sur les flêches (<img src="Images/ResetArrow.png">) si besoin.
+  </p>
+  <p>
+    J'effectue quelques modification dans le nom de mes noeuds pour m'y retrouver et j'utilise aussi l'option <span class="info">grouper</span> (<img src="Images/Grouper.png">) pour lier les différents élèments :
+    <div class="flexobject">
+      <img src="Images/Scene2.png">
+      <img src="Images/Scene3.png">
+    </div>
+  </p>
+  <p>
+    Il est temps maintenant de configurer les différents noeuds en commençant par ceux de la balle. Nous allons pouvoir associer notre image de balle à notre noeud <span class="info bleu">Sprite2D</span>. Je le selection et dans l'<span class="info bleu">Inspecteur</span> je peut accéder aux paramètres :<br>
+    <img src="Images/Noeud1.png"><br>
+    Pour gagner du temps voici les paramètres que j'ai modifié dans les différents noeuds.<br>Pour commencer ceux de la balle :<br>
+    <div class="flexobject">
+      <div>
+        Le <span class="info bleu">Sprite2D</span> de la balle :<br>
+        <img src="Images/Noeud1.png">
+      </div>
+      <div>
+        La <span class="info bleu">CollisionShape2D</span> de la balle :<br>
+        <img src="Images/Noeud2.png">
+      </div>
+      <div>
+        La <span class="info bleu">Camera2D</span> :<br>
+        <img src="Images/Noeud3.png">
+      </div>
+    </div>
+    Et ceux de la plateforme :<br>
+    <div class="flexobject">
+      <div>
+        Le <span class="info bleu">Sprite2D</span> de la plateforme :<br>
+        <img src="Images/Noeud4.png">
+      </div>
+      <div>
+        La <span class="info bleu">CollisionShape2D</span> de la plateforme :<br>
+        <img src="Images/Noeud5.png">
+      </div>
+    </div>
+    On obtient un scène qui ressemble à ça :<br>
+    <img src="Images/Preview.png">
+  </p>
+  <h1>Programmation du joueur :</h1>
+  <p>
+    Il ne reste plus qu'à programmer le contrôle de la balle. Pour cela il faut ajouter un script à notre noeud <span class="info">Balle</span>. Cliquer sur le noeud pour le selectionner et au dessus sur le boutton attacher un script (<img src="Images/ScriptButton.png">). Comme tu peut le voir dans l'image suivante, j'ai déjà modifier l'emplacement de sauvegarde de mon fichier pour le mettre dans mon dossier <span class="info vert">Scripts</span>. J'ai garder le nom par défaut qui correcpond au nom de mon noeud. On peut aussi remarquer que j'ai volontairement désactivé l'utilisation d'un modèle, car je vais construire mon propre script.<br>
+    <img src="Images/AjoutScript.png">
+    <br><br>
+    Voici le script entier que je vais utiliser. Je détails plus loin les différentes lignes qui le composent pour comprendre ce qu'il fait :
+
+
+    <pre><code class="language-gdscript light_mode">extends CharacterBody2D
+
+
+@export var vitesse = 70.0
+@export var gravite = 10.0
+@export var force_saut = 200.0
+
+# Exécuté à chaque frame de gestion physique (collision et détection de contact)
+func _physics_process(delta):
+	
+	# Ajout de la gravité.
+	if not is_on_floor():
+		velocity.y += gravite * delta * 100.0
+	
+	# Gestion du saut.
+	if Input.is_action_just_pressed("Saut") and is_on_floor():
+		velocity.y = -force_saut * delta * 100.0
+	
+	# On réinitialise la vitesse horizontale.
+	velocity.x = 0
+	# Test des touches gauche et droite et modification de la vitesse horizontale
+	if Input.is_action_pressed("Gauche"):
+		velocity.x -= vitesse * delta * 100.0
+	if Input.is_action_pressed("Droite"):
+		velocity.x += vitesse * delta * 100.0
+	
+	move_and_slide()
+
+        </code></pre>
+  </p>
+  <p>
+    En détails, voici la signification de chacune des lignes de code de mon programme :<br>
+    <hr>
+    <div class="flexobject">
+      <div style="flex: 3cm 2 1">
+        Cette ligne signifie que je vais ajouter des fonctionnalité à notre noeud <span class="info bleu">CharacterBody2D</span> en gardant les fonctions qui sont <a href="https://docs.godotengine.org/fr/4.x/classes/class_characterbody2d.html" target="_blank">déjà proposé <span class="link"></span></a> par le moteur de jeu.
+      </div>
+      <pre style="flex: 5cm 1 1"><code class="language-gdscript light_mode">extends CharacterBody2D</code></pre>
+    </div>
+    <hr>
+    <div class="flexobject">
+      <div style="flex: 3cm 2 1">
+        Je définis ensuite trois variables qui permettent de configurer le comportement de ma balle. En utilisant le mot clé <span class="info">@export</span>, les variables deviennent modificable directement depuis l'inspecteur dans l'éditeur Godot. Cela permet, entre autre, de modifier les valeurs en cours de jeu pour tester en direct les modifications.<br>
+        <ul>
+          <li>
+            <span class="CRed"><i><b>vitesse</b></i></span> : définit la vitesse de déplacement horizontale de la balle.
+          </li>
+          <li>
+            <span class="CRed"><i><b>gravite</b></i></span> : définit la gravité impactant la balle et donc l'accélération verticale en chute.
+          </li>
+          <li>
+            <span class="CRed"><i><b>force_saut</b></i></span> : définit la force du saut, cette force décroit ensuite une fois la balle en l'air par l'effet de la gravité.
+          </li>
+        </ul>
+      </div>
+      <pre style="flex: 5cm 1 1"><code class="language-gdscript light_mode">@export var vitesse = 70.0
+@export var gravite = 10.0
+@export var force_saut = 200.0</code></pre>
+    </div>
+    <hr>
+    <div class="flexobject">
+      <div style="flex: 3cm 2 1">
+        Pour définir les mouvements de notre personnage je vais programmer les actions des touches dans une <a href="https://docs.godotengine.org/fr/4.x/classes/class_node.html" target="_blank">fonction du moteur de jeu <span class="link"></span></a> <span class="info">_physics_process</span>. Cette fonction est appelé à chaque frame du moteur physique de notre jeu. La valeur <span class="CBlue"><b>delta</b></span> correspond au temps écoulé lors de la frame précédente, il sert à lié le mouvement à la possible latence du jeu et donc avoir un déplacement toujours cohérent.
+      </div>
+      <pre style="flex: 5cm 1 1"><code class="language-gdscript light_mode">func _physics_process(delta):</code></pre>
+    </div>
+    <hr>
+    <div class="flexobject">
+      <div style="flex: 3cm 2 1">
+        On commence par ajouter la gravité à notre personnage. Cela n'est utile que si le personnage n'est pas sur le sol, on met donc en place une condition avec le mot clé <span class="CRed">if</span>. Cela est détecté par notre <span class="info bleu">CharacterBody2D</span> grace à la fonction intégré <span class="info">is_on_floor()</span>. Celle-ci renvoie <b>Vrai</b> si le personnage est sur un sol et <b>Faux</b> sinon.
+      </div>
+      <pre style="flex: 5cm 1 1"><code class="language-gdscript light_mode"># Ajout de la gravité.
+if not is_on_floor():
+	velocity.y += gravite * delta * 100.0 </code></pre>
+    </div>
+    
+    <div class="flexobject">
+      <div style="flex: 3cm 2 1;">
+        On remarque que l'on utilise aussi une variable <span class="CRed"><i><b>velocity</b></i></span> qui définit la vitesse du personnage et sera utiliser par le moteur physique pour effectuer le déplacement lorsque je lui demanderais. Cette variable est un <span class="info bleu">Vector2</span>, un vecteur qui représente une direction en 2 dimensions (<b>x</b> pour la direction horizontale et <b>y</b> pour la direction verticale). A remarquer que la direction <b>y</b> pointe vers le bas pour le positif.
+      </div>
+      <img src="Images/Vector2D.svg" style="flex: 3cm 1 1; max-width: 5cm;">
+    </div>
+    <hr>
+    <div class="flexobject">
+      <div style="flex: 3cm 2 1">
+        On gère ensuite le saut. On utilise le module <span class="info vert">Input</span> (qui gère tous ce qui est relatif au action extérieurs : clavier, souris, manettes de jeu, etc...) pour tester si une action est effectué.
+      </div>
+      <pre style="flex: 5cm 1 1"><code class="language-gdscript light_mode"># Gestion du saut.
+if Input.is_action_just_pressed("Saut") and is_on_floor():
+	velocity.y = -force_saut * delta * 100.0</code></pre>
+    </div>
+    Comme nous avons précédement configurer l'action Saut dans les paramètres du jeu, je peut tester si l'une des touches qui est associé est appuyé. Pour pouvoir sauter, ma balle doit être sur le sol d'ou la condition <span class="info">is_on_floor()</span>. On peut aussi remarquer la négation de ma force de saut pour que celui-ci soit orienter vers le haut.
+    <hr>
+    <div class="flexobject">
+      <div style="flex: 3cm 2 1">
+        Les lignes suivantes suivent la même logique, on remarque l'utilisation du paramètre <b>x</b> de notre velocité.
+      </div>
+      <pre style="flex: 5cm 1 1"><code class="language-gdscript light_mode"># On réinitialise la vitesse horizontale.
+velocity.x = 0
+# Test des touches gauche et droite et modification de la vitesse horizontale
+if Input.is_action_pressed("Gauche"):
+	velocity.x -= vitesse * delta * 100.0
+if Input.is_action_pressed("Droite"):
+	velocity.x += vitesse * delta * 100.0</code></pre>
+    </div>
+    <hr>
+    <div class="flexobject">
+      <div style="flex: 3cm 2 1">
+        La dernière ligne permet de dire au moteur de jeu «ça y est j'ai fini de calculer la vitesse, maintenant effectue le déplacement de ma balle». Cela effectue le mouvement en prenant bien en compte les possibles collisions et modifie automatiquement la valeur de notre velocité.
+      </div>
+      <pre style="flex: 5cm 1 1"><code class="language-gdscript light_mode">move_and_slide()</code></pre>
+    </div>
+    <hr>
+    <video src="Images/Resultat.mp4" autoplay muted loop width="200px"></video>
+  </p>
+</body>
 </html>

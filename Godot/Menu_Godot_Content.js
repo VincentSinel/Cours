@@ -35,11 +35,11 @@ var MenuContent = [
 			{
 				name: "Mise en place",
 				path: "Pages/Premier_Jeu/Mise_en_place.html",
-				ready: false,
+				ready: true,
 			},
 			{
-				name: "Premiers objets",
-				path: "Pages/Premier_Jeu/Premiers_objets.html",
+				name: "Améliorations",
+				path: "Pages/Premier_Jeu/Ameliorations.html",
 				ready: false,
 			},
 			{
