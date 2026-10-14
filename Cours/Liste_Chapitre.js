@@ -1258,7 +1258,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : true,
 			page : "SaintExupery_V2/Chapitre_1/Cours.json",
-	},
+	}, // Chapitre 1
 	{
 			id: 2,
 			nom: "Symétries",
@@ -1271,7 +1271,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : true,
 			page : "Base/Chapitre_2/Cours.json"
-	},
+	}, // Chapitre 2
 	{
 			id: 3,
 			nom: "Utiliser les nombres décimaux",
@@ -1284,7 +1284,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : true,
 			page : "SaintExupery_V2/Chapitre_3/Cours.json",
-	},
+	}, // Chapitre 3
 	{
 			id: 4,
 			nom: "Angles particuliers",
@@ -1297,7 +1297,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : true,
 			page : "SaintExupery/Chapitre_4/Cours.json"
-	},
+	}, // Chapitre 4
 	{
 			id: 5,
 			nom: "Additions et Soustractions de nombres relatifs",
@@ -1310,7 +1310,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : true,
 			page : "saintexupery_v2/Chapitre_5/Cours.json"
-	},
+	}, // Chapitre 5
 	{
 			id: 6,
 			nom: "Calcul littéral",
@@ -1323,7 +1323,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : true,
 			page : "saintexupery_v2/Chapitre_6/Cours.json"
-	},
+	}, // Chapitre 6
 	{
 			id: 7,
 			nom: "Triangle (partie 1)",
@@ -1336,7 +1336,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : true,
 			page : "saintexupery_v2/Chapitre_7/Cours.json"
-	},
+	}, // Chapitre 7
 	{
 			id: 8,
 			nom: "Fraction - Proportion et quotient",
@@ -1349,7 +1349,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : false,
 			page : "SaintExupery/Chapitre_12/Cours.html"
-	},
+	}, // Chapitre 8
 	{
 			id: 9,
 			nom: "Proportionnalité",
@@ -1363,7 +1363,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : false,
 			page : "SaintExupery/Chapitre_13/Cours.html"
-	},
+	}, // Chapitre 9
 	{
 			id: 10,
 			nom: "Triangles - Droites remarquables et aire",
@@ -1376,7 +1376,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : false,
 			page : "SaintExupery/Chapitre_11/Cours.html"
-	},
+	}, // Chapitre 10
 	{
 			id: 11,
 			nom: "Distributivité simple",
@@ -1389,7 +1389,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : false,
 			page : "SaintExupery/Chapitre_7/Cours.html"
-	},
+	}, // Chapitre 11
 	{
 			id: 12,
 			nom: "Volume",
@@ -1402,7 +1402,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : false,
 			page : "SaintExupery/Chapitre_8/Cours.html"
-	},
+	}, // Chapitre 12
 	{
 			id: 13,
 			nom: "Multiples et diviseurs",
@@ -1415,7 +1415,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : false,
 			page : "Base/Chapitre_8/Cours.html"
-	},
+	}, // Chapitre 13
 	{
 			id: 14,
 			nom: "Statistiques",
@@ -1428,7 +1428,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : true,
 			page : "SaintExupery/Chapitre_14/Cours.html"
-	},
+	}, // Chapitre 14
 	{
 			id: 15,
 			nom: "Fraction - Comparaison, somme et différence",
@@ -1441,7 +1441,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : true,
 			page : "SaintExupery/Chapitre_15/Cours.html"
-	},
+	}, // Chapitre 15
 	{
 			id: 16,
 			nom: "Médiane du triangle",
@@ -1454,7 +1454,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : false,
 			page : "Base/Chapitre_11/Cours.html"
-	},
+	}, // Chapitre 16
 	{
 			id: 17,
 			nom: "En fonction de ...",
@@ -1467,7 +1467,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : false,
 			page : "Base/Chapitre_11/Cours.html"
-	},
+	}, // Chapitre 17
 	{
 			id: 18,
 			nom: "Equations simple",
@@ -1480,7 +1480,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : false,
 			page : "Base/Chapitre_11/Cours.html"
-	},
+	}, // Chapitre 18
 	{
 			id: 19,
 			nom: "Prismes et cylindres",
@@ -1493,7 +1493,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : false,
 			page : "SaintExupery/Chapitre_8/Cours.html"
-	},
+	}, // Chapitre 19
 	{
 			id: 20,
 			nom: "Probabilités",
@@ -1506,7 +1506,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : false,
 			page : "Base/Chapitre_13/Cours.html"
-	},
+	}, // Chapitre 20
 	{
 			id: 21,
 			nom: "Parallélogrammes",
@@ -1519,7 +1519,7 @@ var cinquieme_saintexupery = [
 			},
 			ready : false,
 			page : "Base/Chapitre_19/Cours.html"
-	},
+	}, // Chapitre 21
 ]
 
 var cinquieme_rogervailland = [

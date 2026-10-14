@@ -277,7 +277,9 @@
 	},"comparer": {
 		"tags": [],
 		"definitions": [
-			"<span class=\"CRed\">Comparer</span> deux nombres c'est dire si l'un est <u>plus petit</u>, <u>plus grand</u> ou <u>égal</u> à l'autre."
+			"<span class=\"CRed\">Comparer</span> deux nombres c'est dire si l'un est <u>plus petit</u>, <u>plus grand</u> ou <u>égal</u> à l'autre.",
+			"Ranger les nombres dans l'<span class=\"CRed\">ordre croissant</span>, c'est les ranger du plus <u>petit</u> au plus <u>grand</u>.",
+			"Ranger les nombres dans l'<span class=\"CRed\">ordre décroissant</span>, c'est les ranger du plus <u>grand</u> au plus <u>petit</u>."
 		],
 		"proprietes": [
 			"Un nombre <b>négatif</b> est toujours plus petit qu'un nombre <b>positif</b>.",
