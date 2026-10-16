@@ -8,6 +8,24 @@
   font-weight: bold;
 }
 @font-face {
+  font-family: JuliaMono;
+  src: url(/Font/JuliaMono/JuliaMono-Regular.ttf); 
+}
+@font-face {
+  font-family: JuliaMono;
+  src: url(/Font/JuliaMono/JuliaMono-Black.ttf); 
+  font-weight: bold;
+}
+@font-face {
+  font-family: SimplyMono;
+  src: url(/Font/SimplyMono/SimplyMono-Book.ttf); 
+}
+@font-face {
+  font-family: SimplyMono;
+  src: url(/Font/SimplyMono/SimplyMono-Bold.ttf); 
+  font-weight: bold;
+}
+@font-face {
   font-family: CashMarket;
   src: url(/Font/CashMarket-BoldRounded.ttf);
 }
@@ -86,6 +104,9 @@
     --Color_BlueGray4 : #A1CED4;
     --Color_BlueGray5 : #E6FCFC;
 
+    --CodeBackgroundColor : #f0f0f0;
+    --CodeBorderColor : #e6e6e6
+
 }
 
 .CRed { color: var(--Cred);}
@@ -99,6 +120,19 @@
 .DGreen { color: var(--Dgreen);}
 .DYellow { color: var(--Dyellow);}
 .DViolet { color: var(--Dviolet);}
+
+.CRed,
+.CBlue,
+.CGreen,
+.CYellow,
+.CViolet {
+    font-family: CashMarket, "JetBrains Mono", SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, Courier, monospace;
+    font-weight: bold;
+    background-color: var(--CodeBackgroundColor); 
+    padding: 0 3px;
+    border-radius: 3px;
+    border: 1px solid var(--CodeBorderColor);
+}
 
 .CRRound{ border-radius: 20px; padding: 1px; width: fit-content; height: fit-content; display: inline-block; border: 2px solid var(--Cred);}
 .CBRound{ border-radius: 20px; padding: 1px; width: fit-content; height: fit-content; display: inline-block; border: 2px solid var(--Cblue);}
@@ -166,7 +200,7 @@ img{
 body {
     counter-reset: h1count;
     line-height: 1.4;
-    font-family: CashMarket;
+    font-family: JuliaMono;
     margin: 3rem;
     max-width: 900px;
     margin: auto;
@@ -602,6 +636,7 @@ ol > li::marker {
     border-radius: 5px;
     white-space: pre;
     padding: 0 2px;
+    font-family: CashMarket;
 }
 .info.bleu{
     background-color: var(--Color_Blue5);

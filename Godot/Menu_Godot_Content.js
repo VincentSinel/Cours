@@ -40,7 +40,7 @@ var MenuContent = [
 			{
 				name: "Améliorations",
 				path: "Pages/Premier_Jeu/Ameliorations.html",
-				ready: false,
+				ready: true,
 			},
 			{
 				name: "Plateforme",

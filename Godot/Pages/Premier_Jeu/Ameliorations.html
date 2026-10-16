@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="fr">
+  <link rel="stylesheet" href="/Godot/GodotTuto.css"> 
+
+
+  <link rel="stylesheet" href="/JS/Highlight/styles/default.css">
+  <link rel="stylesheet" href="/JS/Highlight/styles/gdscript.css">
+  <script src="/JS/Highlight/highlight.js"></script>
+  <script src="/JS/Highlight/languages/gdscript.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  
+  <script src="https://kit.fontawesome.com/5d8c762684.js" crossorigin="anonymous"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="/JS/es5/tex-mml-chtml.js"></script>
+
+  <title>Ameliorations</title>
+
+  <style>
+    .link{
+      font-family: FontAwesome;
+    }
+		.red_list li::marker {
+			color: red;
+		}
+  </style>
+
+</head>
+
+<body>
+
+  <table id="TitleTable">
+    <tr>
+      <td id="ChapitreNumero">
+        Premier jeu
+      </td>
+      <td id="ChapitreNom">
+        - Ameliorations
+      </td>
+    </tr>
+  </table>
+
+  <h1>Gestion de la réapparition :</h1>
+  <p>
+    Un des premiers élèments que l'on peut remarquer c'est qu'en cas de chute, rien ne permet de retourner sur la plateforme. Je vais donc mettre en place un système de réapparition et quelque limitation pour éviter de tomber indéfiniment à l'avenir.
+  </p>
+  <p>
+    Je vais donc commencer par modifier le script de ma balle. Il faut que j'enregistre un point de réapparition et que je créer un moyen de renvoyer le personnage à ce point de réapparition. Je modifie donc le script en ajoutant ce qui suit :
+    <pre><code class="language-gdscript light_mode">@onready var point_reapparition = global_position
+
+func reapparaitre():
+	global_position = point_reapparition
+	velocity = Vector2.ZERO
+</code></pre>
+    Le principe est simple, j'enregistre la position de départ du personnage dans une variable <span class="CRed">point_reapparition</span> et je créer une fonction qui renvoie le personnage à cette position lorsqu'on l'appel.
+  </p>
+  <p>
+    Le mot clé <span class="info">@onready</span> permet d'indiquer au moteur de jeu que la variable ne doit être créer que lorsque le noeud de notre balle est prêt. Cela est nécessaire ici, car la position de la balle n'est valable qu'après la création de celle-ci par le moteur de jeu.<br>
+    Dans ma fonction <span class="CBlue">reapparaitre</span>, je modifie aussi la variable <span class="CRed">velocity</span> pour annuler la vitesse de déplacement du personnage. J'utilise pour cela <span class="info">Vector2.ZERO</span> qui revient à définir velocity.x et velocity.y à 0.
+  </p>
+  <p>
+    Maintenant que notre script permet de réapparaitre, il faut lui dire quand le faire. Un des premiers cas classique est de définir une position vertical maximal que le personnage peut atteindre avant de réapparaitre. Cela permet d'éviter de tomber à l'infini, on retrouve cela dans la majeur parti des jeux 2D ou 3D. Dans le cas ou le personnage se retrouverais à traverser le sol, cela permet d'éviter une chute qui bloquerais le joueur et la progression.
+  </p>
+  <p>
+    <div class="flexobject">
+      <video src="Images/LimiteY.mp4" autoplay muted loop width="300px"></video>
+      <div style="flex: 3cm 1 1">
+        Pour cela je peut me baser sur la position y dans l'éditeur et définir la réapparition lorsque le joueur dépasse une certaine valeur.
+      </div>
+    </div>
+    <pre max><code class="language-gdscript light_mode">@export var y_max = 1000.0
+
+# ...
+
+# Exécuté à chaque frame de gestion physique (collision et détection de contact)
+func _physics_process(delta):
+	
+	# ...
+	
+	move_and_slide()
+	
+	if (global_position.y > y_max):
+		reapparaitre()
+</code></pre>
+  </p>
+  <h1>Double saut :</h1>
+    <p>
+      Il est possible de construire une scène plus complexe. J'ai ici dupliquer les plateforme (Ctrl+D quand selectionné) pour construire un niveau plus conséquent.
+      <img src="Images/Preview2.png">
+      Cependent, je ne peut pas atteindre la platforme du haut. Celle-ci étant trop élevé. Je vais donc programmer la possibilité de faire un double saut (voir plus si on le souhaite).
+    </p>
+    <p>
+      Le principe du saut multiple fonctionne comme suit : On définit le nombre de saut autorisé. Lorsque l'on saute, on dépense un saut. On peut donc sauté autant de fois qu'autorisé lorsque l'on est en l'air. On doit ensuite réinitialiser le nombre de saut lorsque la balle touche le sol.
+    </p>
+    <p>
+      Pour progammer cela, on a donc besoin de 2 nouvelles variables. Une indiquant le nombre de saut restant au personnage et une indiquant le nombre de saut à redonner lorsque l'on touche le sol.
+      <pre max><code class="language-gdscript light_mode">#...
+@export var nombre_saut = 2
+
+var saut_restant = 0
+
+# Exécuté à chaque frame de gestion physique (collision et détection de contact).
+func _physics_process(delta):
+	
+	# ...
+	
+	# Réinitialisation des sauts.
+	if is_on_floor():
+		saut_restant = nombre_saut
+	
+	# Gestion du saut.
+	if Input.is_action_just_pressed("Saut") and saut_restant > 0:
+		velocity.y = -force_saut * delta * 100.0
+		saut_restant -= 1 # On retire un saut
+</code></pre>
+    </p>
+    <p>
+      La variable <span class="CRed">saut_restant</span> n'a pas besoin d'être exporté car elle est défini par notre programme. Il faut aussi remarquer que la condition du saut à changer. On ne test plus si le joueur est au sol mais si il a des sauts disponible.<br>
+      Dernière remarque, la réinitialisation des saut est faites avant le saut car la detection <span class="info">is_on_floor</span> ne change qu'une fois <span class="info">move_and_slide</span> appelé. Dans mon cas, même si je vient de sauter, et tant que je n'ai pas demandé au moteur de jeu de déplacer notre balle, celle-ci est toujours considérée sur le sol.
+    </p>
+    <h1>Animation :</h1>
+    <h2>Modification du sprite :</h2>
+    <p>
+      Un autre point à améliorer, c'est le rendu de notre balle en fonction de ses différents états. On va donc ajouter des «animations» qui n'en sont pas vraiment. Pour cela je vais avoir besoin de plusieurs images :
+      <div class="flexobject">
+        <img src="Images/Jeu_Balle2.png" class="pixel" style="flex: 12cm 1 1; max-width: 12cm;">
+      </div>
+      Nous allons devoir changer notre noeud balle. On commence par remplacer le <span class="info bleu">Sprite2D</span> par un <span class="info bleu">AnimatedSprite2D</span><br>
+      <img src="Images/Scene4.png"><br>
+      Il faut ensuite créer un <span class="info">SpriteFrames</span> qui va nous permettre de créer différentes animations. Pour cela en selectionnant notre <span class="info bleu">AnimatedSprite2D</span> et depuis l'inspecteur :<br>
+      <img src="Images/Noeud7.png"><br>
+      En le selectionnant à nouveau, un menu s'ouvre en bas d'écran :<br>
+      <img src="Images/SpriteFrames_Menu.png"><br>
+      Ce menu va nous permettre de créer les différentes apparence de notre balle en les nommants. Une seul animation est actuellement créer, elle se nomme "default" mais elle ne contient encore aucune image. Ce menu contient de nombreux paramètres mais nous allons nous intéresser à une partie d'entre eux seulement :<br>
+      <img src="Images/SpriteFrames_Menu2.png"><br>
+      <ol>
+        <li>Le premier boutton permet de créer de nouvelle animation, je vais en créer 4 : default, saut, chute et avance.</li>
+        <li>Le deuxième boutton permet de définir l'animation par defaut à lancer.</li>
+        <li>Le champs numéro 3 permet de définir la vitesse de lecture de l'animation en frame par seconde.</li>
+        <li>Le boutton 4 va me permettre de définir les différentes images qui composent mon animation à partir d'une image en contenant plusieurs.</li>
+      </ol>
+    </p>
+    <p>
+      <div class="flexobject">
+        <img src="Images/ListeAnimations.png" style="flex: 2cm 0 1">
+        <p style="flex: 5cm 1 1">
+          On va donc commencer par créer et renommer 3 nouvelles animations en plus de default.
+        </p>
+      </div>
+      On configure ensuite à l'aide du boutton 4 les différentes images composant mes animations. Il faut dans la fenêtre qui s'ouvre selectionner la nouvelle image de notre balle contenant toutes les frames.<br>
+      <img src="Images/SelectionTrames.png"><br>
+      Il est certainement nécessaire de modifier le découpage sur la droite pour que notre image soit bien séparé. En cliquant sur les différentes frames il est possible de les selectionner.
+    </p>
+    <p>
+      Voici mon paramétrage :<br>
+      <img src="Images/Animation1.png"><br>
+      <img src="Images/Animation2.png"><br>
+      <img src="Images/Animation3.png"><br>
+      Pour la course j'ai voulu animer un peu plus :<br>
+      <img src="Images/Animation4.png"><br>
+      Qui dans le choix des frames donne : <br>
+      <img src="Images/SelectionTrames2.png"><br>
+    </p>
+    <h2>Script :</h2>
+    <p>
+      C'est fini pour la parti noeud et graphisme, mais, si je lance le jeu, il n'y a pour le moment aucun changement car je n'ai pas encore programmé les changements d'animations dans mon script. C'est donc ma prochaine modification.
+    </p>
+    <p>
+      Pour gagner du temps et que cela reste clair pour plus tard, voici le script final avec des commentaires expliquant les différents cas de figures. Quelques point cependant, <span class="info">$AnimatedSprite2D</span> permet d'accéder au noeud du nom AnimatedSprite2D enfant de notre balle. Il faut bien remarquer le symbole <span class="info">$</span> qui permet d'appeler un autre noeud.
+
+    </p>
+    <pre max><code class="language-gdscript light_mode"># Exécuté à chaque frame de gestion physique (collision et détection de contact).
+func _physics_process(delta):
+	
+	# ...
+	
+	move_and_slide()
+	
+	animation()
+	
+	# ...
+
+
+# Gestion des animations
+func animation():
+	# On tourne la balle dans la bonne direction si elle se déplace
+	# velocity.x < 0 renvoie Vrai si la balle va vers la gauche et Faux si elle va vers la droite
+	# flip_h permet de faire un miroir horizontale de notre image (tourner un personnage à droite ou gauche)
+	if (velocity.x != 0): # Si la balle bouge horizontalement
+			$AnimatedSprite2D.flip_h = velocity.x < 0
+	
+	# On joue l'animation la plus adapté pour chaque situation
+	if velocity.y > 0: # Si la balle chute (vitesse vers le bas)
+		$AnimatedSprite2D.play("chute")
+	elif velocity.y < 0: # Si la balle saute (vitesse vers le haut)
+		$AnimatedSprite2D.play("saut")
+	else: # Sinon la balle est au sol (pas de vitesse verticale)
+		if (velocity.x != 0): # Si la balle bouge (vitesse horizontale non nul)
+			$AnimatedSprite2D.play("avance")
+		else: # Sinon la balle ne bouge pas (vitesse horizontale nul)
+			$AnimatedSprite2D.play("default")</code></pre>
+</body>
+
+</html>
