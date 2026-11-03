@@ -41,7 +41,8 @@
 					"type": "title", "name": "Fraction d'une quantité",
 					"content": [
 						{"type": "definition", "source": [{"name": "fraction", "indexes": [3]}]},
-						{"type": "exemple", "source": [{"name": "fraction", "indexes": [11]}]}
+						{"type": "exemple", "source": [{"name": "fraction", "indexes": [11]}]},
+						{"type": "remarque", "source": [{"name": "fraction", "indexes": [6]}]}
 					]
 				}
 			]
