@@ -865,10 +865,13 @@
 			"<span class=\"frac\">$\\frac{7}{8}+\\frac{33}{24}=\\frac{7}{8}+\\frac{33\\ \\textcolor{#e53935}{\\div\\ 3}}{24\\ \\textcolor{#e53935}{\\div\\ 3}}=\\frac{7}{8}+\\frac{11}{8}=\\frac{7 + 11}{8}=\\frac{18}{8}$</span>",
 			"<span class=\"frac\">$\\frac{5}{3}+\\frac{8}{15}=\\frac{5\\ \\textcolor{#e53935}{\\times\\ 5}}{3\\ \\textcolor{#e53935}{\\times\\ 5}}+\\frac{8}{15}=\\frac{25}{15}+\\frac{8}{15}=\\frac{25 + 8}{15}=\\frac{33}{15}$</span>",
 			"Pour $\\frac{7}{10}$ et $\\frac{3}{10}$, les dénominateurs sont identiques, $3 < 7$ donc $\\frac{3}{10} < \\frac{7}{10}$.",
-			"Pour $\\frac{7}{10}$ et $\\frac{22}{30}$, les dénominateurs sont différents, on les met au même dénominateur : <br>$\\frac{7}{10} = \\frac{7\\times3}{10\\times3} = \\frac{21}{30}$ or $21 < 22$ donc $\\frac{7}{10} < \\frac{22}{30}$."
+			"Pour $\\frac{7}{10}$ et $\\frac{22}{30}$, les dénominateurs sont différents, on les met au même dénominateur : <br>$\\frac{7}{10} = \\frac{7\\times3}{10\\times3} = \\frac{21}{30}$ or $21 < 22$ donc $\\frac{7}{10} < \\frac{22}{30}$.",
+			"Léa a 20€. Elle en dépense les $\\frac{3}{4}$ pour acheter un DVD. Combien a-t-elle dépensé ?<br>On effectue la multiplication : $20 \\times \\frac{3}{4} = 20 \\times 0,75 = 15$, Elle aura donc  dépensé 15€.",
+			"<span class=\"frac\">$\\frac{1}{3}=\\frac{2}{6}$</span> car $1\\times6=6$ et $2\\times3=6$",
+			"<span class=\"frac\">$\\frac{15}{20}=\\frac{21}{28}$</span> car $15\\times28=420$ et $20\\times21=420$"
 		],
 		"remarques": [
-			"La position d'un point sur un axe gradué est appelée <b>abscisse</b>.",
+			"La position d'un point sur un axe gradué est appelée <span class=\"CRed\"><b>abscisse</b></span>.",
 			"Lorsque le numérateur est plus grand que le dénominateur, la fraction est plus grande que 1.",
 			"<p>Il est possible d'écrire une fraction en <b>forme mixte</b>. Cela consiste à séparer la partie entière et la partie restante :</p><div class=\"flexobject\" style=\"gap: 20px;\"><span>$\\frac{17}{6}=$</span><table class=\"borderfull square_table\" style=\"border: solid 2px black;\"><tr style=\"height: 30px;\"><td style=\"background-color: var(--Dviolet);\"></td><td style=\"background-color: var(--Dviolet);\"></td><td style=\"background-color: var(--Dviolet);\"></td><td style=\"background-color: var(--Dviolet);\"></td><td style=\"background-color: var(--Dviolet);\"></td><td style=\"background-color: var(--Dviolet);\"></td></tr></table><table class=\"borderfull square_table\" style=\"border: solid 2px black;\"><tr style=\"height: 30px;\"><td style=\"background-color: var(--Dviolet);\"></td><td style=\"background-color: var(--Dviolet);\"></td><td style=\"background-color: var(--Dviolet);\"></td><td style=\"background-color: var(--Dviolet);\"></td><td style=\"background-color: var(--Dviolet);\"></td><td style=\"background-color: var(--Dviolet);\"></td></tr></table><table class=\"borderfull square_table\" style=\"border: solid 2px black;\"><tr style=\"height: 30px;\"><td style=\"background-color: var(--Dviolet);\"></td><td style=\"background-color: var(--Dviolet);\"></td><td style=\"background-color: var(--Dviolet);\"></td><td style=\"background-color: var(--Dviolet);\"></td><td style=\"background-color: var(--Dviolet);\"></td><td></td></tr></table><span>$=2+\\frac{5}{6}$</span></div>",
 			"Lorsque le numérateur est inférieur au dénominateur, la fraction est inférieure à 1.",
@@ -1606,6 +1609,10 @@
 		"definitions": [
 			"<span class=\"CRed\">Simplifier une fraction</span>, c'est trouver une fraction qui lui est égale, ayant un <b>dénominateur plus petit</b>.",
 			"Il existe des <b>conventions de simplification</b> d'expression. On peut sous-entendre le signe multiplier entre :<ul><li>Un nombre et une lettre : $3 \\textcolor{#e53935}{\\times} a = 3a$</li><li>Deux lettres : $a\\textcolor{#e53935}{\\times} b = ab$</li><li>Une lettre (ou un chiffre) et une parenthèse : $a\\textcolor{#e53935}{\\times} (2 + b) = a(2+b)$</li><li>Entre deux parenthèses : $(a + 2)\\textcolor{#e53935}{\\times}(b + 3)=(a+2)(b+3)$</li></ul>"
+		],
+		"exemples": [
+			"<p class=\"frac\">$\\frac{15}{40}=\\frac{\\cancel{5}\\times\\ 3}{\\cancel{5}\\times\\ 8}=\\frac{3}{8}$</p>",
+			"<p class=\"frac\">$\\frac{18}{42}=\\frac{\\cancel{6}\\times\\ 3}{\\cancel{6}\\times\\ 7}=\\frac{3}{7}$</p>"
 		]
 	},"sinus": {
 		"tags": [],
