@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 30">
+  <defs>
+    <radialGradient id="d" data-name="Couleur terre 19 Radial" cx="15" cy="15" fx="15" fy="15" r="15" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ba816d"/>
+      <stop offset=".5" stop-color="#94422e"/>
+      <stop offset="1" stop-color="#7f2212"/>
+    </radialGradient>
+  </defs>
+  <g id="c" data-name="Calque 6">
+    <circle cx="15" cy="15" r="15" style="fill: url(#d); stroke-width: 0px;"/>
+    <text transform="translate(8.84 21.24)" style="fill: #fff; font-family: Bahnschrift-Bold, Bahnschrift; font-size: 20px; font-variation-settings: &apos;wght&apos; 700, &apos;wdth&apos; 100; font-weight: 700;"><tspan x="0" y="0">S</tspan></text>
+  </g>
+</svg>

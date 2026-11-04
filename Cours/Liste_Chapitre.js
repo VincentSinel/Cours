@@ -1355,14 +1355,14 @@ var cinquieme_saintexupery = [
 			nom: "Proportionnalité",
 			icone: 5,
 			download: {
-				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (Complet).docx",
-				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (Complet).pdf",
-				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (A trou).docx",
-				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Proportionnalité (A trou).pdf",
-				// img:			 "/Cours/4eme/SaintExupery/Chapitre_13/Documents/Chapitre 13 - Images.pdf",
+				docx: 		 "/Cours/5eme/SaintExupery_v2/Chapitre_9/Documents/Chapitre 9 - Proportionnalité (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery_v2/Chapitre_9/Documents/Chapitre 9 - Proportionnalité (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery_v2/Chapitre_9/Documents/Chapitre 9 - Proportionnalité (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_9/Documents/Chapitre 9 - Proportionnalité (A trou).pdf",
+				img:			 "/Cours/4eme/SaintExupery_v2/Chapitre_9/Documents/Chapitre 9 - Images.pdf",
 			},
-			ready : false,
-			page : "SaintExupery/Chapitre_13/Cours.html"
+			ready : true,
+			page : "SaintExupery_v2/Chapitre_9/Cours.json"
 	}, // Chapitre 9
 	{
 			id: 10,
@@ -2724,6 +2724,23 @@ var sixieme_rogervailland = [
 ]
 
 var sixieme_saintexupery = [
+	{
+		id: 99,
+		group: "Chapitre 0",
+		chapter: "Partie 0",
+		nom: "Sommaire",
+		download: {
+			pdf: "/Cours/6eme/SaintExupery/Sommaire/Documents/Sommaire.pdf",
+			docx: "/Cours/6eme/SaintExupery/Sommaire/Documents/Sommaire.docx",
+			custom: [
+				"/Cours/6eme/SaintExupery/Sommaire/Documents/Integrale (Complet).pdf",
+				"/Cours/6eme/SaintExupery/Sommaire/Documents/Integrale (A trou).pdf"
+			]
+		},
+		icone: 0,
+		ready : true,
+		page : "SaintExupery/Sommaire/Cours.html",
+	}, // Chapitre 1 Partie 1
 	{
 		id: 1,
 		group: "Chapitre 1",
