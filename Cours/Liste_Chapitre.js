@@ -2734,7 +2734,8 @@ var sixieme_saintexupery = [
 			docx: "/Cours/6eme/SaintExupery/Sommaire/Documents/Sommaire.docx",
 			custom: [
 				"/Cours/6eme/SaintExupery/Sommaire/Documents/Integrale (Complet).pdf",
-				"/Cours/6eme/SaintExupery/Sommaire/Documents/Integrale (A trou).pdf"
+				"/Cours/6eme/SaintExupery/Sommaire/Documents/Integrale (A trou).pdf",
+				"/Cours/6eme/SaintExupery/Sommaire/Documents/Progression.pdf"
 			]
 		},
 		icone: 0,
