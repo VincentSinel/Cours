@@ -871,7 +871,8 @@
 	},"forme fractionnaire": {
 		"tags": [],
 		"definitions": [
-			"Le <b>quotient</b> de deux nombres (<span class=\"CBlue\">▲</span> et <span class=\"CGreen\">●</span>) peut être représenté sous <span class=\"CRed\">forme fractionnaire</span> <span style=\"font-size: 16pt;\">$(\\frac{\\textcolor{#039be5}{▲}}{\\textcolor{#43a047}{●}})$</span>. Lorsque les nombres sont entiers on parle alors de <span class=\"CRed\">fraction</span>."
+			"Le <b>quotient</b> de deux nombres (<span class=\"CBlue\">▲</span> et <span class=\"CGreen\">●</span>) peut être représenté sous <span class=\"CRed\">forme fractionnaire</span> <span style=\"font-size: 16pt;\">$(\\frac{\\textcolor{#039be5}{▲}}{\\textcolor{#43a047}{●}})$</span>. Lorsque les nombres sont entiers on parle alors de <span class=\"CRed\">fraction</span>.",
+			"Soit a et b deux nombres avec b <b>non nul</b>. Le <b>quotient</b> de a par b peut s'écrire sous la forme <span class=\"frac\">$\\frac{a}{b}$</span> cette forme s'appelle <span class=\"CRed\">écriture fractionnaire</span>.<br>Si a et b sont des <b>entiers</b> <span class=\"frac\">$\\frac{a}{b}$</span> est appelé une <span class=\"CRed\"><b>fraction</b></span>."
 		],
 		"infos": [
 			"<table><tr class=\"CRed\"><td style=\"border-bottom: solid 2px black; padding: 0px 5px;\">4</td><td>←</td><td>Numérateur</td></tr><tr class=\"CGreen\"><td style=\"padding: 0px 5px;\">5</td><td>←</td><td>Dénominateur</td></tr></table>",
@@ -883,7 +884,9 @@
 			"Une <span class=\"CRed\">fraction</span> est la représentation de la division de deux <b>nombres entiers</b>.",
 			"Une fraction permet de représenter un partage de l'unité.",
 			"Les fractions sont utilisées pour se repérer sur une demi-droite graduée.",
-			"Prendre une fraction d'une quantité, c'est multiplier cette quantité par la fraction."
+			"Prendre une fraction d'une quantité, c'est multiplier cette quantité par la fraction.",
+			"Un fraction dont :<ul><li>Le numérateur est <b>égale</b> au dénominateur, est <b>égale</b> à 1.</li><li>Le numérateur est <b>inférieur</b> au dénominateur, est <b>inférieur</b> à 1.</li><li>Le numérateur est <b>supérieur</b> au dénominateur, est <b>supérieur</b> à 1.</li></ul>",
+			"Pour comparer deux fractions de <b>même dénominateur</b>, on compare les numérateurs."
 		],
 		"proprietes": [
 			"Si $a$ et $b$ désignent des nombres entiers relatifs alors le signe de la fraction $\\frac{a}{b}$ est :<ul><li><b>Positif</b> si les deux nombres sont du même signe.</li><li><b>Négatif</b> si les deux nombres sont de signes contraires.</li></ul>",
@@ -891,7 +894,8 @@
 			"Pour effectuer la <b>somme</b> (ou la <b>différence</b>) de deux nombres en écriture fractionnaire de <b>dénominateur quelconque</b>, il faut tout d'abord <b>les mettre au même dénominateur</b> avant d'utiliser la propriété précédente.",
 			"Pour multiplier deux nombres en écriture fractionnaire on :<br><ul><li>Multiplie les numérateurs entre eux.</li><li>Multiplie les dénominateurs entre eux.</li></ul><p>Soient <span class=\"CRed\">$a$</span>, <span class=\"CRed\">$b$</span>, <span class=\"CBlue\">$c$</span> et <span class=\"CBlue\">$d$</span> quatre nombres (avec $\\textcolor{#e53935}{b}\\ne0$ et $\\textcolor{#039be5}{d}\\ne0$) :</p><p class=\"formule\">$\\frac{\\textcolor{#e53935}{a}}{\\textcolor{#e53935}{b}}\\times\\frac{\\textcolor{#039be5}{c}}{\\textcolor{#039be5}{d}}=\\frac{\\textcolor{#e53935}{a}\\times\\textcolor{#039be5}{c}}{\\textcolor{#e53935}{b}\\times\\textcolor{#039be5}{d}}$</p>",
 			"<b>Diviser</b> par un nombre non nul revient à <b>multiplier par son inverse</b>.<br>Soient <span class=\"CRed\">$a$</span> et <span class=\"CBlue\">$b$</span> avec $\\textcolor{#039be5}{b}\\ne0$, alors $\\textcolor{#e53935}{a}\\div\\textcolor{#039be5}{b}=\\textcolor{#e53935}{a}\\times\\frac{1}{\\textcolor{#039be5}{b}}$",
-			"Pour <b>comparer</b> deux fractions, il y a deux possibilités :<ul><li><b>Si</b> elles ont le même dénominateur, <b>alors</b> on compare leurs numérateurs.</li><li><b>Si</b> elles ont un dénominateur différent, <b>alors</b> on essaie de les mettre au même dénominateur ou de les comparer à une autre fraction."
+			"Pour <b>comparer</b> deux fractions, il y a deux possibilités :<ul><li><b>Si</b> elles ont le même dénominateur, <b>alors</b> on compare leurs numérateurs.</li><li><b>Si</b> elles ont un dénominateur différent, <b>alors</b> on essaie de les mettre au même dénominateur ou de les comparer à une autre fraction.",
+			"Pour effectuer la <b>somme</b> (ou la <b>différence</b>) de deux fractions à <b>dénominateur multiple</b>, il faut tout d'abord <b>les mettre au même dénominateur</b> avant d'utiliser la propriété précédente."
 		],
 		"exemples": [
 			"<div><span class=\"center\">Unité</span><div class=\"accolade_bottom\"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><table class=\"borderfull\" style=\"width: 100%; border: solid 2px black;\"><tr style=\"height: 30px;\"><td style=\"background-color: #7B29C1;\"></td><td></td><td></td><td></td></tr></table><div style=\"width: 100%; display: grid; grid-template-columns: repeat(4, 1fr);\"><div class=\"accolade_top\" style=\"grid-column: 2;\"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><div style=\"grid-column: 2; grid-row: 2; text-align: center;\">Découpage régulier</div></div><p>Ici la partie violette correspond à $\\frac{1}{4}$ de l'unité.</p><table><tr><td style=\"border-bottom: solid 2px black; padding: 0px 5px;\">1</td><td>←</td><td>Nombre de parts coloriées</td></tr><tr><td style=\"padding: 0px 5px;\">4</td><td>←</td><td>Nombre total de parts</td></tr></table><table class=\"borderfull\" style=\"width: 100%;border: solid 2px black;\"><tr style=\"height: 15px;\"><td style=\"background-color: #7B29C1;\"></td><td></td><td></td><td></td></tr><tr style=\"height: 15px;\"><td style=\"background-color: #7B29C1;\"></td><td></td><td></td><td></td></tr></table><p>Ici la partie violette correspond à $\\frac{2}{8}$ de l'unité. Cette fraction représente la même quantité que $\\frac{1}{4}$.</p></div>",
@@ -907,7 +911,17 @@
 			"Pour $\\frac{7}{10}$ et $\\frac{22}{30}$, les dénominateurs sont différents, on les met au même dénominateur : <br>$\\frac{7}{10} = \\frac{7\\times3}{10\\times3} = \\frac{21}{30}$ or $21 < 22$ donc $\\frac{7}{10} < \\frac{22}{30}$.",
 			"Léa a 20€. Elle en dépense les $\\frac{3}{4}$ pour acheter un DVD. Combien a-t-elle dépensé ?<br>On effectue la multiplication : $20 \\times \\frac{3}{4} = 20 \\times 0,75 = 15$, Elle aura donc  dépensé 15€.",
 			"<span class=\"frac\">$\\frac{1}{3}=\\frac{2}{6}$</span> car $1\\times6=6$ et $2\\times3=6$",
-			"<span class=\"frac\">$\\frac{15}{20}=\\frac{21}{28}$</span> car $15\\times28=420$ et $20\\times21=420$"
+			"<span class=\"frac\">$\\frac{15}{20}=\\frac{21}{28}$</span> car $15\\times28=420$ et $20\\times21=420$",
+			"<span class=\"formule\">$\\frac{23}{23}$</span> = 1",
+			"$7 < 8$ donc <span class=\"formule\">$\\frac{7}{8}$</span> < 1",
+			"$19 > 17$ donc <span class=\"formule\">$\\frac{19}{17}$</span> > 1",
+			"<span class=\"formule\">$\\frac{8}{9} > \\frac{4}{9}$</span> car $8 > 4$",
+			"<span class=\"formule\">$\\frac{12}{5} < \\frac{16}{5}$</span> car $12 < 16$",
+			"<span class=\"formule\">$\\frac{3}{4} > \\frac{5}{8}$</span> car <span class=\"formule\">$\\frac{3}{4} = \\frac{6}{8}$</span> et $6 > 5$",
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Disque Fraction11.svg\" style=\"max-height: 4cm;\"><div style=\"font-size: 30pt;\">></div><img src=\"/Images/Cours/Disque Fraction12.svg\" style=\"max-height: 4cm;\"></div>",
+			"<table><tr style=\"text-align: center;\"><td class=\"frac\">$\\frac{1}{3}$</td><td class=\"frac\">+</td><td class=\"frac\">$\\frac{1}{6}$</td><td class=\"frac\">=</td><td class=\"frac\">$\\frac{3}{6}$</td></tr><tr><td><img src=\"/Images/Cours/Disque Fraction7.svg\" style=\"max-width: 3cm;\"></td><td class=\"frac\">+</td><td><img src=\"/Images/Cours/Disque Fraction8.svg\" style=\"max-width: 3cm;\"></td><td class=\"frac\">=</td><td><img src=\"/Images/Cours/Disque Fraction9.svg\" style=\"max-width: 3cm;\"></td></tr></table><p class=\"frac\">$\\frac{1}{3} + \\frac{1}{6} = \\frac{1\\times 2}{3\\times 2} + \\frac{1}{6}= \\frac{2}{6} + \\frac{1}{6} = \\frac{2+1}{6}=\\frac{3}{6}$</p>",
+			"<span class=\"frac\">$\\frac{5}{7}+\\frac{13}{21}=\\frac{5\\times3}{7\\times3}+\\frac{13}{21}=\\frac{15}{21}+\\frac{13}{21}=\\frac{28}{21}=\\frac{4}{3}$</span>",
+			"<p><span style=\"font-size: 18pt;\">&#10157;</span>  <u>Nombre entier plus fraction :</u></p><div style=\"padding-left: 30px;\"><p>On écrit le nombre entier comme une fraction de dénominateur 1 puis on reprend le cas précédent.</p><p class=\"frac\">$2+\\frac{3}{13} = \\frac{2}{1}+\\frac{3}{13}$</p></div>"
 		],
 		"remarques": [
 			"La position d'un point sur un axe gradué est appelée <span class=\"CRed\"><b>abscisse</b></span>.",
@@ -916,7 +930,12 @@
 			"Lorsque le numérateur est inférieur au dénominateur, la fraction est inférieure à 1.",
 			"Lorsque le numérateur est supérieur au dénominateur, la fraction est supérieure à 1.",
 			"Une fraction peut représenter :<ul><li>Un entier $\\frac{6}{2}=3$</li><li>Un nombre décimal $\\frac{7}{2}=3,5$</li><li>Un nombre non décimal $\\frac{1}{3}$</ul>",
-			"Un pourcentage représente une fraction de dénominateur 100. Prendre le pourcentage d'un nombre c'est le multiplier par la fraction représentant le pourcentage :<br>20% de 180€ donne $\\frac{20}{100}\\times180=36$€"
+			"Un pourcentage représente une fraction de dénominateur 100. Prendre le pourcentage d'un nombre c'est le multiplier par la fraction représentant le pourcentage :<br>20% de 180€ donne $\\frac{20}{100}\\times180=36$€",
+			"La fraction <span class=\"frac\">$\\frac{a}{b}$</span> est le nombre qui multiplié par $b$ est égal à $a$.",
+			"Dans une fraction $a$ est le <b>numérateur</b> et $b$ le <b>dénominateur</b>."
+		],
+		"infos": [
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Attention.svg\" style=\"max-height: 4cm;\"><p style=\"flex: 1 1 5cm;\">Attention, pour comparer deux fractions, on commence par les mettres au même dénominateur.</p></div>"
 		]
 	},"fraction décimale":{
 		"tags": ["fraction", "fractionnaire"],
