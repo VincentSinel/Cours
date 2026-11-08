@@ -930,7 +930,20 @@
 	},"hauteur": {
 		"tags": [],
 		"definitions": [
-			""
+			"Une <span class=\"CRed\">hauteur</span> d'un triangle est une droite qui passe par un sommet de ce triangle et qui est <b>perpendiculaire</b> au côté opposé à ce sommet."
+		],
+		"exemples": [
+			"<img src=\"/Images/Cours/Hauteur1.svg\" style=\"max-height: 5cm;\">",
+			"<img src=\"/Images/Cours/Hauteur2.svg\" style=\"max-height: 5cm;\">",
+			"<img src=\"/Images/Cours/Ortho1.svg\" style=\"max-height: 5cm;\">",
+			"<img src=\"/Images/Cours/Ortho2.svg\" style=\"max-height: 5cm;\">"
+		],
+		"remarques": [
+			"Une hauteur peut-être en dehors du triangle.",
+			"Dans chacun des exemples précédents, le point H est appelé <span class=\"CRed\">pied de la hauteur</span> issue de M."
+		],
+		"proprietes": [
+			"Les hauteurs d'un triangle sont <span class=\"CRed\">concourante</span> (elles se croisent en un même point nommé <span class=\"CRed\">orthocentre </span> du cercle)."
 		]
 	},"histogramme": {
 		"tags": [],

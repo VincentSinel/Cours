@@ -1,0 +1,52 @@
+{
+	"activité": "<ol><li>Dans chaque cas, mesurer à l'aide des instruments de géométrie la hauteur de l'avion par rapport au sol en traçant les traits de construction nécessaires.<div class=\"flexobject\"><img src=\"/Images/Cours/Act_Hauteur0.svg\" style=\"max-height: 6cm;\"><img src=\"/Images/Cours/Act_Hauteur1.svg\" style=\"max-height: 6cm;\"></div></li><li>Sur chaque figure tracer le triangle ABC et colorier le segment qui a permis d'obtenir la hauteur demandée dans la question 1. Comment définir ce segment ? Que doit-on construire pour mesurer cette hauteur ?</li></ol>",
+	"content": [{
+			"type": "title", "name": "Médiatrice",
+			"content": [
+				{
+					"type": "title", "name": "Rappel",
+					"content": [
+						{"type": "definition", "source": [{"name": "médiatrice", "indexes": [0]}]},
+						{"type": "propriete", "source": [{"name": "médiatrice", "indexes": [0,1]}]},
+						{"type": "exemple","class": "flexobject", "source": [{"name": "médiatrice", "indexes": [0,1],"style": "flex: 1 1 5cm;"}]}
+					]
+				},
+				{
+					"type": "title", "name": "Dans le triangle",
+					"content": [
+						{"type": "propriete", "source": [{"name": "médiatrice", "indexes": [2]}]},
+						{"type": "exemple","class": "flexobject", "source": [{"name": "médiatrice", "indexes": [2,3],"style": "flex: 1 1 5cm;"}]},
+						{"type": "remarque", "source": [{"name": "médiatrice", "indexes": [0,1]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Hauteurs",
+			"content": [
+				{
+					"type": "title", "name": "Définition",
+					"content": [
+						{"type": "definition", "source": [{"name": "hauteur", "indexes": [0]}]},
+						{"type": "exemple","class": "flexobject", "source": [{"name": "hauteur", "indexes": [0,1],"style": "flex: 1 1 5cm;"}]},
+						{"type": "remarque", "source": [{"name": "hauteur", "indexes": [0,1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Propriété",
+					"content": [
+						{"type": "propriete", "source": [{"name": "hauteur", "indexes": [0]}]},
+						{"type": "exemple","class": "flexobject", "source": [{"name": "hauteur", "indexes": [2,3],"style": "flex: 1 1 5cm;"}]}
+					]
+				},
+				{
+					"type": "title", "name": "Aire du triangle",
+					"content": [
+						{"type": "info", "source": [{"name": "aire", "indexes": [4]}]},
+						{"type": "exemple", "source": [{"name": "aire", "indexes": [2]}]}
+					]
+				}
+			]
+		}
+	]
+}

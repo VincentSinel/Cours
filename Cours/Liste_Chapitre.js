@@ -1369,39 +1369,39 @@ var cinquieme_saintexupery = [
 			nom: "Triangles - Droites remarquables et aire",
 			icone: 2,
 			download: {
-				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (Complet).docx",
-				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (Complet).pdf",
-				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (A trou).docx",
-				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_11/Documents/Chapitre 11 - Triangles - Longueurs et droites remarquables (A trou).pdf",
+				docx: 		  "/Cours/5eme/SaintExupery_v2/Chapitre_10/Documents/Chapitre 10 - Triangles - Droites remarquables et aire (Complet).docx",
+				pdf:  		  "/Cours/5eme/SaintExupery_v2/Chapitre_10/Documents/Chapitre 10 - Triangles - Droites remarquables et aire (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery_v2/Chapitre_10/Documents/Chapitre 10 - Triangles - Droites remarquables et aire (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_10/Documents/Chapitre 10 - Triangles - Droites remarquables et aire (A trou).pdf",
 			},
-			ready : false,
-			page : "SaintExupery/Chapitre_11/Cours.html"
+			ready : true,
+			page : "SaintExupery_v2/Chapitre_10/Cours.json"
 	}, // Chapitre 10
 	{
 			id: 11,
 			nom: "Distributivité simple",
 			icone: 3,
 			download: {
-				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_7/Documents/Chapitre 7 - Distributivité simple (Complet).docx",
-				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_7/Documents/Chapitre 7 - Distributivité simple (Complet).pdf",
-				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_7/Documents/Chapitre 7 - Distributivité simple (A trou).docx",
-				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_7/Documents/Chapitre 7 - Distributivité simple (A trou).pdf",
+				// docx: 		  "/Cours/5eme/SaintExupery_v2/Chapitre_11/Documents/Chapitre 11 - Distributivité simple (Complet).docx",
+				// pdf:  		  "/Cours/5eme/SaintExupery_v2/Chapitre_11/Documents/Chapitre 11 - Distributivité simple (Complet).pdf",
+				// docx_trou: "/Cours/5eme/SaintExupery_v2/Chapitre_11/Documents/Chapitre 11 - Distributivité simple (A trou).docx",
+				// pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_11/Documents/Chapitre 11 - Distributivité simple (A trou).pdf",
 			},
 			ready : false,
-			page : "SaintExupery/Chapitre_7/Cours.html"
+			page : "SaintExupery_v2/Chapitre_11/Cours.json"
 	}, // Chapitre 11
 	{
 			id: 12,
 			nom: "Volume",
 			icone: 2,
 			download: {
-				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (Complet).docx",
-				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (Complet).pdf",
+				// docx: 		  "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (Complet).docx",
+				// pdf:  		  "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (Complet).pdf",
 				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (A trou).docx",
 				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (A trou).pdf",
 			},
 			ready : false,
-			page : "SaintExupery/Chapitre_8/Cours.html"
+			page : "SaintExupery_v2/Chapitre_12/Cours.json"
 	}, // Chapitre 12
 	{
 			id: 13,
@@ -1414,7 +1414,7 @@ var cinquieme_saintexupery = [
 				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_10/Documents/Chapitre 10 - Multiples et diviseurs (A trou).pdf",
 			},
 			ready : false,
-			page : "Base/Chapitre_8/Cours.html"
+			page : "Base/Chapitre_8/Cours.json"
 	}, // Chapitre 13
 	{
 			id: 14,
@@ -1453,7 +1453,7 @@ var cinquieme_saintexupery = [
 				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).pdf",
 			},
 			ready : false,
-			page : "Base/Chapitre_11/Cours.html"
+			page : "Base/Chapitre_11/Cours.json"
 	}, // Chapitre 16
 	{
 			id: 17,
@@ -1466,7 +1466,7 @@ var cinquieme_saintexupery = [
 				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).pdf",
 			},
 			ready : false,
-			page : "Base/Chapitre_11/Cours.html"
+			page : "Base/Chapitre_11/Cours.json"
 	}, // Chapitre 17
 	{
 			id: 18,
@@ -1479,7 +1479,7 @@ var cinquieme_saintexupery = [
 				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).pdf",
 			},
 			ready : false,
-			page : "Base/Chapitre_11/Cours.html"
+			page : "Base/Chapitre_11/Cours.json"
 	}, // Chapitre 18
 	{
 			id: 19,
@@ -1492,7 +1492,7 @@ var cinquieme_saintexupery = [
 				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (A trou).pdf",
 			},
 			ready : false,
-			page : "SaintExupery/Chapitre_8/Cours.html"
+			page : "SaintExupery/Chapitre_8/Cours.json"
 	}, // Chapitre 19
 	{
 			id: 20,
@@ -1505,7 +1505,7 @@ var cinquieme_saintexupery = [
 				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (A trou).pdf",
 			},
 			ready : false,
-			page : "Base/Chapitre_13/Cours.html"
+			page : "Base/Chapitre_13/Cours.json"
 	}, // Chapitre 20
 	{
 			id: 21,
@@ -1518,7 +1518,7 @@ var cinquieme_saintexupery = [
 				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (A trou).pdf",
 			},
 			ready : false,
-			page : "Base/Chapitre_19/Cours.html"
+			page : "Base/Chapitre_19/Cours.json"
 	}, // Chapitre 21
 ]
 
