@@ -1,6 +1,6 @@
 {
 	"styles": "",
-	"scripts": ["JS/Animations.js"],
+	"scripts": [{"name": "JS/Diagramme.js"}],
 	"activité": "<p> Retrouver les nombres premiers à partir du crible d'Erathostène ci-dessous :</p><ul><li>1 est mis à part car il divise tous les nombres</li><li>On garde le nombre suivant donc 2. Tous les multiples de 2 sont ensuite enlevés.</li><li>On garde le nombre suivant donc 3. Tous les multiples de 3 sont ensuite enlevés.</li><li>On garde le nombre suivant donc 5. Tous les multiples de 5 sont ensuite enlevés.</li><li>Etc...</li></ul> <p> Les nombres restants sont ainsi des nombres premiers.</p><div id=\"Animation1\" class=\"animation center\" width=\"480\" height=\"360\"></div>",
 	"content": [{
 			"type": "title", "name": "Nombres premiers",

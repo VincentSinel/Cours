@@ -1392,15 +1392,15 @@ var cinquieme_saintexupery = [
 	}, // Chapitre 11
 	{
 			id: 12,
-			nom: "Volume",
+			nom: "Volume et pavé droit",
 			icone: 2,
 			download: {
-				// docx: 		  "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (Complet).docx",
-				// pdf:  		  "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (Complet).pdf",
-				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (A trou).docx",
-				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (A trou).pdf",
+				docx: 		 "/Cours/5eme/SaintExupery_v2/Chapitre_12/Documents/Chapitre 12 - Volume et pavé droit (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery_v2/Chapitre_12/Documents/Chapitre 12 - Volume et pavé droit (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery_v2/Chapitre_12/Documents/Chapitre 12 - Volume et pavé droit (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_12/Documents/Chapitre 12 - Volume et pavé droit (A trou).pdf",
 			},
-			ready : false,
+			ready : true,
 			page : "SaintExupery_v2/Chapitre_12/Cours.json"
 	}, // Chapitre 12
 	{

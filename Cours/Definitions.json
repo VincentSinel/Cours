@@ -381,10 +381,13 @@
 			"Le cube d'un nombre <span class=\"CRed\">$a$</span> est le produit de ce nombre par lui-même, par lui-même. On le note $\\textcolor{#e53935}{a}^3=\\textcolor{#e53935}{a}\\times \\textcolor{#e53935}{a}\\times \\textcolor{#e53935}{a}$ &nbsp;&nbsp; lu \"<span class=\"CRed\">$a$</span> au cube\""
 		],
 		"exemples": [
-			"<img src=\"/Images/Cours/Cube3.svg\" style=\"max-height: 4cm;\">",
+			"<p>ABCDEFGH est un cube représenté en perspective cavalière.</p><img src=\"/Images/Cours/Cube3.svg\" style=\"max-height: 4cm;\">",
 			"Un cube de 4 cm de côté a pour volume $4\\times4\\times4 = 64 cm^3$.",
 			"5 au cube : $5^3=5\\times5\\times5=125$",
 			"$a$ au cube : $a^3=a\\times a\\times a$"
+		],
+		"proprietes": [
+			"Le volume $V$ d'un cube, de dimension $c$ est :<br> $V\\ =\\ c\\ \\times\\ c\\ \\times\\ c=c^3$"
 		],
 		"remarques": [
 			"Un cube a toutes ses arêtes de même longueur."
@@ -1197,7 +1200,8 @@
 			"Un <span class=\"CRed\">patron</span> est un dessin du plan permettant de construire un solide par découpage et pliage."
 		],
 		"exemples": [
-			"<p>Le patron d'un cube est composé de six carrés collés les uns aux autres.</p><img src=\"/Images/Cours/Cube4.svg\" style=\"max-height: 5cm;\">"
+			"<p>Le patron d'un cube est composé de six carrés collés les uns aux autres.</p><img src=\"/Images/Cours/Cube4.svg\" style=\"max-height: 5cm;\">",
+			"<p>Le patron d'un pavé droit est composé de six rectangles collés les uns aux autres.</p><img src=\"/Images/Cours/Pave2.svg\" style=\"max-height: 5cm;\">"
 		],
 		"remarques": [
 			"Il est possible de créer plusieurs patrons différents pour un même solide.",
@@ -1206,7 +1210,7 @@
 	},"pavé droit": {
 		"tags": [],
 		"definitions": [
-			"Un <span class=\"CRed\">parallélépipède rectangle</span> (aussi appelé <span class=\"CRed\">pavé droit</span>) est un solide composé de six faces rectangulaires."
+			"Un <span class=\"CRed\">parallélépipède rectangle</span> (aussi appelé <span class=\"CRed\">pavé droit</span>) est un solide composé de six faces <b>rectangulaires</b>."
 		],
 		"proprietes": [
 			"Le volume $V$ d'un pavé droit, de dimension L, 𝓁 et <i>h</i>, est :<br> $V\\ =\\ L\\ \\times\\ 𝓁\\ \\times\\ h$",
@@ -1963,7 +1967,9 @@
 		"definitions": [
 			"Le <span class=\"CRed\">volume</span> est une grandeur représentant la contenance d'un solide. Il existe deux unités usuelles utilisées, le <b>mètre cube</b> noté <b>m³</b> et le <b>litre</b> noté <b>L</b>.",
 			"Le <span class=\"CRed\">volume</span> est la mesure du contenu d'un solide en trois dimensions.",
-			"Un <span class=\"CRed\">centimètre cube</span> est le volume d'un cube de 1 cm de côté. On le note $cm^3$. C'est une des unités courantes du volume."
+			"Un <span class=\"CRed\">centimètre cube</span> est le volume d'un cube de 1 cm de côté. On le note $cm^3$. C'est une des unités courantes du volume.",
+			"Dans le système international, l'unité de volume est le <span class=\"CRed\">mètre cube</span> noté «<b><span class=\"CRed\">m³</span></b>».",
+			"Pour plus de facilité, on utilise aussi le <span class=\"CRed\">litre</span> noté «<b><span class=\"CRed\">L</span></b>» pour mesurer les volumes avec des sous-unités plus précises."
 		],
 		"proprietes": [
 			"$V = \\text{Longueur} \\times \\text{Largeur} \\times \\text{Hauteur}$",
@@ -1982,7 +1988,8 @@
 		"infos": [
 			"<style>.p-table3 {display: grid;grid-template-columns: repeat(21, 1fr);grid-template-rows: auto auto repeat(2, 30px);align-content: center;vertical-align: middle;text-align: center;border: solid 1px black;}.p-table3 > div{border: solid 1px black;align-content: center;font-size: 12pt;}.p-table3 > div:nth-child(-n + 28){font-size: 8pt;font-weight: bold;}.p-table3 > div:nth-child(-n + 7){background-color: #88FF87;}.p-table3 > div:nth-child(n + 8):nth-child(-n + 28){background-color: #3CB3E3;}.p-table3 > div:nth-child(-n + 28) > span{font-size: 16pt !important;}</style><div class=\"p-table3\"><div style=\"grid-column: 1 / 4;\">Kilomètre cube<br><span>km³</span></div><div style=\"grid-column: 4 / 7;\">Hectomètre cube<br><span>hm³</span></div><div style=\"grid-column: 7 / 10;\">Décamètre cube<br><span>dam³</span></div><div style=\"grid-column: 10 / 13;\">Mètre cube<br><span>m³</span></div><div style=\"grid-column: 13 / 16;\">Décimètre cube<br><span>dm³</span></div><div style=\"grid-column: 16 / 19;\">Centimètre cube<br><span>cm³</span></div><div style=\"grid-column: 19 / 22;\">Millimètre cube<br><span>mm³</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div>Kilolitre<br><span>kL</span></div><div>Hectolitre<br><span>hL</span></div><div>Decalitre<br><span>daL</span></div><div>Litre<br><span>L</span></div><div>Décilitre<br><span>dL</span></div><div>Centilitre<br><span>cL</span></div><div>Millilitre<br><span>mL</span></div><div><span>-</span></div><div><span>-</span></div><div><span>-</span></div><div></div><div></div><div></div><div>4</div><div>2</div><div>6</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div>0,</div><div>0</div><div>0</div><div>0</div><div>0</div><div>0</div><div>5</div></div>",
 			"<div style=\"width: 410px; padding: 5px; text-align: center; border: solid black 1px;\"><div class=\"flexobject\" style=\"gap: 5px;\"><label for=\"cube_size_l\">Longueur :</label><input type=\"number\" value=\"10\" min=\"1\" max=\"12\" id=\"cube_size_l\" oninput=\"Resize()\" style=\"width: 55px;\"><label for=\"cube_size_l\">Largeur :</label><input type=\"number\" value=\"10\" min=\"1\" max=\"12\" id=\"cube_size_p\" oninput=\"Resize()\"><label for=\"cube_size_l\">Hauteur :</label><input type=\"number\" value=\"10\" min=\"1\" max=\"12\" id=\"cube_size_h\" oninput=\"Resize()\"></div><br><canvas id=\"cube_visualisation\" height=\"360\" width=\"360\"></canvas><br><div><input id=\"cube_draw\" style=\"width: 100%;\" type=\"range\" value=\"0\" min=\"0\" max=\"1000\" step=\"1\" oninput=\"Redraw_range()\"><input type=\"number\" value=\"0\" min=\"0\" max=\"1000\" id=\"cube_draw_value\" oninput=\"Redraw_spin()\"></div></div>",
-			"<p>Pour mesurer le volume d'un objet, on peut effectuer un dénombrement du nombre de cubes qu'il contient :</p><div class=\"flexobject\"><img src=\"/Images/Cours/Denombrement_Vue_isometrique.svg\" style=\"height: 10cm;\"><div><div class=\"flexobject\"><img src=\"/Images/Cours/Denombrement_Cube.svg\" style=\"height: 2cm;\"><br><div>Ici la figure est composée de cube unité comme ci-contre (de 1 $cm^3$).</div></div>Elle est formée de 5 couches composées comme suit :<br><ul><li>Couche 1 : 1 cube</li><li>Couche 2 : 2 × 2 = 4 cubes</li><li>Couche 3 : 3 × 3 = 9 cubes</li><li>Couche 4 : 4 × 4 = 16 cubes</li><li>Couche 5 : 5 × 5 = 25 cubes</li></ul>Soit au total 1 + 4 + 9 + 16 + 25 = 55 cubes. Son volume est donc de 55 $cm^3$.</div></div>"
+			"<p>Pour mesurer le volume d'un objet, on peut effectuer un dénombrement du nombre de cubes qu'il contient :</p><div class=\"flexobject\"><img src=\"/Images/Cours/Denombrement_Vue_isometrique.svg\" style=\"height: 10cm;\"><div><div class=\"flexobject\"><img src=\"/Images/Cours/Denombrement_Cube.svg\" style=\"height: 2cm;\"><br><div>Ici la figure est composée de cube unité comme ci-contre (de 1 $cm^3$).</div></div>Elle est formée de 5 couches composées comme suit :<br><ul><li>Couche 1 : 1 cube</li><li>Couche 2 : 2 × 2 = 4 cubes</li><li>Couche 3 : 3 × 3 = 9 cubes</li><li>Couche 4 : 4 × 4 = 16 cubes</li><li>Couche 5 : 5 × 5 = 25 cubes</li></ul>Soit au total 1 + 4 + 9 + 16 + 25 = 55 cubes. Son volume est donc de 55 $cm^3$.</div></div>",
+			"<div class=\"tableau_unite\"><div style=\"grid-column: 1 / 3; font-weight: bold; font-size: 20px;\">Unités de volume</div><div style=\"font-weight: bold;\">Multiples</div><div style=\"font-weight: bold;\">Sous-Multiples</div><div ><b>Décamètre cube</b><br>1 dam³ = 1 000 m³</div><div ><b>Décimètre cube</b><br>1 dm³ = 0,001 m³</div><div ><b>Hectomètre cube</b><br>1 hm³ = 1 000 dam³ = 1 000 000 m³</div><div ><b>Centimètre cube</b><br>1 cm³ = 0,001 dm³ = 0,00 0001 m³</div><div ><b>Kilomètre cube</b><br>1 km³ = 1 000 hm³ = 1 000 000 dam³ = 1 000 000 000 m³</div><div ><b>Millimètre cube</b><br>1 mm³ = 0,001 cm³ = 0,00 0001 dm³ = 0,00 000 0001 m³</div></div>"
 		],
 		"exemples": [
 			"426 hm³ = 426 000 000 000 dm³",

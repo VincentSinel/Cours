@@ -1,0 +1,47 @@
+{
+	"scripts": [{"name": "JS/Intro.js"}],
+	"activité": "<ol><li>On dispose d'un cube de 10 cm par 10 cm par 10cm. On place à l'intérieur des petits cubes de 1 cm par 1 cm par 1 cm.<ol type=\"a\"><li>Combien de cube sont nécessaire pour remplir le fond du cube ?</li><li>Combien de cube total sont nécessaire pour remplir l'ensemble du cube ?</li><li>En déduire combien de cube de 1cm³ contenue dans un cube de 1dm³</li></ol></li><li>On dispose maintenant d'un pavé droit de 5cm par 10cm par 12cm.<ol type=\"a\"><li>Calculer le nombre de cube nécessaire pour remplir ce pavé droit.</li><li>Quelle formule peut-on donner pour calculer le volume d'un pavé droit à partir d'une longueur, largeur et hauteur.</li></ol></li></ol><div style=\"width: 410px; padding: 5px; text-align: center; border: solid black 1px;\"><div class=\"flexobject\" style=\"gap: 5px;\"><label for=\"cube_size_l\">Longueur :</label><input type=\"number\" value=\"10\" min=\"1\" max=\"12\" id=\"cube_size_l\" oninput=\"Resize()\" style=\"width: 55px;\"><label for=\"cube_size_p\">Largeur :</label><input type=\"number\" value=\"10\" min=\"1\" max=\"12\" id=\"cube_size_p\" oninput=\"Resize()\"><label for=\"cube_size_h\">Hauteur :</label><input type=\"number\" value=\"10\" min=\"1\" max=\"12\" id=\"cube_size_h\" oninput=\"Resize()\"></div><canvas id=\"cube_visualisation\" height=\"360\" width=\"360\"></canvas><div><input id=\"cube_draw\" style=\"width: 100%;\" type=\"range\" value=\"0\" min=\"0\" max=\"1000\" step=\"1\" oninput=\"Redraw_range()\"><input type=\"number\" value=\"0\" min=\"0\" max=\"1000\" id=\"cube_draw_value\" oninput=\"Redraw_spin()\"></div></div>",
+	"content": [{
+			"type": "title", "name": "Volume",
+			"content": [
+				{"type": "definition", "source": [{"name": "volume", "indexes": [3]}]},
+				{"type": "info", "source": [{"name": "volume", "indexes": [3]}]},
+				{"type": "definition", "source": [{"name": "volume", "indexes": [4]}]},
+				{"type": "remarque", "source": [{"name": "volume", "indexes": [0, 1, 2]}]},
+				{"type": "autre", "source": [{"data": "<p><b><u>Tableau de conversion d'un volume :</u></b></p>"}]},
+				{"type": "info", "source": [{"name": "volume", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "volume", "indexes": [0, 1]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Pavé droit",
+			"content": [
+				{
+					"type": "title", "name": "Définition",
+					"content": [
+						{"type": "definition", "source": [{"name": "pavé droit", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "pavé droit", "indexes": [0]}]},
+						{"type": "propriete", "source": [{"name": "pavé droit", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "pavé droit", "indexes": [1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Cube",
+					"content": [
+						{"type": "definition", "source": [{"name": "cube", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "cube", "indexes": [0]}]},
+						{"type": "propriete", "source": [{"name": "cube", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "cube", "indexes": [1]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Patron",
+					"content": [
+						{"type": "definition", "source": [{"name": "patron", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "patron", "indexes": [1, 0]}]}
+					]
+				}
+			]
+		}
+	]
+}
