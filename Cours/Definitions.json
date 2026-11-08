@@ -471,7 +471,8 @@
 			"Un <span class=\"CRed\">diagramme en bâtons</span> (ou en barres) est composé de bâtons de même largeur et de hauteur proportionnelle aux effectifs qu'ils représentent."
 		],
 		"exemples": [
-			"<div class=\"flexobject\"><div id=\"baton1\" style=\"flex: 1 1 5cm;\"></div><div style=\"flex: 1 1 5cm;\">Diagramme en bâtons de la répartition de la population de la France et des pays voisins en 2018.<table class=\"proportionnaltable\"><tr><th>Pays</th><td>Allemagne</td><td>Belgique</td><td>Espagne</td><td>France</td><td>Italie</td><td>Luxembourg</td><td>Royaume-Uni</td><td>Suisse</td></tr><tr><th>Population<br>(en million)</th><td>84</td><td>11</td><td>47</td><td>67</td><td>60</td><td>1</td><td>67</td><td>9</td></tr></table></div></div>"
+			"<div class=\"flexobject\"><div id=\"baton1\" style=\"flex: 1 1 5cm;\"></div><div style=\"flex: 1 1 5cm;\">Diagramme en bâtons de la répartition de la population de la France et des pays voisins en 2018.<table class=\"proportionnaltable\"><tr><th>Pays</th><td>Allemagne</td><td>Belgique</td><td>Espagne</td><td>France</td><td>Italie</td><td>Luxembourg</td><td>Royaume-Uni</td><td>Suisse</td></tr><tr><th>Population<br>(en million)</th><td>84</td><td>11</td><td>47</td><td>67</td><td>60</td><td>1</td><td>67</td><td>9</td></tr></table></div></div>",
+			"<div class=\"flexobject\"><table class=\"proportionnaltable\"><tr><th style=\"width: 200px;\">Nombre de frères ou soeurs</th><td>0</td><td>1</td><td>2</td><td>3</td><td>plus de 3</td></tr><tr><th>Effectif</th><td>5</td><td>9</td><td>10</td><td>3</td><td>2</td></tr></table><div id=\"baton1\" style=\"flex: 0 1 5cm;\"></div></div>"
 		],
 		"remarques": [
 			"Ce type de diagramme permet de représenter un tableau à simple entrée."
@@ -918,6 +919,9 @@
 		"proprietes": [
 			"La fréquence d'une valeur est toujours comprise entre 0 et 1.",
 			"La somme de toutes les fréquences est égale à 1. "
+		],
+		"exemples": [
+			"<p>Dans la série de valeur précèdent il y a 20 notes au total dont 4 égales à 10.La fréquence de la valeur 10 est donc de $\\frac{4}{20}=\\frac{1}{5}=0.2=20\\%$</p>"
 		]
 	},"grandeur": {
 		"tags": [],
@@ -1621,7 +1625,11 @@
 		],
 		"exemples": [
 			"<div class=\"flexobject\"><p style=\"flex: 10cm 0 1;\">Ci-contre on peut voir différentes formes avec différentes couleurs. Il y a en tout 36 formes. On peut alors les catégoriser, par exemple, selon leurs couleurs ou leurs formes. Il y a ainsi 12 formes rouges et 11 étoiles.</p><img src=\"/Images/Cours/Serie_valeur.svg\" style=\"max-width: 8cm;\"></div>",
-			"<p>Dans l'exemple précédent l'effectif des carrés est 13 car il y a 13 carrés.</p>"
+			"<p>Dans l'exemple précédent l'effectif des carrés est 13 car il y a 13 carrés.</p>",
+			""
+		],
+		"infos" :[
+			"<p>On étudie les résultats d'une classe à un contrôle, voici les notes obtenues :<br><div class=\"flexobject valeur\"><div>7</div><div>13</div><div>10</div><div>14</div><div>14</div><div>15</div><div>7</div><div>10</div><div>15</div><div>10</div><div>13</div><div>20</div><div>9</div><div>9</div><div>13</div><div>14</div><div>15</div><div>14</div><div>7</div><div>10</div></div>L'ensemble de ces notes est appelé <span class=\"CRed\">population</span> de la série.<br>Le <span class=\"CRed\">caractère</span> étudié est le résultats en point.<br>Les <span class=\"CRed\">valeurs</span> du caractère sont 7 ; 9 ; 10 ; 13 ; 14 ; 15 et 20.<br>L'<span class=\"CRed\">effectif</span> d'une valeur est le nombre de fois ou celle-ci apparaît, par exemple l'effectif de la valeur 10 est 4.<br>L'<span class=\"CRed\">effectif total</span> est 20.</p><table class=\"proportionnaltable\"><tr><th>Note<br>(valeur)</th><td>7</td><td>9</td><td>10</td><td>13</td><td>14</td><td>15</td><td>20</td></tr><tr><th>Effectif</th><td>3</td><td>2</td><td>4</td><td>3</td><td>4</td><td>3</td><td>1</td></tr></table>"
 		]
 	},"simplifier": {
 		"tags": [],

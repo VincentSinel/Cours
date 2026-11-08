@@ -1,0 +1,64 @@
+{
+	"scripts": [{"name": "JS/Diagramme.js"}],
+	"styles": ".tableprop td{border: none;border-right: solid 2px transparent;color: var(--Cred);padding: 3px 0px;font-size: 10pt;}.valeur{column-gap: 5px;}.valeur div{min-width: 30px;text-align: center;}.listenoix td{border: solid black 1px;min-width: 30px;text-align: center;}.tablediv{gap: 0px;width: fit-content;}.tablediv div{border: solid var(--TableBorder) 1px;}.tablediv div div{border: solid var(--TableBorder) 1px;min-width: 2cm;min-height: 0.7cm;padding: 0px 5px;text-align: center;}.tablediv div:nth-child(odd) div{background-color: var(--TableOdd);}.tablediv div:nth-child(1) div{text-align: left;font-weight: bold;background-color: var(--TableHeader);}",
+	"activité": "Un Producteur de noix trie un échantillon de 50 noix, selon leur calibre, en mm.<table class=\"listenoix\"><tr><td>28</td> <td>30</td> <td>34</td> <td>35</td> <td>30</td><td>36</td> <td>33</td> <td>37</td> <td>28</td> <td>31</td></tr><tr><td>32</td> <td>37</td> <td>29</td> <td>36</td> <td>37</td><td>36</td> <td>35</td> <td>31</td> <td>35</td> <td>37</td></tr><tr><td>36</td> <td>31</td> <td>31</td> <td>36</td> <td>35</td><td>37</td> <td>36</td> <td>32</td> <td>37</td> <td>35</td></tr><tr><td>30</td> <td>34</td> <td>36</td> <td>30</td> <td>37</td><td>33</td> <td>31</td> <td>34</td> <td>30</td> <td>37</td></tr><tr><td>33</td> <td>32</td> <td>31</td> <td>33</td> <td>34</td><td>31</td> <td>29</td> <td>36</td> <td>37</td> <td>35</td></tr></table><ol><li>Combien de fois apparait le nombre 36 ? Quel est sa fréquence d'apparition ?</li></ol>Pour représenter ces résultats dans un diagramme, on les regroupe en 5 <b>classes</b> :<div class=\"flexobject tablediv\"><div><div>Calibre</div><div>Effectif</div><div>Fréquence</div></div><div><div>$28\\le x &lt; 30$</div><div></div><div></div></div><div><div>$30\\le x &lt; 32$</div><div></div><div></div></div><div><div>$32\\le x &lt; 34$</div><div></div><div></div></div><div><div>$34\\le x &lt; 36$</div><div></div><div></div></div><div><div>$36\\le x &lt; 38$</div><div></div><div></div></div><div><div>Total</div><div></div><div></div></div></div><ol start=\"2\"><li>Completer ce tableau.</li><li>Quelle est l'amplitude de ces classes ?</li><li>Completer :<br>« ___ noix ont un calibre ________ entre 30mm (___________) et 32mm (____________). »</li><li>De la même manière que l'effectif de la première classe, représenter dans le diagramme suivants les effectifs de l'ensemble des valeurs.</li></ol><div id=\"diagintro\"></div>",
+	"content": [{
+			"type": "title", "name": "Vocabulaire",
+			"content": [
+				{
+					"type": "title", "name": "Série de valeurs",
+					"content": [
+						{"type": "definition", "source": [{"name": "série de valeur", "indexes": [0]}]},
+						{"type": "info", "source": [{"name": "série de valeur", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Fréquence",
+					"content": [
+						{"type": "definition", "source": [{"name": "fréquence", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "fréquence", "indexes": [0]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Représentation des données",
+			"content": [
+				{
+					"type": "title", "name": "Diagramme en barres",
+					"content": [
+						{"type": "definition", "source": [{"name": "diagramme en bâtons", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "diagramme en bâtons", "indexes": [1]}]},
+						{"type": "remarque", "source": [{"name": "diagramme en bâtons", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Diagramme circulaire",
+					"content": [
+						{"type": "definition", "source": [{"name": "diagramme circulaire", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "diagramme circulaire", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "diagramme circulaire", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title",
+					"name": "Diagramme cartésien",
+					"content": [
+						{"type": "definition", "source": [{"name": "diagramme cartésien", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "diagramme cartésien", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "diagramme cartésien", "indexes": [0,1]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title",
+			"name": "Moyenne",
+			"content": [
+				{"type": "definition", "source": [{"name": "moyenne", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "moyenne", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "moyenne", "indexes": [0]}]}
+			]
+		}
+	]
+}

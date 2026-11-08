@@ -1421,13 +1421,13 @@ var cinquieme_saintexupery = [
 			nom: "Statistiques",
 			icone: 5,
 			download: {
-				docx: 		 "/Cours/5eme/SaintExupery/Chapitre_14/Documents/Chapitre 14 - Statistiques (Complet).docx",
-				pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_14/Documents/Chapitre 14 - Statistiques (Complet).pdf",
-				docx_trou: "/Cours/5eme/SaintExupery/Chapitre_14/Documents/Chapitre 14 - Statistiques (A trou).docx",
-				pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_14/Documents/Chapitre 14 - Statistiques (A trou).pdf",
+				docx: 		 "/Cours/5eme/SaintExupery_v2/Chapitre_14/Documents/Chapitre 14 - Statistiques (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery_v2/Chapitre_14/Documents/Chapitre 14 - Statistiques (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery_v2/Chapitre_14/Documents/Chapitre 14 - Statistiques (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_14/Documents/Chapitre 14 - Statistiques (A trou).pdf",
 			},
 			ready : true,
-			page : "SaintExupery/Chapitre_14/Cours.html"
+			page : "SaintExupery_v2/Chapitre_14/Cours.josn"
 	}, // Chapitre 14
 	{
 			id: 15,
