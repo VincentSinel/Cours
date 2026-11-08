@@ -1382,12 +1382,12 @@ var cinquieme_saintexupery = [
 			nom: "Distributivité simple",
 			icone: 3,
 			download: {
-				// docx: 		  "/Cours/5eme/SaintExupery_v2/Chapitre_11/Documents/Chapitre 11 - Distributivité simple (Complet).docx",
-				// pdf:  		  "/Cours/5eme/SaintExupery_v2/Chapitre_11/Documents/Chapitre 11 - Distributivité simple (Complet).pdf",
-				// docx_trou: "/Cours/5eme/SaintExupery_v2/Chapitre_11/Documents/Chapitre 11 - Distributivité simple (A trou).docx",
-				// pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_11/Documents/Chapitre 11 - Distributivité simple (A trou).pdf",
+				docx: 		 "/Cours/5eme/SaintExupery_v2/Chapitre_11/Documents/Chapitre 11 - Distributivité simple (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery_v2/Chapitre_11/Documents/Chapitre 11 - Distributivité simple (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery_v2/Chapitre_11/Documents/Chapitre 11 - Distributivité simple (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_11/Documents/Chapitre 11 - Distributivité simple (A trou).pdf",
 			},
-			ready : false,
+			ready : true,
 			page : "SaintExupery_v2/Chapitre_11/Cours.json"
 	}, // Chapitre 11
 	{
