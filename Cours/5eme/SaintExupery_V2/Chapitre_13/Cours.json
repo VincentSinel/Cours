@@ -1,0 +1,47 @@
+{
+	"activité": "<ol><li>Poser la division 326 ÷ 5.</li><li>326 est-il dans la table de 5 ? Pourquoi ?</li><li>320 est-il dans la table de 5 ?<br>Compléter : <i>« ... est divisible par ... »</i></li><li>Trouver tous les diviseurs de 24.</li><li>Trouver tous les diviseurs de 13. Que remarques-tu ?</li></ol>",
+	"content": [{
+			"type": "title", "name": "Définitions",
+			"content": [
+				{
+					"type": "title", "name": "Division euclidienne",
+					"content": [
+						{"type": "definition", "source": [{"name": "division euclidienne", "indexes": [0]}]},
+						{"type": "info", "source": [{"name": "division euclidienne", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Multiples et diviseurs",
+					"content": [
+						{"type": "definition", "source": [{"name": "multiple", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "multiple", "indexes": [1,2]}]},
+						{"type": "remarque", "source": [{"name": "diviseur", "indexes": [0,1,2]}]},
+						{"type": "info", "source": [{"name": "diviseur", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Conversion de durée",
+					"content": [
+						{"type": "info", "source": [{"name": "diviseur", "indexes": [1]}]},
+						{"type": "exemple", "source": [{"name": "diviseur", "indexes": [0]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Critères de divisibilités",
+			"content": [
+				{"type": "definition", "source": [{"name": "critère de divisibilité", "indexes": [0]}]},
+				{"type": "definition", "source": [{"name": "critère de divisibilité", "indexes": [2]}]},
+				{"type": "definition", "source": [{"name": "critère de divisibilité", "indexes": [4]}]},
+				{"type": "exemple", "source": [{"name": "critère de divisibilité", "indexes": [0]}]},
+				{"type": "info", "source": [{"name": "critère de divisibilité", "indexes": [0]}]},
+				{"type": "definition", "source": [{"name": "critère de divisibilité", "indexes": [1]}]},
+				{"type": "definition", "source": [{"name": "critère de divisibilité", "indexes": [3]}]},
+				{"type": "exemple", "source": [{"name": "critère de divisibilité", "indexes": [1,2]}]},
+				{"type": "info", "source": [{"name": "critère de divisibilité", "indexes": [1]}]},
+				{"type": "remarque", "source": [{"name": "critère de divisibilité", "indexes": [0]}]}
+			]
+		}
+	]
+}
