@@ -1099,7 +1099,27 @@
 	},"médiane": {
 		"tags": [],
 		"definitions": [
-			"La <span class=\"CRed\">médiane</span> d'une série de valeurs est une valeur telle qu'il y a :<ul><li>Au moins 50 % des valeurs inférieures ou égales à cette médiane</li><li>Au moins 50 % des valeurs supérieures ou égales à cette médiane.</li></ul>"
+			"La <span class=\"CRed\">médiane</span> d'une série de valeurs est une valeur telle qu'il y a :<ul><li>Au moins 50 % des valeurs inférieures ou égales à cette médiane</li><li>Au moins 50 % des valeurs supérieures ou égales à cette médiane.</li></ul>",
+			"Dans un triangle, une <span class=\"CRed\">médiane</span> est une droite passant par <b>un sommet</b> du triangle et par le <b>milieu du côté opposé</b> à ce sommet."
+		],
+		"exemples": [
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Médiane 1.svg\" style=\"max-width: 7cm;\"><div style=\"flex: 1 1 3cm\">La droite verte est la médiane de ABC issu de C. Elle coupe [AB] en son milieu.</div></div>",
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Médiane 2.svg\" style=\"max-width: 7cm;\"><div style=\"flex: 1 1 3cm\">Les médianes de AJT sont <b>concourantes</b> en G.</div></div>",
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Médiane 3.svg\" style=\"max-width: 7cm;\"><div style=\"flex: 1 1 3cm\">La médiane de NRJ issu de J sépare le triangle en deux de même aire.</div></div>",
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Médiane 4.svg\" style=\"max-width: 7cm;\"><div style=\"flex: 1 1 3cm\">Dans le triangle ENT isocèle en N, la médiane issue de N est aussi:<ul><li>La bissectrice issue de N</li><li>La hauteur issue de N</li><li>La médiatrice de [ET]</li></ul></div></div>"
+		],
+		"proprietes": [
+			"Les médianes d'un triangle sont <span class=\"CRed\">concourantes</span>.",
+			"Une médiane partage un triangle en deux autre triangles de <b>même aire</b>.",
+			"Dans un triangle isocèle, la <u>médiane</u> issue du <b>sommet principal</b> est <b>confondue</b> avec la <u>hauteur</u> et la <u>bissectrice</u> issue de ce sommet ainsi que la <u>médiatrice</u> du côté opposé.",
+			"<b>Si</b> dans un triangle, pour un des sommets, parmi les droites particulières issus de celui-ci : <ul><li>la <u>médiane</u></li><li>la <u>hauteur</u></li><li>la <u>bissectrice</u></li><li>la <u>médiatrice</u> du côté opposé</li></ul>deux sont confondues, <b>alors</b> ce triangle est isocèle en ce sommet."
+		],
+		"remarques": [
+			"Le point de concours des médianes est appelé <span class=\"CRed\">centre de gravité</span> du triangle.",
+			"Dans un triangle <b>équilatérale</b> le <b>centre de gravité</b> (médiane) est confondu avec l'<b>orthocentre</b> (hauteur), le <b>centre du cercle circonscrit</b> (médiatrice) et le <b>centre du cercle inscrit</b> (bissectrice) du triangle.<br><img src=\"/Images/Cours/Médiane 6.svg\" style=\"max-width: 7cm;\">"
+		],
+		"infos": [
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Médiane 5.svg\" style=\"max-width: 7cm;\"><div style=\"flex: 1 1 3cm\">La médiane crée deux triangles de même base et de même hauteur. Ils ont donc la même aire. ($Aire = \\frac{Base\\times Hauteur}{2}$)</div></div>"
 		]
 	},"médiatrice": {
 		"tags": [],

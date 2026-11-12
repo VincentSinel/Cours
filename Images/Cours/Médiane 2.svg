@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129.45 95.46">
+  <g id="c" data-name="Calque 1">
+    <text transform="translate(116.92 15.62)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 12px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">J</tspan></text>
+    <text transform="translate(38.94 92.22)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 12px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">T</tspan></text>
+    <text transform="translate(53.65 51.62)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 12px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">G</tspan></text>
+    <text transform="translate(3.71 10.26)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 12px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">A</tspan></text>
+    <line x1="122.66" y1="21.76" x2="7.59" y2="13.25" style="fill: none; stroke: #1d1d1b; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1="35.17" y1="83.72" x2="122.66" y2="21.76" style="fill: none; stroke: #1d1d1b; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1="7.59" y1="13.25" x2="35.17" y2="83.72" style="fill: none; stroke: #1d1d1b; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1="128.95" y1="20.1" x2="12.61" y2="50.8" style="fill: none; stroke: #36a9e1; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1="31.45" y1="91.94" x2="67.93" y2="11.31" style="fill: none; stroke: #f9b233; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1=".5" y1="9.33" x2="103.78" y2="66.51" style="fill: none; stroke: #95c11f; stroke-linecap: round; stroke-linejoin: round;"/>
+    <circle cx="15.31" cy="32.79" r="1.6" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+    <circle cx="27.57" cy="64.32" r="1.6" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+    <g>
+      <line x1="39.63" y1="13.3" x2="35.17" y2="17.94" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+      <line x1="41.91" y1="13.25" x2="37.45" y2="17.9" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+    </g>
+    <g>
+      <line x1="94.45" y1="17.55" x2="89.99" y2="22.2" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+      <line x1="96.72" y1="17.51" x2="92.26" y2="22.15" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+    </g>
+    <rect x="96.19" y="36.48" width="4.54" height="4.54" transform="translate(-3.19 68.14) rotate(-37.61)" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+    <rect x="57.96" y="63.65" width="4.54" height="4.54" transform="translate(-27.71 50.46) rotate(-37.61)" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+  </g>
+</svg>

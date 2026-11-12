@@ -1447,13 +1447,13 @@ var cinquieme_saintexupery = [
 			nom: "Médiane du triangle",
 			icone: 2,
 			download: {
-				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (Complet).docx",
-				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (Complet).pdf",
-				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).docx",
-				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).pdf",
+				docx: 		 "/Cours/5eme/SaintExupery_v2/Chapitre_16/Documents/Chapitre 16 - Médiane du triangle (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery_v2/Chapitre_16/Documents/Chapitre 16 - Médiane du triangle (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery_v2/Chapitre_16/Documents/Chapitre 16 - Médiane du triangle (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_16/Documents/Chapitre 16 - Médiane du triangle (A trou).pdf",
 			},
-			ready : false,
-			page : "Base/Chapitre_11/Cours.json"
+			ready : true,
+			page : "SaintExupery_v2/Chapitre_16/Cours.json"
 	}, // Chapitre 16
 	{
 			id: 17,

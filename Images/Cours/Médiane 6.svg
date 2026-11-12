@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101.11 102.61">
+  <g id="c" data-name="Calque 1">
+    <text transform="translate(3.1 86.17)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 12px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">Q</tspan></text>
+    <text transform="translate(58.38 10.26)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 12px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">E</tspan></text>
+    <text transform="translate(93.25 95.19)" style="fill: #1d1d1b; font-family: Bahnschrift, Bahnschrift; font-size: 12px; font-variation-settings: &apos;wght&apos; 400, &apos;wdth&apos; 100;"><tspan x="0" y="0">U</tspan></text>
+    <path d="m15,66.37c1.37,1.35,2.42,3.07,2.97,5.06s.53,4.01.05,5.87l-10.98-2.85,7.96-8.08Z" style="fill: #009fe3; stroke: #312783; stroke-linecap: round; stroke-linejoin: round;"/>
+    <path d="m79.86,93.34c.48-1.87,1.45-3.63,2.9-5.11s3.2-2.46,5.06-2.98l3.02,10.93-10.98-2.85Z" style="fill: #009fe3; stroke: #312783; stroke-linecap: round; stroke-linejoin: round;"/>
+    <rect x="35.29" y="44.45" width="4.26" height="4.26" transform="translate(96.86 52.6) rotate(134.56)" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+    <rect x="74.58" y="50.86" width="4.26" height="4.26" transform="translate(46.06 141.05) rotate(-105.44)" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+    <path d="m70.82,23.67c-1.86.52-3.87.56-5.87.04-2-.52-3.74-1.54-5.11-2.89l7.96-8.08,3.02,10.93Z" style="fill: #009fe3; stroke: #312783; stroke-linecap: round; stroke-linejoin: round;"/>
+    <rect x="49.42" y="81.68" width="4.26" height="4.26" transform="translate(22.72 -10.27) rotate(14.56)" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+    <polygon points="90.86 96.22 67.8 12.74 7.04 74.45 90.86 96.22" style="fill: none; stroke: #1d1d1b; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1="96.85" y1="102.11" x2="26.99" y2="33.33" style="fill: none; stroke: #f39200; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1="45.55" y1="98.45" x2="69.32" y2="6.88" style="fill: none; stroke: #f39200; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1=".5" y1="76.26" x2="92.21" y2="50.92" style="fill: none; stroke: #f39200; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1="17.17" y1="74.52" x2="19.94" y2="74.58" style="fill: none; stroke: #312783; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1="15.78" y1="69.45" x2="18.08" y2="67.92" style="fill: none; stroke: #312783; stroke-linecap: round; stroke-linejoin: round;"/>
+    <g>
+      <line x1="82.6" y1="74.59" x2="87.44" y2="75.57" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+      <line x1="82.14" y1="72.92" x2="86.98" y2="73.9" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+    </g>
+    <g>
+      <line x1="71.68" y1="35.06" x2="76.52" y2="36.04" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+      <line x1="71.22" y1="33.39" x2="76.06" y2="34.37" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+    </g>
+    <line x1="85.83" y1="87.39" x2="84.5" y2="84.96" style="fill: none; stroke: #312783; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1="82.13" y1="91.12" x2="79.66" y2="89.9" style="fill: none; stroke: #312783; stroke-linecap: round; stroke-linejoin: round;"/>
+    <g>
+      <line x1="53.17" y1="30.69" x2="51.6" y2="26" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+      <line x1="51.96" y1="31.92" x2="50.39" y2="27.24" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+    </g>
+    <g>
+      <line x1="24.4" y1="59.9" x2="22.83" y2="55.22" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+      <line x1="23.19" y1="61.14" x2="21.62" y2="56.46" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+    </g>
+    <line x1="62.68" y1="21.48" x2="61.24" y2="23.84" style="fill: none; stroke: #312783; stroke-linecap: round; stroke-linejoin: round;"/>
+    <line x1="67.77" y1="22.81" x2="67.94" y2="25.57" style="fill: none; stroke: #312783; stroke-linecap: round; stroke-linejoin: round;"/>
+    <g>
+      <line x1="29.91" y1="78.11" x2="26.64" y2="81.81" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+      <line x1="31.58" y1="78.55" x2="28.31" y2="82.25" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+    </g>
+    <g>
+      <line x1="69.6" y1="88.42" x2="66.33" y2="92.12" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+      <line x1="71.27" y1="88.85" x2="68" y2="92.55" style="fill: none; stroke: #e30613; stroke-linecap: round; stroke-linejoin: round;"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+{
+	"activité": "<ol><li>Sur une feuille blanche, construire un triangle ABC de côté 12cm, 9cm et 10cm</li><li>Placer M milieu de [AB], N milieu de [AC] et P milieu de [BC].</li><li>Tracer [MC], [NB] et [PA]. Que remarque-t-on ?</li><li>Découper le triangle et essayer de le faire tenir sur la pointe d'un stylo (ou compas) à partir du point d'intersection des trois segments précédents. Est-ce possible ?</li></ol>",
+	"content": [{
+			"type": "title", "name": "Médiane",
+			"content": [
+				{"type": "definition", "source": [{"name": "médiane", "indexes": [1]}]},
+				{"type": "exemple", "source": [{"name": "médiane", "indexes": [0]}]},
+				{"type": "propriete", "source": [{"name": "médiane", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "médiane", "indexes": [1]}]},
+				{"type": "remarque", "source": [{"name": "médiane", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Médiane et aire",
+			"content": [
+				{"type": "propriete", "source": [{"name": "médiane", "indexes": [1]}]},
+				{"type": "exemple", "source": [{"name": "médiane", "indexes": [2]}]},
+				{"type": "info", "source": [{"name": "médiane", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Cas particuliers",
+			"content": [
+				{"type": "propriete", "source": [{"name": "médiane", "indexes": [2]}]},
+				{"type": "exemple", "source": [{"name": "médiane", "indexes": [3]}]},
+				{"type": "remarque", "source": [{"name": "médiane", "indexes": [1]}]},
+				{"type": "propriete", "source": [{"name": "médiane", "indexes": [3]}]}
+			]
+		}
+	]
+}
