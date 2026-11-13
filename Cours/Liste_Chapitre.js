@@ -1427,7 +1427,7 @@ var cinquieme_saintexupery = [
 				pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_14/Documents/Chapitre 14 - Statistiques (A trou).pdf",
 			},
 			ready : true,
-			page : "SaintExupery_v2/Chapitre_14/Cours.josn"
+			page : "SaintExupery_v2/Chapitre_14/Cours.json"
 	}, // Chapitre 14
 	{
 			id: 15,
@@ -1460,13 +1460,13 @@ var cinquieme_saintexupery = [
 			nom: "En fonction de ...",
 			icone: 3,
 			download: {
-				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (Complet).docx",
-				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (Complet).pdf",
-				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).docx",
-				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).pdf",
+				docx: 		 "/Cours/5eme/SaintExupery_v2/Chapitre_17/Documents/Chapitre 17 - En fonction de ... (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery_v2/Chapitre_17/Documents/Chapitre 17 - En fonction de ... (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery_v2/Chapitre_17/Documents/Chapitre 17 - En fonction de ... (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_17/Documents/Chapitre 17 - En fonction de ... (A trou).pdf",
 			},
-			ready : false,
-			page : "Base/Chapitre_11/Cours.json"
+			ready : true,
+			page : "SaintExupery_v2/Chapitre_17/Cours.json"
 	}, // Chapitre 17
 	{
 			id: 18,

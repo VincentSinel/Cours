@@ -1,0 +1,34 @@
+{
+	"scripts": [{"name": "JS/Diagramme.js"}],
+	"activité": "<div><div class=\"center\" style=\"background-color: #E5B8B7;\"><b>Situation 1</b></div><div class=\"flexobject\"><div style=\"flex: 5cm 1 1;\">On regarde le prix d'amande en fonction de la quantité acheté.<ol><li>Compléter le tableau suivant à l'aide du diagramme ci-contre :<br><table class=\"proportionnaltable\"><tr><th>Masse d'amande (g)</th><td>100</td><td>300</td><td>500</td></tr><tr><th>Prix (€)</th><td>...</td><td>...</td><td>...</td></tr></table></li><li>Ce tableau est-il proportionnel ?</li></ol></div><div id=\"act1\"></div></div><div><div class=\"center\" style=\"background-color: #D6E3BC;\"><b>Situation 2</b></div><div class=\"flexobject\"><div style=\"flex: 5cm 1 1;\">On regarde le prix d'une pizza en fonction du nombre d'ingrédient supplémentaire.<ol><li>Compléter le tableau suivant à l'aide du diagramme ci-contre :<br><table class=\"proportionnaltable\"><tr><th>Ingrédients</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>Prix (€)</th><td>...</td><td>...</td><td>...</td><td>...</td></tr></table></li><li>Ce tableau est-il proportionnel ?</li></ol></div><div id=\"act2\"></div></div><div><div class=\"center\" style=\"background-color: #B8CCE4;\"><b>Situation 3</b></div><div class=\"flexobject\"><div style=\"flex: 5cm 1 1;\">On regarde l'évolution d'une population de bactérie en fonction du temps.<ol><li>Compléter le tableau suivant à l'aide du diagramme ci-contre :<br><table class=\"proportionnaltable\"><tr><th>Temps (h)</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>Population</th><td>...</td><td>...</td><td>...</td><td>...</td></tr></table></li><li>Ce tableau est-il proportionnel ?</li></ol></div><div id=\"act3\"></div></div>",
+	"content": [{
+			"type": "title", "name": "Diagramme cartésien",
+			"content": [
+				{
+					"type": "title", "name": "Définition",
+					"content": [
+						{"type": "definition", "source": [{"name": "diagramme cartésien", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "diagramme cartésien", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "diagramme cartésien", "indexes": [2,3,4]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Tableau",
+					"content": [
+						{"type": "info", "source": [{"name": "tableau", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "tableau", "indexes": [2]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Proportionnalité",
+			"content": [
+				{"type": "propriete", "source": [{"name": "proportionnelle", "indexes": [5]}]},
+				{"type": "exemple", "source": [{"name": "proportionnelle", "indexes": [7]}]},
+				{"type": "propriete", "source": [{"name": "proportionnelle", "indexes": [6]}]},
+				{"type": "exemple", "source": [{"name": "proportionnelle", "indexes": [8]}]}
+			]
+		}
+	]
+}
