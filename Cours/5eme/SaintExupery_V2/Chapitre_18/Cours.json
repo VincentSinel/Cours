@@ -1,0 +1,46 @@
+{
+	"activité": "<ol><li>Voici deux expressions littérales :<br><div class=\"flexobject\"><div class=\"programme_calcul\"><ul><li>$A = 3x-5$</li></ul></div><div class=\"programme_calcul\"><ul><li>$B = x\\times x+9-6x$</li></ul></div></div><ol type=\"a\"><li>Vérifier que, si le nombre $x$ est égal à 2, alors ces deux expressions sont égales.</li><li><u>Elena :</u> «<i>J'ai vérifié avec 7, on trouve encore le même résultat. Ces deux expressions sont <b>toujours</b> égales.</i>»<br>Elena a-t-elle raison ? <b>Justifier.</b></li></ol></li><li>Trouver une valeur de $x$ pour laquelle l'égalité $4x + 3 = 5x + 3$ est vraie, et une autre valeur pour laquelle cette égalité est fausse.</li><li><u>Ahmed :</u> «<i>Les deux expressions suivantes sont égales pour <b>n'importe quelle</b> valeur de $x$.</i>»<br><div class=\"flexobject\"><div class=\"programme_calcul\"><ul><li>$C = 2(x+1)-1$</li></ul></div><div class=\"programme_calcul\"><ul><li>$D = 2x+1$</li></ul></div></div>Ahmed a-t-il raison ? <b>Justifier.</b></li></ol>",
+	"content": [{
+			"type": "title", "name": "Démontrer",
+			"content": [
+				{"type": "definition", "source": [{"name": "équation", "indexes": [3]}]},
+				{"type": "exemple", "source": [{"name": "équation", "indexes": [6]}]},
+				{"type": "remarque", "source": [{"name": "équation", "indexes": [2]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Egalité",
+			"content": [
+				{
+					"type": "title", "name": "Equation",
+					"content": [
+						{"type": "definition", "source": [{"name": "équation", "indexes": [1]}]},
+						{"type": "exemple", "source": [{"name": "équation", "indexes": [0]}]},
+						{"type": "definition", "source": [{"name": "équation", "indexes": [2]}]},
+						{"type": "exemple","class": "flexobject", "source": [{"name": "équation", "indexes": [1,2,3,4]}]},
+						{"type": "remarque", "source": [{"name": "équation", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Résoudre",
+					"content": [
+						{"type": "propriete", "source": [{"name": "équation", "indexes": [1]}]},
+						{"type": "exemple", "source": [{"name": "équation", "indexes": [5]}]},
+						{"type": "remarque", "source": [{"name": "équation", "indexes": [1]}]},
+						{"type": "definition", "source": [{"name": "résoudre", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "résoudre", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "résoudre", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Cas simple",
+					"content": [
+						{"type": "info", "source": [{"name": "équation", "indexes": [0]}]},
+						{"type": "exemple","class": "flexobject", "source": [{"name": "équation", "indexes": [7,8]}]},
+						{"type": "info", "source": [{"name": "équation", "indexes": [1]}]}
+					]
+				}
+			]
+		}
+	]
+}

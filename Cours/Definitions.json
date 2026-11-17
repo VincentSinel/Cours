@@ -746,10 +746,31 @@
 	},"équation": {
 		"tags": [],
 		"definitions": [
-			"Une <span class=\"CRed\">équation</span> est une <b>égalité</b> comportant un ou plusieurs nombres inconnus désignés par des lettres (que l'on nomme <span class=\"CRed\">inconnues</span> de l'équation)."
+			"Une <span class=\"CRed\">équation</span> est une <b>égalité</b> comportant un ou plusieurs nombres inconnus désignés par des lettres (que l'on nomme <span class=\"CRed\">inconnues</span> de l'équation).",
+			"Une <b>égalité</b> est composée de deux <span class=\"CRed\">membres</span> séparés par le signe « = »",
+			"Une <b>égalité</b> faisant intervenir des expressions littérales est appelé <span class=\"CRed\">équation</span>. Les lettres sont alors nommées <span class=\"CRed\">inconnues</span>.",
+			"On utilise les expressions littérales pour <b>démontrer</b> des résultats dans le cas général. La lettre permet de ne pas avoir à choisir une valeur précise lors de la démonstration."
 		],
 		"proprietes": [
-			"Soit <span class=\"CBlue\">$a$</span> un nombre entier positif. Les solutions de l'équation $x^2-\\textcolor{#039be5}{a}^2=0$ sont <span class=\"CBlue\">$a$</span> et <span class=\"CBlue\">$-a$</span>."
+			"Soit <span class=\"CBlue\">$a$</span> un nombre entier positif. Les solutions de l'équation $x^2-\\textcolor{#039be5}{a}^2=0$ sont <span class=\"CBlue\">$a$</span> et <span class=\"CBlue\">$-a$</span>.",
+			"Une égalité peut être <b>vraie</b> pour certaine valeur ou <b>fausse</b> pour d'autre."
+		],
+		"exemples": [
+			"<table><tr><td style=\"text-align: right;\">$5\\times12$</td><td style=\"text-align: center; width: 20px;\">=</td><td>$25+35$</td></tr><tr style=\"line-height: 5px;\"><td style=\"text-align: right;\"><img height=\"5px\" width=\"50px\" src=\"/Images/Cours/Accolade_200.svg\"></td><td></td><td><img height=\"5px\" width=\"60px\" src=\"/Images/Cours/Accolade_200.svg\"></td></tr><tr class=\"DBlue\"><td style=\"text-align: right;\">Membre de gauche</td><td></td><td>Membre de droite</td></tr></table>",
+			"$5x=20$", "$3x+2=5$", "$8x+7y=0$", "$15x-8=-6x+7$",
+			"L'équation $8x=24$ est vraie pour $x=3$ car $8\\times3=24$.<br>Par contre, elle est fausse pour $x=5$ car $8\\times5=40\\neq24$.",
+			"On regarde le programme de calcul suivant ainsi que sa représentation sous forme d'une expression littérales :<div class=\"flexobject\"><div class=\"programme_calcul\"><ul><li>Choisir un nombre</li><li>Ajouter 5</li><li>Prendre le triple</li><li>Retirer 15</li></ul></div><div style=\"flex: 5cm 1 1;\">On cherche à prouver l'affirmation suivante :<br><i>\"Le résultat de ce programme est toujours le triple du nombre choisi.\"</i><br>On peut représenter le programme sous la forme d'un calcul :</div></div><div class=\"flexobject\"><div class=\"programme_calcul\"><ul><li>Choisir un nombre → $x$</li><li>Ajouter 5 → $x+5$</li><li>Prendre le triple → $3\\times(x+5)$</li><li>Retirer 15 → $3\\times(x+5) - 15$</li></ul></div><div style=\"flex: 5cm 1 1;\">Le programme est donc équivalent à $3(x+5)-15$<br>$3(x+5)-15=3x+3\\times5-15=3x+15-15=3x$<br>On a donc bien un programme de calcul qui renvoie le triple du nombre quel que soit la valeur choisie au départ.</div></div>",
+			"<div class=\"center\"><div class=\"programme_calcul\"><ul><li>8 fois un nombre donne 72.</li></ul></div>Donne $8x=72$<br>Donc $x=72\\div8=9$<br><img src=\"/Images/Cours/Operation trou1.svg\" style=\"max-width: 5cm\"></div>",
+			"<div class=\"center\"><div class=\"programme_calcul\"><ul><li>7 plus un nombre donne 24.</li></ul></div>Donne $7+x=24$<br>Donc $x=24-7=17$<br><img src=\"/Images/Cours/Operation trou2.svg\" style=\"max-width: 5cm\"></div>"
+		],
+		"remarques": [
+			"On utilise régulièrement la lettre $x$ comme inconnue.",
+			"On peut aussi dire qu'une équation est <b>vérifiée</b> ou non.",
+			"Pour montrer qu'une affirmation est fausse, il suffit de trouver un <b>contre-exemple</b>. C'est à dire une valeur pour laquelle l'affirmation est fausse.<br><b><u>Ex :</u></b> <i>\"Un entier multiplié par 2 est toujours dans la table de 4\"</i> → <b>Faux</b> contre-exemple : $2\\times7=14$ et 14 n'est pas dans la table de 4."
+		],
+		"infos": [
+			"On utilise la mise en équation pour représenter des calculs à trou plus ou moins complexe. Dans les cas les plus simples, il est possible de les résoudre en appliquant les opérations inverses.",
+			"<p>On peut voir quelques formules classiques :</p><table class=\"proportionnaltable width\"><tr><th>Enoncé</th><th>Formule</th></tr><tr><td>Le double</td><td>$2x$</td></tr><tr><td>Le triple</td><td>$3x$</td></tr><tr><td>Le carré</td><td>$x^2$</td></tr><tr><td>Le cube</td><td>$x^3$</td></tr><tr><td>L'entier suivant</td><td>$x+1$</td></tr><tr><td>L'entier précédent</td><td>$x-1$</td></tr></table>"
 		]
 	},"équiprobabilité": {
 		"tags": [],
@@ -816,7 +837,7 @@
 			"$c\\times c$",
 			"$L\\times 𝓁$",
 			"$2\\times L + 2\\times 𝓁$",
-			"<div class=\"flexobject\"><div class=\"programme_calcul\"><div><span><b>Programme 1</b></span></div><ul><li>Choisir un nombre.</li><li>Ajouter 5.</li><li>Multiplier par 6.</li></ul></div><div><div><span><b>Programme 1</b></span></div><ul><li>$x$</li><li>$x+5$</li><li>$(x+5)\times 6$</li></ul><p>Donc le programme 1 correspond à $(x+5)\times 6$</p></div></div>",
+			"<div class=\"flexobject\"><div class=\"programme_calcul\"><div><span><b>Programme 1</b></span></div><ul><li>Choisir un nombre.</li><li>Ajouter 5.</li><li>Multiplier par 6.</li></ul></div><div><div><span><b>Programme 1</b></span></div><ul><li>$x$</li><li>$x+5$</li><li>$(x+5)\\times 6$</li></ul><p>Donc le programme 1 correspond à $(x+5)\\times 6$</p></div></div>",
 			"<div class=\"flexobject\"><div class=\"programme_calcul\"><div><span><b>Programme 2</b></span></div><ul><li>Choisir un nombre.</li><li>Prendre son carré.</li><li>Ajouter le nombre de départ.</li></ul></div><div><div><span><b>Programme 2</b></span></div><ul><li>$x$</li><li>$x^2$</li><li>$x^2+x$</li></ul><p>Donc le programme 2 correspond à $x^2+x$</p></div></div>"
 		],
 		"remarques": [
@@ -1645,12 +1666,18 @@
 	},"résoudre": {
 		"tags": [],
 		"definitions": [
-			"<span class=\"CRed\">Résoudre</span> une équation d'inconnue $x$ revient à trouver, si cela est possible, les nombres par lesquels remplacer $x$ pour que <b>l'égalité soit vraie</b>. Un tel nombre est appelé <span class=\"CRed\">solution</span> de l'équation.",
+			"<span class=\"CRed\">Résoudre</span> une équation d'inconnue $x$ revient à trouver, si cela est possible, le ou les nombres par lesquels remplacer $x$ pour que <b>l'égalité soit vraie</b>. Un tel nombre est appelé <span class=\"CRed\">solution</span> de l'équation.",
 			"Pour résoudre un problème à l'aide d'équations, il faut :<br><div class=\"NumR\">1</div>Choisir une inconnue et la nommer avec une lettre.<br><div class=\"NumR\">2</div>Mettre le problème en équation.<br><div class=\"NumR\">3</div>Trouver une solution de cette équation.<br><div class=\"NumR\">4</div>Répondre en interprétant la solution de l'équation en fonction du problème initial."
 		],
 		"proprietes": [
 			"Une égalité reste vraie quand on ajoute (ou soustrait) un même nombre aux deux membres.",
 			"Une égalité reste vraie quand on multiplie (ou divise) les deux membres par un même nombre <b>non nul</b>."
+		],
+		"exemples": [
+			"<p>Dans $5x=20$ :<br><ul><li>4 est solution de l'équation car $5\\times4=20$.</li><li>7 n'est pas solution de l'équation car $5\\times7\\ne20$. ($5\\times7 = 35$)</li></ul></p>"
+		],
+		"remarques": [
+			"Certaines équations peuvent avoir plusieurs solutions. $x^2-8x+16=4$ admet 2 et 6 comme solution."
 		]
 	},"rotation": {
 		"tags": [],

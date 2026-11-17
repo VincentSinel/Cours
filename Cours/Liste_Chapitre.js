@@ -1473,52 +1473,52 @@ var cinquieme_saintexupery = [
 			nom: "Equations simple",
 			icone: 3,
 			download: {
-				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (Complet).docx",
-				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (Complet).pdf",
-				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).docx",
-				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_9/Documents/Chapitre 9 - Additions et Soustractions de nombres relatifs (A trou).pdf",
+				docx: 		 "/Cours/5eme/SaintExupery_v2/Chapitre_18/Documents/Chapitre 18 - Equations simple (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery_v2/Chapitre_18/Documents/Chapitre 18 - Equations simple (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery_v2/Chapitre_18/Documents/Chapitre 18 - Equations simple (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_18/Documents/Chapitre 18 - Equations simple (A trou).pdf",
 			},
-			ready : false,
-			page : "Base/Chapitre_11/Cours.json"
+			ready : true,
+			page : "SaintExupery_v2/Chapitre_18/Cours.json"
 	}, // Chapitre 18
 	{
 			id: 19,
 			nom: "Prismes et cylindres",
 			icone: 2,
 			download: {
-				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (Complet).docx",
-				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (Complet).pdf",
-				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (A trou).docx",
-				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_8/Documents/Chapitre 8 - Prismes et cylindres (A trou).pdf",
+				docx: 		 "/Cours/5eme/SaintExupery_v2/Chapitre_19/Documents/Chapitre 19 - Prismes et cylindres (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery_v2/Chapitre_19/Documents/Chapitre 19 - Prismes et cylindres (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery_v2/Chapitre_19/Documents/Chapitre 19 - Prismes et cylindres (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_19/Documents/Chapitre 19 - Prismes et cylindres (A trou).pdf",
 			},
 			ready : false,
-			page : "SaintExupery/Chapitre_8/Cours.json"
+			page : "SaintExupery_v2/Chapitre_19/Cours.json"
 	}, // Chapitre 19
 	{
 			id: 20,
 			nom: "Probabilités",
 			icone: 4,
 			download: {
-				// docx: 		 "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (Complet).docx",
-				// pdf:  		 "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (Complet).pdf",
-				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (A trou).docx",
-				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_18/Documents/Chapitre 18 - Probabilités (A trou).pdf",
+				docx: 		 "/Cours/5eme/SaintExupery_v2/Chapitre_20/Documents/Chapitre 20 - Probabilités (Complet).docx",
+				pdf:  		 "/Cours/5eme/SaintExupery_v2/Chapitre_20/Documents/Chapitre 20 - Probabilités (Complet).pdf",
+				docx_trou: "/Cours/5eme/SaintExupery_v2/Chapitre_20/Documents/Chapitre 20 - Probabilités (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_20/Documents/Chapitre 20 - Probabilités (A trou).pdf",
 			},
 			ready : false,
-			page : "Base/Chapitre_13/Cours.json"
+			page : "SaintExupery_v2/Chapitre_20/Cours.json"
 	}, // Chapitre 20
 	{
 			id: 21,
 			nom: "Parallélogrammes",
 			icone: 2,
 			download: {
-				// pdf: 			 "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (Complet).pdf",
-				// docx:		 	 "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (Complet).docx",
-				// docx_trou: "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (A trou).docx",
-				// pdf_trou:  "/Cours/5eme/SaintExupery/Chapitre_16/Documents/Chapitre 16 - Parallélogrammes (A trou).pdf",
+				pdf: 			 "/Cours/5eme/SaintExupery_v2/Chapitre_21/Documents/Chapitre 21 - Parallélogrammes (Complet).pdf",
+				docx:		 	 "/Cours/5eme/SaintExupery_v2/Chapitre_21/Documents/Chapitre 21 - Parallélogrammes (Complet).docx",
+				docx_trou: "/Cours/5eme/SaintExupery_v2/Chapitre_21/Documents/Chapitre 21 - Parallélogrammes (A trou).docx",
+				pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_21/Documents/Chapitre 21 - Parallélogrammes (A trou).pdf",
 			},
 			ready : false,
-			page : "Base/Chapitre_19/Cours.json"
+			page : "SaintExupery_v2/Chapitre_21/Cours.json"
 	}, // Chapitre 21
 ]
 
