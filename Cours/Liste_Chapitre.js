@@ -1491,7 +1491,7 @@ var cinquieme_saintexupery = [
 				docx_trou: "/Cours/5eme/SaintExupery_v2/Chapitre_19/Documents/Chapitre 19 - Prismes et cylindres (A trou).docx",
 				pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_19/Documents/Chapitre 19 - Prismes et cylindres (A trou).pdf",
 			},
-			ready : false,
+			ready : true,
 			page : "SaintExupery_v2/Chapitre_19/Cours.json"
 	}, // Chapitre 19
 	{

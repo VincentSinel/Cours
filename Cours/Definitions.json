@@ -399,7 +399,16 @@
 	},"cylindre": {
 		"tags": [],
 		"definitions": [
-			"Un <span class=\"CRed\">cylindre de révolution</span> est composé de 2 disques formant les bases, parallèles entre eux. La surface latérale lorsqu'elle est dépliée est un rectangle ayant la même largeur que le périmètre des disques."
+			"Un <span class=\"CRed\">cylindre de révolution</span> est composé de 2 disques formant les bases, parallèles entre eux. La surface latérale lorsqu'elle est dépliée est un rectangle ayant la même largeur que le périmètre des disques.",
+			"Le <b>patron</b> d'un cylindre est composée de deux disques identiques de part et d'autre d'un rectangle ayant pour longueur le périmètre des disques."
+		],
+		"exemples": [
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Solide0.svg\"/><img src=\"/Images/Cours/Gif Cylindre de revolution.agif\" style=\"max-width: 4cm;\"/></div>",
+			"<img src=\"/Images/Cours/Patron2.svg\"/>",
+			"<div class=\"flexobject\"><div><label><b>Perspective :</b></label><br><img src=\"/Images/Cours/Volumes-03.svg\"/></div><div style=\"max-width: 6cm;\"><label><b>Exemple :</b></label><br><p>Un cylindre de rayon 3cm et de hauteur 6cm a pour volume : $V = \\pi \\times 3^2 \\times 6 \\approx  169,4\\thinspace cm^3$</p></div></div>"
+		],
+		"remarques": [
+			"Les cercles peuvent être placés où l'on veut le long du rectangle."
 		]
 	},"décomposer": {
 		"tags": [],
@@ -1424,7 +1433,18 @@
 	},"prisme": {
 		"tags": [],
 		"definitions": [
-			"Un <span class=\"CRed\">prisme droit</span> est composé de deux bases polygonales, parallèles entre elles. Les faces latérales sont des rectangles."
+			"Un <span class=\"CRed\">prisme droit</span> est composé de deux bases polygonales, parallèles entre elles. Les faces latérales sont des rectangles.",
+			"Un <span class=\"CRed\">prisme droit</span> droit est un solide composé de deux <b>bases polygonales</b> identiques et parallèles reliées entre elles par des <b>faces latérales rectangulaires</b>." 
+		],
+		"exemples": [
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Prisme5.svg\" style=\"max-width: 5cm;\"><img src=\"/Images/Cours/Prisme4.svg\" style=\"max-width: 5cm;\"></div>",
+			"<div class=\"flexobject\"><div><label><b>Perspective :</b></label><br><img src=\"/Images/Cours/Volumes-04.svg\"/></div><div style=\"max-width: 6cm;\"><label><b>Exemple :</b></label><br><p>Un prisme dont la base a une aire de 12cm² et de hauteur 6cm a pour volume : $V = 12 \\times 6 = 82\\thinspace cm^3$</p></div></div>"
+		],
+		"remarques": [
+			"Un pavé droit est un prisme particulier dont les bases sont des rectangles."
+		],
+		"infos": [
+			"Comme pour le cube et le pavé droit, il est possible de construire un prisme à l'aide d'un patron :<br><div class=\"flexobject\"><img src=\"/Images/Cours/Prisme6.svg\" style=\"max-height: 6cm;\"><img src=\"/Images/Cours/Prisme2.svg\" style=\"max-height: 6cm;\"></div>"
 		]
 	},"probabilité": {
 		"tags": [],

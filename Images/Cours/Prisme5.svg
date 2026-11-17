@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.91 256.45">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 7px;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 30.1px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        stroke-linecap: round;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill: none;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-3, .cls-6 {
+        stroke: #f6a117;
+      }
+
+      .cls-2 {
+        fill: #f6a117;
+      }
+
+      .cls-4 {
+        stroke: #000;
+      }
+
+      .cls-5 {
+        stroke: #888;
+        stroke-dasharray: 0 0 14 8;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-3" d="m1,185.09l114.91-34.09"/>
+    <path class="cls-3" d="m4.69,192.48l126.96-39.46"/>
+    <path class="cls-3" d="m7.8,198.72l141.26-43.46"/>
+    <path class="cls-3" d="m10.94,205.03l154.79-47.62"/>
+    <path class="cls-3" d="m14.02,211.19l169.2-51.53"/>
+    <path class="cls-3" d="m17.32,217.81l180.75-56.17"/>
+    <path class="cls-3" d="m20.38,223.95l195.36-60.1"/>
+    <path class="cls-3" d="m23.52,230.25l208.89-64.26"/>
+    <path class="cls-3" d="m26.24,236.4l223.76-68.14"/>
+    <path class="cls-3" d="m42.36,239.29l216.01-67.13"/>
+    <path class="cls-3" d="m58.38,241.35l203.31-62.54"/>
+    <path class="cls-3" d="m75.05,243.49l189.78-58.38"/>
+    <path class="cls-3" d="m91.14,245.56l176.96-53.89"/>
+    <path class="cls-3" d="m108.93,247.85l162.07-50.36"/>
+    <path class="cls-3" d="m125.05,249.93l149.21-45.9"/>
+    <path class="cls-3" d="m141.72,252.07l135.95-41.82"/>
+    <path class="cls-3" d="m157.92,254.16l122.71-37.37"/>
+  </g>
+  <path class="cls-5" d="m256.86,19.14v150"/>
+  <path class="cls-5" d="m256.86,169.14l26.05,52.23"/>
+  <path class="cls-5" d="m115.91,1v150"/>
+  <path class="cls-5" d="m115.91,151l140.95,18.14"/>
+  <path class="cls-5" d="m1,185.09l114.91-34.09"/>
+  <path class="cls-4" d="m282.91,71.37l-114.91,34.09"/>
+  <path class="cls-4" d="m282.91,221.37l-114.91,34.09"/>
+  <path class="cls-4" d="m282.91,71.37v150"/>
+  <g>
+    <path class="cls-6" d="m.91,35.09L115.82,1"/>
+    <path class="cls-6" d="m4.6,42.48L131.56,3.03"/>
+    <path class="cls-6" d="m7.71,48.72L148.97,5.27"/>
+    <path class="cls-6" d="m10.85,55.03L165.64,7.41"/>
+    <path class="cls-6" d="m13.93,61.19L183.14,9.66"/>
+    <path class="cls-6" d="m17.23,67.81L197.98,11.64"/>
+    <path class="cls-6" d="m20.29,73.95L215.65,13.85"/>
+    <path class="cls-6" d="m23.43,80.25L232.32,15.99"/>
+    <path class="cls-6" d="m26.53,86.28L249.91,18.26"/>
+    <path class="cls-6" d="m42.26,89.29L258.28,22.16"/>
+    <path class="cls-6" d="m58.29,91.35l203.31-62.54"/>
+    <path class="cls-6" d="m74.95,93.49l189.78-58.38"/>
+    <path class="cls-6" d="m91.05,95.56l176.96-53.89"/>
+    <path class="cls-6" d="m108.84,97.85l162.07-50.36"/>
+    <path class="cls-6" d="m124.96,99.93l149.21-45.9"/>
+    <path class="cls-6" d="m141.63,102.07l135.95-41.82"/>
+    <path class="cls-6" d="m157.83,104.16l122.71-37.37"/>
+  </g>
+  <path class="cls-4" d="m168,105.45L27.05,87.32"/>
+  <path class="cls-4" d="m168,255.45l-140.95-18.14"/>
+  <path class="cls-4" d="m168,105.45v150"/>
+  <path class="cls-4" d="m27.05,87.32L1,35.09"/>
+  <path class="cls-4" d="m27.05,237.32L1,185.09"/>
+  <path class="cls-4" d="m27.05,87.32v150"/>
+  <path class="cls-4" d="m1,35.09L115.91,1"/>
+  <path class="cls-4" d="m1,35.09v150"/>
+  <path class="cls-4" d="m115.91,1l140.95,18.14"/>
+  <path class="cls-4" d="m256.86,19.14l26.05,52.23"/>
+  <text class="cls-1" transform="translate(76.66 214.3)"><tspan x="0" y="0">Bases</tspan></text>
+  <text class="cls-2" transform="translate(76.66 214.3)"><tspan x="0" y="0">Bases</tspan></text>
+</svg>

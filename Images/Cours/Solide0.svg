@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4cm" height="4cm" viewBox="0 0 113.39 113.39">
+  <title>Solides</title>
+  <g>
+    <g>
+      <path d="M5.29,91.26A5.49,5.49,0,0,1,5.79,89" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2"/>
+      <path d="M7.34,86.74c6.23-6.7,26-11.59,49.35-11.59,24.61,0,45.17,5.42,50.22,12.65" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2" stroke-dasharray="4.82 2.75"/>
+      <path d="M107.59,89a5.49,5.49,0,0,1,.5,2.26" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+    <path d="M108.09,22.86V90.53c0,8.9-23,16.11-51.4,16.11S5.29,99.43,5.29,90.53V22.86" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2"/>
+    <ellipse cx="56.69" cy="22.86" rx="51.4" ry="16.11" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+</svg>

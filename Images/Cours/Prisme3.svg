@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 322.06 306.74">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 25.51px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-2 {
+        stroke: #000;
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        stroke: #888;
+        stroke-dasharray: 0 0 14 8;
+      }
+    </style>
+  </defs>
+  <path class="cls-3" d="m254.97,29.88v150"/>
+  <path class="cls-3" d="m254.97,179.88l48.6,59.93"/>
+  <path class="cls-3" d="m78.74,27.71v150"/>
+  <path class="cls-3" d="m78.74,177.71l176.23,2.18"/>
+  <path class="cls-3" d="m18.43,236.29l60.31-58.58"/>
+  <path class="cls-2" d="m303.58,89.81l-146.19,34.86"/>
+  <path class="cls-2" d="m303.58,239.81l-146.19,34.86"/>
+  <path class="cls-2" d="m303.58,89.81v150"/>
+  <path class="cls-2" d="m157.39,124.68L18.43,86.29"/>
+  <path class="cls-2" d="m157.39,274.68L18.43,236.29"/>
+  <path class="cls-2" d="m157.39,124.68v150"/>
+  <path class="cls-2" d="m18.43,86.29l60.31-58.58"/>
+  <path class="cls-2" d="m18.43,86.29v150"/>
+  <path class="cls-2" d="m78.74,27.71l176.23,2.18"/>
+  <path class="cls-2" d="m254.97,29.88l48.6,59.93"/>
+  <text class="cls-1" transform="translate(72.19 21.81)"><tspan x="0" y="0">A</tspan></text>
+  <text class="cls-1" transform="translate(246.74 21.81)"><tspan x="0" y="0">B</tspan></text>
+  <text class="cls-1" transform="translate(306.28 86.29)"><tspan x="0" y="0">C</tspan></text>
+  <text class="cls-1" transform="translate(0 86.29)"><tspan x="0" y="0">E</tspan></text>
+  <text class="cls-1" transform="translate(149.02 116.14)"><tspan x="0" y="0">D</tspan></text>
+  <text class="cls-1" transform="translate(74.53 199.68)"><tspan x="0" y="0">F</tspan></text>
+  <text class="cls-1" transform="translate(238.97 202.14)"><tspan x="0" y="0">G</tspan></text>
+  <text class="cls-1" transform="translate(300.56 259.33)"><tspan x="0" y="0">H</tspan></text>
+  <text class="cls-1" transform="translate(154.76 299.84)"><tspan x="0" y="0">I</tspan></text>
+  <text class="cls-1" transform="translate(8.94 259.33)"><tspan x="0" y="0">J</tspan></text>
+</svg>

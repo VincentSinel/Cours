@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.91 256.45">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #fff;
+        stroke-width: 7px;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 30.1px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-5 {
+        fill: #b5d1ef;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #44ace2;
+      }
+
+      .cls-3 {
+        stroke: #000;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        stroke: #888;
+        stroke-dasharray: 0 0 14 8;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-5" points="115.91 1 115.91 151 256.86 169.14 256.86 19.14 115.91 1"/>
+  <path class="cls-4" d="m256.86,19.14v150"/>
+  <path class="cls-4" d="m256.86,169.14l26.05,52.23"/>
+  <path class="cls-4" d="m115.91,1v150"/>
+  <path class="cls-4" d="m115.91,151l140.95,18.14"/>
+  <path class="cls-4" d="m1,185.09l114.91-34.09"/>
+  <path class="cls-3" d="m282.91,71.37l-114.91,34.09"/>
+  <path class="cls-3" d="m282.91,221.37l-114.91,34.09"/>
+  <path class="cls-3" d="m282.91,71.37v150"/>
+  <path class="cls-3" d="m168,105.45L27.05,87.32"/>
+  <path class="cls-3" d="m168,255.45l-140.95-18.14"/>
+  <path class="cls-3" d="m168,105.45v150"/>
+  <path class="cls-3" d="m27.05,87.32L1,35.09"/>
+  <path class="cls-3" d="m27.05,237.32L1,185.09"/>
+  <path class="cls-3" d="m27.05,87.32v150"/>
+  <path class="cls-3" d="m1,35.09L115.91,1"/>
+  <path class="cls-3" d="m1,35.09v150"/>
+  <path class="cls-3" d="m115.91,1l140.95,18.14"/>
+  <path class="cls-3" d="m256.86,19.14l26.05,52.23"/>
+  <text class="cls-1" transform="translate(154.4 41.24)"><tspan x="0" y="0">Face</tspan><tspan x="-24.48" y="36.12">Latérale</tspan></text>
+  <text class="cls-2" transform="translate(154.4 41.24)"><tspan x="0" y="0">Face</tspan><tspan x="-24.48" y="36.12">Latérale</tspan></text>
+</svg>

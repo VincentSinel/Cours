@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216.7 276.95">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #009640;
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke: #009fe3;
+      }
+
+      .cls-3 {
+        stroke: #e30613;
+      }
+
+      .cls-5 {
+        fill: #010101;
+        font-family: Bahnschrift, Bahnschrift;
+        font-size: 11.34px;
+        font-variation-settings: 'wght' 400, 'wdth' 100;
+      }
+
+      .cls-4 {
+        fill: #fff;
+        stroke: #1d1d1b;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-4" points="86.13 81.64 131.48 81.64 131.48 36.28 108.81 13.61 86.13 36.28 86.13 81.64"/>
+  <rect class="cls-4" x="86.13" y="81.64" width="45.35" height="113.39"/>
+  <rect class="cls-4" x="131.48" y="81.64" width="45.35" height="113.39"/>
+  <rect class="cls-4" x="40.78" y="81.64" width="45.35" height="113.39"/>
+  <rect class="cls-4" x="176.84" y="81.64" width="32.03" height="113.39"/>
+  <rect class="cls-4" x="8.74" y="81.64" width="32.03" height="113.39"/>
+  <polygon class="cls-4" points="131.48 195.02 86.13 195.02 86.13 240.38 108.81 263.06 131.48 240.38 131.48 195.02"/>
+  <text class="cls-5" transform="translate(105.14 9.69)"><tspan x="0" y="0">A</tspan></text>
+  <text class="cls-5" transform="translate(209.36 79.86)"><tspan x="0" y="0">A</tspan></text>
+  <text class="cls-5" transform="translate(0 79.86)"><tspan x="0" y="0">A</tspan></text>
+  <text class="cls-5" transform="translate(133.12 34.58)"><tspan x="0" y="0">B</tspan></text>
+  <text class="cls-5" transform="translate(173.18 79.86)"><tspan x="0" y="0">B</tspan></text>
+  <text class="cls-5" transform="translate(132.42 79.86)"><tspan x="0" y="0">C</tspan></text>
+  <text class="cls-5" transform="translate(76.9 79.86)"><tspan x="0" y="0">D</tspan></text>
+  <text class="cls-5" transform="translate(77.56 34.58)"><tspan x="0" y="0">E</tspan></text>
+  <text class="cls-5" transform="translate(37.39 79.86)"><tspan x="0" y="0">E</tspan></text>
+  <text class="cls-5" transform="translate(105.64 273.88)"><tspan x="0" y="0">F</tspan></text>
+  <text class="cls-5" transform="translate(209.61 205.52)"><tspan x="0" y="0">F</tspan></text>
+  <text class="cls-5" transform="translate(1.44 205.52)"><tspan x="0" y="0">F</tspan></text>
+  <text class="cls-5" transform="translate(132.01 248.67)"><tspan x="0" y="0">G</tspan></text>
+  <text class="cls-5" transform="translate(173.17 205.52)"><tspan x="0" y="0">G</tspan></text>
+  <text class="cls-5" transform="translate(131.94 205.52)"><tspan x="0" y="0">H</tspan></text>
+  <text class="cls-5" transform="translate(79.47 205.52)"><tspan x="0" y="0">I</tspan></text>
+  <text class="cls-5" transform="translate(78.73 248.75)"><tspan x="0" y="0">J</tspan></text>
+  <text class="cls-5" transform="translate(37.91 205.52)"><tspan x="0" y="0">J</tspan></text>
+  <circle class="cls-3" cx="86.13" cy="57.65" r="3.74"/>
+  <circle class="cls-3" cx="108.81" cy="81.64" r="3.74"/>
+  <circle class="cls-3" cx="131.48" cy="57.65" r="3.74"/>
+  <circle class="cls-3" cx="154.16" cy="81.64" r="3.74"/>
+  <circle class="cls-3" cx="63.45" cy="81.64" r="3.74"/>
+  <circle class="cls-3" cx="86.13" cy="217.73" r="3.74"/>
+  <circle class="cls-3" cx="131.48" cy="217.73" r="3.74"/>
+  <circle class="cls-3" cx="108.81" cy="195.02" r="3.74"/>
+  <circle class="cls-3" cx="63.45" cy="195.02" r="3.74"/>
+  <circle class="cls-3" cx="154.16" cy="195.02" r="3.74"/>
+  <rect class="cls-2" x="93.96" y="248.25" width="5.17" height="5.17" transform="translate(205.64 5.2) rotate(45)"/>
+  <rect class="cls-2" x="118.56" y="248.25" width="5.17" height="5.17" transform="translate(212.85 -12.2) rotate(45)"/>
+  <rect class="cls-2" x="94.54" y="22.78" width="5.17" height="5.17" transform="translate(46.38 -61.25) rotate(45)"/>
+  <rect class="cls-2" x="117.91" y="22.78" width="5.17" height="5.17" transform="translate(53.23 -77.77) rotate(45)"/>
+  <rect class="cls-2" x="22.17" y="79.05" width="5.17" height="5.17"/>
+  <rect class="cls-2" x="21.27" y="192.44" width="5.17" height="5.17"/>
+  <rect class="cls-2" x="191.78" y="192.44" width="5.17" height="5.17"/>
+  <rect class="cls-2" x="191.11" y="79.05" width="5.17" height="5.17"/>
+  <line class="cls-1" x1="5.68" y1="135.27" x2="11.81" y2="141.39"/>
+  <line class="cls-1" x1="11.81" y1="135.27" x2="5.68" y2="141.39"/>
+  <g>
+    <line class="cls-1" x1="37.71" y1="135.27" x2="43.84" y2="141.39"/>
+    <line class="cls-1" x1="43.84" y1="135.27" x2="37.71" y2="141.39"/>
+  </g>
+  <line class="cls-1" x1="83.07" y1="135.27" x2="89.19" y2="141.39"/>
+  <line class="cls-1" x1="89.19" y1="135.27" x2="83.07" y2="141.39"/>
+  <line class="cls-1" x1="128.42" y1="135.27" x2="134.55" y2="141.39"/>
+  <line class="cls-1" x1="134.55" y1="135.27" x2="128.42" y2="141.39"/>
+  <line class="cls-1" x1="173.77" y1="135.27" x2="179.9" y2="141.39"/>
+  <line class="cls-1" x1="179.9" y1="135.27" x2="173.77" y2="141.39"/>
+  <line class="cls-1" x1="205.81" y1="135.27" x2="211.93" y2="141.39"/>
+  <line class="cls-1" x1="211.93" y1="135.27" x2="205.81" y2="141.39"/>
+</svg>
