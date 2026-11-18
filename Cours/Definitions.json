@@ -835,6 +835,9 @@
 		],
 		"exemples": [
 			"<ul><li>Lancer d'un dé</li><li>Lancer d'une pièce</li><li>Loterie, Loto</li></ul>"
+		],
+		"infos": [
+			"Lorsque l'on répète un grand nombre de fois une expérience aléatoire, on peut mesurer l'apparition d'une issue en comptant le nombre d'apparitions de celle-ci et en calculant sa fréquence."
 		]
 	},"expression littérale": {
 		"tags": [],
@@ -1012,6 +1015,9 @@
 		],
 		"exemples": [
 			"<p>Dans la série de valeur précèdent il y a 20 notes au total dont 4 égales à 10.La fréquence de la valeur 10 est donc de $\\frac{4}{20}=\\frac{1}{5}=0.2=20\\%$</p>"
+		],
+		"remarques": [
+			"La fréquence est comprise entre 0 et 1."
 		]
 	},"grandeur": {
 		"tags": [],
@@ -1459,7 +1465,7 @@
 		],
 		"exemples": [
 			"<div class=\"flexobject\"><img src=\"/Images/Cours/Solide_Dé.png\" style=\"max-width: 2cm;\"><div><p>On a une chance sur 6 d'obtenir un 3. On dit que la probabilité d'obtenir 3 est de $\\frac{1}{6}\\ \\approx 0,13$. </p></div>",
-			"<div class=\"flexobject\"><img src=\"/Images/Cours/Solide_Dé.png\" style=\"max-width: 2cm;\"><div><p>Chaque face a une probabilité de $\\frac{1}{6}$ d'être obtenue.<br>On a donc la somme des probabilités :<br>$\\frac{1}{6}+\\frac{1}{6}+\\frac{1}{6}+\\frac{1}{6}+\\frac{1}{6}+\\frac{1}{6}=\\ \\frac{6\times1}{6}=1$.</p></div></div>"
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Solide_Dé.png\" style=\"max-width: 2cm;\"><div><p>Chaque face a une probabilité de $\\frac{1}{6}$ d'être obtenue.<br>On a donc la somme des probabilités :<br>$\\frac{1}{6}+\\frac{1}{6}+\\frac{1}{6}+\\frac{1}{6}+\\frac{1}{6}+\\frac{1}{6}=\\ \\frac{6\\times1}{6}=1$.</p></div></div>"
 		],
 		"infos": [
 			"<div class=\"flexobject\"><div style=\"flex: 6cm 1 1;\">On simule le lancé d'un dé et on compte le nombre de faces 1 obtenues.<br>En rouge est indiquée la probabilité. En vert la fréquence d'apparition en fonction du nombre de tirages.<br>On peut voir que la courbe verte se rapproche de la droite rouge au fur et à mesure que les tirages augmentent.</div><div style=\"flex: 480px 2 1\"><div class=\"flexobject\"><div style=\"flex-grow: 0;\"><label>Nombre de tirages : </label><input id=\"nbr_tirage\" type=\"number\" min=\"100\" max=\"10000\" value=\"6000\" step=\"100\" onchange=\"Regenerate()\"><br><label>Nombre de face :</label><input id=\"proba_tirage\" type=\"number\" min=\"1\" max=\"100\" value=\"6\" step=\"1\" onchange=\"Regenerate()\"><br></div><div class=\"flex-grow: 1\"><button onclick=\"Regenerate()\">Relancer</button></div></div><br><div style=\"width: 100%\"><b>fréquence</b><br><div id=\"preview\" style=\"display: inline-block; width: calc(100% - 86px); max-width: 480px;\"></div><div style=\"display: inline-block;\"><b>Nombre de<br>tirages<br></b> <br></div></div></div></div> "

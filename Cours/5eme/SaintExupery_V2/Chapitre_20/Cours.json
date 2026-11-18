@@ -1,0 +1,35 @@
+{
+	"scripts": [{"name": "/JS/Raphael/raphael.min.js"},{"name": "JS/Simulation.js"}],
+	"activité": "<ol><li><b>Jeu de Pile ou Face.</b><br><p>On dispose d'une pièce de 1€ sans défaut. On effectue l'expérience suivante : on effectue un lancer à pile ou face (On suppose que la pièce ne peut pas tomber sur la tranche).</p><div class=\"flexobject\"><div style=\"flex: 1 1 5cm\"><ol type=\"a\"><li>Combien de résultats peut-on obtenir ?<br><i>Ces différents résultats sont appelés <b>issues</b> de l'expérience.</i></li><li>Peut-on prévoir l'issue de l'expérience ?</li><li>Y a-t-il plus de chance d'obtenir Pile ou Face ?</li><li>Compléter la phrase suivante :<br><i>«Il y a une chance sur ……. d'obtenir Pile et …… chance sur …… d'obtenir Face»</i></li></ol><p>La probabilité d'une issue est un nombre compris entre 0 et 1 qui représente la chance qu'a cette issue de se produire.</p><ol type=\"a\" start=\"5\"><li>Quelle est selon toi la probabilité d'obtenir Pile ?</li></ol></div><div style=\"flex: 0 1 6cm;\" class=\"flexobject\"><img src=\"/Images/Cours/Proba_Piece_Face.svg\" style=\"max-width: 3cm;\"><img src=\"/Images/Cours/Proba_Piece_Pile.svg\" style=\"max-width: 3cm;\"></div></div></li><br><li><b>Tirage.</b><br><p>Dans un sac opaque se trouve 4 boules de même forme mais de couleur différente : rouge, verte, bleue, jaune. On en tire une au hasard.</p><div class=\"flexobject\"><div type=\"flex: 1 1 5cm\"><ol type=\"a\"><li>Quelles sont les issues de cette expérience aléatoire ?</li><li>Quelle est la probabilité de tirer une boule rouge ?</li></ol></div><img style=\"max-width: 3cm;\" src=\"/Images/Cours/Proba_Sac.svg\"></div></li></ol>",
+	"content": [{
+			"type": "title", "name": "Vocabulaires",
+			"content": [
+				{"type": "definition", "source": [{"name": "expérience aléatoire", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "expérience aléatoire", "indexes": [0]}]},
+				{"type": "definition", "source": [{"name": "événement", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "événement", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Calcul de probabilité",
+			"content": [
+				{"type": "definition", "source": [{"name": "probabilité", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "probabilité", "indexes": [0]}]},
+				{"type": "propriete", "source": [{"name": "probabilité", "indexes": [0,1]}]},
+				{"type": "exemple", "source": [{"name": "probabilité", "indexes": [1]}]},
+				{"type": "definition", "source": [{"name": "équiprobabilité", "indexes": [0]}]},
+				{"type": "exemple", "source": [{"name": "équiprobabilité", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Fréquence et probabilité",
+			"content": [
+				{"type": "info", "source": [{"name": "expérience aléatoire", "indexes": [0]}]},
+				{"type": "definition", "source": [{"name": "fréquence", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "fréquence", "indexes": [0]}]},
+				{"type": "definition", "source": [{"name": "fréquence", "indexes": [1]}]},
+				{"type": "info", "source": [{"name": "probabilité", "indexes": [0]}]}
+			]
+		}
+	]
+}
