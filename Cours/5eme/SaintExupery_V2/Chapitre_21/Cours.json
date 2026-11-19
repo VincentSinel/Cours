@@ -1,0 +1,49 @@
+{
+	"activité": "<div class=\"flexobject\"><div style=\"flex: 12cm 0 1\"><ol><li>Les segments [AC] et [BD] ci-contre ont le même milieu O.<br><ol type=\"a\"><li>Quelle semble être la nature du quadrilatère ABCD ?</li><li>Quelle est la symétrique par rapport à O :<ul><li>de la droite (AB) ?</li><li>de la droite (AD) ?</li></ul></li><li>En déduire que le quadrilatère ABCD est un parallélogramme. Expliquer.</li></ol>On dit que ABCD est un parallélogramme de <b>centre O</b>.</li></ol></div><img src=\"/Images/Cours/Act_Quadrilatere.svg\" style=\"max-width: 5cm;\"></div><ol start=\"2\"><li><ol type=\"a\"><li>Construire un parallélogramme IJKL de centre O dont les <b>diagonales</b> [IK] et [JL] sont <b>perpendiculaires</b> en O.</li><li>Construire un parallélogramme EFGH de centre O dont les <b>diagonales</b> [EG] et [FH] ont la <b>même longueur</b>.</li><li>Construire un parallélogramme MNPQ de centre O dont les <b>diagonales</b> [MP] et [NQ] sont <b>perpendiculaires et de même longueur</b>.</li><li>Que semble-t-on pouvoir dire de plus concernant la nature de chacun des trois parallélogrammes construits précédemment ?</li></ol></li></ol>",
+	"content": [{
+			"type": "title", "name": "Parallélogramme",
+			"content": [
+				{
+					"type": "title", "name": "Définition",
+					"content": [
+						{"type": "definition", "source": [{"name": "parallélogramme", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "parallélogramme", "indexes": [0]}]}
+					]
+				},
+				{
+					"type": "title", "name": "Propriétés",
+					"content": [
+						{"type": "propriete", "source": [{"name": "parallélogramme", "indexes": [0]}]},
+						{"type": "exemple", "source": [{"name": "parallélogramme", "indexes": [1]}]},
+						{"type": "propriete", "source": [{"name": "parallélogramme", "indexes": [1]}]},
+						{"type": "exemple", "source": [{"name": "parallélogramme", "indexes": [2]}]},
+						{"type": "propriete", "source": [{"name": "parallélogramme", "indexes": [2]}]},
+						{"type": "exemple", "source": [{"name": "parallélogramme", "indexes": [3]}]},
+						{"type": "propriete", "source": [{"name": "parallélogramme", "indexes": [3]}]},
+						{"type": "exemple", "source": [{"name": "parallélogramme", "indexes": [4]}]},
+						{"type": "propriete", "source": [{"name": "parallélogramme", "indexes": [4]}]},
+						{"type": "exemple", "source": [{"name": "parallélogramme", "indexes": [5]}]},
+						{"type": "remarque", "source": [{"name": "parallélogramme", "indexes": [0]}]},
+						{"type": "propriete", "source": [{"name": "parallélogramme", "indexes": [5]}]},
+						{"type": "exemple", "source": [{"name": "parallélogramme", "indexes": [6]}]}
+					]
+				}
+			]
+		},
+		{
+			"type": "title", "name": "Parallélogramme particuliers",
+			"content": [
+				{"type": "info", "source": [{"name": "quadrilatère", "indexes": [0]}]}
+			]
+		},
+		{
+			"type": "title", "name": "Aire du parallélogramme",
+			"content": [
+				{"type": "definition", "source": [{"name": "parallélogramme", "indexes": [1]}]},
+				{"type": "exemple","multiple": true, "source": [{"name": "parallélogramme", "indexes": [7]}]},
+				{"type": "propriete", "source": [{"name": "parallélogramme", "indexes": [6]}]},
+				{"type": "exemple", "source": [{"name": "parallélogramme", "indexes": [8]}]}
+			]
+		}
+	]
+}

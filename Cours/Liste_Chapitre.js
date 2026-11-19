@@ -1517,7 +1517,7 @@ var cinquieme_saintexupery = [
 				docx_trou: "/Cours/5eme/SaintExupery_v2/Chapitre_21/Documents/Chapitre 21 - Parallélogrammes (A trou).docx",
 				pdf_trou:  "/Cours/5eme/SaintExupery_v2/Chapitre_21/Documents/Chapitre 21 - Parallélogrammes (A trou).pdf",
 			},
-			ready : false,
+			ready : true,
 			page : "SaintExupery_v2/Chapitre_21/Cours.json"
 	}, // Chapitre 21
 ]

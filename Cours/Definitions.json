@@ -1283,10 +1283,31 @@
 	},"parallélogramme": {
 		"tags": [],
 		"definitions": [
-			"Un <span class=\"CRed\">parallélogramme</span> est un quadrilatère dont les côtés opposés sont parallèles."
+			"Un <span class=\"CRed\">parallélogramme</span> est un quadrilatère dont les côtés opposés sont parallèles.",
+			"Dans un <b>parallélogramme</b>, en prenant un côté comme <span class=\"CRed\">base</span>, on peut définir une <span class=\"CBlue\">hauteur</span> associée comme un segment <b>perpendiculaire</b> à celle-ci et la reliant au côté opposé."
 		],
 		"exemples": [
-			"<img src=\"/Images/Cours/Quad2.svg\" style=\"max-height: 4cm;\">"
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Quad2.svg\" style=\"max-width: 5cm;\"><div>EFGH est un parallélogramme si $(EF)\\parallel(GH)$ et $(EH)\\parallel(FG)$.</div></div>",
+			"<img src=\"/Images/Cours/Quad_Propriete1.svg\" style=\"max-width: 6cm;\">",
+			"<img src=\"/Images/Cours/Quad_Propriete2.svg\" style=\"max-width: 6cm;\">",
+			"<img src=\"/Images/Cours/Quad_Propriete3.svg\" style=\"max-width: 6cm;\">",
+			"<img src=\"/Images/Cours/Quad_Propriete4.svg\" style=\"max-width: 6cm;\">",
+			"<img src=\"/Images/Cours/Quad_Propriete5.svg\" style=\"max-width: 6cm;\">",
+			"<img src=\"/Images/Cours/Quad_Propriete6.svg\" style=\"max-width: 6cm;\">",
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Quad_Aire1.svg\" style=\"max-width: 6cm;\"><img src=\"/Images/Cours/Quad_Aire2.svg\" style=\"max-width: 6cm;\"></div>",
+			"<p>Dans le parallélogramme ci-dessous, un des côtés mesure 8 cm et la hauteur associée mesure 7 cm. Son aire est donc $\\mathscr{A}=8\\times 7=56\\ cm^2$.</p><div class=\"flexobject\"><img src=\"/Images/Cours/Quad_Aire3.svg\" style=\"max-width: 6cm;\"><img src=\"/Images/Cours/Quad_Aire4.svg\" style=\"max-width: 6cm;\"></div>"
+		],
+		"proprietes": [
+			"<b>Si</b> un quadrilatère a ses côtés opposés parallèles, <b>alors</b> c'est un parallélogramme.",
+			"<b>Si</b> un quadrilatère (non croisé) a ses côtés opposés de même longueur, <b>alors</b> c'est parallélogramme.",
+			"<b>Si</b> un quadrilatère a ses diagonales qui se coupent en leur milieu, <b>alors</b> c'est un parallélogramme.",
+			"<b>Si</b> un quadrilatère (non croisé) a deux côtés opposés parallèles et de même longueur, <b>alors</b> c'est un parallélogramme.",
+			"<b>Si</b> un quadrilatère a ses angles opposés égaux, <b>alors</b> c'est un parallélogramme.",
+			"<b>Si</b> un quadrilatère est un parallélogramme, <b>alors</b> il possède un centre de symétrie : le point d'intersection de ses diagonales.",
+			"L'aire d'un parallélogramme est égale au produit d'une <b>base</b> par sa <b>hauteur</b> :<br>$\\mathscr{A}=\\textcolor{#e53935}{Base}\\times\\textcolor{#039be5}{Hauteur}$"
+		],
+		"remarques": [
+			"La somme de deux angles consécutifs dans un parallélogramme est égale à 180°."
 		]
 	},"patron": {
 		"tags": [],
@@ -1563,6 +1584,9 @@
 		],
 		"exemples": [
 			"<img src=\"/Images/Cours/Quad1.svg\" style=\"max-height: 4cm;\">"
+		],
+		"infos": [
+			"<img src=\"/Images/Cours/Quad_Propriete0.svg\" style=\"max-width: 19cm;\">"
 		]
 	},"quotient": {
 		"tags": [],
