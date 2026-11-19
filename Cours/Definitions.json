@@ -412,7 +412,11 @@
 			"<div class=\"flexobject\"><div><label><b>Perspective :</b></label><br><img src=\"/Images/Cours/Volumes-03.svg\"/></div><div style=\"max-width: 6cm;\"><label><b>Exemple :</b></label><br><p>Un cylindre de rayon 3cm et de hauteur 6cm a pour volume : $V = \\pi \\times 3^2 \\times 6 \\approx  169,4\\thinspace cm^3$</p></div></div>"
 		],
 		"remarques": [
-			"Les cercles peuvent être placés où l'on veut le long du rectangle."
+			"Les cercles peuvent être placés où l'on veut le long du rectangle.",
+			"L'aire d'un disque est $A_{disque} = \\pi \\times \\text{rayon}^2$"
+		],
+		"proprietes": [
+			"$V = A_{disque} \\times \\text{hauteur} = \\pi \\times \\text{rayon}^2 \\times \\text{hauteur}$"
 		]
 	},"décomposer": {
 		"tags": [],

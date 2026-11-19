@@ -45,7 +45,8 @@
 				{
 					"type": "title", "name": "Volume",
 					"content": [
-						{"type": "propriete", "source": [{"name": "volume", "indexes": [2]}]},
+						{"type": "propriete", "source": [{"name": "cylindre", "indexes": [0]}]},
+						{"type": "remarque", "source": [{"name": "cylindre", "indexes": [1]}]},
 						{"type": "exemple", "source": [{"name": "cylindre", "indexes": [2]}]}
 					]
 				}
