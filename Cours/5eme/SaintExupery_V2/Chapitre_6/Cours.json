@@ -27,8 +27,10 @@
 			"content": [
 				{"type": "definition", "source": [{"name": "carré", "indexes": [1]}]},
 				{"type": "exemple", "source": [{"name": "carré", "indexes": [1,2]}]},
+				{"type": "info", "source": [{"name": "carré parfait", "indexes": [0]}]},
 				{"type": "definition", "source": [{"name": "cube", "indexes": [1]}]},
-				{"type": "exemple", "source": [{"name": "cube", "indexes": [2,3]}]}
+				{"type": "exemple", "source": [{"name": "cube", "indexes": [2,3,4]}]},
+				{"type": "remarque", "source": [{"name": "puissance", "indexes": [0]}]}
 			]
 		},
 		{

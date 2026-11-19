@@ -225,6 +225,9 @@
 		"tags": [],
 		"definitions": [
 			"On appelle <span class=\"CRed\">carré parfait</span> le carré d'un entier $a^2$."
+		],
+		"infos": [
+			"<p>Carré des premiers entiers :</p><table><tr><td><table class=\"proportionnaltable\"><tr><th>Entier</th><th>Carré</th></tr><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>9</td></tr><tr><td>4</td><td>16</td></tr></table></td><td><table class=\"proportionnaltable\"><tr><th>Entier</th><th>Carré</th></tr><tr><tr><td>5</td><td>25</td></tr><td>6</td><td>36</td></tr><tr><td>7</td><td>49</td></tr><tr><td>8</td><td>64</td></tr></table></td><td><table class=\"proportionnaltable\"><tr><th>Entier</th><th>Carré</th></tr><tr><td>9</td><td>81</td></tr><tr><td>10</td><td>100</td></tr><tr><td>11</td><td>121</td></tr><tr><td>12</td><td>144</td></tr></table>"
 		]
 	},"centre de symétrie": {
 		"tags": [],
@@ -388,7 +391,8 @@
 			"<p>ABCDEFGH est un cube représenté en perspective cavalière.</p><img src=\"/Images/Cours/Cube3.svg\" style=\"max-height: 4cm;\">",
 			"Un cube de 4 cm de côté a pour volume $4\\times4\\times4 = 64 cm^3$.",
 			"5 au cube : $5^3=5\\times5\\times5=125$",
-			"$a$ au cube : $a^3=a\\times a\\times a$"
+			"$a$ au cube : $a^3=a\\times a\\times a$",
+			"10 au cube : $10^3=10\\times 10\\times 10=1\\ 000$"
 		],
 		"proprietes": [
 			"Le volume $V$ d'un cube, de dimension $c$ est :<br> $V\\ =\\ c\\ \\times\\ c\\ \\times\\ c=c^3$"
@@ -1043,7 +1047,7 @@
 			"Dans chacun des exemples précédents, le point H est appelé <span class=\"CRed\">pied de la hauteur</span> issue de M."
 		],
 		"proprietes": [
-			"Les hauteurs d'un triangle sont <span class=\"CRed\">concourante</span> (elles se croisent en un même point nommé <span class=\"CRed\">orthocentre </span> du cercle)."
+			"Les hauteurs d'un triangle sont <span class=\"CRed\">concourante</span> (elles se croisent en un même point nommé <span class=\"CRed\">orthocentre </span> du triangle)."
 		]
 	},"histogramme": {
 		"tags": [],
@@ -1465,7 +1469,7 @@
 		],
 		"exemples": [
 			"<div class=\"flexobject\"><img src=\"/Images/Cours/Prisme5.svg\" style=\"max-width: 5cm;\"><img src=\"/Images/Cours/Prisme4.svg\" style=\"max-width: 5cm;\"></div>",
-			"<div class=\"flexobject\"><div><label><b>Perspective :</b></label><br><img src=\"/Images/Cours/Volumes-04.svg\"/></div><div style=\"max-width: 6cm;\"><label><b>Exemple :</b></label><br><p>Un prisme dont la base a une aire de 12cm² et de hauteur 6cm a pour volume : $V = 12 \\times 6 = 82\\thinspace cm^3$</p></div></div>"
+			"<div class=\"flexobject\"><div><label><b>Perspective :</b></label><br><img src=\"/Images/Cours/Volumes-04.svg\"/></div><div style=\"max-width: 6cm;\"><label><b>Exemple :</b></label><br><p>Un prisme dont la base a une aire de 12cm² et de hauteur 6cm a pour volume : $V = 12 \\times 6 = 72\\thinspace cm^3$</p></div></div>"
 		],
 		"remarques": [
 			"Un pavé droit est un prisme particulier dont les bases sont des rectangles."
@@ -1485,7 +1489,7 @@
 			"Si A et B sont <b>deux événements incompatibles</b>, la probabilité que <b>l'un <u>ou</u> l'autre</b> se réalise est <b>la somme de leurs probabilités</b> : $P\\left(A\\ \\text{ou}\\ B\\right)=P\\left(A\\right)+P(B)$."
 		],
 		"exemples": [
-			"<div class=\"flexobject\"><img src=\"/Images/Cours/Solide_Dé.png\" style=\"max-width: 2cm;\"><div><p>On a une chance sur 6 d'obtenir un 3. On dit que la probabilité d'obtenir 3 est de $\\frac{1}{6}\\ \\approx 0,13$. </p></div>",
+			"<div class=\"flexobject\"><img src=\"/Images/Cours/Solide_Dé.png\" style=\"max-width: 2cm;\"><div><p>On a une chance sur 6 d'obtenir un 3. On dit que la probabilité d'obtenir 3 est de $\\frac{1}{6}\\ \\approx 0,17$. </p></div>",
 			"<div class=\"flexobject\"><img src=\"/Images/Cours/Solide_Dé.png\" style=\"max-width: 2cm;\"><div><p>Chaque face a une probabilité de $\\frac{1}{6}$ d'être obtenue.<br>On a donc la somme des probabilités :<br>$\\frac{1}{6}+\\frac{1}{6}+\\frac{1}{6}+\\frac{1}{6}+\\frac{1}{6}+\\frac{1}{6}=\\ \\frac{6\\times1}{6}=1$.</p></div></div>"
 		],
 		"infos": [
@@ -1573,6 +1577,9 @@
 			"$\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}\\times\\textcolor{#e53935}{a}^\\textcolor{#039be5}{m}=\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n+m}$",
 			"$\\frac{\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n}}{\\textcolor{#e53935}{a}^\\textcolor{#039be5}{m}}=\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n-m}$",
 			"$(\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n})^\\textcolor{#039be5}{m}=\\textcolor{#e53935}{a}^\\textcolor{#039be5}{n\\times m}$"
+		],
+		"remarques": [
+			"Le carré et le cube sont des <b>puissances</b>, il est possible de créer une puissance avec d'autre valeur que 2 ou 3."
 		]
 	},"quadrilatère": {
 		"tags": [],
