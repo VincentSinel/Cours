@@ -39,6 +39,14 @@
 						{"type": "propriete", "source": [{"name": "fraction", "indexes": [6]}]},
 						{"type": "exemple", "source": [{"name": "fraction", "indexes": [21,22,23]}]}
 					]
+				},
+				{
+					"type": "title", "name": "Dénominateurs quelconques",
+					"content": [
+						
+						{"type": "propriete", "source": [{"name": "fraction", "indexes": [2]}]},
+						{"type": "exemple", "source": [{"name": "fraction", "indexes": [24]}]}
+					]
 				}
 			]
 		}
