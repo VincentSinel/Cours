@@ -6,7 +6,8 @@
 			"name": "Angles",
 			"content": [
 				{"type": "definition", "source": [{"name": "angle", "indexes": [0]}]},
-				{"type": "exemple", "source": [{"name": "angle", "indexes": [0]}]}
+				{"type": "exemple", "source": [{"name": "angle", "indexes": [0]}]},
+				{"type": "remarque", "source": [{"name": "angle", "indexes": [1]}]}
 			]
 		},
 		{
@@ -25,7 +26,6 @@
 					"name": "Mesure d'un angle",
 					"content": [
 						{"type": "definition", "source": [{"name": "degré", "indexes": [0]}]},
-						{"type": "remarque", "source": [{"name": "angle", "indexes": [1]}]},
 						{"type": "info", "source": [{"name": "angle", "indexes": [3]}]}
 					]
 				},
