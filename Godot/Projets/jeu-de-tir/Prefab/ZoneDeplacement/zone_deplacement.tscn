@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cqu0whr4k6li7"]
+
+[ext_resource type="Script" uid="uid://d3wftnpu8k86a" path="res://Prefab/ZoneDeplacement/zone_deplacement.gd" id="1_w0bfw"]
+
+[node name="ZoneDeplacement" type="Node2D" unique_id=1141487017]
+script = ExtResource("1_w0bfw")
+rayon = 25.0

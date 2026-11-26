@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://lhu35mv5s7sd"]
+
+[ext_resource type="Script" uid="uid://d11bv2crvtkwu" path="res://Prefab/Objet/objetNode.gd" id="1_hgqqh"]
+[ext_resource type="Texture2D" uid="uid://s8gnx4moubr3" path="res://Textures/Objets.png" id="2_fmhmi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nc7mh"]
+atlas = ExtResource("2_fmhmi")
+region = Rect2(163, 8, 7, 4)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ovcsh"]
+radius = 5.0
+
+[node name="Objet" type="Area2D" unique_id=902348080]
+z_index = -1
+collision_mask = 7
+script = ExtResource("1_hgqqh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1053547553]
+texture = SubResource("AtlasTexture_nc7mh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1466466503]
+shape = SubResource("CircleShape2D_ovcsh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

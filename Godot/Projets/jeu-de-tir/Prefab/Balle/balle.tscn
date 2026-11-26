@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://pn7xmj4s3a0s"]
+
+[ext_resource type="Texture2D" uid="uid://s8gnx4moubr3" path="res://Textures/Objets.png" id="1_3opmf"]
+[ext_resource type="Script" uid="uid://icjihj1qy7fp" path="res://Prefab/Balle/balle.gd" id="1_ccld1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccld1"]
+atlas = ExtResource("1_3opmf")
+region = Rect2(163, 8, 7, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kppb3"]
+size = Vector2(4, 2)
+
+[node name="Balle" type="Area2D" unique_id=1248191874]
+collision_layer = 0
+collision_mask = 7
+script = ExtResource("1_ccld1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1955360297]
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_ccld1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=836499405]
+shape = SubResource("RectangleShape2D_kppb3")
+
+[node name="AutoSuppression" type="Timer" parent="." unique_id=998114517]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="AutoSuppression" to="." method="_on_auto_suppression_timeout"]

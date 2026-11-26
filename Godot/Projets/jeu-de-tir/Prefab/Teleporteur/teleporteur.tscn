@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cxq5s3tj6l5bf"]
+
+[ext_resource type="Script" uid="uid://bamdw80cc8i4" path="res://Prefab/Teleporteur/teleporteur.gd" id="1_vywlq"]
+
+[node name="Teleporteur" type="Area2D" unique_id=736258561]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_vywlq")
+metadata/_edit_group_ = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

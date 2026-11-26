@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://bfmx7abch4slm"]
+
+[ext_resource type="Script" uid="uid://b3mjg67xvy3a2" path="res://Prefab/Barile/barile_explosif.gd" id="1_bfsgg"]
+[ext_resource type="Texture2D" uid="uid://s8gnx4moubr3" path="res://Textures/Objets.png" id="2_b1g6k"]
+[ext_resource type="Texture2D" uid="uid://bvxf7ln14ieps" path="res://Textures/Decal_Explosion.png" id="2_sv4xu"]
+[ext_resource type="AudioStream" uid="uid://dl1v15t1xijnf" path="res://Sons/Explosion.ogg" id="4_7w1g3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b1g6k"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2tfau"]
+radius = 0.01
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n0svv"]
+radius = 60.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08n7g"]
+atlas = ExtResource("2_b1g6k")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="Animation" id="Animation_b1g6k"]
+resource_name = "Explosion"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 3),
+"transitions": PackedFloat32Array(1, 0.36602157, 2.1435483, 0.35355344, 2.3784149, 0.5358866),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(18.892157, 18.892157, 18.892157, 1), Color(1, 1, 1, 1), Color(18.892, 18.892, 18.892, 1), Color(1, 1, 1, 1), Color(18.892157, 18.892157, 18.892157, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(1, 7.4642596, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1.5, 1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_n0svv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_08n7g"]
+_data = {
+&"Explosion": SubResource("Animation_b1g6k"),
+&"RESET": SubResource("Animation_n0svv")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53oyv"]
+atlas = ExtResource("2_b1g6k")
+region = Rect2(114, 19, 7, 6)
+
+[sub_resource type="Gradient" id="Gradient_dolbf"]
+offsets = PackedFloat32Array(0, 0.6481481, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvyb7"]
+atlas = ExtResource("2_b1g6k")
+region = Rect2(123, 18, 4, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fr3kj"]
+atlas = ExtResource("2_b1g6k")
+region = Rect2(121, 26, 5, 5)
+
+[node name="Barile explosif" type="StaticBody2D" unique_id=212519526 groups=["Entité"]]
+script = ExtResource("1_bfsgg")
+rayonDegat = 60.0
+degatMax = 20.0
+decal = ExtResource("2_sv4xu")
+vie = 3.0
+famille = 2
+tempInvulnerabilite = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2079294148]
+shape = SubResource("CircleShape2D_b1g6k")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=519549526]
+visible = false
+shape = SubResource("CircleShape2D_2tfau")
+one_way_collision = true
+one_way_collision_margin = 0.0
+
+[node name="Zone_Degat" type="Area2D" parent="." unique_id=337882054]
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zone_Degat" unique_id=71115282]
+visible = false
+shape = SubResource("CircleShape2D_n0svv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=747381355]
+texture = SubResource("AtlasTexture_08n7g")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=448095667]
+libraries/ = SubResource("AnimationLibrary_08n7g")
+
+[node name="Particules" type="Node2D" parent="." unique_id=181589308]
+
+[node name="Part1" type="CPUParticles2D" parent="Particules" unique_id=1184011021]
+emitting = false
+texture = SubResource("AtlasTexture_53oyv")
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 300.0
+initial_velocity_max = 400.0
+damping_min = 1000.0
+damping_max = 1000.0
+angle_min = -720.0
+angle_max = 720.0
+color_ramp = SubResource("Gradient_dolbf")
+
+[node name="Part2" type="CPUParticles2D" parent="Particules" unique_id=1803395111]
+emitting = false
+texture = SubResource("AtlasTexture_fvyb7")
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 300.0
+initial_velocity_max = 400.0
+damping_min = 1000.0
+damping_max = 1000.0
+angle_min = -720.0
+angle_max = 720.0
+color_ramp = SubResource("Gradient_dolbf")
+
+[node name="Part3" type="CPUParticles2D" parent="Particules" unique_id=430815949]
+emitting = false
+texture = SubResource("AtlasTexture_fr3kj")
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 300.0
+initial_velocity_max = 400.0
+damping_min = 1000.0
+damping_max = 1000.0
+angle_min = -720.0
+angle_max = 720.0
+color_ramp = SubResource("Gradient_dolbf")
+
+[node name="Sons" type="Node2D" parent="." unique_id=822058767]
+
+[node name="Explosion" type="AudioStreamPlayer2D" parent="Sons" unique_id=2076896356]
+stream = ExtResource("4_7w1g3")
+
+[connection signal="Meurt" from="." to="." method="_on_meurt"]
+[connection signal="Reapparait" from="." to="." method="_on_reapparait"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="finished" from="Particules/Part1" to="." method="_on_particules_finished"]
